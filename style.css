@@ -309,6 +309,15 @@ button:hover {
   background: #222230;
 }
 
+.pokemon-card .card-sprite {
+  display: block;
+  width: 68px;
+  height: 56px;
+  object-fit: contain;
+  margin: 0 auto 0.3rem;
+  image-rendering: auto;
+}
+
 .pokemon-card .name {
   font-weight: 600;
   font-size: 0.85rem;
@@ -361,66 +370,57 @@ button:hover {
   grid-column: 1 / -1;
 }
 
-/* ── Detail overlay ───────────────────────────────────── */
-#detail-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
+/* ── Search Detail tab ────────────────────────────────── */
+#search-detail-content {
+  padding: 1rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+#search-detail-content .detail-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 100;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-#detail-overlay.hidden { display: none; }
-
-#detail-content {
-  background: #1a1a24;
-  border: 1px solid #2a2a3a;
-  border-radius: 8px;
-  padding: 1.5rem;
-  max-width: 480px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
+#search-detail-content .detail-sprite {
+  width: 120px;
+  height: auto;
+  image-rendering: auto;
+  flex-shrink: 0;
 }
 
-#detail-content .close {
-  float: right;
-  background: none;
-  border: none;
-  color: #888;
-  font-size: 1.2rem;
-  cursor: pointer;
+#search-detail-content .detail-header h2 {
+  margin-bottom: 0.3rem;
 }
 
-#detail-content .close:hover { color: #e0e0e8; }
+#search-detail-content h2 { margin-bottom: 0.5rem; }
 
-#detail-content h2 { margin-bottom: 0.5rem; }
-
-#detail-content .stat-row {
+#search-detail-content .stat-row {
   display: flex;
   gap: 0.5rem;
   font-size: 0.85rem;
   margin-bottom: 0.2rem;
 }
 
-#detail-content .stat-row .stat-label {
+#search-detail-content .stat-row .stat-label {
   color: #888;
   width: 3rem;
 }
 
-#detail-content .stats-block {
+#search-detail-content .stats-block {
   margin-top: 0.5rem;
 }
 
-#detail-content .abilities-row {
+#search-detail-content .abilities-row {
   margin-top: 0.5rem;
   font-size: 0.85rem;
   color: #888;
 }
 
-#detail-content .moves-list {
+#search-detail-content .moves-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
@@ -577,10 +577,8 @@ button:hover {
     font-size: 0.75rem;
   }
 
-  #detail-content {
-    padding: 1rem;
-    max-width: 100%;
-    width: 95%;
+  #search-detail-content {
+    padding: 0.75rem;
   }
 
   .overlay-slots {

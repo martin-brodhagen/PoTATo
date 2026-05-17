@@ -61,3 +61,5 @@ export interface FormatData {
 }
 
 export type DataCache = Partial<FormatData>;
+
+export type SpriteMap = Record<string, string>;

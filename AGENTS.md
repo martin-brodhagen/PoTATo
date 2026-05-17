@@ -12,18 +12,24 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 ## Project Layout
 ```
 /
-├── prep/prep_data.py          # Data prep script (offline, fetches + merges + filters)
+├── prep/
+│   └── prep_data.py           # Data prep script (offline, fetches + merges + filters)
+├── scripts/
+│   ├── download-sprites.py    # Downloads Champions menu sprites from Bulbagarden Archives
+│   └── build-sprite-map.py    # Builds sprite filename → species ID mapping
 ├── data/format-m-a/           # Generated per-format data
-│   ├── index.json             # 259 battle forms (species + megas + regionals)
+│   ├── index.json             # 270 battle forms (species + megas + regionals)
 │   ├── moves.json             # 477 legal moves (Champions buffs/nerfs baked in)
-│   ├── learnsets.json         # 258 learnable move lists (per species, filtered)
-│   └── items.json             # 117 legal items
+│   ├── learnsets.json         # 271 learnable move lists (per species, filtered)
+│   ├── items.json             # 117 legal items
+│   └── sprite-map.json        # 269/270 species → sprite filename mapping
+├── sprites/champions/         # 320 downloaded Champions menu sprites (PNG)
 ├── lib/
 │   ├── types.ts               # Shared TypeScript interfaces
 │   └── data-loader.ts         # Fetch + cache layer (Map<FormatId, DataCache>)
-├── app.ts                     # Main app: format selector, grid, detail overlay
+├── app.ts                     # Main app: format selector, grid, detail tab, team builder
 ├── index.html                 # Entry point
-├── style.css                  # Dark theme, type colors, overlay
+├── style.css                  # Dark theme, type colors, sprites, responsive
 ├── tsconfig.json              # ES2022, outDir: dist/
 ├── dist/                      # Compiled JS output (gitignored)
 ├── package.json               # Scripts: build, start, prep
@@ -54,6 +60,9 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 - The mod's `formats-data.ts` has a `tier` field, but M-A is a custom format not in Showdown's tier list
 - Correct approach: hardcoded M-A whitelists (186 species + 59 megas + 467 moves + 117 items from MetaVGC source)
 
+### Sprite Source
+Menu sprites are downloaded from [Bulbagarden Archives](https://archives.bulbagarden.net/wiki/Category:Champions_menu_sprites) using their MediaWiki API. The download script computes the file URL from the MD5 hash of the filename (MediaWiki's standard `{hash[0]}/{hash[0:2]}/{filename}` path convention). Sprites are saved to `sprites/champions/` as PNGs, then `sprite-map.json` maps each species ID to its filename using dex number + form suffix matching.
+
 ### Champions Mod Changes Verified
 - Trop Kick: 70 → **85 BP**
 - Moonblast: added 10% SpA drop chance
@@ -64,12 +73,19 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 - 477 legal moves
 - 117 legal items
 - 271 learnable move lists
+- 320 Champions menu sprites (269/270 species mapped)
 
 ## Running
 
 ```bash
 # Fetch/merge data (requires network on first run, caches to .cache/)
 npm run prep
+
+# Download Champions menu sprites from Bulbagarden Archives
+python3 scripts/download-sprites.py
+
+# Build sprite → species mapping
+python3 scripts/build-sprite-map.py
 
 # Compile TypeScript
 npm run build
@@ -86,9 +102,10 @@ npm start                # → http://localhost:8787
 - Strict mode enabled: `strict`, `noUnusedLocals`, `noUnusedParameters`
 
 ## Frontend Architecture
-- **`app.ts`**: Format selector dropdown → loads index → renders card grid. On card click: lazy-fetches learnsets + moves, shows overlay with stats, abilities, move list
+- **`app.ts`**: Format selector dropdown → loads index → renders card grid (with sprites). On card click: lazy-fetches learnsets + moves, switches to Search Detail tab with stats, abilities, move list, and "Add to Team" slots
 - **`lib/data-loader.ts`**: `setFormat()`, `loadIndex()`, `loadLearnsets()`, `loadMoves()`, `loadItems()` — each returns a promise, cached after first fetch. Layer 1 = fetch JSON; Layer 2 = render from cache
 - **`lib/types.ts`**: `Species`, `Move`, `Item`, `FormatData`, `DataCache` interfaces + `FormatId` type (`'m-a' | 'm-b'`)
+- **Sprites**: 320 `Menu_CP_{dex}_{form}.png` files served from `sprites/champions/`, mapped by `sprite-map.json`
 
 ## Future
 - Add Regulation M-B data (once released, similar pipeline)

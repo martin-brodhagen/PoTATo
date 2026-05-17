@@ -2,6 +2,8 @@ import type { Species, FormatId, Team } from './lib/types.js';
 import { setFormat, loadIndex, loadLearnsets, loadMoves } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 
+const SPRITE_PATH = 'sprites/champions';
+
 const LAST_TEAM_KEY = 'potato-last-team';
 
 const formatSelect = document.getElementById('format-select') as HTMLSelectElement;
@@ -11,13 +13,13 @@ const teamWarning = document.getElementById('team-warning') as HTMLSpanElement;
 const teamBar = document.getElementById('team-bar') as HTMLDivElement;
 const filterInput = document.getElementById('filter-input') as HTMLInputElement;
 const grid = document.getElementById('pokemon-grid') as HTMLDivElement;
-const overlay = document.getElementById('detail-overlay') as HTMLDivElement;
-const detailContent = document.getElementById('detail-content') as HTMLDivElement;
+const searchDetailContent = document.getElementById('search-detail-content') as HTMLDivElement;
 
 let currentFormat: FormatId = 'm-a';
 let teams: Team[] = [];
 let currentTeamId: string | null = null;
 let allSpecies: Species[] = [];
+let spriteMap: Record<string, string> = {};
 let searchQuery = '';
 let pendingSlotIndex: number | null = null;
 let detailSpecies: Species | null = null;
@@ -58,12 +60,15 @@ function persist() {
 async function loadFormat(format: FormatId) {
   currentFormat = format;
   setFormat(format);
-  overlay.classList.add('hidden');
   detailSpecies = null;
   clearFilter();
 
-  const index = await loadIndex(format);
+  const [index, map] = await Promise.all([
+    loadIndex(format),
+    fetch(`data/format-${format}/sprite-map.json`).then(r => r.json()),
+  ]);
   allSpecies = index;
+  spriteMap = map as Record<string, string>;
   renderGrid();
   renderTeamBar();
 }
@@ -86,6 +91,16 @@ function renderGrid() {
     card.className = 'pokemon-card';
     card.setAttribute('role', 'listitem');
 
+    const spriteFile = spriteMap[s.id];
+    if (spriteFile) {
+      const img = document.createElement('img');
+      img.className = 'card-sprite';
+      img.src = `${SPRITE_PATH}/${spriteFile}`;
+      img.alt = s.name;
+      img.loading = 'lazy';
+      card.appendChild(img);
+    }
+
     const nameEl = document.createElement('div');
     nameEl.className = 'name';
     nameEl.textContent = s.name;
@@ -105,7 +120,6 @@ function renderGrid() {
     const bstEl = document.createElement('div');
     bstEl.className = 'bst';
     const meta = [bst.toString()];
-    if (s.requiredItem) meta.push(s.requiredItem);
     if (s.moveCount > 0) meta.push(`${s.moveCount} moves`);
     bstEl.textContent = meta.join(' · ');
     card.appendChild(bstEl);
@@ -256,7 +270,6 @@ function selectTeam(id: string) {
   teamSelect.value = id;
   localStorage.setItem(LAST_TEAM_KEY, id);
   clearFilter();
-  overlay.classList.add('hidden');
   detailSpecies = null;
   renderTeamWarning();
   renderTeamBar();
@@ -272,9 +285,18 @@ function handleNewTeam() {
   selectTeam(team.id);
 }
 
+function switchToDetail() {
+  const rightSection = document.querySelector<HTMLElement>('.section-right');
+  if (window.innerWidth >= 768 && rightSection) {
+    selectTab('search-detail', rightSection);
+  } else {
+    selectTab('search-detail');
+  }
+}
+
 async function showDetail(s: Species) {
   detailSpecies = s;
-  overlay.classList.remove('hidden');
+  switchToDetail();
 
   const [learnsets, moves] = await Promise.all([
     loadLearnsets(currentFormat),
@@ -284,10 +306,15 @@ async function showDetail(s: Species) {
   const team = getCurrentTeam();
 
   const bst = Object.values(s.baseStats).reduce((a, b) => a + b, 0);
+  const spriteFile = spriteMap[s.id];
   let html = `
-    <button class="close" id="detail-close">&times;</button>
-    <h2>${s.name}${s.requiredItem ? ' @ ' + s.requiredItem : ''}</h2>
-    <div class="types">${s.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}</div>`;
+    <div class="detail-header">
+      ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
+      <div>
+        <h2>${s.name}</h2>
+        <div class="types">${s.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}</div>
+      </div>
+    </div>`;
 
   if (team) {
     html += `<div style="margin-top:0.6rem">
@@ -330,28 +357,21 @@ async function showDetail(s: Species) {
   }
   html += `</div>`;
 
-  detailContent.innerHTML = html;
+  searchDetailContent.innerHTML = html;
 
   if (team) {
-    document.querySelectorAll('.overlay-slot').forEach(el => {
+    searchDetailContent.querySelectorAll('.overlay-slot').forEach(el => {
       el.addEventListener('click', () => {
         const idx = parseInt((el as HTMLElement).dataset.index!);
-        setTeamSlot(team, idx, s.id);
+        if (el.classList.contains('highlighted')) {
+          removeFromTeam(idx);
+        } else {
+          setTeamSlot(team, idx, s.id);
+        }
         showDetail(s);
       });
     });
   }
-
-  document.getElementById('detail-close')!.addEventListener('click', () => {
-    overlay.classList.add('hidden');
-    detailSpecies = null;
-  });
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-      overlay.classList.add('hidden');
-      detailSpecies = null;
-    }
-  });
 }
 
 // ── Tab system ─────────────────────────────────────────────

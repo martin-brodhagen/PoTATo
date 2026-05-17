@@ -27,12 +27,13 @@
 
 <!-- Mobile unified tab bar -->
 <div id="tab-bar-mobile" class="tab-bar">
-  <button class="tab active" data-tab="team-builder" data-side="left">Team Builder</button>
+  <button class="tab active" data-tab="team-builder" data-side="left">Team</button>
   <button class="tab" data-tab="pokedex" data-side="left">Pokédex</button>
   <button class="tab" data-tab="imports" data-side="left">Imports</button>
-  <button class="tab" data-tab="defensive-coverage" data-side="right">Defensive</button>
-  <button class="tab" data-tab="move-coverage" data-side="right">Move Coverage</button>
-  <button class="tab" data-tab="damage-calc" data-side="right">Damage Calc</button>
+  <button class="tab" data-tab="search-detail" data-side="right">Detail</button>
+  <button class="tab" data-tab="defensive-coverage" data-side="right">Def.</button>
+  <button class="tab" data-tab="move-coverage" data-side="right">Moves</button>
+  <button class="tab" data-tab="damage-calc" data-side="right">Calc</button>
 </div>
 
 <div class="main-sections">
@@ -72,12 +73,18 @@
   <!-- Right section — analysis -->
   <div class="section section-right">
     <div class="tab-bar tab-bar-desktop">
-      <button class="tab active" data-tab="defensive-coverage" data-side="right">Defensive Coverage</button>
+      <button class="tab active" data-tab="search-detail" data-side="right">Search Detail</button>
+      <button class="tab" data-tab="defensive-coverage" data-side="right">Defensive Coverage</button>
       <button class="tab" data-tab="move-coverage" data-side="right">Move Type Coverage</button>
       <button class="tab" data-tab="damage-calc" data-side="right">Damage Calculator</button>
     </div>
 
-    <div id="tab-content-defensive-coverage" class="tab-content">
+    <div id="tab-content-search-detail" class="tab-content">
+      <div id="search-detail-content" class="search-detail-content">
+        <div class="placeholder">Click a Pokémon to see details</div>
+      </div>
+    </div>
+    <div id="tab-content-defensive-coverage" class="tab-content hidden">
       <div class="placeholder">Defensive Coverage coming soon</div>
     </div>
     <div id="tab-content-move-coverage" class="tab-content hidden">
@@ -87,10 +94,6 @@
       <div class="placeholder">Damage Calculator coming soon</div>
     </div>
   </div>
-</div>
-
-<div id="detail-overlay" class="hidden">
-  <div id="detail-content"></div>
 </div>
 
 <script type="module" src="dist/app.js"></script>

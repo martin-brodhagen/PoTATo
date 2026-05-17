@@ -1,5 +1,6 @@
 import { setFormat, loadIndex, loadLearnsets, loadMoves } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
+const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
 const formatSelect = document.getElementById('format-select');
 const teamSelect = document.getElementById('team-select');
@@ -8,12 +9,12 @@ const teamWarning = document.getElementById('team-warning');
 const teamBar = document.getElementById('team-bar');
 const filterInput = document.getElementById('filter-input');
 const grid = document.getElementById('pokemon-grid');
-const overlay = document.getElementById('detail-overlay');
-const detailContent = document.getElementById('detail-content');
+const searchDetailContent = document.getElementById('search-detail-content');
 let currentFormat = 'm-a';
 let teams = [];
 let currentTeamId = null;
 let allSpecies = [];
+let spriteMap = {};
 let searchQuery = '';
 let pendingSlotIndex = null;
 let detailSpecies = null;
@@ -52,11 +53,14 @@ function persist() {
 async function loadFormat(format) {
     currentFormat = format;
     setFormat(format);
-    overlay.classList.add('hidden');
     detailSpecies = null;
     clearFilter();
-    const index = await loadIndex(format);
+    const [index, map] = await Promise.all([
+        loadIndex(format),
+        fetch(`data/format-${format}/sprite-map.json`).then(r => r.json()),
+    ]);
     allSpecies = index;
+    spriteMap = map;
     renderGrid();
     renderTeamBar();
 }
@@ -76,6 +80,15 @@ function renderGrid() {
         const card = document.createElement('div');
         card.className = 'pokemon-card';
         card.setAttribute('role', 'listitem');
+        const spriteFile = spriteMap[s.id];
+        if (spriteFile) {
+            const img = document.createElement('img');
+            img.className = 'card-sprite';
+            img.src = `${SPRITE_PATH}/${spriteFile}`;
+            img.alt = s.name;
+            img.loading = 'lazy';
+            card.appendChild(img);
+        }
         const nameEl = document.createElement('div');
         nameEl.className = 'name';
         nameEl.textContent = s.name;
@@ -93,8 +106,6 @@ function renderGrid() {
         const bstEl = document.createElement('div');
         bstEl.className = 'bst';
         const meta = [bst.toString()];
-        if (s.requiredItem)
-            meta.push(s.requiredItem);
         if (s.moveCount > 0)
             meta.push(`${s.moveCount} moves`);
         bstEl.textContent = meta.join(' · ');
@@ -240,7 +251,6 @@ function selectTeam(id) {
     teamSelect.value = id;
     localStorage.setItem(LAST_TEAM_KEY, id);
     clearFilter();
-    overlay.classList.add('hidden');
     detailSpecies = null;
     renderTeamWarning();
     renderTeamBar();
@@ -254,19 +264,33 @@ function handleNewTeam() {
     renderTeamSelect();
     selectTeam(team.id);
 }
+function switchToDetail() {
+    const rightSection = document.querySelector('.section-right');
+    if (window.innerWidth >= 768 && rightSection) {
+        selectTab('search-detail', rightSection);
+    }
+    else {
+        selectTab('search-detail');
+    }
+}
 async function showDetail(s) {
     detailSpecies = s;
-    overlay.classList.remove('hidden');
+    switchToDetail();
     const [learnsets, moves] = await Promise.all([
         loadLearnsets(currentFormat),
         loadMoves(currentFormat),
     ]);
     const team = getCurrentTeam();
     const bst = Object.values(s.baseStats).reduce((a, b) => a + b, 0);
+    const spriteFile = spriteMap[s.id];
     let html = `
-    <button class="close" id="detail-close">&times;</button>
-    <h2>${s.name}${s.requiredItem ? ' @ ' + s.requiredItem : ''}</h2>
-    <div class="types">${s.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}</div>`;
+    <div class="detail-header">
+      ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
+      <div>
+        <h2>${s.name}</h2>
+        <div class="types">${s.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}</div>
+      </div>
+    </div>`;
     if (team) {
         html += `<div style="margin-top:0.6rem">
       <div style="font-size:0.8rem;color:#888;margin-bottom:0.3rem">Add to ${team.name}</div>
@@ -306,26 +330,21 @@ async function showDetail(s) {
         html += `<span class="move-tag" title="${move.shortDesc || ''}">${move.name}</span>`;
     }
     html += `</div>`;
-    detailContent.innerHTML = html;
+    searchDetailContent.innerHTML = html;
     if (team) {
-        document.querySelectorAll('.overlay-slot').forEach(el => {
+        searchDetailContent.querySelectorAll('.overlay-slot').forEach(el => {
             el.addEventListener('click', () => {
                 const idx = parseInt(el.dataset.index);
-                setTeamSlot(team, idx, s.id);
+                if (el.classList.contains('highlighted')) {
+                    removeFromTeam(idx);
+                }
+                else {
+                    setTeamSlot(team, idx, s.id);
+                }
                 showDetail(s);
             });
         });
     }
-    document.getElementById('detail-close').addEventListener('click', () => {
-        overlay.classList.add('hidden');
-        detailSpecies = null;
-    });
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            overlay.classList.add('hidden');
-            detailSpecies = null;
-        }
-    });
 }
 // ── Tab system ─────────────────────────────────────────────
 const leftSection = document.querySelector('.section-left');
