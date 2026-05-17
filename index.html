@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PoTATo — Pokémon Champions Teambuilder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>PoTATo</h1>
+  <label>
+    Format:
+    <select id="format-select">
+      <option value="m-a">Regulation M-A (Apr–Jun 2026)</option>
+    </select>
+  </label>
+</header>
+
+<div id="pokemon-grid" role="list"></div>
+
+<div id="detail-overlay" class="hidden">
+  <div id="detail-content"></div>
+</div>
+
+<script type="module" src="dist/app.js"></script>
+</body>
+</html>

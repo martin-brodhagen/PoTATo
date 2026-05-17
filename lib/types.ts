@@ -1,0 +1,51 @@
+export interface Species {
+  id: string;
+  name: string;
+  types: string[];
+  baseStats: { hp: number; atk: number; def: number; spa: number; spd: number; spe: number };
+  abilities: Record<string, string>;
+  forme: string | null;
+  baseSpecies: string | null;
+  requiredItem: string | null;
+  heightm: number | null;
+  weightkg: number | null;
+  color: string | null;
+  moveCount: number;
+}
+
+export interface Move {
+  num: number;
+  accuracy: number | boolean;
+  basePower: number;
+  category: string;
+  name: string;
+  pp: number;
+  priority: number;
+  type: string;
+  flags?: Record<string, number>;
+  secondary?: { chance: number; boosts?: Record<string, number>; status?: string; volatileStatus?: string } | null;
+  desc?: string;
+  shortDesc?: string;
+  isNonstandard?: string | null;
+}
+
+export interface Item {
+  name: string;
+  num: number;
+  desc?: string;
+  shortDesc?: string;
+  isNonstandard?: string | null;
+  megaStone?: Record<string, string> | null;
+  itemUser?: string[] | null;
+}
+
+export type FormatId = 'm-a' | 'm-b';
+
+export interface FormatData {
+  index: Species[];
+  learnsets: Record<string, string[]>;
+  moves: Record<string, Move>;
+  items: Record<string, Item>;
+}
+
+export type DataCache = Partial<FormatData>;

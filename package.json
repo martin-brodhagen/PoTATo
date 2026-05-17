@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "python3 -m http.server 8787",
+    "prep": "python3 prep/prep_data.py"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
