@@ -418,6 +418,7 @@ for pid in sorted(all_legal_ids):
     obj = {
         "id": pid,
         "name": entry['name'],
+        "num": entry.get('num'),
         "types": entry.get('types', []),
         "baseStats": entry.get('baseStats', {}),
         "abilities": abilities,

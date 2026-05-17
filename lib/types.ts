@@ -1,6 +1,7 @@
 export interface Species {
   id: string;
   name: string;
+  num: number;
   types: string[];
   baseStats: { hp: number; atk: number; def: number; spa: number; spd: number; spe: number };
   abilities: Record<string, string>;
@@ -37,6 +38,17 @@ export interface Item {
   isNonstandard?: string | null;
   megaStone?: Record<string, string> | null;
   itemUser?: string[] | null;
+}
+
+export interface TeamSlot {
+  speciesId: string | null;
+}
+
+export interface Team {
+  id: string;
+  name: string;
+  format: FormatId;
+  slots: [TeamSlot, TeamSlot, TeamSlot, TeamSlot, TeamSlot, TeamSlot];
 }
 
 export type FormatId = 'm-a' | 'm-b';
