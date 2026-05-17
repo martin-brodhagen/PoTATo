@@ -416,6 +416,11 @@ button:hover {
   border-color: #f0c060;
 }
 
+.overlay-slot.highlighted {
+  border-color: #f0c060;
+  background: #2a2a1a;
+}
+
 .overlay-slot .slot-empty-label {
   color: #555;
   font-weight: 400;

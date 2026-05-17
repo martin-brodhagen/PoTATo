@@ -121,7 +121,12 @@ function applyFilter() {
     renderGrid();
 }
 function startSlotSearch(slotIndex) {
-    switchToTeamBuilder();
+    if (window.innerWidth >= 768) {
+        selectTab('pokedex', document.querySelector('.section-left'));
+    }
+    else {
+        selectTab('pokedex');
+    }
     pendingSlotIndex = slotIndex;
     filterInput.classList.remove('hidden');
     filterInput.value = '';
@@ -182,6 +187,7 @@ function renderTeamBar() {
                 el.appendChild(nameSpan);
             }
             el.addEventListener('click', () => {
+                switchToTeamBuilder();
                 if (species)
                     showDetail(species);
             });
@@ -270,7 +276,8 @@ async function showDetail(s) {
             const existing = slot.speciesId ? getSpeciesById(slot.speciesId) : null;
             const name = existing ? existing.name : '';
             const type = existing ? existing.types[0] : '';
-            html += `<div class="overlay-slot" data-index="${i}" style="${type ? 'border-left-color:' + getTypeColor(type) : ''}">
+            const highlight = existing && existing.num === s.num ? ' highlighted' : '';
+            html += `<div class="overlay-slot${highlight}" data-index="${i}" style="${type ? 'border-left-color:' + getTypeColor(type) : ''}">
         ${name || '<span class="slot-empty-label">Empty</span>'}
       </div>`;
         }
