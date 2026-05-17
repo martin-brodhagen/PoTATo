@@ -550,35 +550,6 @@
   "moveCount": 59
  },
  {
-  "id": "arcaninehisui",
-  "name": "Arcanine-Hisui",
-  "num": 59,
-  "types": [
-   "Fire",
-   "Rock"
-  ],
-  "baseStats": {
-   "hp": 95,
-   "atk": 115,
-   "def": 80,
-   "spa": 95,
-   "spd": 80,
-   "spe": 90
-  },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Flash Fire",
-   "H": "Rock Head"
-  },
-  "forme": "Hisui",
-  "baseSpecies": "Arcanine",
-  "requiredItem": null,
-  "heightm": 2,
-  "weightkg": 168,
-  "color": "Brown",
-  "moveCount": 52
- },
- {
   "id": "archaludon",
   "name": "Archaludon",
   "num": 1018,
@@ -803,6 +774,35 @@
   "moveCount": 55
  },
  {
+  "id": "avalugghisui",
+  "name": "Avalugg-Hisui",
+  "num": 713,
+  "types": [
+   "Ice",
+   "Rock"
+  ],
+  "baseStats": {
+   "hp": 95,
+   "atk": 127,
+   "def": 184,
+   "spa": 34,
+   "spd": 36,
+   "spe": 38
+  },
+  "abilities": {
+   "0": "Strong Jaw",
+   "1": "Ice Body",
+   "H": "Sturdy"
+  },
+  "forme": "Hisui",
+  "baseSpecies": "Avalugg",
+  "requiredItem": null,
+  "heightm": 1.4,
+  "weightkg": 262.4,
+  "color": "Blue",
+  "moveCount": 44
+ },
+ {
   "id": "azumarill",
   "name": "Azumarill",
   "num": 184,
@@ -908,6 +908,35 @@
   },
   "forme": null,
   "baseSpecies": null,
+  "requiredItem": null,
+  "heightm": 3,
+  "weightkg": 110,
+  "color": "Green",
+  "moveCount": 47
+ },
+ {
+  "id": "basculegionf",
+  "name": "Basculegion-F",
+  "num": 902,
+  "types": [
+   "Water",
+   "Ghost"
+  ],
+  "baseStats": {
+   "hp": 120,
+   "atk": 92,
+   "def": 65,
+   "spa": 100,
+   "spd": 75,
+   "spe": 78
+  },
+  "abilities": {
+   "0": "Swift Swim",
+   "1": "Adaptability",
+   "H": "Mold Breaker"
+  },
+  "forme": "F",
+  "baseSpecies": "Basculegion",
   "requiredItem": null,
   "heightm": 3,
   "weightkg": 110,
@@ -1325,7 +1354,7 @@
   "heightm": 1.7,
   "weightkg": 110.5,
   "color": "Black",
-  "moveCount": 0
+  "moveCount": 83
  },
  {
   "id": "charizardmegay",
@@ -1352,7 +1381,7 @@
   "heightm": 1.7,
   "weightkg": 100.5,
   "color": "Red",
-  "moveCount": 0
+  "moveCount": 83
  },
  {
   "id": "chesnaught",
@@ -1709,6 +1738,34 @@
   "weightkg": 36.6,
   "color": "Brown",
   "moveCount": 70
+ },
+ {
+  "id": "decidueyehisui",
+  "name": "Decidueye-Hisui",
+  "num": 724,
+  "types": [
+   "Grass",
+   "Fighting"
+  ],
+  "baseStats": {
+   "hp": 88,
+   "atk": 112,
+   "def": 80,
+   "spa": 95,
+   "spd": 95,
+   "spe": 60
+  },
+  "abilities": {
+   "0": "Overgrow",
+   "H": "Scrappy"
+  },
+  "forme": "Hisui",
+  "baseSpecies": "Decidueye",
+  "requiredItem": null,
+  "heightm": 1.6,
+  "weightkg": 37,
+  "color": "Brown",
+  "moveCount": 58
  },
  {
   "id": "dedenne",
@@ -2377,6 +2434,33 @@
   "weightkg": 0.9,
   "color": "White",
   "moveCount": 45
+ },
+ {
+  "id": "floetteeternal",
+  "name": "Floette-Eternal",
+  "num": 670,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 74,
+   "atk": 65,
+   "def": 67,
+   "spa": 125,
+   "spd": 128,
+   "spe": 92
+  },
+  "abilities": {
+   "0": "Flower Veil",
+   "H": "Symbiosis"
+  },
+  "forme": "Eternal",
+  "baseSpecies": "Floette",
+  "requiredItem": null,
+  "heightm": 0.2,
+  "weightkg": 0.9,
+  "color": "White",
+  "moveCount": 35
  },
  {
   "id": "floettemega",
@@ -3067,6 +3151,35 @@
   "moveCount": 59
  },
  {
+  "id": "goodrahisui",
+  "name": "Goodra-Hisui",
+  "num": 706,
+  "types": [
+   "Steel",
+   "Dragon"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 100,
+   "def": 100,
+   "spa": 110,
+   "spd": 150,
+   "spe": 60
+  },
+  "abilities": {
+   "0": "Sap Sipper",
+   "1": "Shell Armor",
+   "H": "Gooey"
+  },
+  "forme": "Hisui",
+  "baseSpecies": "Goodra",
+  "requiredItem": null,
+  "heightm": 1.7,
+  "weightkg": 334.1,
+  "color": "Purple",
+  "moveCount": 58
+ },
+ {
   "id": "gourgeist",
   "name": "Gourgeist",
   "num": 711,
@@ -3092,6 +3205,93 @@
   "requiredItem": null,
   "heightm": 0.9,
   "weightkg": 12.5,
+  "color": "Brown",
+  "moveCount": 57
+ },
+ {
+  "id": "gourgeistlarge",
+  "name": "Gourgeist-Large",
+  "num": 711,
+  "types": [
+   "Ghost",
+   "Grass"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 95,
+   "def": 122,
+   "spa": 58,
+   "spd": 75,
+   "spe": 69
+  },
+  "abilities": {
+   "0": "Pickup",
+   "1": "Frisk",
+   "H": "Insomnia"
+  },
+  "forme": "Large",
+  "baseSpecies": "Gourgeist",
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 14,
+  "color": "Brown",
+  "moveCount": 57
+ },
+ {
+  "id": "gourgeistsmall",
+  "name": "Gourgeist-Small",
+  "num": 711,
+  "types": [
+   "Ghost",
+   "Grass"
+  ],
+  "baseStats": {
+   "hp": 55,
+   "atk": 85,
+   "def": 122,
+   "spa": 58,
+   "spd": 75,
+   "spe": 99
+  },
+  "abilities": {
+   "0": "Pickup",
+   "1": "Frisk",
+   "H": "Insomnia"
+  },
+  "forme": "Small",
+  "baseSpecies": "Gourgeist",
+  "requiredItem": null,
+  "heightm": 0.7,
+  "weightkg": 9.5,
+  "color": "Brown",
+  "moveCount": 57
+ },
+ {
+  "id": "gourgeistsuper",
+  "name": "Gourgeist-Super",
+  "num": 711,
+  "types": [
+   "Ghost",
+   "Grass"
+  ],
+  "baseStats": {
+   "hp": 85,
+   "atk": 100,
+   "def": 122,
+   "spa": 58,
+   "spd": 75,
+   "spe": 54
+  },
+  "abilities": {
+   "0": "Pickup",
+   "1": "Frisk",
+   "H": "Insomnia"
+  },
+  "forme": "Super",
+  "baseSpecies": "Gourgeist",
+  "requiredItem": null,
+  "heightm": 1.7,
+  "weightkg": 39,
   "color": "Brown",
   "moveCount": 57
  },
@@ -4019,6 +4219,60 @@
   "moveCount": 59
  },
  {
+  "id": "lycanrocdusk",
+  "name": "Lycanroc-Dusk",
+  "num": 745,
+  "types": [
+   "Rock"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 117,
+   "def": 65,
+   "spa": 55,
+   "spd": 65,
+   "spe": 110
+  },
+  "abilities": {
+   "0": "Tough Claws"
+  },
+  "forme": "Dusk",
+  "baseSpecies": "Lycanroc",
+  "requiredItem": null,
+  "heightm": 0.8,
+  "weightkg": 25,
+  "color": "Brown",
+  "moveCount": 64
+ },
+ {
+  "id": "lycanrocmidnight",
+  "name": "Lycanroc-Midnight",
+  "num": 745,
+  "types": [
+   "Rock"
+  ],
+  "baseStats": {
+   "hp": 85,
+   "atk": 115,
+   "def": 75,
+   "spa": 55,
+   "spd": 75,
+   "spe": 82
+  },
+  "abilities": {
+   "0": "Keen Eye",
+   "1": "Vital Spirit",
+   "H": "No Guard"
+  },
+  "forme": "Midnight",
+  "baseSpecies": "Lycanroc",
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 25,
+  "color": "Red",
+  "moveCount": 70
+ },
+ {
   "id": "machamp",
   "name": "Machamp",
   "num": 68,
@@ -4487,34 +4741,6 @@
   "weightkg": 19.9,
   "color": "Yellow",
   "moveCount": 66
- },
- {
-  "id": "ninetalesalola",
-  "name": "Ninetales-Alola",
-  "num": 38,
-  "types": [
-   "Ice",
-   "Fairy"
-  ],
-  "baseStats": {
-   "hp": 73,
-   "atk": 67,
-   "def": 75,
-   "spa": 81,
-   "spd": 100,
-   "spe": 109
-  },
-  "abilities": {
-   "0": "Snow Cloak",
-   "H": "Snow Warning"
-  },
-  "forme": "Alola",
-  "baseSpecies": "Ninetales",
-  "requiredItem": null,
-  "heightm": 1.1,
-  "weightkg": 19.9,
-  "color": "Blue",
-  "moveCount": 67
  },
  {
   "id": "noivern",
@@ -6296,6 +6522,33 @@
   "moveCount": 53
  },
  {
+  "id": "stunfiskgalar",
+  "name": "Stunfisk-Galar",
+  "num": 618,
+  "types": [
+   "Ground",
+   "Steel"
+  ],
+  "baseStats": {
+   "hp": 109,
+   "atk": 81,
+   "def": 99,
+   "spa": 66,
+   "spd": 84,
+   "spe": 32
+  },
+  "abilities": {
+   "0": "Mimicry"
+  },
+  "forme": "Galar",
+  "baseSpecies": "Stunfisk",
+  "requiredItem": null,
+  "heightm": 0.7,
+  "weightkg": 20.5,
+  "color": "Green",
+  "moveCount": 50
+ },
+ {
   "id": "sylveon",
   "name": "Sylveon",
   "num": 700,
@@ -7081,6 +7334,34 @@
   "moveCount": 62
  },
  {
+  "id": "watchog",
+  "name": "Watchog",
+  "num": 505,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 60,
+   "atk": 85,
+   "def": 69,
+   "spa": 60,
+   "spd": 69,
+   "spe": 77
+  },
+  "abilities": {
+   "0": "Illuminate",
+   "1": "Keen Eye",
+   "H": "Analytic"
+  },
+  "forme": null,
+  "baseSpecies": null,
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 27,
+  "color": "Brown",
+  "moveCount": 53
+ },
+ {
   "id": "weavile",
   "name": "Weavile",
   "num": 461,
@@ -7191,5 +7472,32 @@
   "weightkg": 81.1,
   "color": "Gray",
   "moveCount": 66
+ },
+ {
+  "id": "zoroarkhisui",
+  "name": "Zoroark-Hisui",
+  "num": 571,
+  "types": [
+   "Normal",
+   "Ghost"
+  ],
+  "baseStats": {
+   "hp": 55,
+   "atk": 100,
+   "def": 60,
+   "spa": 125,
+   "spd": 60,
+   "spe": 110
+  },
+  "abilities": {
+   "0": "Illusion"
+  },
+  "forme": "Hisui",
+  "baseSpecies": "Zoroark",
+  "requiredItem": null,
+  "heightm": 1.6,
+  "weightkg": 73,
+  "color": "Gray",
+  "moveCount": 57
  }
 ]

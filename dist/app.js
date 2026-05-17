@@ -114,7 +114,6 @@ function clearFilter() {
     searchQuery = '';
     pendingSlotIndex = null;
     filterInput.value = '';
-    filterInput.classList.add('hidden');
 }
 function applyFilter() {
     searchQuery = filterInput.value;
@@ -127,8 +126,9 @@ function startSlotSearch(slotIndex) {
     else {
         selectTab('pokedex');
     }
+    const pokedexContent = document.getElementById('tab-content-pokedex');
+    selectSubTab('pokemon', pokedexContent);
     pendingSlotIndex = slotIndex;
-    filterInput.classList.remove('hidden');
     filterInput.value = '';
     searchQuery = '';
     filterInput.focus();
@@ -366,6 +366,24 @@ function switchToTeamBuilder() {
         selectTab('team-builder');
     }
 }
+// ── Sub-tab system (inside Pokedex) ────────────────────────
+function selectSubTab(subTabId, container) {
+    container.querySelectorAll('.sub-tab').forEach(el => {
+        el.classList.toggle('active', el.dataset.subtab === subTabId);
+    });
+    container.querySelectorAll('.subtab-content').forEach(el => {
+        el.classList.toggle('hidden', el.id !== `subtab-content-${subTabId}`);
+    });
+}
+document.querySelectorAll('.sub-tab').forEach(el => {
+    el.addEventListener('click', () => {
+        const subTabId = el.dataset.subtab;
+        if (!subTabId)
+            return;
+        const container = el.closest('.tab-content');
+        selectSubTab(subTabId, container);
+    });
+});
 // Wire up all tab click handlers
 document.querySelectorAll('.tab').forEach(el => {
     el.addEventListener('click', () => {
@@ -390,7 +408,7 @@ filterInput.addEventListener('keydown', (e) => {
         clearFilter();
 });
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !filterInput.classList.contains('hidden')) {
+    if (e.key === 'Escape' && filterInput.value) {
         clearFilter();
         renderGrid();
     }

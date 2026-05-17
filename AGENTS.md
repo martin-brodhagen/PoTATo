@@ -60,10 +60,10 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 - Various other buffs/nerfs in Champions-specific gameplay
 
 ## Data Stats (Regulation M-A)
-- 259 battle forms (244 base + 11 regional variants + 5 Rotom forms - some listed as separate species)
+- 270 battle forms (244 base + 19 regional variants + 5 Rotom forms + Gourgeist sizes + Lycanroc forms)
 - 477 legal moves
 - 117 legal items
-- 258 learnable move lists
+- 271 learnable move lists
 
 ## Running
 

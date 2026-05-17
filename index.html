@@ -48,8 +48,21 @@
       <div class="placeholder">Select a team slot to add Pokémon</div>
     </div>
     <div id="tab-content-pokedex" class="tab-content">
-      <input id="filter-input" class="hidden" type="text" placeholder="Search Pokémon…" autocomplete="off">
-      <div id="pokemon-grid" role="list"></div>
+      <div class="sub-tab-bar">
+        <button class="sub-tab active" data-subtab="pokemon">Pokémon</button>
+        <button class="sub-tab" data-subtab="moves">Moves</button>
+        <button class="sub-tab" data-subtab="abilities">Abilities</button>
+      </div>
+      <div id="subtab-content-pokemon" class="subtab-content">
+        <input id="filter-input" type="text" placeholder="Search Pokémon…" autocomplete="off">
+        <div id="pokemon-grid" role="list"></div>
+      </div>
+      <div id="subtab-content-moves" class="subtab-content hidden">
+        <div class="placeholder">Moves coming soon</div>
+      </div>
+      <div id="subtab-content-abilities" class="subtab-content hidden">
+        <div class="placeholder">Abilities coming soon</div>
+      </div>
     </div>
     <div id="tab-content-imports" class="tab-content hidden">
       <div class="placeholder">Imports coming soon</div>

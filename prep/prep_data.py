@@ -198,36 +198,32 @@ for pid in legal_species:
 MA_LEGAL_SPECIES = {
     "abomasnow","absol","aegislash","aerodactyl","aggron","alakazam","alcremie",
     "altaria","ampharos","appletun","araquanid","arbok","arcanine","archaludon",
-    "ariados","armarouge","aromatisse","audino","aurorus","avalugg","azumarill",
-    "banette","basculegion","bastiodon","beartic","beedrill","bellibolt","blastoise",
+    "ariados","armarouge","aromatisse","audino","aurorus","avalugg","avalugghisui",
+    "azumarill","banette","basculegion","basculegionf","bastiodon","beartic","beedrill","bellibolt","blastoise",
     "camerupt","castform","ceruledge","chandelure","charizard","chesnaught","chimecho",
     "clawitzer","clefable","cofagrigus","conkeldurr","corviknight","crabominable",
-    "decidueye","dedenne","delphox","diggersby","ditto","dragapult","dragonite",
+    "decidueye","decidueyehisui","dedenne","delphox","diggersby","ditto","dragapult","dragonite",
     "drampa","emboar","emolga","empoleon","espathra","espeon","excadrill","farigiraf",
-    "feraligatr","flapple","flareon","floette","florges","forretress","froslass",
+    "feraligatr","flapple","flareon","floette","floetteeternal","florges","forretress","froslass",
     "furfrou","gallade","garbodor","garchomp","gardevoir","garganacl","gengar",
-    "glaceon","glalie","glimmora","gliscor","golurk","goodra","gourgeist","greninja",
+    "glaceon","glalie","glimmora","gliscor","golurk","goodra","goodrahisui","gourgeist","gourgeistlarge","gourgeistsmall","gourgeistsuper","greninja",
     "gyarados","hatterene","hawlucha","heliolisk","heracross","hippowdon","houndoom",
     "hydrapple","hydreigon","incineroar","infernape","jolteon","kangaskhan","kingambit",
     "kleavor","klefki","kommoo","krookodile","leafeon","liepard","lopunny","lucario",
-    "luxray","lycanroc","machamp","mamoswine","manectric","maushold","medicham",
+    "luxray","lycanroc","lycanrocdusk","lycanrocmidnight","machamp","mamoswine","manectric","maushold","medicham",
     "meganium","meowscarada","meowstic","milotic","mimikyu","morpeko","mrrime",
     "mudsdale","ninetales","noivern","oranguru","orthworm","palafin","pangoro",
     "passimian","patrat","pelipper","pidgeot","pikachu","pinsir","politoed",
-    "polteageist","primarina","quaquaval","raichu","rampardos","reuniclus","rhyperior",
-    "roserade","rotom","runerigus","sableye","salazzle","samurott","sandaconda",
+    "polteageist","primarina","quaquaval","raichu","raichualola","rampardos","reuniclus","rhyperior",
+    "roserade","rotom","runerigus","sableye","salazzle","samurott","samurotthisui","sandaconda",
     "scizor","scovillain","serperior","sharpedo","simipour","simisage","simisear",
-    "sinistcha","skarmory","skeledirge","slowbro","slowking","slurpuff","sneasler",
-    "snorlax","spiritomb","starmie","steelix","stunfisk","sylveon","talonflame",
-    "tauros","tinkaton","torkoal","torterra","toucannon","toxapex","toxicroak",
-    "trevenant","tsareena","typhlosion","tyranitar","tyrantrum","umbreon",
-    "vanilluxe","vaporeon","venusaur","victreebel","vivillon","volcarona","weavile",
-    "whimsicott","wyrdeer","zoroark",
-    # Regional forms
-    "raichualola","ninetalesalola","arcaninehisui",
-    "slowbrogalar","slowkinggalar",
-    "typhlosionhisui","samurotthisui",
-    "taurospaldeacombat","taurospaldeablaze","taurospaldeaaqua",
+    "sinistcha","skarmory","skeledirge","slowbro","slowbrogalar","slowking","slowkinggalar","slurpuff","sneasler",
+    "snorlax","spiritomb","starmie","steelix","stunfisk","stunfiskgalar","sylveon","talonflame",
+    "tauros","taurospaldeacombat","taurospaldeablaze","taurospaldeaaqua","tinkaton","torkoal","torterra","toucannon","toxapex","toxicroak",
+    "trevenant","tsareena","typhlosion","typhlosionhisui","tyranitar","tyrantrum","umbreon",
+    "vanilluxe","vaporeon","venusaur","victreebel","vivillon","volcarona","watchog","weavile",
+    "whimsicott","wyrdeer","zoroark","zoroarkhisui",
+    # Regional forms already inlined above
     # Rotom forms
     "rotomheat","rotomwash","rotomfrost","rotomfan","rotommow",
 }
@@ -349,52 +345,38 @@ print("Filtering learnsets...", file=sys.stderr)
 
 all_legal_ids = set(MA_LEGAL_SPECIES) | set(MA_LEGAL_MEGAS)
 
-# Showdown learnsets use dotted.bracket keys; map species IDs
-learnset_out = {}
+def species_name_to_key(name: str) -> str:
+    return name.lower().replace('-', '').replace(' ', '').replace("'", '').replace('.', '')
+
+learnset_out: dict[str, list[str]] = {}
 for pid in all_legal_ids:
-    # The learnset key may be different (e.g., "charizardmegax" in pokedex but "charizardmega" in learnsets?)
-    # Try exact match first, then variations
-    lkey = pid
-    if lkey in learnsets:
-        ls = learnsets[lkey].get('learnset', {})
-    elif pid.replace('mega', 'mega') in learnsets:
-        # Already correct
-        pass
+    ls: dict[str, list[str]] = {}
+
+    # 1. Try direct learnset lookup by pid
+    if pid in learnsets:
+        ls = learnsets[pid].get('learnset', {})
     else:
-        # Try strip mega suffix
-        base_pid = re.sub(r'mega$', '', pid)
-        if base_pid and base_pid in learnsets:
-            ls = learnsets[base_pid].get('learnset', {})
-        else:
-            ls = {}
+        # 2. Try baseSpecies inheritance (handles regionals, size variants, megas, etc.)
+        entry = pokedex.get(pid, {})
+        bs = entry.get('baseSpecies', '')
+        if bs:
+            base_key = species_name_to_key(bs)
+            if base_key in learnsets:
+                ls = learnsets[base_key].get('learnset', {})
+
+        # 3. Fallback: strip suffixes for megas
+        if not ls and pid.endswith('mega'):
+            for suffix in ('megax', 'megay', 'mega'):
+                base_key = pid.replace(suffix, '')
+                if base_key in learnsets:
+                    ls = learnsets[base_key].get('learnset', {})
+                    break
 
     filtered = {move: sources for move, sources in ls.items() if move in MA_LEGAL_MOVES}
     if filtered:
         learnset_out[pid] = sorted(filtered.keys())
     elif pid in MA_LEGAL_SPECIES:
-        # Base form without learnset data — still include empty list
-        learnset_out[pid] = []
-
-# For Mega forms without direct learnset entries, reference base species
-mega_to_base = {}
-for pid in all_legal_ids:
-    if pid.endswith('mega') and pid not in learnset_out:
-        base = re.sub(r'mega$', '', pid)
-        base = re.sub(r'megax$', '', pid)
-        base = re.sub(r'megay$', '', pid)
-        # try from pokedex entry
-        entry = pokedex.get(pid, {})
-        bspecies = entry.get('baseSpecies', '')
-        if bspecies:
-            bkey = bspecies.lower().replace('-', '').replace(' ', '').replace("'", '')
-        else:
-            bkey = pid.replace('mega', '').replace('megax', '').replace('megay', '')
-        mega_to_base[pid] = bkey
-
-for pid, bkey in mega_to_base.items():
-    if bkey in learnset_out:
-        learnset_out[pid] = learnset_out[bkey]
-    else:
+        # Form without learnset data — still include with empty list
         learnset_out[pid] = []
 
 # ---------------------------------------------------------------------------
