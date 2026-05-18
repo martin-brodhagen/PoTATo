@@ -262,11 +262,22 @@ button:hover {
   font-size: 0.9rem;
 }
 
-/* ── Filter input ─────────────────────────────────────── */
-#filter-input {
-  display: block;
-  width: calc(100% - 1.5rem);
+/* ── Filter row (input + mega toggle) ────────────────── */
+.filter-row {
+  display: flex;
+  gap: 0.4rem;
   margin: 0.5rem 0.75rem;
+  align-items: stretch;
+}
+
+.filter-input-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+#filter-input {
+  width: 100%;
   padding: 0.5rem 0.75rem;
   background: #1a1a24;
   color: #e0e0e8;
@@ -282,6 +293,180 @@ button:hover {
 
 #filter-input.hidden {
   display: none;
+}
+
+.result-count {
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.72rem;
+  color: #555;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.result-count.hidden {
+  display: none;
+}
+
+#mega-toggle {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #888;
+  border-color: #3a3a4a;
+  background: #1a1a24;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+#mega-toggle.active {
+  background: #3a3a4a;
+  border-color: #f0c060;
+  color: #e0e0e8;
+}
+
+/* ── Filter popup ────────────────────────────────────── */
+.filter-popup {
+  position: fixed;
+  max-height: 280px;
+  overflow-y: auto;
+  background: #1a1a24;
+  border: 1px solid #3a3a4a;
+  border-radius: 8px;
+  padding: 0.3rem 0;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  min-width: 220px;
+}
+
+.filter-popup.hidden {
+  display: none;
+}
+
+.popup-group {
+  padding: 0.15rem 0;
+}
+
+.popup-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #888;
+  padding: 0.1rem 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.popup-item {
+  padding: 0.25rem 0.75rem 0.25rem 1.25rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.popup-item:hover {
+  background: #2a2a3a;
+}
+
+.popup-item.highlighted {
+  background: #3a3a4a;
+}
+
+.popup-item .popup-type-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+/* ── Filter bar (chips + mode buttons) ───────────────── */
+#filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.filter-bar-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.2rem;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #222230;
+  border: 1px solid #3a3a4a;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: default;
+  transition: background 0.15s;
+}
+
+.filter-chip:hover {
+  background: #2a2a3a;
+}
+
+.filter-chip[data-category="type"] {
+  border-left: 4px solid #5fbb63;
+  background: rgba(95, 187, 99, 0.08);
+}
+
+.filter-chip[data-category="ability"] {
+  border-left: 4px solid #ab6ac8;
+  background: rgba(171, 106, 200, 0.08);
+}
+
+.filter-chip[data-category="move"] {
+  border-left: 4px solid #4f8ed4;
+  background: rgba(79, 142, 212, 0.08);
+}
+
+.chip-remove {
+  cursor: pointer;
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 0.05rem;
+  transition: color 0.12s;
+}
+
+.chip-remove:hover {
+  color: #e06060;
+}
+
+#filter-toolbar {
+  display: flex;
+  gap: 0.3rem;
+  margin-left: auto;
+}
+
+.filter-mode {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-color: #3a3a4a;
+  color: #888;
+}
+
+.filter-mode.active {
+  background: #3a3a4a;
+  border-color: #f0c060;
+  color: #e0e0e8;
 }
 
 /* ── Grid ─────────────────────────────────────────────── */
@@ -556,11 +741,27 @@ button:hover {
     padding: 0.25rem 0.15rem;
   }
 
-  #filter-input {
+  .filter-row {
     margin: 0.3rem 0.5rem;
-    width: calc(100% - 1rem);
+  }
+
+  #filter-input {
     font-size: 0.85rem;
     padding: 0.4rem 0.6rem;
+  }
+
+  #mega-toggle {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  #filter-bar {
+    padding: 0.2rem 0.5rem;
+  }
+
+  .filter-mode {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
   }
 
   #pokemon-grid {

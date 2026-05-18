@@ -6,12 +6,34 @@ const SPRITE_PATH = 'sprites/champions';
 
 const LAST_TEAM_KEY = 'potato-last-team';
 
+const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
+
+const TYPE_COLORS: Record<string, string> = {
+  Normal: '#9099a1', Fire: '#e56c3e', Water: '#4f8ed4',
+  Electric: '#e5c531', Grass: '#5fbb63', Ice: '#70cde7',
+  Fighting: '#c44d4d', Poison: '#ab6ac8', Ground: '#cc9f4a',
+  Flying: '#8fa8dd', Psychic: '#e26a8a', Bug: '#92bc2c',
+  Rock: '#b6a14a', Ghost: '#6060b0', Dragon: '#6969cc',
+  Dark: '#5a4f44', Steel: '#5a8ea2', Fairy: '#e08ee0',
+};
+
+interface FilterFlag {
+  category: 'type' | 'ability' | 'move';
+  id: string;
+  label: string;
+}
+
 const formatSelect = document.getElementById('format-select') as HTMLSelectElement;
 const teamSelect = document.getElementById('team-select') as HTMLSelectElement;
 const newTeamBtn = document.getElementById('new-team-btn') as HTMLButtonElement;
 const teamWarning = document.getElementById('team-warning') as HTMLSpanElement;
 const teamBar = document.getElementById('team-bar') as HTMLDivElement;
 const filterInput = document.getElementById('filter-input') as HTMLInputElement;
+const megaToggle = document.getElementById('mega-toggle') as HTMLButtonElement;
+const resultCount = document.getElementById('result-count') as HTMLSpanElement;
+const filterPopup = document.getElementById('filter-popup') as HTMLDivElement;
+const filterBar = document.getElementById('filter-bar') as HTMLDivElement;
+const filterToolbar = document.getElementById('filter-toolbar') as HTMLDivElement;
 const grid = document.getElementById('pokemon-grid') as HTMLDivElement;
 const searchDetailContent = document.getElementById('search-detail-content') as HTMLDivElement;
 
@@ -23,6 +45,16 @@ let spriteMap: Record<string, string> = {};
 let searchQuery = '';
 let pendingSlotIndex: number | null = null;
 let detailSpecies: Species | null = null;
+let filterFlags: FilterFlag[] = [];
+let filterMode: 'and' | 'or' = 'and';
+let allAbilities: string[] = [];
+let moveNames: Record<string, string> = {};
+let showMegas = true;
+
+let movesLoadedForFilter = false;
+let movesLoadingForFilter = false;
+let filterLearnsets: Record<string, string[]> | null = null;
+let filterHighlightIndex = -1;
 
 function getCurrentTeam(): Team | undefined {
   return teams.find(t => t.id === currentTeamId);
@@ -69,17 +101,65 @@ async function loadFormat(format: FormatId) {
   ]);
   allSpecies = index;
   spriteMap = map as Record<string, string>;
+  buildFilterData();
   renderGrid();
   renderTeamBar();
 }
 
+function buildFilterData() {
+  const abilitySet = new Set<string>();
+  for (const s of allSpecies) {
+    for (const v of Object.values(s.abilities)) {
+      if (v) abilitySet.add(v);
+    }
+  }
+  allAbilities = [...abilitySet].sort();
+  moveNames = {};
+  movesLoadedForFilter = false;
+  movesLoadingForFilter = false;
+}
+
+function matchesFlag(species: Species, flag: FilterFlag): boolean {
+  switch (flag.category) {
+    case 'type':
+      return species.types.some(t => t.toLowerCase() === flag.id);
+    case 'ability':
+      return Object.values(species.abilities).some(a => a.toLowerCase() === flag.id);
+    case 'move':
+      if (!filterLearnsets) return false;
+      const moves = filterLearnsets[species.id];
+      return !!moves && moves.includes(flag.id);
+  }
+}
+
+function isMegaForm(species: Species): boolean {
+  return species.forme !== null && species.forme.includes('Mega');
+}
+
+function matchesFlags(species: Species): boolean {
+  if (!showMegas && isMegaForm(species)) {
+    return false;
+  }
+  if (filterFlags.length > 0) {
+    const results = filterFlags.map(f => matchesFlag(species, f));
+    if (filterMode === 'and' ? !results.every(Boolean) : !results.some(Boolean)) {
+      return false;
+    }
+  }
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    if (!species.id.includes(q) && !species.name.toLowerCase().includes(q)) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function renderGrid() {
   grid.innerHTML = '';
-  const filtered = allSpecies.filter(s => {
-    if (!searchQuery) return true;
-    const q = searchQuery.toLowerCase();
-    return s.id.includes(q) || s.name.toLowerCase().includes(q);
-  });
+  const filtered = allSpecies.filter(matchesFlags);
+  resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
+  resultCount.classList.toggle('hidden', allSpecies.length === 0);
 
   if (filtered.length === 0) {
     grid.innerHTML = '<div class="loading">No Pokémon match your search.</div>';
@@ -139,11 +219,150 @@ function clearFilter() {
   searchQuery = '';
   pendingSlotIndex = null;
   filterInput.value = '';
+  filterFlags = [];
+  filterMode = 'and';
+  filterLearnsets = null;
+  filterHighlightIndex = -1;
+  filterPopup.classList.add('hidden');
+  renderChips();
+  updateModeButtons();
+  renderGrid();
 }
 
 function applyFilter() {
   searchQuery = filterInput.value;
+  updatePopup();
   renderGrid();
+}
+
+function updatePopup() {
+  const text = filterInput.value.trim();
+  if (text.length < 2) {
+    filterPopup.classList.add('hidden');
+    return;
+  }
+
+  const lower = text.toLowerCase();
+
+  const matchingTypes = TYPES.filter(t => t.toLowerCase().includes(lower));
+  const matchingAbilities = allAbilities.filter(a => a.toLowerCase().includes(lower));
+  const matchingMoves: { id: string; name: string }[] = [];
+  for (const [id, name] of Object.entries(moveNames)) {
+    if (name.toLowerCase().includes(lower)) {
+      matchingMoves.push({ id, name });
+    }
+  }
+
+  const total = matchingTypes.length + matchingAbilities.length + matchingMoves.length;
+  if (total === 0) {
+    filterPopup.classList.add('hidden');
+    return;
+  }
+
+  let html = '';
+  if (matchingTypes.length > 0) {
+    html += `<div class="popup-group"><div class="popup-group-label">Type</div>`;
+    for (const t of matchingTypes.slice(0, 10)) {
+      const dotColor = TYPE_COLORS[t] || '#888';
+      html += `<div class="popup-item" data-category="type" data-id="${t.toLowerCase()}" data-label="${t}"><span class="popup-type-dot" style="background:${dotColor}"></span>${t}</div>`;
+    }
+    html += `</div>`;
+  }
+  if (matchingAbilities.length > 0) {
+    html += `<div class="popup-group"><div class="popup-group-label">Ability</div>`;
+    for (const a of matchingAbilities.slice(0, 10)) {
+      html += `<div class="popup-item" data-category="ability" data-id="${a.toLowerCase()}" data-label="${a}">${a}</div>`;
+    }
+    html += `</div>`;
+  }
+  if (matchingMoves.length > 0) {
+    html += `<div class="popup-group"><div class="popup-group-label">Move</div>`;
+    for (const m of matchingMoves.slice(0, 10)) {
+      html += `<div class="popup-item" data-category="move" data-id="${m.id}" data-label="${m.name}">${m.name}</div>`;
+    }
+    html += `</div>`;
+  }
+
+  filterPopup.innerHTML = html;
+  filterHighlightIndex = -1;
+  filterPopup.classList.remove('hidden');
+
+  const rect = filterInput.getBoundingClientRect();
+  const popupStyle = filterPopup.style;
+  const spaceBelow = window.innerHeight - rect.bottom;
+  const popupHeight = Math.min(280, spaceBelow - 8);
+  popupStyle.top = (spaceBelow > 180 ? rect.bottom + 6 : rect.top - popupHeight - 6) + 'px';
+  popupStyle.left = Math.max(8, rect.left) + 'px';
+  popupStyle.width = Math.max(220, rect.width) + 'px';
+  popupStyle.maxHeight = popupHeight + 'px';
+
+  if (!movesLoadedForFilter && !movesLoadingForFilter) {
+    movesLoadingForFilter = true;
+    loadMoves(currentFormat).then(moves => {
+      moveNames = {};
+      for (const [id, move] of Object.entries(moves)) {
+        moveNames[id] = move.name;
+      }
+      movesLoadedForFilter = true;
+      movesLoadingForFilter = false;
+      if (document.activeElement === filterInput) {
+        updatePopup();
+      }
+    });
+  }
+}
+
+function updatePopupHighlight(items: NodeListOf<HTMLElement> | HTMLElement[]) {
+  items.forEach((el, i) => {
+    el.classList.toggle('highlighted', i === filterHighlightIndex);
+  });
+  if (filterHighlightIndex >= 0 && filterHighlightIndex < items.length) {
+    items[filterHighlightIndex].scrollIntoView({ block: 'nearest' });
+  }
+}
+
+function addFlag(category: FilterFlag['category'], id: string, label: string) {
+  filterFlags.push({ category, id, label });
+  filterInput.value = '';
+  searchQuery = '';
+  filterPopup.classList.add('hidden');
+  renderChips();
+  renderGrid();
+  if (category === 'move' && !filterLearnsets) {
+    loadLearnsets(currentFormat).then(ls => {
+      filterLearnsets = ls;
+      renderGrid();
+    });
+  }
+}
+
+function removeFlag(index: number) {
+  filterFlags.splice(index, 1);
+  renderChips();
+  renderGrid();
+}
+
+function renderChips() {
+  filterBar.querySelectorAll('.filter-chip').forEach(el => el.remove());
+  filterBar.classList.toggle('hidden', filterFlags.length === 0);
+  for (let i = 0; i < filterFlags.length; i++) {
+    const f = filterFlags[i];
+    const chip = document.createElement('span');
+    chip.className = 'filter-chip';
+    chip.dataset.category = f.category;
+    chip.innerHTML = `${f.label} <span class="chip-remove" data-index="${i}">×</span>`;
+    chip.querySelector('.chip-remove')!.addEventListener('click', (e) => {
+      e.stopPropagation();
+      removeFlag(i);
+    });
+    filterBar.insertBefore(chip, filterToolbar);
+  }
+}
+
+function updateModeButtons() {
+  filterToolbar.querySelectorAll<HTMLButtonElement>('.filter-mode').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === filterMode);
+  });
 }
 
 function startSlotSearch(slotIndex: number) {
@@ -169,7 +388,6 @@ function fillSlot(slotIndex: number, speciesId: string) {
   renderTeamWarning();
   clearFilter();
   renderTeamBar();
-  renderGrid();
   reRenderDetail();
 }
 
@@ -273,7 +491,6 @@ function selectTeam(id: string) {
   detailSpecies = null;
   renderTeamWarning();
   renderTeamBar();
-  renderGrid();
 }
 
 function handleNewTeam() {
@@ -302,6 +519,7 @@ async function showDetail(s: Species) {
     loadLearnsets(currentFormat),
     loadMoves(currentFormat),
   ]);
+  filterLearnsets = learnsets;
 
   const team = getCurrentTeam();
 
@@ -456,16 +674,89 @@ teamSelect.addEventListener('change', () => {
 
 newTeamBtn.addEventListener('click', handleNewTeam);
 
+megaToggle.addEventListener('click', () => {
+  showMegas = !showMegas;
+  megaToggle.classList.toggle('active', showMegas);
+  renderGrid();
+});
+
 filterInput.addEventListener('input', applyFilter);
 filterInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') clearFilter();
+  const popupVisible = !filterPopup.classList.contains('hidden');
+  const items = popupVisible ? filterPopup.querySelectorAll<HTMLElement>('.popup-item') : [];
+  const n = items.length;
+
+  if (e.key === 'ArrowDown' && popupVisible) {
+    e.preventDefault();
+    filterHighlightIndex = n > 0 ? (filterHighlightIndex + 1) % n : -1;
+    updatePopupHighlight(items);
+  } else if (e.key === 'ArrowUp' && popupVisible) {
+    e.preventDefault();
+    filterHighlightIndex = n > 0 ? (filterHighlightIndex - 1 + n) % n : -1;
+    updatePopupHighlight(items);
+  } else if (e.key === 'Tab' && popupVisible) {
+    e.preventDefault();
+    if (n === 0) return;
+    if (e.shiftKey) {
+      filterHighlightIndex = (filterHighlightIndex - 1 + n) % n;
+    } else {
+      filterHighlightIndex = (filterHighlightIndex + 1) % n;
+    }
+    updatePopupHighlight(items);
+  } else if (e.key === 'Enter' && popupVisible) {
+    e.preventDefault();
+    if (n === 0) return;
+    const idx = filterHighlightIndex >= 0 ? filterHighlightIndex : 0;
+    const item = items[idx];
+    addFlag(
+      item.dataset.category as FilterFlag['category'],
+      item.dataset.id!,
+      item.dataset.label!
+    );
+  } else if (e.key === 'Escape') {
+    clearFilter();
+  }
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && filterInput.value) {
+  if (e.key === 'Escape' && (filterInput.value || filterFlags.length > 0)) {
     clearFilter();
-    renderGrid();
   }
+});
+
+filterPopup.addEventListener('click', (e) => {
+  const item = (e.target as HTMLElement).closest('.popup-item') as HTMLElement | null;
+  if (!item) return;
+  const cat = item.dataset.category as FilterFlag['category'];
+  const id = item.dataset.id!;
+  const label = item.dataset.label!;
+  addFlag(cat, id, label);
+  filterInput.focus();
+});
+
+document.addEventListener('click', (e) => {
+  const target = e.target as HTMLElement;
+  if (!target.closest('#filter-input') && !target.closest('#filter-popup')) {
+    filterPopup.classList.add('hidden');
+  }
+});
+
+window.addEventListener('scroll', () => {
+  filterPopup.classList.add('hidden');
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+  filterPopup.classList.add('hidden');
+}, { passive: true });
+
+filterToolbar.addEventListener('click', (e) => {
+  const btn = (e.target as HTMLElement).closest('.filter-mode') as HTMLButtonElement | null;
+  if (!btn) return;
+  const mode = btn.dataset.mode;
+  if (mode !== 'and' && mode !== 'or') return;
+  filterMode = mode;
+  updateModeButtons();
+  renderGrid();
 });
 
 // ── Init ──────────────────────────────────────────────────
