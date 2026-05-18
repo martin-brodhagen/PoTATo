@@ -30,6 +30,7 @@ const teamWarning = document.getElementById('team-warning') as HTMLSpanElement;
 const teamBar = document.getElementById('team-bar') as HTMLDivElement;
 const filterInput = document.getElementById('filter-input') as HTMLInputElement;
 const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
+const sortDirBtn = document.getElementById('sort-dir') as HTMLButtonElement;
 const megaToggle = document.getElementById('mega-toggle') as HTMLButtonElement;
 const resultCount = document.getElementById('result-count') as HTMLSpanElement;
 const filterPopup = document.getElementById('filter-popup') as HTMLDivElement;
@@ -51,7 +52,8 @@ let filterMode: 'and' | 'or' = 'and';
 let allAbilities: string[] = [];
 let moveNames: Record<string, string> = {};
 let showMegas = true;
-let sortBy: 'dex' | 'alpha' = 'dex';
+let sortBy = 'dex';
+let sortAsc = true;
 
 let movesLoadedForFilter = false;
 let movesLoadingForFilter = false;
@@ -160,11 +162,21 @@ function matchesFlags(species: Species): boolean {
 function renderGrid() {
   grid.innerHTML = '';
   let filtered = allSpecies.filter(matchesFlags);
-  if (sortBy === 'alpha') {
-    filtered = filtered.sort((a, b) => a.name.localeCompare(b.name));
-  } else {
-    filtered = filtered.sort((a, b) => a.num - b.num);
-  }
+  const statKeys: Record<string, keyof typeof allSpecies[0]['baseStats']> = {
+    hp: 'hp', atk: 'atk', def: 'def', spa: 'spa', spd: 'spd', spe: 'spe'
+  };
+  filtered = filtered.sort((a, b) => {
+    let cmp: number;
+    if (sortBy === 'alpha') {
+      cmp = a.name.localeCompare(b.name);
+    } else if (sortBy === 'dex') {
+      cmp = a.num - b.num;
+    } else {
+      const key = statKeys[sortBy];
+      cmp = a.baseStats[key] - b.baseStats[key];
+    }
+    return sortAsc ? cmp : -cmp;
+  });
   resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
   resultCount.classList.toggle('hidden', allSpecies.length === 0);
 
@@ -234,27 +246,6 @@ function renderGrid() {
     card.appendChild(div);
 
     // Right column: stacked base stats
-    function statColor(val: number): string {
-      if (val <= 29) return '#e06060';
-      if (val <= 59) return '#d4a040';
-      if (val <= 94) return '#c5b030';
-      if (val <= 134) return '#5fbb63';
-      return '#4f8ed4';
-    }
-    function lighten(hex: string, amount: number): string {
-      const r = parseInt(hex.slice(1,3), 16);
-      const g = parseInt(hex.slice(3,5), 16);
-      const b = parseInt(hex.slice(5,7), 16);
-      const mix = (c: number) => Math.min(255, Math.round(c + (255 - c) * amount));
-      return `rgb(${mix(r)},${mix(g)},${mix(b)})`;
-    }
-    function darken(hex: string, amount: number): string {
-      const r = parseInt(hex.slice(1,3), 16);
-      const g = parseInt(hex.slice(3,5), 16);
-      const b = parseInt(hex.slice(5,7), 16);
-      const mix = (c: number) => Math.round(c * (1 - amount));
-      return `rgb(${mix(r)},${mix(g)},${mix(b)})`;
-    }
     const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'] as const;
     const statKeys = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const;
     const statList = document.createElement('div');
@@ -262,22 +253,15 @@ function renderGrid() {
     for (let si = 0; si < 6; si++) {
       const val = s.baseStats[statKeys[si]];
       const entry = document.createElement('div');
-      entry.className = 'stat-entry';
+      entry.className = 'stat-entry' + (statKeys[si] === sortBy ? ' stat-highlighted' : '');
       const label = document.createElement('span');
       label.className = 'stat-label';
       label.textContent = statNames[si];
       const value = document.createElement('span');
       value.className = 'stat-value';
       value.textContent = val.toString();
-      const bar = document.createElement('div');
-      bar.className = 'stat-bar';
-      const capped = val > 160;
-      bar.style.width = (capped ? 160 : val) + 'px';
-      const color = capped ? '#a060d0' : statColor(val);
-      bar.style.background = `linear-gradient(to bottom, ${lighten(color, 0.35)} 0%, ${color} 55%, ${darken(color, 0.35)} 100%)`;
       entry.appendChild(label);
       entry.appendChild(value);
-      entry.appendChild(bar);
       statList.appendChild(entry);
     }
     card.appendChild(statList);
@@ -632,12 +616,12 @@ async function showDetail(s: Species) {
   html += `
     <p style="margin-top:0.5rem">BST ${bst} · ${s.moveCount} legal moves</p>
     <div class="stats-block">
-      <div class="stat-row"><span class="stat-label">HP</span><span>${s.baseStats.hp}</span></div>
-      <div class="stat-row"><span class="stat-label">Atk</span><span>${s.baseStats.atk}</span></div>
-      <div class="stat-row"><span class="stat-label">Def</span><span>${s.baseStats.def}</span></div>
-      <div class="stat-row"><span class="stat-label">SpA</span><span>${s.baseStats.spa}</span></div>
-      <div class="stat-row"><span class="stat-label">SpD</span><span>${s.baseStats.spd}</span></div>
-      <div class="stat-row"><span class="stat-label">Spe</span><span>${s.baseStats.spe}</span></div>
+      <div class="stat-row${sortBy === 'hp' ? ' stat-highlighted' : ''}"><span class="stat-label">HP</span><span>${s.baseStats.hp}</span></div>
+      <div class="stat-row${sortBy === 'atk' ? ' stat-highlighted' : ''}"><span class="stat-label">Atk</span><span>${s.baseStats.atk}</span></div>
+      <div class="stat-row${sortBy === 'def' ? ' stat-highlighted' : ''}"><span class="stat-label">Def</span><span>${s.baseStats.def}</span></div>
+      <div class="stat-row${sortBy === 'spa' ? ' stat-highlighted' : ''}"><span class="stat-label">SpA</span><span>${s.baseStats.spa}</span></div>
+      <div class="stat-row${sortBy === 'spd' ? ' stat-highlighted' : ''}"><span class="stat-label">SpD</span><span>${s.baseStats.spd}</span></div>
+      <div class="stat-row${sortBy === 'spe' ? ' stat-highlighted' : ''}"><span class="stat-label">Spe</span><span>${s.baseStats.spe}</span></div>
     </div>
     <div class="abilities-row">
       ${Object.entries(s.abilities).map(([k, v]) => `${k === '0' ? '' : k === 'H' ? 'HA: ' : k + ': '}${v}`).join(' · ')}
@@ -752,8 +736,21 @@ teamSelect.addEventListener('change', () => {
 
 newTeamBtn.addEventListener('click', handleNewTeam);
 
+const statSortKeys = new Set(['hp', 'atk', 'def', 'spa', 'spd', 'spe']);
+
 sortSelect.addEventListener('change', () => {
-  sortBy = sortSelect.value as 'dex' | 'alpha';
+  sortBy = sortSelect.value;
+  const shouldDesc = statSortKeys.has(sortBy);
+  if (sortAsc === shouldDesc) {
+    sortAsc = !shouldDesc;
+    sortDirBtn.textContent = sortAsc ? '▲' : '▼';
+  }
+  renderGrid();
+});
+
+sortDirBtn.addEventListener('click', () => {
+  sortAsc = !sortAsc;
+  sortDirBtn.textContent = sortAsc ? '▲' : '▼';
   renderGrid();
 });
 
