@@ -29,6 +29,7 @@ const newTeamBtn = document.getElementById('new-team-btn') as HTMLButtonElement;
 const teamWarning = document.getElementById('team-warning') as HTMLSpanElement;
 const teamBar = document.getElementById('team-bar') as HTMLDivElement;
 const filterInput = document.getElementById('filter-input') as HTMLInputElement;
+const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
 const megaToggle = document.getElementById('mega-toggle') as HTMLButtonElement;
 const resultCount = document.getElementById('result-count') as HTMLSpanElement;
 const filterPopup = document.getElementById('filter-popup') as HTMLDivElement;
@@ -50,6 +51,7 @@ let filterMode: 'and' | 'or' = 'and';
 let allAbilities: string[] = [];
 let moveNames: Record<string, string> = {};
 let showMegas = true;
+let sortBy: 'dex' | 'alpha' = 'dex';
 
 let movesLoadedForFilter = false;
 let movesLoadingForFilter = false;
@@ -157,7 +159,12 @@ function matchesFlags(species: Species): boolean {
 
 function renderGrid() {
   grid.innerHTML = '';
-  const filtered = allSpecies.filter(matchesFlags);
+  let filtered = allSpecies.filter(matchesFlags);
+  if (sortBy === 'alpha') {
+    filtered = filtered.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
+    filtered = filtered.sort((a, b) => a.num - b.num);
+  }
   resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
   resultCount.classList.toggle('hidden', allSpecies.length === 0);
 
@@ -674,6 +681,11 @@ teamSelect.addEventListener('change', () => {
 
 newTeamBtn.addEventListener('click', handleNewTeam);
 
+sortSelect.addEventListener('change', () => {
+  sortBy = sortSelect.value as 'dex' | 'alpha';
+  renderGrid();
+});
+
 megaToggle.addEventListener('click', () => {
   showMegas = !showMegas;
   megaToggle.classList.toggle('active', showMegas);
@@ -748,6 +760,16 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', () => {
   filterPopup.classList.add('hidden');
 }, { passive: true });
+
+filterBar.addEventListener('click', (e) => {
+  const clearBtn = (e.target as HTMLElement).closest('.filter-clear-all');
+  if (clearBtn) {
+    filterFlags = [];
+    renderChips();
+    renderGrid();
+    return;
+  }
+});
 
 filterToolbar.addEventListener('click', (e) => {
   const btn = (e.target as HTMLElement).closest('.filter-mode') as HTMLButtonElement | null;

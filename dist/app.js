@@ -17,6 +17,7 @@ const newTeamBtn = document.getElementById('new-team-btn');
 const teamWarning = document.getElementById('team-warning');
 const teamBar = document.getElementById('team-bar');
 const filterInput = document.getElementById('filter-input');
+const sortSelect = document.getElementById('sort-select');
 const megaToggle = document.getElementById('mega-toggle');
 const resultCount = document.getElementById('result-count');
 const filterPopup = document.getElementById('filter-popup');
@@ -37,6 +38,7 @@ let filterMode = 'and';
 let allAbilities = [];
 let moveNames = {};
 let showMegas = true;
+let sortBy = 'dex';
 let movesLoadedForFilter = false;
 let movesLoadingForFilter = false;
 let filterLearnsets = null;
@@ -137,7 +139,13 @@ function matchesFlags(species) {
 }
 function renderGrid() {
     grid.innerHTML = '';
-    const filtered = allSpecies.filter(matchesFlags);
+    let filtered = allSpecies.filter(matchesFlags);
+    if (sortBy === 'alpha') {
+        filtered = filtered.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    else {
+        filtered = filtered.sort((a, b) => a.num - b.num);
+    }
     resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
     resultCount.classList.toggle('hidden', allSpecies.length === 0);
     if (filtered.length === 0) {
@@ -614,6 +622,10 @@ teamSelect.addEventListener('change', () => {
     selectTeam(teamSelect.value);
 });
 newTeamBtn.addEventListener('click', handleNewTeam);
+sortSelect.addEventListener('change', () => {
+    sortBy = sortSelect.value;
+    renderGrid();
+});
 megaToggle.addEventListener('click', () => {
     showMegas = !showMegas;
     megaToggle.classList.toggle('active', showMegas);
@@ -685,6 +697,15 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', () => {
     filterPopup.classList.add('hidden');
 }, { passive: true });
+filterBar.addEventListener('click', (e) => {
+    const clearBtn = e.target.closest('.filter-clear-all');
+    if (clearBtn) {
+        filterFlags = [];
+        renderChips();
+        renderGrid();
+        return;
+    }
+});
 filterToolbar.addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-mode');
     if (!btn)
