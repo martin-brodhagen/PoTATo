@@ -119,6 +119,69 @@ item_overrides = parse_ts_overrides(f"{MOD_DIR}/items.ts")
 ability_overrides = parse_ts_overrides(f"{MOD_DIR}/abilities.ts")
 mod_formats_data = parse_ts_overrides(f"{MOD_DIR}/formats-data.ts")
 
+def parse_learnsets_ts(url):
+    """Parse a nested learnset file where entries have {learnset:{move:[sources]}} structure.
+    
+    Strategy: count brace depth rather than using non-greedy regex.
+    """
+    text = fetch_text(url)
+    # Strip export wrapper
+    m = re.search(r'=\s*\{', text)
+    if m:
+        text = text[m.end():]
+    text = re.sub(r'\}\s*;\s*$', '', text.rstrip())
+    
+    result = {}
+    pos = 0
+    while pos < len(text):
+        m = re.compile(r'\s*([a-z0-9_]+)\s*:\s*\{').search(text, pos)
+        if not m:
+            break
+        key = m.group(1)
+        pos = m.end()
+        # Find matching closing brace for outer block
+        depth = 1
+        while pos < len(text) and depth > 0:
+            if text[pos] == '{':
+                depth += 1
+            elif text[pos] == '}':
+                depth -= 1
+            pos += 1
+        body = text[m.end():pos-1]
+        
+        # Extract learnset: { ... } from body
+        lsm = re.search(r'learnset\s*:\s*\{', body)
+        if lsm:
+            ls_start = lsm.end()
+            ls_pos, ls_depth = ls_start, 1
+            while ls_pos < len(body) and ls_depth > 0:
+                if body[ls_pos] == '{':
+                    ls_depth += 1
+                elif body[ls_pos] == '}':
+                    ls_depth -= 1
+                ls_pos += 1
+            ls_body = body[ls_start:ls_pos-1]
+            learnset = {}
+            for line in ls_body.split('\n'):
+                line = line.strip()
+                if not line or line.startswith('//'):
+                    continue
+                pm = re.compile(r'''([a-z0-9_]+)\s*:\s*(\[.*?\])\s*,?\s*$''').match(line)
+                if pm:
+                    move, val = pm.group(1), pm.group(2)
+                    try:
+                        learnset[move] = json.loads(val)
+                    except json.JSONDecodeError:
+                        learnset[move] = val
+            result[key] = {"learnset": learnset}
+        
+        # Skip trailing whitespace/comma
+        while pos < len(text) and text[pos] in ' \t\n\r,':
+            pos += 1
+    return result
+
+mod_learnsets = parse_learnsets_ts(f"{MOD_DIR}/learnsets.ts")
+
 # ---------------------------------------------------------------------------
 # 3. Apply overrides to base data
 # ---------------------------------------------------------------------------
@@ -327,6 +390,11 @@ for mid, entry in moves.items():
 # ---------------------------------------------------------------------------
 print("Filtering learnsets...", file=sys.stderr)
 
+# Merge Champions mod learnsets on top of base Showdown data
+# Mod entries fully replace base entries for covered species
+merged_learnsets = dict(learnsets)
+merged_learnsets.update(mod_learnsets)
+
 def species_name_to_key(name: str) -> str:
     return name.lower().replace('-', '').replace(' ', '').replace("'", '').replace('.', '')
 
@@ -334,24 +402,46 @@ learnset_out: dict[str, list[str]] = {}
 for pid in all_legal_ids:
     ls: dict[str, list[str]] = {}
 
-    # 1. Try direct learnset lookup by pid
-    if pid in learnsets:
-        ls = learnsets[pid].get('learnset', {})
+    # 1. Try direct learnset lookup by pid (checks merged: mod first, then base)
+    if pid in merged_learnsets:
+        ls = merged_learnsets[pid].get('learnset', {})
     else:
-        # 2. Try baseSpecies inheritance (handles regionals, size variants, megas, etc.)
         entry = pokedex.get(pid, {})
-        bs = entry.get('baseSpecies', '')
-        if bs:
-            base_key = species_name_to_key(bs)
-            if base_key in learnsets:
-                ls = learnsets[base_key].get('learnset', {})
+        base_source = None
 
-        # 3. Fallback: strip suffixes for megas
+        # 2a. battleOnly: some forms (e.g. floettemega) can only be obtained
+        # by transforming from another species in battle — inherit from that
+        bo = entry.get('battleOnly', '')
+        if bo:
+            if isinstance(bo, list):
+                bo = bo[0]
+            base_source = species_name_to_key(bo)
+
+        # 2b. baseSpecies inheritance (handles regionals, size variants, megas)
+        if not base_source:
+            bs = entry.get('baseSpecies', '')
+            if bs:
+                base_source = species_name_to_key(bs)
+
+        if base_source and base_source in merged_learnsets:
+            ls = merged_learnsets[base_source].get('learnset', {})
+
+        # 3. Gender-specific override: for megas with a gender marker in the
+        # form name (e.g. meowsticfmega), prefer the gender-specific base.
+        # Only triggers when direct_base is MORE specific than current source
+        # (e.g. "meowsticf" starts with "meowstic"; "floette" does NOT start
+        # with "floetteeternal" so it won't override the battleOnly source).
+        if pid.endswith('mega'):
+            direct_base = re.sub(r'megax$|megay$|mega$', '', pid)
+            if direct_base in merged_learnsets and base_source and direct_base.startswith(base_source):
+                ls = merged_learnsets[direct_base].get('learnset', {})
+
+        # 4. Fallback: strip suffixes for megas (if no baseSpecies match)
         if not ls and pid.endswith('mega'):
             for suffix in ('megax', 'megay', 'mega'):
                 base_key = pid.replace(suffix, '')
-                if base_key in learnsets:
-                    ls = learnsets[base_key].get('learnset', {})
+                if base_key in merged_learnsets:
+                    ls = merged_learnsets[base_key].get('learnset', {})
                     break
 
     filtered = {move: sources for move, sources in ls.items() if move in MA_LEGAL_MOVES}

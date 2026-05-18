@@ -25,7 +25,7 @@
   "heightm": 2.2,
   "weightkg": 135.5,
   "color": "White",
-  "moveCount": 67
+  "moveCount": 61
  },
  {
   "id": "abomasnowmega",
@@ -52,7 +52,7 @@
   "heightm": 2.7,
   "weightkg": 185,
   "color": "White",
-  "moveCount": 67
+  "moveCount": 61
  },
  {
   "id": "absol",
@@ -80,7 +80,7 @@
   "heightm": 1.2,
   "weightkg": 47,
   "color": "White",
-  "moveCount": 74
+  "moveCount": 66
  },
  {
   "id": "absolmega",
@@ -106,7 +106,7 @@
   "heightm": 1.2,
   "weightkg": 49,
   "color": "White",
-  "moveCount": 74
+  "moveCount": 66
  },
  {
   "id": "aegislash",
@@ -133,7 +133,7 @@
   "heightm": 1.7,
   "weightkg": 53,
   "color": "Brown",
-  "moveCount": 44
+  "moveCount": 43
  },
  {
   "id": "aerodactyl",
@@ -162,7 +162,7 @@
   "heightm": 1.8,
   "weightkg": 59,
   "color": "Purple",
-  "moveCount": 67
+  "moveCount": 56
  },
  {
   "id": "aerodactylmega",
@@ -189,7 +189,7 @@
   "heightm": 2.1,
   "weightkg": 79,
   "color": "Purple",
-  "moveCount": 67
+  "moveCount": 56
  },
  {
   "id": "aggron",
@@ -218,7 +218,7 @@
   "heightm": 2.1,
   "weightkg": 360,
   "color": "Gray",
-  "moveCount": 90
+  "moveCount": 78
  },
  {
   "id": "aggronmega",
@@ -244,7 +244,7 @@
   "heightm": 2.2,
   "weightkg": 395,
   "color": "Gray",
-  "moveCount": 90
+  "moveCount": 78
  },
  {
   "id": "alakazam",
@@ -272,7 +272,7 @@
   "heightm": 1.5,
   "weightkg": 48,
   "color": "Brown",
-  "moveCount": 73
+  "moveCount": 58
  },
  {
   "id": "alakazammega",
@@ -298,7 +298,7 @@
   "heightm": 1.2,
   "weightkg": 48,
   "color": "Brown",
-  "moveCount": 73
+  "moveCount": 58
  },
  {
   "id": "alcremie",
@@ -325,7 +325,7 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "color": "White",
-  "moveCount": 45
+  "moveCount": 47
  },
  {
   "id": "altaria",
@@ -353,7 +353,7 @@
   "heightm": 1.1,
   "weightkg": 20.6,
   "color": "Blue",
-  "moveCount": 71
+  "moveCount": 63
  },
  {
   "id": "altariamega",
@@ -380,7 +380,7 @@
   "heightm": 1.5,
   "weightkg": 20.6,
   "color": "Blue",
-  "moveCount": 71
+  "moveCount": 63
  },
  {
   "id": "ampharos",
@@ -407,7 +407,7 @@
   "heightm": 1.4,
   "weightkg": 61.5,
   "color": "Yellow",
-  "moveCount": 68
+  "moveCount": 63
  },
  {
   "id": "ampharosmega",
@@ -434,7 +434,7 @@
   "heightm": 1.4,
   "weightkg": 61.5,
   "color": "Yellow",
-  "moveCount": 68
+  "moveCount": 63
  },
  {
   "id": "appletun",
@@ -463,7 +463,7 @@
   "heightm": 0.4,
   "weightkg": 13,
   "color": "Green",
-  "moveCount": 50
+  "moveCount": 48
  },
  {
   "id": "araquanid",
@@ -491,7 +491,7 @@
   "heightm": 1.8,
   "weightkg": 82,
   "color": "Green",
-  "moveCount": 52
+  "moveCount": 50
  },
  {
   "id": "arbok",
@@ -519,7 +519,7 @@
   "heightm": 3.5,
   "weightkg": 65,
   "color": "Purple",
-  "moveCount": 70
+  "moveCount": 66
  },
  {
   "id": "arcanine",
@@ -547,7 +547,7 @@
   "heightm": 1.9,
   "weightkg": 155,
   "color": "Brown",
-  "moveCount": 59
+  "moveCount": 54
  },
  {
   "id": "arcaninehisui",
@@ -576,7 +576,7 @@
   "heightm": 2,
   "weightkg": 168,
   "color": "Brown",
-  "moveCount": 52
+  "moveCount": 60
  },
  {
   "id": "archaludon",
@@ -605,7 +605,7 @@
   "heightm": 2,
   "weightkg": 60,
   "color": "White",
-  "moveCount": 50
+  "moveCount": 51
  },
  {
   "id": "ariados",
@@ -634,7 +634,7 @@
   "heightm": 1.1,
   "weightkg": 33.5,
   "color": "Red",
-  "moveCount": 59
+  "moveCount": 60
  },
  {
   "id": "armarouge",
@@ -662,7 +662,7 @@
   "heightm": 1.5,
   "weightkg": 85,
   "color": "Red",
-  "moveCount": 50
+  "moveCount": 54
  },
  {
   "id": "aromatisse",
@@ -689,7 +689,7 @@
   "heightm": 0.8,
   "weightkg": 15.5,
   "color": "Pink",
-  "moveCount": 52
+  "moveCount": 47
  },
  {
   "id": "audino",
@@ -717,7 +717,7 @@
   "heightm": 1.1,
   "weightkg": 31,
   "color": "Pink",
-  "moveCount": 77
+  "moveCount": 66
  },
  {
   "id": "audinomega",
@@ -744,7 +744,7 @@
   "heightm": 1.5,
   "weightkg": 32,
   "color": "White",
-  "moveCount": 77
+  "moveCount": 66
  },
  {
   "id": "aurorus",
@@ -772,7 +772,7 @@
   "heightm": 2.7,
   "weightkg": 225,
   "color": "Blue",
-  "moveCount": 58
+  "moveCount": 55
  },
  {
   "id": "avalugg",
@@ -800,7 +800,7 @@
   "heightm": 2,
   "weightkg": 505,
   "color": "Blue",
-  "moveCount": 55
+  "moveCount": 47
  },
  {
   "id": "avalugghisui",
@@ -829,7 +829,7 @@
   "heightm": 1.4,
   "weightkg": 262.4,
   "color": "Blue",
-  "moveCount": 44
+  "moveCount": 47
  },
  {
   "id": "azumarill",
@@ -858,7 +858,7 @@
   "heightm": 0.8,
   "weightkg": 28.5,
   "color": "Blue",
-  "moveCount": 66
+  "moveCount": 62
  },
  {
   "id": "banette",
@@ -886,7 +886,7 @@
   "heightm": 1.1,
   "weightkg": 12.5,
   "color": "Black",
-  "moveCount": 66
+  "moveCount": 61
  },
  {
   "id": "banettemega",
@@ -912,7 +912,7 @@
   "heightm": 1.2,
   "weightkg": 13,
   "color": "Black",
-  "moveCount": 66
+  "moveCount": 61
  },
  {
   "id": "basculegion",
@@ -998,7 +998,7 @@
   "heightm": 1.3,
   "weightkg": 149.5,
   "color": "Gray",
-  "moveCount": 64
+  "moveCount": 66
  },
  {
   "id": "beartic",
@@ -1026,7 +1026,7 @@
   "heightm": 2.6,
   "weightkg": 260,
   "color": "White",
-  "moveCount": 74
+  "moveCount": 72
  },
  {
   "id": "beedrill",
@@ -1054,7 +1054,7 @@
   "heightm": 1,
   "weightkg": 29.5,
   "color": "Yellow",
-  "moveCount": 52
+  "moveCount": 51
  },
  {
   "id": "beedrillmega",
@@ -1081,7 +1081,7 @@
   "heightm": 1.4,
   "weightkg": 40.5,
   "color": "Yellow",
-  "moveCount": 52
+  "moveCount": 51
  },
  {
   "id": "bellibolt",
@@ -1109,7 +1109,7 @@
   "heightm": 1.2,
   "weightkg": 113,
   "color": "Green",
-  "moveCount": 37
+  "moveCount": 38
  },
  {
   "id": "blastoise",
@@ -1136,7 +1136,7 @@
   "heightm": 1.6,
   "weightkg": 85.5,
   "color": "Blue",
-  "moveCount": 75
+  "moveCount": 69
  },
  {
   "id": "blastoisemega",
@@ -1162,7 +1162,7 @@
   "heightm": 1.6,
   "weightkg": 101.1,
   "color": "Blue",
-  "moveCount": 75
+  "moveCount": 69
  },
  {
   "id": "camerupt",
@@ -1244,7 +1244,7 @@
   "heightm": 0.3,
   "weightkg": 0.8,
   "color": "Gray",
-  "moveCount": 48
+  "moveCount": 37
  },
  {
   "id": "ceruledge",
@@ -1272,7 +1272,7 @@
   "heightm": 1.6,
   "weightkg": 62,
   "color": "Purple",
-  "moveCount": 48
+  "moveCount": 52
  },
  {
   "id": "chandelure",
@@ -1301,7 +1301,7 @@
   "heightm": 1,
   "weightkg": 34.3,
   "color": "Black",
-  "moveCount": 52
+  "moveCount": 51
  },
  {
   "id": "chandeluremega",
@@ -1328,7 +1328,7 @@
   "heightm": 2.5,
   "weightkg": 69.6,
   "color": "Black",
-  "moveCount": 52
+  "moveCount": 51
  },
  {
   "id": "charizard",
@@ -1356,7 +1356,7 @@
   "heightm": 1.7,
   "weightkg": 90.5,
   "color": "Red",
-  "moveCount": 83
+  "moveCount": 70
  },
  {
   "id": "charizardmegax",
@@ -1383,7 +1383,7 @@
   "heightm": 1.7,
   "weightkg": 110.5,
   "color": "Black",
-  "moveCount": 83
+  "moveCount": 70
  },
  {
   "id": "charizardmegay",
@@ -1410,7 +1410,7 @@
   "heightm": 1.7,
   "weightkg": 100.5,
   "color": "Red",
-  "moveCount": 83
+  "moveCount": 70
  },
  {
   "id": "chesnaught",
@@ -1438,7 +1438,7 @@
   "heightm": 1.6,
   "weightkg": 90,
   "color": "Green",
-  "moveCount": 86
+  "moveCount": 83
  },
  {
   "id": "chesnaughtmega",
@@ -1465,7 +1465,7 @@
   "heightm": 1.6,
   "weightkg": 90,
   "color": "Green",
-  "moveCount": 86
+  "moveCount": 83
  },
  {
   "id": "chimecho",
@@ -1491,7 +1491,7 @@
   "heightm": 0.6,
   "weightkg": 1,
   "color": "Blue",
-  "moveCount": 66
+  "moveCount": 61
  },
  {
   "id": "chimechomega",
@@ -1518,7 +1518,7 @@
   "heightm": 1.2,
   "weightkg": 8,
   "color": "Blue",
-  "moveCount": 66
+  "moveCount": 61
  },
  {
   "id": "clawitzer",
@@ -1544,7 +1544,7 @@
   "heightm": 1.3,
   "weightkg": 35.3,
   "color": "Blue",
-  "moveCount": 55
+  "moveCount": 50
  },
  {
   "id": "clefable",
@@ -1572,7 +1572,7 @@
   "heightm": 1.3,
   "weightkg": 40,
   "color": "Pink",
-  "moveCount": 105
+  "moveCount": 89
  },
  {
   "id": "clefablemega",
@@ -1599,7 +1599,7 @@
   "heightm": 1.7,
   "weightkg": 42.3,
   "color": "Pink",
-  "moveCount": 105
+  "moveCount": 89
  },
  {
   "id": "cofagrigus",
@@ -1625,7 +1625,7 @@
   "heightm": 1.7,
   "weightkg": 76.5,
   "color": "Yellow",
-  "moveCount": 58
+  "moveCount": 53
  },
  {
   "id": "conkeldurr",
@@ -1653,7 +1653,7 @@
   "heightm": 1.4,
   "weightkg": 87,
   "color": "Brown",
-  "moveCount": 57
+  "moveCount": 56
  },
  {
   "id": "corviknight",
@@ -1682,7 +1682,7 @@
   "heightm": 2.2,
   "weightkg": 75,
   "color": "Purple",
-  "moveCount": 51
+  "moveCount": 53
  },
  {
   "id": "crabominable",
@@ -1711,7 +1711,7 @@
   "heightm": 1.7,
   "weightkg": 180,
   "color": "White",
-  "moveCount": 66
+  "moveCount": 61
  },
  {
   "id": "crabominablemega",
@@ -1738,7 +1738,7 @@
   "heightm": 2.6,
   "weightkg": 252.8,
   "color": "White",
-  "moveCount": 66
+  "moveCount": 61
  },
  {
   "id": "decidueye",
@@ -1766,7 +1766,7 @@
   "heightm": 1.6,
   "weightkg": 36.6,
   "color": "Brown",
-  "moveCount": 70
+  "moveCount": 62
  },
  {
   "id": "decidueyehisui",
@@ -1794,7 +1794,7 @@
   "heightm": 1.6,
   "weightkg": 37,
   "color": "Brown",
-  "moveCount": 58
+  "moveCount": 64
  },
  {
   "id": "dedenne",
@@ -1823,7 +1823,7 @@
   "heightm": 0.2,
   "weightkg": 2.2,
   "color": "Yellow",
-  "moveCount": 56
+  "moveCount": 47
  },
  {
   "id": "delphox",
@@ -1851,7 +1851,7 @@
   "heightm": 1.5,
   "weightkg": 39,
   "color": "Red",
-  "moveCount": 74
+  "moveCount": 70
  },
  {
   "id": "delphoxmega",
@@ -1878,7 +1878,7 @@
   "heightm": 1.5,
   "weightkg": 39,
   "color": "Red",
-  "moveCount": 74
+  "moveCount": 70
  },
  {
   "id": "diggersby",
@@ -1907,7 +1907,7 @@
   "heightm": 1,
   "weightkg": 42.4,
   "color": "Brown",
-  "moveCount": 64
+  "moveCount": 54
  },
  {
   "id": "ditto",
@@ -1963,7 +1963,7 @@
   "heightm": 3,
   "weightkg": 50,
   "color": "Green",
-  "moveCount": 62
+  "moveCount": 61
  },
  {
   "id": "dragonite",
@@ -1991,7 +1991,7 @@
   "heightm": 2.2,
   "weightkg": 210,
   "color": "Brown",
-  "moveCount": 94
+  "moveCount": 78
  },
  {
   "id": "dragonitemega",
@@ -2018,7 +2018,7 @@
   "heightm": 2.2,
   "weightkg": 290,
   "color": "Brown",
-  "moveCount": 94
+  "moveCount": 78
  },
  {
   "id": "drampa",
@@ -2047,7 +2047,7 @@
   "heightm": 3,
   "weightkg": 185,
   "color": "White",
-  "moveCount": 71
+  "moveCount": 65
  },
  {
   "id": "drampamega",
@@ -2074,7 +2074,7 @@
   "heightm": 3,
   "weightkg": 240.5,
   "color": "White",
-  "moveCount": 71
+  "moveCount": 65
  },
  {
   "id": "emboar",
@@ -2102,7 +2102,7 @@
   "heightm": 1.6,
   "weightkg": 150,
   "color": "Red",
-  "moveCount": 76
+  "moveCount": 77
  },
  {
   "id": "emboarmega",
@@ -2129,7 +2129,7 @@
   "heightm": 1.8,
   "weightkg": 180.3,
   "color": "Red",
-  "moveCount": 76
+  "moveCount": 77
  },
  {
   "id": "emolga",
@@ -2157,7 +2157,7 @@
   "heightm": 0.4,
   "weightkg": 5,
   "color": "White",
-  "moveCount": 51
+  "moveCount": 45
  },
  {
   "id": "empoleon",
@@ -2185,7 +2185,7 @@
   "heightm": 1.7,
   "weightkg": 84.5,
   "color": "Blue",
-  "moveCount": 75
+  "moveCount": 71
  },
  {
   "id": "espathra",
@@ -2213,7 +2213,7 @@
   "heightm": 1.9,
   "weightkg": 90,
   "color": "Yellow",
-  "moveCount": 48
+  "moveCount": 51
  },
  {
   "id": "espeon",
@@ -2240,7 +2240,7 @@
   "heightm": 0.9,
   "weightkg": 26.5,
   "color": "Purple",
-  "moveCount": 66
+  "moveCount": 62
  },
  {
   "id": "excadrill",
@@ -2269,7 +2269,7 @@
   "heightm": 0.7,
   "weightkg": 40.4,
   "color": "Gray",
-  "moveCount": 51
+  "moveCount": 47
  },
  {
   "id": "excadrillmega",
@@ -2296,7 +2296,7 @@
   "heightm": 0.9,
   "weightkg": 60,
   "color": "Gray",
-  "moveCount": 51
+  "moveCount": 47
  },
  {
   "id": "farigiraf",
@@ -2325,7 +2325,7 @@
   "heightm": 3.2,
   "weightkg": 160,
   "color": "Brown",
-  "moveCount": 61
+  "moveCount": 66
  },
  {
   "id": "feraligatr",
@@ -2352,7 +2352,7 @@
   "heightm": 2.3,
   "weightkg": 88.8,
   "color": "Blue",
-  "moveCount": 83
+  "moveCount": 76
  },
  {
   "id": "feraligatrmega",
@@ -2379,7 +2379,7 @@
   "heightm": 2.3,
   "weightkg": 108.8,
   "color": "Blue",
-  "moveCount": 83
+  "moveCount": 76
  },
  {
   "id": "flapple",
@@ -2408,7 +2408,7 @@
   "heightm": 0.3,
   "weightkg": 1,
   "color": "Green",
-  "moveCount": 44
+  "moveCount": 43
  },
  {
   "id": "flareon",
@@ -2435,7 +2435,7 @@
   "heightm": 0.9,
   "weightkg": 25,
   "color": "Red",
-  "moveCount": 60
+  "moveCount": 53
  },
  {
   "id": "floetteeternal",
@@ -2462,7 +2462,7 @@
   "heightm": 0.2,
   "weightkg": 0.9,
   "color": "White",
-  "moveCount": 35
+  "moveCount": 38
  },
  {
   "id": "floettemega",
@@ -2488,7 +2488,7 @@
   "heightm": 0.2,
   "weightkg": 100.8,
   "color": "White",
-  "moveCount": 45
+  "moveCount": 38
  },
  {
   "id": "florges",
@@ -2515,7 +2515,7 @@
   "heightm": 1.1,
   "weightkg": 10,
   "color": "White",
-  "moveCount": 50
+  "moveCount": 43
  },
  {
   "id": "forretress",
@@ -2543,7 +2543,7 @@
   "heightm": 1.2,
   "weightkg": 125.8,
   "color": "Purple",
-  "moveCount": 69
+  "moveCount": 64
  },
  {
   "id": "froslass",
@@ -2571,7 +2571,7 @@
   "heightm": 1.3,
   "weightkg": 26.6,
   "color": "White",
-  "moveCount": 67
+  "moveCount": 65
  },
  {
   "id": "froslassmega",
@@ -2598,7 +2598,7 @@
   "heightm": 2.6,
   "weightkg": 29.6,
   "color": "White",
-  "moveCount": 67
+  "moveCount": 65
  },
  {
   "id": "furfrou",
@@ -2624,7 +2624,7 @@
   "heightm": 1.2,
   "weightkg": 28,
   "color": "White",
-  "moveCount": 37
+  "moveCount": 39
  },
  {
   "id": "gallade",
@@ -2653,7 +2653,7 @@
   "heightm": 1.6,
   "weightkg": 52,
   "color": "White",
-  "moveCount": 103
+  "moveCount": 100
  },
  {
   "id": "gallademega",
@@ -2680,7 +2680,7 @@
   "heightm": 1.6,
   "weightkg": 56.4,
   "color": "White",
-  "moveCount": 103
+  "moveCount": 100
  },
  {
   "id": "garbodor",
@@ -2708,7 +2708,7 @@
   "heightm": 1.9,
   "weightkg": 107.3,
   "color": "Green",
-  "moveCount": 52
+  "moveCount": 50
  },
  {
   "id": "garchomp",
@@ -2736,7 +2736,7 @@
   "heightm": 1.9,
   "weightkg": 95,
   "color": "Blue",
-  "moveCount": 62
+  "moveCount": 56
  },
  {
   "id": "garchompmega",
@@ -2763,7 +2763,7 @@
   "heightm": 1.9,
   "weightkg": 95,
   "color": "Blue",
-  "moveCount": 62
+  "moveCount": 56
  },
  {
   "id": "gardevoir",
@@ -2792,7 +2792,7 @@
   "heightm": 1.6,
   "weightkg": 48.4,
   "color": "White",
-  "moveCount": 80
+  "moveCount": 76
  },
  {
   "id": "gardevoirmega",
@@ -2819,7 +2819,7 @@
   "heightm": 1.6,
   "weightkg": 48.4,
   "color": "White",
-  "moveCount": 80
+  "moveCount": 76
  },
  {
   "id": "garganacl",
@@ -2847,7 +2847,7 @@
   "heightm": 2.3,
   "weightkg": 240,
   "color": "Brown",
-  "moveCount": 49
+  "moveCount": 52
  },
  {
   "id": "gengar",
@@ -2874,7 +2874,7 @@
   "heightm": 1.5,
   "weightkg": 40.5,
   "color": "Purple",
-  "moveCount": 86
+  "moveCount": 72
  },
  {
   "id": "gengarmega",
@@ -2901,7 +2901,7 @@
   "heightm": 1.4,
   "weightkg": 40.5,
   "color": "Purple",
-  "moveCount": 86
+  "moveCount": 72
  },
  {
   "id": "glaceon",
@@ -2928,7 +2928,7 @@
   "heightm": 0.8,
   "weightkg": 25.9,
   "color": "Blue",
-  "moveCount": 57
+  "moveCount": 54
  },
  {
   "id": "glalie",
@@ -2956,7 +2956,7 @@
   "heightm": 1.5,
   "weightkg": 256.5,
   "color": "Gray",
-  "moveCount": 57
+  "moveCount": 53
  },
  {
   "id": "glaliemega",
@@ -2982,7 +2982,7 @@
   "heightm": 2.1,
   "weightkg": 350.2,
   "color": "Gray",
-  "moveCount": 57
+  "moveCount": 53
  },
  {
   "id": "glimmora",
@@ -3010,7 +3010,7 @@
   "heightm": 1.5,
   "weightkg": 45,
   "color": "Blue",
-  "moveCount": 42
+  "moveCount": 44
  },
  {
   "id": "glimmoramega",
@@ -3037,7 +3037,7 @@
   "heightm": 2.8,
   "weightkg": 77,
   "color": "Blue",
-  "moveCount": 42
+  "moveCount": 44
  },
  {
   "id": "gliscor",
@@ -3066,7 +3066,7 @@
   "heightm": 2,
   "weightkg": 42.5,
   "color": "Purple",
-  "moveCount": 74
+  "moveCount": 69
  },
  {
   "id": "golurk",
@@ -3095,7 +3095,7 @@
   "heightm": 2.8,
   "weightkg": 330,
   "color": "Green",
-  "moveCount": 81
+  "moveCount": 75
  },
  {
   "id": "golurkmega",
@@ -3122,7 +3122,7 @@
   "heightm": 4,
   "weightkg": 330,
   "color": "Green",
-  "moveCount": 81
+  "moveCount": 75
  },
  {
   "id": "goodra",
@@ -3179,7 +3179,7 @@
   "heightm": 1.7,
   "weightkg": 334.1,
   "color": "Purple",
-  "moveCount": 58
+  "moveCount": 61
  },
  {
   "id": "gourgeist",
@@ -3208,7 +3208,7 @@
   "heightm": 0.9,
   "weightkg": 12.5,
   "color": "Brown",
-  "moveCount": 57
+  "moveCount": 53
  },
  {
   "id": "gourgeistlarge",
@@ -3237,7 +3237,7 @@
   "heightm": 1.1,
   "weightkg": 14,
   "color": "Brown",
-  "moveCount": 57
+  "moveCount": 53
  },
  {
   "id": "gourgeistsmall",
@@ -3266,7 +3266,7 @@
   "heightm": 0.7,
   "weightkg": 9.5,
   "color": "Brown",
-  "moveCount": 57
+  "moveCount": 53
  },
  {
   "id": "gourgeistsuper",
@@ -3324,7 +3324,7 @@
   "heightm": 1.5,
   "weightkg": 40,
   "color": "Blue",
-  "moveCount": 62
+  "moveCount": 59
  },
  {
   "id": "greninjamega",
@@ -3351,7 +3351,7 @@
   "heightm": 1.5,
   "weightkg": 40,
   "color": "Blue",
-  "moveCount": 62
+  "moveCount": 59
  },
  {
   "id": "gyarados",
@@ -3379,7 +3379,7 @@
   "heightm": 6.5,
   "weightkg": 235,
   "color": "Blue",
-  "moveCount": 70
+  "moveCount": 64
  },
  {
   "id": "gyaradosmega",
@@ -3406,7 +3406,7 @@
   "heightm": 6.5,
   "weightkg": 305,
   "color": "Blue",
-  "moveCount": 70
+  "moveCount": 64
  },
  {
   "id": "hatterene",
@@ -3435,7 +3435,7 @@
   "heightm": 2.1,
   "weightkg": 5.1,
   "color": "Pink",
-  "moveCount": 53
+  "moveCount": 55
  },
  {
   "id": "hawlucha",
@@ -3464,7 +3464,7 @@
   "heightm": 0.8,
   "weightkg": 21.5,
   "color": "Green",
-  "moveCount": 82
+  "moveCount": 73
  },
  {
   "id": "hawluchamega",
@@ -3491,7 +3491,7 @@
   "heightm": 1,
   "weightkg": 25,
   "color": "Green",
-  "moveCount": 82
+  "moveCount": 73
  },
  {
   "id": "heliolisk",
@@ -3520,7 +3520,7 @@
   "heightm": 1,
   "weightkg": 21,
   "color": "Yellow",
-  "moveCount": 58
+  "moveCount": 59
  },
  {
   "id": "heracross",
@@ -3549,7 +3549,7 @@
   "heightm": 1.5,
   "weightkg": 54,
   "color": "Blue",
-  "moveCount": 65
+  "moveCount": 60
  },
  {
   "id": "heracrossmega",
@@ -3576,7 +3576,7 @@
   "heightm": 1.7,
   "weightkg": 62.5,
   "color": "Blue",
-  "moveCount": 65
+  "moveCount": 60
  },
  {
   "id": "hippowdon",
@@ -3603,7 +3603,7 @@
   "heightm": 2,
   "weightkg": 300,
   "color": "Brown",
-  "moveCount": 51
+  "moveCount": 48
  },
  {
   "id": "houndoom",
@@ -3632,7 +3632,7 @@
   "heightm": 1.4,
   "weightkg": 35,
   "color": "Black",
-  "moveCount": 66
+  "moveCount": 65
  },
  {
   "id": "houndoommega",
@@ -3659,7 +3659,7 @@
   "heightm": 1.9,
   "weightkg": 49.5,
   "color": "Black",
-  "moveCount": 66
+  "moveCount": 65
  },
  {
   "id": "hydrapple",
@@ -3688,7 +3688,7 @@
   "heightm": 1.8,
   "weightkg": 93,
   "color": "Green",
-  "moveCount": 47
+  "moveCount": 48
  },
  {
   "id": "hydreigon",
@@ -3715,7 +3715,7 @@
   "heightm": 1.8,
   "weightkg": 160,
   "color": "Blue",
-  "moveCount": 83
+  "moveCount": 76
  },
  {
   "id": "incineroar",
@@ -3743,7 +3743,7 @@
   "heightm": 1.8,
   "weightkg": 83,
   "color": "Red",
-  "moveCount": 82
+  "moveCount": 75
  },
  {
   "id": "infernape",
@@ -3771,7 +3771,7 @@
   "heightm": 1.2,
   "weightkg": 55,
   "color": "Brown",
-  "moveCount": 88
+  "moveCount": 87
  },
  {
   "id": "jolteon",
@@ -3798,7 +3798,7 @@
   "heightm": 0.8,
   "weightkg": 24.5,
   "color": "Yellow",
-  "moveCount": 63
+  "moveCount": 56
  },
  {
   "id": "kangaskhan",
@@ -3826,7 +3826,7 @@
   "heightm": 2.2,
   "weightkg": 80,
   "color": "Brown",
-  "moveCount": 84
+  "moveCount": 66
  },
  {
   "id": "kangaskhanmega",
@@ -3852,7 +3852,7 @@
   "heightm": 2.2,
   "weightkg": 100,
   "color": "Brown",
-  "moveCount": 84
+  "moveCount": 66
  },
  {
   "id": "kingambit",
@@ -3881,7 +3881,7 @@
   "heightm": 2,
   "weightkg": 120,
   "color": "Black",
-  "moveCount": 49
+  "moveCount": 52
  },
  {
   "id": "kleavor",
@@ -3910,7 +3910,7 @@
   "heightm": 1.8,
   "weightkg": 89,
   "color": "Brown",
-  "moveCount": 47
+  "moveCount": 53
  },
  {
   "id": "klefki",
@@ -3938,7 +3938,7 @@
   "heightm": 0.2,
   "weightkg": 3,
   "color": "Gray",
-  "moveCount": 47
+  "moveCount": 41
  },
  {
   "id": "kommoo",
@@ -3967,7 +3967,7 @@
   "heightm": 1.6,
   "weightkg": 78.2,
   "color": "Gray",
-  "moveCount": 80
+  "moveCount": 74
  },
  {
   "id": "krookodile",
@@ -3996,7 +3996,7 @@
   "heightm": 1.5,
   "weightkg": 96.3,
   "color": "Red",
-  "moveCount": 81
+  "moveCount": 77
  },
  {
   "id": "leafeon",
@@ -4023,7 +4023,7 @@
   "heightm": 1,
   "weightkg": 25.5,
   "color": "Green",
-  "moveCount": 57
+  "moveCount": 54
  },
  {
   "id": "liepard",
@@ -4051,7 +4051,7 @@
   "heightm": 1.1,
   "weightkg": 37.5,
   "color": "Purple",
-  "moveCount": 52
+  "moveCount": 56
  },
  {
   "id": "lopunny",
@@ -4079,7 +4079,7 @@
   "heightm": 1.2,
   "weightkg": 33.3,
   "color": "Brown",
-  "moveCount": 68
+  "moveCount": 71
  },
  {
   "id": "lopunnymega",
@@ -4106,7 +4106,7 @@
   "heightm": 1.3,
   "weightkg": 28.3,
   "color": "Brown",
-  "moveCount": 68
+  "moveCount": 71
  },
  {
   "id": "lucario",
@@ -4135,7 +4135,7 @@
   "heightm": 1.2,
   "weightkg": 54,
   "color": "Blue",
-  "moveCount": 82
+  "moveCount": 79
  },
  {
   "id": "lucariomega",
@@ -4162,7 +4162,7 @@
   "heightm": 1.3,
   "weightkg": 57.5,
   "color": "Blue",
-  "moveCount": 82
+  "moveCount": 79
  },
  {
   "id": "luxray",
@@ -4190,7 +4190,7 @@
   "heightm": 1.4,
   "weightkg": 42,
   "color": "Blue",
-  "moveCount": 54
+  "moveCount": 52
  },
  {
   "id": "lycanroc",
@@ -4218,7 +4218,7 @@
   "heightm": 0.8,
   "weightkg": 25,
   "color": "Brown",
-  "moveCount": 59
+  "moveCount": 55
  },
  {
   "id": "lycanrocdusk",
@@ -4244,7 +4244,7 @@
   "heightm": 0.8,
   "weightkg": 25,
   "color": "Brown",
-  "moveCount": 64
+  "moveCount": 58
  },
  {
   "id": "lycanrocmidnight",
@@ -4272,7 +4272,7 @@
   "heightm": 1.1,
   "weightkg": 25,
   "color": "Red",
-  "moveCount": 70
+  "moveCount": 66
  },
  {
   "id": "machamp",
@@ -4300,7 +4300,7 @@
   "heightm": 1.6,
   "weightkg": 130,
   "color": "Gray",
-  "moveCount": 69
+  "moveCount": 62
  },
  {
   "id": "mamoswine",
@@ -4329,7 +4329,7 @@
   "heightm": 2.5,
   "weightkg": 291,
   "color": "Brown",
-  "moveCount": 62
+  "moveCount": 60
  },
  {
   "id": "manectric",
@@ -4357,7 +4357,7 @@
   "heightm": 1.5,
   "weightkg": 40.2,
   "color": "Yellow",
-  "moveCount": 47
+  "moveCount": 46
  },
  {
   "id": "manectricmega",
@@ -4383,7 +4383,7 @@
   "heightm": 1.8,
   "weightkg": 44,
   "color": "Yellow",
-  "moveCount": 47
+  "moveCount": 46
  },
  {
   "id": "maushold",
@@ -4411,7 +4411,7 @@
   "heightm": 0.3,
   "weightkg": 2.3,
   "color": "White",
-  "moveCount": 43
+  "moveCount": 48
  },
  {
   "id": "medicham",
@@ -4439,7 +4439,7 @@
   "heightm": 1.3,
   "weightkg": 31.5,
   "color": "Red",
-  "moveCount": 76
+  "moveCount": 74
  },
  {
   "id": "medichammega",
@@ -4466,7 +4466,7 @@
   "heightm": 1.3,
   "weightkg": 31.5,
   "color": "Red",
-  "moveCount": 76
+  "moveCount": 74
  },
  {
   "id": "meganium",
@@ -4493,7 +4493,7 @@
   "heightm": 1.8,
   "weightkg": 100.5,
   "color": "Green",
-  "moveCount": 58
+  "moveCount": 57
  },
  {
   "id": "meganiummega",
@@ -4520,7 +4520,7 @@
   "heightm": 2.4,
   "weightkg": 201,
   "color": "Green",
-  "moveCount": 58
+  "moveCount": 57
  },
  {
   "id": "meowscarada",
@@ -4548,7 +4548,7 @@
   "heightm": 1.5,
   "weightkg": 31.2,
   "color": "Green",
-  "moveCount": 57
+  "moveCount": 61
  },
  {
   "id": "meowstic",
@@ -4576,7 +4576,7 @@
   "heightm": 0.6,
   "weightkg": 8.5,
   "color": "Blue",
-  "moveCount": 65
+  "moveCount": 59
  },
  {
   "id": "meowsticf",
@@ -4604,7 +4604,7 @@
   "heightm": 0.6,
   "weightkg": 8.5,
   "color": "White",
-  "moveCount": 63
+  "moveCount": 56
  },
  {
   "id": "meowsticfmega",
@@ -4630,7 +4630,7 @@
   "heightm": 0.8,
   "weightkg": 10.1,
   "color": "White",
-  "moveCount": 65
+  "moveCount": 56
  },
  {
   "id": "meowsticmmega",
@@ -4656,7 +4656,7 @@
   "heightm": 0.8,
   "weightkg": 10.1,
   "color": "Blue",
-  "moveCount": 65
+  "moveCount": 59
  },
  {
   "id": "milotic",
@@ -4684,7 +4684,7 @@
   "heightm": 6.2,
   "weightkg": 162,
   "color": "Pink",
-  "moveCount": 61
+  "moveCount": 58
  },
  {
   "id": "mimikyu",
@@ -4711,7 +4711,7 @@
   "heightm": 0.2,
   "weightkg": 0.7,
   "color": "Yellow",
-  "moveCount": 64
+  "moveCount": 56
  },
  {
   "id": "morpeko",
@@ -4738,7 +4738,7 @@
   "heightm": 0.3,
   "weightkg": 3,
   "color": "Yellow",
-  "moveCount": 65
+  "moveCount": 63
  },
  {
   "id": "mrrime",
@@ -4767,7 +4767,7 @@
   "heightm": 1.5,
   "weightkg": 58.2,
   "color": "Purple",
-  "moveCount": 78
+  "moveCount": 90
  },
  {
   "id": "mudsdale",
@@ -4795,7 +4795,7 @@
   "heightm": 2.5,
   "weightkg": 920,
   "color": "Brown",
-  "moveCount": 45
+  "moveCount": 42
  },
  {
   "id": "ninetales",
@@ -4822,7 +4822,7 @@
   "heightm": 1.1,
   "weightkg": 19.9,
   "color": "Yellow",
-  "moveCount": 66
+  "moveCount": 65
  },
  {
   "id": "ninetalesalola",
@@ -4850,7 +4850,7 @@
   "heightm": 1.1,
   "weightkg": 19.9,
   "color": "Blue",
-  "moveCount": 67
+  "moveCount": 61
  },
  {
   "id": "noivern",
@@ -4879,7 +4879,7 @@
   "heightm": 1.5,
   "weightkg": 85,
   "color": "Purple",
-  "moveCount": 65
+  "moveCount": 62
  },
  {
   "id": "oranguru",
@@ -4908,7 +4908,7 @@
   "heightm": 1.5,
   "weightkg": 76,
   "color": "White",
-  "moveCount": 70
+  "moveCount": 61
  },
  {
   "id": "orthworm",
@@ -4961,7 +4961,7 @@
   "heightm": 1.3,
   "weightkg": 60.2,
   "color": "Blue",
-  "moveCount": 50
+  "moveCount": 53
  },
  {
   "id": "pangoro",
@@ -4990,7 +4990,7 @@
   "heightm": 2.1,
   "weightkg": 136,
   "color": "White",
-  "moveCount": 82
+  "moveCount": 76
  },
  {
   "id": "passimian",
@@ -5017,7 +5017,7 @@
   "heightm": 2,
   "weightkg": 82.8,
   "color": "White",
-  "moveCount": 68
+  "moveCount": 60
  },
  {
   "id": "pelipper",
@@ -5046,7 +5046,7 @@
   "heightm": 1.2,
   "weightkg": 28,
   "color": "Yellow",
-  "moveCount": 62
+  "moveCount": 51
  },
  {
   "id": "pidgeot",
@@ -5075,7 +5075,7 @@
   "heightm": 1.5,
   "weightkg": 39.5,
   "color": "Brown",
-  "moveCount": 40
+  "moveCount": 30
  },
  {
   "id": "pidgeotmega",
@@ -5102,7 +5102,7 @@
   "heightm": 2.2,
   "weightkg": 50.5,
   "color": "Brown",
-  "moveCount": 40
+  "moveCount": 30
  },
  {
   "id": "pikachu",
@@ -5129,7 +5129,7 @@
   "heightm": 0.4,
   "weightkg": 6,
   "color": "Yellow",
-  "moveCount": 75
+  "moveCount": 58
  },
  {
   "id": "pinsir",
@@ -5157,7 +5157,7 @@
   "heightm": 1.5,
   "weightkg": 55,
   "color": "Brown",
-  "moveCount": 54
+  "moveCount": 49
  },
  {
   "id": "pinsirmega",
@@ -5184,7 +5184,7 @@
   "heightm": 1.7,
   "weightkg": 59,
   "color": "Brown",
-  "moveCount": 54
+  "moveCount": 49
  },
  {
   "id": "politoed",
@@ -5212,7 +5212,7 @@
   "heightm": 1.1,
   "weightkg": 33.9,
   "color": "Green",
-  "moveCount": 63
+  "moveCount": 55
  },
  {
   "id": "polteageist",
@@ -5267,7 +5267,7 @@
   "heightm": 1.8,
   "weightkg": 44,
   "color": "Blue",
-  "moveCount": 63
+  "moveCount": 59
  },
  {
   "id": "quaquaval",
@@ -5295,7 +5295,7 @@
   "heightm": 1.8,
   "weightkg": 61.9,
   "color": "Blue",
-  "moveCount": 54
+  "moveCount": 56
  },
  {
   "id": "raichu",
@@ -5322,7 +5322,7 @@
   "heightm": 0.8,
   "weightkg": 30,
   "color": "Yellow",
-  "moveCount": 72
+  "moveCount": 62
  },
  {
   "id": "raichualola",
@@ -5349,7 +5349,7 @@
   "heightm": 0.7,
   "weightkg": 21,
   "color": "Brown",
-  "moveCount": 77
+  "moveCount": 71
  },
  {
   "id": "rampardos",
@@ -5376,7 +5376,7 @@
   "heightm": 1.6,
   "weightkg": 102.5,
   "color": "Blue",
-  "moveCount": 75
+  "moveCount": 73
  },
  {
   "id": "reuniclus",
@@ -5404,7 +5404,7 @@
   "heightm": 1,
   "weightkg": 20.1,
   "color": "Green",
-  "moveCount": 71
+  "moveCount": 65
  },
  {
   "id": "rhyperior",
@@ -5433,7 +5433,7 @@
   "heightm": 2.4,
   "weightkg": 282.8,
   "color": "Gray",
-  "moveCount": 88
+  "moveCount": 84
  },
  {
   "id": "roserade",
@@ -5462,7 +5462,7 @@
   "heightm": 0.9,
   "weightkg": 14.5,
   "color": "Green",
-  "moveCount": 46
+  "moveCount": 47
  },
  {
   "id": "rotom",
@@ -5489,7 +5489,7 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "color": "Red",
-  "moveCount": 48
+  "moveCount": 40
  },
  {
   "id": "rotomfan",
@@ -5651,7 +5651,7 @@
   "heightm": 1.6,
   "weightkg": 66.6,
   "color": "Gray",
-  "moveCount": 61
+  "moveCount": 67
  },
  {
   "id": "sableye",
@@ -5680,7 +5680,7 @@
   "heightm": 0.5,
   "weightkg": 11,
   "color": "Purple",
-  "moveCount": 91
+  "moveCount": 82
  },
  {
   "id": "sableyemega",
@@ -5707,7 +5707,7 @@
   "heightm": 0.5,
   "weightkg": 161,
   "color": "Purple",
-  "moveCount": 91
+  "moveCount": 82
  },
  {
   "id": "salazzle",
@@ -5735,7 +5735,7 @@
   "heightm": 1.2,
   "weightkg": 22.2,
   "color": "Black",
-  "moveCount": 70
+  "moveCount": 68
  },
  {
   "id": "samurott",
@@ -5762,7 +5762,7 @@
   "heightm": 1.5,
   "weightkg": 94.6,
   "color": "Blue",
-  "moveCount": 58
+  "moveCount": 56
  },
  {
   "id": "samurotthisui",
@@ -5790,7 +5790,7 @@
   "heightm": 1.5,
   "weightkg": 58.2,
   "color": "Blue",
-  "moveCount": 49
+  "moveCount": 62
  },
  {
   "id": "sandaconda",
@@ -5818,7 +5818,7 @@
   "heightm": 3.8,
   "weightkg": 65.5,
   "color": "Green",
-  "moveCount": 43
+  "moveCount": 45
  },
  {
   "id": "scizor",
@@ -5847,7 +5847,7 @@
   "heightm": 1.8,
   "weightkg": 118,
   "color": "Red",
-  "moveCount": 67
+  "moveCount": 59
  },
  {
   "id": "scizormega",
@@ -5874,7 +5874,7 @@
   "heightm": 2,
   "weightkg": 125,
   "color": "Red",
-  "moveCount": 67
+  "moveCount": 59
  },
  {
   "id": "scovillain",
@@ -5903,7 +5903,7 @@
   "heightm": 0.9,
   "weightkg": 15,
   "color": "Green",
-  "moveCount": 39
+  "moveCount": 47
  },
  {
   "id": "scovillainmega",
@@ -5930,7 +5930,7 @@
   "heightm": 1.2,
   "weightkg": 22,
   "color": "Green",
-  "moveCount": 39
+  "moveCount": 47
  },
  {
   "id": "serperior",
@@ -5957,7 +5957,7 @@
   "heightm": 3.3,
   "weightkg": 63,
   "color": "Green",
-  "moveCount": 55
+  "moveCount": 50
  },
  {
   "id": "sharpedo",
@@ -5985,7 +5985,7 @@
   "heightm": 1.8,
   "weightkg": 88.8,
   "color": "Blue",
-  "moveCount": 62
+  "moveCount": 55
  },
  {
   "id": "sharpedomega",
@@ -6012,7 +6012,7 @@
   "heightm": 2.5,
   "weightkg": 130.3,
   "color": "Blue",
-  "moveCount": 62
+  "moveCount": 55
  },
  {
   "id": "simipour",
@@ -6066,7 +6066,7 @@
   "heightm": 1.1,
   "weightkg": 30.5,
   "color": "Green",
-  "moveCount": 48
+  "moveCount": 49
  },
  {
   "id": "simisear",
@@ -6093,7 +6093,7 @@
   "heightm": 1,
   "weightkg": 28,
   "color": "Red",
-  "moveCount": 51
+  "moveCount": 55
  },
  {
   "id": "sinistcha",
@@ -6150,7 +6150,7 @@
   "heightm": 1.7,
   "weightkg": 50.5,
   "color": "Gray",
-  "moveCount": 62
+  "moveCount": 49
  },
  {
   "id": "skarmorymega",
@@ -6177,7 +6177,7 @@
   "heightm": 1.7,
   "weightkg": 40.4,
   "color": "Gray",
-  "moveCount": 62
+  "moveCount": 49
  },
  {
   "id": "skeledirge",
@@ -6205,7 +6205,7 @@
   "heightm": 1.6,
   "weightkg": 326.5,
   "color": "Red",
-  "moveCount": 50
+  "moveCount": 53
  },
  {
   "id": "slowbro",
@@ -6234,7 +6234,7 @@
   "heightm": 1.6,
   "weightkg": 78.5,
   "color": "Pink",
-  "moveCount": 90
+  "moveCount": 77
  },
  {
   "id": "slowbrogalar",
@@ -6263,7 +6263,7 @@
   "heightm": 1.6,
   "weightkg": 70.5,
   "color": "Pink",
-  "moveCount": 88
+  "moveCount": 90
  },
  {
   "id": "slowbromega",
@@ -6290,7 +6290,7 @@
   "heightm": 2,
   "weightkg": 120,
   "color": "Pink",
-  "moveCount": 90
+  "moveCount": 77
  },
  {
   "id": "slowking",
@@ -6319,7 +6319,7 @@
   "heightm": 2,
   "weightkg": 79.5,
   "color": "Pink",
-  "moveCount": 95
+  "moveCount": 83
  },
  {
   "id": "slowkinggalar",
@@ -6348,7 +6348,7 @@
   "heightm": 1.8,
   "weightkg": 79.5,
   "color": "Pink",
-  "moveCount": 92
+  "moveCount": 93
  },
  {
   "id": "slurpuff",
@@ -6375,7 +6375,7 @@
   "heightm": 0.8,
   "weightkg": 5,
   "color": "White",
-  "moveCount": 46
+  "moveCount": 41
  },
  {
   "id": "sneasler",
@@ -6404,7 +6404,7 @@
   "heightm": 1.3,
   "weightkg": 43,
   "color": "Blue",
-  "moveCount": 53
+  "moveCount": 60
  },
  {
   "id": "snorlax",
@@ -6432,7 +6432,7 @@
   "heightm": 2.1,
   "weightkg": 460,
   "color": "Black",
-  "moveCount": 95
+  "moveCount": 79
  },
  {
   "id": "spiritomb",
@@ -6460,7 +6460,7 @@
   "heightm": 1,
   "weightkg": 108,
   "color": "Purple",
-  "moveCount": 59
+  "moveCount": 51
  },
  {
   "id": "starmie",
@@ -6489,7 +6489,7 @@
   "heightm": 1.1,
   "weightkg": 80,
   "color": "Purple",
-  "moveCount": 57
+  "moveCount": 59
  },
  {
   "id": "starmiemega",
@@ -6516,7 +6516,7 @@
   "heightm": 2.3,
   "weightkg": 80,
   "color": "Purple",
-  "moveCount": 57
+  "moveCount": 59
  },
  {
   "id": "steelix",
@@ -6545,7 +6545,7 @@
   "heightm": 9.2,
   "weightkg": 400,
   "color": "Gray",
-  "moveCount": 66
+  "moveCount": 62
  },
  {
   "id": "steelixmega",
@@ -6572,7 +6572,7 @@
   "heightm": 10.5,
   "weightkg": 740,
   "color": "Gray",
-  "moveCount": 66
+  "moveCount": 62
  },
  {
   "id": "stunfisk",
@@ -6601,7 +6601,7 @@
   "heightm": 0.7,
   "weightkg": 11,
   "color": "Brown",
-  "moveCount": 53
+  "moveCount": 46
  },
  {
   "id": "stunfiskgalar",
@@ -6655,7 +6655,7 @@
   "heightm": 1,
   "weightkg": 23.5,
   "color": "Pink",
-  "moveCount": 53
+  "moveCount": 51
  },
  {
   "id": "talonflame",
@@ -6683,7 +6683,7 @@
   "heightm": 1.2,
   "weightkg": 24.5,
   "color": "Red",
-  "moveCount": 51
+  "moveCount": 49
  },
  {
   "id": "tauros",
@@ -6711,7 +6711,7 @@
   "heightm": 1.4,
   "weightkg": 88.4,
   "color": "Brown",
-  "moveCount": 63
+  "moveCount": 53
  },
  {
   "id": "taurospaldeaaqua",
@@ -6740,7 +6740,7 @@
   "heightm": 1.4,
   "weightkg": 110,
   "color": "Black",
-  "moveCount": 44
+  "moveCount": 47
  },
  {
   "id": "taurospaldeablaze",
@@ -6769,7 +6769,7 @@
   "heightm": 1.4,
   "weightkg": 85,
   "color": "Black",
-  "moveCount": 46
+  "moveCount": 49
  },
  {
   "id": "taurospaldeacombat",
@@ -6797,7 +6797,7 @@
   "heightm": 1.4,
   "weightkg": 115,
   "color": "Black",
-  "moveCount": 41
+  "moveCount": 44
  },
  {
   "id": "tinkaton",
@@ -6826,7 +6826,7 @@
   "heightm": 0.7,
   "weightkg": 112.8,
   "color": "Pink",
-  "moveCount": 40
+  "moveCount": 45
  },
  {
   "id": "torkoal",
@@ -6854,7 +6854,7 @@
   "heightm": 0.5,
   "weightkg": 80.4,
   "color": "Brown",
-  "moveCount": 63
+  "moveCount": 55
  },
  {
   "id": "torterra",
@@ -6911,7 +6911,7 @@
   "heightm": 1.1,
   "weightkg": 26,
   "color": "Black",
-  "moveCount": 54
+  "moveCount": 49
  },
  {
   "id": "toxapex",
@@ -6940,7 +6940,7 @@
   "heightm": 0.7,
   "weightkg": 14.5,
   "color": "Blue",
-  "moveCount": 59
+  "moveCount": 50
  },
  {
   "id": "toxicroak",
@@ -6969,7 +6969,7 @@
   "heightm": 1.3,
   "weightkg": 44.4,
   "color": "Blue",
-  "moveCount": 78
+  "moveCount": 79
  },
  {
   "id": "trevenant",
@@ -6998,7 +6998,7 @@
   "heightm": 1.5,
   "weightkg": 71,
   "color": "Brown",
-  "moveCount": 70
+  "moveCount": 68
  },
  {
   "id": "tsareena",
@@ -7026,7 +7026,7 @@
   "heightm": 1.2,
   "weightkg": 21.4,
   "color": "Purple",
-  "moveCount": 54
+  "moveCount": 49
  },
  {
   "id": "typhlosion",
@@ -7053,7 +7053,7 @@
   "heightm": 1.7,
   "weightkg": 79.5,
   "color": "Yellow",
-  "moveCount": 68
+  "moveCount": 59
  },
  {
   "id": "typhlosionhisui",
@@ -7081,7 +7081,7 @@
   "heightm": 1.6,
   "weightkg": 69.8,
   "color": "Yellow",
-  "moveCount": 55
+  "moveCount": 62
  },
  {
   "id": "tyranitar",
@@ -7109,7 +7109,7 @@
   "heightm": 2,
   "weightkg": 202,
   "color": "Green",
-  "moveCount": 99
+  "moveCount": 87
  },
  {
   "id": "tyranitarmega",
@@ -7136,7 +7136,7 @@
   "heightm": 2.5,
   "weightkg": 255,
   "color": "Green",
-  "moveCount": 99
+  "moveCount": 87
  },
  {
   "id": "tyrantrum",
@@ -7164,7 +7164,7 @@
   "heightm": 2.5,
   "weightkg": 270,
   "color": "Red",
-  "moveCount": 62
+  "moveCount": 59
  },
  {
   "id": "umbreon",
@@ -7191,7 +7191,7 @@
   "heightm": 1,
   "weightkg": 27,
   "color": "Black",
-  "moveCount": 68
+  "moveCount": 64
  },
  {
   "id": "vanilluxe",
@@ -7246,7 +7246,7 @@
   "heightm": 1,
   "weightkg": 29,
   "color": "Blue",
-  "moveCount": 60
+  "moveCount": 56
  },
  {
   "id": "venusaur",
@@ -7274,7 +7274,7 @@
   "heightm": 2,
   "weightkg": 100,
   "color": "Green",
-  "moveCount": 61
+  "moveCount": 53
  },
  {
   "id": "venusaurmega",
@@ -7301,7 +7301,7 @@
   "heightm": 2.4,
   "weightkg": 155.5,
   "color": "Green",
-  "moveCount": 61
+  "moveCount": 53
  },
  {
   "id": "victreebel",
@@ -7329,7 +7329,7 @@
   "heightm": 1.7,
   "weightkg": 15.5,
   "color": "Green",
-  "moveCount": 59
+  "moveCount": 57
  },
  {
   "id": "victreebelmega",
@@ -7356,7 +7356,7 @@
   "heightm": 4.5,
   "weightkg": 125.5,
   "color": "Green",
-  "moveCount": 59
+  "moveCount": 57
  },
  {
   "id": "vivillon",
@@ -7385,7 +7385,7 @@
   "heightm": 1.2,
   "weightkg": 17,
   "color": "Pink",
-  "moveCount": 50
+  "moveCount": 42
  },
  {
   "id": "volcarona",
@@ -7413,7 +7413,7 @@
   "heightm": 1.6,
   "weightkg": 46,
   "color": "White",
-  "moveCount": 62
+  "moveCount": 56
  },
  {
   "id": "watchog",
@@ -7441,7 +7441,7 @@
   "heightm": 1.1,
   "weightkg": 27,
   "color": "Brown",
-  "moveCount": 53
+  "moveCount": 51
  },
  {
   "id": "weavile",
@@ -7469,7 +7469,7 @@
   "heightm": 1.1,
   "weightkg": 34,
   "color": "Black",
-  "moveCount": 73
+  "moveCount": 69
  },
  {
   "id": "whimsicott",
@@ -7498,7 +7498,7 @@
   "heightm": 0.7,
   "weightkg": 6.6,
   "color": "Green",
-  "moveCount": 52
+  "moveCount": 48
  },
  {
   "id": "wyrdeer",
@@ -7527,7 +7527,7 @@
   "heightm": 1.8,
   "weightkg": 95.1,
   "color": "Gray",
-  "moveCount": 54
+  "moveCount": 58
  },
  {
   "id": "zoroark",
@@ -7580,6 +7580,6 @@
   "heightm": 1.6,
   "weightkg": 73,
   "color": "Gray",
-  "moveCount": 57
+  "moveCount": 67
  }
 ]
