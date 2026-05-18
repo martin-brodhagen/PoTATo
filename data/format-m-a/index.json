@@ -550,6 +550,35 @@
   "moveCount": 59
  },
  {
+  "id": "arcaninehisui",
+  "name": "Arcanine-Hisui",
+  "num": 59,
+  "types": [
+   "Fire",
+   "Rock"
+  ],
+  "baseStats": {
+   "hp": 95,
+   "atk": 115,
+   "def": 80,
+   "spa": 95,
+   "spd": 80,
+   "spe": 90
+  },
+  "abilities": {
+   "0": "Intimidate",
+   "1": "Flash Fire",
+   "H": "Rock Head"
+  },
+  "forme": "Hisui",
+  "baseSpecies": "Arcanine",
+  "requiredItem": null,
+  "heightm": 2,
+  "weightkg": 168,
+  "color": "Brown",
+  "moveCount": 52
+ },
+ {
   "id": "archaludon",
   "name": "Archaludon",
   "num": 1018,
@@ -2407,33 +2436,6 @@
   "weightkg": 25,
   "color": "Red",
   "moveCount": 60
- },
- {
-  "id": "floette",
-  "name": "Floette",
-  "num": 670,
-  "types": [
-   "Fairy"
-  ],
-  "baseStats": {
-   "hp": 54,
-   "atk": 45,
-   "def": 47,
-   "spa": 75,
-   "spd": 98,
-   "spe": 52
-  },
-  "abilities": {
-   "0": "Flower Veil",
-   "H": "Symbiosis"
-  },
-  "forme": null,
-  "baseSpecies": null,
-  "requiredItem": null,
-  "heightm": 0.2,
-  "weightkg": 0.9,
-  "color": "White",
-  "moveCount": 45
  },
  {
   "id": "floetteeternal",
@@ -4577,6 +4579,86 @@
   "moveCount": 65
  },
  {
+  "id": "meowsticf",
+  "name": "Meowstic-F",
+  "num": 678,
+  "types": [
+   "Psychic"
+  ],
+  "baseStats": {
+   "hp": 74,
+   "atk": 48,
+   "def": 76,
+   "spa": 83,
+   "spd": 81,
+   "spe": 104
+  },
+  "abilities": {
+   "0": "Keen Eye",
+   "1": "Infiltrator",
+   "H": "Competitive"
+  },
+  "forme": "F",
+  "baseSpecies": "Meowstic",
+  "requiredItem": null,
+  "heightm": 0.6,
+  "weightkg": 8.5,
+  "color": "White",
+  "moveCount": 63
+ },
+ {
+  "id": "meowsticfmega",
+  "name": "Meowstic-F-Mega",
+  "num": 678,
+  "types": [
+   "Psychic"
+  ],
+  "baseStats": {
+   "hp": 74,
+   "atk": 48,
+   "def": 76,
+   "spa": 143,
+   "spd": 101,
+   "spe": 124
+  },
+  "abilities": {
+   "0": "Trace"
+  },
+  "forme": "F-Mega",
+  "baseSpecies": "Meowstic",
+  "requiredItem": "Meowsticite",
+  "heightm": 0.8,
+  "weightkg": 10.1,
+  "color": "White",
+  "moveCount": 65
+ },
+ {
+  "id": "meowsticmmega",
+  "name": "Meowstic-M-Mega",
+  "num": 678,
+  "types": [
+   "Psychic"
+  ],
+  "baseStats": {
+   "hp": 74,
+   "atk": 48,
+   "def": 76,
+   "spa": 143,
+   "spd": 101,
+   "spe": 124
+  },
+  "abilities": {
+   "0": "Trace"
+  },
+  "forme": "M-Mega",
+  "baseSpecies": "Meowstic",
+  "requiredItem": "Meowsticite",
+  "heightm": 0.8,
+  "weightkg": 10.1,
+  "color": "Blue",
+  "moveCount": 65
+ },
+ {
   "id": "milotic",
   "name": "Milotic",
   "num": 350,
@@ -4741,6 +4823,34 @@
   "weightkg": 19.9,
   "color": "Yellow",
   "moveCount": 66
+ },
+ {
+  "id": "ninetalesalola",
+  "name": "Ninetales-Alola",
+  "num": 38,
+  "types": [
+   "Ice",
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 73,
+   "atk": 67,
+   "def": 75,
+   "spa": 81,
+   "spd": 100,
+   "spe": 109
+  },
+  "abilities": {
+   "0": "Snow Cloak",
+   "H": "Snow Warning"
+  },
+  "forme": "Alola",
+  "baseSpecies": "Ninetales",
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 19.9,
+  "color": "Blue",
+  "moveCount": 67
  },
  {
   "id": "noivern",
@@ -4908,34 +5018,6 @@
   "weightkg": 82.8,
   "color": "White",
   "moveCount": 68
- },
- {
-  "id": "patrat",
-  "name": "Patrat",
-  "num": 504,
-  "types": [
-   "Normal"
-  ],
-  "baseStats": {
-   "hp": 45,
-   "atk": 55,
-   "def": 39,
-   "spa": 35,
-   "spd": 39,
-   "spe": 42
-  },
-  "abilities": {
-   "0": "Run Away",
-   "1": "Keen Eye",
-   "H": "Analytic"
-  },
-  "forme": null,
-  "baseSpecies": null,
-  "requiredItem": null,
-  "heightm": 0.5,
-  "weightkg": 11.6,
-  "color": "Brown",
-  "moveCount": 43
  },
  {
   "id": "pelipper",

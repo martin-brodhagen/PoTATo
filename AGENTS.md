@@ -57,8 +57,16 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 `isNonstandard` **cannot** be used for M-A legality filtering:
 - Floette-Mega has `isNonstandard: "Future"` but IS legal in M-A
 - Floette-Eternal has `isNonstandard: "Past"` but shows 14.6% usage
-- The mod's `formats-data.ts` has a `tier` field, but M-A is a custom format not in Showdown's tier list
-- Correct approach: hardcoded M-A whitelists (186 species + 59 megas + 467 moves + 117 items from MetaVGC source)
+- The mod's `formats-data.ts` has a `tier` field as source of truth for Champions legality
+- M-A legality = Champions mod non-Illegal species ∩ corrected M-A whitelist ∪ overrides
+- Species whitelist is still needed because Champions includes species banned in M-A format (legends, mythicals) — 46 extra forms filtered out
+
+### Species Legality Pipeline (prep_data.py)
+1. **Champions legality**: mod `formats-data.ts` entries with `tier != "Illegal"`
+2. **M-A whitelist**: 213 non-Mega + 60 Mega IDs (fixed version of MetaVGC-derived list)
+3. **Overrides**: `meowsticf` (gender form not in mod formats-data)
+4. **Mega detection**: use pokedex `forme` field not string match (fixes Meganium misclassification)
+5. **Validation**: warn on whitelist species not in mod data, AND mod species not in whitelist
 
 ### Sprite Source
 Menu sprites are downloaded from [Bulbagarden Archives](https://archives.bulbagarden.net/wiki/Category:Champions_menu_sprites) using their MediaWiki API. The download script computes the file URL from the MD5 hash of the filename (MediaWiki's standard `{hash[0]}/{hash[0:2]}/{filename}` path convention). Sprites are saved to `sprites/champions/` as PNGs, then `sprite-map.json` maps each species ID to its filename using dex number + form suffix matching.
@@ -69,11 +77,11 @@ Menu sprites are downloaded from [Bulbagarden Archives](https://archives.bulbaga
 - Various other buffs/nerfs in Champions-specific gameplay
 
 ## Data Stats (Regulation M-A)
-- 270 battle forms (244 base + 19 regional variants + 5 Rotom forms + Gourgeist sizes + Lycanroc forms)
+- 273 battle forms (213 non-Mega + 60 Mega)
 - 477 legal moves
 - 117 legal items
-- 271 learnable move lists
-- 320 Champions menu sprites (269/270 species mapped)
+- 273 learnable move lists
+- 320 Champions menu sprites (273/273 species mapped)
 
 ## Running
 

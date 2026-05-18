@@ -139,81 +139,44 @@ for iid, overrides in item_overrides.items():
 abilities = {}  # We'll extract from pokedex data later
 
 # ---------------------------------------------------------------------------
-# 4. Determine M-A legal Pokémon from mod formats-data
+# 4. Determine M-A legal species: mod data + corrected whitelist
 # ---------------------------------------------------------------------------
-print("Filtering legal Pokémon...", file=sys.stderr)
+print("Determining legal species...", file=sys.stderr)
 
-# The mod's formats-data.ts assigns tiers:
+# Champions legality: mod's formats-data.ts assigns tiers
 #   tier: "Illegal" → unavailable in Champions
 #   tier: "UU" / "OU" / "Uber" / "NFE" / "(OU)" etc → available
-legal_species = {}  # id -> entry
+champions_legal: set[str] = set()
 for pid, entry in mod_formats_data.items():
     tier = entry.get('tier', '')
     if tier != "Illegal":
-        # Map to base pokedex entry
         if pid in pokedex:
-            legal_species[pid] = pokedex[pid]
+            champions_legal.add(pid)
         else:
             print(f"  WARNING: {pid} in mod data but not in base pokedex", file=sys.stderr)
 
-# Some Pokémon might be in pokedex but not in mod_formats_data (pre-evos etc. that are "Past")
-# Add them as "Illegal" if they have isNonstandard
-for pid, entry in pokedex.items():
-    if pid.startswith('pokestar'):
-        continue
-    # Check for negative num (CAP Pokémon) or isNonstandard
-    if entry.get('num', 0) < 0:
-        continue
-    if entry.get('isNonstandard') and entry['isNonstandard'] not in (None, ''):
-        continue  # Not standard in Champions
-    # If in pokedex but not in mod data, include as legal if it's a valid species
-    # that's not pre-evolution
-    if pid not in mod_formats_data:
-        # Fine, include it
-        legal_species[pid] = entry
-
-# Build the battle forms list (base forms + Megas)
-battle_forms = {}
-for pid in legal_species:
-    entry = pokedex[pid]
-    # Include base forms
-    battle_forms[pid] = dict(entry)
-    # Check for Mega forms
-    other = entry.get('otherFormes', [])
-    for oforme in other:
-        ofid = oforme.lower().replace('-', '').replace(' ', '')
-        if ofid in legal_species:
-            battle_forms[ofid] = dict(pokedex[ofid])
-
-# Also include any non-Illegal form from mod data directly
-for pid in legal_species:
-    if pid not in battle_forms:
-        battle_forms[pid] = dict(pokedex[pid])
-
-# ---------------------------------------------------------------------------
-# 5. Build whitelist sets from verified Regulation M-A sources
-# ---------------------------------------------------------------------------
-# These are the Regulation M-A specific restrictions on top of Champions legality
-
-MA_LEGAL_SPECIES = {
+# M-A whitelist: Regulation M-A specific species (subset of Champions)
+# Fixed version of previously curated list — removed patrat/floette (base),
+# added arcaninehisui, ninetalesalola, meowsticf
+MA_SPECIES_NONMEGA: set[str] = {
     "abomasnow","absol","aegislash","aerodactyl","aggron","alakazam","alcremie",
-    "altaria","ampharos","appletun","araquanid","arbok","arcanine","archaludon",
-    "ariados","armarouge","aromatisse","audino","aurorus","avalugg","avalugghisui",
+    "altaria","ampharos","appletun","araquanid","arbok","arcanine","arcaninehisui",
+    "archaludon","ariados","armarouge","aromatisse","audino","aurorus","avalugg","avalugghisui",
     "azumarill","banette","basculegion","basculegionf","bastiodon","beartic","beedrill","bellibolt","blastoise",
     "camerupt","castform","ceruledge","chandelure","charizard","chesnaught","chimecho",
     "clawitzer","clefable","cofagrigus","conkeldurr","corviknight","crabominable",
     "decidueye","decidueyehisui","dedenne","delphox","diggersby","ditto","dragapult","dragonite",
     "drampa","emboar","emolga","empoleon","espathra","espeon","excadrill","farigiraf",
-    "feraligatr","flapple","flareon","floette","floetteeternal","florges","forretress","froslass",
+    "feraligatr","flapple","flareon","floetteeternal","florges","forretress","froslass",
     "furfrou","gallade","garbodor","garchomp","gardevoir","garganacl","gengar",
     "glaceon","glalie","glimmora","gliscor","golurk","goodra","goodrahisui","gourgeist","gourgeistlarge","gourgeistsmall","gourgeistsuper","greninja",
     "gyarados","hatterene","hawlucha","heliolisk","heracross","hippowdon","houndoom",
     "hydrapple","hydreigon","incineroar","infernape","jolteon","kangaskhan","kingambit",
     "kleavor","klefki","kommoo","krookodile","leafeon","liepard","lopunny","lucario",
     "luxray","lycanroc","lycanrocdusk","lycanrocmidnight","machamp","mamoswine","manectric","maushold","medicham",
-    "meganium","meowscarada","meowstic","milotic","mimikyu","morpeko","mrrime",
-    "mudsdale","ninetales","noivern","oranguru","orthworm","palafin","pangoro",
-    "passimian","patrat","pelipper","pidgeot","pikachu","pinsir","politoed",
+    "meganium","meowscarada","meowstic","meowsticf","milotic","mimikyu","morpeko","mrrime",
+    "mudsdale","ninetales","ninetalesalola","noivern","oranguru","orthworm","palafin","pangoro",
+    "passimian","pelipper","pidgeot","pikachu","pinsir","politoed",
     "polteageist","primarina","quaquaval","raichu","raichualola","rampardos","reuniclus","rhyperior",
     "roserade","rotom","runerigus","sableye","salazzle","samurott","samurotthisui","sandaconda",
     "scizor","scovillain","serperior","sharpedo","simipour","simisage","simisear",
@@ -223,12 +186,11 @@ MA_LEGAL_SPECIES = {
     "trevenant","tsareena","typhlosion","typhlosionhisui","tyranitar","tyrantrum","umbreon",
     "vanilluxe","vaporeon","venusaur","victreebel","vivillon","volcarona","watchog","weavile",
     "whimsicott","wyrdeer","zoroark","zoroarkhisui",
-    # Regional forms already inlined above
-    # Rotom forms
+    # Rotom appliances
     "rotomheat","rotomwash","rotomfrost","rotomfan","rotommow",
 }
 
-MA_LEGAL_MEGAS = {
+MA_SPECIES_MEGA: set[str] = {
     "venusaurmega","charizardmegax","charizardmegay","blastoisemega",
     "beedrillmega","pidgeotmega","clefablemega","alakazammega",
     "victreebelmega","slowbromega","gengarmega","kangaskhanmega",
@@ -242,9 +204,31 @@ MA_LEGAL_MEGAS = {
     "lucariomega","abomasnowmega","gallademega","froslassmega",
     "emboarmega","excadrillmega","audinomega","chandeluremega",
     "golurkmega","chesnaughtmega","delphoxmega","greninjamega",
-    "floettemega","meowsticmega","hawluchamega","crabominablemega",
+    "floettemega","meowsticfmega","meowsticmmega","hawluchamega","crabominablemega",
     "drampamega","scovillainmega","glimmoramega",
 }
+
+# M-A overrides: species legal in M-A but NOT in Champions mod data
+MA_OVERRIDES: set[str] = {
+    "meowsticf",  # Meowstic-F: standard SV gender form, no mod entry
+}
+
+# Build final M-A set: whitelist ∩ Champions-legal, plus overrides
+all_legal_ids = (MA_SPECIES_NONMEGA | MA_SPECIES_MEGA | MA_OVERRIDES) & champions_legal | MA_OVERRIDES
+
+# Validate: warn about whitelist species not in Champions mod data (may indicate outdated whitelist)
+for pid in sorted(MA_SPECIES_NONMEGA | MA_SPECIES_MEGA):
+    if pid not in champions_legal:
+        print(f"  NOTE: whitelist species {pid} not in Champions mod data", file=sys.stderr)
+
+# Validate: warn about Champions species not in M-A whitelist (potential omissions)
+whitelist_all = MA_SPECIES_NONMEGA | MA_SPECIES_MEGA
+for pid in sorted(champions_legal):
+    if pid not in whitelist_all:
+        print(f"  NOTE: mod species {pid} not in M-A whitelist", file=sys.stderr)
+
+mega_count = sum(1 for p in all_legal_ids if 'Mega' in (pokedex.get(p, {}).get('forme') or ''))
+print(f"  {len(all_legal_ids)} total species ({len(all_legal_ids) - mega_count} non-Mega, {mega_count} Mega)", file=sys.stderr)
 
 # Defined below as MA_LEGAL_MOVES (full list)
 MA_LEGAL_MOVES = {
@@ -343,8 +327,6 @@ for mid, entry in moves.items():
 # ---------------------------------------------------------------------------
 print("Filtering learnsets...", file=sys.stderr)
 
-all_legal_ids = set(MA_LEGAL_SPECIES) | set(MA_LEGAL_MEGAS)
-
 def species_name_to_key(name: str) -> str:
     return name.lower().replace('-', '').replace(' ', '').replace("'", '').replace('.', '')
 
@@ -375,8 +357,7 @@ for pid in all_legal_ids:
     filtered = {move: sources for move, sources in ls.items() if move in MA_LEGAL_MOVES}
     if filtered:
         learnset_out[pid] = sorted(filtered.keys())
-    elif pid in MA_LEGAL_SPECIES:
-        # Form without learnset data — still include with empty list
+    else:
         learnset_out[pid] = []
 
 # ---------------------------------------------------------------------------
