@@ -715,11 +715,45 @@ button:hover {
   min-height: 0;
 }
 
+#search-detail-content .detail-top {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+#search-detail-content .detail-top .types {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+
+#search-detail-content .ability-buttons {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+#search-detail-content .ability-btn {
+  padding: 0.15rem 0.4rem;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #3a3a4a;
+  background: #1a1a24;
+  color: #aaa;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+#search-detail-content .ability-btn:hover {
+  border-color: #f0c060;
+  color: #e0e0e8;
+}
+
 #search-detail-content .detail-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  flex-shrink: 0;
 }
 
 #search-detail-content .detail-sprite {
@@ -737,24 +771,62 @@ button:hover {
 
 #search-detail-content .stat-row {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
   margin-bottom: 0.2rem;
 }
 
 #search-detail-content .stat-row .stat-label {
-  color: #888;
-  width: 3rem;
+  color: #666;
+  width: 2.5rem;
+  flex-shrink: 0;
+  font-weight: 600;
 }
 
-#search-detail-content .stats-block {
-  margin-top: 0.5rem;
+#search-detail-content .stat-row .stat-val {
+  width: 2.2rem;
+  text-align: right;
+  flex-shrink: 0;
+  font-weight: 600;
+  color: #e0e0e8;
 }
 
-#search-detail-content .abilities-row {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #888;
+#search-detail-content .stat-row .stat-bar-track {
+  width: 255px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+#search-detail-content .stat-row .stat-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.35) 50%, transparent 50%);
+  position: relative;
+}
+
+#search-detail-content .stat-row .stat-bar-fill::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 0 0 2px 2px;
+}
+
+#search-detail-content .stat-bst {
+  opacity: 0.5;
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+#search-detail-content .stat-bst .stat-bar-track {
+  max-width: 255px;
+  border-top: 1px solid #2a2a3a;
+  padding-top: 0.2rem;
 }
 
 #search-detail-content .moves-list {

@@ -17,6 +17,8 @@ const newTeamBtn = document.getElementById('new-team-btn');
 const teamWarning = document.getElementById('team-warning');
 const teamBar = document.getElementById('team-bar');
 const filterInput = document.getElementById('filter-input');
+const LS_SORT_BY = 'potato_sort_by';
+const LS_SORT_ASC = 'potato_sort_asc';
 const sortSelect = document.getElementById('sort-select');
 const sortDirBtn = document.getElementById('sort-dir');
 const megaToggle = document.getElementById('mega-toggle');
@@ -530,14 +532,41 @@ async function showDetail(s) {
     ]);
     filterLearnsets = learnsets;
     const team = getCurrentTeam();
+    function statBarColor(val) {
+        if (val <= 29)
+            return '#c44d4d';
+        if (val <= 59)
+            return '#cc9f4a';
+        if (val <= 94)
+            return '#e5c531';
+        if (val <= 134)
+            return '#5fbb63';
+        if (val <= 159)
+            return '#4f8ed4';
+        return '#ab6ac8';
+    }
     const bst = Object.values(s.baseStats).reduce((a, b) => a + b, 0);
     const spriteFile = spriteMap[s.id];
     let html = `
-    <div class="detail-header">
-      ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
-      <div>
-        <h2>${s.name}</h2>
-        <div class="types">${s.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}</div>
+    <div class="detail-top">
+      <div class="stats-block">
+        ${['hp', 'atk', 'def', 'spa', 'spd', 'spe'].map(key => {
+        const val = s.baseStats[key];
+        const label = { hp: 'HP', atk: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', spe: 'Spe' }[key];
+        const hl = sortBy === key ? ' stat-highlighted' : '';
+        const barColor = statBarColor(val);
+        return `<div class="stat-row${hl}"><span class="stat-label">${label}</span><span class="stat-val">${val}</span><span class="stat-bar-track"><span class="stat-bar-fill" style="background-color:${barColor};width:${val}px"></span></span></div>`;
+    }).join('\n        ')}
+        <div class="stat-row stat-bst"><span class="stat-label">BST</span><span class="stat-val">${bst}</span><span class="stat-bar-track"></span></div>
+      </div>
+
+      <div class="detail-header">
+        ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
+        <div>
+          <h2>${s.name}</h2>
+          <div class="types">${s.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}</div>
+          <div class="ability-buttons">${Object.values(s.abilities).map(a => `<button class="ability-btn">${a}</button>`).join('')}</div>
+        </div>
       </div>
     </div>`;
     if (team) {
@@ -557,18 +586,6 @@ async function showDetail(s) {
         html += `</div></div>`;
     }
     html += `
-    <p style="margin-top:0.5rem">BST ${bst} · ${s.moveCount} legal moves</p>
-    <div class="stats-block">
-      <div class="stat-row${sortBy === 'hp' ? ' stat-highlighted' : ''}"><span class="stat-label">HP</span><span>${s.baseStats.hp}</span></div>
-      <div class="stat-row${sortBy === 'atk' ? ' stat-highlighted' : ''}"><span class="stat-label">Atk</span><span>${s.baseStats.atk}</span></div>
-      <div class="stat-row${sortBy === 'def' ? ' stat-highlighted' : ''}"><span class="stat-label">Def</span><span>${s.baseStats.def}</span></div>
-      <div class="stat-row${sortBy === 'spa' ? ' stat-highlighted' : ''}"><span class="stat-label">SpA</span><span>${s.baseStats.spa}</span></div>
-      <div class="stat-row${sortBy === 'spd' ? ' stat-highlighted' : ''}"><span class="stat-label">SpD</span><span>${s.baseStats.spd}</span></div>
-      <div class="stat-row${sortBy === 'spe' ? ' stat-highlighted' : ''}"><span class="stat-label">Spe</span><span>${s.baseStats.spe}</span></div>
-    </div>
-    <div class="abilities-row">
-      ${Object.entries(s.abilities).map(([k, v]) => `${k === '0' ? '' : k === 'H' ? 'HA: ' : k + ': '}${v}`).join(' · ')}
-    </div>
     <h3 style="margin-top:0.75rem;font-size:0.9rem">Moves (${s.moveCount})</h3>
     <div class="moves-list">`;
     const speciesMoves = learnsets[s.id] || [];
@@ -678,11 +695,14 @@ sortSelect.addEventListener('change', () => {
         sortAsc = !shouldDesc;
         sortDirBtn.textContent = sortAsc ? '▲' : '▼';
     }
+    localStorage.setItem(LS_SORT_BY, sortBy);
+    localStorage.setItem(LS_SORT_ASC, String(sortAsc));
     renderGrid();
 });
 sortDirBtn.addEventListener('click', () => {
     sortAsc = !sortAsc;
     sortDirBtn.textContent = sortAsc ? '▲' : '▼';
+    localStorage.setItem(LS_SORT_ASC, String(sortAsc));
     renderGrid();
 });
 megaToggle.addEventListener('click', () => {
@@ -777,6 +797,16 @@ filterToolbar.addEventListener('click', (e) => {
     renderGrid();
 });
 // ── Init ──────────────────────────────────────────────────
+const savedSortBy = localStorage.getItem(LS_SORT_BY);
+const savedSortAsc = localStorage.getItem(LS_SORT_ASC);
+if (savedSortBy && ['dex', 'alpha', 'hp', 'atk', 'def', 'spa', 'spd', 'spe'].includes(savedSortBy)) {
+    sortBy = savedSortBy;
+    sortSelect.value = sortBy;
+}
+if (savedSortAsc === 'true' || savedSortAsc === 'false') {
+    sortAsc = savedSortAsc === 'true';
+    sortDirBtn.textContent = sortAsc ? '▲' : '▼';
+}
 teams = loadTeams();
 if (teams.length === 0) {
     const t = createTeam('Team 1', currentFormat);
