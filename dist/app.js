@@ -19,9 +19,11 @@ const teamBar = document.getElementById('team-bar');
 const filterInput = document.getElementById('filter-input');
 const LS_SORT_BY = 'potato_sort_by';
 const LS_SORT_ASC = 'potato_sort_asc';
+const LS_VIEW = 'potato_view';
 const sortSelect = document.getElementById('sort-select');
 const sortDirBtn = document.getElementById('sort-dir');
 const megaToggle = document.getElementById('mega-toggle');
+const viewToggle = document.getElementById('view-toggle');
 const resultCount = document.getElementById('result-count');
 const filterPopup = document.getElementById('filter-popup');
 const filterBar = document.getElementById('filter-bar');
@@ -43,6 +45,7 @@ let moveNames = {};
 let showMegas = true;
 let sortBy = 'dex';
 let sortAsc = true;
+let viewMode = 'card';
 let movesLoadedForFilter = false;
 let movesLoadingForFilter = false;
 let filterLearnsets = null;
@@ -161,6 +164,7 @@ function renderGrid() {
         }
         return sortAsc ? cmp : -cmp;
     });
+    grid.classList.toggle('list-view', viewMode === 'list');
     resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
     resultCount.classList.toggle('hidden', allSpecies.length === 0);
     if (filtered.length === 0) {
@@ -168,6 +172,80 @@ function renderGrid() {
         return;
     }
     for (const s of filtered) {
+        if (viewMode === 'list') {
+            const item = document.createElement('div');
+            item.className = 'pokemon-list-item';
+            item.setAttribute('role', 'listitem');
+            const spriteFile = spriteMap[s.id];
+            if (spriteFile) {
+                const img = document.createElement('img');
+                img.className = 'list-sprite';
+                img.src = `${SPRITE_PATH}/${spriteFile}`;
+                img.alt = s.name;
+                img.loading = 'lazy';
+                item.appendChild(img);
+            }
+            const info = document.createElement('div');
+            info.className = 'list-info';
+            const infoTop = document.createElement('div');
+            infoTop.className = 'list-info-top';
+            const nameEl = document.createElement('span');
+            nameEl.className = 'list-name';
+            nameEl.textContent = s.name;
+            infoTop.appendChild(nameEl);
+            const typesEl = document.createElement('span');
+            typesEl.className = 'list-types';
+            for (let ti = 0; ti < 2; ti++) {
+                const t = s.types[ti];
+                const tag = document.createElement('span');
+                tag.className = t ? `type-tag ${t.toLowerCase()}` : 'type-tag type-tag-empty';
+                tag.textContent = t || '';
+                typesEl.appendChild(tag);
+            }
+            infoTop.appendChild(typesEl);
+            info.appendChild(infoTop);
+            const infoBottom = document.createElement('div');
+            infoBottom.className = 'list-info-bottom';
+            const abilEl = document.createElement('span');
+            abilEl.className = 'list-abilities';
+            for (const key of ['0', '1', 'H']) {
+                const span = document.createElement('span');
+                span.className = 'list-ability' + (s.abilities[key] ? '' : ' list-ability-empty');
+                span.textContent = s.abilities[key] || '-';
+                abilEl.appendChild(span);
+            }
+            infoBottom.appendChild(abilEl);
+            const statEl = document.createElement('div');
+            statEl.className = 'list-stats';
+            const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'];
+            const statKeys = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
+            for (let si = 0; si < 6; si++) {
+                const entry = document.createElement('div');
+                entry.className = 'list-stat-entry' + (statKeys[si] === sortBy ? ' list-stat-highlighted' : '');
+                const label = document.createElement('span');
+                label.className = 'list-stat-label';
+                label.textContent = statNames[si];
+                const value = document.createElement('span');
+                value.className = 'list-stat-value';
+                value.textContent = String(s.baseStats[statKeys[si]]);
+                entry.appendChild(label);
+                entry.appendChild(value);
+                statEl.appendChild(entry);
+            }
+            infoBottom.appendChild(statEl);
+            info.appendChild(infoBottom);
+            item.appendChild(info);
+            item.addEventListener('click', () => {
+                if (pendingSlotIndex !== null) {
+                    fillSlot(pendingSlotIndex, s.id);
+                }
+                else {
+                    showDetail(s);
+                }
+            });
+            grid.appendChild(item);
+            continue;
+        }
         const card = document.createElement('div');
         card.className = 'pokemon-card';
         card.setAttribute('role', 'listitem');
@@ -189,10 +267,11 @@ function renderGrid() {
         info.className = 'card-info';
         const typesEl = document.createElement('div');
         typesEl.className = 'types';
-        for (const t of s.types) {
+        for (let ti = 0; ti < 2; ti++) {
+            const t = s.types[ti];
             const tag = document.createElement('span');
-            tag.className = `type-tag ${t.toLowerCase()}`;
-            tag.textContent = t;
+            tag.className = t ? `type-tag ${t.toLowerCase()}` : 'type-tag type-tag-empty';
+            tag.textContent = t || '';
             typesEl.appendChild(tag);
         }
         info.appendChild(typesEl);
@@ -212,10 +291,6 @@ function renderGrid() {
         nameEl.textContent = s.name;
         left.appendChild(nameEl);
         card.appendChild(left);
-        // Vertical divider
-        const div = document.createElement('div');
-        div.className = 'card-divider';
-        card.appendChild(div);
         // Right column: stacked base stats
         const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'];
         const statKeys = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
@@ -564,7 +639,10 @@ async function showDetail(s) {
         ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
         <div>
           <h2>${s.name}</h2>
-          <div class="types">${s.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}</div>
+          <div class="types">${[0, 1].map(i => {
+        const t = s.types[i];
+        return `<span class="type-tag${t ? ' ' + t.toLowerCase() : ' type-tag-empty'}">${t || ''}</span>`;
+    }).join('')}</div>
           <div class="ability-buttons">${Object.values(s.abilities).map(a => `<button class="ability-btn">${a}</button>`).join('')}</div>
         </div>
       </div>
@@ -710,6 +788,15 @@ megaToggle.addEventListener('click', () => {
     megaToggle.classList.toggle('active', showMegas);
     renderGrid();
 });
+viewToggle.addEventListener('click', () => {
+    viewMode = viewMode === 'card' ? 'list' : 'card';
+    viewToggle.dataset.view = viewMode;
+    viewToggle.innerHTML = viewMode === 'card'
+        ? '<span class="view-icon-grid"></span>'
+        : '<span class="view-icon-list"></span>';
+    localStorage.setItem(LS_VIEW, viewMode);
+    renderGrid();
+});
 filterInput.addEventListener('input', applyFilter);
 filterInput.addEventListener('keydown', (e) => {
     const popupVisible = !filterPopup.classList.contains('hidden');
@@ -806,6 +893,14 @@ if (savedSortBy && ['dex', 'alpha', 'hp', 'atk', 'def', 'spa', 'spd', 'spe'].inc
 if (savedSortAsc === 'true' || savedSortAsc === 'false') {
     sortAsc = savedSortAsc === 'true';
     sortDirBtn.textContent = sortAsc ? '▲' : '▼';
+}
+const savedView = localStorage.getItem(LS_VIEW);
+if (savedView === 'card' || savedView === 'list') {
+    viewMode = savedView;
+    viewToggle.dataset.view = viewMode;
+    viewToggle.innerHTML = viewMode === 'card'
+        ? '<span class="view-icon-grid"></span>'
+        : '<span class="view-icon-list"></span>';
 }
 teams = loadTeams();
 if (teams.length === 0) {

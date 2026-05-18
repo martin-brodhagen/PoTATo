@@ -361,6 +361,69 @@ button:hover {
   color: #e0e0e8;
 }
 
+#view-toggle {
+  padding: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #888;
+  border-color: #3a3a4a;
+  background: #1a1a24;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+#view-toggle:hover {
+  border-color: #f0c060;
+  color: #e0e0e8;
+}
+
+.view-icon-grid {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  position: relative;
+}
+
+.view-icon-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  box-shadow:
+    5px 0 0 currentColor,
+    0 5px 0 currentColor,
+    5px 5px 0 currentColor;
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+}
+
+.view-icon-list {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  position: relative;
+}
+
+.view-icon-list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 4px 0 currentColor, 0 8px 0 currentColor;
+  border-radius: 1px;
+}
+
 /* ── Filter popup ────────────────────────────────────── */
 .filter-popup {
   position: fixed;
@@ -551,6 +614,12 @@ button:hover {
   overflow-y: auto;
   flex: 1;
   min-height: 0;
+  align-content: start;
+}
+
+#pokemon-grid.list-view {
+  grid-template-columns: 1fr;
+  align-content: start;
 }
 
 .pokemon-card {
@@ -562,6 +631,8 @@ button:hover {
   transition: border-color 0.15s, background 0.15s;
   display: flex;
   align-items: stretch;
+  align-self: start;
+  gap: 0.3rem;
 }
 
 .card-left {
@@ -569,13 +640,6 @@ button:hover {
   min-width: 0;
   display: flex;
   flex-direction: column;
-}
-
-.card-divider {
-  width: 1px;
-  background: #2a2a3a;
-  margin: 0 0.5rem;
-  flex-shrink: 0;
 }
 
 .pokemon-card:hover {
@@ -637,6 +701,14 @@ button:hover {
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
+  width: 3.8rem;
+  text-align: center;
+}
+
+.type-tag-empty {
+  background: transparent;
+  border: 1px dashed #2a2a3a;
+  color: transparent;
 }
 
 .type-tag.normal { background: #9099a1; }
@@ -657,6 +729,110 @@ button:hover {
 .type-tag.dark { background: #5a4f44; }
 .type-tag.steel { background: #5a8ea2; }
 .type-tag.fairy { background: #e08ee0; color: #222; }
+
+.pokemon-list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.3rem 0.5rem;
+  background: #1a1a24;
+  border: 1px solid #2a2a3a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  align-self: start;
+}
+
+.pokemon-list-item:hover {
+  border-color: #f0c060;
+  background: #222230;
+}
+
+.list-sprite {
+  width: 40px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.list-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.list-info-top,
+.list-info-bottom {
+  display: contents;
+}
+
+.list-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e0e0e8;
+  min-width: 10rem;
+}
+
+.list-types {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.list-abilities {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.list-ability {
+  padding: 0.06rem 0.25rem;
+  border-radius: 3px;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #999;
+  border: 1px solid #3a3a4a;
+  background: #1a1a24;
+  width: 5rem;
+  text-align: center;
+}
+
+.list-ability-empty {
+  color: #444;
+  border-color: #2a2a3a;
+}
+
+.list-stats {
+  display: flex;
+  gap: 0;
+  margin-left: auto;
+}
+
+.list-stat-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 1.5rem;
+}
+
+.list-stat-label {
+  font-size: 0.55rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.list-stat-value {
+  font-size: 0.7rem;
+  color: #e0e0e8;
+  font-weight: 600;
+}
+
+.list-stat-highlighted .list-stat-label,
+.list-stat-highlighted .list-stat-value {
+  color: #f0c060;
+}
 
 .card-stats {
   display: flex;
@@ -1040,6 +1216,13 @@ button:hover {
 
   #pokemon-grid {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    padding: 0.25rem 0.3rem;
+    gap: 0.25rem;
+  }
+
+  .pokemon-list-item {
+    padding: 0.2rem 0.3rem;
+    gap: 0.3rem;
   }
 
   .card-stats {
@@ -1052,5 +1235,65 @@ button:hover {
 
   #tab-bar-mobile .tab {
     font-size: 0.55rem;
+  }
+
+  .list-sprite {
+    width: 32px;
+  }
+
+  .list-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.15rem;
+  }
+
+  .list-info-top,
+  .list-info-bottom {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .list-types {
+    margin-left: auto;
+  }
+
+  .list-stat-entry {
+    width: 1.2rem;
+  }
+
+  .list-stat-label {
+    font-size: 0.45rem;
+  }
+
+  .list-stat-value {
+    font-size: 0.6rem;
+  }
+
+  .list-name {
+    font-size: 0.75rem;
+    min-width: 6rem;
+  }
+
+  .list-types .type-tag {
+    width: 3rem;
+    font-size: 0.55rem;
+    padding: 0.04rem 0.15rem;
+  }
+
+  .list-ability {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: auto;
+    color: #999;
+  }
+
+  .list-ability-empty {
+    display: none;
+  }
+
+  .list-abilities {
+    gap: 0.3rem;
   }
 }
