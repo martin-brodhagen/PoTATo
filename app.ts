@@ -178,6 +178,13 @@ function renderGrid() {
     card.className = 'pokemon-card';
     card.setAttribute('role', 'listitem');
 
+    // Left column: sprite + info + name
+    const left = document.createElement('div');
+    left.className = 'card-left';
+
+    const top = document.createElement('div');
+    top.className = 'card-top';
+
     const spriteFile = spriteMap[s.id];
     if (spriteFile) {
       const img = document.createElement('img');
@@ -185,13 +192,11 @@ function renderGrid() {
       img.src = `${SPRITE_PATH}/${spriteFile}`;
       img.alt = s.name;
       img.loading = 'lazy';
-      card.appendChild(img);
+      top.appendChild(img);
     }
 
-    const nameEl = document.createElement('div');
-    nameEl.className = 'name';
-    nameEl.textContent = s.name;
-    card.appendChild(nameEl);
+    const info = document.createElement('div');
+    info.className = 'card-info';
 
     const typesEl = document.createElement('div');
     typesEl.className = 'types';
@@ -201,15 +206,81 @@ function renderGrid() {
       tag.textContent = t;
       typesEl.appendChild(tag);
     }
-    card.appendChild(typesEl);
+    info.appendChild(typesEl);
 
-    const bst = Object.values(s.baseStats).reduce((a, b) => a + b, 0);
-    const bstEl = document.createElement('div');
-    bstEl.className = 'bst';
-    const meta = [bst.toString()];
-    if (s.moveCount > 0) meta.push(`${s.moveCount} moves`);
-    bstEl.textContent = meta.join(' · ');
-    card.appendChild(bstEl);
+    const abilEl = document.createElement('div');
+    abilEl.className = 'abilities';
+    for (const ab of Object.values(s.abilities)) {
+      const span = document.createElement('span');
+      span.className = 'ability-name';
+      span.textContent = ab;
+      abilEl.appendChild(span);
+    }
+    info.appendChild(abilEl);
+
+    top.appendChild(info);
+    left.appendChild(top);
+
+    const nameEl = document.createElement('div');
+    nameEl.className = 'name';
+    nameEl.textContent = s.name;
+    left.appendChild(nameEl);
+
+    card.appendChild(left);
+
+    // Vertical divider
+    const div = document.createElement('div');
+    div.className = 'card-divider';
+    card.appendChild(div);
+
+    // Right column: stacked base stats
+    function statColor(val: number): string {
+      if (val <= 29) return '#e06060';
+      if (val <= 59) return '#d4a040';
+      if (val <= 94) return '#c5b030';
+      if (val <= 134) return '#5fbb63';
+      return '#4f8ed4';
+    }
+    function lighten(hex: string, amount: number): string {
+      const r = parseInt(hex.slice(1,3), 16);
+      const g = parseInt(hex.slice(3,5), 16);
+      const b = parseInt(hex.slice(5,7), 16);
+      const mix = (c: number) => Math.min(255, Math.round(c + (255 - c) * amount));
+      return `rgb(${mix(r)},${mix(g)},${mix(b)})`;
+    }
+    function darken(hex: string, amount: number): string {
+      const r = parseInt(hex.slice(1,3), 16);
+      const g = parseInt(hex.slice(3,5), 16);
+      const b = parseInt(hex.slice(5,7), 16);
+      const mix = (c: number) => Math.round(c * (1 - amount));
+      return `rgb(${mix(r)},${mix(g)},${mix(b)})`;
+    }
+    const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'] as const;
+    const statKeys = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const;
+    const statList = document.createElement('div');
+    statList.className = 'card-stats';
+    for (let si = 0; si < 6; si++) {
+      const val = s.baseStats[statKeys[si]];
+      const entry = document.createElement('div');
+      entry.className = 'stat-entry';
+      const label = document.createElement('span');
+      label.className = 'stat-label';
+      label.textContent = statNames[si];
+      const value = document.createElement('span');
+      value.className = 'stat-value';
+      value.textContent = val.toString();
+      const bar = document.createElement('div');
+      bar.className = 'stat-bar';
+      const capped = val > 160;
+      bar.style.width = (capped ? 160 : val) + 'px';
+      const color = capped ? '#a060d0' : statColor(val);
+      bar.style.background = `linear-gradient(to bottom, ${lighten(color, 0.35)} 0%, ${color} 55%, ${darken(color, 0.35)} 100%)`;
+      entry.appendChild(label);
+      entry.appendChild(value);
+      entry.appendChild(bar);
+      statList.appendChild(entry);
+    }
+    card.appendChild(statList);
 
     card.addEventListener('click', () => {
       if (pendingSlotIndex !== null) {
