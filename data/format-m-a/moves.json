@@ -212,7 +212,9 @@
    "protect",
    "sound"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "confuse"
+  ]
  },
  "allyswitch": {
   "num": 502,
@@ -362,7 +364,9 @@
   "desc": "The user has 1/16 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
   "shortDesc": "User recovers 1/16 max HP per turn.",
   "flags": [],
-  "effectCategories": []
+  "effectCategories": [
+   "periodic_effect"
+  ]
  },
  "aquastep": {
   "num": 872,
@@ -634,7 +638,8 @@
    "reflectable"
   ],
   "effectCategories": [
-   "priority"
+   "priority",
+   "stat_drop_target"
   ]
  },
  "banefulbunker": {
@@ -746,9 +751,8 @@
   "priority": 0,
   "target": "normal",
   "type": "Poison",
-  "desc": "Fails unless the user has eaten a Berry, either by eating one that was held, stealing and eating one off another Pokemon with Bug Bite or Pluck, or eating one that was thrown at it with Fling. Once the condition is met, this move can be selected and used for the rest of the battle even if the user gains or uses another item or switches out. Consuming a Berry with Natural Gift does not count for the purposes of eating one.",
+  "desc": "This move cannot be selected until the user eats a Berry, either by eating one that was held, stealing and eating one off another Pokemon with Bug Bite or Pluck, or eating one that was thrown at it with Fling. Once the condition is met, this move can be selected and used for the rest of the battle even if the user gains or uses another item or switches out. Consuming a Berry with Natural Gift does not count for the purposes of eating one.",
   "shortDesc": "Fails unless the user has eaten a Berry.",
-  "onDisableMove": "undefined, // no inherit",
   "flags": [
    "failcopycat",
    "failinstruct",
@@ -794,7 +798,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },
@@ -845,9 +849,7 @@
    "protect",
    "slicing"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "bittermalice": {
   "num": 841,
@@ -1289,14 +1291,15 @@
   "flags": [
    "protect"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "inflicts_status"
+  ]
  },
  "burnup": {
   "num": 682,
   "accuracy": 100,
   "basePower": 130,
   "category": "Special",
-  "isNonstandard": null,
   "name": "Burn Up",
   "pp": 5,
   "priority": 0,
@@ -1437,7 +1440,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "chillingwater": {
   "num": 886,
@@ -1729,7 +1734,6 @@
   "accuracy": 100,
   "basePower": 0,
   "category": "Status",
-  "isNonstandard": null,
   "name": "Corrosive Gas",
   "pp": 40,
   "priority": 0,
@@ -1815,7 +1819,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "counter": {
   "num": 68,
@@ -1982,7 +1988,11 @@
   "type": "Normal",
   "desc": "Has a 50% chance to lower the target's Defense by 1 stage.",
   "shortDesc": "50% chance to lower the target's Defense by 1.",
-  "flags": [],
+  "flags": [
+   "contact",
+   "protect",
+   "slicing"
+  ],
   "effectCategories": [
    "stat_drop_target"
   ]
@@ -2166,14 +2176,20 @@
   "pp": 15,
   "priority": 0,
   "secondary": {
-   "chance": 50
+   "chance": 30
   },
   "target": "normal",
   "type": "Poison",
-  "desc": "Has a 50% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
-  "shortDesc": "50% chance to sleep, poison, or paralyze target.",
-  "flags": [],
-  "effectCategories": []
+  "desc": "Has a 30% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
+  "shortDesc": "30% chance to sleep, poison, or paralyze target.",
+  "flags": [
+   "contact",
+   "protect",
+   "slicing"
+  ],
+  "effectCategories": [
+   "inflicts_status"
+  ]
  },
  "disable": {
   "num": 50,
@@ -2383,7 +2399,9 @@
   "type": "Dragon",
   "desc": "Raises the target's chance for a critical hit by 1 stage, or by 2 stages if the target is Dragon type. Fails if there is no ally adjacent to the user, or if the target already has this effect or the Focus Energy effect. Baton Pass can be used to transfer this effect to an ally.",
   "shortDesc": "Ally: Crit ratio +1, or +2 if ally is Dragon type.",
-  "flags": [],
+  "flags": [
+   "sound"
+  ],
   "effectCategories": []
  },
  "dragonclaw": {
@@ -2398,7 +2416,11 @@
   "type": "Dragon",
   "desc": "No additional effect.",
   "shortDesc": "No additional effect.",
-  "flags": [],
+  "flags": [
+   "contact",
+   "protect",
+   "slicing"
+  ],
   "effectCategories": []
  },
  "dragondance": {
@@ -2540,9 +2562,7 @@
    "heal",
    "protect"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "drainpunch": {
   "num": 409,
@@ -2566,9 +2586,7 @@
    "protect",
    "punch"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "drillrun": {
   "num": 529,
@@ -2706,7 +2724,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "eeriespell": {
   "num": 826,
@@ -2764,7 +2784,6 @@
   "accuracy": true,
   "basePower": 0,
   "category": "Status",
-  "isNonstandard": null,
   "name": "Electrify",
   "pp": 20,
   "priority": 0,
@@ -2865,7 +2884,7 @@
   "pp": 5,
   "priority": 0,
   "volatileStatus": "encore",
-  "condition": "{",
+  "condition": {},
   "target": "normal",
   "type": "Normal",
   "zMove": {
@@ -3124,7 +3143,7 @@
   },
   "target": "normal",
   "type": "Normal",
-  "desc": "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
+  "desc": "Has a 100% chance to make the target flinch. This move cannot be selected unless it is the user's first turn on the field.",
   "shortDesc": "Hits first. First turn out only. 100% flinch chance.",
   "flags": [
    "contact",
@@ -3159,7 +3178,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "featherdance": {
   "num": 297,
@@ -3186,7 +3207,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "feint": {
   "num": 364,
@@ -3347,7 +3370,10 @@
    "contact",
    "protect"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "flinch",
+   "inflicts_status"
+  ]
  },
  "firelash": {
   "num": 680,
@@ -3417,7 +3443,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },
@@ -3431,7 +3457,7 @@
   "priority": 2,
   "target": "normal",
   "type": "Bug",
-  "desc": "Fails unless it is the user's first turn on the field.",
+  "desc": "This move cannot be selected unless it is the user's first turn on the field.",
   "shortDesc": "Nearly always goes first. First turn out only.",
   "flags": [
    "contact",
@@ -3895,10 +3921,9 @@
   "name": "Freeze-Dry",
   "pp": 20,
   "priority": 0,
-  "secondary": "undefined, // no inherit",
   "target": "normal",
   "type": "Ice",
-  "desc": "This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+  "desc": "Has a 10% chance to freeze the target. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
   "shortDesc": "Super effective on Water.",
   "flags": [
    "protect"
@@ -4007,9 +4032,7 @@
    "heal",
    "protect"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "gigaimpact": {
   "num": 416,
@@ -4506,7 +4529,6 @@
    "heal"
   ],
   "effectCategories": [
-   "heal",
    "self_destruct"
   ]
  },
@@ -4531,9 +4553,7 @@
    "pulse",
    "reflectable"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "heatcrash": {
   "num": 535,
@@ -4707,9 +4727,7 @@
    "heal",
    "protect"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "howl": {
   "num": 336,
@@ -4876,7 +4894,10 @@
    "contact",
    "protect"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "flinch",
+   "inflicts_status"
+  ]
  },
  "icehammer": {
   "num": 665,
@@ -5117,7 +5138,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },
@@ -5199,18 +5220,21 @@
   "name": "Iron Head",
   "pp": 15,
   "priority": 0,
-  "secondary": "{",
+  "secondary": {
+   "chance": 20,
+   "volatileStatus": "flinch"
+  },
   "target": "normal",
   "type": "Steel",
-  "desc": "Has a 30% chance to make the target flinch.",
-  "shortDesc": "30% chance to make the target flinch.",
-  "chance": 20,
-  "volatileStatus": "'flinch'",
+  "desc": "Has a 20% chance to make the target flinch.",
+  "shortDesc": "20% chance to make the target flinch.",
   "flags": [
    "contact",
    "protect"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "flinch"
+  ]
  },
  "irontail": {
   "num": 231,
@@ -5243,7 +5267,6 @@
   "accuracy": true,
   "basePower": 0,
   "category": "Status",
-  "isNonstandard": null,
   "name": "King's Shield",
   "pp": 5,
   "priority": 4,
@@ -5428,9 +5451,7 @@
    "heal",
    "protect"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "leechseed": {
   "num": 73,
@@ -5456,7 +5477,7 @@
    "reflectable"
   ],
   "effectCategories": [
-   "periodic_damage"
+   "periodic_effect"
   ]
  },
  "lifedew": {
@@ -5478,16 +5499,13 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "lightofruin": {
   "num": 617,
   "accuracy": 90,
   "basePower": 140,
   "category": "Special",
-  "isNonstandard": null,
   "name": "Light of Ruin",
   "pp": 5,
   "priority": 0,
@@ -5757,7 +5775,6 @@
    "protect"
   ],
   "effectCategories": [
-   "heal",
    "inflicts_status",
    "thaw"
   ]
@@ -5810,7 +5827,8 @@
    "protect"
   ],
   "effectCategories": [
-   "self_destruct"
+   "self_destruct",
+   "stat_drop_target"
   ]
  },
  "metalburst": {
@@ -5855,7 +5873,9 @@
    "reflectable",
    "sound"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "meteorbeam": {
   "num": 800,
@@ -5926,9 +5946,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "minimize": {
   "num": 107,
@@ -6041,18 +6059,22 @@
   "name": "Moonblast",
   "pp": 15,
   "priority": 0,
-  "secondary": "{",
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spa": -1
+   }
+  },
   "target": "normal",
   "type": "Fairy",
-  "desc": "Has a 30% chance to lower the target's Special Attack by 1 stage.",
-  "shortDesc": "30% chance to lower the target's Sp. Atk by 1.",
-  "chance": 10,
-  "boosts": "{",
-  "spa": -1,
+  "desc": "Has a 10% chance to lower the target's Special Attack by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Atk by 1.",
   "flags": [
    "protect"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "moonlight": {
   "num": 236,
@@ -6072,9 +6094,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "morningsun": {
   "num": 234,
@@ -6094,9 +6114,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "mortalspin": {
   "num": 866,
@@ -6362,7 +6380,9 @@
    "reflectable",
    "sound"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "nuzzle": {
   "num": 609,
@@ -6454,9 +6474,7 @@
    "heal",
    "protect"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "partingshot": {
   "num": 575,
@@ -6480,7 +6498,8 @@
    "sound"
   ],
   "effectCategories": [
-   "self_switch"
+   "self_switch",
+   "stat_drop_target"
   ]
  },
  "payback": {
@@ -6815,7 +6834,6 @@
   "accuracy": true,
   "basePower": 0,
   "category": "Status",
-  "isNonstandard": null,
   "name": "Power Shift",
   "pp": 10,
   "priority": 0,
@@ -7381,9 +7399,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "recycle": {
   "num": 278,
@@ -7473,9 +7489,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "reversal": {
   "num": 179,
@@ -7522,7 +7536,6 @@
    "heal"
   ],
   "effectCategories": [
-   "heal",
    "self_switch"
   ]
  },
@@ -7749,9 +7762,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "round": {
   "num": 496,
@@ -7827,20 +7838,20 @@
   "name": "Salt Cure",
   "pp": 15,
   "priority": 0,
-  "condition": "{",
+  "condition": {},
   "secondary": {
    "chance": 100,
    "volatileStatus": "saltcure"
   },
   "target": "normal",
   "type": "Rock",
-  "desc": "Causes damage to the target equal to 1/8 of its maximum HP (1/4 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
-  "shortDesc": "Deals 1/8 max HP each turn; 1/4 on Steel, Water.",
+  "desc": "Causes damage to the target equal to 1/16 of its maximum HP (1/8 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
+  "shortDesc": "Deals 1/16 max HP each turn; 1/8 on Steel, Water.",
   "flags": [
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage"
+   "periodic_effect"
   ]
  },
  "sandstorm": {
@@ -7885,7 +7896,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },
@@ -7975,7 +7986,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "scorchingsands": {
   "num": 815,
@@ -8028,7 +8041,9 @@
    "reflectable",
    "sound"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "seismictoss": {
   "num": 69,
@@ -8114,7 +8129,11 @@
   "type": "Ghost",
   "desc": "Has a higher chance for a critical hit.",
   "shortDesc": "High critical hit ratio.",
-  "flags": [],
+  "flags": [
+   "contact",
+   "protect",
+   "slicing"
+  ],
   "effectCategories": [
    "high_crit"
   ]
@@ -8380,9 +8399,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "sleeppowder": {
   "num": 79,
@@ -8510,7 +8527,6 @@
   "accuracy": 100,
   "basePower": 35,
   "category": "Physical",
-  "isNonstandard": null,
   "name": "Snap Trap",
   "pp": 15,
   "priority": 0,
@@ -8524,7 +8540,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },
@@ -8642,9 +8658,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "solarbeam": {
   "num": 76,
@@ -8752,7 +8766,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "spikes": {
   "num": 191,
@@ -9126,7 +9142,6 @@
   "accuracy": 100,
   "basePower": 60,
   "category": "Physical",
-  "isNonstandard": null,
   "name": "Storm Throw",
   "pp": 10,
   "priority": 0,
@@ -9163,9 +9178,7 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "stringshot": {
   "num": 81,
@@ -9191,7 +9204,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "strugglebug": {
   "num": 522,
@@ -9228,9 +9243,8 @@
   "priority": 0,
   "target": "self",
   "type": "Normal",
-  "desc": "Fails if the user is not holding a Berry. The user eats its Berry and raises its Defense by 2 stages. This effect is not prevented by the Klutz or Unnerve Abilities, or the effects of Embargo or Magic Room.",
+  "desc": "This move cannot be selected unless the user is holding a Berry. The user eats its Berry and raises its Defense by 2 stages. This effect is not prevented by the Klutz or Unnerve Abilities, or the effects of Embargo or Magic Room. Fails if the user is not holding a Berry.",
   "shortDesc": "Fails unless the user has a berry. User eats Berry, Def +2.",
-  "onDisableMove": "undefined, // no inherit",
   "flags": [],
   "effectCategories": []
  },
@@ -9455,9 +9469,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "sweetkiss": {
   "num": 186,
@@ -9509,7 +9521,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "switcheroo": {
   "num": 415,
@@ -9578,9 +9592,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "syrupbomb": {
   "num": 903,
@@ -9608,7 +9620,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage"
+   "periodic_effect"
   ]
  },
  "tailslap": {
@@ -9720,7 +9732,9 @@
   "flags": [
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "teatime": {
   "num": 752,
@@ -9938,7 +9952,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },
@@ -9989,7 +10003,10 @@
    "contact",
    "protect"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "flinch",
+   "inflicts_status"
+  ]
  },
  "thunderouskick": {
   "num": 823,
@@ -10119,7 +10136,9 @@
    "protect",
    "reflectable"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "stat_drop_target"
+  ]
  },
  "tidyup": {
   "num": 882,
@@ -10279,7 +10298,9 @@
   "pp": 20,
   "priority": 0,
   "status": "psn",
-  "boosts": "{",
+  "boosts": {
+   "spe": -2
+  },
   "target": "normal",
   "type": "Poison",
   "zMove": {
@@ -10287,15 +10308,15 @@
     "spe": 1
    }
   },
-  "desc": "Lowers the target's Speed by 1 stage and poisons it.",
-  "shortDesc": "Lowers the target's Speed by 1 and poisons it.",
-  "spe": -2,
+  "desc": "Lowers the target's Speed by 2 stages and poisons it.",
+  "shortDesc": "Lowers the target's Speed by 2 and poisons it.",
   "flags": [
    "protect",
    "reflectable"
   ],
   "effectCategories": [
-   "inflicts_status"
+   "inflicts_status",
+   "stat_drop_target"
   ]
  },
  "trailblaze": {
@@ -10367,7 +10388,9 @@
   "flags": [
    "protect"
   ],
-  "effectCategories": []
+  "effectCategories": [
+   "inflicts_status"
+  ]
  },
  "trick": {
   "num": 271,
@@ -10398,7 +10421,6 @@
   "accuracy": 100,
   "basePower": 0,
   "category": "Status",
-  "isNonstandard": null,
   "name": "Trick-or-Treat",
   "pp": 20,
   "priority": 0,
@@ -10479,7 +10501,9 @@
    "protect"
   ],
   "effectCategories": [
-   "high_crit"
+   "flinch",
+   "high_crit",
+   "stat_drop_target"
   ]
  },
  "tripleaxel": {
@@ -10950,7 +10974,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },
@@ -11149,9 +11173,7 @@
   "flags": [
    "heal"
   ],
-  "effectCategories": [
-   "heal"
-  ]
+  "effectCategories": []
  },
  "wonderroom": {
   "num": 472,
@@ -11273,7 +11295,7 @@
    "protect"
   ],
   "effectCategories": [
-   "periodic_damage",
+   "periodic_effect",
    "trap"
   ]
  },

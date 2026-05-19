@@ -64,11 +64,179 @@ items_raw = fetch_js_data(f"{SHOWDOWN}/items.js")
 # ---------------------------------------------------------------------------
 print("Fetching Champions mod overrides...", file=sys.stderr)
 
+def _skip_string(text, i):
+    """Skip past a string literal at position i (i points to the opening quote).
+    Handles backslash escapes. Returns new position (past closing quote)."""
+    quote = text[i]
+    i += 1
+    while i < len(text):
+        if text[i] == '\\':
+            i += 2
+            continue
+        if text[i] == quote:
+            return i + 1
+        i += 1
+    return i
+
+def _skip_line_comment(text, i):
+    """Skip past a // comment starting at position i."""
+    end = text.find('\n', i)
+    return len(text) if end == -1 else end + 1
+
+def _find_brace_end(text, start):
+    """Find matching closing brace from position start (which is after '{').
+    Returns position past the matching '}'. Handles strings, comments, nested braces."""
+    depth = 1
+    i = start
+    while i < len(text) and depth > 0:
+        c = text[i]
+        if c == '"' or c == "'":
+            i = _skip_string(text, i)
+        elif c == '/' and i + 1 < len(text) and text[i + 1] == '/':
+            i = _skip_line_comment(text, i)
+        elif c == '{':
+            depth += 1
+            i += 1
+        elif c == '}':
+            depth -= 1
+            i += 1
+        else:
+            i += 1
+    return i
+
+def _parse_ts_value(text):
+    """Parse a single TS value. Returns Python value."""
+    text = text.strip()
+    if not text:
+        return None
+    
+    if text[0] == '{':
+        end = _find_brace_end(text, 1)
+        inner = text[1:end - 1]
+        return _parse_ts_obj(inner)
+    
+    if text[0] == '[':
+        depth = 1
+        i = 1
+        while i < len(text) and depth > 0:
+            c = text[i]
+            if c == '"' or c == "'":
+                i = _skip_string(text, i)
+            elif c == '/':
+                if i + 1 < len(text) and text[i + 1] == '/':
+                    i = _skip_line_comment(text, i)
+                else:
+                    i += 1
+            elif c == '[':
+                depth += 1
+                i += 1
+            elif c == ']':
+                depth -= 1
+                i += 1
+            else:
+                i += 1
+        inner = text[1:i - 1]
+        items = _split_top_level(inner, ',')
+        return [_parse_ts_value(item) for item in items if item.strip()]
+    
+    # Scalars
+    text_stripped = text.rstrip(',')
+    if text_stripped == 'true':
+        return True
+    if text_stripped == 'false':
+        return False
+    if text_stripped in ('null', 'undefined'):
+        return None
+    
+    if text_stripped.startswith('"') or text_stripped.startswith("'"):
+        raw = text_stripped[1:]
+        result = []
+        quote = text_stripped[0]
+        i = 0
+        while i < len(raw) and raw[i] != quote:
+            if raw[i] == '\\':
+                i += 1
+                if i < len(raw):
+                    result.append(raw[i])
+                    i += 1
+            else:
+                result.append(raw[i])
+                i += 1
+        return ''.join(result)
+    
+    try:
+        if '.' in text_stripped:
+            return float(text_stripped)
+        return int(text_stripped)
+    except ValueError:
+        pass
+    
+    # Identifier (function name, enum, etc.) — discard by returning None
+    return None
+
+def _split_top_level(text, sep=','):
+    """Split text by separator, respecting braces, brackets, strings, and // comments."""
+    parts = []
+    depth_brace = 0
+    depth_bracket = 0
+    start = 0
+    i = 0
+    while i < len(text):
+        c = text[i]
+        if c == '"' or c == "'":
+            i = _skip_string(text, i)
+        elif c == '/':
+            if i + 1 < len(text) and text[i + 1] == '/':
+                i = _skip_line_comment(text, i)
+            else:
+                i += 1
+        elif c == '{':
+            depth_brace += 1
+            i += 1
+        elif c == '}':
+            depth_brace -= 1
+            i += 1
+        elif c == '[':
+            depth_bracket += 1
+            i += 1
+        elif c == ']':
+            depth_bracket -= 1
+            i += 1
+        elif c == sep and depth_brace == 0 and depth_bracket == 0:
+            parts.append(text[start:i])
+            start = i + 1
+            i += 1
+        else:
+            i += 1
+    remaining = text[start:].strip()
+    if remaining:
+        parts.append(remaining)
+    return parts
+
+def _parse_ts_obj(text):
+    """Parse key: value pairs from a TS object body (no outer braces)."""
+    props = {}
+    entries = _split_top_level(text, ',')
+    for entry in entries:
+        entry = entry.strip()
+        if not entry or entry.startswith('//'):
+            continue
+        m = re.match(r'([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*', entry)
+        if not m:
+            continue
+        key = m.group(1)
+        if key == 'inherit':
+            continue
+        val_text = entry[m.end():]
+        val = _parse_ts_value(val_text)
+        props[key] = val
+    return props
+
 def parse_ts_overrides(url):
     """Parse a TypeScript file with {inherit:true} entries.
     
-    Expected format:
-        key: { inherit: true, prop: value, ... },
+    Uses brace-depth matching to correctly handle nested objects, arrays,
+    strings with escapes, and single-line comments.
     
     Returns a dict of key → {prop: value}
     """
@@ -77,41 +245,25 @@ def parse_ts_overrides(url):
     m = re.search(r'=\s*\{', text)
     if m:
         text = text[m.end():]
-    # Remove trailing `};` or `}` and anything after
+    # Remove trailing `};` and anything after
     text = re.sub(r'\}\s*;\s*$', '', text.rstrip())
-    # Remove trailing `}` after all entries
     text = re.sub(r'\}\s*$', '', text.rstrip())
     
     result = {}
-    # Match: key: { content },
-    pattern = re.compile(r'''
-        ^\s*
-        ([a-z0-9_]+)\s*:\s*\{      # key: {
-        (.*?)                         # body (non-greedy)
-        \}\s*,?\s*$                 # },
-    ''', re.MULTILINE | re.DOTALL | re.VERBOSE)
-    
-    for m in pattern.finditer(text):
+    pos = 0
+    while pos < len(text):
+        m = re.compile(r'\s*([a-z0-9_]+)\s*:\s*\{').search(text, pos)
+        if not m:
+            break
         key = m.group(1)
-        body = m.group(2).strip()
-        props = {}
-        for line in body.split('\n'):
-            line = line.strip()
-            if not line or line.startswith('//'):
-                continue
-            # Match key: value,
-            pm = re.match(r'''([a-zA-Z0-9_]+)\s*:\s*(.+?)\s*,?\s*$''', line)
-            if pm:
-                pk = pm.group(1)
-                pv = pm.group(2).strip()
-                if pk == 'inherit' and pv == 'true':
-                    continue
-                # Try to parse as JSON-like value
-                try:
-                    props[pk] = json.loads(pv)
-                except json.JSONDecodeError:
-                    props[pk] = pv
-        result[key] = props
+        body_start = m.end()
+        end = _find_brace_end(text, body_start)
+        body_raw = text[body_start:end - 1]
+        result[key] = _parse_ts_obj(body_raw)
+        pos = end
+        # Skip trailing whitespace/comma
+        while pos < len(text) and text[pos] in ' \t\n\r,':
+            pos += 1
     return result
 
 move_overrides = parse_ts_overrides(f"{MOD_DIR}/moves.ts")
@@ -187,17 +339,25 @@ mod_learnsets = parse_learnsets_ts(f"{MOD_DIR}/learnsets.ts")
 # ---------------------------------------------------------------------------
 print("Applying overrides...", file=sys.stderr)
 
+def _apply_overrides(base: dict, overrides: dict) -> None:
+    """Apply overrides dict to base, deleting keys for None values (TS null/undefined)."""
+    for k, v in overrides.items():
+        if v is None:
+            base.pop(k, None)
+        else:
+            base[k] = v
+
 moves = dict(moves_raw)
 for mid, overrides in move_overrides.items():
     if mid in moves:
-        moves[mid].update(overrides)
+        _apply_overrides(moves[mid], overrides)
     else:
         print(f"  WARNING: move {mid} not in base data", file=sys.stderr)
 
 items = dict(items_raw)
 for iid, overrides in item_overrides.items():
     if iid in items:
-        items[iid].update(overrides)
+        _apply_overrides(items[iid], overrides)
 
 abilities = {}  # We'll extract from pokedex data later
 
@@ -507,6 +667,7 @@ def get_effect_categories(entry: dict, mid: str) -> list[str]:
     sec = entry.get('secondary')
     if not isinstance(sec, dict):
         sec = {}
+    boost = entry.get('boosts')
     sec_is_empty = isinstance(entry.get('secondary'), dict) and entry['secondary'] == {}
 
     # --- Status Condition ---
@@ -521,7 +682,7 @@ def get_effect_categories(entry: dict, mid: str) -> list[str]:
     # --- Flinch ---
     if sec and sec.get('volatileStatus') == 'flinch':
         cats.append('flinch')
-    if entry.get('volatileStatus') == 'flinch' or mid == 'ironhead':
+    if entry.get('volatileStatus') == 'flinch':
         cats.append('flinch')
 
     # --- Confuse ---
@@ -544,13 +705,14 @@ def get_effect_categories(entry: dict, mid: str) -> list[str]:
         # already added above
         pass
 
-    # --- Periodic Damage ---
-    if vs == 'partiallytrapped' or vs == 'leechseed':
-        cats.append('periodic_damage')
-    if sec and sec.get('volatileStatus') in ('saltcure', 'syrupbomb'):
-        cats.append('periodic_damage')
+    # --- Periodic Effect ---
+    PERIODIC_VOLATILE = {'partiallytrapped', 'leechseed', 'saltcure', 'syrupbomb', 'aquaring'}
+    if vs and vs in PERIODIC_VOLATILE:
+        cats.append('periodic_effect')
+    if sec and sec.get('volatileStatus', '') in PERIODIC_VOLATILE:
+        cats.append('periodic_effect')
 
-    # --- Stat Drop on Target (via secondary) ---
+    # --- Stat Drop on Target (via secondary or top-level boosts) ---
     if sec and 'boosts' in sec and 'self' not in sec:
         if any(v < 0 for v in sec['boosts'].values()):
             cats.append('stat_drop_target')
@@ -558,9 +720,16 @@ def get_effect_categories(entry: dict, mid: str) -> list[str]:
     if sec and 'boosts' in sec and isinstance(sec.get('self'), dict) and 'boosts' in sec['self']:
         if any(v < 0 for v in sec['boosts'].values()):
             cats.append('stat_drop_target')
+    # Top-level boosts lowering target stats (Noble Roar, Tearful Look)
+    if isinstance(boost, dict) and any(v < 0 for v in boost.values()):
+        tgt = entry.get('target', '')
+        if tgt not in ('self', 'allySide', 'adjacentAlly', 'allies'):
+            cats.append('stat_drop_target')
+    # Self-switching moves that lower target stats (Parting Shot) — encoded in shortDesc
+    if 'selfSwitch' in entry and 'lower' in sd.lower() and 'target' in sd.lower():
+        cats.append('stat_drop_target')
 
     # --- Stat Increase on Target (guaranteed, non-self) ---
-    boost = entry.get('boosts')
     if isinstance(boost, dict) and all(v > 0 for v in boost.values()):
         tgt = entry.get('target', '')
         if tgt not in ('self', ''):
@@ -590,14 +759,6 @@ def get_effect_categories(entry: dict, mid: str) -> list[str]:
         # Mixed boosts (e.g. Shell Smash: +Atk/SpA/Spe -Def/SpD)
         if tgt == 'self' and any(v < 0 for v in boost.values()):
             cats.append('stat_drop_attacker')
-
-    # --- Healing / Drain HP ---
-    if 'drain' in entry:
-        cats.append('heal')
-    if 'heal' in entry:
-        cats.append('heal')
-    if 'heal' in entry.get('flags', []):
-        cats.append('heal')
 
     # --- Self-Switching ---
     if 'selfSwitch' in entry:
@@ -703,6 +864,31 @@ def get_effect_categories(entry: dict, mid: str) -> list[str]:
     if 'heavier' in sd.lower():
         cats.append('weight_based')
 
+    # --- Secondaries (plural array) — used by Fang moves (Fire Fang, Ice Fang, etc.) ---
+    secondaries = entry.get('secondaries')
+    if isinstance(secondaries, list):
+        for s in secondaries:
+            if not isinstance(s, dict):
+                continue
+            if 'status' in s:
+                cats.append('inflicts_status')
+            if s.get('volatileStatus') == 'flinch':
+                cats.append('flinch')
+            if s.get('volatileStatus') == 'confusion':
+                cats.append('confuse')
+            if 'boosts' in s:
+                if any(v < 0 for v in s['boosts'].values()):
+                    cats.append('stat_drop_target')
+
+    # --- Manual overrides for scripted/text-only effects ---
+    MANUAL_CATEGORIES = {
+        'alluringvoice': ['confuse'],
+        'burningjealousy': ['inflicts_status'],
+        'direclaw': ['inflicts_status'],
+        'triattack': ['inflicts_status'],
+    }
+    cats.extend(MANUAL_CATEGORIES.get(mid, []))
+
     return sorted(set(cats))
 
 EFFECT_CATEGORY_LABELS = {
@@ -710,13 +896,12 @@ EFFECT_CATEGORY_LABELS = {
     'flinch': 'Chance to Flinch',
     'confuse': 'Chance to Confuse',
     'trap': 'Trap',
-    'periodic_damage': 'Periodic Damage',
+    'periodic_effect': 'Periodic Effect',
     'stat_drop_target': 'Chance of Stat Drop on Target',
     'stat_increase_target': 'Stat Increase on Target',
     'stat_drop_attacker': 'Stat Drop on Attacker',
     'stat_increase_attacker': 'Chance of Stat Increase on Attacker',
     'self_buff': 'Guaranteed Self Stat Buff',
-    'heal': 'Healing / Drain HP',
     'self_switch': 'Self-Switching',
     'force_switch': 'Forced Switching',
     'priority': 'Priority',
@@ -743,14 +928,14 @@ EFFECT_CATEGORY_LABELS = {
 # Strip removed/irrelevant flags (no longer used in Champions)
 STRIP_FLAGS = {'snatch', 'metronome', 'bypasssub', 'mirror', 'allyanim',
                'cantusetwice', 'distance', 'failmefirst', 'failmimic', 'nonsky', 'nosketch'}
-for entry in moves_out.values():
+for mid, entry in moves_out.items():
     raw_flags = entry.pop('flags', None)
     if isinstance(raw_flags, dict):
         entry['flags'] = sorted(k for k in raw_flags if k not in STRIP_FLAGS)
     else:
         entry['flags'] = []
     entry.pop('contestType', None)
-    entry['effectCategories'] = get_effect_categories(entry, '')
+    entry['effectCategories'] = get_effect_categories(entry, mid)
 
 # ---------------------------------------------------------------------------
 # 9. Build items.json (117 items, no filtering needed beyond MA)
