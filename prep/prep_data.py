@@ -453,97 +453,23 @@ for pid in sorted(champions_legal):
 mega_count = sum(1 for p in all_legal_ids if 'Mega' in (pokedex.get(p, {}).get('forme') or ''))
 print(f"  {len(all_legal_ids)} total species ({len(all_legal_ids) - mega_count} non-Mega, {mega_count} Mega)", file=sys.stderr)
 
-# Defined below as MA_LEGAL_MOVES (full list)
-MA_LEGAL_MOVES = {
-    "acidarmor","acidspray","acrobatics","acupressure","aerialace","afteryou",
-    "agility","aircutter","airslash","alluringvoice","allyswitch","amnesia",
-    "ancientpower","appleacid","aquacutter","aquaring","aquastep","armorcannon",
-    "aromaticmist","assurance","attract","aurasphere","aurawheel","auroraveil",
-    "avalanche","axekick","babydolleyes","banefulbunker","batonpass","beakblast",
-    "beatup","belch","bellydrum","bind","bite","bitterblade","bittermalice",
-    "blastburn","blazekick","blizzard","block","bodypress","bodyslam","bonerush",
-    "bounce","bravebird","breakingswipe","brickbreak","bugbite","bugbuzz",
-    "bulkup","bulldoze","bulletseed","burnup","burningjealousy","calmmind",
-    "ceaselessedge","charge","chargebeam","charm","chillingwater","chillyreception",
-    "circlethrow","clangingscales","clangoroussoul","clearsmog","closecombat",
-    "coaching","coil","comeuppance","confuseray","copycat","corrosivegas",
-    "cosmicpower","cottonguard","cottonspore","counter","covet","crabhammer",
-    "crosschop","crosspoison","crunch","crushclaw","darkpulse","darkestlariat",
-    "decorate","defog","destinybond","detect","dig","direclaw","disable",
-    "discharge","dive","doublehit","doubleshock","doubleteam","doubleedge",
-    "dracometeor","dragoncheer","dragonclaw","dancedance","dragondance","dragondarts",
-    "dragonpulse","dragonrush","dragontail","drainpunch","drainingkiss","drillrun",
-    "dualwingbeat","dynamicpunch","earthpower","earthquake","eerieimpulse",
-    "eeriespell","electricterrain","electrify","electroball","electroshot",
-    "electroweb","encore","endeavor","endure","energyball","entrainment",
-    "eruption","expandingforce","explosion","extrasensory","facade","fairylock",
-    "fakeout","faketears","featherdance","feint","fellstinger","ficklebeam",
-    "fierydance","finalgambit","fireblast","firefang","firelash","firepunch",
-    "firespin","firstimpression","fissure","flail","flamecharge","flamethrower",
-    "flareblitz","flashcannon","flatter","fling","flipturn","flowertrick","fly",
-    "flyingpress","focusblast","focusenergy","focuspunch","followme",
-    "forestscurse","foulplay","freezedry","frenzyplant","frostbreath","futuresight",
-    "gastroacid","gigadrain","gigaimpact","gigatonhammer","glare","grassknot",
-    "grassyglide","grassyterrain","gravapple","gravity","growth","guardsplit",
-    "guardswap","guillotine","gunkshot","gyroball","hammerarm","hardpress",
-    "haze","headsmash","headlongrush","healbell","healpulse","healingwish",
-    "heatcrash","heatwave","heavyslam","helpinghand","hex","highjumpkick",
-    "hornleech","howl","hurricane","hydropump","hyperbeam","hypnosis","icebeam",
-    "icefang","icehammer","icepunch","icespinner","iciclecrash","iciclespear",
-    "icywind","imprison","infernalparade","inferno","infestation","ingrain",
-    "instruct","irondefense","ironhead","irontail","kingsshield","knockoff",
-    "kowtowcleave","lashout","lastresort","lastrespects","lavalplume","leafblade",
-    "leafstorm","leechlife","leechseed","lifedew","lightofruin","lightscreen",
-    "liquidation","lockon","lowkick","lowsweep","lumacrash","lunge","magicpowder",
-    "magicroom","magentrise","magneticflux","matchagotcha","meanlook","memento",
-    "metalburst","metalsound","meteorbeam","meteormash","milkdrink","minimize",
-    "mirrorcoat","mistyexplosion","mistyterrain","moonblast","moonlight",
-    "morningsun","mortalspin","mountaingale","mudshot","mudslap","muddywater",
-    "mysticalfire","nastyplot","nightdaze","nightshade","nightslash","nobleroar",
-    "nuzzle","outrage","overheat","painplit","paraboliccharge","partingshot",
-    "payback","perishsong","petaldance","phantomforce","pinmissile","playrough",
-    "pluck","poisonfang","poisonjab","poisonpowder","pollenpuff","poltergeist",
-    "populationbomb","pounce","powershift","powersplit","powerswap","powertrick",
-    "powertrip","protect","psychup","psychic","psychicfangs","psychicnoise",
-    "psychicterrain","psychocut","psyshieldbash","psyshock","quash","quickguard",
-    "quiverdance","ragepowder","ragingbull","ragingfury","raindance","rapidspin",
-    "razorshell","recover","recycle","reflect","reflecttype","rest","reversal",
-    "revivalblessing","risingvoltage","roar","rockblast","rockpolish","rockslide",
-    "rocktomb","rockwrecker","roleplay","roost","round","sacredsword","safeguard",
-    "saltcure","sandtomb","sandstorm","scald","scaleshot","scaryface",
-    "scorchingsands","screech","seismictoss","selfdestruct","shadowball",
-    "shadowclaw","shadowpunch","shedtail","sheercold","shellsidearm","shellsmash",
-    "shelter","simplebeam","sing","skillskip","skillswap","kittersmack","skyattack",
-    "slackoff","sleeppowder","sleeptalk","sludgebomb","sludgewave","smackdown",
-    "smartsrike","snaptrap","snarl","snore","snowscape","soak","softboiled",
-    "solarbeam","solarblade","sparklingaria","speedswap","spicyextract","spikes",
-    "spikyshield","spiritshackle","spitup","spite","spore","stealthrock",
-    "steelbeam","steelroller","steelwing","stickyweb","stockpile","stompingtantrum",
-    "stoneaxe","stoneedge","storedpower","stormthrow","strengthsap","stringshot",
-    "strugglebug","stuffcheeks","stunspore","substitute","suckerpunch","sunnyday",
-    "superfang","supercellslam","superpower","surf","swagger","swallow","sweetkiss",
-    "sweetscent","switcheroo","swordsdance","synthesis","syrupbomb","tailslap",
-    "tailwind","taunt","tearfullook","teatime","teeterdance","temperflare",
-    "terrainpulse","thief","thrash","throatchop","thunder","thunderbolt",
-    "thundercage","thunderclap","thunderfang","thunderouskick","thunderpunch",
-    "thundershock","thunderwave","tickle","tidyup","topsyturvy","torchsong",
-    "torment","toxic","toxicspikes","toxicthread","trailblaze","transform",
-    "triattack","trick","trickortreat","trickroom","triplearrows","tripleaxel",
-    "tripledive","triplekick","tropkick","twinbeam","upperhand","uproar","uturn",
-    "vacuumwave","venoshock","victorydance","voltswitch","volttackle","waterfall",
-    "waterpulse","watershuriken","waterspout","wavecrash","weatherball",
-    "whirlpool","whirlwind","wickedblow","wideguard","wildboltstorm","wildcharge",
-    "willowisp","wingattack","wish","wonderroom","woodhammer","workup",
-    "worryseed","wrap","xscissor","yawn","zapcannon","zenheadbutt",
-    "zingzap","bodypress","scaleshot",
-}
-
-# Plus all moves from Champions mod that are not marked Past
+# ---------------------------------------------------------------------------
+# 5. Determine legal moves from isNonstandard field
+#     Include: isNonstandard is None/unset, "", or "Custom"
+#     Exclude: "Past", "Unobtainable", "CAP", "LGPE", "Gigantamax", "Future"
+# ---------------------------------------------------------------------------
+print("Determining legal moves...", file=sys.stderr)
+legal_moves: set[str] = set()
+excluded_ns = {'Past', 'Unobtainable', 'CAP', 'LGPE', 'Gigantamax', 'Future'}
 for mid, entry in moves.items():
-    ns = entry.get('isNonstandard', '')
-    if ns not in (None, '', 'Past'):
-        pass
-    # Don't filter by nonstandard here; we use the explicit list
+    ns = entry.get('isNonstandard')
+    if ns is None or ns == '' or ns == 'Custom':
+        legal_moves.add(mid)
+    elif ns in excluded_ns:
+        pass  # intentionally excluded
+    else:
+        print(f"  NOTE: {mid} has unknown isNonstandard={ns!r}", file=sys.stderr)
+print(f"  {len(legal_moves)} legal moves", file=sys.stderr)
 
 # ---------------------------------------------------------------------------
 # 6. Filter learnsets to M-A Pokémon × M-A moves
@@ -604,7 +530,7 @@ for pid in all_legal_ids:
                     ls = merged_learnsets[base_key].get('learnset', {})
                     break
 
-    filtered = {move: sources for move, sources in ls.items() if move in MA_LEGAL_MOVES}
+    filtered = {move: sources for move, sources in ls.items() if move in legal_moves}
     if filtered:
         learnset_out[pid] = sorted(filtered.keys())
     else:
@@ -652,12 +578,12 @@ for pid in sorted(all_legal_ids):
     index.append(obj)
 
 # ---------------------------------------------------------------------------
-# 8. Build moves.json — 467 legal moves with overrides baked in
+# 8. Build moves.json — legal moves with overrides baked in
 # ---------------------------------------------------------------------------
 print("Building moves list...", file=sys.stderr)
 
 moves_out = {}
-for mid in sorted(MA_LEGAL_MOVES):
+for mid in sorted(legal_moves):
     if mid in moves:
         moves_out[mid] = moves[mid]
 

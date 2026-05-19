@@ -606,7 +606,9 @@ function renderMovesGrid() {
   for (const m of list) {
     const el = document.createElement('div');
     el.className = 'move-entry';
-    el.innerHTML = `<span class="move-entry-name">${m.name}</span><span class="move-entry-type type-tag ${m.type.toLowerCase()}">${m.type}</span><span class="move-entry-cat">${m.category}</span><span class="move-entry-stat"><span class="move-entry-stat-label">BP</span><span class="move-entry-stat-value">${m.category !== 'Status' ? m.basePower : '—'}</span></span><span class="move-entry-stat"><span class="move-entry-stat-label">ACC</span><span class="move-entry-stat-value">${typeof m.accuracy === 'number' ? m.accuracy + '%' : m.accuracy === true ? '—' : '—'}</span></span><span class="move-entry-stat"><span class="move-entry-stat-label">PP</span><span class="move-entry-stat-value">${m.pp}</span></span>`;
+    const bpHL = moveSortBy === 'bp' ? ' move-entry-stat-highlighted' : '';
+    const accHL = moveSortBy === 'acc' ? ' move-entry-stat-highlighted' : '';
+    el.innerHTML = `<span class="move-entry-name">${m.name}</span><span class="move-entry-type type-tag ${m.type.toLowerCase()}">${m.type}</span><span class="move-entry-cat cat-${m.category.toLowerCase()}"><img class="cat-icon-small" src="sprites/categories/${m.category}_CP.png" alt="${m.category}"></span><span class="move-entry-stat${bpHL}"><span class="move-entry-stat-label">BP</span><span class="move-entry-stat-value">${m.category !== 'Status' ? m.basePower : '—'}</span></span><span class="move-entry-stat${accHL}"><span class="move-entry-stat-label">ACC</span><span class="move-entry-stat-value">${typeof m.accuracy === 'number' ? m.accuracy + '%' : m.accuracy === true ? '—' : '—'}</span></span><span class="move-entry-stat"><span class="move-entry-stat-label">PP</span><span class="move-entry-stat-value">${m.pp}</span></span><span class="move-entry-divider"></span><span class="move-entry-desc">${m.shortDesc || ''}</span>`;
     movesGrid.appendChild(el);
   }
 }
@@ -1123,8 +1125,15 @@ viewToggle.addEventListener('click', () => {
 });
 
 // ── Moves subtab events ─────────────────────────────────
+const moveStatSortKeys = new Set(['bp', 'acc']);
+
 moveSortSelect.addEventListener('change', () => {
   moveSortBy = moveSortSelect.value;
+  const shouldDesc = moveStatSortKeys.has(moveSortBy);
+  if (moveSortAsc === shouldDesc) {
+    moveSortAsc = !shouldDesc;
+    moveSortDir.textContent = moveSortAsc ? '▲' : '▼';
+  }
   renderMovesGrid();
 });
 
