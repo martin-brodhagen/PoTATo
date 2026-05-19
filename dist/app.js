@@ -358,7 +358,7 @@ function moveMatchesFlag(move, flag) {
     if (flag.category === 'pokemon')
         return !!move.learnedBy && move.learnedBy.includes(flag.id);
     if (flag.category === 'classification')
-        return !!move.flags && flag.id in move.flags;
+        return !!move.flags && move.flags.includes(flag.id);
     return false;
 }
 function moveUpdatePopup() {

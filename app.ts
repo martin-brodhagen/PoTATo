@@ -398,7 +398,7 @@ function renderGrid() {
 function moveMatchesFlag(move: Move, flag: FilterFlag): boolean {
   if (flag.category === 'type') return move.type.toLowerCase() === flag.id;
   if (flag.category === 'pokemon') return !!move.learnedBy && move.learnedBy.includes(flag.id);
-  if (flag.category === 'classification') return !!move.flags && flag.id in move.flags;
+  if (flag.category === 'classification') return !!move.flags && move.flags.includes(flag.id);
   return false;
 }
 

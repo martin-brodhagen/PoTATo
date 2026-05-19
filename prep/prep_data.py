@@ -505,10 +505,11 @@ for mid in sorted(MA_LEGAL_MOVES):
 STRIP_FLAGS = {'snatch', 'metronome', 'bypasssub', 'mirror', 'allyanim',
                'cantusetwice', 'distance', 'failmefirst', 'failmimic', 'nonsky', 'nosketch'}
 for entry in moves_out.values():
-    flags = entry.get('flags')
-    if isinstance(flags, dict):
-        for f in STRIP_FLAGS:
-            flags.pop(f, None)
+    raw_flags = entry.pop('flags', None)
+    if isinstance(raw_flags, dict):
+        entry['flags'] = sorted(k for k in raw_flags if k not in STRIP_FLAGS)
+    else:
+        entry['flags'] = []
 
 # ---------------------------------------------------------------------------
 # 9. Build items.json (117 items, no filtering needed beyond MA)
