@@ -14,6 +14,41 @@ const MOVE_CLASSIFICATIONS: Record<string, string> = {
   powder: 'Powder', heal: 'Healing', sound: 'Sound-Based',
 };
 
+const EFFECT_CATEGORIES: Record<string, string> = {
+  inflicts_status: 'Inflicts Status Condition',
+  flinch: 'Chance to Flinch',
+  confuse: 'Chance to Confuse',
+  trap: 'Trap',
+  periodic_damage: 'Periodic Damage',
+  stat_drop_target: 'Stat Drop on Target',
+  stat_increase_target: 'Stat Increase on Target',
+  stat_drop_attacker: 'Stat Drop on Attacker',
+  stat_increase_attacker: 'Stat Increase on Attacker',
+  self_buff: 'Guaranteed Self Stat Buff',
+  heal: 'Healing / Drain HP',
+  self_switch: 'Self-Switching',
+  force_switch: 'Forced Switching',
+  priority: 'Priority',
+  multi_hit: 'Multi-Hit',
+  recoil: 'Recoil',
+  crash_damage: 'Crash Damage',
+  high_crit: 'High Crit Ratio',
+  ohko: 'OHKO',
+  hazard_set: 'Hazard Setting',
+  hazard_remove: 'Hazard Removal',
+  weather: 'Weather Setting',
+  terrain: 'Terrain Setting',
+  screen: 'Screen Setting',
+  room: 'Room / Field Effects',
+  protect: 'Protection',
+  protect_break: 'Protection-Breaking',
+  self_destruct: 'Self-Destruct / Sacrifice',
+  thaw: 'Thaws Target',
+  screen_break: 'Screen Breaking',
+  special_damage: 'Special Damage Formula',
+  weight_based: 'Weight-Based Damage',
+};
+
 const TYPE_COLORS: Record<string, string> = {
   Normal: '#9099a1', Fire: '#e56c3e', Water: '#4f8ed4',
   Electric: '#e5c531', Grass: '#5fbb63', Ice: '#70cde7',
@@ -24,7 +59,7 @@ const TYPE_COLORS: Record<string, string> = {
 };
 
 interface FilterFlag {
-  category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification';
+  category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect';
   id: string;
   label: string;
 }
@@ -399,6 +434,7 @@ function moveMatchesFlag(move: Move, flag: FilterFlag): boolean {
   if (flag.category === 'type') return move.type.toLowerCase() === flag.id;
   if (flag.category === 'pokemon') return !!move.learnedBy && move.learnedBy.includes(flag.id);
   if (flag.category === 'classification') return !!move.flags && move.flags.includes(flag.id);
+  if (flag.category === 'effect') return !!move.effectCategories && move.effectCategories.includes(flag.id);
   return false;
 }
 
@@ -415,8 +451,10 @@ function moveUpdatePopup() {
   const matchingPokemon = allSpecies.filter(s => s.name.toLowerCase().includes(lower) || s.id.includes(lower));
   const matchingClassifications = Object.entries(MOVE_CLASSIFICATIONS)
     .filter(([_, label]) => label.toLowerCase().includes(lower));
+  const matchingEffects = Object.entries(EFFECT_CATEGORIES)
+    .filter(([_, label]) => label.toLowerCase().includes(lower));
 
-  const total = matchingTypes.length + matchingPokemon.length + matchingClassifications.length;
+  const total = matchingTypes.length + matchingPokemon.length + matchingClassifications.length + matchingEffects.length;
   if (total === 0) {
     moveFilterPopup.classList.add('hidden');
     return;
@@ -435,6 +473,13 @@ function moveUpdatePopup() {
     html += `<div class="popup-group"><div class="popup-group-label">Move Classifications</div>`;
     for (const [flagId, label] of matchingClassifications) {
       html += `<div class="popup-item" data-category="classification" data-id="${flagId}" data-label="${label}">${label}</div>`;
+    }
+    html += `</div>`;
+  }
+  if (matchingEffects.length > 0) {
+    html += `<div class="popup-group"><div class="popup-group-label">Effect</div>`;
+    for (const [eid, label] of matchingEffects) {
+      html += `<div class="popup-item" data-category="effect" data-id="${eid}" data-label="${label}">${label}</div>`;
     }
     html += `</div>`;
   }

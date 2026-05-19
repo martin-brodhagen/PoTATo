@@ -51,7 +51,26 @@ export function loadItems(format: FormatId): Promise<Record<string, Item>> {
 }
 
 export function loadMovesWithLearnsets(format: FormatId): Promise<Record<string, Move>> {
-  return loadPromise<Record<string, Move>>(format, 'moves-with-learnsets.json', 'movesWithLearnsets');
+  const c = caches[format];
+  if (c.movesWithLearnsets) return Promise.resolve(c.movesWithLearnsets);
+
+  const key = `${format}/moves-with-learnsets`;
+  if (!promises[key]) {
+    promises[key] = (async () => {
+      const [moves, learnsetMap] = await Promise.all([
+        loadMoves(format),
+        fetchJson<Record<string, string[]>>(`${DATA_URL}/format-${format}/moves-with-learnsets.json`),
+      ]);
+      const merged: Record<string, Move> = {};
+      for (const [mid, speciesList] of Object.entries(learnsetMap)) {
+        const move = moves[mid];
+        if (move) merged[mid] = { ...move, learnedBy: speciesList };
+      }
+      c.movesWithLearnsets = merged;
+      return merged;
+    })();
+  }
+  return promises[key] as Promise<Record<string, Move>>;
 }
 
 export function getCachedIndex(format: FormatId): Species[] | undefined {

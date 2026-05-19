@@ -38,7 +38,27 @@ export function loadItems(format) {
     return loadPromise(format, 'items.json', 'items');
 }
 export function loadMovesWithLearnsets(format) {
-    return loadPromise(format, 'moves-with-learnsets.json', 'movesWithLearnsets');
+    const c = caches[format];
+    if (c.movesWithLearnsets)
+        return Promise.resolve(c.movesWithLearnsets);
+    const key = `${format}/moves-with-learnsets`;
+    if (!promises[key]) {
+        promises[key] = (async () => {
+            const [moves, learnsetMap] = await Promise.all([
+                loadMoves(format),
+                fetchJson(`${DATA_URL}/format-${format}/moves-with-learnsets.json`),
+            ]);
+            const merged = {};
+            for (const [mid, speciesList] of Object.entries(learnsetMap)) {
+                const move = moves[mid];
+                if (move)
+                    merged[mid] = { ...move, learnedBy: speciesList };
+            }
+            c.movesWithLearnsets = merged;
+            return merged;
+        })();
+    }
+    return promises[key];
 }
 export function getCachedIndex(format) {
     return caches[format]?.index;

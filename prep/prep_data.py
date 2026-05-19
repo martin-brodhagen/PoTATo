@@ -501,6 +501,245 @@ for mid in sorted(MA_LEGAL_MOVES):
     if mid in moves:
         moves_out[mid] = moves[mid]
 
+# Assign effect categories for searchability
+def get_effect_categories(entry: dict, mid: str) -> list[str]:
+    cats: list[str] = []
+    sec = entry.get('secondary')
+    if not isinstance(sec, dict):
+        sec = {}
+    sec_is_empty = isinstance(entry.get('secondary'), dict) and entry['secondary'] == {}
+
+    # --- Status Condition ---
+    # Top-level status (Glare, Hypnosis, Spore, etc.)
+    st = entry.get('status')
+    if st:
+        cats.append('inflicts_status')
+    # Secondary status (Flamethrower burn, Body Slam para, etc.)
+    if sec and 'status' in sec:
+        cats.append('inflicts_status')
+
+    # --- Flinch ---
+    if sec and sec.get('volatileStatus') == 'flinch':
+        cats.append('flinch')
+    if entry.get('volatileStatus') == 'flinch' or mid == 'ironhead':
+        cats.append('flinch')
+
+    # --- Confuse ---
+    if sec and sec.get('volatileStatus') == 'confusion':
+        cats.append('confuse')
+    if entry.get('volatileStatus') == 'confusion':
+        cats.append('confuse')
+
+    # --- Trap ---
+    vs = entry.get('volatileStatus', '')
+    if vs == 'partiallytrapped':
+        cats.append('trap')
+    if vs == 'trap' or (vs and 'trap' in vs.lower()):
+        cats.append('trap')
+    sd = entry.get('shortDesc', '')
+    if 'prevent' in sd.lower() and 'switch' in sd.lower():
+        cats.append('trap')
+    # Spirit Shackle has empty secondary, detect via shortDesc
+    if sec_is_empty and ('prevent' in sd.lower() or 'trap' in sd.lower()):
+        # already added above
+        pass
+
+    # --- Periodic Damage ---
+    if vs == 'partiallytrapped' or vs == 'leechseed':
+        cats.append('periodic_damage')
+    if sec and sec.get('volatileStatus') in ('saltcure', 'syrupbomb'):
+        cats.append('periodic_damage')
+
+    # --- Stat Drop on Target (via secondary) ---
+    if sec and 'boosts' in sec and 'self' not in sec:
+        if any(v < 0 for v in sec['boosts'].values()):
+            cats.append('stat_drop_target')
+    # Secondary with self.boosts that also debuffs target
+    if sec and 'boosts' in sec and isinstance(sec.get('self'), dict) and 'boosts' in sec['self']:
+        if any(v < 0 for v in sec['boosts'].values()):
+            cats.append('stat_drop_target')
+
+    # --- Stat Increase on Target (guaranteed, non-self) ---
+    boost = entry.get('boosts')
+    if isinstance(boost, dict) and all(v > 0 for v in boost.values()):
+        tgt = entry.get('target', '')
+        if tgt not in ('self', ''):
+            cats.append('stat_increase_target')
+
+    # --- Stat Drop on Attacker ---
+    s = entry.get('self')
+    if isinstance(s, dict) and 'boosts' in s:
+        if any(v < 0 for v in s['boosts'].values()):
+            cats.append('stat_drop_attacker')
+    self_boost = entry.get('selfBoost')
+    if isinstance(self_boost, dict) and 'boosts' in self_boost:
+        if any(v < 0 for v in self_boost['boosts'].values()):
+            cats.append('stat_drop_attacker')
+
+    # --- Stat Increase on Attacker (via secondary) ---
+    if sec and isinstance(sec.get('self'), dict) and 'boosts' in sec['self']:
+        if any(v > 0 for v in sec['self']['boosts'].values()):
+            cats.append('stat_increase_attacker')
+
+    # --- Guaranteed Self Stat Buff ---
+    if isinstance(boost, dict):
+        tgt = entry.get('target', '')
+        if tgt == 'self' and any(v > 0 for v in boost.values()):
+            cats.append('self_buff')
+        # Ally-targeting boosts (Coaching, Aromatic Mist, Howl) are NOT self_buff
+        # Mixed boosts (e.g. Shell Smash: +Atk/SpA/Spe -Def/SpD)
+        if tgt == 'self' and any(v < 0 for v in boost.values()):
+            cats.append('stat_drop_attacker')
+
+    # --- Healing / Drain HP ---
+    if 'drain' in entry:
+        cats.append('heal')
+    if 'heal' in entry:
+        cats.append('heal')
+    if 'heal' in entry.get('flags', []):
+        cats.append('heal')
+
+    # --- Self-Switching ---
+    if 'selfSwitch' in entry:
+        cats.append('self_switch')
+
+    # --- Forced Switching ---
+    if 'forceSwitch' in entry:
+        cats.append('force_switch')
+
+    # --- Priority ---
+    priority = entry.get('priority', 0)
+    if priority != 0:
+        cats.append('priority')
+
+    # --- Multi-Hit ---
+    if 'multihit' in entry:
+        cats.append('multi_hit')
+
+    # --- Recoil ---
+    if 'recoil' in entry:
+        cats.append('recoil')
+
+    # --- Crash Damage ---
+    if 'hasCrashDamage' in entry:
+        cats.append('crash_damage')
+
+    # --- High Crit Ratio ---
+    if 'critRatio' in entry:
+        cats.append('high_crit')
+
+    # --- OHKO ---
+    if 'ohko' in entry:
+        cats.append('ohko')
+
+    # --- Hazard Setting ---
+    sc = entry.get('sideCondition', '')
+    if sc in ('spikes', 'stealthrock', 'toxicspikes', 'stickyweb'):
+        cats.append('hazard_set')
+    # Ceaseless Edge: empty secondary indicating hazard set
+    if sec_is_empty and 'spik' in sd.lower():
+        cats.append('hazard_set')
+    # Stone Axe if present
+    if sec_is_empty and 'hazard' in sd.lower():
+        cats.append('hazard_set')
+
+    # --- Hazard Removal ---
+    name_lower = entry.get('name', '').lower()
+    if name_lower in ('rapid spin', 'defog', 'mortal spin', 'tidy up'):
+        cats.append('hazard_remove')
+
+    # --- Weather Setting ---
+    if 'weather' in entry:
+        cats.append('weather')
+
+    # --- Terrain Setting ---
+    if 'terrain' in entry:
+        cats.append('terrain')
+
+    # --- Screen Setting ---
+    if sc in ('reflect', 'lightscreen', 'auroraveil'):
+        cats.append('screen')
+    # Also Safeguard which is a pseudo-screen? No, it prevents status.
+    # Keep it as screen_setting only for Reflect/Light Screen/Aurora Veil
+
+    # --- Room / Field Effects ---
+    if 'pseudoWeather' in entry:
+        cats.append('room')
+
+    # --- Protection ---
+    if 'stallingMove' in entry:
+        cats.append('protect')
+    elif entry.get('volatileStatus') in ('protect', 'kingsshield', 'banefulbunker', 'spikyshield'):
+        cats.append('protect')
+
+    # --- Protection-Breaking ---
+    if 'breaksProtect' in entry:
+        cats.append('protect_break')
+
+    # --- Self-Destruct / Sacrifice ---
+    if 'selfdestruct' in entry:
+        cats.append('self_destruct')
+
+    # --- Thaws Target ---
+    if 'thawsTarget' in entry:
+        cats.append('thaw')
+
+    # --- Screen Breaking ---
+    desc = entry.get('desc', '')
+    if 'screen' in desc.lower() and ('end' in desc.lower() or 'break' in desc.lower() or 'destroy' in desc.lower()):
+        # Exclude Aurora Veil (which sets screens, not breaks them)
+        if 'aurora' not in name_lower:
+            cats.append('screen_break')
+
+    # --- Special Damage Formula ---
+    if any(k in entry for k in ('overrideOffensiveStat', 'overrideDefensiveStat',
+                                'overrideOffensivePokemon', 'damage')):
+        cats.append('special_damage')
+    # Counter and Mirror Coat use scripted target with basePower=0, priority=-5
+    if entry.get('priority') == -5 and entry.get('basePower') == 0 and entry.get('target') == 'scripted':
+        cats.append('special_damage')
+
+    # --- Weight-Based Damage ---
+    if 'heavier' in sd.lower():
+        cats.append('weight_based')
+
+    return sorted(set(cats))
+
+EFFECT_CATEGORY_LABELS = {
+    'inflicts_status': 'Inflicts Status Condition',
+    'flinch': 'Chance to Flinch',
+    'confuse': 'Chance to Confuse',
+    'trap': 'Trap',
+    'periodic_damage': 'Periodic Damage',
+    'stat_drop_target': 'Chance of Stat Drop on Target',
+    'stat_increase_target': 'Stat Increase on Target',
+    'stat_drop_attacker': 'Stat Drop on Attacker',
+    'stat_increase_attacker': 'Chance of Stat Increase on Attacker',
+    'self_buff': 'Guaranteed Self Stat Buff',
+    'heal': 'Healing / Drain HP',
+    'self_switch': 'Self-Switching',
+    'force_switch': 'Forced Switching',
+    'priority': 'Priority',
+    'multi_hit': 'Multi-Hit',
+    'recoil': 'Recoil',
+    'crash_damage': 'Crash Damage',
+    'high_crit': 'High Crit Ratio',
+    'ohko': 'OHKO',
+    'hazard_set': 'Hazard Setting',
+    'hazard_remove': 'Hazard Removal',
+    'weather': 'Weather Setting',
+    'terrain': 'Terrain Setting',
+    'screen': 'Screen Setting',
+    'room': 'Room / Field Effects',
+    'protect': 'Protection',
+    'protect_break': 'Protection-Breaking',
+    'self_destruct': 'Self-Destruct / Sacrifice',
+    'thaw': 'Thaws Target',
+    'screen_break': 'Screen Breaking',
+    'special_damage': 'Special Damage Formula',
+    'weight_based': 'Weight-Based Damage',
+}
+
 # Strip removed/irrelevant flags (no longer used in Champions)
 STRIP_FLAGS = {'snatch', 'metronome', 'bypasssub', 'mirror', 'allyanim',
                'cantusetwice', 'distance', 'failmefirst', 'failmimic', 'nonsky', 'nosketch'}
@@ -510,6 +749,8 @@ for entry in moves_out.values():
         entry['flags'] = sorted(k for k in raw_flags if k not in STRIP_FLAGS)
     else:
         entry['flags'] = []
+    entry.pop('contestType', None)
+    entry['effectCategories'] = get_effect_categories(entry, '')
 
 # ---------------------------------------------------------------------------
 # 9. Build items.json (117 items, no filtering needed beyond MA)
@@ -563,11 +804,12 @@ for species_id, move_ids in learnset_out.items():
 for lst in move_to_species.values():
     lst.sort()
 
+# Only include moves with at least one learner — drop unlearnable moves
 moves_with_learnsets_out = {}
 for mid in sorted(moves_out):
-    entry = dict(moves_out[mid])
-    entry["learnedBy"] = move_to_species.get(mid, [])
-    moves_with_learnsets_out[mid] = entry
+    species_list = move_to_species.get(mid, [])
+    if species_list:
+        moves_with_learnsets_out[mid] = species_list
 
 # ---------------------------------------------------------------------------
 # 11. Write output
@@ -585,7 +827,7 @@ def write_json(filename, data, indent=None):
     print(f"  {filename}: {size_kb:.1f} KiB ({len(data)} entries)", file=sys.stderr)
 
 write_json("index.json", index, indent=1)
-write_json("moves.json", moves_out)
+write_json("moves.json", moves_out, indent=1)
 write_json("moves-with-learnsets.json", moves_with_learnsets_out, indent=1)
 write_json("learnsets.json", learnset_out)
 write_json("items.json", items_out)

@@ -24,6 +24,7 @@ export interface Move {
   priority: number;
   type: string;
   flags?: string[];
+  effectCategories?: string[];
   secondary?: { chance: number; boosts?: Record<string, number>; status?: string; volatileStatus?: string } | null;
   desc?: string;
   shortDesc?: string;
