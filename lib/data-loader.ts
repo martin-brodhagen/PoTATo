@@ -50,6 +50,10 @@ export function loadItems(format: FormatId): Promise<Record<string, Item>> {
   return loadPromise<Record<string, Item>>(format, 'items.json', 'items');
 }
 
+export function loadMovesWithLearnsets(format: FormatId): Promise<Record<string, Move>> {
+  return loadPromise<Record<string, Move>>(format, 'moves-with-learnsets.json', 'movesWithLearnsets');
+}
+
 export function getCachedIndex(format: FormatId): Species[] | undefined {
   return caches[format]?.index as Species[] | undefined;
 }
@@ -60,6 +64,10 @@ export function getCachedLearnsets(format: FormatId): Record<string, string[]> |
 
 export function getCachedMoves(format: FormatId): Record<string, Move> | undefined {
   return caches[format]?.moves;
+}
+
+export function getCachedMovesWithLearnsets(format: FormatId): Record<string, Move> | undefined {
+  return caches[format]?.movesWithLearnsets;
 }
 
 export function getCachedItems(format: FormatId): Record<string, Item> | undefined {

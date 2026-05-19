@@ -87,7 +87,30 @@
         <div id="pokemon-grid" role="list"></div>
       </div>
       <div id="subtab-content-moves" class="subtab-content hidden">
-        <div class="placeholder">Moves coming soon</div>
+        <div class="filter-row">
+          <select id="move-sort-select">
+            <option value="alpha">Alphabetical</option>
+            <option value="bp">Base Power</option>
+            <option value="acc">Accuracy</option>
+          </select>
+          <button id="move-sort-dir" class="sort-dir">▲</button>
+          <div class="filter-input-wrap">
+            <input id="move-filter-input" type="text" placeholder="Search moves…" autocomplete="off">
+            <span id="move-result-count" class="result-count hidden">0 Results</span>
+          </div>
+          <button class="cat-toggle active" data-cat="Physical">Physical</button>
+          <button class="cat-toggle active" data-cat="Special">Special</button>
+          <button class="cat-toggle active" data-cat="Status">Status</button>
+        </div>
+        <div id="move-filter-popup" class="filter-popup hidden"></div>
+        <div id="move-filter-bar" class="hidden">
+          <span class="filter-bar-label"><span class="label-text">Filters</span><button class="filter-clear-all" title="Clear all filters">×</button></span>
+          <div id="move-filter-toolbar">
+            <button class="filter-mode active" data-mode="and">AND</button>
+            <button class="filter-mode" data-mode="or">OR</button>
+          </div>
+        </div>
+        <div id="moves-grid" role="list"></div>
       </div>
       <div id="subtab-content-abilities" class="subtab-content hidden">
         <div class="placeholder">Abilities coming soon</div>

@@ -37,6 +37,9 @@ export function loadMoves(format) {
 export function loadItems(format) {
     return loadPromise(format, 'items.json', 'items');
 }
+export function loadMovesWithLearnsets(format) {
+    return loadPromise(format, 'moves-with-learnsets.json', 'movesWithLearnsets');
+}
 export function getCachedIndex(format) {
     return caches[format]?.index;
 }
@@ -45,6 +48,9 @@ export function getCachedLearnsets(format) {
 }
 export function getCachedMoves(format) {
     return caches[format]?.moves;
+}
+export function getCachedMovesWithLearnsets(format) {
+    return caches[format]?.movesWithLearnsets;
 }
 export function getCachedItems(format) {
     return caches[format]?.items;

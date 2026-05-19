@@ -1,8 +1,13 @@
-import { setFormat, loadIndex, loadLearnsets, loadMoves } from './lib/data-loader.js';
+import { setFormat, loadIndex, loadLearnsets, loadMoves, loadMovesWithLearnsets } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
 const TYPES = ['Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy'];
+const MOVE_CLASSIFICATIONS = {
+    bite: 'Biting', bullet: 'Ball & Bomb', contact: 'Contact', dance: 'Dance',
+    punch: 'Punching', pulse: 'Pulse', wind: 'Wind', slicing: 'Slicing',
+    powder: 'Powder', heal: 'Healing', sound: 'Sound-Based',
+};
 const TYPE_COLORS = {
     Normal: '#9099a1', Fire: '#e56c3e', Water: '#4f8ed4',
     Electric: '#e5c531', Grass: '#5fbb63', Ice: '#70cde7',
@@ -30,6 +35,14 @@ const filterBar = document.getElementById('filter-bar');
 const filterToolbar = document.getElementById('filter-toolbar');
 const grid = document.getElementById('pokemon-grid');
 const searchDetailContent = document.getElementById('search-detail-content');
+const moveSortSelect = document.getElementById('move-sort-select');
+const moveSortDir = document.getElementById('move-sort-dir');
+const moveFilterInput = document.getElementById('move-filter-input');
+const moveResultCount = document.getElementById('move-result-count');
+const movesGrid = document.getElementById('moves-grid');
+const moveFilterPopup = document.getElementById('move-filter-popup');
+const moveFilterBar = document.getElementById('move-filter-bar');
+const moveFilterToolbar = document.getElementById('move-filter-toolbar');
 let currentFormat = 'm-a';
 let teams = [];
 let currentTeamId = null;
@@ -50,6 +63,16 @@ let movesLoadedForFilter = false;
 let movesLoadingForFilter = false;
 let filterLearnsets = null;
 let filterHighlightIndex = -1;
+// ── Moves subtab state ──────────────────────────────────
+let allMoves = {};
+let moveSortBy = 'alpha';
+let moveSortAsc = true;
+let moveSearchQuery = '';
+let moveCatFilter = new Set(['Physical', 'Special', 'Status']);
+let movesSubtabLoaded = false;
+let moveFilterFlags = [];
+let moveFilterMode = 'and';
+let moveFilterHighlightIndex = -1;
 function getCurrentTeam() {
     return teams.find(t => t.id === currentTeamId);
 }
@@ -86,6 +109,11 @@ async function loadFormat(format) {
     currentFormat = format;
     setFormat(format);
     detailSpecies = null;
+    allMoves = {};
+    movesSubtabLoaded = false;
+    moveFilterFlags = [];
+    moveFilterMode = 'and';
+    moveClearFilter();
     clearFilter();
     const [index, map] = await Promise.all([
         loadIndex(format),
@@ -121,6 +149,8 @@ function matchesFlag(species, flag) {
                 return false;
             const moves = filterLearnsets[species.id];
             return !!moves && moves.includes(flag.id);
+        default:
+            return false;
     }
 }
 function isMegaForm(species) {
@@ -322,6 +352,163 @@ function renderGrid() {
         grid.appendChild(card);
     }
 }
+function moveMatchesFlag(move, flag) {
+    if (flag.category === 'type')
+        return move.type.toLowerCase() === flag.id;
+    if (flag.category === 'pokemon')
+        return !!move.learnedBy && move.learnedBy.includes(flag.id);
+    if (flag.category === 'classification')
+        return !!move.flags && flag.id in move.flags;
+    return false;
+}
+function moveUpdatePopup() {
+    const text = moveFilterInput.value.trim();
+    if (text.length < 2) {
+        moveFilterPopup.classList.add('hidden');
+        return;
+    }
+    const lower = text.toLowerCase();
+    const matchingTypes = TYPES.filter(t => t.toLowerCase().includes(lower));
+    const matchingPokemon = allSpecies.filter(s => s.name.toLowerCase().includes(lower) || s.id.includes(lower));
+    const matchingClassifications = Object.entries(MOVE_CLASSIFICATIONS)
+        .filter(([_, label]) => label.toLowerCase().includes(lower));
+    const total = matchingTypes.length + matchingPokemon.length + matchingClassifications.length;
+    if (total === 0) {
+        moveFilterPopup.classList.add('hidden');
+        return;
+    }
+    let html = '';
+    if (matchingTypes.length > 0) {
+        html += `<div class="popup-group"><div class="popup-group-label">Type</div>`;
+        for (const t of matchingTypes.slice(0, 10)) {
+            const dotColor = TYPE_COLORS[t] || '#888';
+            html += `<div class="popup-item" data-category="type" data-id="${t.toLowerCase()}" data-label="${t}"><span class="popup-type-dot" style="background:${dotColor}"></span>${t}</div>`;
+        }
+        html += `</div>`;
+    }
+    if (matchingClassifications.length > 0) {
+        html += `<div class="popup-group"><div class="popup-group-label">Move Classifications</div>`;
+        for (const [flagId, label] of matchingClassifications) {
+            html += `<div class="popup-item" data-category="classification" data-id="${flagId}" data-label="${label}">${label}</div>`;
+        }
+        html += `</div>`;
+    }
+    if (matchingPokemon.length > 0) {
+        html += `<div class="popup-group"><div class="popup-group-label">Pokémon</div>`;
+        for (const s of matchingPokemon.slice(0, 15)) {
+            html += `<div class="popup-item" data-category="pokemon" data-id="${s.id}" data-label="${s.name}">${s.name}</div>`;
+        }
+        html += `</div>`;
+    }
+    moveFilterPopup.innerHTML = html;
+    moveFilterHighlightIndex = -1;
+    moveFilterPopup.classList.remove('hidden');
+    const rect = moveFilterInput.getBoundingClientRect();
+    const popupStyle = moveFilterPopup.style;
+    const spaceBelow = window.innerHeight - rect.bottom;
+    const popupHeight = Math.min(280, spaceBelow - 8);
+    popupStyle.top = (spaceBelow > 180 ? rect.bottom + 6 : rect.top - popupHeight - 6) + 'px';
+    popupStyle.left = Math.max(8, rect.left) + 'px';
+    popupStyle.width = Math.max(220, rect.width) + 'px';
+    popupStyle.maxHeight = popupHeight + 'px';
+}
+function moveAddFlag(category, id, label) {
+    moveFilterFlags.push({ category, id, label });
+    moveFilterInput.value = '';
+    moveSearchQuery = '';
+    moveFilterPopup.classList.add('hidden');
+    moveRenderChips();
+    renderMovesGrid();
+}
+function moveRemoveFlag(index) {
+    moveFilterFlags.splice(index, 1);
+    moveRenderChips();
+    renderMovesGrid();
+}
+function moveRenderChips() {
+    moveFilterBar.querySelectorAll('.filter-chip').forEach(el => el.remove());
+    moveFilterBar.classList.toggle('hidden', moveFilterFlags.length === 0);
+    for (let i = 0; i < moveFilterFlags.length; i++) {
+        const f = moveFilterFlags[i];
+        const chip = document.createElement('span');
+        chip.className = 'filter-chip';
+        chip.dataset.category = f.category;
+        chip.innerHTML = `${f.label} <span class="chip-remove" data-index="${i}">×</span>`;
+        chip.querySelector('.chip-remove').addEventListener('click', (e) => {
+            e.stopPropagation();
+            moveRemoveFlag(i);
+        });
+        moveFilterBar.insertBefore(chip, moveFilterToolbar);
+    }
+}
+function moveUpdateModeButtons() {
+    moveFilterToolbar.querySelectorAll('.filter-mode').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.mode === moveFilterMode);
+    });
+}
+function moveClearFilter() {
+    moveFilterFlags = [];
+    moveFilterMode = 'and';
+    moveFilterHighlightIndex = -1;
+    moveFilterPopup.classList.add('hidden');
+    moveRenderChips();
+    moveUpdateModeButtons();
+    renderMovesGrid();
+}
+function loadMovesSubtab() {
+    if (movesSubtabLoaded)
+        return;
+    loadMovesWithLearnsets(currentFormat).then(moves => {
+        allMoves = moves;
+        movesSubtabLoaded = true;
+        renderMovesGrid();
+    });
+}
+function renderMovesGrid() {
+    let list = Object.entries(allMoves).map(([id, m]) => ({ id, ...m }));
+    list = list.filter(m => m.learnedBy && m.learnedBy.length > 0);
+    if (moveFilterFlags.length > 0) {
+        list = list.filter(m => {
+            const results = moveFilterFlags.map(f => moveMatchesFlag(m, f));
+            return moveFilterMode === 'and' ? results.every(Boolean) : results.some(Boolean);
+        });
+    }
+    if (moveSearchQuery) {
+        const q = moveSearchQuery.toLowerCase();
+        list = list.filter(m => m.name.toLowerCase().includes(q) || m.id.includes(q));
+    }
+    if (moveCatFilter.size < 3) {
+        list = list.filter(m => moveCatFilter.has(m.category));
+    }
+    list = list.sort((a, b) => {
+        let cmp = 0;
+        if (moveSortBy === 'alpha') {
+            cmp = a.name.localeCompare(b.name);
+        }
+        else if (moveSortBy === 'bp') {
+            cmp = a.basePower - b.basePower;
+        }
+        else if (moveSortBy === 'acc') {
+            const accA = typeof a.accuracy === 'number' ? a.accuracy : (a.accuracy === true ? 101 : 0);
+            const accB = typeof b.accuracy === 'number' ? b.accuracy : (b.accuracy === true ? 101 : 0);
+            cmp = accA - accB;
+        }
+        return moveSortAsc ? cmp : -cmp;
+    });
+    moveResultCount.textContent = `${list.length} Result${list.length === 1 ? '' : 's'}`;
+    moveResultCount.classList.toggle('hidden', false);
+    movesGrid.innerHTML = '';
+    if (list.length === 0) {
+        movesGrid.innerHTML = '<div class="loading">No moves match your search.</div>';
+        return;
+    }
+    for (const m of list) {
+        const el = document.createElement('div');
+        el.className = 'move-entry';
+        el.innerHTML = `<span class="move-entry-name">${m.name}</span><span class="move-entry-type type-tag ${m.type.toLowerCase()}">${m.type}</span><span class="move-entry-cat">${m.category}</span><span class="move-entry-stat"><span class="move-entry-stat-label">BP</span><span class="move-entry-stat-value">${m.category !== 'Status' ? m.basePower : '—'}</span></span><span class="move-entry-stat"><span class="move-entry-stat-label">ACC</span><span class="move-entry-stat-value">${typeof m.accuracy === 'number' ? m.accuracy + '%' : m.accuracy === true ? '—' : '—'}</span></span><span class="move-entry-stat"><span class="move-entry-stat-label">PP</span><span class="move-entry-stat-value">${m.pp}</span></span>`;
+        movesGrid.appendChild(el);
+    }
+}
 function clearFilter() {
     searchQuery = '';
     pendingSlotIndex = null;
@@ -396,9 +583,11 @@ function updatePopup() {
     popupStyle.maxHeight = popupHeight + 'px';
     if (!movesLoadedForFilter && !movesLoadingForFilter) {
         movesLoadingForFilter = true;
-        loadMoves(currentFormat).then(moves => {
+        loadMovesWithLearnsets(currentFormat).then(moves => {
             moveNames = {};
             for (const [id, move] of Object.entries(moves)) {
+                if (!move.learnedBy || move.learnedBy.length === 0)
+                    continue;
                 moveNames[id] = move.name;
             }
             movesLoadedForFilter = true;
@@ -797,6 +986,115 @@ viewToggle.addEventListener('click', () => {
     localStorage.setItem(LS_VIEW, viewMode);
     renderGrid();
 });
+// ── Moves subtab events ─────────────────────────────────
+moveSortSelect.addEventListener('change', () => {
+    moveSortBy = moveSortSelect.value;
+    renderMovesGrid();
+});
+moveSortDir.addEventListener('click', () => {
+    moveSortAsc = !moveSortAsc;
+    moveSortDir.textContent = moveSortAsc ? '▲' : '▼';
+    renderMovesGrid();
+});
+moveFilterInput.addEventListener('input', () => {
+    moveSearchQuery = moveFilterInput.value;
+    moveUpdatePopup();
+    renderMovesGrid();
+});
+moveFilterInput.addEventListener('keydown', (e) => {
+    const popupVisible = !moveFilterPopup.classList.contains('hidden');
+    const items = popupVisible ? moveFilterPopup.querySelectorAll('.popup-item') : [];
+    const n = items.length;
+    function updateHighlight() {
+        items.forEach((el, i) => el.classList.toggle('highlighted', i === moveFilterHighlightIndex));
+        if (moveFilterHighlightIndex >= 0 && moveFilterHighlightIndex < n)
+            items[moveFilterHighlightIndex].scrollIntoView({ block: 'nearest' });
+    }
+    if ((e.key === 'ArrowDown' || (e.key === 'Tab' && !e.shiftKey)) && popupVisible) {
+        e.preventDefault();
+        moveFilterHighlightIndex = n > 0 ? (moveFilterHighlightIndex + 1) % n : -1;
+        updateHighlight();
+    }
+    else if ((e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey)) && popupVisible) {
+        e.preventDefault();
+        moveFilterHighlightIndex = n > 0 ? (moveFilterHighlightIndex - 1 + n) % n : -1;
+        updateHighlight();
+    }
+    else if (e.key === 'Enter' && popupVisible) {
+        e.preventDefault();
+        if (n === 0)
+            return;
+        const idx = moveFilterHighlightIndex >= 0 ? moveFilterHighlightIndex : 0;
+        const item = items[idx];
+        moveAddFlag(item.dataset.category, item.dataset.id, item.dataset.label);
+    }
+    else if (e.key === 'Escape') {
+        moveClearFilter();
+    }
+});
+document.querySelectorAll('.cat-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const cat = btn.dataset.cat;
+        if (moveCatFilter.has(cat)) {
+            if (moveCatFilter.size === 1)
+                return;
+            moveCatFilter.delete(cat);
+            btn.classList.remove('active');
+        }
+        else {
+            moveCatFilter.add(cat);
+            btn.classList.add('active');
+        }
+        renderMovesGrid();
+    });
+});
+// Load moves when the Moves subtab is shown
+document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () => {
+    loadMovesSubtab();
+});
+// Move filter popup click
+moveFilterPopup.addEventListener('click', (e) => {
+    const item = e.target.closest('.popup-item');
+    if (!item)
+        return;
+    moveAddFlag(item.dataset.category, item.dataset.id, item.dataset.label);
+    moveFilterInput.focus();
+});
+// Close move filter popup when clicking outside
+document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!target.closest('#move-filter-input') && !target.closest('#move-filter-popup')) {
+        moveFilterPopup.classList.add('hidden');
+    }
+});
+window.addEventListener('scroll', () => {
+    moveFilterPopup.classList.add('hidden');
+}, { passive: true });
+window.addEventListener('resize', () => {
+    moveFilterPopup.classList.add('hidden');
+}, { passive: true });
+// Move filter bar clear
+moveFilterBar.addEventListener('click', (e) => {
+    const clearBtn = e.target.closest('.filter-clear-all');
+    if (clearBtn) {
+        moveFilterFlags = [];
+        moveRenderChips();
+        renderMovesGrid();
+        return;
+    }
+});
+// Move filter toolbar mode
+moveFilterToolbar.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-mode');
+    if (!btn)
+        return;
+    const mode = btn.dataset.mode;
+    if (mode !== 'and' && mode !== 'or')
+        return;
+    moveFilterMode = mode;
+    moveUpdateModeButtons();
+    renderMovesGrid();
+});
 filterInput.addEventListener('input', applyFilter);
 filterInput.addEventListener('keydown', (e) => {
     const popupVisible = !filterPopup.classList.contains('hidden');
@@ -839,6 +1137,9 @@ filterInput.addEventListener('keydown', (e) => {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && (filterInput.value || filterFlags.length > 0)) {
         clearFilter();
+    }
+    if (e.key === 'Escape' && (moveFilterInput.value || moveFilterFlags.length > 0)) {
+        moveClearFilter();
     }
 });
 filterPopup.addEventListener('click', (e) => {

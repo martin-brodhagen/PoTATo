@@ -501,6 +501,15 @@ for mid in sorted(MA_LEGAL_MOVES):
     if mid in moves:
         moves_out[mid] = moves[mid]
 
+# Strip removed/irrelevant flags (no longer used in Champions)
+STRIP_FLAGS = {'snatch', 'metronome', 'bypasssub', 'mirror', 'allyanim',
+               'cantusetwice', 'distance', 'failmefirst', 'failmimic', 'nonsky', 'nosketch'}
+for entry in moves_out.values():
+    flags = entry.get('flags')
+    if isinstance(flags, dict):
+        for f in STRIP_FLAGS:
+            flags.pop(f, None)
+
 # ---------------------------------------------------------------------------
 # 9. Build items.json (117 items, no filtering needed beyond MA)
 # ---------------------------------------------------------------------------
@@ -537,7 +546,30 @@ for iid in MA_LEGAL_ITEMS:
         print(f"  WARNING: item {iid} not in base data", file=sys.stderr)
 
 # ---------------------------------------------------------------------------
-# 10. Write output
+# 10. Build moves-with-learnsets.json — moves enriched with learnedBy list
+# ---------------------------------------------------------------------------
+print("Building moves-with-learnsets...", file=sys.stderr)
+
+# Invert learnset_out: move_id → list of species_ids that learn it
+move_to_species: dict[str, list[str]] = {}
+for species_id, move_ids in learnset_out.items():
+    for move_id in move_ids:
+        if move_id not in move_to_species:
+            move_to_species[move_id] = []
+        move_to_species[move_id].append(species_id)
+
+# Sort species lists for consistency
+for lst in move_to_species.values():
+    lst.sort()
+
+moves_with_learnsets_out = {}
+for mid in sorted(moves_out):
+    entry = dict(moves_out[mid])
+    entry["learnedBy"] = move_to_species.get(mid, [])
+    moves_with_learnsets_out[mid] = entry
+
+# ---------------------------------------------------------------------------
+# 11. Write output
 # ---------------------------------------------------------------------------
 print("Writing output files...", file=sys.stderr)
 
@@ -553,7 +585,8 @@ def write_json(filename, data, indent=None):
 
 write_json("index.json", index, indent=1)
 write_json("moves.json", moves_out)
+write_json("moves-with-learnsets.json", moves_with_learnsets_out, indent=1)
 write_json("learnsets.json", learnset_out)
 write_json("items.json", items_out)
 
-print(f"\nDone! Generated {len(index)} battle forms, {len(moves_out)} moves, {len(items_out)} items, {len(learnset_out)} learnsets.", file=sys.stderr)
+print(f"\nDone! Generated {len(index)} battle forms, {len(moves_out)} moves, {len(items_out)} items, {len(learnset_out)} learnsets, {len(moves_with_learnsets_out)} moves-with-learnsets.", file=sys.stderr)

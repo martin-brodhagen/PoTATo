@@ -270,7 +270,7 @@ button:hover {
   align-items: stretch;
 }
 
-#sort-select {
+#sort-select, #move-sort-select {
   background: #1a1a24;
   color: #e0e0e8;
   border: 1px solid #3a3a4a;
@@ -281,7 +281,7 @@ button:hover {
   outline: none;
 }
 
-#sort-select:focus {
+#sort-select:focus, #move-sort-select:focus {
   border-color: #f0c060;
 }
 
@@ -308,7 +308,7 @@ button:hover {
   display: flex;
 }
 
-#filter-input {
+#filter-input, #move-filter-input {
   width: 100%;
   padding: 0.5rem 0.75rem;
   background: #1a1a24;
@@ -319,11 +319,11 @@ button:hover {
   outline: none;
 }
 
-#filter-input:focus {
+#filter-input:focus, #move-filter-input:focus {
   border-color: #f0c060;
 }
 
-#filter-input.hidden {
+#filter-input.hidden, #move-filter-input.hidden {
   display: none;
 }
 
@@ -378,6 +378,25 @@ button:hover {
 }
 
 #view-toggle:hover {
+  border-color: #f0c060;
+  color: #e0e0e8;
+}
+
+.cat-toggle {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #888;
+  border-color: #3a3a4a;
+  background: #1a1a24;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.cat-toggle.active {
+  background: #3a3a4a;
   border-color: #f0c060;
   color: #e0e0e8;
 }
@@ -480,7 +499,7 @@ button:hover {
 }
 
 /* ── Filter bar (chips + mode buttons) ───────────────── */
-#filter-bar {
+#filter-bar, #move-filter-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -488,7 +507,7 @@ button:hover {
   padding: 0.35rem 0.75rem;
 }
 
-#filter-bar.hidden {
+#filter-bar.hidden, #move-filter-bar.hidden {
   display: none;
 }
 
@@ -571,6 +590,16 @@ button:hover {
   background: rgba(79, 142, 212, 0.08);
 }
 
+.filter-chip[data-category="pokemon"] {
+  border-left: 4px solid #f0c060;
+  background: rgba(240, 192, 96, 0.08);
+}
+
+.filter-chip[data-category="classification"] {
+  border-left: 4px solid #70cde7;
+  background: rgba(112, 205, 231, 0.08);
+}
+
 .chip-remove {
   cursor: pointer;
   color: #888;
@@ -585,7 +614,7 @@ button:hover {
   color: #e06060;
 }
 
-#filter-toolbar {
+#filter-toolbar, #move-filter-toolbar {
   display: flex;
   gap: 0.3rem;
   margin-left: auto;
@@ -883,6 +912,64 @@ button:hover {
   grid-column: 1 / -1;
 }
 
+#moves-grid {
+  padding: 0.5rem 0.75rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.move-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid #1e1e2a;
+  font-size: 0.82rem;
+  cursor: default;
+}
+
+.move-entry:hover {
+  background: #1a1a24;
+}
+
+.move-entry-name {
+  font-weight: 600;
+  color: #e0e0e8;
+  min-width: 12rem;
+}
+
+.move-entry-type {
+  width: 4.5rem;
+  text-align: center;
+}
+
+.move-entry-cat {
+  width: 4rem;
+  color: #999;
+  font-size: 0.72rem;
+}
+
+.move-entry-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 2.8rem;
+}
+
+.move-entry-stat-label {
+  font-size: 0.55rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.move-entry-stat-value {
+  font-size: 0.7rem;
+  color: #e0e0e8;
+  font-weight: 600;
+}
+
 /* ── Search Detail tab ────────────────────────────────── */
 #search-detail-content {
   padding: 1rem;
@@ -1145,12 +1232,12 @@ button:hover {
     margin: 0.3rem 0.5rem;
   }
 
-  #filter-input {
+  #filter-input, #move-filter-input {
     font-size: 0.85rem;
     padding: 0.4rem 0.6rem;
   }
 
-  #sort-select {
+  #sort-select, #move-sort-select {
     font-size: 0.72rem;
     padding: 0 0.35rem;
   }
@@ -1160,7 +1247,7 @@ button:hover {
     padding: 0.25rem 0.5rem;
   }
 
-  #filter-bar {
+  #filter-bar, #move-filter-bar {
     padding: 0.2rem 0.5rem;
   }
 

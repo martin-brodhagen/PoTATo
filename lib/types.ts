@@ -28,6 +28,7 @@ export interface Move {
   desc?: string;
   shortDesc?: string;
   isNonstandard?: string | null;
+  learnedBy?: string[];
 }
 
 export interface Item {
@@ -57,6 +58,7 @@ export interface FormatData {
   index: Species[];
   learnsets: Record<string, string[]>;
   moves: Record<string, Move>;
+  movesWithLearnsets: Record<string, Move>;
   items: Record<string, Item>;
 }
 

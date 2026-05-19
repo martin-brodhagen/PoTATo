@@ -20,6 +20,7 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 ├── data/format-m-a/           # Generated per-format data
 │   ├── index.json             # 270 battle forms (species + megas + regionals)
 │   ├── moves.json             # 477 legal moves (Champions buffs/nerfs baked in)
+│   ├── moves-with-learnsets.json  # 477 moves each with learnedBy [species] list
 │   ├── learnsets.json         # 271 learnable move lists (per species, filtered)
 │   ├── items.json             # 117 legal items
 │   └── sprite-map.json        # 269/270 species → sprite filename mapping
