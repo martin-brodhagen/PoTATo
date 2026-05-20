@@ -828,7 +828,7 @@ EFFECT_CATEGORY_LABELS = {
     'stat_drop_attacker': 'Stat Drop on Attacker',
     'stat_increase_attacker': 'Chance of Stat Increase on Attacker',
     'self_buff': 'Guaranteed Self Stat Buff',
-    'self_switch': 'Self-Switching',
+    'self_switch': 'Pivoting',
     'force_switch': 'Forced Switching',
     'priority': 'Priority',
     'multi_hit': 'Multi-Hit',

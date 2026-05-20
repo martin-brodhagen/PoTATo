@@ -53,7 +53,7 @@ export interface Team {
   slots: [TeamSlot, TeamSlot, TeamSlot, TeamSlot, TeamSlot, TeamSlot];
 }
 
-export type FormatId = 'm-a' | 'm-b';
+export type FormatId = 'm-a' | 'm-b' | 'm-mega';
 
 export interface FormatData {
   index: Species[];

@@ -614,6 +614,11 @@ button:hover {
   background: rgba(112, 205, 231, 0.08);
 }
 
+.filter-chip[data-category="effect"] {
+  border-left: 4px solid #f0a050;
+  background: rgba(240, 160, 80, 0.08);
+}
+
 .chip-remove {
   cursor: pointer;
   color: #888;

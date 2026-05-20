@@ -19,7 +19,7 @@ const EFFECT_CATEGORIES = {
     stat_drop_attacker: 'Stat Drop on Attacker',
     stat_increase_attacker: 'Stat Increase on Attacker',
     self_buff: 'Guaranteed Self Stat Buff',
-    self_switch: 'Self-Switching',
+    self_switch: 'Pivoting',
     force_switch: 'Forced Switching',
     priority: 'Priority',
     multi_hit: 'Multi-Hit',
@@ -171,6 +171,17 @@ function buildFilterData() {
     movesLoadedForFilter = false;
     movesLoadingForFilter = false;
 }
+function speciesHasMoveWithFlag(speciesId, key, value) {
+    if (!filterLearnsets || !allMoves)
+        return false;
+    const moveIds = filterLearnsets[speciesId];
+    if (!moveIds)
+        return false;
+    return moveIds.some(mid => {
+        const move = allMoves[mid];
+        return move && move[key]?.includes(value);
+    });
+}
 function matchesFlag(species, flag) {
     switch (flag.category) {
         case 'type':
@@ -182,6 +193,10 @@ function matchesFlag(species, flag) {
                 return false;
             const moves = filterLearnsets[species.id];
             return !!moves && moves.includes(flag.id);
+        case 'classification':
+            return speciesHasMoveWithFlag(species.id, 'flags', flag.id);
+        case 'effect':
+            return speciesHasMoveWithFlag(species.id, 'effectCategories', flag.id);
         default:
             return false;
     }
@@ -508,6 +523,16 @@ function loadMovesSubtab() {
         renderMovesGrid();
     });
 }
+function getBpDisplay(move) {
+    if (move.category === 'Status')
+        return { text: '—', title: '' };
+    if (move.basePower !== 0)
+        return { text: String(move.basePower), title: '' };
+    // Level-based fixed damage at level 50
+    if (move.name === 'Night Shade' || move.name === 'Seismic Toss')
+        return { text: '50', title: '' };
+    return { text: '?', title: move.shortDesc || '' };
+}
 function renderMovesGrid() {
     let list = Object.entries(allMoves).map(([id, m]) => ({ id, ...m }));
     list = list.filter(m => m.learnedBy && m.learnedBy.length > 0);
@@ -551,7 +576,10 @@ function renderMovesGrid() {
         el.className = 'move-entry';
         const bpHL = moveSortBy === 'bp' ? ' move-entry-stat-highlighted' : '';
         const accHL = moveSortBy === 'acc' ? ' move-entry-stat-highlighted' : '';
-        el.innerHTML = `<span class="move-entry-name">${m.name}</span><span class="move-entry-type type-tag ${m.type.toLowerCase()}">${m.type}</span><span class="move-entry-cat cat-${m.category.toLowerCase()}"><img class="cat-icon-small" src="sprites/categories/${m.category}_CP.png" alt="${m.category}"></span><span class="move-entry-stat${bpHL}"><span class="move-entry-stat-label">BP</span><span class="move-entry-stat-value">${m.category !== 'Status' ? m.basePower : '—'}</span></span><span class="move-entry-stat${accHL}"><span class="move-entry-stat-label">ACC</span><span class="move-entry-stat-value">${typeof m.accuracy === 'number' ? m.accuracy + '%' : m.accuracy === true ? '—' : '—'}</span></span><span class="move-entry-stat"><span class="move-entry-stat-label">PP</span><span class="move-entry-stat-value">${m.pp}</span></span><span class="move-entry-divider"></span><span class="move-entry-desc">${m.shortDesc || ''}</span>`;
+        const bp = getBpDisplay(m);
+        const bpTitle = bp.title ? ` title="${bp.title}"` : '';
+        const descTitle = m.shortDesc ? ` title="${m.shortDesc}"` : '';
+        el.innerHTML = `<span class="move-entry-name">${m.name}</span><span class="move-entry-type type-tag ${m.type.toLowerCase()}">${m.type}</span><span class="move-entry-cat cat-${m.category.toLowerCase()}"><img class="cat-icon-small" src="sprites/categories/${m.category}_CP.png" alt="${m.category}"></span><span class="move-entry-stat${bpHL}"><span class="move-entry-stat-label">BP</span><span class="move-entry-stat-value"${bpTitle}>${bp.text}</span></span><span class="move-entry-stat${accHL}"><span class="move-entry-stat-label">ACC</span><span class="move-entry-stat-value">${typeof m.accuracy === 'number' ? m.accuracy + '%' : m.accuracy === true ? '—' : '—'}</span></span><span class="move-entry-stat"><span class="move-entry-stat-label">PP</span><span class="move-entry-stat-value">${m.pp}</span></span><span class="move-entry-divider"></span><span class="move-entry-desc"${descTitle}>${m.shortDesc || ''}</span>`;
         movesGrid.appendChild(el);
     }
 }
@@ -588,7 +616,11 @@ function updatePopup() {
             matchingMoves.push({ id, name });
         }
     }
-    const total = matchingTypes.length + matchingAbilities.length + matchingMoves.length;
+    const matchingClassifications = Object.entries(MOVE_CLASSIFICATIONS)
+        .filter(([_, label]) => label.toLowerCase().includes(lower));
+    const matchingEffects = Object.entries(EFFECT_CATEGORIES)
+        .filter(([_, label]) => label.toLowerCase().includes(lower));
+    const total = matchingTypes.length + matchingAbilities.length + matchingMoves.length + matchingClassifications.length + matchingEffects.length;
     if (total === 0) {
         filterPopup.classList.add('hidden');
         return;
@@ -606,6 +638,20 @@ function updatePopup() {
         html += `<div class="popup-group"><div class="popup-group-label">Ability</div>`;
         for (const a of matchingAbilities.slice(0, 10)) {
             html += `<div class="popup-item" data-category="ability" data-id="${a.toLowerCase()}" data-label="${a}">${a}</div>`;
+        }
+        html += `</div>`;
+    }
+    if (matchingClassifications.length > 0) {
+        html += `<div class="popup-group"><div class="popup-group-label">Move Classification</div>`;
+        for (const [flagId, label] of matchingClassifications) {
+            html += `<div class="popup-item" data-category="classification" data-id="${flagId}" data-label="${label}">${label}</div>`;
+        }
+        html += `</div>`;
+    }
+    if (matchingEffects.length > 0) {
+        html += `<div class="popup-group"><div class="popup-group-label">Move Effect</div>`;
+        for (const [eid, label] of matchingEffects) {
+            html += `<div class="popup-item" data-category="effect" data-id="${eid}" data-label="${label}">${label}</div>`;
         }
         html += `</div>`;
     }
@@ -630,6 +676,7 @@ function updatePopup() {
     if (!movesLoadedForFilter && !movesLoadingForFilter) {
         movesLoadingForFilter = true;
         loadMovesWithLearnsets(currentFormat).then(moves => {
+            allMoves = moves;
             moveNames = {};
             for (const [id, move] of Object.entries(moves)) {
                 if (!move.learnedBy || move.learnedBy.length === 0)
@@ -659,11 +706,25 @@ function addFlag(category, id, label) {
     filterPopup.classList.add('hidden');
     renderChips();
     renderGrid();
-    if (category === 'move' && !filterLearnsets) {
-        loadLearnsets(currentFormat).then(ls => {
-            filterLearnsets = ls;
-            renderGrid();
-        });
+    const needsLearnsets = !filterLearnsets && (category === 'move' || category === 'classification' || category === 'effect');
+    const needsAllMoves = !movesLoadedForFilter && (category === 'classification' || category === 'effect');
+    if (needsLearnsets || needsAllMoves) {
+        const p = [];
+        if (needsLearnsets)
+            p.push(loadLearnsets(currentFormat).then(ls => { filterLearnsets = ls; }));
+        if (needsAllMoves) {
+            p.push(loadMovesWithLearnsets(currentFormat).then(moves => {
+                allMoves = moves;
+                moveNames = {};
+                for (const [id, move] of Object.entries(moves)) {
+                    if (!move.learnedBy || move.learnedBy.length === 0)
+                        continue;
+                    moveNames[id] = move.name;
+                }
+                movesLoadedForFilter = true;
+            }));
+        }
+        Promise.all(p).then(() => renderGrid());
     }
 }
 function removeFlag(index) {

@@ -1,5 +1,5 @@
 const DATA_URL = 'data';
-const caches = { 'm-a': {}, 'm-b': {} };
+const caches = { 'm-a': {}, 'm-b': {}, 'm-mega': {} };
 const promises = {};
 export function setFormat(id) {
     if (!caches[id])

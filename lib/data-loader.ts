@@ -2,7 +2,7 @@ import type { Species, Move, Item, FormatId, DataCache } from './types.js';
 
 const DATA_URL = 'data';
 
-const caches: Record<FormatId, DataCache> = { 'm-a': {}, 'm-b': {} };
+const caches: Record<FormatId, DataCache> = { 'm-a': {}, 'm-b': {}, 'm-mega': {} };
 const promises: Record<string, Promise<any>> = {};
 
 export function setFormat(id: FormatId) {
