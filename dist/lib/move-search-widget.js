@@ -81,6 +81,7 @@ export class MoveSearchWidget {
     filterFlags = [];
     filterMode = 'and';
     highlightIndex = -1;
+    activeMoveId = '';
     sortSelect;
     sortDirBtn;
     filterInput;
@@ -500,7 +501,7 @@ export class MoveSearchWidget {
         }
         for (const m of list) {
             const el = document.createElement('div');
-            el.className = 'move-entry';
+            el.className = 'move-entry' + (m.id === this.activeMoveId ? ' selected' : '');
             const bpHL = this.sortBy === 'bp' ? ' move-entry-stat-highlighted' : '';
             const accHL = this.sortBy === 'acc' ? ' move-entry-stat-highlighted' : '';
             const priHL = this.sortBy === 'pri' ? ' move-entry-stat-highlighted' : '';
@@ -519,7 +520,12 @@ export class MoveSearchWidget {
                     `<span class="move-entry-divider"></span>` +
                     `<span class="move-entry-desc"${descTitle}>${m.shortDesc || ''}</span>`;
             if (this.opts.onMoveClick) {
-                el.addEventListener('click', () => this.opts.onMoveClick(m.id, m));
+                el.addEventListener('click', () => {
+                    this.grid.querySelector('.move-entry.selected')?.classList.remove('selected');
+                    el.classList.add('selected');
+                    this.activeMoveId = m.id;
+                    this.opts.onMoveClick(m.id, m);
+                });
             }
             this.grid.appendChild(el);
         }

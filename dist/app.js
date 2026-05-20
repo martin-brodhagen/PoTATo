@@ -1,6 +1,7 @@
-import { setFormat, loadIndex, loadLearnsets, loadMovesWithLearnsets } from './lib/data-loader.js';
+import { setFormat, loadIndex } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
-import { MoveSearchWidget, TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
+import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
+import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
 const formatSelect = document.getElementById('format-select');
@@ -8,43 +9,18 @@ const teamSelect = document.getElementById('team-select');
 const newTeamBtn = document.getElementById('new-team-btn');
 const teamWarning = document.getElementById('team-warning');
 const teamBar = document.getElementById('team-bar');
-const filterInput = document.getElementById('filter-input');
-const LS_SORT_BY = 'potato_sort_by';
-const LS_SORT_ASC = 'potato_sort_asc';
-const LS_VIEW = 'potato_view';
-const sortSelect = document.getElementById('sort-select');
-const sortDirBtn = document.getElementById('sort-dir');
-const megaToggle = document.getElementById('mega-toggle');
-const viewToggle = document.getElementById('view-toggle');
-const resultCount = document.getElementById('result-count');
-const filterPopup = document.getElementById('filter-popup');
-const filterBar = document.getElementById('filter-bar');
-const filterToolbar = document.getElementById('filter-toolbar');
-const grid = document.getElementById('pokemon-grid');
 const searchDetailContent = document.getElementById('search-detail-content');
 let currentFormat = 'm-a';
 let teams = [];
 let currentTeamId = null;
 let allSpecies = [];
 let spriteMap = {};
-let searchQuery = '';
 let pendingSlotIndex = null;
 let detailSpecies = null;
-let filterFlags = [];
-let filterMode = 'and';
-let allAbilities = [];
-let moveNames = {};
-let showMegas = true;
-let sortBy = 'dex';
-let sortAsc = true;
-let viewMode = 'card';
-let movesLoadedForFilter = false;
-let movesLoadingForFilter = false;
-let filterLearnsets = null;
-let filterHighlightIndex = -1;
-let allMoves = {};
 let movesWidget = null;
 let detailMovesWidget = null;
+let pokemonWidget = null;
+let moveDetailPokemonWidget = null;
 function getCurrentTeam() {
     return teams.find(t => t.id === currentTeamId);
 }
@@ -81,7 +57,6 @@ async function loadFormat(format) {
     currentFormat = format;
     setFormat(format);
     detailSpecies = null;
-    allMoves = {};
     if (movesWidget) {
         movesWidget.destroy();
         movesWidget = null;
@@ -90,428 +65,22 @@ async function loadFormat(format) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
     }
-    clearFilter();
+    if (moveDetailPokemonWidget) {
+        moveDetailPokemonWidget.destroy();
+        moveDetailPokemonWidget = null;
+    }
+    pendingSlotIndex = null;
     const [index, map] = await Promise.all([
         loadIndex(format),
         fetch(`data/format-${format}/sprite-map.json`).then(r => r.json()),
     ]);
     allSpecies = index;
     spriteMap = map;
-    buildFilterData();
-    renderGrid();
+    if (pokemonWidget) {
+        pokemonWidget.clear();
+        pokemonWidget.setData(index, map);
+    }
     renderTeamBar();
-}
-function buildFilterData() {
-    const abilitySet = new Set();
-    for (const s of allSpecies) {
-        for (const v of Object.values(s.abilities)) {
-            if (v)
-                abilitySet.add(v);
-        }
-    }
-    allAbilities = [...abilitySet].sort();
-    moveNames = {};
-    movesLoadedForFilter = false;
-    movesLoadingForFilter = false;
-}
-function speciesHasMoveWithFlag(speciesId, key, value) {
-    if (!filterLearnsets || !allMoves)
-        return false;
-    const moveIds = filterLearnsets[speciesId];
-    if (!moveIds)
-        return false;
-    return moveIds.some(mid => {
-        const move = allMoves[mid];
-        return move && move[key]?.includes(value);
-    });
-}
-function matchesFlag(species, flag) {
-    switch (flag.category) {
-        case 'type':
-            return species.types.some(t => t.toLowerCase() === flag.id);
-        case 'ability':
-            return Object.values(species.abilities).some(a => a.toLowerCase() === flag.id);
-        case 'move':
-            if (!filterLearnsets)
-                return false;
-            const moves = filterLearnsets[species.id];
-            return !!moves && moves.includes(flag.id);
-        case 'classification':
-            return speciesHasMoveWithFlag(species.id, 'flags', flag.id);
-        case 'effect':
-            return speciesHasMoveWithFlag(species.id, 'effectCategories', flag.id);
-        default:
-            return false;
-    }
-}
-function isMegaForm(species) {
-    return species.forme !== null && species.forme.includes('Mega');
-}
-function matchesFlags(species) {
-    if (!showMegas && isMegaForm(species)) {
-        return false;
-    }
-    if (filterFlags.length > 0) {
-        const results = filterFlags.map(f => matchesFlag(species, f));
-        if (filterMode === 'and' ? !results.every(Boolean) : !results.some(Boolean)) {
-            return false;
-        }
-    }
-    if (searchQuery) {
-        const q = searchQuery.toLowerCase();
-        if (!species.id.includes(q) && !species.name.toLowerCase().includes(q)) {
-            return false;
-        }
-    }
-    return true;
-}
-function renderGrid() {
-    grid.innerHTML = '';
-    let filtered = allSpecies.filter(matchesFlags);
-    const statKeys = {
-        hp: 'hp', atk: 'atk', def: 'def', spa: 'spa', spd: 'spd', spe: 'spe'
-    };
-    filtered = filtered.sort((a, b) => {
-        let cmp;
-        if (sortBy === 'alpha') {
-            cmp = a.name.localeCompare(b.name);
-        }
-        else if (sortBy === 'dex') {
-            cmp = a.num - b.num;
-        }
-        else {
-            const key = statKeys[sortBy];
-            cmp = a.baseStats[key] - b.baseStats[key];
-        }
-        return sortAsc ? cmp : -cmp;
-    });
-    grid.classList.toggle('list-view', viewMode === 'list');
-    resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
-    resultCount.classList.toggle('hidden', allSpecies.length === 0);
-    if (filtered.length === 0) {
-        grid.innerHTML = '<div class="loading">No Pokémon match your search.</div>';
-        return;
-    }
-    for (const s of filtered) {
-        if (viewMode === 'list') {
-            const item = document.createElement('div');
-            item.className = 'pokemon-list-item';
-            item.setAttribute('role', 'listitem');
-            const spriteFile = spriteMap[s.id];
-            if (spriteFile) {
-                const img = document.createElement('img');
-                img.className = 'list-sprite';
-                img.src = `${SPRITE_PATH}/${spriteFile}`;
-                img.alt = s.name;
-                img.loading = 'lazy';
-                item.appendChild(img);
-            }
-            const info = document.createElement('div');
-            info.className = 'list-info';
-            const infoTop = document.createElement('div');
-            infoTop.className = 'list-info-top';
-            const nameEl = document.createElement('span');
-            nameEl.className = 'list-name';
-            nameEl.textContent = s.name;
-            infoTop.appendChild(nameEl);
-            const typesEl = document.createElement('span');
-            typesEl.className = 'list-types';
-            for (let ti = 0; ti < 2; ti++) {
-                const t = s.types[ti];
-                const tag = document.createElement('span');
-                tag.className = t ? `type-tag ${t.toLowerCase()}` : 'type-tag type-tag-empty';
-                tag.textContent = t || '';
-                typesEl.appendChild(tag);
-            }
-            infoTop.appendChild(typesEl);
-            info.appendChild(infoTop);
-            const infoBottom = document.createElement('div');
-            infoBottom.className = 'list-info-bottom';
-            const abilEl = document.createElement('span');
-            abilEl.className = 'list-abilities';
-            for (const key of ['0', '1', 'H']) {
-                const span = document.createElement('span');
-                span.className = 'list-ability' + (s.abilities[key] ? '' : ' list-ability-empty');
-                span.textContent = s.abilities[key] || '-';
-                abilEl.appendChild(span);
-            }
-            infoBottom.appendChild(abilEl);
-            const statEl = document.createElement('div');
-            statEl.className = 'list-stats';
-            const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'];
-            const statKeys = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
-            for (let si = 0; si < 6; si++) {
-                const entry = document.createElement('div');
-                entry.className = 'list-stat-entry' + (statKeys[si] === sortBy ? ' list-stat-highlighted' : '');
-                const label = document.createElement('span');
-                label.className = 'list-stat-label';
-                label.textContent = statNames[si];
-                const value = document.createElement('span');
-                value.className = 'list-stat-value';
-                value.textContent = String(s.baseStats[statKeys[si]]);
-                entry.appendChild(label);
-                entry.appendChild(value);
-                statEl.appendChild(entry);
-            }
-            infoBottom.appendChild(statEl);
-            info.appendChild(infoBottom);
-            item.appendChild(info);
-            item.addEventListener('click', () => {
-                if (pendingSlotIndex !== null) {
-                    fillSlot(pendingSlotIndex, s.id);
-                }
-                else {
-                    showDetail(s);
-                }
-            });
-            grid.appendChild(item);
-            continue;
-        }
-        const card = document.createElement('div');
-        card.className = 'pokemon-card';
-        card.setAttribute('role', 'listitem');
-        // Left column: sprite + info + name
-        const left = document.createElement('div');
-        left.className = 'card-left';
-        const top = document.createElement('div');
-        top.className = 'card-top';
-        const spriteFile = spriteMap[s.id];
-        if (spriteFile) {
-            const img = document.createElement('img');
-            img.className = 'card-sprite';
-            img.src = `${SPRITE_PATH}/${spriteFile}`;
-            img.alt = s.name;
-            img.loading = 'lazy';
-            top.appendChild(img);
-        }
-        const info = document.createElement('div');
-        info.className = 'card-info';
-        const typesEl = document.createElement('div');
-        typesEl.className = 'types';
-        for (let ti = 0; ti < 2; ti++) {
-            const t = s.types[ti];
-            const tag = document.createElement('span');
-            tag.className = t ? `type-tag ${t.toLowerCase()}` : 'type-tag type-tag-empty';
-            tag.textContent = t || '';
-            typesEl.appendChild(tag);
-        }
-        info.appendChild(typesEl);
-        const abilEl = document.createElement('div');
-        abilEl.className = 'abilities';
-        for (const ab of Object.values(s.abilities)) {
-            const span = document.createElement('span');
-            span.className = 'ability-name';
-            span.textContent = ab;
-            abilEl.appendChild(span);
-        }
-        info.appendChild(abilEl);
-        top.appendChild(info);
-        left.appendChild(top);
-        const nameEl = document.createElement('div');
-        nameEl.className = 'name';
-        nameEl.textContent = s.name;
-        left.appendChild(nameEl);
-        card.appendChild(left);
-        // Right column: stacked base stats
-        const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'];
-        const statKeys = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
-        const statList = document.createElement('div');
-        statList.className = 'card-stats';
-        for (let si = 0; si < 6; si++) {
-            const val = s.baseStats[statKeys[si]];
-            const entry = document.createElement('div');
-            entry.className = 'stat-entry' + (statKeys[si] === sortBy ? ' stat-highlighted' : '');
-            const label = document.createElement('span');
-            label.className = 'stat-label';
-            label.textContent = statNames[si];
-            const value = document.createElement('span');
-            value.className = 'stat-value';
-            value.textContent = val.toString();
-            entry.appendChild(label);
-            entry.appendChild(value);
-            statList.appendChild(entry);
-        }
-        card.appendChild(statList);
-        card.addEventListener('click', () => {
-            if (pendingSlotIndex !== null) {
-                fillSlot(pendingSlotIndex, s.id);
-            }
-            else {
-                showDetail(s);
-            }
-        });
-        grid.appendChild(card);
-    }
-}
-function clearFilter() {
-    searchQuery = '';
-    pendingSlotIndex = null;
-    filterInput.value = '';
-    filterFlags = [];
-    filterMode = 'and';
-    filterLearnsets = null;
-    filterHighlightIndex = -1;
-    filterPopup.classList.add('hidden');
-    renderChips();
-    updateModeButtons();
-    renderGrid();
-}
-function applyFilter() {
-    searchQuery = filterInput.value;
-    updatePopup();
-    renderGrid();
-}
-function updatePopup() {
-    const text = filterInput.value.trim();
-    if (text.length < 2) {
-        filterPopup.classList.add('hidden');
-        return;
-    }
-    const lower = text.toLowerCase();
-    const matchingTypes = TYPES.filter(t => t.toLowerCase().includes(lower));
-    const matchingAbilities = allAbilities.filter(a => a.toLowerCase().includes(lower));
-    const matchingMoves = [];
-    for (const [id, name] of Object.entries(moveNames)) {
-        if (name.toLowerCase().includes(lower)) {
-            matchingMoves.push({ id, name });
-        }
-    }
-    const matchingClassifications = Object.entries(MOVE_CLASSIFICATIONS)
-        .filter(([_, label]) => label.toLowerCase().includes(lower));
-    const matchingEffects = Object.entries(EFFECT_CATEGORIES)
-        .filter(([_, label]) => label.toLowerCase().includes(lower));
-    const total = matchingTypes.length + matchingAbilities.length + matchingMoves.length + matchingClassifications.length + matchingEffects.length;
-    if (total === 0) {
-        filterPopup.classList.add('hidden');
-        return;
-    }
-    let html = '';
-    if (matchingTypes.length > 0) {
-        html += `<div class="popup-group"><div class="popup-group-label">Type</div>`;
-        for (const t of matchingTypes.slice(0, 10)) {
-            const dotColor = TYPE_COLORS[t] || '#888';
-            html += `<div class="popup-item" data-category="type" data-id="${t.toLowerCase()}" data-label="${t}"><span class="popup-type-dot" style="background:${dotColor}"></span>${t}</div>`;
-        }
-        html += `</div>`;
-    }
-    if (matchingAbilities.length > 0) {
-        html += `<div class="popup-group"><div class="popup-group-label">Ability</div>`;
-        for (const a of matchingAbilities.slice(0, 10)) {
-            html += `<div class="popup-item" data-category="ability" data-id="${a.toLowerCase()}" data-label="${a}">${a}</div>`;
-        }
-        html += `</div>`;
-    }
-    if (matchingClassifications.length > 0) {
-        html += `<div class="popup-group"><div class="popup-group-label">Move Classification</div>`;
-        for (const [flagId, label] of matchingClassifications) {
-            html += `<div class="popup-item" data-category="classification" data-id="${flagId}" data-label="${label}">${label}</div>`;
-        }
-        html += `</div>`;
-    }
-    if (matchingEffects.length > 0) {
-        html += `<div class="popup-group"><div class="popup-group-label">Move Effect</div>`;
-        for (const [eid, label] of matchingEffects) {
-            html += `<div class="popup-item" data-category="effect" data-id="${eid}" data-label="${label}">${label}</div>`;
-        }
-        html += `</div>`;
-    }
-    if (matchingMoves.length > 0) {
-        html += `<div class="popup-group"><div class="popup-group-label">Move</div>`;
-        for (const m of matchingMoves.slice(0, 10)) {
-            html += `<div class="popup-item" data-category="move" data-id="${m.id}" data-label="${m.name}">${m.name}</div>`;
-        }
-        html += `</div>`;
-    }
-    filterPopup.innerHTML = html;
-    filterHighlightIndex = -1;
-    filterPopup.classList.remove('hidden');
-    const rect = filterInput.getBoundingClientRect();
-    const popupStyle = filterPopup.style;
-    const spaceBelow = window.innerHeight - rect.bottom;
-    const popupHeight = Math.min(280, spaceBelow - 8);
-    popupStyle.top = (spaceBelow > 180 ? rect.bottom + 6 : rect.top - popupHeight - 6) + 'px';
-    popupStyle.left = Math.max(8, rect.left) + 'px';
-    popupStyle.width = Math.max(220, rect.width) + 'px';
-    popupStyle.maxHeight = popupHeight + 'px';
-    if (!movesLoadedForFilter && !movesLoadingForFilter) {
-        movesLoadingForFilter = true;
-        loadMovesWithLearnsets(currentFormat).then(moves => {
-            allMoves = moves;
-            moveNames = {};
-            for (const [id, move] of Object.entries(moves)) {
-                if (!move.learnedBy || move.learnedBy.length === 0)
-                    continue;
-                moveNames[id] = move.name;
-            }
-            movesLoadedForFilter = true;
-            movesLoadingForFilter = false;
-            if (document.activeElement === filterInput) {
-                updatePopup();
-            }
-        });
-    }
-}
-function updatePopupHighlight(items) {
-    items.forEach((el, i) => {
-        el.classList.toggle('highlighted', i === filterHighlightIndex);
-    });
-    if (filterHighlightIndex >= 0 && filterHighlightIndex < items.length) {
-        items[filterHighlightIndex].scrollIntoView({ block: 'nearest' });
-    }
-}
-function addFlag(category, id, label) {
-    filterFlags.push({ category, id, label });
-    filterInput.value = '';
-    searchQuery = '';
-    filterPopup.classList.add('hidden');
-    renderChips();
-    renderGrid();
-    const needsLearnsets = !filterLearnsets && (category === 'move' || category === 'classification' || category === 'effect');
-    const needsAllMoves = !movesLoadedForFilter && (category === 'classification' || category === 'effect');
-    if (needsLearnsets || needsAllMoves) {
-        const p = [];
-        if (needsLearnsets)
-            p.push(loadLearnsets(currentFormat).then(ls => { filterLearnsets = ls; }));
-        if (needsAllMoves) {
-            p.push(loadMovesWithLearnsets(currentFormat).then(moves => {
-                allMoves = moves;
-                moveNames = {};
-                for (const [id, move] of Object.entries(moves)) {
-                    if (!move.learnedBy || move.learnedBy.length === 0)
-                        continue;
-                    moveNames[id] = move.name;
-                }
-                movesLoadedForFilter = true;
-            }));
-        }
-        Promise.all(p).then(() => renderGrid());
-    }
-}
-function removeFlag(index) {
-    filterFlags.splice(index, 1);
-    renderChips();
-    renderGrid();
-}
-function renderChips() {
-    filterBar.querySelectorAll('.filter-chip').forEach(el => el.remove());
-    filterBar.classList.toggle('hidden', filterFlags.length === 0);
-    for (let i = 0; i < filterFlags.length; i++) {
-        const f = filterFlags[i];
-        const chip = document.createElement('span');
-        chip.className = 'filter-chip';
-        chip.dataset.category = f.category;
-        chip.innerHTML = `${f.label} <span class="chip-remove" data-index="${i}">×</span>`;
-        chip.querySelector('.chip-remove').addEventListener('click', (e) => {
-            e.stopPropagation();
-            removeFlag(i);
-        });
-        filterBar.insertBefore(chip, filterToolbar);
-    }
-}
-function updateModeButtons() {
-    filterToolbar.querySelectorAll('.filter-mode').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.mode === filterMode);
-    });
 }
 function startSlotSearch(slotIndex) {
     if (window.innerWidth >= 768) {
@@ -523,10 +92,10 @@ function startSlotSearch(slotIndex) {
     const pokedexContent = document.getElementById('tab-content-pokedex');
     selectSubTab('pokemon', pokedexContent);
     pendingSlotIndex = slotIndex;
-    filterInput.value = '';
-    searchQuery = '';
-    filterInput.focus();
-    renderGrid();
+    if (pokemonWidget) {
+        pokemonWidget.clear();
+        pokemonWidget.focusInput();
+    }
 }
 function fillSlot(slotIndex, speciesId) {
     const team = getCurrentTeam();
@@ -535,7 +104,8 @@ function fillSlot(slotIndex, speciesId) {
     team.slots[slotIndex].speciesId = speciesId;
     persist();
     renderTeamWarning();
-    clearFilter();
+    if (pokemonWidget)
+        pokemonWidget.clear();
     renderTeamBar();
     reRenderDetail();
 }
@@ -636,7 +206,8 @@ function selectTeam(id) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
     }
-    clearFilter();
+    if (pokemonWidget)
+        pokemonWidget.clear();
     detailSpecies = null;
     renderTeamWarning();
     renderTeamBar();
@@ -664,11 +235,11 @@ async function showDetail(s) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
     }
+    if (moveDetailPokemonWidget) {
+        moveDetailPokemonWidget.destroy();
+        moveDetailPokemonWidget = null;
+    }
     switchToDetail();
-    const [learnsets] = await Promise.all([
-        loadLearnsets(currentFormat),
-    ]);
-    filterLearnsets = learnsets;
     const team = getCurrentTeam();
     function statBarColor(val) {
         if (val <= 29)
@@ -691,7 +262,7 @@ async function showDetail(s) {
         ${['hp', 'atk', 'def', 'spa', 'spd', 'spe'].map(key => {
         const val = s.baseStats[key];
         const label = { hp: 'HP', atk: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', spe: 'Spe' }[key];
-        const hl = sortBy === key ? ' stat-highlighted' : '';
+        const hl = pokemonWidget && pokemonWidget.getSortBy() === key ? ' stat-highlighted' : '';
         const barColor = statBarColor(val);
         return `<div class="stat-row${hl}"><span class="stat-label">${label}</span><span class="stat-val">${val}</span><span class="stat-bar-track"><span class="stat-bar-fill" style="background-color:${barColor};width:${val}px"></span></span></div>`;
     }).join('\n        ')}
@@ -762,6 +333,10 @@ function showMoveDetail(_moveId, move) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
     }
+    if (moveDetailPokemonWidget) {
+        moveDetailPokemonWidget.destroy();
+        moveDetailPokemonWidget = null;
+    }
     detailSpecies = null;
     switchToDetail();
     const bpDisplay = (m) => {
@@ -783,10 +358,6 @@ function showMoveDetail(_moveId, move) {
     const rangeLabel = move.range ? (RANGE_CATEGORIES[move.range] || move.range) : '';
     const rangeHtml = rangeLabel ? `<div class="move-detail-stat move-detail-stat-range"><span class="move-detail-stat-label">Range</span><span class="move-detail-stat-value">${rangeLabel}</span></div>` : '';
     const learnedBy = move.learnedBy || [];
-    const learnedHtml = learnedBy.map(sid => {
-        const name = allSpecies.find(s => s.id === sid)?.name || sid;
-        return `<span class="learned-species-tag" data-species-id="${sid}">${name}</span>`;
-    }).join('');
     const priorityHtml = move.priority !== 0 ? `<div class="move-detail-stat"><span class="move-detail-stat-label">Priority</span><span class="move-detail-stat-value">${move.priority > 0 ? '+' + move.priority : move.priority}</span></div>` : '';
     const html = `
     <div class="move-detail">
@@ -802,23 +373,24 @@ function showMoveDetail(_moveId, move) {
         ${rangeHtml}
         ${priorityHtml}
       </div>
-      ${flagLabels.length > 0 ? `<div class="move-detail-badges"><span class="badge-group-label">Flags</span>${flagLabels.map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
-      ${effectLabels.length > 0 ? `<div class="move-detail-badges"><span class="badge-group-label">Effects</span>${effectLabels.map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
+      ${flagLabels.length > 0 || effectLabels.length > 0 ? `<div class="move-detail-badges">${[...flagLabels, ...effectLabels].map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
       ${move.shortDesc ? `<div class="move-detail-desc">${move.shortDesc}</div>` : ''}
       <div class="move-detail-learned">
         <span class="badge-group-label">Learned By (${learnedBy.length})</span>
-        ${learnedBy.length > 0 ? `<div class="learned-species-list">${learnedHtml}</div>` : '<div class="loading">—</div>'}
+        <div id="move-detail-learned-container"></div>
       </div>
     </div>`;
     searchDetailContent.innerHTML = html;
-    searchDetailContent.querySelectorAll('.learned-species-tag').forEach(el => {
-        el.addEventListener('click', () => {
-            const sid = el.dataset.speciesId;
-            const species = allSpecies.find(s => s.id === sid);
-            if (species)
-                showDetail(species);
+    if (learnedBy.length > 0) {
+        const container = document.getElementById('move-detail-learned-container');
+        moveDetailPokemonWidget = new PokemonSearchWidget({
+            container,
+            formatId: currentFormat,
+            onPokemonClick: (_speciesId, species) => showDetail(species),
         });
-    });
+        moveDetailPokemonWidget.setData(allSpecies, spriteMap);
+        moveDetailPokemonWidget.setLearnedByFilter(learnedBy);
+    }
 }
 // ── Tab system ─────────────────────────────────────────────
 const leftSection = document.querySelector('.section-left');
@@ -895,38 +467,6 @@ teamSelect.addEventListener('change', () => {
     selectTeam(teamSelect.value);
 });
 newTeamBtn.addEventListener('click', handleNewTeam);
-const statSortKeys = new Set(['hp', 'atk', 'def', 'spa', 'spd', 'spe']);
-sortSelect.addEventListener('change', () => {
-    sortBy = sortSelect.value;
-    const shouldDesc = statSortKeys.has(sortBy);
-    if (sortAsc === shouldDesc) {
-        sortAsc = !shouldDesc;
-        sortDirBtn.textContent = sortAsc ? '▲' : '▼';
-    }
-    localStorage.setItem(LS_SORT_BY, sortBy);
-    localStorage.setItem(LS_SORT_ASC, String(sortAsc));
-    renderGrid();
-});
-sortDirBtn.addEventListener('click', () => {
-    sortAsc = !sortAsc;
-    sortDirBtn.textContent = sortAsc ? '▲' : '▼';
-    localStorage.setItem(LS_SORT_ASC, String(sortAsc));
-    renderGrid();
-});
-megaToggle.addEventListener('click', () => {
-    showMegas = !showMegas;
-    megaToggle.classList.toggle('active', showMegas);
-    renderGrid();
-});
-viewToggle.addEventListener('click', () => {
-    viewMode = viewMode === 'card' ? 'list' : 'card';
-    viewToggle.dataset.view = viewMode;
-    viewToggle.innerHTML = viewMode === 'card'
-        ? '<span class="view-icon-grid"></span>'
-        : '<span class="view-icon-list"></span>';
-    localStorage.setItem(LS_VIEW, viewMode);
-    renderGrid();
-});
 // ── Moves subtab event ──────────────────────────────────
 document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () => {
     if (!movesWidget) {
@@ -937,111 +477,19 @@ document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () =>
         movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => showMoveDetail(moveId, move) });
     }
 });
-filterInput.addEventListener('input', applyFilter);
-filterInput.addEventListener('keydown', (e) => {
-    const popupVisible = !filterPopup.classList.contains('hidden');
-    const items = popupVisible ? filterPopup.querySelectorAll('.popup-item') : [];
-    const n = items.length;
-    if (e.key === 'ArrowDown' && popupVisible) {
-        e.preventDefault();
-        filterHighlightIndex = n > 0 ? (filterHighlightIndex + 1) % n : -1;
-        updatePopupHighlight(items);
-    }
-    else if (e.key === 'ArrowUp' && popupVisible) {
-        e.preventDefault();
-        filterHighlightIndex = n > 0 ? (filterHighlightIndex - 1 + n) % n : -1;
-        updatePopupHighlight(items);
-    }
-    else if (e.key === 'Tab' && popupVisible) {
-        e.preventDefault();
-        if (n === 0)
-            return;
-        if (e.shiftKey) {
-            filterHighlightIndex = (filterHighlightIndex - 1 + n) % n;
+const pokemonContainer = document.getElementById('subtab-content-pokemon');
+pokemonWidget = new PokemonSearchWidget({
+    container: pokemonContainer,
+    formatId: currentFormat,
+    onPokemonClick: (speciesId, species) => {
+        if (pendingSlotIndex !== null) {
+            fillSlot(pendingSlotIndex, speciesId);
         }
         else {
-            filterHighlightIndex = (filterHighlightIndex + 1) % n;
+            showDetail(species);
         }
-        updatePopupHighlight(items);
-    }
-    else if (e.key === 'Enter' && popupVisible) {
-        e.preventDefault();
-        if (n === 0)
-            return;
-        const idx = filterHighlightIndex >= 0 ? filterHighlightIndex : 0;
-        const item = items[idx];
-        addFlag(item.dataset.category, item.dataset.id, item.dataset.label);
-    }
-    else if (e.key === 'Escape') {
-        clearFilter();
-    }
+    },
 });
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && (filterInput.value || filterFlags.length > 0)) {
-        clearFilter();
-    }
-});
-filterPopup.addEventListener('click', (e) => {
-    const item = e.target.closest('.popup-item');
-    if (!item)
-        return;
-    const cat = item.dataset.category;
-    const id = item.dataset.id;
-    const label = item.dataset.label;
-    addFlag(cat, id, label);
-    filterInput.focus();
-});
-document.addEventListener('click', (e) => {
-    const target = e.target;
-    if (!target.closest('#filter-input') && !target.closest('#filter-popup')) {
-        filterPopup.classList.add('hidden');
-    }
-});
-window.addEventListener('scroll', () => {
-    filterPopup.classList.add('hidden');
-}, { passive: true });
-window.addEventListener('resize', () => {
-    filterPopup.classList.add('hidden');
-}, { passive: true });
-filterBar.addEventListener('click', (e) => {
-    const clearBtn = e.target.closest('.filter-clear-all');
-    if (clearBtn) {
-        filterFlags = [];
-        renderChips();
-        renderGrid();
-        return;
-    }
-});
-filterToolbar.addEventListener('click', (e) => {
-    const btn = e.target.closest('.filter-mode');
-    if (!btn)
-        return;
-    const mode = btn.dataset.mode;
-    if (mode !== 'and' && mode !== 'or')
-        return;
-    filterMode = mode;
-    updateModeButtons();
-    renderGrid();
-});
-// ── Init ──────────────────────────────────────────────────
-const savedSortBy = localStorage.getItem(LS_SORT_BY);
-const savedSortAsc = localStorage.getItem(LS_SORT_ASC);
-if (savedSortBy && ['dex', 'alpha', 'hp', 'atk', 'def', 'spa', 'spd', 'spe'].includes(savedSortBy)) {
-    sortBy = savedSortBy;
-    sortSelect.value = sortBy;
-}
-if (savedSortAsc === 'true' || savedSortAsc === 'false') {
-    sortAsc = savedSortAsc === 'true';
-    sortDirBtn.textContent = sortAsc ? '▲' : '▼';
-}
-const savedView = localStorage.getItem(LS_VIEW);
-if (savedView === 'card' || savedView === 'list') {
-    viewMode = savedView;
-    viewToggle.dataset.view = viewMode;
-    viewToggle.innerHTML = viewMode === 'card'
-        ? '<span class="view-icon-grid"></span>'
-        : '<span class="view-icon-list"></span>';
-}
 teams = loadTeams();
 if (teams.length === 0) {
     const t = createTeam('Team 1', currentFormat);
