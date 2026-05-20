@@ -41,8 +41,10 @@ def parse_game8_table(html):
                 )
                 if desc_match:
                     desc = re.sub(r"<[^>]+>", "", desc_match.group(1)).strip()
-                    if desc and desc != "\u2014" and desc != "\u2014":
+                    if desc and desc != "\u2014":
                         result[name] = desc
+                    else:
+                        result[name] = "\u2014"
             i += 2
         else:
             i += 1

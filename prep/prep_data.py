@@ -654,6 +654,9 @@ def get_effect_categories(entry: dict, mid: str) -> list[str]:
     # Self-switching moves that lower target stats (Parting Shot) — encoded in shortDesc
     if 'selfSwitch' in entry and 'lower' in sd.lower() and 'target' in sd.lower():
         cats.append('stat_drop_target')
+    # Volatile status that causes stat drops over time (Syrup Bomb)
+    if sec and sec.get('volatileStatus') == 'syrupbomb':
+        cats.append('stat_drop_target')
 
     # --- Stat Increase on Target (guaranteed, non-self) ---
     if isinstance(boost, dict) and all(v > 0 for v in boost.values()):

@@ -195,7 +195,7 @@
   "target": "normal",
   "type": "Water",
   "desc": "No additional effect.",
-  "shortDesc": "Usually goes first.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -215,7 +215,7 @@
   "target": "normal",
   "type": "Water",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -550,7 +550,7 @@
   "target": "allAdjacent",
   "type": "Normal",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect. Hits adjacent Pokemon.",
+  "shortDesc": "—",
   "flags": [
    "protect",
    "sound"
@@ -670,7 +670,7 @@
   "target": "allAdjacent",
   "type": "Dark",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect. Hits adjacent Pokemon.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -757,7 +757,7 @@
   "target": "normal",
   "type": "Steel",
   "desc": "No additional effect.",
-  "shortDesc": "Usually goes first.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect",
@@ -1184,7 +1184,7 @@
   "target": "allAdjacentFoes",
   "type": "Fairy",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect. Hits adjacent foes.",
+  "shortDesc": "—",
   "flags": [
    "protect"
   ],
@@ -1349,7 +1349,7 @@
   "target": "normal",
   "type": "Dragon",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect",
@@ -1368,7 +1368,7 @@
   "target": "any",
   "type": "Dragon",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "protect",
    "pulse"
@@ -1482,7 +1482,7 @@
   "target": "any",
   "type": "Flying",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -1792,7 +1792,7 @@
   "target": "normal",
   "type": "Normal",
   "desc": "No additional effect.",
-  "shortDesc": "Nearly always goes first.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -2777,7 +2777,7 @@
   "target": "normal",
   "type": "Ground",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -2889,7 +2889,7 @@
   "target": "normal",
   "type": "Water",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "protect"
   ],
@@ -2927,7 +2927,7 @@
   "target": "allAdjacentFoes",
   "type": "Normal",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect. Hits adjacent foes.",
+  "shortDesc": "—",
   "flags": [
    "protect",
    "sound"
@@ -3051,7 +3051,7 @@
   "target": "normal",
   "type": "Ice",
   "desc": "No additional effect.",
-  "shortDesc": "Usually goes first.",
+  "shortDesc": "—",
   "flags": [
    "protect"
   ],
@@ -3510,7 +3510,7 @@
   "target": "normal",
   "type": "Fighting",
   "desc": "No additional effect.",
-  "shortDesc": "Usually goes first.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect",
@@ -3531,7 +3531,7 @@
   "target": "normal",
   "type": "Bug",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -3549,7 +3549,7 @@
   "target": "normal",
   "type": "Normal",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -3956,7 +3956,7 @@
   "target": "allAdjacent",
   "type": "Grass",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect. Hits adjacent Pokemon.",
+  "shortDesc": "—",
   "flags": [
    "protect",
    "wind"
@@ -4208,7 +4208,7 @@
   "target": "normal",
   "type": "Rock",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "protect"
   ],
@@ -4225,7 +4225,7 @@
   "target": "normal",
   "type": "Grass",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -4352,7 +4352,7 @@
   "target": "normal",
   "type": "Normal",
   "desc": "No additional effect.",
-  "shortDesc": "Usually goes first.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -4698,7 +4698,7 @@
   "target": "normal",
   "type": "Grass",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "bullet",
    "protect"
@@ -4828,7 +4828,7 @@
   "target": "normal",
   "type": "Ghost",
   "desc": "No additional effect.",
-  "shortDesc": "Usually goes first.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect"
@@ -5797,7 +5797,7 @@
   "target": "normal",
   "type": "Fighting",
   "desc": "No additional effect.",
-  "shortDesc": "Usually goes first.",
+  "shortDesc": "—",
   "flags": [
    "protect"
   ],
@@ -6083,7 +6083,7 @@
   "target": "normal",
   "type": "Bug",
   "desc": "No additional effect.",
-  "shortDesc": "No additional effect.",
+  "shortDesc": "—",
   "flags": [
    "contact",
    "protect",

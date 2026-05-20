@@ -42,6 +42,12 @@ export interface Item {
   itemUser?: string[] | null;
 }
 
+export interface FilterFlag {
+  category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect';
+  id: string;
+  label: string;
+}
+
 export interface TeamSlot {
   speciesId: string | null;
 }
