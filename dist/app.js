@@ -1,6 +1,6 @@
 import { setFormat, loadIndex, loadLearnsets, loadMovesWithLearnsets } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
-import { MoveSearchWidget, TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES } from './lib/move-search-widget.js';
+import { MoveSearchWidget, TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
 const formatSelect = document.getElementById('format-select');
@@ -740,6 +740,7 @@ async function showDetail(s) {
         formatId: currentFormat,
         learnsetSpecies: s.id,
         speciesNames,
+        onMoveClick: (moveId, move) => showMoveDetail(moveId, move),
     });
     if (team) {
         searchDetailContent.querySelectorAll('.overlay-slot').forEach(el => {
@@ -755,6 +756,69 @@ async function showDetail(s) {
             });
         });
     }
+}
+function showMoveDetail(_moveId, move) {
+    if (detailMovesWidget) {
+        detailMovesWidget.destroy();
+        detailMovesWidget = null;
+    }
+    detailSpecies = null;
+    switchToDetail();
+    const bpDisplay = (m) => {
+        if (m.category === 'Status')
+            return '—';
+        if (m.basePower !== 0)
+            return String(m.basePower);
+        if (m.name === 'Night Shade' || m.name === 'Seismic Toss')
+            return '50';
+        return '?';
+    };
+    const accDisplay = (m) => {
+        if (typeof m.accuracy === 'number')
+            return m.accuracy + '%';
+        return '—';
+    };
+    const flagLabels = (move.flags || []).map(f => MOVE_CLASSIFICATIONS[f] || f);
+    const effectLabels = (move.effectCategories || []).map(e => EFFECT_CATEGORIES[e] || e);
+    const rangeLabel = move.range ? (RANGE_CATEGORIES[move.range] || move.range) : '';
+    const rangeHtml = rangeLabel ? `<div class="move-detail-stat move-detail-stat-range"><span class="move-detail-stat-label">Range</span><span class="move-detail-stat-value">${rangeLabel}</span></div>` : '';
+    const learnedBy = move.learnedBy || [];
+    const learnedHtml = learnedBy.map(sid => {
+        const name = allSpecies.find(s => s.id === sid)?.name || sid;
+        return `<span class="learned-species-tag" data-species-id="${sid}">${name}</span>`;
+    }).join('');
+    const priorityHtml = move.priority !== 0 ? `<div class="move-detail-stat"><span class="move-detail-stat-label">Priority</span><span class="move-detail-stat-value">${move.priority > 0 ? '+' + move.priority : move.priority}</span></div>` : '';
+    const html = `
+    <div class="move-detail">
+      <div class="move-detail-header">
+        <span class="move-detail-name">${move.name}</span>
+        <span class="type-tag ${move.type.toLowerCase()}">${move.type}</span>
+        <span class="move-entry-cat cat-${move.category.toLowerCase()}"><img class="cat-icon-small" src="sprites/categories/${move.category}_CP.png" alt="${move.category}"></span>
+      </div>
+      <div class="move-detail-stats">
+        <div class="move-detail-stat"><span class="move-detail-stat-label">BP</span><span class="move-detail-stat-value">${bpDisplay(move)}</span></div>
+        <div class="move-detail-stat"><span class="move-detail-stat-label">ACC</span><span class="move-detail-stat-value">${accDisplay(move)}</span></div>
+        <div class="move-detail-stat"><span class="move-detail-stat-label">PP</span><span class="move-detail-stat-value">${move.pp}</span></div>
+        ${rangeHtml}
+        ${priorityHtml}
+      </div>
+      ${flagLabels.length > 0 ? `<div class="move-detail-badges"><span class="badge-group-label">Flags</span>${flagLabels.map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
+      ${effectLabels.length > 0 ? `<div class="move-detail-badges"><span class="badge-group-label">Effects</span>${effectLabels.map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
+      ${move.shortDesc ? `<div class="move-detail-desc">${move.shortDesc}</div>` : ''}
+      <div class="move-detail-learned">
+        <span class="badge-group-label">Learned By (${learnedBy.length})</span>
+        ${learnedBy.length > 0 ? `<div class="learned-species-list">${learnedHtml}</div>` : '<div class="loading">—</div>'}
+      </div>
+    </div>`;
+    searchDetailContent.innerHTML = html;
+    searchDetailContent.querySelectorAll('.learned-species-tag').forEach(el => {
+        el.addEventListener('click', () => {
+            const sid = el.dataset.speciesId;
+            const species = allSpecies.find(s => s.id === sid);
+            if (species)
+                showDetail(species);
+        });
+    });
 }
 // ── Tab system ─────────────────────────────────────────────
 const leftSection = document.querySelector('.section-left');
@@ -870,7 +934,7 @@ document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () =>
         const speciesNames = {};
         for (const s of allSpecies)
             speciesNames[s.id] = s.name;
-        movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames });
+        movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => showMoveDetail(moveId, move) });
     }
 });
 filterInput.addEventListener('input', applyFilter);

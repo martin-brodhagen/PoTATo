@@ -46,6 +46,19 @@ export const EFFECT_CATEGORIES = {
     special_damage: 'Special Damage Formula',
     weight_based: 'Weight-Based Damage',
 };
+export const RANGE_CATEGORIES = {
+    self: 'Self',
+    singleTarget: 'Single Target',
+    singleAlly: 'Single Ally',
+    allPokemon: 'All Pokémon',
+    allOpponents: 'All Opponents',
+    entireField: 'Entire Field',
+    usersSide: "User's Side",
+    opponentsSide: "Opponent's Side",
+    randomOpponent: 'Random Opponent',
+    varies: 'Varies',
+    allAllies: 'All Allies',
+};
 function getBpDisplay(move) {
     if (move.category === 'Status')
         return { text: '—', title: '' };
@@ -111,7 +124,8 @@ export class MoveSearchWidget {
         this.sortSelect.innerHTML =
             '<option value="alpha">Alphabetical</option>' +
                 '<option value="bp">Base Power</option>' +
-                '<option value="acc">Accuracy</option>';
+                '<option value="acc">Accuracy</option>' +
+                '<option value="pri">Priority</option>';
         this.sortDirBtn = document.createElement('button');
         this.sortDirBtn.className = 'ms-sort-dir sort-dir';
         this.sortDirBtn.textContent = '▲';
@@ -185,7 +199,7 @@ export class MoveSearchWidget {
     bindEvents() {
         const { signal } = this.abort;
         // Sort
-        const statSortKeys = new Set(['bp', 'acc']);
+        const statSortKeys = new Set(['bp', 'acc', 'pri']);
         this.sortSelect.addEventListener('change', () => {
             this.sortBy = this.sortSelect.value;
             const shouldDesc = statSortKeys.has(this.sortBy);
@@ -313,6 +327,8 @@ export class MoveSearchWidget {
             return !!move.flags && move.flags.includes(flag.id);
         if (flag.category === 'effect')
             return !!move.effectCategories && move.effectCategories.includes(flag.id);
+        if (flag.category === 'range')
+            return move.range === flag.id;
         return false;
     }
     updatePopup() {
@@ -339,7 +355,9 @@ export class MoveSearchWidget {
             .filter(([_, label]) => label.toLowerCase().includes(lower));
         const matchingEffects = Object.entries(EFFECT_CATEGORIES)
             .filter(([_, label]) => label.toLowerCase().includes(lower));
-        const total = matchingTypes.length + matchingPokemon.length + matchingClassifications.length + matchingEffects.length;
+        const matchingRanges = Object.entries(RANGE_CATEGORIES)
+            .filter(([_, label]) => label.toLowerCase().includes(lower));
+        const total = matchingTypes.length + matchingPokemon.length + matchingClassifications.length + matchingEffects.length + matchingRanges.length;
         if (total === 0) {
             this.filterPopup.classList.add('hidden');
             return;
@@ -364,6 +382,13 @@ export class MoveSearchWidget {
             html += '<div class="popup-group"><div class="popup-group-label">Effect</div>';
             for (const [eid, label] of matchingEffects) {
                 html += `<div class="popup-item" data-category="effect" data-id="${eid}" data-label="${label}">${label}</div>`;
+            }
+            html += '</div>';
+        }
+        if (matchingRanges.length > 0) {
+            html += '<div class="popup-group"><div class="popup-group-label">Range</div>';
+            for (const [rid, label] of matchingRanges) {
+                html += `<div class="popup-item" data-category="range" data-id="${rid}" data-label="${label}">${label}</div>`;
             }
             html += '</div>';
         }
@@ -461,6 +486,9 @@ export class MoveSearchWidget {
                 const accB = typeof b.accuracy === 'number' ? b.accuracy : (b.accuracy === true ? 101 : 0);
                 cmp = accA - accB;
             }
+            else if (this.sortBy === 'pri') {
+                cmp = a.priority - b.priority;
+            }
             return this.sortAsc ? cmp : -cmp;
         });
         this.resultCount.textContent = `${list.length} Result${list.length === 1 ? '' : 's'}`;
@@ -475,9 +503,11 @@ export class MoveSearchWidget {
             el.className = 'move-entry';
             const bpHL = this.sortBy === 'bp' ? ' move-entry-stat-highlighted' : '';
             const accHL = this.sortBy === 'acc' ? ' move-entry-stat-highlighted' : '';
+            const priHL = this.sortBy === 'pri' ? ' move-entry-stat-highlighted' : '';
             const bp = getBpDisplay(m);
             const bpTitle = bp.title ? ` title="${bp.title}"` : '';
             const descTitle = m.shortDesc ? ` title="${m.shortDesc}"` : '';
+            const priHtml = `<span class="move-entry-stat${priHL}"><span class="move-entry-stat-label">Pri</span><span class="move-entry-stat-value">${m.priority !== 0 ? (m.priority > 0 ? '+' + m.priority : m.priority) : '—'}</span></span>`;
             el.innerHTML =
                 `<span class="move-entry-name">${m.name}</span>` +
                     `<span class="move-entry-type type-tag ${m.type.toLowerCase()}">${m.type}</span>` +
@@ -485,6 +515,7 @@ export class MoveSearchWidget {
                     `<span class="move-entry-stat${bpHL}"><span class="move-entry-stat-label">BP</span><span class="move-entry-stat-value"${bpTitle}>${bp.text}</span></span>` +
                     `<span class="move-entry-stat${accHL}"><span class="move-entry-stat-label">ACC</span><span class="move-entry-stat-value">${typeof m.accuracy === 'number' ? m.accuracy + '%' : m.accuracy === true ? '—' : '—'}</span></span>` +
                     `<span class="move-entry-stat"><span class="move-entry-stat-label">PP</span><span class="move-entry-stat-value">${m.pp}</span></span>` +
+                    priHtml +
                     `<span class="move-entry-divider"></span>` +
                     `<span class="move-entry-desc"${descTitle}>${m.shortDesc || ''}</span>`;
             if (this.opts.onMoveClick) {

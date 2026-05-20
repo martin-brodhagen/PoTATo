@@ -856,7 +856,11 @@ EFFECT_CATEGORY_LABELS = {
 
 # Strip removed/irrelevant flags (no longer used in Champions)
 STRIP_FLAGS = {'snatch', 'metronome', 'bypasssub', 'mirror', 'allyanim',
-               'cantusetwice', 'distance', 'failmefirst', 'failmimic', 'nonsky', 'nosketch'}
+               'cantusetwice', 'distance', 'failmefirst', 'failmimic', 'nonsky', 'nosketch',
+               'protect',
+               'defrost', 'failcopycat', 'failencore', 'failinstruct', 'futuremove',
+               'gravity', 'minimize', 'mustpressure', 'noassist', 'noparentalbond',
+               'nosleeptalk', 'recharge', 'reflectable', 'charge'}
 for mid, entry in moves_out.items():
     raw_flags = entry.pop('flags', None)
     if isinstance(raw_flags, dict):
@@ -865,6 +869,25 @@ for mid, entry in moves_out.items():
         entry['flags'] = []
     entry.pop('contestType', None)
     entry['effectCategories'] = get_effect_categories(entry, mid)
+    entry.pop('desc', None)
+    if 'target' in entry:
+        RANGE_MAP = {
+            'normal': 'singleTarget',
+            'adjacentAlly': 'singleAlly',
+            'adjacentAllyOrSelf': 'singleAlly',
+            'allAdjacent': 'allPokemon',
+            'allAdjacentFoes': 'allOpponents',
+            'all': 'entireField',
+            'allySide': 'usersSide',
+            'foeSide': 'opponentsSide',
+            'any': 'singleTarget',
+            'randomNormal': 'randomOpponent',
+            'scripted': 'varies',
+            'allies': 'allAllies',
+            'allyTeam': 'allAllies',
+            'self': 'self',
+        }
+        entry['range'] = RANGE_MAP.get(entry.pop('target'), 'singleTarget')
 
 # ---------------------------------------------------------------------------
 # 9. Build items.json (117 items, no filtering needed beyond MA)

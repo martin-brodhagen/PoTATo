@@ -25,6 +25,7 @@ export interface Move {
   type: string;
   flags?: string[];
   effectCategories?: string[];
+  range?: string;
   secondary?: { chance: number; boosts?: Record<string, number>; status?: string; volatileStatus?: string } | null;
   desc?: string;
   shortDesc?: string;
@@ -43,7 +44,7 @@ export interface Item {
 }
 
 export interface FilterFlag {
-  category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect';
+  category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect' | 'range';
   id: string;
   label: string;
 }

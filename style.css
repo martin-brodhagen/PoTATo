@@ -619,6 +619,11 @@ button:hover {
   background: rgba(240, 160, 80, 0.08);
 }
 
+.filter-chip[data-category="range"] {
+  border-left: 4px solid #5a8ea2;
+  background: rgba(90, 142, 162, 0.08);
+}
+
 .chip-remove {
   cursor: pointer;
   color: #888;
@@ -1184,6 +1189,138 @@ button:hover {
   border-radius: 3px;
   padding: 0.15rem 0.4rem;
   font-size: 0.78rem;
+}
+
+/* ── Move Detail ──────────────────────────────────────── */
+.move-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.move-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.move-detail-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e0e0e8;
+  margin-right: 0.2rem;
+}
+
+.move-detail .move-entry-cat {
+  width: 3.8rem;
+}
+
+.move-detail-stats {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.move-detail-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1a1a24;
+  border: 1px solid #2a2a3a;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  min-width: 4rem;
+}
+
+.move-detail-stat-range {
+  min-width: auto;
+}
+
+.move-detail-stat-label {
+  font-size: 0.6rem;
+  color: #666;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.move-detail-stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e0e0e8;
+}
+
+.move-detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.badge-group-label {
+  font-size: 0.65rem;
+  color: #888;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.2rem;
+}
+
+.badge {
+  background: #1a1a24;
+  border: 1px solid #3a3a4a;
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.72rem;
+  color: #e0e0e8;
+}
+
+.move-detail-secondary {
+  font-size: 0.82rem;
+  color: #e0e0e8;
+  padding: 0.2rem 0;
+}
+
+.move-detail-desc {
+  font-size: 0.82rem;
+  color: #aaa;
+  line-height: 1.4;
+  padding: 0.3rem 0;
+  border-top: 1px solid #2a2a3a;
+}
+
+.move-detail-learned {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.learned-species-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  overflow-y: auto;
+  align-content: start;
+  padding-bottom: 0.5rem;
+}
+
+.learned-species-tag {
+  background: #1a1a24;
+  border: 1px solid #2a2a3a;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  color: #e0e0e8;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.learned-species-tag:hover {
+  border-color: #f0c060;
 }
 
 /* ── Overlay Add-to-Team slots ────────────────────────── */

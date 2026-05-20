@@ -3,7 +3,7 @@
   "scripts": {
     "build": "npx tsc",
     "start": "python3 -m http.server 8787",
-    "prep": "python3 prep/prep_data.py"
+    "prep": "python3 prep/prep_data.py && python3 prep/patch_descriptions.py"
   },
   "devDependencies": {
     "typescript": "^6.0.3"
