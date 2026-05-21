@@ -1,4 +1,4 @@
-import { setFormat, loadIndex, loadAbilities } from './lib/data-loader.js';
+import { setFormat, loadIndex, loadMovesWithLearnsets, loadAbilities } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
 import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
@@ -9,8 +9,8 @@ const formatSelect = document.getElementById('format-select');
 const teamSelect = document.getElementById('team-select');
 const newTeamBtn = document.getElementById('new-team-btn');
 const teamWarning = document.getElementById('team-warning');
-const teamBar = document.getElementById('team-bar');
 const searchDetailContent = document.getElementById('search-detail-content');
+const breadcrumbBar = document.getElementById('breadcrumb-bar');
 let currentFormat = 'm-a';
 let teams = [];
 let currentTeamId = null;
@@ -24,6 +24,71 @@ let pokemonWidget = null;
 let moveDetailPokemonWidget = null;
 let abilityDetailPokemonWidget = null;
 let abilitiesWidget = null;
+let breadcrumbs = [];
+let activeBreadcrumbIndex = -1;
+function resetBreadcrumbs(item) {
+    breadcrumbs = [item];
+    activeBreadcrumbIndex = 0;
+}
+function updateBreadcrumbs(item) {
+    const existing = breadcrumbs.findIndex(b => b.type === item.type && b.id === item.id);
+    if (existing !== -1) {
+        activeBreadcrumbIndex = existing;
+    }
+    else {
+        breadcrumbs = breadcrumbs.slice(0, activeBreadcrumbIndex + 1);
+        breadcrumbs.push(item);
+        activeBreadcrumbIndex = breadcrumbs.length - 1;
+    }
+}
+function navigateToBreadcrumb(index) {
+    activeBreadcrumbIndex = index;
+    const b = breadcrumbs[index];
+    if (b.type === 'pokemon') {
+        const species = getSpeciesById(b.id);
+        if (species)
+            showDetail(species);
+    }
+    else if (b.type === 'move') {
+        loadMovesWithLearnsets(currentFormat).then(allMoves => {
+            const move = allMoves[b.id];
+            if (move)
+                showMoveDetail(b.id, move);
+        });
+    }
+    else if (b.type === 'ability') {
+        loadAbilities(currentFormat).then(allAbilities => {
+            const ability = allAbilities[b.id];
+            if (ability)
+                showAbilityDetail(b.id, ability);
+        });
+    }
+}
+function renderBreadcrumbBar() {
+    if (breadcrumbs.length === 0) {
+        breadcrumbBar.innerHTML = '';
+        breadcrumbBar.classList.add('hidden');
+        return;
+    }
+    breadcrumbBar.classList.remove('hidden');
+    let html = '<div class="breadcrumbs">';
+    for (let i = 0; i < breadcrumbs.length; i++) {
+        const b = breadcrumbs[i];
+        if (i > 0)
+            html += '<span class="breadcrumb-sep">›</span>';
+        const cls = i === activeBreadcrumbIndex ? 'breadcrumb breadcrumb-active' : 'breadcrumb';
+        html += `<span class="${cls}" data-breadcrumb-index="${i}">${b.name}</span>`;
+    }
+    html += '</div>';
+    breadcrumbBar.innerHTML = html;
+    breadcrumbBar.querySelector('.breadcrumbs')?.addEventListener('click', (e) => {
+        const target = e.target.closest('.breadcrumb');
+        if (!target)
+            return;
+        const index = parseInt(target.dataset.breadcrumbIndex);
+        navigateToBreadcrumb(index);
+    });
+}
 function getCurrentTeam() {
     return teams.find(t => t.id === currentTeamId);
 }
@@ -80,6 +145,9 @@ async function loadFormat(format) {
         abilitiesWidget.destroy();
         abilitiesWidget = null;
     }
+    breadcrumbs = [];
+    activeBreadcrumbIndex = -1;
+    renderBreadcrumbBar();
     pendingSlotIndex = null;
     const [index, map] = await Promise.all([
         loadIndex(format),
@@ -93,21 +161,6 @@ async function loadFormat(format) {
     }
     renderTeamBar();
 }
-function startSlotSearch(slotIndex) {
-    if (window.innerWidth >= 768) {
-        selectTab('pokedex', document.querySelector('.section-left'));
-    }
-    else {
-        selectTab('pokedex');
-    }
-    const pokedexContent = document.getElementById('tab-content-pokedex');
-    selectSubTab('pokemon', pokedexContent);
-    pendingSlotIndex = slotIndex;
-    if (pokemonWidget) {
-        pokemonWidget.clear();
-        pokemonWidget.focusInput();
-    }
-}
 function fillSlot(slotIndex, speciesId) {
     const team = getCurrentTeam();
     if (!team)
@@ -120,74 +173,45 @@ function fillSlot(slotIndex, speciesId) {
     renderTeamBar();
     reRenderDetail();
 }
-function removeFromTeam(slotIndex) {
-    const team = getCurrentTeam();
-    if (!team)
-        return;
-    team.slots[slotIndex].speciesId = null;
-    persist();
-    renderTeamWarning();
-    renderTeamBar();
-    reRenderDetail();
-}
-function setTeamSlot(team, slotIndex, speciesId) {
-    team.slots[slotIndex].speciesId = speciesId;
-    persist();
-    renderTeamWarning();
-    renderTeamBar();
-    reRenderDetail();
-}
 function reRenderDetail() {
     if (detailSpecies)
         showDetail(detailSpecies);
 }
 function renderTeamBar() {
-    teamBar.innerHTML = '';
+    const headerTeam = document.getElementById('header-team');
+    headerTeam.innerHTML = '';
     const team = getCurrentTeam();
-    if (!team)
+    if (!team) {
+        headerTeam.classList.add('hidden');
         return;
+    }
+    headerTeam.classList.remove('hidden');
     for (let i = 0; i < 6; i++) {
         const slot = team.slots[i];
         const el = document.createElement('div');
-        el.className = 'team-slot';
+        el.className = 'header-slot';
         if (slot.speciesId) {
             const species = getSpeciesById(slot.speciesId);
             el.classList.add('filled');
             if (species) {
-                el.style.borderLeftColor = getTypeColor(species.types[0]);
-                const nameSpan = document.createElement('span');
-                nameSpan.className = 'slot-name';
-                nameSpan.textContent = species.name;
-                el.appendChild(nameSpan);
+                const spriteFile = spriteMap[species.id];
+                if (spriteFile) {
+                    const img = document.createElement('img');
+                    img.className = 'header-slot-sprite';
+                    img.src = `${SPRITE_PATH}/${spriteFile}`;
+                    img.alt = species.name;
+                    el.appendChild(img);
+                }
             }
-            el.addEventListener('click', () => {
-                switchToTeamBuilder();
-                if (species)
-                    showDetail(species);
-            });
-            el.addEventListener('contextmenu', (e) => {
-                e.preventDefault();
-                removeFromTeam(i);
-            });
         }
         else {
             el.classList.add('empty');
-            el.innerHTML = '<span class="slot-plus">+</span>';
-            el.addEventListener('click', () => startSlotSearch(i));
         }
-        teamBar.appendChild(el);
+        headerTeam.appendChild(el);
     }
-}
-function getTypeColor(type) {
-    const map = {
-        normal: '#9099a1', fire: '#e56c3e', water: '#4f8ed4',
-        electric: '#e5c531', grass: '#5fbb63', ice: '#70cde7',
-        fighting: '#c44d4d', poison: '#ab6ac8', ground: '#cc9f4a',
-        flying: '#8fa8dd', psychic: '#e26a8a', bug: '#92bc2c',
-        rock: '#b6a14a', ghost: '#6060b0', dragon: '#6969cc',
-        dark: '#5a4f44', steel: '#5a8ea2', fairy: '#e08ee0',
-    };
-    return map[type.toLowerCase()] || '#555';
+    headerTeam.addEventListener('click', () => {
+        switchToTeamBuilder();
+    });
 }
 function renderTeamSelect() {
     const prev = teamSelect.value;
@@ -231,7 +255,15 @@ function handleNewTeam() {
     renderTeamSelect();
     selectTeam(team.id);
 }
+function isDetailTabActive() {
+    const rightSection = document.querySelector('.section-right');
+    const contentId = 'tab-content-search-detail';
+    const panel = rightSection?.querySelector(`#${contentId}`) ?? document.getElementById(contentId);
+    return panel ? !panel.classList.contains('hidden') : false;
+}
 function switchToDetail() {
+    if (isDetailTabActive())
+        return;
     const rightSection = document.querySelector('.section-right');
     if (window.innerWidth >= 768 && rightSection) {
         selectTab('search-detail', rightSection);
@@ -241,6 +273,7 @@ function switchToDetail() {
     }
 }
 async function showDetail(s) {
+    updateBreadcrumbs({ type: 'pokemon', id: s.id, name: s.name });
     detailSpecies = s;
     if (detailMovesWidget) {
         detailMovesWidget.destroy();
@@ -255,7 +288,6 @@ async function showDetail(s) {
         abilityDetailPokemonWidget = null;
     }
     switchToDetail();
-    const team = getCurrentTeam();
     function statBarColor(val) {
         if (val <= 29)
             return '#c44d4d';
@@ -296,26 +328,11 @@ async function showDetail(s) {
         </div>
       </div>
     </div>`;
-    if (team) {
-        html += `<div style="margin-top:0.6rem">
-      <div style="font-size:0.8rem;color:#888;margin-bottom:0.3rem">Add to ${team.name}</div>
-      <div class="overlay-slots">`;
-        for (let i = 0; i < 6; i++) {
-            const slot = team.slots[i];
-            const existing = slot.speciesId ? getSpeciesById(slot.speciesId) : null;
-            const name = existing ? existing.name : '';
-            const type = existing ? existing.types[0] : '';
-            const highlight = existing && existing.num === s.num ? ' highlighted' : '';
-            html += `<div class="overlay-slot${highlight}" data-index="${i}" style="${type ? 'border-left-color:' + getTypeColor(type) : ''}">
-        ${name || '<span class="slot-empty-label">Empty</span>'}
-      </div>`;
-        }
-        html += `</div></div>`;
-    }
     html += `
     <h3 style="margin-top:0.75rem;font-size:0.9rem">Moves (${s.moveCount})</h3>
     <div id="detail-moves-container"></div>`;
     searchDetailContent.innerHTML = html;
+    renderBreadcrumbBar();
     // Wire up ability buttons → ability detail
     const abilityNames = new Set(Object.values(s.abilities).filter(Boolean));
     if (abilityNames.size > 0) {
@@ -344,22 +361,9 @@ async function showDetail(s) {
         speciesNames,
         onMoveClick: (moveId, move) => showMoveDetail(moveId, move),
     });
-    if (team) {
-        searchDetailContent.querySelectorAll('.overlay-slot').forEach(el => {
-            el.addEventListener('click', () => {
-                const idx = parseInt(el.dataset.index);
-                if (el.classList.contains('highlighted')) {
-                    removeFromTeam(idx);
-                }
-                else {
-                    setTeamSlot(team, idx, s.id);
-                }
-                showDetail(s);
-            });
-        });
-    }
 }
-function showMoveDetail(_moveId, move) {
+function showMoveDetail(moveId, move) {
+    updateBreadcrumbs({ type: 'move', id: moveId, name: move.name });
     if (detailMovesWidget) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
@@ -416,18 +420,21 @@ function showMoveDetail(_moveId, move) {
       </div>
     </div>`;
     searchDetailContent.innerHTML = html;
+    renderBreadcrumbBar();
     if (learnedBy.length > 0) {
         const container = document.getElementById('move-detail-learned-container');
         moveDetailPokemonWidget = new PokemonSearchWidget({
             container,
             formatId: currentFormat,
             onPokemonClick: (_speciesId, species) => showDetail(species),
+            species: allSpecies,
+            spriteMap,
+            learnedByFilter: learnedBy,
         });
-        moveDetailPokemonWidget.setData(allSpecies, spriteMap);
-        moveDetailPokemonWidget.setLearnedByFilter(learnedBy);
     }
 }
-function showAbilityDetail(_abilityId, ability) {
+function showAbilityDetail(abilityId, ability) {
+    updateBreadcrumbs({ type: 'ability', id: abilityId, name: ability.name });
     if (detailMovesWidget) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
@@ -457,15 +464,17 @@ function showAbilityDetail(_abilityId, ability) {
       </div>
     </div>`;
     searchDetailContent.innerHTML = html;
+    renderBreadcrumbBar();
     if (pokemonIds.length > 0) {
         const container = document.getElementById('ability-detail-pokemon-container');
         abilityDetailPokemonWidget = new PokemonSearchWidget({
             container,
             formatId: currentFormat,
             onPokemonClick: (_speciesId, species) => showDetail(species),
+            species: allSpecies,
+            spriteMap,
+            learnedByFilter: pokemonIds,
         });
-        abilityDetailPokemonWidget.setData(allSpecies, spriteMap);
-        abilityDetailPokemonWidget.setLearnedByFilter(pokemonIds);
     }
 }
 // ── Tab system ─────────────────────────────────────────────
@@ -550,13 +559,19 @@ document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () =>
         const speciesNames = {};
         for (const s of allSpecies)
             speciesNames[s.id] = s.name;
-        movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => showMoveDetail(moveId, move) });
+        movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => {
+                resetBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+                showMoveDetail(moveId, move);
+            } });
     }
 });
 document.querySelector('[data-subtab="abilities"]')?.addEventListener('click', () => {
     if (!abilitiesWidget) {
         const container = document.getElementById('subtab-content-abilities');
-        abilitiesWidget = new AbilitySearchWidget({ container, formatId: currentFormat, onAbilityClick: (abilityId, ability) => showAbilityDetail(abilityId, ability) });
+        abilitiesWidget = new AbilitySearchWidget({ container, formatId: currentFormat, onAbilityClick: (abilityId, ability) => {
+                resetBreadcrumbs({ type: 'ability', id: abilityId, name: ability.name });
+                showAbilityDetail(abilityId, ability);
+            } });
     }
 });
 const pokemonContainer = document.getElementById('subtab-content-pokemon');
@@ -568,6 +583,7 @@ pokemonWidget = new PokemonSearchWidget({
             fillSlot(pendingSlotIndex, speciesId);
         }
         else {
+            resetBreadcrumbs({ type: 'pokemon', id: speciesId, name: species.name });
             showDetail(species);
         }
     },

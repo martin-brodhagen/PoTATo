@@ -51,7 +51,7 @@ export interface Item {
 }
 
 export interface FilterFlag {
-  category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect' | 'range';
+  category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect' | 'range' | 'ability_category';
   id: string;
   label: string;
 }

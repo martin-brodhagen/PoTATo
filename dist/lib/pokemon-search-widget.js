@@ -1,5 +1,6 @@
-import { loadLearnsets, loadMovesWithLearnsets } from './data-loader.js';
+import { loadLearnsets, loadMovesWithLearnsets, loadAbilities } from './data-loader.js';
 import { TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES } from './move-search-widget.js';
+import { ABILITY_EFFECT_CATEGORIES } from './ability-search-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LS_SORT_BY = 'potato_sort_by';
 const LS_SORT_ASC = 'potato_sort_asc';
@@ -23,6 +24,9 @@ export class PokemonSearchWidget {
     movesLoadedForFilter = false;
     movesLoadingForFilter = false;
     filterLearnsets = null;
+    speciesAbilityCategories = null;
+    abilityCategoriesLoading = false;
+    abilityCategoriesLoaded = false;
     grid;
     filterInput;
     sortSelect;
@@ -37,6 +41,12 @@ export class PokemonSearchWidget {
         this.restoreLocalStorage();
         this.buildDOM();
         this.bindEvents();
+        if (opts.learnedByFilter) {
+            this.learnedByFilter = new Set(opts.learnedByFilter);
+        }
+        if (opts.species && opts.spriteMap) {
+            this.setData(opts.species, opts.spriteMap);
+        }
     }
     restoreLocalStorage() {
         const savedSortBy = localStorage.getItem(LS_SORT_BY);
@@ -283,6 +293,9 @@ export class PokemonSearchWidget {
         this.moveNames = {};
         this.movesLoadedForFilter = false;
         this.movesLoadingForFilter = false;
+        this.speciesAbilityCategories = null;
+        this.abilityCategoriesLoaded = false;
+        this.abilityCategoriesLoading = false;
         this.render();
     }
     clear() {
@@ -336,6 +349,11 @@ export class PokemonSearchWidget {
                 return this.speciesHasMoveWithFlag(species.id, 'flags', flag.id);
             case 'effect':
                 return this.speciesHasMoveWithFlag(species.id, 'effectCategories', flag.id);
+            case 'ability_category':
+                if (!this.speciesAbilityCategories)
+                    return false;
+                const cats = this.speciesAbilityCategories[species.id];
+                return !!cats && cats.has(flag.id);
             default:
                 return false;
         }
@@ -377,7 +395,9 @@ export class PokemonSearchWidget {
             .filter(([_, label]) => label.toLowerCase().includes(lower));
         const matchingEffects = Object.entries(EFFECT_CATEGORIES)
             .filter(([_, label]) => label.toLowerCase().includes(lower));
-        const total = matchingTypes.length + matchingAbilities.length + matchingMoves.length + matchingClassifications.length + matchingEffects.length;
+        const matchingAbilityCats = Object.entries(ABILITY_EFFECT_CATEGORIES)
+            .filter(([_, label]) => label.toLowerCase().includes(lower));
+        const total = matchingTypes.length + matchingAbilities.length + matchingMoves.length + matchingClassifications.length + matchingEffects.length + matchingAbilityCats.length;
         if (total === 0) {
             this.filterPopup.classList.add('hidden');
             return;
@@ -409,6 +429,13 @@ export class PokemonSearchWidget {
             html += `<div class="popup-group"><div class="popup-group-label">Move Effect</div>`;
             for (const [eid, label] of matchingEffects) {
                 html += `<div class="popup-item" data-category="effect" data-id="${eid}" data-label="${label}">${label}</div>`;
+            }
+            html += `</div>`;
+        }
+        if (matchingAbilityCats.length > 0) {
+            html += `<div class="popup-group"><div class="popup-group-label">Ability Effect</div>`;
+            for (const [acid, label] of matchingAbilityCats) {
+                html += `<div class="popup-item" data-category="ability_category" data-id="${acid}" data-label="${label}">${label}</div>`;
             }
             html += `</div>`;
         }
@@ -447,6 +474,25 @@ export class PokemonSearchWidget {
                 }
             });
         }
+        if (!this.abilityCategoriesLoaded && !this.abilityCategoriesLoading) {
+            this.abilityCategoriesLoading = true;
+            loadAbilities(this.opts.formatId).then(abilities => {
+                const map = {};
+                for (const a of Object.values(abilities)) {
+                    if (!a.effectCategories)
+                        continue;
+                    for (const sid of a.pokemon) {
+                        if (!map[sid])
+                            map[sid] = new Set();
+                        for (const cat of a.effectCategories)
+                            map[sid].add(cat);
+                    }
+                }
+                this.speciesAbilityCategories = map;
+                this.abilityCategoriesLoaded = true;
+                this.abilityCategoriesLoading = false;
+            });
+        }
     }
     updatePopupHighlight(items) {
         items.forEach((el, i) => {
@@ -465,7 +511,8 @@ export class PokemonSearchWidget {
         this.render();
         const needsLearnsets = !this.filterLearnsets && (category === 'move' || category === 'classification' || category === 'effect');
         const needsAllMoves = !this.movesLoadedForFilter && (category === 'classification' || category === 'effect');
-        if (needsLearnsets || needsAllMoves) {
+        const needsAbilityCats = category === 'ability_category' && !this.abilityCategoriesLoaded;
+        if (needsLearnsets || needsAllMoves || needsAbilityCats) {
             const p = [];
             if (needsLearnsets)
                 p.push(loadLearnsets(this.opts.formatId).then(ls => { this.filterLearnsets = ls; }));
@@ -479,6 +526,23 @@ export class PokemonSearchWidget {
                         this.moveNames[id] = move.name;
                     }
                     this.movesLoadedForFilter = true;
+                }));
+            }
+            if (needsAbilityCats) {
+                p.push(loadAbilities(this.opts.formatId).then(abilities => {
+                    const map = {};
+                    for (const a of Object.values(abilities)) {
+                        if (!a.effectCategories)
+                            continue;
+                        for (const sid of a.pokemon) {
+                            if (!map[sid])
+                                map[sid] = new Set();
+                            for (const cat of a.effectCategories)
+                                map[sid].add(cat);
+                        }
+                    }
+                    this.speciesAbilityCategories = map;
+                    this.abilityCategoriesLoaded = true;
                 }));
             }
             Promise.all(p).then(() => this.render());
