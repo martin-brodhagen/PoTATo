@@ -23,6 +23,7 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 │   ├── moves-with-learnsets.json  # 477 moves each with learnedBy [species] list
 │   ├── learnsets.json         # 271 learnable move lists (per species, filtered)
 │   ├── items.json             # 117 legal items
+│   ├── abilities.json         # 191 abilities with desc, pokemon[], effectCategories[]
 │   └── sprite-map.json        # 269/270 species → sprite filename mapping
 ├── sprites/champions/         # 320 downloaded Champions menu sprites (PNG)
 ├── lib/
@@ -30,8 +31,9 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 │   ├── data-loader.ts         # Fetch + cache layer (Map<FormatId, DataCache>)
 │   ├── move-search-widget.ts  # Move search/filter/browse widget (class-based)
 │   ├── pokemon-search-widget.ts  # Pokémon search/filter/grid widget (class-based)
+│   ├── ability-search-widget.ts  # Ability search/filter widget (class-based)
 │   └── team-store.ts          # localStorage-backed team CRUD
-├── app.ts                     # Main app: format selector, grid, search detail, move detail, team builder
+├── app.ts                     # Main app: format selector, grid, search detail, move/ability detail, breadcrumbs, team header
 ├── index.html                 # Entry point
 ├── style.css                  # Dark theme, type colors, sprites, responsive
 ├── tsconfig.json              # ES2022, outDir: dist/
@@ -80,11 +82,21 @@ Menu sprites are downloaded from [Bulbagarden Archives](https://archives.bulbaga
 - Moonblast: added 10% SpA drop chance
 - Various other buffs/nerfs in Champions-specific gameplay
 
+### Ability Data Pipeline
+1. Fetch abilities from Showdown base data (`pokedex.json`), apply Champions mod overrides
+2. Filter to M-A legal species only
+3. Fetch descriptions from Game8 page (`https://game8.co/games/Pokemon-Champions/archives/590403`) via regex `<tr>\s*<td[^>]*class="center"[^>]*>\s*(?:<a[^>]*>)?\s*([A-Za-z][A-Za-z\s\'\-]+?)\s*(?:</a>)?\s*</td>\s*<td[^>]*>([^<]+)</td>` — falls back to Showdown `desc` on failure
+4. Attach `pokemon` array (species IDs that can have the ability) and `effectCategories` array (broad mechanic tags like `weather`, `stats`, `priority`, etc.)
+5. `num` field removed (Showdown internal ID, not used in frontend)
+6. Battle Bond excluded (not on Game8 list)
+7. Categories defined in `get_ability_categories()` in `prep_data.py` using explicit ID-based assignment
+
 ## Data Stats (Regulation M-A)
 - 273 battle forms (213 non-Mega + 60 Mega)
 - 477 legal moves
 - 117 legal items
 - 273 learnable move lists
+- 191 abilities with descriptions, effect categories, and pokemon[] lists
 - 320 Champions menu sprites (273/273 species mapped)
 
 ## Running
@@ -114,21 +126,22 @@ npm start                # → http://localhost:8787
 - Strict mode enabled: `strict`, `noUnusedLocals`, `noUnusedParameters`
 
 ## Frontend Architecture
-- **`app.ts`**: Format selector dropdown → loads index → renders card grid (with sprites). On card click: lazy-fetches learnsets + moves, switches to Search Detail tab with stats, abilities, move list, and "Add to Team" slots. Also manages tab system, move detail overlay, and widget lifecycle.
-- **`lib/data-loader.ts`**: `setFormat()`, `loadIndex()`, `loadLearnsets()`, `loadMoves()`, `loadItems()` — each returns a promise, cached after first fetch. Layer 1 = fetch JSON; Layer 2 = render from cache
-- **`lib/types.ts`**: `Species`, `Move`, `Item`, `FormatData`, `DataCache` interfaces + `FormatId` type (`'m-a' | 'm-b'`)
+- **`app.ts`**: Format selector dropdown → loads index → renders card grid (with sprites). On card click: lazy-fetches learnsets + moves, switches to Search Detail tab with stats, abilities, move list, and team slots. Also manages tab/subtab system, move/ability detail views, breadcrumbs in search detail, and widget lifecycle.
+- **`lib/data-loader.ts`**: `setFormat()`, `loadIndex()`, `loadLearnsets()`, `loadMoves()`, `loadMovesWithLearnsets()`, `loadAbilities()`, `loadItems()` — each returns a promise, cached after first fetch. Layer 1 = fetch JSON; Layer 2 = render from cache
+- **`lib/types.ts`**: `Species`, `Move`, `Item`, `Ability`, `FilterFlag`, `FormatData`, `DataCache` interfaces + `FormatId` type (`'m-a' | 'm-b'`)
 - **`lib/move-search-widget.ts`**: `MoveSearchWidget` class — builds own DOM for search input, filter popup, sort controls, result grid. Emits `onMoveClick`. Includes `RANGE_CATEGORIES`, `MOVE_CLASSIFICATIONS`, `EFFECT_CATEGORIES`, `TYPES`, `TYPE_COLORS` exports.
-- **`lib/pokemon-search-widget.ts`**: `PokemonSearchWidget` class — builds own DOM with `.ps-*` prefixed selectors (avoids ID conflicts with multiple instances). Supports card/list view, sort by dex/alpha/stats, mega toggle, filter popup (type/ability/move/classification/effect), `setLearnedByFilter()`, `onPokemonClick`.
+- **`lib/pokemon-search-widget.ts`**: `PokemonSearchWidget` class — builds own DOM with `.ps-*` prefixed selectors (avoids ID conflicts with multiple instances). Supports card/list view, sort by dex/alpha/stats, mega toggle, filter popup (type/ability/move/classification/effect/ability_category), `setLearnedByFilter()`, `onPokemonClick`. Accepts `species`/`spriteMap`/`learnedByFilter` in constructor for one-shot initialization.
+- **`lib/ability-search-widget.ts`**: `AbilitySearchWidget` class — builds own DOM for search input, filter popup with effect categories, sort controls, result list. Emits `onAbilityClick`. Exports `ABILITY_EFFECT_CATEGORIES` label map.
 - **`lib/team-store.ts`**: `TeamStore` class — `getTeams()`, `saveTeam()`, `deleteTeam()` backed by localStorage.
 - **Sprites**: 320 `Menu_CP_{dex}_{form}.png` files served from `sprites/champions/`, mapped by `sprite-map.json`
 
-## Todo
-- Breadcrumbs in the search details
-
 ## Key Patterns
+- Three `PokemonSearchWidget` instances can exist: main grid (`pokemonWidget`), move-detail learned-by (`moveDetailPokemonWidget`), and ability-detail pokemon list (`abilityDetailPokemonWidget`) — `.ps-*` classes prevent CSS ID conflicts
 - Two `MoveSearchWidget` instances exist: one for the Moves subtab (`movesWidget`), one for per-species detail (`detailMovesWidget`)
-- Two `PokemonSearchWidget` instances can exist: main grid (`pokemonWidget`) and move-detail learned-by grid (`moveDetailPokemonWidget`) — `.ps-*` classes prevent CSS ID conflicts
 - Click-highlight uses direct DOM class toggling (`.selected`), not re-renders
 - Move descriptions come only from Game8 (`shortDesc`); `desc` stripped in prep pipeline
 - `target` field renamed to `range` in both data and frontend; values remapped to natural labels
 - Only classification flags kept in move data; mechanical flags and `protect` stripped
+- `switchToDetail()` guards against redundant tab-switching when already on the detail tab
+- `PokemonSearchWidget` accepts `learnedByFilter` in constructor to avoid a double render (all species → filtered)
+- Breadcrumbs at the top of the Search Detail view, rendered into `#breadcrumb-bar` (outside the content area), with click-navigation and trail management (truncation, index shift)

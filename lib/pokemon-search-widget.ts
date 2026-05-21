@@ -6,7 +6,7 @@ import { ABILITY_EFFECT_CATEGORIES } from './ability-search-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LS_SORT_BY = 'potato_sort_by';
 const LS_SORT_ASC = 'potato_sort_asc';
-const LS_VIEW = 'potato_view';
+
 
 export interface PokemonSearchWidgetOptions {
   container: HTMLElement;
@@ -25,7 +25,6 @@ export class PokemonSearchWidget {
   private searchQuery = '';
   private sortBy = 'dex';
   private sortAsc = true;
-  private viewMode: 'card' | 'list' = 'card';
   private showMegas = true;
   private filterFlags: FilterFlag[] = [];
   private filterMode: 'and' | 'or' = 'and';
@@ -46,7 +45,6 @@ export class PokemonSearchWidget {
   private sortSelect!: HTMLSelectElement;
   private sortDirBtn!: HTMLButtonElement;
   private megaToggle!: HTMLButtonElement;
-  private viewToggle!: HTMLButtonElement;
   private resultCount!: HTMLSpanElement;
   private filterPopup!: HTMLDivElement;
   private filterToolbar!: HTMLDivElement;
@@ -72,10 +70,6 @@ export class PokemonSearchWidget {
     const savedSortAsc = localStorage.getItem(LS_SORT_ASC);
     if (savedSortAsc === 'true' || savedSortAsc === 'false') {
       this.sortAsc = savedSortAsc === 'true';
-    }
-    const savedView = localStorage.getItem(LS_VIEW);
-    if (savedView === 'card' || savedView === 'list') {
-      this.viewMode = savedView;
     }
   }
 
@@ -139,15 +133,6 @@ export class PokemonSearchWidget {
     this.megaToggle = megaToggle;
     filterRow.appendChild(megaToggle);
 
-    const viewToggle = document.createElement('button');
-    viewToggle.className = 'ps-view-toggle view-toggle';
-    viewToggle.dataset.view = this.viewMode;
-    viewToggle.innerHTML = this.viewMode === 'card'
-      ? '<span class="view-icon-grid"></span>'
-      : '<span class="view-icon-list"></span>';
-    this.viewToggle = viewToggle;
-    filterRow.appendChild(viewToggle);
-
     container.appendChild(filterRow);
 
     // Filter popup
@@ -210,16 +195,6 @@ export class PokemonSearchWidget {
     this.megaToggle.addEventListener('click', () => {
       this.showMegas = !this.showMegas;
       this.megaToggle.classList.toggle('active', this.showMegas);
-      this.render();
-    });
-
-    this.viewToggle.addEventListener('click', () => {
-      this.viewMode = this.viewMode === 'card' ? 'list' : 'card';
-      this.viewToggle.dataset.view = this.viewMode;
-      this.viewToggle.innerHTML = this.viewMode === 'card'
-        ? '<span class="view-icon-grid"></span>'
-        : '<span class="view-icon-list"></span>';
-      localStorage.setItem(LS_VIEW, this.viewMode);
       this.render();
     });
 
@@ -627,7 +602,7 @@ export class PokemonSearchWidget {
 
   private render() {
     this.grid.innerHTML = '';
-    this.grid.classList.toggle('list-view', this.viewMode === 'list');
+    this.grid.classList.add('list-view');
 
     let speciesList = this.learnedByFilter
       ? this.allSpecies.filter(s => this.learnedByFilter!.has(s.id))
@@ -658,113 +633,33 @@ export class PokemonSearchWidget {
     }
 
     for (const s of filtered) {
-      if (this.viewMode === 'list') {
-        const item = document.createElement('div');
-        item.className = 'pokemon-list-item';
-        item.setAttribute('role', 'listitem');
-
-        const spriteFile = this.spriteMap[s.id];
-        if (spriteFile) {
-          const img = document.createElement('img');
-          img.className = 'list-sprite';
-          img.src = `${SPRITE_PATH}/${spriteFile}`;
-          img.alt = s.name;
-          img.loading = 'lazy';
-          item.appendChild(img);
-        }
-
-        const info = document.createElement('div');
-        info.className = 'list-info';
-
-        const infoTop = document.createElement('div');
-        infoTop.className = 'list-info-top';
-
-        const nameEl = document.createElement('span');
-        nameEl.className = 'list-name';
-        nameEl.textContent = s.name;
-        infoTop.appendChild(nameEl);
-
-        const typesEl = document.createElement('span');
-        typesEl.className = 'list-types';
-        for (let ti = 0; ti < 2; ti++) {
-          const t = s.types[ti];
-          const tag = document.createElement('span');
-          tag.className = t ? `type-tag ${t.toLowerCase()}` : 'type-tag type-tag-empty';
-          tag.textContent = t || '';
-          typesEl.appendChild(tag);
-        }
-        infoTop.appendChild(typesEl);
-        info.appendChild(infoTop);
-
-        const infoBottom = document.createElement('div');
-        infoBottom.className = 'list-info-bottom';
-
-        const abilEl = document.createElement('span');
-        abilEl.className = 'list-abilities';
-        for (const key of ['0', '1', 'H'] as const) {
-          const span = document.createElement('span');
-          span.className = 'list-ability' + (s.abilities[key] ? '' : ' list-ability-empty');
-          span.textContent = s.abilities[key] || '-';
-          abilEl.appendChild(span);
-        }
-        infoBottom.appendChild(abilEl);
-
-        const statEl = document.createElement('div');
-        statEl.className = 'list-stats';
-        const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'] as const;
-        const statKeysArr = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const;
-        for (let si = 0; si < 6; si++) {
-          const entry = document.createElement('div');
-          entry.className = 'list-stat-entry' + (statKeysArr[si] === this.sortBy ? ' list-stat-highlighted' : '');
-          const label = document.createElement('span');
-          label.className = 'list-stat-label';
-          label.textContent = statNames[si];
-          const value = document.createElement('span');
-          value.className = 'list-stat-value';
-          value.textContent = String(s.baseStats[statKeysArr[si]]);
-          entry.appendChild(label);
-          entry.appendChild(value);
-          statEl.appendChild(entry);
-        }
-        infoBottom.appendChild(statEl);
-        info.appendChild(infoBottom);
-
-        item.appendChild(info);
-
-        item.addEventListener('click', () => {
-          document.querySelectorAll('.pokemon-list-item.selected, .pokemon-card.selected').forEach(el => el.classList.remove('selected'));
-          item.classList.add('selected');
-          this.opts.onPokemonClick(s.id, s);
-        });
-        this.grid.appendChild(item);
-        continue;
-      }
-
-      const card = document.createElement('div');
-      card.className = 'pokemon-card';
-      card.setAttribute('role', 'listitem');
-
-      const left = document.createElement('div');
-      left.className = 'card-left';
-
-      const top = document.createElement('div');
-      top.className = 'card-top';
+      const item = document.createElement('div');
+      item.className = 'pokemon-list-item';
+      item.setAttribute('role', 'listitem');
 
       const spriteFile = this.spriteMap[s.id];
       if (spriteFile) {
         const img = document.createElement('img');
-        img.className = 'card-sprite';
+        img.className = 'list-sprite';
         img.src = `${SPRITE_PATH}/${spriteFile}`;
         img.alt = s.name;
         img.loading = 'lazy';
-        top.appendChild(img);
+        item.appendChild(img);
       }
 
       const info = document.createElement('div');
-      info.className = 'card-info';
+      info.className = 'list-info';
 
-      const typesEl = document.createElement('div');
-      typesEl.className = 'types';
+      const infoTop = document.createElement('div');
+      infoTop.className = 'list-info-top';
+
+      const nameEl = document.createElement('span');
+      nameEl.className = 'list-name';
+      nameEl.textContent = s.name;
+      infoTop.appendChild(nameEl);
+
+      const typesEl = document.createElement('span');
+      typesEl.className = 'list-types';
       for (let ti = 0; ti < 2; ti++) {
         const t = s.types[ti];
         const tag = document.createElement('span');
@@ -772,54 +667,50 @@ export class PokemonSearchWidget {
         tag.textContent = t || '';
         typesEl.appendChild(tag);
       }
-      info.appendChild(typesEl);
+      infoTop.appendChild(typesEl);
+      info.appendChild(infoTop);
 
-      const abilEl = document.createElement('div');
-      abilEl.className = 'abilities';
-      for (const ab of Object.values(s.abilities)) {
+      const infoBottom = document.createElement('div');
+      infoBottom.className = 'list-info-bottom';
+
+      const abilEl = document.createElement('span');
+      abilEl.className = 'list-abilities';
+      for (const key of ['0', '1', 'H'] as const) {
         const span = document.createElement('span');
-        span.className = 'ability-name';
-        span.textContent = ab;
+        span.className = 'list-ability' + (s.abilities[key] ? '' : ' list-ability-empty');
+        span.textContent = s.abilities[key] || '-';
         abilEl.appendChild(span);
       }
-      info.appendChild(abilEl);
+      infoBottom.appendChild(abilEl);
 
-      top.appendChild(info);
-      left.appendChild(top);
-
-      const nameEl = document.createElement('div');
-      nameEl.className = 'name';
-      nameEl.textContent = s.name;
-      left.appendChild(nameEl);
-
-      card.appendChild(left);
-
+      const statEl = document.createElement('div');
+      statEl.className = 'list-stats';
       const statNames = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'] as const;
       const statKeysArr = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const;
-      const statList = document.createElement('div');
-      statList.className = 'card-stats';
       for (let si = 0; si < 6; si++) {
-        const val = s.baseStats[statKeysArr[si]];
         const entry = document.createElement('div');
-        entry.className = 'stat-entry' + (statKeysArr[si] === this.sortBy ? ' stat-highlighted' : '');
+        entry.className = 'list-stat-entry' + (statKeysArr[si] === this.sortBy ? ' list-stat-highlighted' : '');
         const label = document.createElement('span');
-        label.className = 'stat-label';
+        label.className = 'list-stat-label';
         label.textContent = statNames[si];
         const value = document.createElement('span');
-        value.className = 'stat-value';
-        value.textContent = val.toString();
+        value.className = 'list-stat-value';
+        value.textContent = String(s.baseStats[statKeysArr[si]]);
         entry.appendChild(label);
         entry.appendChild(value);
-        statList.appendChild(entry);
+        statEl.appendChild(entry);
       }
-      card.appendChild(statList);
+      infoBottom.appendChild(statEl);
+      info.appendChild(infoBottom);
 
-      card.addEventListener('click', () => {
-        document.querySelectorAll('.pokemon-list-item.selected, .pokemon-card.selected').forEach(el => el.classList.remove('selected'));
-        card.classList.add('selected');
+      item.appendChild(info);
+
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.pokemon-list-item.selected').forEach(el => el.classList.remove('selected'));
+        item.classList.add('selected');
         this.opts.onPokemonClick(s.id, s);
       });
-      this.grid.appendChild(card);
+      this.grid.appendChild(item);
     }
   }
 }
