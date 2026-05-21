@@ -72,6 +72,12 @@ export function getCachedMoves(format) {
 export function getCachedMovesWithLearnsets(format) {
     return caches[format]?.movesWithLearnsets;
 }
+export function loadAbilities(format) {
+    return loadPromise(format, 'abilities.json', 'abilities');
+}
+export function getCachedAbilities(format) {
+    return caches[format]?.abilities;
+}
 export function getCachedItems(format) {
     return caches[format]?.items;
 }

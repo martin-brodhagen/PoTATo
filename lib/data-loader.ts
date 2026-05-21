@@ -1,4 +1,4 @@
-import type { Species, Move, Item, FormatId, DataCache } from './types.js';
+import type { Species, Move, Item, Ability, FormatId, DataCache } from './types.js';
 
 const DATA_URL = 'data';
 
@@ -87,6 +87,14 @@ export function getCachedMoves(format: FormatId): Record<string, Move> | undefin
 
 export function getCachedMovesWithLearnsets(format: FormatId): Record<string, Move> | undefined {
   return caches[format]?.movesWithLearnsets;
+}
+
+export function loadAbilities(format: FormatId): Promise<Record<string, Ability>> {
+  return loadPromise<Record<string, Ability>>(format, 'abilities.json', 'abilities');
+}
+
+export function getCachedAbilities(format: FormatId): Record<string, Ability> | undefined {
+  return caches[format]?.abilities;
 }
 
 export function getCachedItems(format: FormatId): Record<string, Item> | undefined {

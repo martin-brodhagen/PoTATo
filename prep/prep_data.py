@@ -949,7 +949,210 @@ for mid in sorted(moves_out):
         moves_with_learnsets_out[mid] = species_list
 
 # ---------------------------------------------------------------------------
-# 11. Write output
+# 11. Build abilities.json — ability descriptions for M-A legal species
+# ---------------------------------------------------------------------------
+print("Building abilities list...", file=sys.stderr)
+
+try:
+    abilities_raw = fetch_js_data(f"{SHOWDOWN}/abilities.js")
+except Exception as e:
+    print(f"  WARNING: could not fetch abilities data: {e}", file=sys.stderr)
+    abilities_raw = {}
+
+ability_name_to_id: dict[str, str] = {}
+for aid, entry in abilities_raw.items():
+    name = entry.get('name', '')
+    if name:
+        key = name.lower().replace(' ', '').replace('-', '').replace('.', '').replace("'", '')
+        ability_name_to_id[key] = aid
+
+legal_ability_names: set[str] = set()
+for s in index:
+    for a in s['abilities'].values():
+        if a:
+            legal_ability_names.add(a)
+
+# Fetch Game8 descriptions
+print("  Fetching Game8 ability descriptions...", file=sys.stderr)
+game8_descs: dict[str, str] = {}
+try:
+    game8_html = fetch_text("https://game8.co/games/Pokemon-Champions/archives/590403")
+    for m in re.finditer(
+        r'<tr>\s*<td[^>]*class="center"[^>]*>\s*(?:<a[^>]*>)?\s*([A-Za-z][A-Za-z\s\'\-]+?)\s*(?:</a>)?\s*</td>\s*<td[^>]*>([^<]+)</td>',
+        game8_html,
+    ):
+        name = m.group(1).strip()
+        desc = m.group(2).strip()
+        if name not in ('Ability', 'Effect', 'New Abilities') and len(name) >= 2:
+            game8_descs[name.lower()] = desc
+    print(f"    Got {len(game8_descs)} descriptions from Game8", file=sys.stderr)
+except Exception as e:
+    print(f"  WARNING: could not fetch Game8 descriptions: {e}", file=sys.stderr)
+
+# Build ability → species mapping from index
+ability_to_species: dict[str, list[str]] = {}
+for s in index:
+    for a in s['abilities'].values():
+        if a:
+            akey = a.lower().replace(' ', '').replace('-', '').replace('.', '').replace("'", '')
+            if akey not in ability_to_species:
+                ability_to_species[akey] = []
+            if s['id'] not in ability_to_species[akey]:
+                ability_to_species[akey].append(s['id'])
+
+def get_ability_categories(aid: str) -> list[str]:
+    """Assign effect categories to an ability based on its known mechanics."""
+    cats: list[str] = []
+
+    # weather
+    if aid in ('drizzle', 'drought', 'sandstream', 'snowwarning', 'sandspit',
+               'cloudnine', 'forecast', 'megasol', 'chlorophyll', 'swiftswim',
+               'sandrush', 'slushrush', 'sandveil', 'snowcloak', 'sandforce',
+               'solarpower', 'raindish', 'icebody', 'hydration', 'dryskin'):
+        cats.append('weather')
+
+    # terrain
+    if aid in ('surgesurfer', 'mimicry'):
+        cats.append('terrain')
+
+    # stats
+    if aid in ('competitive', 'defiant', 'intimidate', 'gooey', 'supersweetsyrup',
+               'speedboost', 'moxie', 'stamina', 'steadfast', 'justified',
+               'angerpoint', 'berserk', 'weakarmor', 'electromorphosis',
+               'guts', 'quickfeet', 'marvelscale', 'hustle',
+               'contrary', 'moody', 'tangledfeet',
+               'clearbody', 'whitesmoke', 'hypercutter', 'bigpecks', 'keeneye',
+               'unaware', 'opportunist', 'mirrorarmor',
+               'curiousmedicine', 'noguard',
+               'sandveil', 'snowcloak', 'sandforce', 'chlorophyll', 'swiftswim',
+               'sandrush', 'slushrush', 'surgesurfer',
+               'unburden', 'illuminate', 'lightmetal', 'heavymetal'):
+        cats.append('stats')
+
+    # power — boosts move damage
+    if aid in ('adaptability', 'aerilate', 'analytic', 'blaze', 'dragonize',
+               'fairyaura', 'hugepower', 'ironfist', 'megalauncher', 'merciless',
+               'minus', 'overgrow', 'parentalbond', 'pixilate', 'plus',
+               'purepower', 'reckless', 'refrigerate', 'rivalry',
+               'sandforce', 'sharpness', 'sheerforce', 'skilllink', 'sniper',
+               'solarpower', 'strongjaw', 'superluck', 'supremeoverlord',
+               'swarm', 'technician', 'torrent', 'toughclaws',
+               'rockhead', 'compoundeyes', 'hustle'):
+        cats.append('power')
+
+    # move_type — abilities that change a move's type
+    if aid in ('aerilate', 'pixilate', 'refrigerate', 'dragonize', 'liquidvoice'):
+        cats.append('move_type')
+
+    # damage_reduction
+    if aid in ('filter', 'friendguard', 'multiscale', 'shellarmor', 'solidrock',
+               'sturdy', 'thickfat', 'waterbubble', 'disguise', 'magicguard',
+               'furcoat', 'heatproof', 'purifyingsalt'):
+        cats.append('damage_reduction')
+
+    # immunity
+    if aid in ('aromaveil', 'bulletproof', 'corrosion', 'damp', 'dryskin',
+               'eartheater', 'flashfire', 'flowerveil', 'immunity', 'insomnia',
+               'leafguard', 'levitate', 'lightningrod', 'limber', 'magmaarmor',
+               'motordrive', 'oblivious', 'overcoat', 'owntempo',
+               'sapsipper', 'soundproof', 'sweetveil', 'telepathy',
+               'vitalspirit', 'voltabsorb', 'waterabsorb', 'waterbubble',
+               'shielddust', 'magicguard', 'purifyingsalt'):
+        cats.append('immunity')
+
+    # status
+    if aid in ('cutecharm', 'earlybird', 'flamebody', 'healer', 'hydration',
+               'immunity', 'insomnia', 'leafguard', 'limber', 'magmaarmor',
+               'oblivious', 'owntempo', 'poisonpoint', 'spicyspray', 'static',
+               'stench', 'shedskin', 'synchronize', 'sweetveil', 'vitalspirit',
+               'marvelscale', 'quickfeet', 'guts', 'poisonheal', 'naturalcure',
+               'tangledfeet', 'steadfast', 'solarpower', 'poisontouch'):
+        cats.append('status')
+
+    # contact
+    if aid in ('aftermath', 'cursedbody', 'cutecharm', 'flamebody', 'gooey',
+               'mummy', 'pickpocket', 'poisonpoint', 'roughskin',
+               'spicyspray', 'static', 'stench', 'wanderingspirit',
+               'poisontouch', 'magician'):
+        cats.append('contact')
+
+    # on_hit
+    if aid in ('aftermath', 'cursedbody', 'electromorphosis', 'innardsout',
+               'justified', 'roughskin', 'sandspit', 'spicyspray', 'stamina',
+               'toxicdebris', 'weakarmor'):
+        cats.append('on_hit')
+
+    # priority
+    if aid in ('armortail', 'galewings', 'prankster', 'queenlymajesty',
+               'quickdraw', 'stall', 'innerfocus'):
+        cats.append('priority')
+
+    # bypass
+    if aid in ('corrosion', 'infiltrator', 'longreach', 'moldbreaker',
+               'noguard', 'piercingdrill', 'scrappy', 'shadowtag',
+               'stalwart', 'unaware', 'unseenfist'):
+        cats.append('bypass')
+
+    # item (general held item — includes berries)
+    if aid in ('klutz', 'magician', 'pickpocket', 'pickup', 'stickyhold',
+               'symbiosis', 'unburden', 'unnerve',
+               'cheekpouch', 'cudchew', 'gluttony', 'harvest', 'ripen'):
+        cats.append('item')
+
+    # berries (subset of item)
+    if aid in ('cheekpouch', 'cudchew', 'gluttony', 'harvest', 'ripen', 'unnerve'):
+        cats.append('berries')
+
+    # form_change
+    if aid in ('forecast', 'hungerswitch', 'illusion', 'mimicry',
+               'protean', 'stancechange', 'zerotohero'):
+        cats.append('form_change')
+
+    # ability_control
+    if aid in ('imposter', 'magicbounce', 'mirrorarmor', 'mummy',
+               'receiver', 'synchronize', 'trace', 'wanderingspirit',
+               'opportunist'):
+        cats.append('ability_control')
+
+    # healing
+    if aid in ('cheekpouch', 'healer', 'hospitality', 'icebody',
+               'naturalcure', 'poisonheal', 'raindish', 'regenerator'):
+        cats.append('healing')
+
+    # field_control
+    if aid in ('screencleaner', 'shadowtag', 'toxicdebris'):
+        cats.append('field_control')
+
+    # switch_in_out
+    if aid in ('anticipation', 'competitive', 'curiousmedicine', 'defiant',
+               'frisk', 'hospitality', 'imposter', 'intimidate',
+               'naturalcure', 'opportunist', 'pressure', 'receiver',
+               'regenerator', 'screencleaner', 'supersweetsyrup',
+               'trace', 'unnerve', 'zerotohero',
+               'drizzle', 'drought', 'sandstream', 'snowwarning'):
+        cats.append('switch_in_out')
+
+    return sorted(set(cats))
+
+
+abilities_out: dict[str, dict] = {}
+for aname in sorted(legal_ability_names):
+    key = aname.lower().replace(' ', '').replace('-', '').replace('.', '').replace("'", '')
+    aid = ability_name_to_id.get(key)
+    if aid and aid in abilities_raw:
+        entry = abilities_raw[aid]
+        desc = game8_descs.get(key, entry.get('desc', ''))
+        abilities_out[aid] = {
+            'name': entry['name'],
+            'desc': desc,
+            'pokemon': sorted(ability_to_species.get(key, [])),
+            'effectCategories': get_ability_categories(aid),
+        }
+    else:
+        print(f"  WARNING: ability '{aname}' not found in base data", file=sys.stderr)
+
+# ---------------------------------------------------------------------------
+# 12. Write output
 # ---------------------------------------------------------------------------
 print("Writing output files...", file=sys.stderr)
 
@@ -968,5 +1171,6 @@ write_json("moves.json", moves_out, indent=1)
 write_json("moves-with-learnsets.json", moves_with_learnsets_out, indent=1)
 write_json("learnsets.json", learnset_out)
 write_json("items.json", items_out)
+write_json("abilities.json", abilities_out)
 
-print(f"\nDone! Generated {len(index)} battle forms, {len(moves_out)} moves, {len(items_out)} items, {len(learnset_out)} learnsets, {len(moves_with_learnsets_out)} moves-with-learnsets.", file=sys.stderr)
+print(f"\nDone! Generated {len(index)} battle forms, {len(moves_out)} moves, {len(items_out)} items, {len(learnset_out)} learnsets, {len(moves_with_learnsets_out)} moves-with-learnsets, {len(abilities_out)} abilities.", file=sys.stderr)

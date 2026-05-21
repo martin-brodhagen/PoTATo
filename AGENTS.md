@@ -27,8 +27,11 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 ├── sprites/champions/         # 320 downloaded Champions menu sprites (PNG)
 ├── lib/
 │   ├── types.ts               # Shared TypeScript interfaces
-│   └── data-loader.ts         # Fetch + cache layer (Map<FormatId, DataCache>)
-├── app.ts                     # Main app: format selector, grid, detail tab, team builder
+│   ├── data-loader.ts         # Fetch + cache layer (Map<FormatId, DataCache>)
+│   ├── move-search-widget.ts  # Move search/filter/browse widget (class-based)
+│   ├── pokemon-search-widget.ts  # Pokémon search/filter/grid widget (class-based)
+│   └── team-store.ts          # localStorage-backed team CRUD
+├── app.ts                     # Main app: format selector, grid, search detail, move detail, team builder
 ├── index.html                 # Entry point
 ├── style.css                  # Dark theme, type colors, sprites, responsive
 ├── tsconfig.json              # ES2022, outDir: dist/
@@ -111,15 +114,21 @@ npm start                # → http://localhost:8787
 - Strict mode enabled: `strict`, `noUnusedLocals`, `noUnusedParameters`
 
 ## Frontend Architecture
-- **`app.ts`**: Format selector dropdown → loads index → renders card grid (with sprites). On card click: lazy-fetches learnsets + moves, switches to Search Detail tab with stats, abilities, move list, and "Add to Team" slots
+- **`app.ts`**: Format selector dropdown → loads index → renders card grid (with sprites). On card click: lazy-fetches learnsets + moves, switches to Search Detail tab with stats, abilities, move list, and "Add to Team" slots. Also manages tab system, move detail overlay, and widget lifecycle.
 - **`lib/data-loader.ts`**: `setFormat()`, `loadIndex()`, `loadLearnsets()`, `loadMoves()`, `loadItems()` — each returns a promise, cached after first fetch. Layer 1 = fetch JSON; Layer 2 = render from cache
 - **`lib/types.ts`**: `Species`, `Move`, `Item`, `FormatData`, `DataCache` interfaces + `FormatId` type (`'m-a' | 'm-b'`)
+- **`lib/move-search-widget.ts`**: `MoveSearchWidget` class — builds own DOM for search input, filter popup, sort controls, result grid. Emits `onMoveClick`. Includes `RANGE_CATEGORIES`, `MOVE_CLASSIFICATIONS`, `EFFECT_CATEGORIES`, `TYPES`, `TYPE_COLORS` exports.
+- **`lib/pokemon-search-widget.ts`**: `PokemonSearchWidget` class — builds own DOM with `.ps-*` prefixed selectors (avoids ID conflicts with multiple instances). Supports card/list view, sort by dex/alpha/stats, mega toggle, filter popup (type/ability/move/classification/effect), `setLearnedByFilter()`, `onPokemonClick`.
+- **`lib/team-store.ts`**: `TeamStore` class — `getTeams()`, `saveTeam()`, `deleteTeam()` backed by localStorage.
 - **Sprites**: 320 `Menu_CP_{dex}_{form}.png` files served from `sprites/champions/`, mapped by `sprite-map.json`
 
-## Future
-- Add Regulation M-B data (once released, similar pipeline)
-- Search/filter bar for Pokémon grid
-- Sorting by BST, name, type
-- Team builder / teambuilder export
-- Floette-Eternal: decide whether to include (14.6% M-A usage despite `isNonstandard: "Past"`)
-- Items list: verify all 117 in-game, some may need loadstone/twistedspoon type items
+## Todo
+- Breadcrumbs in the search details
+
+## Key Patterns
+- Two `MoveSearchWidget` instances exist: one for the Moves subtab (`movesWidget`), one for per-species detail (`detailMovesWidget`)
+- Two `PokemonSearchWidget` instances can exist: main grid (`pokemonWidget`) and move-detail learned-by grid (`moveDetailPokemonWidget`) — `.ps-*` classes prevent CSS ID conflicts
+- Click-highlight uses direct DOM class toggling (`.selected`), not re-renders
+- Move descriptions come only from Game8 (`shortDesc`); `desc` stripped in prep pipeline
+- `target` field renamed to `range` in both data and frontend; values remapped to natural labels
+- Only classification flags kept in move data; mechanical flags and `protect` stripped

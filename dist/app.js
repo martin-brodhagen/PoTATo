@@ -1,7 +1,8 @@
-import { setFormat, loadIndex } from './lib/data-loader.js';
+import { setFormat, loadIndex, loadAbilities } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
 import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
+import { AbilitySearchWidget, ABILITY_EFFECT_CATEGORIES } from './lib/ability-search-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
 const formatSelect = document.getElementById('format-select');
@@ -21,6 +22,8 @@ let movesWidget = null;
 let detailMovesWidget = null;
 let pokemonWidget = null;
 let moveDetailPokemonWidget = null;
+let abilityDetailPokemonWidget = null;
+let abilitiesWidget = null;
 function getCurrentTeam() {
     return teams.find(t => t.id === currentTeamId);
 }
@@ -68,6 +71,14 @@ async function loadFormat(format) {
     if (moveDetailPokemonWidget) {
         moveDetailPokemonWidget.destroy();
         moveDetailPokemonWidget = null;
+    }
+    if (abilityDetailPokemonWidget) {
+        abilityDetailPokemonWidget.destroy();
+        abilityDetailPokemonWidget = null;
+    }
+    if (abilitiesWidget) {
+        abilitiesWidget.destroy();
+        abilitiesWidget = null;
     }
     pendingSlotIndex = null;
     const [index, map] = await Promise.all([
@@ -239,6 +250,10 @@ async function showDetail(s) {
         moveDetailPokemonWidget.destroy();
         moveDetailPokemonWidget = null;
     }
+    if (abilityDetailPokemonWidget) {
+        abilityDetailPokemonWidget.destroy();
+        abilityDetailPokemonWidget = null;
+    }
     switchToDetail();
     const team = getCurrentTeam();
     function statBarColor(val) {
@@ -301,6 +316,22 @@ async function showDetail(s) {
     <h3 style="margin-top:0.75rem;font-size:0.9rem">Moves (${s.moveCount})</h3>
     <div id="detail-moves-container"></div>`;
     searchDetailContent.innerHTML = html;
+    // Wire up ability buttons → ability detail
+    const abilityNames = new Set(Object.values(s.abilities).filter(Boolean));
+    if (abilityNames.size > 0) {
+        loadAbilities(currentFormat).then(allAbilities => {
+            const nameToId = {};
+            for (const [id, a] of Object.entries(allAbilities))
+                nameToId[a.name] = id;
+            searchDetailContent.querySelectorAll('.ability-btn').forEach(btn => {
+                const name = btn.textContent || '';
+                const id = nameToId[name];
+                if (id) {
+                    btn.addEventListener('click', () => showAbilityDetail(id, allAbilities[id]));
+                }
+            });
+        });
+    }
     // Detail move search widget
     const container = document.getElementById('detail-moves-container');
     const speciesNames = {};
@@ -336,6 +367,10 @@ function showMoveDetail(_moveId, move) {
     if (moveDetailPokemonWidget) {
         moveDetailPokemonWidget.destroy();
         moveDetailPokemonWidget = null;
+    }
+    if (abilityDetailPokemonWidget) {
+        abilityDetailPokemonWidget.destroy();
+        abilityDetailPokemonWidget = null;
     }
     detailSpecies = null;
     switchToDetail();
@@ -390,6 +425,47 @@ function showMoveDetail(_moveId, move) {
         });
         moveDetailPokemonWidget.setData(allSpecies, spriteMap);
         moveDetailPokemonWidget.setLearnedByFilter(learnedBy);
+    }
+}
+function showAbilityDetail(_abilityId, ability) {
+    if (detailMovesWidget) {
+        detailMovesWidget.destroy();
+        detailMovesWidget = null;
+    }
+    if (moveDetailPokemonWidget) {
+        moveDetailPokemonWidget.destroy();
+        moveDetailPokemonWidget = null;
+    }
+    if (abilityDetailPokemonWidget) {
+        abilityDetailPokemonWidget.destroy();
+        abilityDetailPokemonWidget = null;
+    }
+    detailSpecies = null;
+    switchToDetail();
+    const effectLabels = (ability.effectCategories || []).map(e => ABILITY_EFFECT_CATEGORIES[e] || e);
+    const pokemonIds = ability.pokemon || [];
+    const html = `
+    <div class="move-detail">
+      <div class="move-detail-header">
+        <span class="move-detail-name">${ability.name}</span>
+      </div>
+      ${effectLabels.length > 0 ? `<div class="move-detail-badges">${effectLabels.map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
+      <div class="move-detail-desc">${ability.desc}</div>
+      <div class="move-detail-learned">
+        <span class="badge-group-label">Pokémon with ${ability.name} (${pokemonIds.length})</span>
+        <div id="ability-detail-pokemon-container"></div>
+      </div>
+    </div>`;
+    searchDetailContent.innerHTML = html;
+    if (pokemonIds.length > 0) {
+        const container = document.getElementById('ability-detail-pokemon-container');
+        abilityDetailPokemonWidget = new PokemonSearchWidget({
+            container,
+            formatId: currentFormat,
+            onPokemonClick: (_speciesId, species) => showDetail(species),
+        });
+        abilityDetailPokemonWidget.setData(allSpecies, spriteMap);
+        abilityDetailPokemonWidget.setLearnedByFilter(pokemonIds);
     }
 }
 // ── Tab system ─────────────────────────────────────────────
@@ -475,6 +551,12 @@ document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () =>
         for (const s of allSpecies)
             speciesNames[s.id] = s.name;
         movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => showMoveDetail(moveId, move) });
+    }
+});
+document.querySelector('[data-subtab="abilities"]')?.addEventListener('click', () => {
+    if (!abilitiesWidget) {
+        const container = document.getElementById('subtab-content-abilities');
+        abilitiesWidget = new AbilitySearchWidget({ container, formatId: currentFormat, onAbilityClick: (abilityId, ability) => showAbilityDetail(abilityId, ability) });
     }
 });
 const pokemonContainer = document.getElementById('subtab-content-pokemon');

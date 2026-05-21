@@ -33,6 +33,13 @@ export interface Move {
   learnedBy?: string[];
 }
 
+export interface Ability {
+  name: string;
+  desc: string;
+  pokemon: string[];
+  effectCategories?: string[];
+}
+
 export interface Item {
   name: string;
   num: number;
@@ -67,6 +74,7 @@ export interface FormatData {
   learnsets: Record<string, string[]>;
   moves: Record<string, Move>;
   movesWithLearnsets: Record<string, Move>;
+  abilities: Record<string, Ability>;
   items: Record<string, Item>;
 }
 
