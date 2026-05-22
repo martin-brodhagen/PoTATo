@@ -58,6 +58,12 @@ export interface FilterFlag {
 
 export interface TeamSlot {
   speciesId: string | null;
+  ability?: string | null;
+  nature?: string | null;
+  moves?: (string | null)[];
+  stats?: Record<string, number>;
+  gender?: string;
+  item?: string | null;
 }
 
 export interface Team {

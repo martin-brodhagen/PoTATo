@@ -3,6 +3,7 @@ import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
 import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
 import { AbilitySearchWidget, ABILITY_EFFECT_CATEGORIES } from './lib/ability-search-widget.js';
+import { TeamBuilderWidget } from './lib/team-builder-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
 const formatSelect = document.getElementById('format-select');
@@ -24,6 +25,7 @@ let pokemonWidget = null;
 let moveDetailPokemonWidget = null;
 let abilityDetailPokemonWidget = null;
 let abilitiesWidget = null;
+let teamBuilderWidget = null;
 let breadcrumbs = [];
 let activeBreadcrumbIndex = -1;
 function resetBreadcrumbs(item) {
@@ -159,6 +161,9 @@ async function loadFormat(format) {
         pokemonWidget.clear();
         pokemonWidget.setData(index, map);
     }
+    if (teamBuilderWidget) {
+        teamBuilderWidget.setData(index, map, currentFormat);
+    }
     renderTeamBar();
 }
 function fillSlot(slotIndex, speciesId) {
@@ -166,12 +171,18 @@ function fillSlot(slotIndex, speciesId) {
     if (!team)
         return;
     team.slots[slotIndex].speciesId = speciesId;
+    team.slots[slotIndex].ability = '0';
+    team.slots[slotIndex].nature = 'Serious';
+    team.slots[slotIndex].moves = [null, null, null, null];
+    team.slots[slotIndex].stats = { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
     persist();
     renderTeamWarning();
     if (pokemonWidget)
         pokemonWidget.clear();
     renderTeamBar();
     reRenderDetail();
+    if (teamBuilderWidget)
+        teamBuilderWidget.refresh();
 }
 function reRenderDetail() {
     if (detailSpecies)
@@ -246,6 +257,8 @@ function selectTeam(id) {
     detailSpecies = null;
     renderTeamWarning();
     renderTeamBar();
+    if (teamBuilderWidget)
+        teamBuilderWidget.refresh();
 }
 function handleNewTeam() {
     const count = teams.filter(t => t.format === currentFormat).length + 1;
@@ -508,7 +521,28 @@ function selectTab(tabId, section) {
         });
     }
 }
+function lazyInitTeamBuilder() {
+    if (teamBuilderWidget)
+        return;
+    const container = document.getElementById('tab-content-team-builder');
+    container.innerHTML = '';
+    teamBuilderWidget = new TeamBuilderWidget({
+        container,
+        species: allSpecies,
+        spriteMap,
+        formatId: currentFormat,
+        getTeam: getCurrentTeam,
+        onSlotChange: () => {
+            persist();
+            renderTeamWarning();
+            renderTeamBar();
+            reRenderDetail();
+        },
+        onPokemonClick: (species) => showDetail(species),
+    });
+}
 function switchToTeamBuilder() {
+    lazyInitTeamBuilder();
     if (window.innerWidth >= 768 && leftSection) {
         selectTab('team-builder', leftSection);
     }
