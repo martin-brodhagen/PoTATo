@@ -48,7 +48,11 @@ export interface Item {
   isNonstandard?: string | null;
   megaStone?: Record<string, string> | null;
   itemUser?: string[] | null;
+  sprite?: string;
+  category?: string;
 }
+
+export type ItemCategory = 'Stat Boost' | 'Power Boost' | 'Defense' | 'Recovery' | 'Mega Stone' | 'Other';
 
 export interface FilterFlag {
   category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect' | 'range' | 'ability_category';

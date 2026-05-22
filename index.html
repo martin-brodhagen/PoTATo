@@ -36,6 +36,8 @@
   <button class="tab" data-tab="damage-calc" data-side="right">Calc</button>
 </div>
 
+<div class="app-wrapper">
+
 <div class="main-sections">
   <!-- Left section — input & research -->
   <div class="section section-left">
@@ -53,10 +55,12 @@
         <button class="sub-tab active" data-subtab="pokemon">Pokémon</button>
         <button class="sub-tab" data-subtab="moves">Moves</button>
         <button class="sub-tab" data-subtab="abilities">Abilities</button>
+        <button class="sub-tab" data-subtab="items">Items</button>
       </div>
       <div id="subtab-content-pokemon" class="subtab-content"></div>
       <div id="subtab-content-moves" class="subtab-content hidden"></div>
       <div id="subtab-content-abilities" class="subtab-content hidden"></div>
+      <div id="subtab-content-items" class="subtab-content hidden"></div>
     </div>
     <div id="tab-content-imports" class="tab-content hidden">
       <div class="placeholder">Imports coming soon</div>
@@ -88,6 +92,7 @@
       <div class="placeholder">Damage Calculator coming soon</div>
     </div>
   </div>
+</div>
 </div>
 
 <script type="module" src="dist/app.js"></script>

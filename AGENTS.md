@@ -16,7 +16,8 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 │   └── prep_data.py           # Data prep script (offline, fetches + merges + filters)
 ├── scripts/
 │   ├── download-sprites.py    # Downloads Champions menu sprites from Bulbagarden Archives
-│   └── build-sprite-map.py    # Builds sprite filename → species ID mapping
+│   ├── build-sprite-map.py    # Builds sprite filename → species ID mapping
+│   └── categorize_items.py   # Classifies items into Game8 categories (Defense/Recovery/Power Boost/Stat Boost/Mega Stone/Other)
 ├── data/format-m-a/           # Generated per-format data
 │   ├── index.json             # 270 battle forms (species + megas + regionals)
 │   ├── moves.json             # 477 legal moves (Champions buffs/nerfs baked in)
@@ -32,6 +33,7 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 │   ├── move-search-widget.ts  # Move search/filter/browse widget (class-based)
 │   ├── pokemon-search-widget.ts  # Pokémon search/filter/grid widget (class-based)
 │   ├── ability-search-widget.ts  # Ability search/filter widget (class-based)
+│   ├── item-search-widget.ts  # Item search/filter widget with category buttons (class-based)
 │   └── team-store.ts          # localStorage-backed team CRUD
 ├── app.ts                     # Main app: format selector, grid, search detail, move/ability detail, breadcrumbs, team header
 ├── index.html                 # Entry point
@@ -91,6 +93,12 @@ Menu sprites are downloaded from [Bulbagarden Archives](https://archives.bulbaga
 6. Battle Bond excluded (not on Game8 list)
 7. Categories defined in `get_ability_categories()` in `prep_data.py` using explicit ID-based assignment
 
+### Item Data Pipeline (categorize_items.py)
+1. Categories match Game8's official item types: **Defense, Recovery, Power Boost, Other, Stat Boost, Mega Stone**
+2. Type-resist berries (Chilan, Haban, Babiri, etc.) → **Defense**; Oran/Sitrus berries → **Recovery**; Leftovers/Black Sludge → **Recovery**
+3. `ITEM_CATEGORIES` in `item-search-widget.ts` defines the category order for filter buttons
+4. `category` field added to each item in `items.json`
+
 ## Data Stats (Regulation M-A)
 - 273 battle forms (213 non-Mega + 60 Mega)
 - 477 legal moves
@@ -145,3 +153,4 @@ npm start                # → http://localhost:8787
 - `switchToDetail()` guards against redundant tab-switching when already on the detail tab
 - `PokemonSearchWidget` accepts `learnedByFilter` in constructor to avoid a double render (all species → filtered)
 - Breadcrumbs at the top of the Search Detail view, rendered into `#breadcrumb-bar` (outside the content area), with click-navigation and trail management (truncation, index shift)
+- **`ItemSearchWidget`**: `ITEM_CATEGORIES` exports Game8 item types — Defense, Mega Stone, Other, Power Boost, Recovery, Stat Boost. Type-resist berries classified as Defense; Oran/Sitrus berries as Recovery. Category buttons filter items; sorting alphabetical only.

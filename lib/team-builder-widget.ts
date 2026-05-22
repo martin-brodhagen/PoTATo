@@ -54,6 +54,7 @@ export class TeamBuilderWidget {
 
   private slotsContainer!: HTMLDivElement;
   private searchPopup!: HTMLDivElement;
+  private itemSearchPopup!: HTMLDivElement;
   private moveSearchPopup!: HTMLDivElement;
 
   constructor(opts: TeamBuilderWidgetOptions) {
@@ -73,11 +74,15 @@ export class TeamBuilderWidget {
     this.searchPopup = document.createElement('div');
     this.searchPopup.className = 'tb-search-popup filter-popup hidden';
 
+    this.itemSearchPopup = document.createElement('div');
+    this.itemSearchPopup.className = 'tb-item-search-popup filter-popup hidden';
+
     this.moveSearchPopup = document.createElement('div');
     this.moveSearchPopup.className = 'tb-move-search-popup filter-popup hidden';
 
     container.appendChild(this.slotsContainer);
     container.appendChild(this.searchPopup);
+    container.appendChild(this.itemSearchPopup);
     container.appendChild(this.moveSearchPopup);
 
     this.bindGlobalEvents();
@@ -86,7 +91,7 @@ export class TeamBuilderWidget {
   private bindGlobalEvents() {
     document.addEventListener('click', (e) => {
       const t = e.target as HTMLElement;
-      if (!t.closest('.tb-slot') && !t.closest('.tb-search-popup') && !t.closest('.tb-move-search-popup')) {
+      if (!t.closest('.tb-slot') && !t.closest('.tb-search-popup') && !t.closest('.tb-item-search-popup') && !t.closest('.tb-move-search-popup')) {
         this.closePopups();
       }
     });
@@ -102,8 +107,13 @@ export class TeamBuilderWidget {
   }
 
   private closePopups() {
+    const results = this.searchPopup.querySelector('.tb-search-results');
+    if (results) results.innerHTML = '';
+    this.moveSearchPopup.innerHTML = '';
+    this.itemSearchPopup.innerHTML = '';
     this.searchPopup.classList.add('hidden');
     this.moveSearchPopup.classList.add('hidden');
+    this.itemSearchPopup.classList.add('hidden');
   }
 
   setData(species: Species[], spriteMap: Record<string, string>, formatId?: FormatId) {
@@ -136,29 +146,35 @@ export class TeamBuilderWidget {
     this.render();
   }
 
-  private loadDataIfNeeded() {
-    if (this.loadingData || this.learnsets) return Promise.resolve();
+  private loadDataIfNeeded(): Promise<void> {
+    if (this.loadingData) return Promise.resolve();
+    if (this.learnsets) return Promise.resolve();
+
     this.loadingData = true;
     return Promise.all([
       loadLearnsets(this.opts.formatId).then(ls => { this.learnsets = ls; }),
       loadMoves(this.opts.formatId).then(m => { this.moves = m; }),
       loadItems(this.opts.formatId).then(its => { this.items = its; }),
-    ]).then(() => { this.loadingData = false; });
+    ]).then(() => { this.loadingData = false; this.render(); });
   }
 
-  render() {
+  render(): Promise<void> {
     const team = this.opts.getTeam();
     this.slotsContainer.innerHTML = '';
 
     if (!team) {
       this.slotsContainer.innerHTML = '<div class="placeholder">Select a team first</div>';
-      return;
+      return Promise.resolve();
+    }
+
+    if (!this.learnsets) {
+      return this.loadDataIfNeeded();
     }
 
     for (let i = 0; i < 6; i++) {
       const slot = team.slots[i];
       const el = document.createElement('div');
-      el.className = 'tb-slot tb-slot-filled';
+      el.className = 'tb-slot';
       el.dataset.slotIndex = String(i);
 
       const species = slot.speciesId ? this.opts.species.find(s => s.id === slot.speciesId) || null : null;
@@ -166,6 +182,7 @@ export class TeamBuilderWidget {
 
       this.slotsContainer.appendChild(el);
     }
+    return Promise.resolve();
   }
 
   private renderSlot(el: HTMLElement, index: number, slot: TeamSlot, species: Species | null) {
@@ -245,9 +262,9 @@ export class TeamBuilderWidget {
             </div>
             <div class="tb-item-row">
               <span class="tb-section-label">Item</span>
-              <div class="tb-item-input-wrap${showMegaCheckbox ? '' : ' tb-no-checkbox'}">
+              <div class="tb-item-input-wrap">
                 <input type="text" class="tb-item-input" placeholder="None" autocomplete="off" value="${itemValue}">
-                ${showMegaCheckbox ? `<input type="checkbox" class="tb-mega-checkbox" ${isMegaActive ? 'checked' : ''}>` : ''}
+                <input type="checkbox" class="tb-mega-checkbox" ${showMegaCheckbox ? '' : 'disabled'} ${isMegaActive ? 'checked' : ''}>
               </div>
             </div>
           </div>
@@ -278,7 +295,7 @@ export class TeamBuilderWidget {
           <div class="tb-stat-row" data-stat="${statName}">
             <span class="tb-stat-label">${STAT_LABELS[statName]}</span>
             <input type="number" class="tb-stat-input" value="${allocated}" min="0" max="32">
-            <input type="range" class="tb-stat-slider" value="${allocated}" min="0" max="32">
+            <input type="range" class="tb-stat-slider" value="${allocated}" min="0" max="32" style="--slider-pct: ${(allocated / 32) * 100}%">
             <span class="tb-stat-total">${total}</span>
           </div>`;
       }
@@ -287,6 +304,8 @@ export class TeamBuilderWidget {
         statsHtml += `
           <div class="tb-stat-row" data-stat="${statName}">
             <span class="tb-stat-label">${STAT_LABELS[statName]}</span>
+            <input type="number" class="tb-stat-input" value="0" min="0" max="32" disabled>
+            <input type="range" class="tb-stat-slider" value="0" min="0" max="32" disabled>
             <span class="tb-stat-total">0</span>
           </div>`;
       }
@@ -337,6 +356,7 @@ export class TeamBuilderWidget {
           val = Math.max(0, Math.min(32, Math.round(val)));
           numInput.value = String(val);
           slider.value = String(val);
+          slider.style.setProperty('--slider-pct', `${(val / 32) * 100}%`);
           totalEl.textContent = String(baseVal + val);
           const team = this.opts.getTeam();
           if (!team) return;
@@ -557,6 +577,8 @@ export class TeamBuilderWidget {
 
     // Auto-fill mega stone if species is a mega form (except Meganium)
     slot.item = null;
+    const results = this.searchPopup.querySelector('.tb-search-results');
+    if (results) results.innerHTML = '';
     if (this.items && species.id !== 'meganiummega') {
       for (const [itemId, item] of Object.entries(this.items)) {
         if (item.megaStone) {
@@ -707,7 +729,7 @@ export class TeamBuilderWidget {
 
   private setupItemSearch(input: HTMLInputElement, index: number) {
     this.loadDataIfNeeded();
-    const popup = this.searchPopup;
+    const popup = this.itemSearchPopup;
     let highlightedIdx = -1;
 
     const updateHighlight = () => {

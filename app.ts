@@ -4,6 +4,7 @@ import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
 import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
 import { AbilitySearchWidget, ABILITY_EFFECT_CATEGORIES } from './lib/ability-search-widget.js';
+import { ItemSearchWidget } from './lib/item-search-widget.js';
 import { TeamBuilderWidget } from './lib/team-builder-widget.js';
 
 const SPRITE_PATH = 'sprites/champions';
@@ -32,6 +33,7 @@ let pokemonWidget: PokemonSearchWidget | null = null;
 let moveDetailPokemonWidget: PokemonSearchWidget | null = null;
 let abilityDetailPokemonWidget: PokemonSearchWidget | null = null;
 let abilitiesWidget: AbilitySearchWidget | null = null;
+let itemsWidget: ItemSearchWidget | null = null;
 let teamBuilderWidget: TeamBuilderWidget | null = null;
 
 interface BreadcrumbItem {
@@ -143,6 +145,7 @@ async function loadFormat(format: FormatId) {
   if (moveDetailPokemonWidget) { moveDetailPokemonWidget.destroy(); moveDetailPokemonWidget = null; }
   if (abilityDetailPokemonWidget) { abilityDetailPokemonWidget.destroy(); abilityDetailPokemonWidget = null; }
   if (abilitiesWidget) { abilitiesWidget.destroy(); abilitiesWidget = null; }
+  if (itemsWidget) { itemsWidget.destroy(); itemsWidget = null; }
   breadcrumbs = [];
   activeBreadcrumbIndex = -1;
   renderBreadcrumbBar();
@@ -328,7 +331,7 @@ async function showDetail(s: Species) {
     </div>`;
 
   html += `
-    <h3 style="margin-top:0.75rem;font-size:0.9rem">Moves (${s.moveCount})</h3>
+    <h3 class="detail-moves-heading">Moves</h3>
     <div id="detail-moves-container"></div>`;
 
   searchDetailContent.innerHTML = html;
@@ -593,6 +596,13 @@ document.querySelector<HTMLElement>('[data-subtab="abilities"]')?.addEventListen
       resetBreadcrumbs({ type: 'ability', id: abilityId, name: ability.name });
       showAbilityDetail(abilityId, ability);
     } });
+  }
+});
+
+document.querySelector<HTMLElement>('[data-subtab="items"]')?.addEventListener('click', () => {
+  if (!itemsWidget) {
+    const container = document.getElementById('subtab-content-items')!;
+    itemsWidget = new ItemSearchWidget({ container, formatId: currentFormat });
   }
 });
 

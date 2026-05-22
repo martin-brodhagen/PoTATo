@@ -3,6 +3,7 @@ import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
 import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
 import { AbilitySearchWidget, ABILITY_EFFECT_CATEGORIES } from './lib/ability-search-widget.js';
+import { ItemSearchWidget } from './lib/item-search-widget.js';
 import { TeamBuilderWidget } from './lib/team-builder-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
@@ -25,6 +26,7 @@ let pokemonWidget = null;
 let moveDetailPokemonWidget = null;
 let abilityDetailPokemonWidget = null;
 let abilitiesWidget = null;
+let itemsWidget = null;
 let teamBuilderWidget = null;
 let breadcrumbs = [];
 let activeBreadcrumbIndex = -1;
@@ -146,6 +148,10 @@ async function loadFormat(format) {
     if (abilitiesWidget) {
         abilitiesWidget.destroy();
         abilitiesWidget = null;
+    }
+    if (itemsWidget) {
+        itemsWidget.destroy();
+        itemsWidget = null;
     }
     breadcrumbs = [];
     activeBreadcrumbIndex = -1;
@@ -342,7 +348,7 @@ async function showDetail(s) {
       </div>
     </div>`;
     html += `
-    <h3 style="margin-top:0.75rem;font-size:0.9rem">Moves (${s.moveCount})</h3>
+    <h3 class="detail-moves-heading">Moves</h3>
     <div id="detail-moves-container"></div>`;
     searchDetailContent.innerHTML = html;
     renderBreadcrumbBar();
@@ -606,6 +612,12 @@ document.querySelector('[data-subtab="abilities"]')?.addEventListener('click', (
                 resetBreadcrumbs({ type: 'ability', id: abilityId, name: ability.name });
                 showAbilityDetail(abilityId, ability);
             } });
+    }
+});
+document.querySelector('[data-subtab="items"]')?.addEventListener('click', () => {
+    if (!itemsWidget) {
+        const container = document.getElementById('subtab-content-items');
+        itemsWidget = new ItemSearchWidget({ container, formatId: currentFormat });
     }
 });
 const pokemonContainer = document.getElementById('subtab-content-pokemon');
