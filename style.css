@@ -1962,7 +1962,7 @@ button:hover {
   color: #e0e0e8;
   border: 1px solid #3a3a4a;
   border-radius: 3px;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   cursor: pointer;
   outline: none;
   box-sizing: border-box;
@@ -2134,6 +2134,14 @@ button:hover {
   overflow: hidden;
 }
 
+.tb-types-row {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  min-height: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
 .tb-ability-row,
 .tb-nature-row {
   display: flex;
@@ -2229,6 +2237,19 @@ button:hover {
 .tb-move-slot {
   display: flex;
   flex: 1;
+  position: relative;
+  align-items: center;
+}
+
+.tb-move-type-tag {
+  position: absolute;
+  left: 0.35rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tb-move-input.has-type {
+  padding-left: 4.4rem;
 }
 
 .tb-move-input {

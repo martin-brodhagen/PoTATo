@@ -1,5 +1,6 @@
 import { loadLearnsets, loadMoves, loadItems } from './data-loader.js';
 const SPRITE_PATH = 'sprites/champions';
+const ITEM_SPRITE_PATH = 'sprites/items';
 const STAT_NAMES = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
 const STAT_LABELS = { hp: 'HP', atk: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', spe: 'Spe' };
 const ABILITY_KEYS = ['0', '1', 'H'];
@@ -225,7 +226,7 @@ export class TeamBuilderWidget {
         if (spriteFile) {
             spriteHtml = `<div class="tb-sprite-wrap"><img class="tb-sprite" src="${SPRITE_PATH}/${spriteFile}">`;
             if (itemSprite) {
-                spriteHtml += `<img class="tb-item-overlay" src="${itemSprite}">`;
+                spriteHtml += `<img class="tb-item-overlay" src="${ITEM_SPRITE_PATH}/${itemSprite}.png">`;
             }
             spriteHtml += `</div>`;
         }
@@ -288,6 +289,16 @@ export class TeamBuilderWidget {
                 }
             }
         }
+        // Build type tags
+        let typesHtml = '';
+        if (isFilled && species.types) {
+            typesHtml = `<div class="tb-types-row">
+        ${species.types.map(t => `<span class="type-tag ${t.toLowerCase()}">${t}</span>`).join('')}
+      </div>`;
+        }
+        else {
+            typesHtml = `<div class="tb-types-row"></div>`;
+        }
         const sectionLeftHtml = `
       <div class="tb-section tb-section-left">
         <div class="tb-left-top">
@@ -298,6 +309,7 @@ export class TeamBuilderWidget {
         <div class="tb-left-bottom">
           <div class="tb-left-sprite">${spriteHtml}</div>
           <div class="tb-left-selectors">
+            ${typesHtml}
             <div class="tb-ability-row">
               <span class="tb-section-label">Ability</span>
               <select class="tb-ability-select"${isFilled ? '' : ' disabled'}>${abilityOpts}</select>
@@ -323,8 +335,9 @@ export class TeamBuilderWidget {
             const moveId = moveSlots[mi];
             const moveRec = moveId && isFilled ? this.moves?.[moveId] : undefined;
             const moveName = moveRec ? moveRec.name : '';
+            const typeTag = moveRec ? `<span class="type-tag ${moveRec.type.toLowerCase()} tb-move-type-tag">${moveRec.type}</span>` : '';
             movesHtml += `<div class="tb-move-slot" data-move-index="${mi}">`;
-            movesHtml += `<input type="text" class="tb-move-input" placeholder="Move ${mi + 1}…" autocomplete="off" value="${moveName}">`;
+            movesHtml += `${typeTag}<input type="text" class="tb-move-input${moveRec ? ' has-type' : ''}" placeholder="Move ${mi + 1}…" autocomplete="off" value="${moveName}">`;
             movesHtml += `</div>`;
         }
         const section3Html = `<div class="tb-section tb-section-moves">${movesHtml}</div>`;
@@ -829,10 +842,19 @@ export class TeamBuilderWidget {
             const rect = input.getBoundingClientRect();
             const spaceBelow = window.innerHeight - rect.bottom;
             const popupHeight = Math.min(280, spaceBelow - 8);
-            popup.style.top = (spaceBelow > 60 ? rect.bottom + 4 : rect.top - popupHeight - 4) + 'px';
+            const isBottomSlot = slotIndex >= 4;
+            if (isBottomSlot) {
+                popup.style.top = '';
+                popup.style.bottom = (window.innerHeight - rect.top + 4) + 'px';
+                popup.style.maxHeight = 'none';
+            }
+            else {
+                popup.style.bottom = '';
+                popup.style.top = (spaceBelow > 60 ? rect.bottom + 4 : rect.top - popupHeight - 4) + 'px';
+                popup.style.maxHeight = popupHeight + 'px';
+            }
             popup.style.left = Math.max(8, rect.left) + 'px';
             popup.style.width = Math.max(300, rect.width) + 'px';
-            popup.style.maxHeight = popupHeight + 'px';
             popup.style.minWidth = '';
             popup.querySelectorAll('.tb-search-item').forEach(item => {
                 item.addEventListener('click', () => {
@@ -952,10 +974,19 @@ export class TeamBuilderWidget {
             const rect = input.getBoundingClientRect();
             const spaceBelow = window.innerHeight - rect.bottom;
             const popupHeight = Math.min(280, spaceBelow - 8);
-            popup.style.top = (spaceBelow > 60 ? rect.bottom + 4 : rect.top - popupHeight - 4) + 'px';
+            const isBottomSlot = index >= 4;
+            if (isBottomSlot) {
+                popup.style.top = '';
+                popup.style.bottom = (window.innerHeight - rect.top + 4) + 'px';
+                popup.style.maxHeight = 'none';
+            }
+            else {
+                popup.style.bottom = '';
+                popup.style.top = (spaceBelow > 60 ? rect.bottom + 4 : rect.top - popupHeight - 4) + 'px';
+                popup.style.maxHeight = popupHeight + 'px';
+            }
             popup.style.left = Math.max(8, rect.left) + 'px';
             popup.style.width = Math.max(220, rect.width) + 'px';
-            popup.style.maxHeight = popupHeight + 'px';
             popup.style.minWidth = '';
             popup.querySelectorAll('.tb-search-item').forEach(item => {
                 item.addEventListener('click', () => {

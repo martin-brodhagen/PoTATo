@@ -488,8 +488,13 @@ learnset_out: dict[str, list[str]] = {}
 for pid in all_legal_ids:
     ls: dict[str, list[str]] = {}
 
+    # 0. Rotom appliance forms (rotomfan, rotomheat, etc.) should inherit
+    # from base rotom rather than using their own (nearly-empty) learnset.
+    # They exist in merged_learnsets only to add one form-specific move.
+    is_rotom_appliance = pid in {'rotomheat', 'rotomwash', 'rotomfrost', 'rotomfan', 'rotommow'}
+
     # 1. Try direct learnset lookup by pid (checks merged: mod first, then base)
-    if pid in merged_learnsets:
+    if pid in merged_learnsets and not is_rotom_appliance:
         ls = merged_learnsets[pid].get('learnset', {})
     else:
         entry = pokedex.get(pid, {})
@@ -924,6 +929,10 @@ for iid in MA_LEGAL_ITEMS:
         items_out[iid] = items[iid]
     else:
         print(f"  WARNING: item {iid} not in base data", file=sys.stderr)
+
+# Add sprite id for items (widget appends .png)
+for iid in items_out:
+    items_out[iid]['sprite'] = iid
 
 # ---------------------------------------------------------------------------
 # 10. Build moves-with-learnsets.json — moves enriched with learnedBy list

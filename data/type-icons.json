@@ -1,0 +1,20 @@
+{
+  "Bug": { "full": "sprites/types/bug.png", "small": "sprites/types/bug-small.png" },
+  "Dark": { "full": "sprites/types/dark.png", "small": "sprites/types/dark-small.png" },
+  "Dragon": { "full": "sprites/types/dragon.png", "small": "sprites/types/dragon-small.png" },
+  "Electric": { "full": "sprites/types/electric.png", "small": "sprites/types/electric-small.png" },
+  "Fairy": { "full": "sprites/types/fairy.png", "small": "sprites/types/fairy-small.png" },
+  "Fighting": { "full": "sprites/types/fighting.png", "small": "sprites/types/fighting-small.png" },
+  "Fire": { "full": "sprites/types/fire.png", "small": "sprites/types/fire-small.png" },
+  "Flying": { "full": "sprites/types/flying.png", "small": "sprites/types/flying-small.png" },
+  "Ghost": { "full": "sprites/types/ghost.png", "small": "sprites/types/ghost-small.png" },
+  "Grass": { "full": "sprites/types/grass.png", "small": "sprites/types/grass-small.png" },
+  "Ground": { "full": "sprites/types/ground.png", "small": "sprites/types/ground-small.png" },
+  "Ice": { "full": "sprites/types/ice.png", "small": "sprites/types/ice-small.png" },
+  "Normal": { "full": "sprites/types/normal.png", "small": "sprites/types/normal-small.png" },
+  "Poison": { "full": "sprites/types/poison.png", "small": "sprites/types/poison-small.png" },
+  "Psychic": { "full": "sprites/types/psychic.png", "small": "sprites/types/psychic-small.png" },
+  "Rock": { "full": "sprites/types/rock.png", "small": "sprites/types/rock-small.png" },
+  "Steel": { "full": "sprites/types/steel.png", "small": "sprites/types/steel-small.png" },
+  "Water": { "full": "sprites/types/water.png", "small": "sprites/types/water-small.png" }
+}

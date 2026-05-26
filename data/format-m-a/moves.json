@@ -8,7 +8,7 @@
   "pp": 20,
   "priority": 1,
   "type": "Rock",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [
    "contact"
   ],
@@ -32,7 +32,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Defense stat by 2 stages.",
+  "shortDesc": "Raises the user's Defense by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -54,7 +54,7 @@
    }
   },
   "type": "Poison",
-  "shortDesc": "Lowers the target's Sp. Def stat by 2 stages.",
+  "shortDesc": "100% chance to lower the target's Sp. Def by 2.",
   "flags": [
    "bullet"
   ],
@@ -73,7 +73,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Flying",
-  "shortDesc": "This move's power is doubled if the user isn't holding an item.",
+  "shortDesc": "Power doubles if the user has no held item.",
   "flags": [
    "contact"
   ],
@@ -92,7 +92,7 @@
   "zMove": {
    "effect": "crit2"
   },
-  "shortDesc": "Boosts the Attack, Defense, Sp.Atk, Sp. Def, Speed, accuracy, or evasiveness of the user or an ally by 2 stages.",
+  "shortDesc": "Raises a random stat of the user or an ally by 2.",
   "flags": [],
   "effectCategories": [],
   "range": "singleAlly"
@@ -106,7 +106,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Flying",
-  "shortDesc": "This move never misses.",
+  "shortDesc": "This move does not check accuracy.",
   "flags": [
    "contact",
    "slicing"
@@ -128,7 +128,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Makes the target move immediately after the user.",
+  "shortDesc": "The target makes its move right after the user.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -148,7 +148,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Speed stat by 2 stages.",
+  "shortDesc": "Raises the user's Speed by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -165,7 +165,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Flying",
-  "shortDesc": "This move has a1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio. Hits adjacent foes.",
   "flags": [
    "slicing",
    "wind"
@@ -188,7 +188,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Flying",
-  "shortDesc": "Has a 30% chance of making the target flinch.",
+  "shortDesc": "30% chance to make the target flinch.",
   "flags": [
    "slicing"
   ],
@@ -209,7 +209,7 @@
    "chance": 100
   },
   "type": "Fairy",
-  "shortDesc": "Confuses the target if its stats were boosted during the turn this move is used.",
+  "shortDesc": "100% confuse target that had a stat rise this turn.",
   "flags": [
    "sound"
   ],
@@ -236,7 +236,7 @@
     "spe": 2
    }
   },
-  "shortDesc": "The user switches spots with one of its allies. With each consecutive use, this move's chance of success becomes 1/3 of what it was before.",
+  "shortDesc": "User and ally swap positions; using again can fail.",
   "flags": [],
   "effectCategories": [
    "priority"
@@ -258,7 +258,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Sp. Def stat by 2 stages.",
+  "shortDesc": "Raises the user's Sp. Def by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -286,7 +286,7 @@
    }
   },
   "type": "Rock",
-  "shortDesc": "Has a 10% chance of boosting the user's Attack, Defense, Sp. Atk, Sp. Def, and Speed stats by 1 stage.",
+  "shortDesc": "10% chance to raise all stats by 1 (not acc/eva).",
   "flags": [],
   "effectCategories": [
    "stat_increase_attacker"
@@ -308,7 +308,7 @@
    }
   },
   "type": "Grass",
-  "shortDesc": "Lowers the target's Sp. Def stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -325,7 +325,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Water",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "slicing"
   ],
@@ -343,7 +343,7 @@
   "pp": 20,
   "priority": 1,
   "type": "Water",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [
    "contact"
   ],
@@ -370,7 +370,7 @@
     "def": 1
    }
   },
-  "shortDesc": "The user gains the Aqua Ring status, where the Pokémon restores 1/16 of its max HP at the end of every turn.",
+  "shortDesc": "User recovers 1/16 max HP per turn.",
   "flags": [],
   "effectCategories": [
    "periodic_effect"
@@ -394,7 +394,7 @@
    }
   },
   "type": "Water",
-  "shortDesc": "Boosts the user's Speed stat by 1 stage.",
+  "shortDesc": "100% chance to raise the user's Speed by 1.",
   "flags": [
    "contact",
    "dance"
@@ -413,7 +413,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Water",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact"
   ],
@@ -435,7 +435,7 @@
    }
   },
   "type": "Fire",
-  "shortDesc": "Lowers the user's Defense and Sp. Def stats by 1 stage.",
+  "shortDesc": "Lowers the user's Defense and Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_attacker"
@@ -459,7 +459,7 @@
     "spd": 2
    }
   },
-  "shortDesc": "Boosts an ally's Sp. Def stat by 1 stage.",
+  "shortDesc": "Raises an ally's Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "stat_increase_target"
@@ -476,7 +476,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "This move's power is doubled if the target has already taken damage during the turn this move is used.",
+  "shortDesc": "Power doubles if target was damaged this turn.",
   "flags": [
    "contact"
   ],
@@ -500,7 +500,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Gives the target the Infatuated status, where the Pokémon has a 50% chance of being unable to use moves while the Pokemon that gave the status is in the field. This move will fail against a target that is the same gender as the user or whose gender is unknown.",
+  "shortDesc": "A target of the opposite gender gets infatuated.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -514,7 +514,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Fighting",
-  "shortDesc": "This move never misses.",
+  "shortDesc": "This move does not check accuracy.",
   "flags": [
    "bullet",
    "pulse"
@@ -539,7 +539,7 @@
    }
   },
   "type": "Electric",
-  "shortDesc": "Boosts the user's Speed stat by 1 stage. This move's type depends on Morpeko's form.",
+  "shortDesc": "Morpeko: Electric; Hangry: Dark; 100% +1 Spe.",
   "flags": [],
   "effectCategories": [
    "stat_increase_attacker"
@@ -566,7 +566,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Gives the user's side the Aurora Veil status for 5 turns, where damage from physical and special moves are reduced by 1/2 in Singles or 1/3 in Doubles. This move can be used only in snow.",
+  "shortDesc": "For 5 turns, damage to allies halved. Snow only.",
   "flags": [],
   "effectCategories": [
    "screen"
@@ -583,7 +583,7 @@
   "pp": 10,
   "priority": -4,
   "type": "Ice",
-  "shortDesc": "This move's power is doubled if the target has already dealt damage to the user with a move in the same turn.",
+  "shortDesc": "Power doubles if user is damaged by the target.",
   "flags": [
    "contact"
   ],
@@ -606,7 +606,7 @@
    "volatileStatus": "confusion"
   },
   "type": "Fighting",
-  "shortDesc": "Has a 30% chance of confusing the target. If this move misses or fails, the user takes damage equal to 1/2 of its max HP.",
+  "shortDesc": "30% confusion. User loses 50% max HP if miss.",
   "flags": [
    "contact"
   ],
@@ -633,7 +633,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Lowers the target's Attack stat by 1 stage.",
+  "shortDesc": "Lowers the target's Attack by 1.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -661,7 +661,7 @@
     "def": 1
    }
   },
-  "shortDesc": "The user protects itself from incoming moves for the turn. Any attackers that use contact moves against the user during this turn become poisoned. With each consecutive use, this move's chance of success becomes 1/3 of what it was before.",
+  "shortDesc": "Protects from moves. Contact: poison.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -683,7 +683,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The user switches out of battle to be replaced by another party Pokémon. If the user had any stat changes, a substitute, or other such effects, they will be passed on to the Pokémon switching in.",
+  "shortDesc": "User switches, passing stat changes and more.",
   "flags": [],
   "effectCategories": [
    "self_switch"
@@ -702,7 +702,7 @@
    "duration": 1
   },
   "type": "Flying",
-  "shortDesc": "If the user is hit by a contact move before it uses this move, the attacker will be burned.",
+  "shortDesc": "Burns on contact with the user before it moves.",
   "flags": [
    "bullet"
   ],
@@ -721,7 +721,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "The target is attacked as many times as the number of Pokémon in the user's party. Pokémon that have fainted or have a status condition are not counted. This move's power is calculated based on the Attack stats of the party Pokémon.",
+  "shortDesc": "All healthy allies aid in damaging the target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -735,7 +735,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Poison",
-  "shortDesc": "This move fails unless the userhas eaten a Berry during the battle.",
+  "shortDesc": "Fails unless the user has eaten a Berry.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -752,7 +752,7 @@
   "zMove": {
    "effect": "heal"
   },
-  "shortDesc": "The user loses 1/2 of its max HP to boost its Attack stat to its sixth stage. This move fails if the user doesn’t have enough remaining HP.",
+  "shortDesc": "User loses 50% max HP. Maximizes Attack.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -767,7 +767,7 @@
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Normal",
-  "shortDesc": "Gives the target the Bound status, where the Pokémon takes 1/8 damage of its max HP at the end of every turn and it cannot switch out.",
+  "shortDesc": "Traps and damages the target for 4-5 turns.",
   "flags": [
    "contact"
   ],
@@ -790,7 +790,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Dark",
-  "shortDesc": "Has a 30% chance of making the target flinch.",
+  "shortDesc": "30% chance to make the target flinch.",
   "flags": [
    "bite",
    "contact"
@@ -813,7 +813,7 @@
    2
   ],
   "type": "Fire",
-  "shortDesc": "The user's HP is restored by 1/20f the damage dealt by this move.",
+  "shortDesc": "User recovers 50% of the damage dealt.",
   "flags": [
    "contact",
    "heal",
@@ -837,7 +837,7 @@
    }
   },
   "type": "Ghost",
-  "shortDesc": "Lowers the target's Attack stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Attack by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -856,7 +856,7 @@
    "volatileStatus": "mustrecharge"
   },
   "type": "Fire",
-  "shortDesc": "The user gains the Recharging status on the turn after this move is used, where the user cannot take any actions for 1 turn.",
+  "shortDesc": "User cannot move next turn.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -875,7 +875,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Has a 10% chance of burning the target. This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio. 10% chance to burn.",
   "flags": [
    "contact"
   ],
@@ -898,7 +898,7 @@
    "status": "frz"
   },
   "type": "Ice",
-  "shortDesc": "Has a 10% chance of freezing the target.",
+  "shortDesc": "10% chance to freeze foe(s). Can't miss in Snow.",
   "flags": [
    "wind"
   ],
@@ -921,7 +921,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Gives the target the Can't Escape status, where the Pokémon cannot be switched out.",
+  "shortDesc": "Prevents the target from switching out.",
   "flags": [],
   "effectCategories": [
    "trap"
@@ -938,7 +938,7 @@
   "priority": 0,
   "overrideOffensiveStat": "def",
   "type": "Fighting",
-  "shortDesc": "The damage dealt by this move is calculated using the user's Defense stat instead of its Attack stat.",
+  "shortDesc": "Uses user's Def stat as Atk in damage calculation.",
   "flags": [
    "contact"
   ],
@@ -960,7 +960,7 @@
    "status": "par"
   },
   "type": "Normal",
-  "shortDesc": "Has a 30% chance of paralyzing the target. If the target has the Minimized status, this move’s power is doubled and it will be sure to hit.",
+  "shortDesc": "30% chance to paralyze the target.",
   "flags": [
    "contact"
   ],
@@ -988,7 +988,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks 2 to 5 times in a row.",
+  "shortDesc": "Hits 2-5 times in one turn.",
   "flags": [],
   "effectCategories": [
    "multi_hit"
@@ -1004,7 +1004,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect. Hits adjacent Pokemon.",
   "flags": [
    "sound"
   ],
@@ -1027,7 +1027,7 @@
    "status": "par"
   },
   "type": "Flying",
-  "shortDesc": "The user gains the Sky-High status on the turn this move is used, where the Pokémon cannot be hit my most moves and is unaffected by terrain, then attacks on the following turn. This move has a 30% chance of paralyzing the target.",
+  "shortDesc": "Bounces turn 1. Hits turn 2. 30% paralyze.",
   "flags": [
    "contact"
   ],
@@ -1049,7 +1049,7 @@
    100
   ],
   "type": "Flying",
-  "shortDesc": "The user takes 1/3 of the damage dealt by this move.",
+  "shortDesc": "Has 33% recoil.",
   "flags": [
    "contact"
   ],
@@ -1073,7 +1073,7 @@
    }
   },
   "type": "Dragon",
-  "shortDesc": "Lowers targets' Attack stats by 1 stage.",
+  "shortDesc": "100% chance to lower the foe(s) Attack by 1.",
   "flags": [
    "contact"
   ],
@@ -1091,7 +1091,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Fighting",
-  "shortDesc": "Removes the Light Screen, Reflect, and Aurora Veil statuses on the target’s side.",
+  "shortDesc": "Destroys screens, unless the target is immune.",
   "flags": [
    "contact"
   ],
@@ -1109,7 +1109,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect. Hits adjacent Pokemon.",
   "flags": [
    "contact"
   ],
@@ -1125,7 +1125,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Bug",
-  "shortDesc": "If the target is holding a Berry, the user eats that Berry and gains its effect.",
+  "shortDesc": "User steals and eats the target's Berry.",
   "flags": [
    "contact"
   ],
@@ -1147,7 +1147,7 @@
    }
   },
   "type": "Bug",
-  "shortDesc": "Has a 10% chance of lowering the target's Sp. Def stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Def by 1.",
   "flags": [
    "sound"
   ],
@@ -1174,7 +1174,7 @@
     "atk": 1
    }
   },
-  "shortDesc": "Boosts the user's Attack and Defense stats by 1 stage.",
+  "shortDesc": "Raises the user's Attack and Defense by 1.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -1196,7 +1196,7 @@
    }
   },
   "type": "Ground",
-  "shortDesc": "Lowers targets’ Speed stats by 1 stage. When Grassy Terrain is active, this move’s power is halved.",
+  "shortDesc": "100% chance lower adjacent Pkmn Speed by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -1212,7 +1212,7 @@
   "pp": 30,
   "priority": 1,
   "type": "Steel",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [
    "contact",
    "punch"
@@ -1241,7 +1241,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks 2 to 5 times in a row.",
+  "shortDesc": "Hits 2-5 times in one turn.",
   "flags": [
    "bullet"
   ],
@@ -1262,7 +1262,7 @@
    "chance": 100
   },
   "type": "Fire",
-  "shortDesc": "Burns targets if their stats were boosted during the turn this move is used.",
+  "shortDesc": "100% burns a target that had a stat rise this turn.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -1279,7 +1279,7 @@
   "priority": 0,
   "self": {},
   "type": "Fire",
-  "shortDesc": "The user loses the Fire type. Cures the user of being frozen. This move fails unless it is used by a Fire type.",
+  "shortDesc": "User's Fire type becomes typeless; must be Fire.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -1300,7 +1300,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Sp. Atk and Sp.Def statsby 1 stage.",
+  "shortDesc": "Raises the user's Sp. Atk and Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -1317,7 +1317,7 @@
   "priority": 0,
   "secondary": {},
   "type": "Dark",
-  "shortDesc": "Gives the opponent's side the Spikes status, where Pokémon that are not Flying-types or have the Levitate ability that switch into battle will take damage equal to 1/8 of their max HP and will increase with each instance up to three times.",
+  "shortDesc": "Sets a layer of Spikes on the opposing side.",
   "flags": [
    "contact",
    "slicing"
@@ -1348,7 +1348,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Boosts the user's Sp. Def stat by 1 stage. The user gains the Electric Boost status, where the power of the Pokémon's next Electric-type move will be doubled.",
+  "shortDesc": "+1 SpD, user's next Electric move 2x power.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -1372,7 +1372,7 @@
    }
   },
   "type": "Electric",
-  "shortDesc": "Has a 70% chance of boosting the user's Sp. Atk stat by 1 stage.",
+  "shortDesc": "70% chance to raise the user's Sp. Atk by 1.",
   "flags": [],
   "effectCategories": [
    "stat_increase_attacker"
@@ -1396,7 +1396,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Lowers the target's Attack stat by 2 stages.",
+  "shortDesc": "Lowers the target's Attack by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -1418,7 +1418,7 @@
    }
   },
   "type": "Water",
-  "shortDesc": "Lowers the target's Attack stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Attack by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -1440,7 +1440,7 @@
    "onBeforeMovePriority": 100
   },
   "type": "Ice",
-  "shortDesc": "Summons snow for 5 turns. The user switches out of battle to be replaced by another party Pokémon.",
+  "shortDesc": "Starts Snow. User switches out.",
   "flags": [],
   "effectCategories": [
    "self_switch",
@@ -1458,7 +1458,7 @@
   "priority": -6,
   "forceSwitch": true,
   "type": "Fighting",
-  "shortDesc": "If there are other Pokémon in the target's party that can switch into battle, the target is forced to switch out of battle and is replaced by one of those Pokémon at random.",
+  "shortDesc": "Forces the target to switch to a random ally.",
   "flags": [
    "contact"
   ],
@@ -1482,7 +1482,7 @@
    }
   },
   "type": "Dragon",
-  "shortDesc": "Lowers the user's Defense stat by 1 stage.",
+  "shortDesc": "Lowers the user's Defense by 1.",
   "flags": [
    "sound"
   ],
@@ -1507,7 +1507,7 @@
    "spe": 1
   },
   "type": "Dragon",
-  "shortDesc": "The user loses 1/3 of its max HP to boost its Attack, Defense, Sp. Atk, Sp. Def, and Speed stats by 1 stage. This move fails if the user doesn't have enough remaining HP.",
+  "shortDesc": "User loses 33% of its max HP. +1 to all stats.",
   "flags": [
    "dance",
    "sound"
@@ -1526,7 +1526,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Poison",
-  "shortDesc": "Removes all stat changes from the target. This move never misses.",
+  "shortDesc": "Resets all of the target's stat stages to 0.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -1546,7 +1546,7 @@
    }
   },
   "type": "Fighting",
-  "shortDesc": "Lowers the user's Defense and Sp. Def stats by 1 stage.",
+  "shortDesc": "Lowers the user's Defense and Sp. Def by 1.",
   "flags": [
    "contact"
   ],
@@ -1568,7 +1568,7 @@
    "def": 1
   },
   "type": "Fighting",
-  "shortDesc": "Boosts allies' Attack and Defense stats by 1 stage.",
+  "shortDesc": "Raises an ally's Attack and Defense by 1.",
   "flags": [],
   "effectCategories": [
    "stat_increase_target"
@@ -1592,7 +1592,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Attack and Defense stats as well as its accuracy by 1 stage.",
+  "shortDesc": "Raises user's Attack, Defense, accuracy by 1.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -1608,7 +1608,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "The user retaliates to deal 150% of the damage it took from an opponent's move during the turn this move is used.",
+  "shortDesc": "If hit by an attack, returns 1.5x damage.",
   "flags": [
    "contact"
   ],
@@ -1652,7 +1652,7 @@
     "accuracy": 1
    }
   },
-  "shortDesc": "The user mimics the move that was last used. This move fails if no other move has been used yet.",
+  "shortDesc": "Uses the last move used in the battle.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -1666,7 +1666,7 @@
   "pp": 40,
   "priority": 0,
   "type": "Poison",
-  "shortDesc": "Causes all other Pokémon on the field to lose their held items.",
+  "shortDesc": "Removes adjacent Pokemon's held items.",
   "flags": [],
   "effectCategories": [],
   "range": "allPokemon"
@@ -1689,7 +1689,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Boosts the user's Defense and Sp. Def stats by 1 stage.",
+  "shortDesc": "Raises the user's Defense and Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -1711,7 +1711,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Defense stat by 3 stages.",
+  "shortDesc": "Raises the user's Defense by 3.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -1733,7 +1733,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Lowers targets' Speed stats by 2 stages.",
+  "shortDesc": "Lowers the target's Speed by 2.",
   "flags": [
    "powder"
   ],
@@ -1759,7 +1759,7 @@
   "maxMove": {
    "basePower": 75
   },
-  "shortDesc": "The user retaliates to deal double the damage it took from an opponent’s physical move during the turn this move is used.",
+  "shortDesc": "If hit by physical attack, returns double damage.",
   "flags": [
    "contact"
   ],
@@ -1778,7 +1778,7 @@
   "pp": 25,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "f the user is not already holding an item, it steals the target's held item.",
+  "shortDesc": "If the user has no item, it steals the target's.",
   "flags": [
    "contact"
   ],
@@ -1795,7 +1795,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Water",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "contact"
   ],
@@ -1814,7 +1814,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Fighting",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "contact"
   ],
@@ -1837,7 +1837,7 @@
   },
   "critRatio": 2,
   "type": "Poison",
-  "shortDesc": "Has a 10% chance of poisoning the target. This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio. 10% chance to poison.",
   "flags": [
    "contact",
    "slicing"
@@ -1863,7 +1863,7 @@
    }
   },
   "type": "Dark",
-  "shortDesc": "Has a 20% chance of lowering the target's Defense stat by 1 stage.",
+  "shortDesc": "20% chance to lower the target's Defense by 1.",
   "flags": [
    "bite",
    "contact"
@@ -1888,7 +1888,7 @@
    }
   },
   "type": "Normal",
-  "shortDesc": "Has a 50% chance of lowering the target's Defense stat by 1 stage.",
+  "shortDesc": "50% chance to lower the target's Defense by 1.",
   "flags": [
    "contact",
    "slicing"
@@ -1915,7 +1915,7 @@
   "zMove": {
    "effect": "curse"
   },
-  "shortDesc": "Lowers the user's Speed stat by 1 stage and boosts its Attack and Defense stats by 1 stage.",
+  "shortDesc": "Curses if Ghost, else -1 Spe, +1 Atk, +1 Def.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -1931,7 +1931,7 @@
   "ignoreEvasion": true,
   "ignoreDefensive": true,
   "type": "Dark",
-  "shortDesc": "This move ignores the target's stat changes when dealing damage.",
+  "shortDesc": "Ignores the target's stat stage changes.",
   "flags": [
    "contact"
   ],
@@ -1951,7 +1951,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Dark",
-  "shortDesc": "Has a 20% chance of making the target flinch.",
+  "shortDesc": "20% chance to make the target flinch.",
   "flags": [
    "pulse"
   ],
@@ -1969,7 +1969,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Fairy",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect. Hits adjacent foes.",
   "flags": [],
   "effectCategories": [],
   "range": "allOpponents"
@@ -1987,7 +1987,7 @@
    "spa": 2
   },
   "type": "Fairy",
-  "shortDesc": "Boosts the target's Attack and Sp. Atk stats by 2 stages.",
+  "shortDesc": "Raises the target's Attack and Sp. Atk by 2.",
   "flags": [],
   "effectCategories": [
    "stat_increase_target"
@@ -2008,7 +2008,7 @@
     "accuracy": 1
    }
   },
-  "shortDesc": "Lowers the target's evasiveness by 1 stage. Removes statuses such as Reflect, Spikes, and Safeguard, as well as any terrain.",
+  "shortDesc": "-1 evasion; ends user and target hazards/terrain.",
   "flags": [],
   "effectCategories": [
    "hazard_remove",
@@ -2033,7 +2033,7 @@
   "zMove": {
    "effect": "redirect"
   },
-  "shortDesc": "The user gains the Destiny Bound status, where if the Pokémon is knocked out by an opponent, that opponent will also be knocked out. This move fails if used in succession.",
+  "shortDesc": "If an opponent knocks out the user, it also faints.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -2054,7 +2054,7 @@
     "evasion": 1
    }
   },
-  "shortDesc": "The user protects itself from incoming moves for the turn. With each consecutive use, this move's chance of success becomes 1/3 of what it was before.",
+  "shortDesc": "Prevents moves from affecting the user this turn.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -2074,7 +2074,7 @@
    "duration": 2
   },
   "type": "Ground",
-  "shortDesc": "The user gains the Underground status on the turn this move is used, then attacks on the following turn.",
+  "shortDesc": "Digs underground turn 1, strikes turn 2.",
   "flags": [
    "contact"
   ],
@@ -2093,7 +2093,7 @@
    "chance": 30
   },
   "type": "Poison",
-  "shortDesc": "Has a 30% chance of leaving the target poisoned, paralyzed, or asleep.",
+  "shortDesc": "30% chance to sleep, poison, or paralyze target.",
   "flags": [
    "contact",
    "slicing"
@@ -2122,7 +2122,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Gives the target the Move Disabled status for 4 turns, where the Pokémon cannot use whichever move it last used before getting the status.",
+  "shortDesc": "For 4 turns, disables the target's last move used.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -2140,7 +2140,7 @@
    "status": "par"
   },
   "type": "Electric",
-  "shortDesc": "Has a 30% chance of paralyzing targets.",
+  "shortDesc": "30% chance to paralyze adjacent Pokemon.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -2159,7 +2159,7 @@
    "duration": 2
   },
   "type": "Water",
-  "shortDesc": "The user gains the Submerged status on the turn this move is used, where the Pokémon cannot be hit by most moves and is unaffected by terrain, then attacks on the following turn.",
+  "shortDesc": "Dives underwater turn 1, strikes turn 2.",
   "flags": [
    "contact"
   ],
@@ -2179,7 +2179,7 @@
    100
   ],
   "type": "Normal",
-  "shortDesc": "The user takes 1/3 of the damage dealt by this move.",
+  "shortDesc": "Has 33% recoil.",
   "flags": [
    "contact"
   ],
@@ -2204,7 +2204,7 @@
   "maxMove": {
    "basePower": 120
   },
-  "shortDesc": "The user attacks twice in a row.",
+  "shortDesc": "Hits 2 times in one turn.",
   "flags": [
    "contact"
   ],
@@ -2246,7 +2246,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's evasiveness by 1 stage.",
+  "shortDesc": "Raises the user's evasiveness by 1.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -2267,7 +2267,7 @@
    }
   },
   "type": "Dragon",
-  "shortDesc": "Lowers the user's Sp. Atk stat by 2 stages.",
+  "shortDesc": "Lowers the user's Sp. Atk by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_attacker"
@@ -2285,7 +2285,7 @@
   "volatileStatus": "dragoncheer",
   "condition": {},
   "type": "Dragon",
-  "shortDesc": "Gives allies a Critical-Hit Ratio Boost. Dragon types receive a 2-stage boost. All other types receive a 1-stage boost.",
+  "shortDesc": "Ally: Crit ratio +1, or +2 if ally is Dragon type.",
   "flags": [
    "sound"
   ],
@@ -2301,7 +2301,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Dragon",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact",
    "slicing"
@@ -2325,7 +2325,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Attack and Speed stats by 1 stage.",
+  "shortDesc": "Raises the user's Attack and Speed by 1.",
   "flags": [
    "dance"
   ],
@@ -2348,7 +2348,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks twice in a row. Ifthere are 2 opposing Pokémon, each of them is attacked once.",
+  "shortDesc": "Hits twice. Doubles: Tries to hit each foe once.",
   "flags": [],
   "effectCategories": [
    "multi_hit"
@@ -2364,7 +2364,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Dragon",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "pulse"
   ],
@@ -2384,7 +2384,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Dragon",
-  "shortDesc": "Has a 20% chance of making the target flinch. If the target has the Minimized status, this move's power is doubled and it will be sure to hit.",
+  "shortDesc": "20% chance to make the target flinch.",
   "flags": [
    "contact"
   ],
@@ -2403,7 +2403,7 @@
   "priority": -6,
   "forceSwitch": true,
   "type": "Dragon",
-  "shortDesc": "If there are other Pokémon in the target's party that can switch into battle, the target is forced to switch out of battle and is replaced by one of those Pokémon at random.",
+  "shortDesc": "Forces the target to switch to a random ally.",
   "flags": [
    "contact"
   ],
@@ -2426,7 +2426,7 @@
    4
   ],
   "type": "Fairy",
-  "shortDesc": "The user's HP is restored by 3/4 of the damage dealt by this move.",
+  "shortDesc": "User recovers 75% of the damage dealt.",
   "flags": [
    "contact",
    "heal"
@@ -2447,7 +2447,7 @@
    2
   ],
   "type": "Fighting",
-  "shortDesc": "The user's HP is restored by 1/20f the damage dealt by this move.",
+  "shortDesc": "User recovers 50% of the damage dealt.",
   "flags": [
    "contact",
    "heal",
@@ -2465,7 +2465,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Flying",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact"
   ],
@@ -2482,7 +2482,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Ground",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "contact"
   ],
@@ -2504,7 +2504,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks twice in a row.",
+  "shortDesc": "Hits 2 times in one turn.",
   "flags": [
    "contact"
   ],
@@ -2526,7 +2526,7 @@
    "volatileStatus": "confusion"
   },
   "type": "Fighting",
-  "shortDesc": "Confuses the target.",
+  "shortDesc": "100% chance to confuse the target.",
   "flags": [
    "contact",
    "punch"
@@ -2551,7 +2551,7 @@
    }
   },
   "type": "Ground",
-  "shortDesc": "Has a 10% chance of lowering the target’s Sp. Def stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -2567,7 +2567,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Ground",
-  "shortDesc": "This move’s power is doubled against targets that have the Underground status. When Grassy Terrain is active, this move’s power is halved.",
+  "shortDesc": "Hits adjacent Pokemon. Double damage on Dig.",
   "flags": [],
   "effectCategories": [],
   "range": "allPokemon"
@@ -2589,7 +2589,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Lowers the target's Sp. Atk stat by 2 stages.",
+  "shortDesc": "Lowers the target's Sp. Atk by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -2608,7 +2608,7 @@
    "chance": 100
   },
   "type": "Psychic",
-  "shortDesc": "Removes 3 PP from the move last used by the target.",
+  "shortDesc": "Removes 3 PP from the target's last move.",
   "flags": [
    "sound"
   ],
@@ -2637,7 +2637,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Turns the entire field into Electric Terrain for 5 turns, where anyone on the ground have their Electric-type moves boosted by 30% and they cannot fall asleep.",
+  "shortDesc": "5 turns. Grounded: +Electric power, can't sleep.",
   "flags": [],
   "effectCategories": [
    "terrain"
@@ -2663,7 +2663,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "If this move hits the target before it uses a move, its move becomes Electric type for that turn.",
+  "shortDesc": "Changes the target's move to Electric this turn.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -2684,7 +2684,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The higher the user's Speed stat compared to the target's, the greater this move's power (ranging between 40 and 150).",
+  "shortDesc": "More power the faster the user is than the target.",
   "flags": [
    "bullet"
   ],
@@ -2701,7 +2701,7 @@
   "priority": 0,
   "hasSheerForceBoost": true,
   "type": "Electric",
-  "shortDesc": "The user gains the Charging status, where the Pokémon spends 1 turn charging before using a move, on the turn this move is used, then attacks on the following turn. In rain, the user does not gain the Charging status and can attack immediately. The user's Sp. Atk stat is boosted by 1 stage on the turn this move is used.",
+  "shortDesc": "Raises Sp. Atk by 1, hits turn 2. Rain: no charge.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -2721,7 +2721,7 @@
    }
   },
   "type": "Electric",
-  "shortDesc": "Lowers targets Speed stats by 1 stage.",
+  "shortDesc": "100% chance to lower the foe(s) Speed by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -2744,7 +2744,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Gives the target the Encore status, where the Pokémon can only use whichever move it last used before gaining the status.",
+  "shortDesc": "Target repeats its last move for its next 3 turns.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -2764,7 +2764,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "Deals damage to the target equal to its remaining HP minus the user's remaining HP. This move fails if the target's HP is the same as or lower than the user's.",
+  "shortDesc": "Lowers the target's HP to the user's HP.",
   "flags": [
    "contact"
   ],
@@ -2789,7 +2789,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "During the turn this move is used, if the user takes damage from a move that would knock it out, it will endure the hit with 1 HP. With each consecutive use, this move’s chance of success becomes 1/3 of what it was before.",
+  "shortDesc": "User survives attacks this turn with at least 1 HP.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -2812,7 +2812,7 @@
    }
   },
   "type": "Grass",
-  "shortDesc": "Has a 10% chance of lowering the target’s Sp. Def stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Def by 1.",
   "flags": [
    "bullet"
   ],
@@ -2835,7 +2835,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Changes the target's Ability to be the same as the user's.",
+  "shortDesc": "The target's Ability changes to match the user's.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -2850,7 +2850,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Fire",
-  "shortDesc": "The less HP the user has left, the lower this move's power (ranging between 1 and 150).",
+  "shortDesc": "Less power as user's HP decreases. Hits foe(s).",
   "flags": [],
   "effectCategories": [],
   "range": "allOpponents"
@@ -2864,7 +2864,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Psychic",
-  "shortDesc": "If the user is under the effect of Psychic Terrain, this move's power is boosted by 50% and its range extends to all opponents.",
+  "shortDesc": "User on Psychic Terrain: 1.5x power, hits foes.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -2879,7 +2879,7 @@
   "priority": 0,
   "selfdestruct": "always",
   "type": "Normal",
-  "shortDesc": "The user faints upon using this move.",
+  "shortDesc": "Hits adjacent Pokemon. The user faints.",
   "flags": [],
   "effectCategories": [
    "self_destruct"
@@ -2899,7 +2899,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Psychic",
-  "shortDesc": "Has a 10% chance of making the target flinch.",
+  "shortDesc": "10% chance to make the target flinch.",
   "flags": [],
   "effectCategories": [
    "flinch"
@@ -2915,7 +2915,7 @@
   "pp": 5,
   "priority": 2,
   "type": "Normal",
-  "shortDesc": "—",
+  "shortDesc": "Nearly always goes first.",
   "flags": [
    "contact"
   ],
@@ -2933,7 +2933,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "This move’s power is doubled if the user is poisoned, badly poisoned, burned, or paralyzed. Although this move is a physical move, the damage it deals is not halved when the user is burned.",
+  "shortDesc": "Power doubles if user is burn/poison/paralyzed.",
   "flags": [
    "contact"
   ],
@@ -2958,7 +2958,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Gives all Pokémon on the field the Fairy Locked status, where no Pokemon on the field can be switched out of battle until the end of the next turn after the status is activated",
+  "shortDesc": "Prevents all Pokemon from switching next turn.",
   "flags": [],
   "effectCategories": [
    "room",
@@ -2979,7 +2979,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Normal",
-  "shortDesc": "Makes the target flinch. This move fails unless it is the first move used by the user after it enters a battle.",
+  "shortDesc": "Hits first. First turn out only. 100% flinch chance.",
   "flags": [
    "contact"
   ],
@@ -3006,7 +3006,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Lowers the target's Sp. Def stat by 2 stages.",
+  "shortDesc": "Lowers the target's Sp. Def by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -3030,7 +3030,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Lowers the target's Attack stat by 2 stages.",
+  "shortDesc": "Lowers the target's Attack by 2.",
   "flags": [
    "dance"
   ],
@@ -3049,7 +3049,7 @@
   "priority": 2,
   "breaksProtect": true,
   "type": "Normal",
-  "shortDesc": "This move can hit a target using a move such as Protect or Detect and removes the effects of those moves.",
+  "shortDesc": "Nullifies Detect, Protect, and Quick/Wide Guard.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -3066,7 +3066,7 @@
   "pp": 25,
   "priority": 0,
   "type": "Bug",
-  "shortDesc": "Boosts the user's Attack stat by 3 stages if this move knocks out the target.",
+  "shortDesc": "Raises user's Attack by 3 if this KOes the target.",
   "flags": [
    "contact"
   ],
@@ -3082,7 +3082,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Dragon",
-  "shortDesc": "This move has a 30% chance of its power being doubled.",
+  "shortDesc": "Has a 30% chance this move's power is doubled.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3104,7 +3104,7 @@
    }
   },
   "type": "Fire",
-  "shortDesc": "Has a 50% chance of boosting the user's Sp. Atk stat by 1 stage.",
+  "shortDesc": "50% chance to raise the user's Sp. Atk by 1.",
   "flags": [
    "dance"
   ],
@@ -3126,7 +3126,7 @@
   "zMove": {
    "basePower": 180
   },
-  "shortDesc": "The user faints. This move deals damage to the target equal to the user's remaining HP at the time this move was used.",
+  "shortDesc": "Does damage equal to the user's HP. User faints.",
   "flags": [],
   "effectCategories": [
    "self_destruct"
@@ -3146,7 +3146,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Has a 10% chance of burning the target.",
+  "shortDesc": "10% chance to burn the target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -3172,7 +3172,7 @@
    }
   ],
   "type": "Fire",
-  "shortDesc": "Has a 10% chance of burning the target and a 10% chance of making the target flinch.",
+  "shortDesc": "10% chance to burn. 10% chance to flinch.",
   "flags": [
    "bite",
    "contact"
@@ -3198,7 +3198,7 @@
    }
   },
   "type": "Fire",
-  "shortDesc": "Lowers the target's Defense stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Defense by 1.",
   "flags": [
    "contact"
   ],
@@ -3220,7 +3220,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Has a 10% chance of burning the target.",
+  "shortDesc": "10% chance to burn the target.",
   "flags": [
    "contact",
    "punch"
@@ -3240,7 +3240,7 @@
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Fire",
-  "shortDesc": "Gives the target the Bound status, where the Pokémon takes 1/8 damage of its max HP at the end of every turn and it cannot switch out.",
+  "shortDesc": "Traps and damages the target for 4-5 turns.",
   "flags": [],
   "effectCategories": [
    "periodic_effect",
@@ -3257,7 +3257,7 @@
   "pp": 10,
   "priority": 2,
   "type": "Bug",
-  "shortDesc": "This move fails unless it is the first move used by the user after it enters a battle.",
+  "shortDesc": "Nearly always goes first. First turn out only.",
   "flags": [
    "contact"
   ],
@@ -3282,7 +3282,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "Knocks out the target. The accuracy of this move is fixed at 30%.",
+  "shortDesc": "OHKOs the target. Fails if user is a lower level.",
   "flags": [],
   "effectCategories": [
    "ohko"
@@ -3305,7 +3305,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The less HP the user has left, the greater this move's power (ranging between 20 and 200).",
+  "shortDesc": "More power the less HP the user has left.",
   "flags": [
    "contact"
   ],
@@ -3329,7 +3329,7 @@
    }
   },
   "type": "Fire",
-  "shortDesc": "Boosts the user's Speed stat by 1 stage.",
+  "shortDesc": "100% chance to raise the user's Speed by 1.",
   "flags": [
    "contact"
   ],
@@ -3351,7 +3351,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Has a 10% chance of burning the target.",
+  "shortDesc": "10% chance to burn the target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -3375,7 +3375,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Has a 10% chance of burning the target. Cures the user of being frozen. The user also takes 1/3 of the damage dealt by this move.",
+  "shortDesc": "Has 33% recoil. 10% chance to burn. Thaws user.",
   "flags": [
    "contact"
   ],
@@ -3400,7 +3400,7 @@
    }
   },
   "type": "Steel",
-  "shortDesc": "Has a 10% chance of lowering the target's Sp. Def stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -3425,7 +3425,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Boosts the target's Sp. Atk statbyl stage and confuses it.",
+  "shortDesc": "Raises the target's Sp. Atk by 1 and confuses it.",
   "flags": [],
   "effectCategories": [
    "confuse",
@@ -3443,7 +3443,7 @@
   "priority": 0,
   "condition": {},
   "type": "Dark",
-  "shortDesc": "This move's power and effects depend on the user's held item. The held item is lost after this move is used.",
+  "shortDesc": "Flings the user's item at the target. Power varies.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3458,7 +3458,7 @@
   "priority": 0,
   "selfSwitch": true,
   "type": "Water",
-  "shortDesc": "After attacking, the user switches out of battle to be replaced by another party Pokémon.",
+  "shortDesc": "User switches out after damaging the target.",
   "flags": [
    "contact"
   ],
@@ -3477,7 +3477,7 @@
   "priority": 0,
   "willCrit": true,
   "type": "Grass",
-  "shortDesc": "This move never misses and is always a critical hit.",
+  "shortDesc": "Always results in a critical hit; no accuracy check.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3494,7 +3494,7 @@
    "duration": 2
   },
   "type": "Flying",
-  "shortDesc": "The user gains the Sky-High status on the turn this move is used, where the Pokémon cannot be hit my most moves and is unaffected by terrain, then attacks on the following turn.",
+  "shortDesc": "Flies up on first turn, then strikes the next turn.",
   "flags": [
    "contact"
   ],
@@ -3513,7 +3513,7 @@
   "zMove": {
    "basePower": 170
   },
-  "shortDesc": "The damage dealt by this move is calculated by combining the effectiveness of the move's own type with that of the Flying type. If the target has the Minimized status, this move's power is doubled and it will be sure to hit.",
+  "shortDesc": "Combines Flying in its type effectiveness.",
   "flags": [
    "contact"
   ],
@@ -3535,7 +3535,7 @@
    }
   },
   "type": "Fighting",
-  "shortDesc": "Has a 10% chance of lowering the target's Sp. Def stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Def by 1.",
   "flags": [
    "bullet"
   ],
@@ -3560,7 +3560,7 @@
     "accuracy": 1
    }
   },
-  "shortDesc": "The user gains a 2-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "Raises the user's critical hit ratio by 2.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -3577,7 +3577,7 @@
    "duration": 1
   },
   "type": "Fighting",
-  "shortDesc": "This move fails if the user has already taken damage from a move in the same turn.",
+  "shortDesc": "Fails if the user takes damage before it hits.",
   "flags": [
    "contact",
    "punch"
@@ -3604,7 +3604,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The user redirects opponents' moves toward itself. This effect works only on single-target moves.",
+  "shortDesc": "The foes' moves target the user on the turn used.",
   "flags": [],
   "effectCategories": [
    "priority"
@@ -3629,7 +3629,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Gives the target the Forest Cursed status, where the target gains a Grass typing.",
+  "shortDesc": "Adds Grass to the target's type(s).",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3644,7 +3644,7 @@
   "priority": 0,
   "overrideOffensivePokemon": "target",
   "type": "Dark",
-  "shortDesc": "The damage dealt by this move is calculated using the target's Attack stat instead of the user's Attack stat.",
+  "shortDesc": "Uses target's Attack stat in damage calculation.",
   "flags": [
    "contact"
   ],
@@ -3662,7 +3662,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Ice",
-  "shortDesc": "This move is also super effective against Water-type Pokemon.",
+  "shortDesc": "Super effective on Water.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3679,7 +3679,7 @@
    "volatileStatus": "mustrecharge"
   },
   "type": "Grass",
-  "shortDesc": "The user gains the Recharging status on the turn after this move is used, where the user cannot take any actions for 1 turn.",
+  "shortDesc": "User cannot move next turn.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3694,7 +3694,7 @@
   "priority": 0,
   "willCrit": true,
   "type": "Ice",
-  "shortDesc": "Always a critical hit.",
+  "shortDesc": "Always results in a critical hit.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3709,7 +3709,7 @@
   "priority": 0,
   "ignoreImmunity": true,
   "type": "Psychic",
-  "shortDesc": "Gives the target the Future Attack status, where the Pokémon in the targeted spot will take damage 2 turns after the status is activated.",
+  "shortDesc": "Hits two turns after being used.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3730,7 +3730,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Gives the target the No Ability status, where the Pokémon's ability loses its effect.",
+  "shortDesc": "Nullifies the target's Ability.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3748,7 +3748,7 @@
    2
   ],
   "type": "Grass",
-  "shortDesc": "The user's HP is restored by 1/2 of the damage dealt by this move.",
+  "shortDesc": "User recovers 50% of the damage dealt.",
   "flags": [
    "heal"
   ],
@@ -3767,7 +3767,7 @@
    "volatileStatus": "mustrecharge"
   },
   "type": "Normal",
-  "shortDesc": "The user gains the Recharging status on the turn after this move is used, where the user cannot take any actions for 1 turn.",
+  "shortDesc": "User cannot move next turn.",
   "flags": [
    "contact"
   ],
@@ -3783,7 +3783,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Steel",
-  "shortDesc": "This move can't be used twice in a row.",
+  "shortDesc": "Cannot be selected the turn after it's used.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3826,7 +3826,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The heavier the target, the greater this move’s power (ranging between 20 and 120).",
+  "shortDesc": "More power the heavier the target.",
   "flags": [
    "contact"
   ],
@@ -3844,7 +3844,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Grass",
-  "shortDesc": "If the user is under the effect of Grassy Terrain, this move’s priority becomes +1.",
+  "shortDesc": "User on Grassy Terrain: +1 priority.",
   "flags": [
    "contact"
   ],
@@ -3875,7 +3875,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Turns the entire field into Grassy Terrain for 5 turns, where anyone on the ground have the power of their Grass-type moves boosted by 30% and they have 1/16 of their max HP restored at the end of every turn.",
+  "shortDesc": "5 turns. Grounded: +Grass power, +1/16 max HP.",
   "flags": [],
   "effectCategories": [
    "terrain"
@@ -3897,7 +3897,7 @@
    }
   },
   "type": "Grass",
-  "shortDesc": "Lowers the target's Defense stat by 1 stage. This move's power is boosted by 50% when the Gravity status is active.",
+  "shortDesc": "Target: 100% -1 Def. During Gravity: 1.5x power.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -3925,7 +3925,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Gives the entire field the Gravity status for 5 turns. Gravity boosts the accuracy of moves by 67%, Pokémon such as Flying types or ones with the Levitate ability become grounded, and moves that involve flying or leaping cannot be used.",
+  "shortDesc": "5 turns: no Ground immunities, 1.67x accuracy.",
   "flags": [],
   "effectCategories": [
    "room"
@@ -3950,7 +3950,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Boosts the user's Attack and Sp. Atk stats by 1 stage. In harsh sunlight, these stats will be boosted by 2 stages instead.",
+  "shortDesc": "Raises user's Attack and Sp. Atk by 1; 2 in Sun.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -3971,7 +3971,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "The user adds its Defense stat to the target's Defense stat, then splits the total in half for them to share. It does the same with each of their Sp. Def stats.",
+  "shortDesc": "Averages Defense and Sp. Def stats with target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -3990,7 +3990,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "The user swaps the changes to its Defense and Sp. Def stats with the changes to the target's Defense and Sp. Def stats.",
+  "shortDesc": "Swaps Defense and Sp. Def changes with target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -4011,7 +4011,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "Knocks out the target. The accuracy of this move is fixed at 30%.",
+  "shortDesc": "OHKOs the target. Fails if user is a lower level.",
   "flags": [
    "contact"
   ],
@@ -4033,7 +4033,7 @@
    "status": "psn"
   },
   "type": "Poison",
-  "shortDesc": "Has a 30% chance of poisoning the target.",
+  "shortDesc": "30% chance to poison the target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -4056,7 +4056,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The lower the user's Speed stat compared to the target's, the greater this move's power (ranging between 1 and 150).",
+  "shortDesc": "More power the slower the user than the target.",
   "flags": [
    "bullet",
    "contact"
@@ -4078,7 +4078,7 @@
    }
   },
   "type": "Fighting",
-  "shortDesc": "Lowers the user's Speed stat by 1 stage.",
+  "shortDesc": "Lowers the user's Speed by 1.",
   "flags": [
    "contact",
    "punch"
@@ -4098,7 +4098,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Steel",
-  "shortDesc": "The more HP the target has left, the greater this move's power (ranging between 1 and 100).",
+  "shortDesc": "More power the more HP the target has left.",
   "flags": [
    "contact"
   ],
@@ -4117,7 +4117,7 @@
   "zMove": {
    "effect": "heal"
   },
-  "shortDesc": "Eliminates every stat change on the entire field.",
+  "shortDesc": "Eliminates all stat changes.",
   "flags": [],
   "effectCategories": [],
   "range": "entireField"
@@ -4137,7 +4137,7 @@
    }
   },
   "type": "Ground",
-  "shortDesc": "Lowers the user's Defense and Sp. Def stats by 1 stage.",
+  "shortDesc": "Lowers the user's Defense and Sp. Def by 1.",
   "flags": [
    "contact",
    "punch"
@@ -4160,7 +4160,7 @@
    2
   ],
   "type": "Rock",
-  "shortDesc": "The user takes 1/2 of the damage dealt by this move.",
+  "shortDesc": "Has 1/2 recoil.",
   "flags": [
    "contact"
   ],
@@ -4181,7 +4181,7 @@
   "zMove": {
    "effect": "heal"
   },
-  "shortDesc": "The user cures the status conditions of all the Pokémon in its party, including itself, as well as its allies.",
+  "shortDesc": "Cures the user's party of all status conditions.",
   "flags": [
    "sound"
   ],
@@ -4200,7 +4200,7 @@
   "slotCondition": "healingwish",
   "condition": {},
   "type": "Psychic",
-  "shortDesc": "The user faints. The Pokémon taking its place will have its HP fully restored and its status conditions cured.",
+  "shortDesc": "User faints. Next hurt Pokemon is fully healed.",
   "flags": [
    "heal"
   ],
@@ -4221,7 +4221,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Restores 1/2 of the target's max HP.",
+  "shortDesc": "Heals the target by 50% of its max HP.",
   "flags": [
    "heal",
    "pulse"
@@ -4245,7 +4245,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The more the user outweighs the target, the greater this move’s power (ranging between 40 and 120). If the target has the Minimized status, this move’s power is doubled and it will be sure to hit.",
+  "shortDesc": "More power the heavier the user than the target.",
   "flags": [
    "contact"
   ],
@@ -4267,7 +4267,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Has a 10% chance of burning targets.",
+  "shortDesc": "10% chance to burn the foe(s).",
   "flags": [
    "wind"
   ],
@@ -4292,7 +4292,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The more the user outweighs the target, the greater this move's power (ranging between 40 and 120). If the target has the Minimized status, this move's power is doubled and it will be sure to hit.",
+  "shortDesc": "More power the heavier the user than the target.",
   "flags": [
    "contact"
   ],
@@ -4318,7 +4318,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the power of an ally’s move by 50% during the turn this move is used.",
+  "shortDesc": "One adjacent ally's move power is 1.5x this turn.",
   "flags": [],
   "effectCategories": [
    "priority"
@@ -4338,7 +4338,7 @@
   "zMove": {
    "basePower": 160
   },
-  "shortDesc": "This move's power is doubled ifthe target has a status condition.",
+  "shortDesc": "Power doubles if the target has a status ailment.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -4352,7 +4352,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Ground",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact"
   ],
@@ -4369,7 +4369,7 @@
   "priority": 0,
   "hasCrashDamage": true,
   "type": "Fighting",
-  "shortDesc": "If this move misses or fails, the user takes damage equal to 1/2 of its max HP.",
+  "shortDesc": "User is hurt by 50% of its max HP if it misses.",
   "flags": [
    "contact"
   ],
@@ -4394,7 +4394,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "Knocks out the target. The accuracy of this move is fixed at 30%.",
+  "shortDesc": "OHKOs the target. Fails if user is a lower level.",
   "flags": [
    "contact"
   ],
@@ -4416,7 +4416,7 @@
    2
   ],
   "type": "Grass",
-  "shortDesc": "The user's HP is restored by 1/2 of the damage dealt by this move.",
+  "shortDesc": "User recovers 50% of the damage dealt.",
   "flags": [
    "contact",
    "heal"
@@ -4441,7 +4441,7 @@
     "atk": 1
    }
   },
-  "shortDesc": "Boosts the Attack stats of the user and its allies by 1 stage.",
+  "shortDesc": "Raises the user's and ally's Attack by 1.",
   "flags": [
    "sound"
   ],
@@ -4463,7 +4463,7 @@
    "volatileStatus": "confusion"
   },
   "type": "Flying",
-  "shortDesc": "Has a 30% chance of confusing the target. This move never misses in rain and can hit a target that has the Sky-High status.",
+  "shortDesc": "30% chance to confuse target. Can't miss in rain.",
   "flags": [
    "wind"
   ],
@@ -4484,7 +4484,7 @@
    "volatileStatus": "mustrecharge"
   },
   "type": "Water",
-  "shortDesc": "The user gains the Recharging status on the turn after this move is used, where the user cannot take any actions for 1 turn.",
+  "shortDesc": "User cannot move next turn.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -4498,7 +4498,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Water",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -4515,7 +4515,7 @@
    "volatileStatus": "mustrecharge"
   },
   "type": "Normal",
-  "shortDesc": "The user gains the Recharging status on the turn after this move is used, where the user cannot take any actions for 1 turn.",
+  "shortDesc": "User cannot move next turn.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -4529,7 +4529,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect. Hits adjacent foes.",
   "flags": [
    "sound"
   ],
@@ -4551,7 +4551,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Puts the target to sleep.",
+  "shortDesc": "Causes the target to fall asleep.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -4571,7 +4571,7 @@
    "status": "frz"
   },
   "type": "Ice",
-  "shortDesc": "Has a 10% chance of freezing the target.",
+  "shortDesc": "10% chance to freeze the target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -4597,7 +4597,7 @@
    }
   ],
   "type": "Ice",
-  "shortDesc": "Has a 10% chance of freezing the target and a 10% chance of making the target flinch.",
+  "shortDesc": "10% chance to freeze. 10% chance to flinch.",
   "flags": [
    "bite",
    "contact"
@@ -4622,7 +4622,7 @@
    }
   },
   "type": "Ice",
-  "shortDesc": "Lowers the user's Speed stat by 1 stage.",
+  "shortDesc": "Lowers the user's Speed by 1.",
   "flags": [
    "contact",
    "punch"
@@ -4645,7 +4645,7 @@
    "status": "frz"
   },
   "type": "Ice",
-  "shortDesc": "Has a 10% chance of freezing the target.",
+  "shortDesc": "10% chance to freeze the target.",
   "flags": [
    "contact",
    "punch"
@@ -4664,7 +4664,7 @@
   "pp": 30,
   "priority": 1,
   "type": "Ice",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [],
   "effectCategories": [
    "priority"
@@ -4680,7 +4680,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Ice",
-  "shortDesc": "Removes any terrain.",
+  "shortDesc": "Ends the effects of terrain.",
   "flags": [
    "contact"
   ],
@@ -4700,7 +4700,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Ice",
-  "shortDesc": "Has a 30% chance of making the target flinch.",
+  "shortDesc": "30% chance to make the target flinch.",
   "flags": [],
   "effectCategories": [
    "flinch"
@@ -4726,7 +4726,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks 2 to 5 times in a row.",
+  "shortDesc": "Hits 2-5 times in one turn.",
   "flags": [],
   "effectCategories": [
    "multi_hit"
@@ -4748,7 +4748,7 @@
    }
   },
   "type": "Ice",
-  "shortDesc": "Lowers targets' Speed stats by 1 stage.",
+  "shortDesc": "100% chance to lower the foe(s) Speed by 1.",
   "flags": [
    "wind"
   ],
@@ -4776,7 +4776,7 @@
     "spd": 2
    }
   },
-  "shortDesc": "The user gains the Sealing Off status, where any moves known by the Pokémon that caused this status cannot be used by its opponents.",
+  "shortDesc": "No foe can use any move known by the user.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -4795,7 +4795,7 @@
    "status": "brn"
   },
   "type": "Ghost",
-  "shortDesc": "Has a 30% chance of burning the target. This move's power is doubled if the target has a status condition.",
+  "shortDesc": "30% burn. 2x power if target is already statused.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -4815,7 +4815,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Burns the target.",
+  "shortDesc": "100% chance to burn the target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -4832,7 +4832,7 @@
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Bug",
-  "shortDesc": "Gives the target the Bound status, where the Pokémon takes 1/8 damage of its max HP at the end of every turn and it cannot switch out.",
+  "shortDesc": "Traps and damages the target for 4-5 turns.",
   "flags": [
    "contact"
   ],
@@ -4860,7 +4860,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "The user gains the Ingrained status, where the Pokémon has 1/16 of its max HP restored at the end of every turn and becomes grounded and cannot be switched out of battle.",
+  "shortDesc": "Traps/grounds user; heals 1/16 max HP per turn.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -4879,7 +4879,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "The user makes the target reuse the last move it used.",
+  "shortDesc": "The target immediately uses its last used move.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -4899,7 +4899,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Defense stat by 2 stages.",
+  "shortDesc": "Raises the user's Defense by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -4919,7 +4919,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Steel",
-  "shortDesc": "Has a 20% chance of making the target flinch.",
+  "shortDesc": "20% chance to make the target flinch.",
   "flags": [
    "contact"
   ],
@@ -4943,7 +4943,7 @@
    }
   },
   "type": "Steel",
-  "shortDesc": "Has a 30% chance of lowering the target's Defense stat by 1 stage.",
+  "shortDesc": "30% chance to lower the target's Defense by 1.",
   "flags": [
    "contact"
   ],
@@ -4961,7 +4961,7 @@
   "pp": 15,
   "priority": 1,
   "type": "Water",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [
    "contact",
    "punch"
@@ -4989,7 +4989,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The user protects itself from incoming attacks for the turn and changes into its Shield Forme. Any attackers that use contact moves against the user during this turn will have their Attack stats lowered by 1 stage. With each consecutive use, this move's chance of success becomes 1/3 of what it was before.",
+  "shortDesc": "Protects from damaging attacks. Contact: -1 Atk.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -5006,7 +5006,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "This move’s power is boosted by 50% if the target is holding an item. Causes the target to lose its held item.",
+  "shortDesc": "1.5x damage if foe holds an item. Removes item.",
   "flags": [
    "contact"
   ],
@@ -5022,7 +5022,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "This move never misses.",
+  "shortDesc": "This move does not check accuracy.",
   "flags": [
    "contact",
    "slicing"
@@ -5039,7 +5039,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "This move's power is doubled if the user's stats were lowered during the turn this move is used.",
+  "shortDesc": "2x power if the user had a stat lowered this turn.",
   "flags": [
    "contact"
   ],
@@ -5055,7 +5055,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "This move fails unless the user has already used all the other moves it knows.",
+  "shortDesc": "Fails unless each known move has been used.",
   "flags": [
    "contact"
   ],
@@ -5072,7 +5072,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Ghost",
-  "shortDesc": "This move's power is increased by 50 for each time that a Pokémon in the user's party has fainted.",
+  "shortDesc": "+50 power for each time a party member fainted.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -5090,7 +5090,7 @@
    "status": "brn"
   },
   "type": "Fire",
-  "shortDesc": "Has a 30% chance of burning targets.",
+  "shortDesc": "30% chance to burn adjacent Pokemon.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -5107,7 +5107,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Grass",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "contact",
    "slicing"
@@ -5131,7 +5131,7 @@
    }
   },
   "type": "Grass",
-  "shortDesc": "Lowers the user's Sp. Atk stat by 2 stages.",
+  "shortDesc": "Lowers the user's Sp. Atk by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_attacker"
@@ -5151,7 +5151,7 @@
    2
   ],
   "type": "Bug",
-  "shortDesc": "The user's HP is restored by 1/2 of the damage dealt by this move.",
+  "shortDesc": "User recovers 50% of the damage dealt.",
   "flags": [
    "contact",
    "heal"
@@ -5175,7 +5175,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Gives the target the Leech Seeded status, where Pokémon takes damage equal to 1/16 of its max HP at the end of every turn. Whichever Pokémon is in the spot of the Pokémon that caused the status has its HP restored by the same amount.",
+  "shortDesc": "1/8 of target's HP is restored to user every turn.",
   "flags": [],
   "effectCategories": [
    "periodic_effect"
@@ -5195,7 +5195,7 @@
    4
   ],
   "type": "Water",
-  "shortDesc": "Restores 1/4 of the max HP of the user and its allies.",
+  "shortDesc": "Heals the user and its allies by 1/4 their max HP.",
   "flags": [
    "heal"
   ],
@@ -5215,7 +5215,7 @@
    2
   ],
   "type": "Fairy",
-  "shortDesc": "The user takes 1/2 of the damage dealt by this move.",
+  "shortDesc": "Has 1/2 recoil.",
   "flags": [],
   "effectCategories": [
    "recoil"
@@ -5242,7 +5242,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Gives the user’s side the Light Screen status for 5 turns, where damage taken from special moves are reduced by 1/2 in Singles and 1/3 in Doubles.",
+  "shortDesc": "For 5 turns, special damage to allies is halved.",
   "flags": [],
   "effectCategories": [
    "screen"
@@ -5264,7 +5264,7 @@
    }
   },
   "type": "Water",
-  "shortDesc": "Has a 20% chance of lowering the target's Defense stat by 1 stage.",
+  "shortDesc": "20% chance to lower the target's Defense by 1.",
   "flags": [
    "contact"
   ],
@@ -5292,7 +5292,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "The user gains the Locked On status. On the next turn after gaining the Locked On status, the Pokémon's move will not miss if targeting the Pokémon that was locked onto.",
+  "shortDesc": "User's next move will not miss the target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -5310,7 +5310,7 @@
   "zMove": {
    "basePower": 160
   },
-  "shortDesc": "The heavier the target, the greater this move's power (ranging between 20 and 120).",
+  "shortDesc": "More power the heavier the target.",
   "flags": [
    "contact"
   ],
@@ -5334,7 +5334,7 @@
    }
   },
   "type": "Fighting",
-  "shortDesc": "Lowers the target's Speed stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Speed by 1.",
   "flags": [
    "contact"
   ],
@@ -5358,7 +5358,7 @@
    }
   },
   "type": "Psychic",
-  "shortDesc": "Lowers the target's Sp. Def stat by 2 stages.",
+  "shortDesc": "100% chance to lower the target's Sp. Def by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -5380,7 +5380,7 @@
    }
   },
   "type": "Bug",
-  "shortDesc": "Lowers the target's Attack stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Attack by 1.",
   "flags": [
    "contact"
   ],
@@ -5398,7 +5398,7 @@
   "pp": 30,
   "priority": 1,
   "type": "Fighting",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [
    "contact",
    "punch"
@@ -5444,7 +5444,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Gives the entire field the Magic Room status for 5 turns, where most held items will not work.",
+  "shortDesc": "For 5 turns, all held items have no effect.",
   "flags": [],
   "effectCategories": [
    "room"
@@ -5465,7 +5465,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "If the user or its allies have the Plus Ability or the Minus Ability, their Defense and Sp. Def stats are boosted by 1 stage.",
+  "shortDesc": "Raises Def, Sp. Def of allies with Plus/Minus by 1.",
   "flags": [],
   "effectCategories": [],
   "range": "usersSide"
@@ -5489,7 +5489,7 @@
     "evasion": 1
    }
   },
-  "shortDesc": "The user gains the Magnet Rise status, where it makes the user float off the ground. The Pokemon becomes immuned to Ground-type moves, as well as Spikes and other hazards.",
+  "shortDesc": "For 5 turns, the user has immunity to Ground.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -5512,7 +5512,7 @@
    "status": "brn"
   },
   "type": "Grass",
-  "shortDesc": "Has a 20% chance of burning targets. The user's HP is restored by 1/2 of the damage dealt by this move.",
+  "shortDesc": "20% burn. Recovers 50% dmg dealt. Thaws foe(s).",
   "flags": [
    "heal"
   ],
@@ -5536,7 +5536,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Gives the target the Can't Escape status, where the Pokémon cannot be switched out.",
+  "shortDesc": "Prevents the target from switching out.",
   "flags": [],
   "effectCategories": [
    "trap"
@@ -5552,7 +5552,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Bug",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact"
   ],
@@ -5568,7 +5568,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact"
   ],
@@ -5592,7 +5592,7 @@
   "zMove": {
    "effect": "healreplacement"
   },
-  "shortDesc": "Lowers the target's Attack and Sp. Atk stats by 2 stages. The user faints upon using this move.",
+  "shortDesc": "Lowers target's Attack, Sp. Atk by 2. User faints.",
   "flags": [],
   "effectCategories": [
    "self_destruct",
@@ -5609,7 +5609,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Steel",
-  "shortDesc": "The user retaliates to deal 150% of the damage it took from an opponent's move during the turn this move is used.",
+  "shortDesc": "If hit by an attack, returns 1.5x damage.",
   "flags": [],
   "effectCategories": [],
   "range": "varies"
@@ -5631,7 +5631,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Lowers the target's Sp. Def stat by 2 stages.",
+  "shortDesc": "Lowers the target's Sp. Def by 2.",
   "flags": [
    "sound"
   ],
@@ -5649,7 +5649,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Rock",
-  "shortDesc": "The user gains the Charging status, where the Pokémon spends 1 turn charging before using a move, on the turn this move is used, then attacks on the following turn. The user's Sp. Atk stat is boosted by 1 stage on the turn this move is used.",
+  "shortDesc": "Raises user's Sp. Atk by 1 on turn 1. Hits turn 2.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -5671,7 +5671,7 @@
    }
   },
   "type": "Steel",
-  "shortDesc": "Has a 20% chance of boosting the user's Attack stat by 1 stage.",
+  "shortDesc": "20% chance to raise the user's Attack by 1.",
   "flags": [
    "contact",
    "punch"
@@ -5723,7 +5723,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's evasiveness by 2 stages. The user gains the Minimized status, where moves such as Supercell Slam, Body Slam, Dragon Rush, Flying Press, Heat Crash, and Heavy Slam will not miss the Pokémon and will deal double damage.",
+  "shortDesc": "Raises the user's evasiveness by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -5744,7 +5744,7 @@
    "onRedirectTargetPriority": -1
   },
   "type": "Psychic",
-  "shortDesc": "The user retaliates to deal double the damage it took from an opponent's special move during the turn this move is used.",
+  "shortDesc": "If hit by special attack, returns double damage.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -5762,7 +5762,7 @@
   "priority": 0,
   "selfdestruct": "always",
   "type": "Fairy",
-  "shortDesc": "If the user is under the effect of Misty Terrain, this move's power is boosted by 50%. The user faints upon using this move.",
+  "shortDesc": "User faints. User on Misty Terrain: 1.5x power.",
   "flags": [],
   "effectCategories": [
    "self_destruct"
@@ -5791,7 +5791,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Turns the entire field into Misty Terrain for 5 turns, where anyone on the ground have the power of their Dragon-type moves halved, they are immune to status conditions, and they cannot become confused.",
+  "shortDesc": "5 turns. Can't status,-Dragon power vs grounded.",
   "flags": [],
   "effectCategories": [
    "terrain"
@@ -5813,7 +5813,7 @@
    }
   },
   "type": "Fairy",
-  "shortDesc": "Has a 10% chance of lowering the target's Sp. Atk stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Atk by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -5832,7 +5832,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Restores 1/2 of the user's max HP. In harsh sunlight, 2/3 of its max HP will be restored instead. In all other weather conditions, 1/4 of its max HP will be restored instead.",
+  "shortDesc": "Heals the user by a weather-dependent amount.",
   "flags": [
    "heal"
   ],
@@ -5851,7 +5851,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Restores 1/2 of the user's max HP. In harsh sunlight, 2/3 of its max HP will be restored instead. In all other weather conditions, 1/4 of its max HP will be restored instead.",
+  "shortDesc": "Heals the user by a weather-dependent amount.",
   "flags": [
    "heal"
   ],
@@ -5871,7 +5871,7 @@
    "status": "psn"
   },
   "type": "Poison",
-  "shortDesc": "Removes the Bound and Leech Seeded statuses from the user and removes the Sticky Web, Stealth Rock, Spikes, and Toxic Spikes statuses from the user's side. Poisons targets.",
+  "shortDesc": "Poisons foes, frees user from hazards/bind/leech.",
   "flags": [
    "contact"
   ],
@@ -5894,7 +5894,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Ice",
-  "shortDesc": "Has a 30% chance of makingthe target flinch.",
+  "shortDesc": "30% chance to make the target flinch.",
   "flags": [],
   "effectCategories": [
    "flinch"
@@ -5916,7 +5916,7 @@
    }
   },
   "type": "Water",
-  "shortDesc": "Has a 30% chance of lowering targets' accuracy by 1 stage.",
+  "shortDesc": "30% chance to lower the foe(s) accuracy by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -5938,7 +5938,7 @@
    }
   },
   "type": "Ground",
-  "shortDesc": "Lowers the target's Speed stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Speed by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -5960,7 +5960,7 @@
    }
   },
   "type": "Ground",
-  "shortDesc": "Lowers the target's Accuracy stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's accuracy by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -5982,7 +5982,7 @@
    }
   },
   "type": "Fire",
-  "shortDesc": "Lowers the target's Sp. Atk stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Sp. Atk by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -6004,7 +6004,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Sp. Atk stat by 2 stages.",
+  "shortDesc": "Raises the user's Sp. Atk by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -6026,7 +6026,7 @@
    }
   },
   "type": "Dark",
-  "shortDesc": "Has a 40% chance of lowering the target's accuracy by 1 stage.",
+  "shortDesc": "40% chance to lower the target's accuracy by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -6043,7 +6043,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Ghost",
-  "shortDesc": "Deals 50 HP of damage.",
+  "shortDesc": "Does damage equal to the user's level.",
   "flags": [],
   "effectCategories": [
    "special_damage"
@@ -6060,7 +6060,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Dark",
-  "shortDesc": "This move has a 1 stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "contact",
    "slicing"
@@ -6088,7 +6088,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Lowers the target's Attack and Sp. Atk stats by 1 stage.",
+  "shortDesc": "Lowers the target's Attack and Sp. Atk by 1.",
   "flags": [
    "sound"
   ],
@@ -6110,7 +6110,7 @@
    "status": "par"
   },
   "type": "Electric",
-  "shortDesc": "Paralyzes the target.",
+  "shortDesc": "100% chance to paralyze the target.",
   "flags": [
    "contact"
   ],
@@ -6131,7 +6131,7 @@
    "volatileStatus": "lockedmove"
   },
   "type": "Dragon",
-  "shortDesc": "The user gains the Rampaging status, where for 2-3 turns the Pokémon continues its attack and is unable to take any other actions. After that, it becomes confused.",
+  "shortDesc": "Lasts 2-3 turns. Confuses the user afterwards.",
   "flags": [
    "contact"
   ],
@@ -6152,7 +6152,7 @@
    }
   },
   "type": "Fire",
-  "shortDesc": "Lowers the user's Sp. Atk stat by 2 stages.",
+  "shortDesc": "Lowers the user's Sp. Atk by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_attacker"
@@ -6173,7 +6173,7 @@
     "def": 1
    }
   },
-  "shortDesc": "The user adds its remaining HP to the target's remaining HP, then splits the total in half for them to share.",
+  "shortDesc": "Shares HP of user and target equally.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -6191,7 +6191,7 @@
    2
   ],
   "type": "Electric",
-  "shortDesc": "The user's HP is restored by 1/2 of the damage dealt by this move.",
+  "shortDesc": "User recovers 50% of the damage dealt.",
   "flags": [
    "heal"
   ],
@@ -6211,7 +6211,7 @@
   "zMove": {
    "effect": "healreplacement"
   },
-  "shortDesc": "Lowers the target's Attack and Sp. Atk stats by 1 stage. The user then switches out of battle to be replaced by another party Pokémon.",
+  "shortDesc": "Lowers target's Atk, Sp. Atk by 1. User switches.",
   "flags": [
    "sound"
   ],
@@ -6231,7 +6231,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "This move's power is double if the user attacks after the target.",
+  "shortDesc": "Power doubles if the user moves after the target.",
   "flags": [
    "contact"
   ],
@@ -6254,7 +6254,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Gives all Pokémon on the field the Perishing status, where the Pokémon will faint 3 turns after gaining the status.",
+  "shortDesc": "All active Pokemon will faint in 3 turns.",
   "flags": [
    "sound"
   ],
@@ -6270,7 +6270,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Grass",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect. Hits adjacent Pokemon.",
   "flags": [
    "wind"
   ],
@@ -6289,7 +6289,7 @@
    "volatileStatus": "lockedmove"
   },
   "type": "Grass",
-  "shortDesc": "The user gains the Rampaging status, where for 2-3 turns the Pokémon continues its attack and is unable to take any other actions. After that, it becomes confused.",
+  "shortDesc": "Lasts 2-3 turns. Confuses the user afterwards.",
   "flags": [
    "contact",
    "dance"
@@ -6311,7 +6311,7 @@
    "onInvulnerability": false
   },
   "type": "Ghost",
-  "shortDesc": "The user gains the Concealed status, where the Pokémon cannot be hit by moves and is unaffected by terrain, on the turn this move is used, then attacks on the following turn. This move can hit a target using a move such as Protect or Detect and removes the effects of those moves.",
+  "shortDesc": "Disappears turn 1. Hits turn 2. Breaks protection.",
   "flags": [
    "contact"
   ],
@@ -6339,7 +6339,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks 2 to 5 times in a row.",
+  "shortDesc": "Hits 2-5 times in one turn.",
   "flags": [],
   "effectCategories": [
    "multi_hit"
@@ -6361,7 +6361,7 @@
    }
   },
   "type": "Fairy",
-  "shortDesc": "Has a 10% chance of lowering the target's Attack stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Attack by 1.",
   "flags": [
    "contact"
   ],
@@ -6379,7 +6379,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Flying",
-  "shortDesc": "If the target is holding a Berry, the user eats that Berry and gains its effect.",
+  "shortDesc": "User steals and eats the target's Berry.",
   "flags": [
    "contact"
   ],
@@ -6399,7 +6399,7 @@
    "status": "tox"
   },
   "type": "Poison",
-  "shortDesc": "Has a 50% chance of badly poisoning the target.",
+  "shortDesc": "50% chance to badly poison the target.",
   "flags": [
    "bite",
    "contact"
@@ -6422,7 +6422,7 @@
    "status": "psn"
   },
   "type": "Poison",
-  "shortDesc": "Has a 30% chance of poisoning the target.",
+  "shortDesc": "30% chance to poison the target.",
   "flags": [
    "contact"
   ],
@@ -6464,7 +6464,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Bug",
-  "shortDesc": "When used on an ally, this move restores 1/2 of its max HP instead of dealing damage.",
+  "shortDesc": "If the target is an ally, heals 50% of its max HP.",
   "flags": [
    "bullet"
   ],
@@ -6480,7 +6480,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Ghost",
-  "shortDesc": "This move fails if the target isn't holding an item",
+  "shortDesc": "Fails if the target has no held item.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -6496,7 +6496,7 @@
   "multihit": 10,
   "multiaccuracy": true,
   "type": "Normal",
-  "shortDesc": "The user attacks 1 to 10 times in a row. The attack ends if the user misses.",
+  "shortDesc": "Hits 10 times. Each hit can miss.",
   "flags": [
    "contact",
    "slicing"
@@ -6521,7 +6521,7 @@
    }
   },
   "type": "Bug",
-  "shortDesc": "Lowers the target's Speed stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Speed by 1.",
   "flags": [
    "contact"
   ],
@@ -6539,7 +6539,7 @@
   "pp": 35,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact"
   ],
@@ -6555,7 +6555,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Rock",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -6590,7 +6590,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "The user adds its Attack stat to the target's Attack stat, then splits the total in half for them to share. It does the same with each of their Sp. Atk stats.",
+  "shortDesc": "Averages Attack and Sp. Atk stats with target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -6609,7 +6609,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "The user swaps the changes to its Attack and Sp. Atk stats with the changes to the target's Attack and Sp. Atk stats.",
+  "shortDesc": "Swaps Attack and Sp. Atk stat stages with target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -6630,7 +6630,7 @@
     "atk": 1
    }
   },
-  "shortDesc": "The user gains the Atk/Def Swapped status, which swaps the Pokémon's Attack and Defense stats.",
+  "shortDesc": "Switches user's Attack and Defense stats.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -6651,7 +6651,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "This move's power is increased by 20 for each stage that the user's stats have been boosted.",
+  "shortDesc": " + 20 power for each of the user's stat boosts.",
   "flags": [
    "contact"
   ],
@@ -6667,7 +6667,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Grass",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact"
   ],
@@ -6692,7 +6692,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The user protects itself from incoming moves for the turn. With each consecutive use, this move’s chance of success becomes 1/3 of what it was before.",
+  "shortDesc": "Prevents moves from affecting the user this turn.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -6715,7 +6715,7 @@
    }
   },
   "type": "Psychic",
-  "shortDesc": "Has a 10% chance of lowering the target's Sp. Def stat by 1 stage.",
+  "shortDesc": "10% chance to lower the target's Sp. Def by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -6731,7 +6731,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Psychic",
-  "shortDesc": "Removes the Light Screen, Reflect, and Aurora Veil statuses on the target's side.",
+  "shortDesc": "Destroys screens, unless the target is immune.",
   "flags": [
    "bite",
    "contact"
@@ -6754,7 +6754,7 @@
    "volatileStatus": "healblock"
   },
   "type": "Psychic",
-  "shortDesc": "Gives the target the Healing Prevented status, where the Pokémon is unable to restore HP from moves, abilities, or held items, for 2 turns.",
+  "shortDesc": "For 2 turns, the target is prevented from healing.",
   "flags": [
    "sound"
   ],
@@ -6784,7 +6784,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Turns the entire field into Psychic Terrain for 5 turns, where anyone on the ground have the power of their Psychic-type moves boosted by 30% and they are immune to priority moves.",
+  "shortDesc": "5 turns. Grounded: +Psychic power, priority-safe.",
   "flags": [],
   "effectCategories": [
    "terrain"
@@ -6801,7 +6801,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Psychic",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "slicing"
   ],
@@ -6822,7 +6822,7 @@
   "zMove": {
    "effect": "heal"
   },
-  "shortDesc": "The user copies the target's stat changes.",
+  "shortDesc": "Copies the target's current stat stages.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -6844,7 +6844,7 @@
    }
   },
   "type": "Psychic",
-  "shortDesc": "Boosts the user's Defense stat by 1 stage.",
+  "shortDesc": "100% chance to raise the user's Defense by 1.",
   "flags": [
    "contact"
   ],
@@ -6863,7 +6863,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Psychic",
-  "shortDesc": "This is a special move, but the damage it deals is calculated using the target's Defense stat.",
+  "shortDesc": "Damages target based on Defense, not Sp. Def.",
   "flags": [],
   "effectCategories": [
    "special_damage"
@@ -6884,7 +6884,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Causes the target to move last in the turn.",
+  "shortDesc": "Forces the target to move last this turn.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -6898,7 +6898,7 @@
   "pp": 30,
   "priority": 1,
   "type": "Normal",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [
    "contact"
   ],
@@ -6926,7 +6926,7 @@
     "def": 1
    }
   },
-  "shortDesc": "The user protects itself and its allies from priority moves for the turn.",
+  "shortDesc": "Protects allies from priority attacks this turn.",
   "flags": [],
   "effectCategories": [
    "priority"
@@ -6950,7 +6950,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Sp. Atk, Sp. Def, and Speed stats by 1 stage.",
+  "shortDesc": "Raises the user's Sp. Atk, Sp. Def, Speed by 1.",
   "flags": [
    "dance"
   ],
@@ -6976,7 +6976,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The user redirects opponents' moves toward itself. This effect works only on single-target moves.",
+  "shortDesc": "The foes' moves target the user on the turn used.",
   "flags": [
    "powder"
   ],
@@ -6994,7 +6994,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "Removes the Light Screen, Reflect, and Aurora Veil statuses on the target's side. This move's type depends on the user's form.",
+  "shortDesc": "Destroys screens. Type depends on user's form.",
   "flags": [
    "contact"
   ],
@@ -7015,7 +7015,7 @@
    "volatileStatus": "lockedmove"
   },
   "type": "Fire",
-  "shortDesc": "The user gains the Rampaging status, where for 2-3 turns the Pokémon continues its attack and is unable to take any other actions. After that, it becomes confused.",
+  "shortDesc": "Lasts 2-3 turns. Confuses the user afterwards.",
   "flags": [],
   "effectCategories": [],
   "range": "randomOpponent"
@@ -7035,7 +7035,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Summons rain for 5 turns.",
+  "shortDesc": "For 5 turns, heavy rain powers Water moves.",
   "flags": [],
   "effectCategories": [
    "weather"
@@ -7059,7 +7059,7 @@
    }
   },
   "type": "Normal",
-  "shortDesc": "Removes the Bound and Leech Seeded statuses from the user and removes the Sticky Web, Stealth Rock, Spikes, and Toxic Spikes statuses from the user's side. Boosts the user's Speed stat by 1 stage.",
+  "shortDesc": "Free user from hazards/bind/Leech Seed; +1 Spe.",
   "flags": [
    "contact"
   ],
@@ -7084,7 +7084,7 @@
    }
   },
   "type": "Water",
-  "shortDesc": "Has a 50% chance of lowering the target's Defense stat by 1 stage.",
+  "shortDesc": "50% chance to lower the target's Defense by 1.",
   "flags": [
    "contact",
    "slicing"
@@ -7110,7 +7110,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Restores 1/2 of the user's max HP.",
+  "shortDesc": "Heals the user by 50% of its max HP.",
   "flags": [
    "heal"
   ],
@@ -7131,7 +7131,7 @@
     "spe": 2
    }
   },
-  "shortDesc": "Regenerates the last held item that the user consumed. The user then holds this item once more.",
+  "shortDesc": "Restores the item the user last used.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -7156,7 +7156,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Gives the user's side the Reflect status for 5 turns, where damage taken from physical moves are reduced by 1/2 in Singles and 1/3 in Doubles.",
+  "shortDesc": "For 5 turns, physical damage to allies is halved.",
   "flags": [],
   "effectCategories": [
    "screen"
@@ -7177,7 +7177,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "The user becomes the same type or types as the target.",
+  "shortDesc": "User becomes the same type as the target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -7194,7 +7194,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Fully restores the user's HP and cures any status conditions. The user falls asleep for 2 turns. This move fails if the user's HP is full.",
+  "shortDesc": "User sleeps 2 turns and restores HP and status.",
   "flags": [
    "heal"
   ],
@@ -7214,7 +7214,7 @@
   "zMove": {
    "basePower": 160
   },
-  "shortDesc": "The less HP the user has left, the greater this move's power (ranging between 20 and 200).",
+  "shortDesc": "More power the less HP the user has left.",
   "flags": [
    "contact"
   ],
@@ -7259,7 +7259,7 @@
   "maxMove": {
    "basePower": 140
   },
-  "shortDesc": "This move's power is doubled if the target is under the effect of Electric Terrain.",
+  "shortDesc": "2x power if target is grounded in Electric Terrain.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -7279,7 +7279,7 @@
     "def": 1
    }
   },
-  "shortDesc": "If there are other Pokémon in the target’s party that can switch into battle, the target is forced to switch out of battle and is replaced by one of those Pokémon at random.",
+  "shortDesc": "Forces the target to switch to a random ally.",
   "flags": [
    "sound"
   ],
@@ -7308,7 +7308,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks 2 to 5 times in a row.",
+  "shortDesc": "Hits 2-5 times in one turn.",
   "flags": [
    "bullet"
   ],
@@ -7332,7 +7332,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Speed stat by 2 stages.",
+  "shortDesc": "Raises the user's Speed by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -7352,7 +7352,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Rock",
-  "shortDesc": "Has a 30% chance of making targets flinch.",
+  "shortDesc": "30% chance to make the foe(s) flinch.",
   "flags": [],
   "effectCategories": [
    "flinch"
@@ -7374,7 +7374,7 @@
    }
   },
   "type": "Rock",
-  "shortDesc": "Lowers the target's Speed stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Speed by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -7393,7 +7393,7 @@
    "volatileStatus": "mustrecharge"
   },
   "type": "Rock",
-  "shortDesc": "The user gains the Recharging status on the turn after this move is used, where the user cannot take any actions for 1 turn.",
+  "shortDesc": "User cannot move next turn.",
   "flags": [
    "bullet"
   ],
@@ -7414,7 +7414,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Changes the user's Ability to be the same as the target's.",
+  "shortDesc": "User replaces its Ability with the target's.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -7443,7 +7443,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Restores 1/2 of the user's max HP. If the user is a Flying type, it will lose the Flying type for the turn.",
+  "shortDesc": "Heals 50% HP. Flying-type removed 'til turn ends.",
   "flags": [
    "heal"
   ],
@@ -7460,7 +7460,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "If multiple Pokémon use this move in the same turn, the second user onward will act immediately after the first, and the power of the second Round onward will be doubled.",
+  "shortDesc": "Power doubles if others used Round this turn.",
   "flags": [
    "sound"
   ],
@@ -7478,7 +7478,7 @@
   "ignoreEvasion": true,
   "ignoreDefensive": true,
   "type": "Fighting",
-  "shortDesc": "This move ignores the target's stat changes when dealing damage.",
+  "shortDesc": "Ignores the target's stat stage changes.",
   "flags": [
    "contact",
    "slicing"
@@ -7506,7 +7506,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Gives the user's side the Safeguard status for 5 turns, where the Pokémon is immune to status conditions and cannot become confused.",
+  "shortDesc": "For 5 turns, protects user's party from status.",
   "flags": [],
   "effectCategories": [],
   "range": "usersSide"
@@ -7525,7 +7525,7 @@
    "volatileStatus": "saltcure"
   },
   "type": "Rock",
-  "shortDesc": "Gives the target the Salt Cured status, where the Pokémon takes damage equal to 1/16 of its max HP at the end of every turn. If the Pokémon is a Steel type or Water type, it takes damage equal to 1/8 of its max HP instead.",
+  "shortDesc": "Deals 1/16 max HP each turn; 1/8 on Steel, Water.",
   "flags": [],
   "effectCategories": [
    "periodic_effect"
@@ -7547,7 +7547,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Summons a sandstorm for 5 turns.",
+  "shortDesc": "For 5 turns, a sandstorm rages. Rock: 1.5x SpD.",
   "flags": [
    "wind"
   ],
@@ -7566,7 +7566,7 @@
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Ground",
-  "shortDesc": "Gives the target the Bound status, where the Pokémon takes 1/8 damage of its max HP at the end of every turn and it cannot switch out.",
+  "shortDesc": "Traps and damages the target for 4-5 turns.",
   "flags": [],
   "effectCategories": [
    "periodic_effect",
@@ -7588,7 +7588,7 @@
    "status": "brn"
   },
   "type": "Water",
-  "shortDesc": "Has a 30% chance of burning the target. Cures the user and target of being frozen.",
+  "shortDesc": "30% chance to burn the target. Thaws target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status",
@@ -7621,7 +7621,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks 2 to 5 times in a row. This move lowers the user's Defense stat by 1 stage and boosts its Speed stat by 1 stage.",
+  "shortDesc": "Hits 2-5 times. User: -1 Def, +1 Spe after last hit.",
   "flags": [],
   "effectCategories": [
    "multi_hit",
@@ -7646,7 +7646,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Lowers the target's Speed stat by 2 stages.",
+  "shortDesc": "Lowers the target's Speed by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -7667,7 +7667,7 @@
    "status": "brn"
   },
   "type": "Ground",
-  "shortDesc": "Has a 30% chance of burning the target. Cures the user and target of being frozen.",
+  "shortDesc": "30% chance to burn the target. Thaws target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status",
@@ -7692,7 +7692,7 @@
     "atk": 1
    }
   },
-  "shortDesc": "Lowers the target's Defense stat by 2 stages.",
+  "shortDesc": "Lowers the target's Defense by 2.",
   "flags": [
    "sound"
   ],
@@ -7710,7 +7710,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Grass",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "bullet"
   ],
@@ -7730,7 +7730,7 @@
   "maxMove": {
    "basePower": 75
   },
-  "shortDesc": "Deals 50 HP of damage.",
+  "shortDesc": "Does damage equal to the user's level.",
   "flags": [
    "contact"
   ],
@@ -7749,7 +7749,7 @@
   "priority": 0,
   "selfdestruct": "always",
   "type": "Normal",
-  "shortDesc": "The user faints upon using this move.",
+  "shortDesc": "Hits adjacent Pokemon. The user faints.",
   "flags": [],
   "effectCategories": [
    "self_destruct"
@@ -7771,7 +7771,7 @@
    }
   },
   "type": "Ghost",
-  "shortDesc": "Has a 20% chance of lowering the target's Sp. Def stat by 1 stage.",
+  "shortDesc": "20% chance to lower the target's Sp. Def by 1.",
   "flags": [
    "bullet"
   ],
@@ -7790,7 +7790,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Ghost",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [
    "contact",
    "slicing"
@@ -7809,7 +7809,7 @@
   "pp": 20,
   "priority": 0,
   "type": "Ghost",
-  "shortDesc": "This move never misses.",
+  "shortDesc": "This move does not check accuracy.",
   "flags": [
    "contact",
    "punch"
@@ -7826,7 +7826,7 @@
   "pp": 30,
   "priority": 1,
   "type": "Ghost",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [
    "contact"
   ],
@@ -7850,7 +7850,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The user loses 1/2 of its max HP to create a substitute, then switches out of battle to be replaced by another party Pokémon. The substitute will be hit by moves instead of that Pokémon, and it will vanish when it takes damage equal to 1/4 of the user's max HP.",
+  "shortDesc": "User takes 1/2 its max HP to pass a substitute.",
   "flags": [],
   "effectCategories": [
    "self_switch"
@@ -7873,7 +7873,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "Knocks out the target. This move does not affect Ice types. The accuracy of this move is fixed at 30%. If used by Pokémon other than Ice types, the accuracy of this move is 20%.",
+  "shortDesc": "OHKOs non-Ice targets. Fails if user's lower level.",
   "flags": [],
   "effectCategories": [
    "ohko"
@@ -7893,7 +7893,7 @@
    "status": "psn"
   },
   "type": "Poison",
-  "shortDesc": "Has a 20% chance of poisoning the target. Becomes a physical move if that will deal more damage.",
+  "shortDesc": "20% psn. Physical+contact if it would be stronger.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -7919,7 +7919,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Lowers the user's Defense and Sp. Def stats by 1 stage and boosts its Attack, Sp. Atk, and Speed stats by 2 stages.",
+  "shortDesc": "Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff",
@@ -7939,7 +7939,7 @@
    "def": 2
   },
   "type": "Steel",
-  "shortDesc": "Boosts the user's Defense stat by 2 stages.",
+  "shortDesc": "Raises the user's Defense by 2.",
   "flags": [],
   "effectCategories": [
    "self_buff"
@@ -7960,7 +7960,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Changes the target's Ability to Simple.",
+  "shortDesc": "The target's Ability becomes Simple.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -7980,7 +7980,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Puts the target to sleep.",
+  "shortDesc": "Causes the target to fall asleep.",
   "flags": [
    "sound"
   ],
@@ -8003,7 +8003,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "The user and the target swap their Abilities.",
+  "shortDesc": "The user and the target trade Abilities.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8023,7 +8023,7 @@
    }
   },
   "type": "Bug",
-  "shortDesc": "Lowers the target's Sp. Atk stat by 1 stage.",
+  "shortDesc": "100% chance to lower target's Sp. Atk by 1.",
   "flags": [
    "contact"
   ],
@@ -8046,7 +8046,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Flying",
-  "shortDesc": "The user gains the Charging status, where the Pokémon spends 1 turn charging before using a move on the turn this move is used, then attacks on the following turn. This move has a 30% chance of making the target flinch, and it has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "Charges, then hits turn 2. 30% flinch. High crit.",
   "flags": [],
   "effectCategories": [
    "flinch",
@@ -8070,7 +8070,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Restores 1/2 of the user's max HP.",
+  "shortDesc": "Heals the user by 50% of its max HP.",
   "flags": [
    "heal"
   ],
@@ -8092,7 +8092,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Puts the target to sleep.",
+  "shortDesc": "Causes the target to fall asleep.",
   "flags": [
    "powder"
   ],
@@ -8115,7 +8115,7 @@
   "zMove": {
    "effect": "crit2"
   },
-  "shortDesc": "Can be used only if the user is asleep. The user uses one of the other moves it knows at random.",
+  "shortDesc": "User must be asleep. Uses another known move.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -8133,7 +8133,7 @@
    "status": "psn"
   },
   "type": "Poison",
-  "shortDesc": "Has a 30% chance of poisoning the target.",
+  "shortDesc": "30% chance to poison the target.",
   "flags": [
    "bullet"
   ],
@@ -8155,7 +8155,7 @@
    "status": "psn"
   },
   "type": "Poison",
-  "shortDesc": "Has a 10% chance of poisoning targets.",
+  "shortDesc": "10% chance to poison adjacent Pokemon.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -8175,7 +8175,7 @@
    "noCopy": true
   },
   "type": "Rock",
-  "shortDesc": "If the target is off the ground, it gains the Landed status, where the Pokémon is now grounded and can be affected by Ground-type moves. This move can hit a target that has the Sky-High status.",
+  "shortDesc": "Removes the target's Ground immunity.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8189,7 +8189,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Steel",
-  "shortDesc": "This move never misses.",
+  "shortDesc": "This move does not check accuracy.",
   "flags": [
    "contact"
   ],
@@ -8206,7 +8206,7 @@
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Steel",
-  "shortDesc": "Gives the target the Bound status, where the Pokémon takes 1/8 damage of its max HP at the end of every turn and it cannot switch out.",
+  "shortDesc": "Traps and damages the target for 4-5 turns.",
   "flags": [
    "contact"
   ],
@@ -8231,7 +8231,7 @@
    }
   },
   "type": "Dark",
-  "shortDesc": "Lowers targets' Sp. Atk stats by 1 stage.",
+  "shortDesc": "100% chance to lower the foe(s) Sp. Atk by 1.",
   "flags": [
    "sound"
   ],
@@ -8254,7 +8254,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Normal",
-  "shortDesc": "Can be used only if the user is asleep. Has a 30% chance of making the target flinch.",
+  "shortDesc": "User must be asleep. 30% chance to flinch target.",
   "flags": [
    "sound"
   ],
@@ -8273,7 +8273,7 @@
   "priority": 0,
   "weather": "snowscape",
   "type": "Ice",
-  "shortDesc": "Summons snow for 5 turns.",
+  "shortDesc": "For 5 turns, snow falls. Ice: 1.5x Def.",
   "flags": [],
   "effectCategories": [
    "weather"
@@ -8331,7 +8331,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Grass",
-  "shortDesc": "The user gains the Charging status, where the Pokémon spends 1 turn charging before using a move, on the turn this move is used, then attacks on the following turn. In harsh sunlight, the user does not gain the Charging status and can attack immediately. This move’s power is halved in any other weather condition.",
+  "shortDesc": "Charges turn 1. Hits turn 2. No charge in sunlight.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8345,7 +8345,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Grass",
-  "shortDesc": "The user gains the Charging status, where the Pokémon spends 1 turn charging before using a move, on the turn this move is used, on the turn this move is used, then attacks on the following turn. In harsh sunlight, the user does not gain the Charging status and can attack immediately. This move's power is halved in any other weather condition.",
+  "shortDesc": "Charges turn 1. Hits turn 2. No charge in sunlight.",
   "flags": [
    "contact",
    "slicing"
@@ -8366,7 +8366,7 @@
    "volatileStatus": "sparklingaria"
   },
   "type": "Water",
-  "shortDesc": "Cures targets of their burns.",
+  "shortDesc": "The target is cured of its burn.",
   "flags": [
    "sound"
   ],
@@ -8387,7 +8387,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "The user and the target swap their Speed stats.",
+  "shortDesc": "Swaps Speed stat with target.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8405,7 +8405,7 @@
    "def": -2
   },
   "type": "Grass",
-  "shortDesc": "Lowers the target's Defense stat by 2 stages and boosts its Attack stat by 2 stages.",
+  "shortDesc": "Raises target's Atk by 2 and lowers its Def by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -8428,7 +8428,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Gives the opponent's side the Spikes status, where Pokémon that are not Flying-types or have the Levitate ability that switch into battle will take damage equal to 1/8 of their max HP and will increase with each instance up to three times.",
+  "shortDesc": "Hurts grounded foes on switch-in. Max 3 layers.",
   "flags": [],
   "effectCategories": [
    "hazard_set"
@@ -8455,7 +8455,7 @@
     "def": 1
    }
   },
-  "shortDesc": "The user protects itself from incoming moves for the turn. Any attackers that use contact moves against the user during this turn take damage equal to 1/8 of their max HP. With each consecutive use, this move's chance of success becomes 1/3 of what it was before.",
+  "shortDesc": "Protects from moves. Contact: loses 1/8 max HP.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -8475,7 +8475,7 @@
    "chance": 100
   },
   "type": "Ghost",
-  "shortDesc": "Gives the target the Can't Escape status, where the Pokémon cannot be switched out.",
+  "shortDesc": "Prevents the target from switching out.",
   "flags": [],
   "effectCategories": [
    "trap"
@@ -8494,7 +8494,7 @@
   "zMove": {
    "effect": "heal"
   },
-  "shortDesc": "Removes 4 PP from the move last used by the target.",
+  "shortDesc": "Lowers the PP of the target's last move by 4.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8509,7 +8509,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "The higher the user's Stockpiling level, the greater this move's power (ranging between 100 and 300). This move fails unless the user has the Stockpiling status.",
+  "shortDesc": "More power with more uses of Stockpile.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8552,7 +8552,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Gives the opponent's side the Stealth Rock status, where Pokémon that switch into battle will take damage equal to 1/8 of their max HP. This damage differs depending on the Pokémon's type matchup with the Rock type.",
+  "shortDesc": "Hurts foes on switch-in. Factors Rock weakness.",
   "flags": [],
   "effectCategories": [
    "hazard_set"
@@ -8569,7 +8569,7 @@
   "priority": 0,
   "mindBlownRecoil": true,
   "type": "Steel",
-  "shortDesc": "After attacking, the user takes damage equal to 1/2 of its max HP.",
+  "shortDesc": "User loses 50% max HP.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8583,7 +8583,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Steel",
-  "shortDesc": "Removes any terrain. This move fails if there is no terrain on the field.",
+  "shortDesc": "Fails if there is no terrain active. Ends the terrain.",
   "flags": [
    "contact"
   ],
@@ -8607,7 +8607,7 @@
    }
   },
   "type": "Steel",
-  "shortDesc": "Has a 10% chance of boosting the user's Defense stat by 1 stage.",
+  "shortDesc": "10% chance to raise the user's Defense by 1.",
   "flags": [
    "contact"
   ],
@@ -8632,7 +8632,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Gives the opponent's side the Sticky Web status, where Pokémon that switch into battle will have their Speed stats lowered by 1 stage. Pokémon such as Flying types or ones with the Levitate Ability are unaffected.",
+  "shortDesc": "Lowers Speed of grounded foes by 1 on switch-in.",
   "flags": [],
   "effectCategories": [
    "hazard_set"
@@ -8655,7 +8655,7 @@
   "zMove": {
    "effect": "heal"
   },
-  "shortDesc": "Boosts the user's Defense and Sp. Def stats by 1 stage. Raises the user's Stockpiling level by 1. Can be used up to 3 times.",
+  "shortDesc": "Raises user's Defense, Sp. Def by 1. Max 3 uses.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -8670,7 +8670,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Ground",
-  "shortDesc": "This move’s power is doubled if the user couldn’t act or its move missed or failed on the previous turn.",
+  "shortDesc": "Power doubles if the user's last move failed.",
   "flags": [
    "contact"
   ],
@@ -8687,7 +8687,7 @@
   "priority": 0,
   "secondary": {},
   "type": "Rock",
-  "shortDesc": "Gives the opponent's side the Stealth Rock status, where Pokémon that switch into battle will take damage equal to 1/8 of their max HP. This damage differs depending on the Pokémon's type matchup with the Rock type.",
+  "shortDesc": "Sets Stealth Rock on the target's side.",
   "flags": [
    "contact",
    "slicing"
@@ -8705,7 +8705,7 @@
   "priority": 0,
   "critRatio": 2,
   "type": "Rock",
-  "shortDesc": "This move has a 1-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High critical hit ratio.",
   "flags": [],
   "effectCategories": [
    "high_crit"
@@ -8728,7 +8728,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "This move's power is increased by20 for each stage that the user's stats have been boosted.",
+  "shortDesc": " + 20 power for each of the user's stat boosts.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -8743,7 +8743,7 @@
   "priority": 0,
   "willCrit": true,
   "type": "Fighting",
-  "shortDesc": "Always a critical hit.",
+  "shortDesc": "Always results in a critical hit.",
   "flags": [
    "contact"
   ],
@@ -8764,7 +8764,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Restores the user's HP by an amount equal to the target's Attack stat. Lowers the target's Attack stat by 1 stage.",
+  "shortDesc": "User heals HP=target's Atk stat. Lowers Atk by 1.",
   "flags": [
    "heal"
   ],
@@ -8788,7 +8788,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Lowers targets' Speed stats by 2 stages.",
+  "shortDesc": "Lowers the foe(s) Speed by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -8828,7 +8828,7 @@
    }
   },
   "type": "Bug",
-  "shortDesc": "Lowers targets' Sp. Atk stats by 1 stage.",
+  "shortDesc": "100% chance to lower the foe(s) Sp. Atk by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -8844,7 +8844,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "The user eats its held Berry and boosts its Defense stat by 2 stages. This move can't be used if the user is not holding a Berry.",
+  "shortDesc": "Fails unless the user has a berry. User eats Berry, Def +2.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -8889,7 +8889,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The user loses 1/4 of its max HP to create a substitute. The substitute will be hit by moves instead of the user, and it will vanish when it takes damage equal to 1/4 of the user's max HP.",
+  "shortDesc": "User takes 1/4 its max HP to put in a substitute.",
   "flags": [],
   "effectCategories": [],
   "range": "self"
@@ -8903,7 +8903,7 @@
   "pp": 5,
   "priority": 1,
   "type": "Dark",
-  "shortDesc": "This move fails unless the target has chosen an attack and has not yet attacked during the turn this move is used.",
+  "shortDesc": "Usually goes first. Fails if target is not attacking.",
   "flags": [
    "contact"
   ],
@@ -8927,7 +8927,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Summons harsh sunlight for 5 turns.",
+  "shortDesc": "For 5 turns, intense sunlight powers Fire moves.",
   "flags": [],
   "effectCategories": [
    "weather"
@@ -8944,7 +8944,7 @@
   "priority": 0,
   "hasCrashDamage": true,
   "type": "Electric",
-  "shortDesc": "If this move misses or fails, the user takes damage equal to 1/2 of its max HP. If the target has the Minimized status, this move's power is doubled and it will be sure to hit.",
+  "shortDesc": "User is hurt by 50% of its max HP if it misses.",
   "flags": [
    "contact"
   ],
@@ -8962,7 +8962,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "Deals damage to the target equal to 1/2 of its remaining HP. Deals 1 HP of damage to a target that has only 1 HP left.",
+  "shortDesc": "Does damage equal to 1/2 target's current HP.",
   "flags": [
    "contact"
   ],
@@ -8984,7 +8984,7 @@
    }
   },
   "type": "Fighting",
-  "shortDesc": "Lowers the user's Attack and Defense stats by 1 stage.",
+  "shortDesc": "Lowers the user's Attack and Defense by 1.",
   "flags": [
    "contact"
   ],
@@ -9002,7 +9002,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Water",
-  "shortDesc": "This move's power is doubled against targets that have the Submerged status.",
+  "shortDesc": "Hits adjacent Pokemon. Double damage on Dive.",
   "flags": [],
   "effectCategories": [],
   "range": "allPokemon"
@@ -9023,7 +9023,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the target's Attack stat by 2 stages and confuses it.",
+  "shortDesc": "Raises the target's Attack by 2 and confuses it.",
   "flags": [],
   "effectCategories": [
    "confuse",
@@ -9043,7 +9043,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "The higher the user's Stockpiling level, the more HP the user restores. Level 1: 1/4 of the user's max HP is restored. Level 2: 1/2 of the user's max HP is restored. Level 3: The user's HP is fully restored. This move fails unless the user has the Stockpiling status.",
+  "shortDesc": "Heals the user based on uses of Stockpile.",
   "flags": [
    "heal"
   ],
@@ -9065,7 +9065,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Confuses the target.",
+  "shortDesc": "Causes the target to become confused.",
   "flags": [],
   "effectCategories": [
    "confuse"
@@ -9089,7 +9089,7 @@
     "accuracy": 1
    }
   },
-  "shortDesc": "Lowers targets' evasiveness by 2 stages.",
+  "shortDesc": "Lowers the foe(s) evasiveness by 2.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -9110,7 +9110,7 @@
     "spe": 2
    }
   },
-  "shortDesc": "The user and the target swap their held items.",
+  "shortDesc": "User switches its held item with the target's.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -9130,7 +9130,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Boosts the user's Attack stat by 2 stages.",
+  "shortDesc": "Raises the user's Attack by 2.",
   "flags": [
    "dance"
   ],
@@ -9151,7 +9151,7 @@
   "zMove": {
    "effect": "clearnegativeboost"
   },
-  "shortDesc": "Restores 1/2 of the user's max HP. In harsh sunlight, 2/3 of its max HP will be restored instead. In all other weather conditions, 1/4 of its max HP will be restored instead.",
+  "shortDesc": "Heals the user by a weather-dependent amount.",
   "flags": [
    "heal"
   ],
@@ -9176,7 +9176,7 @@
    "volatileStatus": "syrupbomb"
   },
   "type": "Grass",
-  "shortDesc": "eed",
+  "shortDesc": "Target's Speed is lowered by 1 stage for 3 turns.",
   "flags": [
    "bullet"
   ],
@@ -9205,7 +9205,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "The user attacks 2 to 5 times in a row.",
+  "shortDesc": "Hits 2-5 times in one turn.",
   "flags": [
    "contact"
   ],
@@ -9232,7 +9232,7 @@
   "zMove": {
    "effect": "crit2"
   },
-  "shortDesc": "Gives the user's side the Tailwind status, where the Pokémon's Speed stat is doubled, for 4 turns.",
+  "shortDesc": "For 4 turns, allies' Speed is doubled.",
   "flags": [
    "wind"
   ],
@@ -9259,7 +9259,7 @@
     "atk": 1
    }
   },
-  "shortDesc": "Gives the target the Taunted status, where the Pokémon can only use attacks.",
+  "shortDesc": "Target can't use status moves its next 3 turns.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -9282,7 +9282,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Lowers the target's Attack and Sp. Atk stats by 1 stage. This move ignores the target's evasiveness and can hit a target using a move such as Protect.",
+  "shortDesc": "Lowers the target's Attack and Sp. Atk by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -9298,7 +9298,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "Causes all Pokémon on the field to eat their held Berries.",
+  "shortDesc": "All active Pokemon consume held Berries.",
   "flags": [],
   "effectCategories": [],
   "range": "entireField"
@@ -9318,7 +9318,7 @@
     "spa": 1
    }
   },
-  "shortDesc": "Confuses all other Pokémon on the field.",
+  "shortDesc": "Confuses adjacent Pokemon.",
   "flags": [
    "dance"
   ],
@@ -9337,7 +9337,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Fire",
-  "shortDesc": "This move’s power is doubled if the user couldn’t act or its move missed or failed on the previous turn.",
+  "shortDesc": "Power doubles if the user's last move failed.",
   "flags": [
    "contact"
   ],
@@ -9359,7 +9359,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "This move’s power is doubled if the user is under the effect of a terrain. This move’s type depends on the terrain.",
+  "shortDesc": "User on terrain: power doubles, type varies.",
   "flags": [
    "pulse"
   ],
@@ -9375,7 +9375,7 @@
   "pp": 25,
   "priority": 0,
   "type": "Dark",
-  "shortDesc": "If the user is not already holding an item, it steals the target's held item.",
+  "shortDesc": "If the user has no item, it steals the target's.",
   "flags": [
    "contact"
   ],
@@ -9394,7 +9394,7 @@
    "volatileStatus": "lockedmove"
   },
   "type": "Normal",
-  "shortDesc": "The user gains the Rampaging status, where for 2-3 turns the Pokémon continues its attack and is unable to take any other actions. After that, it becomes confused.",
+  "shortDesc": "Lasts 2-3 turns. Confuses the user afterwards.",
   "flags": [
    "contact"
   ],
@@ -9418,7 +9418,7 @@
    "chance": 100
   },
   "type": "Dark",
-  "shortDesc": "Gives the target the Throat Chopped status, where the Pokémon cannot use any sound-based moves for 2 turns.",
+  "shortDesc": "For 2 turns, the target cannot use sound moves.",
   "flags": [
    "contact"
   ],
@@ -9438,7 +9438,7 @@
    "status": "par"
   },
   "type": "Electric",
-  "shortDesc": "Has a 30% chance of paralyzing the target. This move never misses in rain and can hit a target that has the Sky-High status.",
+  "shortDesc": "30% chance to paralyze. Can't miss in rain.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -9458,7 +9458,7 @@
    "status": "par"
   },
   "type": "Electric",
-  "shortDesc": "Has a 10% chance of paralyzing the target.",
+  "shortDesc": "10% chance to paralyze the target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -9484,7 +9484,7 @@
    }
   ],
   "type": "Electric",
-  "shortDesc": "Has a 10% chance of paralyzing the target and a 10% chance of making the target flinch.",
+  "shortDesc": "10% chance to paralyze. 10% chance to flinch.",
   "flags": [
    "bite",
    "contact"
@@ -9508,7 +9508,7 @@
    "status": "par"
   },
   "type": "Electric",
-  "shortDesc": "Has a 10% chance of paralyzing the target.",
+  "shortDesc": "10% chance to paralyze the target.",
   "flags": [
    "contact",
    "punch"
@@ -9559,7 +9559,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Lowers the target's Attack and Defense stats by 1 stage.",
+  "shortDesc": "Lowers the target's Attack and Defense by 1.",
   "flags": [],
   "effectCategories": [
    "stat_drop_target"
@@ -9575,7 +9575,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Normal",
-  "shortDesc": "Removes the Sticky Web, Stealth Rock, Substitute, Spikes, and Toxic Spikes statuses from the entire field. Boosts the user's Attack and Speed stats by 1 stage.",
+  "shortDesc": "User +1 Atk, Spe. Clears all substitutes/hazards.",
   "flags": [],
   "effectCategories": [
    "hazard_remove"
@@ -9599,7 +9599,7 @@
    }
   },
   "type": "Fire",
-  "shortDesc": "Boosts the user's Sp. Atk stat by 1 stage.",
+  "shortDesc": "100% chance to raise the user's Sp. Atk by 1.",
   "flags": [
    "sound"
   ],
@@ -9626,7 +9626,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Gives the target the Unable to Repeat status, where the Pokémon cannot use the same move twice in a row.",
+  "shortDesc": "Target can't select the same move twice in a row.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -9646,7 +9646,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Badly poisons the target. If the user is a Poison type, this move will never miss.",
+  "shortDesc": "Badly poisons the target. Poison types can't miss.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -9669,7 +9669,7 @@
     "def": 1
    }
   },
-  "shortDesc": "Gives the opponent's side the Toxic Spikes status, where Pokémon that are not Flying-types or have the Levitate ability that switch into battle will be poisoned or badly poisoned if there are two instances.",
+  "shortDesc": "Poisons grounded foes on switch-in. Max 2 layers.",
   "flags": [],
   "effectCategories": [
    "hazard_set"
@@ -9694,7 +9694,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Lowers the target's Speed stat by 2 stages and poisons it.",
+  "shortDesc": "Lowers the target's Speed by 2 and poisons it.",
   "flags": [],
   "effectCategories": [
    "inflicts_status",
@@ -9719,7 +9719,7 @@
    }
   },
   "type": "Grass",
-  "shortDesc": "Boosts the user's Speed stat by 1 stage.",
+  "shortDesc": "100% chance to raise the user's Speed by 1.",
   "flags": [
    "contact"
   ],
@@ -9740,7 +9740,7 @@
   "zMove": {
    "effect": "heal"
   },
-  "shortDesc": "The user transforms into a copy of the target. It also copies all of the target's stats apart from its HP.",
+  "shortDesc": "Copies target's stats, moves, types, and Ability.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -9757,7 +9757,7 @@
    "chance": 20
   },
   "type": "Normal",
-  "shortDesc": "Has a 20% chance of leaving the target burned, frozen, or paralyzed.",
+  "shortDesc": "20% chance to paralyze or burn or freeze target.",
   "flags": [],
   "effectCategories": [
    "inflicts_status"
@@ -9778,7 +9778,7 @@
     "spe": 2
    }
   },
-  "shortDesc": "The user and the target swap their held items.",
+  "shortDesc": "User switches its held item with the target's.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -9801,7 +9801,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Gives the target the Trick-or-Treating status, where the Pokémon gains a Ghost typing.",
+  "shortDesc": "Adds Ghost to the target's type(s).",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -9826,7 +9826,7 @@
     "accuracy": 1
    }
   },
-  "shortDesc": "Gives the entire field the Trick Room status, where Pokémon with lower Speed stats move first, for 5 turns.",
+  "shortDesc": "Goes last. For 5 turns, turn order is reversed.",
   "flags": [],
   "effectCategories": [
    "priority",
@@ -9856,7 +9856,7 @@
    }
   ],
   "type": "Fighting",
-  "shortDesc": "Has a 50% chance of lowering the target's Defense stat by 1 stage and has a 30% chance of making the target flinch. This move has a I-stage Critical-Hit Ratio Boost.",
+  "shortDesc": "High crit. Target: 50% -1 Defense, 30% flinch.",
   "flags": [],
   "effectCategories": [
    "flinch",
@@ -9883,7 +9883,7 @@
   "maxMove": {
    "basePower": 140
   },
-  "shortDesc": "The user attacks 3 times in a row-first with a power of 20, then with a power of 40, then with a power of 60. The attack ends if the user misses.",
+  "shortDesc": "Hits 3 times. Each hit can miss, but power rises.",
   "flags": [
    "contact"
   ],
@@ -9907,7 +9907,7 @@
    }
   },
   "type": "Grass",
-  "shortDesc": "Lowers the target's Attack stat by 1 stage.",
+  "shortDesc": "100% chance to lower the target's Attack by 1.",
   "flags": [
    "contact"
   ],
@@ -9926,7 +9926,7 @@
   "priority": 0,
   "multihit": 2,
   "type": "Psychic",
-  "shortDesc": "The user attacks twice in a row.",
+  "shortDesc": "Hits 2 times in one turn.",
   "flags": [],
   "effectCategories": [
    "multi_hit"
@@ -9946,7 +9946,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Fighting",
-  "shortDesc": "Makes the target flinch. This move fails if the target isn't about to use a priority move.",
+  "shortDesc": "100% flinch. Fails unless target using priority.",
   "flags": [
    "contact"
   ],
@@ -9974,7 +9974,7 @@
    "onLockMove": "uproar"
   },
   "type": "Normal",
-  "shortDesc": "The user gains the Uproar status. For 3 turns, the Pokémon continues its attack and is unable to take any other actions. During this time, no Pokémon on the field can fall asleep.",
+  "shortDesc": "Lasts 3 turns. Active Pokemon cannot fall asleep.",
   "flags": [
    "sound"
   ],
@@ -9991,7 +9991,7 @@
   "priority": 0,
   "selfSwitch": true,
   "type": "Bug",
-  "shortDesc": "After attacking, the user switchesout of battle to be replaced by another party Pokémon.",
+  "shortDesc": "User switches out after damaging the target.",
   "flags": [
    "contact"
   ],
@@ -10009,7 +10009,7 @@
   "pp": 30,
   "priority": 1,
   "type": "Fighting",
-  "shortDesc": "—",
+  "shortDesc": "Usually goes first.",
   "flags": [],
   "effectCategories": [
    "priority"
@@ -10025,7 +10025,7 @@
   "pp": 10,
   "priority": 0,
   "type": "Poison",
-  "shortDesc": "This move's power is doubled if the target is poisoned or badly poisoned.",
+  "shortDesc": "Power doubles if the target is poisoned.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -10040,7 +10040,7 @@
   "priority": 0,
   "selfSwitch": true,
   "type": "Electric",
-  "shortDesc": "After attacking, the user switches out of battle to be replaced by another party Pokémon.",
+  "shortDesc": "User switches out after damaging the target.",
   "flags": [],
   "effectCategories": [
    "self_switch"
@@ -10064,7 +10064,7 @@
    "status": "par"
   },
   "type": "Electric",
-  "shortDesc": "Has a 10% chance of paralyzing the target. The user also takes 1/3 of the damage dealt by this move.",
+  "shortDesc": "Has 33% recoil. 10% chance to paralyze target.",
   "flags": [
    "contact"
   ],
@@ -10087,7 +10087,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Water",
-  "shortDesc": "Has a 20% chance of making the target flinch.",
+  "shortDesc": "20% chance to make the target flinch.",
   "flags": [
    "contact"
   ],
@@ -10109,7 +10109,7 @@
    "volatileStatus": "confusion"
   },
   "type": "Water",
-  "shortDesc": "Has a 20% chance of confusing the target.",
+  "shortDesc": "20% chance to confuse the target.",
   "flags": [
    "pulse"
   ],
@@ -10132,7 +10132,7 @@
    5
   ],
   "type": "Water",
-  "shortDesc": "The user attacks 2 to 5 times in a row.",
+  "shortDesc": "Usually goes first. Hits 2-5 times in one turn.",
   "flags": [],
   "effectCategories": [
    "multi_hit",
@@ -10150,7 +10150,7 @@
   "pp": 5,
   "priority": 0,
   "type": "Water",
-  "shortDesc": "The less HP the user has left, the lower this move's power (ranging between 1 and 150).",
+  "shortDesc": "Less power as user's HP decreases. Hits foe(s).",
   "flags": [],
   "effectCategories": [],
   "range": "allOpponents"
@@ -10168,7 +10168,7 @@
    100
   ],
   "type": "Water",
-  "shortDesc": "The user takes 1/3 of the damage dealt by this move.",
+  "shortDesc": "Has 33% recoil.",
   "flags": [
    "contact"
   ],
@@ -10192,7 +10192,7 @@
   "maxMove": {
    "basePower": 130
   },
-  "shortDesc": "When a weather condition is present, this move’s power is doubled and its type changes. Harsh sunlight: Fire type. Rain: Water type. Snow: Ice type. Sandstorm: Rock type.",
+  "shortDesc": "Power doubles and type varies in each weather.",
   "flags": [
    "bullet"
   ],
@@ -10209,7 +10209,7 @@
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Water",
-  "shortDesc": "Gives the target the Bound status, where the Pokémon takes 1/8 damage of its max HP at the end of every turn and it cannot switch out. This move's power is doubled if the target has the Submerged status.",
+  "shortDesc": "Traps and damages the target for 4-5 turns.",
   "flags": [],
   "effectCategories": [
    "periodic_effect",
@@ -10232,7 +10232,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "If there are other Pokémon in the target's party that can switch into battle, the target is forced to switch out of battle and is replaced by one of those Pokémon at random.",
+  "shortDesc": "Forces the target to switch to a random ally.",
   "flags": [
    "wind"
   ],
@@ -10261,7 +10261,7 @@
     "def": 1
    }
   },
-  "shortDesc": "During the turn this move is used, the user protects its side from moves that target all allies.",
+  "shortDesc": "Protects allies from multi-target moves this turn.",
   "flags": [],
   "effectCategories": [
    "priority"
@@ -10281,7 +10281,7 @@
    4
   ],
   "type": "Electric",
-  "shortDesc": "The user takes 1/4 of the damage dealt by this move.",
+  "shortDesc": "Has 1/4 recoil.",
   "flags": [
    "contact"
   ],
@@ -10330,7 +10330,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Gives the user's spot the Wish status. At the end of the next turn after the Wish status is activated, the HP of the Pokémon in the affected spot will be restored by 1/2 of the max HP of the Pokémon that caused the status.",
+  "shortDesc": "Next turn, 50% of the user's max HP is restored.",
   "flags": [
    "heal"
   ],
@@ -10357,7 +10357,7 @@
     "spd": 1
    }
   },
-  "shortDesc": "Gives the entire field the Wonder Room status, where Pokémon's Defense and Sp. Def stats are swapped, for 5 turns.",
+  "shortDesc": "For 5 turns, all Defense and Sp. Def stats switch.",
   "flags": [],
   "effectCategories": [
    "room"
@@ -10377,7 +10377,7 @@
    100
   ],
   "type": "Grass",
-  "shortDesc": "The user takes 1/3 of the damage dealt by this move.",
+  "shortDesc": "Has 33% recoil.",
   "flags": [
    "contact"
   ],
@@ -10400,7 +10400,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Changes the target's Ability to Insomnia.",
+  "shortDesc": "The target's Ability becomes Insomnia.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -10415,7 +10415,7 @@
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Normal",
-  "shortDesc": "Gives the target the Bound status, where the Pokémon takes 1/8 damage of its max HP at the end of every turn and it cannot switch out.",
+  "shortDesc": "Traps and damages the target for 4-5 turns.",
   "flags": [
    "contact"
   ],
@@ -10434,7 +10434,7 @@
   "pp": 15,
   "priority": 0,
   "type": "Bug",
-  "shortDesc": "—",
+  "shortDesc": "No additional effect.",
   "flags": [
    "contact",
    "slicing"
@@ -10462,7 +10462,7 @@
     "spe": 1
    }
   },
-  "shortDesc": "Makes the target drowsy. This move never misses.",
+  "shortDesc": "Puts the target to sleep after 1 turn.",
   "flags": [],
   "effectCategories": [],
   "range": "singleTarget"
@@ -10480,7 +10480,7 @@
    "status": "par"
   },
   "type": "Electric",
-  "shortDesc": "Paralyzes the target.",
+  "shortDesc": "100% chance to paralyze the target.",
   "flags": [
    "bullet"
   ],
@@ -10502,7 +10502,7 @@
    "volatileStatus": "flinch"
   },
   "type": "Psychic",
-  "shortDesc": "Has a 20% chance of making the target flinch.",
+  "shortDesc": "20% chance to make the target flinch.",
   "flags": [
    "contact"
   ],

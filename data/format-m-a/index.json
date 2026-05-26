@@ -5715,7 +5715,7 @@
   "weightkg": 0.3,
   "color": "Red",
   "gender": "N",
-  "moveCount": 1
+  "moveCount": 42
  },
  {
   "id": "rotomfrost",
@@ -5743,7 +5743,7 @@
   "weightkg": 0.3,
   "color": "Red",
   "gender": "N",
-  "moveCount": 1
+  "moveCount": 42
  },
  {
   "id": "rotomheat",
@@ -5771,7 +5771,7 @@
   "weightkg": 0.3,
   "color": "Red",
   "gender": "N",
-  "moveCount": 1
+  "moveCount": 42
  },
  {
   "id": "rotommow",
@@ -5799,7 +5799,7 @@
   "weightkg": 0.3,
   "color": "Red",
   "gender": "N",
-  "moveCount": 1
+  "moveCount": 42
  },
  {
   "id": "rotomwash",
@@ -5827,7 +5827,7 @@
   "weightkg": 0.3,
   "color": "Red",
   "gender": "N",
-  "moveCount": 1
+  "moveCount": 42
  },
  {
   "id": "runerigus",
