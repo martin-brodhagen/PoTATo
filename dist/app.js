@@ -335,20 +335,51 @@ async function showDetail(s) {
         <div class="stat-row stat-bst"><span class="stat-label">BST</span><span class="stat-val">${bst}</span><span class="stat-bar-track"></span></div>
       </div>
 
-      <div class="detail-header">
-        ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
-        <div>
-          <h2>${s.name}</h2>
-          <div class="types">${[0, 1].map(i => {
+      <div class="detail-header-wrap">
+        <div class="detail-header">
+          ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
+          <div>
+            <h2>${s.name}</h2>
+            <div class="types">${[0, 1].map(i => {
         const t = s.types[i];
         return `<span class="type-tag${t ? ' ' + t.toLowerCase() : ' type-tag-empty'}">${t || ''}</span>`;
     }).join('')}</div>
-          <div class="ability-buttons">${Object.values(s.abilities).map(a => `<button class="ability-btn">${a}</button>`).join('')}</div>
+            <div class="detail-meta">
+            <span class="detail-meta-item"><span class="detail-meta-label">Height</span><span class="detail-meta-value">${s.heightm ?? '—'}m</span></span>
+            <span class="detail-meta-item"><span class="detail-meta-label">Weight</span><span class="detail-meta-value">${s.weightkg ?? '—'}kg</span></span>
+              <span class="detail-meta-item" title="Weight-based Base Damage of Low Kick and Grass Knot"><span class="detail-meta-label">Low Kick</span><span class="detail-meta-value">${getWeightTier(s.weightkg)} BP</span></span>
+              <span class="detail-meta-item"><span class="detail-meta-label">Gender</span><span class="detail-meta-value">${formatGender(s.gender)}</span></span>
+            </div>
+          </div>
         </div>
+        <div class="ability-buttons">${Object.values(s.abilities).map(a => `<button class="ability-btn">${a}</button>`).join('')}</div>
       </div>
     </div>`;
-    html += `
-    <h3 class="detail-moves-heading">Moves</h3>
+    function getWeightTier(kg) {
+        if (kg === null)
+            return '—';
+        if (kg <= 9.9)
+            return '20';
+        if (kg <= 24.9)
+            return '40';
+        if (kg <= 49.9)
+            return '60';
+        if (kg <= 99.9)
+            return '80';
+        if (kg <= 199.9)
+            return '100';
+        return '120';
+    }
+    function formatGender(g) {
+        if (g === null)
+            return '♂ ♀';
+        if (g === 'M')
+            return '♂';
+        if (g === 'F')
+            return '♀';
+        return '—';
+    }
+    html += `<h3 class="detail-moves-heading">Moves</h3>
     <div id="detail-moves-container"></div>`;
     searchDetailContent.innerHTML = html;
     renderBreadcrumbBar();

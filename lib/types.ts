@@ -11,6 +11,7 @@ export interface Species {
   heightm: number | null;
   weightkg: number | null;
   color: string | null;
+  gender: string | null;
   moveCount: number;
 }
 

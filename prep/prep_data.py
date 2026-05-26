@@ -567,6 +567,7 @@ for pid in sorted(all_legal_ids):
         "heightm": entry.get('heightm'),
         "weightkg": entry.get('weightkg'),
         "color": entry.get('color'),
+        "gender": entry.get('gender'),
     }
 
     # Add learnset size

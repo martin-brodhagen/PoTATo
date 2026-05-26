@@ -25,6 +25,7 @@
   "heightm": 2.2,
   "weightkg": 135.5,
   "color": "White",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -52,6 +53,7 @@
   "heightm": 2.7,
   "weightkg": 185,
   "color": "White",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -80,6 +82,7 @@
   "heightm": 1.2,
   "weightkg": 47,
   "color": "White",
+  "gender": null,
   "moveCount": 71
  },
  {
@@ -106,6 +109,7 @@
   "heightm": 1.2,
   "weightkg": 49,
   "color": "White",
+  "gender": null,
   "moveCount": 71
  },
  {
@@ -133,6 +137,7 @@
   "heightm": 1.7,
   "weightkg": 53,
   "color": "Brown",
+  "gender": null,
   "moveCount": 45
  },
  {
@@ -162,6 +167,7 @@
   "heightm": 1.8,
   "weightkg": 59,
   "color": "Purple",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -189,6 +195,7 @@
   "heightm": 2.1,
   "weightkg": 79,
   "color": "Purple",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -218,6 +225,7 @@
   "heightm": 2.1,
   "weightkg": 360,
   "color": "Gray",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -244,6 +252,7 @@
   "heightm": 2.2,
   "weightkg": 395,
   "color": "Gray",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -272,6 +281,7 @@
   "heightm": 1.5,
   "weightkg": 48,
   "color": "Brown",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -298,6 +308,7 @@
   "heightm": 1.2,
   "weightkg": 48,
   "color": "Brown",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -325,6 +336,7 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "color": "White",
+  "gender": "F",
   "moveCount": 49
  },
  {
@@ -353,6 +365,7 @@
   "heightm": 1.1,
   "weightkg": 20.6,
   "color": "Blue",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -380,6 +393,7 @@
   "heightm": 1.5,
   "weightkg": 20.6,
   "color": "Blue",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -407,6 +421,7 @@
   "heightm": 1.4,
   "weightkg": 61.5,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -434,6 +449,7 @@
   "heightm": 1.4,
   "weightkg": 61.5,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -463,6 +479,7 @@
   "heightm": 0.4,
   "weightkg": 13,
   "color": "Green",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -491,6 +508,7 @@
   "heightm": 1.8,
   "weightkg": 82,
   "color": "Green",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -519,6 +537,7 @@
   "heightm": 3.5,
   "weightkg": 65,
   "color": "Purple",
+  "gender": null,
   "moveCount": 70
  },
  {
@@ -547,6 +566,7 @@
   "heightm": 1.9,
   "weightkg": 155,
   "color": "Brown",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -576,6 +596,7 @@
   "heightm": 2,
   "weightkg": 168,
   "color": "Brown",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -605,6 +626,7 @@
   "heightm": 2,
   "weightkg": 60,
   "color": "White",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -634,6 +656,7 @@
   "heightm": 1.1,
   "weightkg": 33.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -662,6 +685,7 @@
   "heightm": 1.5,
   "weightkg": 85,
   "color": "Red",
+  "gender": null,
   "moveCount": 55
  },
  {
@@ -689,6 +713,7 @@
   "heightm": 0.8,
   "weightkg": 15.5,
   "color": "Pink",
+  "gender": null,
   "moveCount": 48
  },
  {
@@ -717,6 +742,7 @@
   "heightm": 1.1,
   "weightkg": 31,
   "color": "Pink",
+  "gender": null,
   "moveCount": 69
  },
  {
@@ -744,6 +770,7 @@
   "heightm": 1.5,
   "weightkg": 32,
   "color": "White",
+  "gender": null,
   "moveCount": 69
  },
  {
@@ -772,6 +799,7 @@
   "heightm": 2.7,
   "weightkg": 225,
   "color": "Blue",
+  "gender": null,
   "moveCount": 56
  },
  {
@@ -800,6 +828,7 @@
   "heightm": 2,
   "weightkg": 505,
   "color": "Blue",
+  "gender": null,
   "moveCount": 49
  },
  {
@@ -829,6 +858,7 @@
   "heightm": 1.4,
   "weightkg": 262.4,
   "color": "Blue",
+  "gender": null,
   "moveCount": 49
  },
  {
@@ -858,6 +888,7 @@
   "heightm": 0.8,
   "weightkg": 28.5,
   "color": "Blue",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -886,6 +917,7 @@
   "heightm": 1.1,
   "weightkg": 12.5,
   "color": "Black",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -912,6 +944,7 @@
   "heightm": 1.2,
   "weightkg": 13,
   "color": "Black",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -941,6 +974,7 @@
   "heightm": 3,
   "weightkg": 110,
   "color": "Green",
+  "gender": "M",
   "moveCount": 49
  },
  {
@@ -970,6 +1004,7 @@
   "heightm": 3,
   "weightkg": 110,
   "color": "Green",
+  "gender": "F",
   "moveCount": 49
  },
  {
@@ -998,6 +1033,7 @@
   "heightm": 1.3,
   "weightkg": 149.5,
   "color": "Gray",
+  "gender": null,
   "moveCount": 68
  },
  {
@@ -1026,6 +1062,7 @@
   "heightm": 2.6,
   "weightkg": 260,
   "color": "White",
+  "gender": null,
   "moveCount": 75
  },
  {
@@ -1054,6 +1091,7 @@
   "heightm": 1,
   "weightkg": 29.5,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -1081,6 +1119,7 @@
   "heightm": 1.4,
   "weightkg": 40.5,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -1109,6 +1148,7 @@
   "heightm": 1.2,
   "weightkg": 113,
   "color": "Green",
+  "gender": null,
   "moveCount": 39
  },
  {
@@ -1136,6 +1176,7 @@
   "heightm": 1.6,
   "weightkg": 85.5,
   "color": "Blue",
+  "gender": null,
   "moveCount": 73
  },
  {
@@ -1162,6 +1203,7 @@
   "heightm": 1.6,
   "weightkg": 101.1,
   "color": "Blue",
+  "gender": null,
   "moveCount": 73
  },
  {
@@ -1191,6 +1233,7 @@
   "heightm": 1.9,
   "weightkg": 220,
   "color": "Red",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -1218,6 +1261,7 @@
   "heightm": 2.5,
   "weightkg": 320.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -1244,6 +1288,7 @@
   "heightm": 0.3,
   "weightkg": 0.8,
   "color": "Gray",
+  "gender": null,
   "moveCount": 37
  },
  {
@@ -1272,6 +1317,7 @@
   "heightm": 1.6,
   "weightkg": 62,
   "color": "Purple",
+  "gender": null,
   "moveCount": 55
  },
  {
@@ -1301,6 +1347,7 @@
   "heightm": 1,
   "weightkg": 34.3,
   "color": "Black",
+  "gender": null,
   "moveCount": 54
  },
  {
@@ -1328,6 +1375,7 @@
   "heightm": 2.5,
   "weightkg": 69.6,
   "color": "Black",
+  "gender": null,
   "moveCount": 54
  },
  {
@@ -1356,6 +1404,7 @@
   "heightm": 1.7,
   "weightkg": 90.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 72
  },
  {
@@ -1383,6 +1432,7 @@
   "heightm": 1.7,
   "weightkg": 110.5,
   "color": "Black",
+  "gender": null,
   "moveCount": 72
  },
  {
@@ -1410,6 +1460,7 @@
   "heightm": 1.7,
   "weightkg": 100.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 72
  },
  {
@@ -1438,6 +1489,7 @@
   "heightm": 1.6,
   "weightkg": 90,
   "color": "Green",
+  "gender": null,
   "moveCount": 87
  },
  {
@@ -1465,6 +1517,7 @@
   "heightm": 1.6,
   "weightkg": 90,
   "color": "Green",
+  "gender": null,
   "moveCount": 87
  },
  {
@@ -1491,6 +1544,7 @@
   "heightm": 0.6,
   "weightkg": 1,
   "color": "Blue",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -1518,6 +1572,7 @@
   "heightm": 1.2,
   "weightkg": 8,
   "color": "Blue",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -1544,6 +1599,7 @@
   "heightm": 1.3,
   "weightkg": 35.3,
   "color": "Blue",
+  "gender": null,
   "moveCount": 52
  },
  {
@@ -1572,6 +1628,7 @@
   "heightm": 1.3,
   "weightkg": 40,
   "color": "Pink",
+  "gender": null,
   "moveCount": 91
  },
  {
@@ -1599,6 +1656,7 @@
   "heightm": 1.7,
   "weightkg": 42.3,
   "color": "Pink",
+  "gender": null,
   "moveCount": 91
  },
  {
@@ -1625,6 +1683,7 @@
   "heightm": 1.7,
   "weightkg": 76.5,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 54
  },
  {
@@ -1653,6 +1712,7 @@
   "heightm": 1.4,
   "weightkg": 87,
   "color": "Brown",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -1682,6 +1742,7 @@
   "heightm": 2.2,
   "weightkg": 75,
   "color": "Purple",
+  "gender": null,
   "moveCount": 55
  },
  {
@@ -1711,6 +1772,7 @@
   "heightm": 1.7,
   "weightkg": 180,
   "color": "White",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -1738,6 +1800,7 @@
   "heightm": 2.6,
   "weightkg": 252.8,
   "color": "White",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -1766,6 +1829,7 @@
   "heightm": 1.6,
   "weightkg": 36.6,
   "color": "Brown",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -1794,6 +1858,7 @@
   "heightm": 1.6,
   "weightkg": 37,
   "color": "Brown",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -1823,6 +1888,7 @@
   "heightm": 0.2,
   "weightkg": 2.2,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 50
  },
  {
@@ -1851,6 +1917,7 @@
   "heightm": 1.5,
   "weightkg": 39,
   "color": "Red",
+  "gender": null,
   "moveCount": 72
  },
  {
@@ -1878,6 +1945,7 @@
   "heightm": 1.5,
   "weightkg": 39,
   "color": "Red",
+  "gender": null,
   "moveCount": 72
  },
  {
@@ -1907,6 +1975,7 @@
   "heightm": 1,
   "weightkg": 42.4,
   "color": "Brown",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -1934,6 +2003,7 @@
   "heightm": 0.3,
   "weightkg": 4,
   "color": "Purple",
+  "gender": "N",
   "moveCount": 1
  },
  {
@@ -1963,6 +2033,7 @@
   "heightm": 3,
   "weightkg": 50,
   "color": "Green",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -1991,6 +2062,7 @@
   "heightm": 2.2,
   "weightkg": 210,
   "color": "Brown",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -2018,6 +2090,7 @@
   "heightm": 2.2,
   "weightkg": 290,
   "color": "Brown",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -2047,6 +2120,7 @@
   "heightm": 3,
   "weightkg": 185,
   "color": "White",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -2074,6 +2148,7 @@
   "heightm": 3,
   "weightkg": 240.5,
   "color": "White",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -2102,6 +2177,7 @@
   "heightm": 1.6,
   "weightkg": 150,
   "color": "Red",
+  "gender": null,
   "moveCount": 79
  },
  {
@@ -2129,6 +2205,7 @@
   "heightm": 1.8,
   "weightkg": 180.3,
   "color": "Red",
+  "gender": null,
   "moveCount": 79
  },
  {
@@ -2157,6 +2234,7 @@
   "heightm": 0.4,
   "weightkg": 5,
   "color": "White",
+  "gender": null,
   "moveCount": 46
  },
  {
@@ -2185,6 +2263,7 @@
   "heightm": 1.7,
   "weightkg": 84.5,
   "color": "Blue",
+  "gender": null,
   "moveCount": 74
  },
  {
@@ -2213,6 +2292,7 @@
   "heightm": 1.9,
   "weightkg": 90,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -2240,6 +2320,7 @@
   "heightm": 0.9,
   "weightkg": 26.5,
   "color": "Purple",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -2269,6 +2350,7 @@
   "heightm": 0.7,
   "weightkg": 40.4,
   "color": "Gray",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -2296,6 +2378,7 @@
   "heightm": 0.9,
   "weightkg": 60,
   "color": "Gray",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -2325,6 +2408,7 @@
   "heightm": 3.2,
   "weightkg": 160,
   "color": "Brown",
+  "gender": null,
   "moveCount": 70
  },
  {
@@ -2352,6 +2436,7 @@
   "heightm": 2.3,
   "weightkg": 88.8,
   "color": "Blue",
+  "gender": null,
   "moveCount": 82
  },
  {
@@ -2379,6 +2464,7 @@
   "heightm": 2.3,
   "weightkg": 108.8,
   "color": "Blue",
+  "gender": null,
   "moveCount": 82
  },
  {
@@ -2408,6 +2494,7 @@
   "heightm": 0.3,
   "weightkg": 1,
   "color": "Green",
+  "gender": null,
   "moveCount": 44
  },
  {
@@ -2435,6 +2522,7 @@
   "heightm": 0.9,
   "weightkg": 25,
   "color": "Red",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -2462,6 +2550,7 @@
   "heightm": 0.2,
   "weightkg": 0.9,
   "color": "White",
+  "gender": "F",
   "moveCount": 41
  },
  {
@@ -2488,6 +2577,7 @@
   "heightm": 0.2,
   "weightkg": 100.8,
   "color": "White",
+  "gender": "F",
   "moveCount": 41
  },
  {
@@ -2515,6 +2605,7 @@
   "heightm": 1.1,
   "weightkg": 10,
   "color": "White",
+  "gender": "F",
   "moveCount": 46
  },
  {
@@ -2543,6 +2634,7 @@
   "heightm": 1.2,
   "weightkg": 125.8,
   "color": "Purple",
+  "gender": null,
   "moveCount": 69
  },
  {
@@ -2571,6 +2663,7 @@
   "heightm": 1.3,
   "weightkg": 26.6,
   "color": "White",
+  "gender": "F",
   "moveCount": 68
  },
  {
@@ -2598,6 +2691,7 @@
   "heightm": 2.6,
   "weightkg": 29.6,
   "color": "White",
+  "gender": "F",
   "moveCount": 68
  },
  {
@@ -2624,6 +2718,7 @@
   "heightm": 1.2,
   "weightkg": 28,
   "color": "White",
+  "gender": null,
   "moveCount": 40
  },
  {
@@ -2653,6 +2748,7 @@
   "heightm": 1.6,
   "weightkg": 52,
   "color": "White",
+  "gender": "M",
   "moveCount": 105
  },
  {
@@ -2680,6 +2776,7 @@
   "heightm": 1.6,
   "weightkg": 56.4,
   "color": "White",
+  "gender": "M",
   "moveCount": 105
  },
  {
@@ -2708,6 +2805,7 @@
   "heightm": 1.9,
   "weightkg": 107.3,
   "color": "Green",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -2736,6 +2834,7 @@
   "heightm": 1.9,
   "weightkg": 95,
   "color": "Blue",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -2763,6 +2862,7 @@
   "heightm": 1.9,
   "weightkg": 95,
   "color": "Blue",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -2792,6 +2892,7 @@
   "heightm": 1.6,
   "weightkg": 48.4,
   "color": "White",
+  "gender": null,
   "moveCount": 80
  },
  {
@@ -2819,6 +2920,7 @@
   "heightm": 1.6,
   "weightkg": 48.4,
   "color": "White",
+  "gender": null,
   "moveCount": 80
  },
  {
@@ -2847,6 +2949,7 @@
   "heightm": 2.3,
   "weightkg": 240,
   "color": "Brown",
+  "gender": null,
   "moveCount": 54
  },
  {
@@ -2874,6 +2977,7 @@
   "heightm": 1.5,
   "weightkg": 40.5,
   "color": "Purple",
+  "gender": null,
   "moveCount": 76
  },
  {
@@ -2901,6 +3005,7 @@
   "heightm": 1.4,
   "weightkg": 40.5,
   "color": "Purple",
+  "gender": null,
   "moveCount": 76
  },
  {
@@ -2928,6 +3033,7 @@
   "heightm": 0.8,
   "weightkg": 25.9,
   "color": "Blue",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -2956,6 +3062,7 @@
   "heightm": 1.5,
   "weightkg": 256.5,
   "color": "Gray",
+  "gender": null,
   "moveCount": 54
  },
  {
@@ -2982,6 +3089,7 @@
   "heightm": 2.1,
   "weightkg": 350.2,
   "color": "Gray",
+  "gender": null,
   "moveCount": 54
  },
  {
@@ -3010,6 +3118,7 @@
   "heightm": 1.5,
   "weightkg": 45,
   "color": "Blue",
+  "gender": null,
   "moveCount": 46
  },
  {
@@ -3037,6 +3146,7 @@
   "heightm": 2.8,
   "weightkg": 77,
   "color": "Blue",
+  "gender": null,
   "moveCount": 46
  },
  {
@@ -3066,6 +3176,7 @@
   "heightm": 2,
   "weightkg": 42.5,
   "color": "Purple",
+  "gender": null,
   "moveCount": 74
  },
  {
@@ -3095,6 +3206,7 @@
   "heightm": 2.8,
   "weightkg": 330,
   "color": "Green",
+  "gender": "N",
   "moveCount": 78
  },
  {
@@ -3122,6 +3234,7 @@
   "heightm": 4,
   "weightkg": 330,
   "color": "Green",
+  "gender": "N",
   "moveCount": 78
  },
  {
@@ -3150,6 +3263,7 @@
   "heightm": 2,
   "weightkg": 150.5,
   "color": "Purple",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -3179,6 +3293,7 @@
   "heightm": 1.7,
   "weightkg": 334.1,
   "color": "Purple",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -3208,6 +3323,7 @@
   "heightm": 0.9,
   "weightkg": 12.5,
   "color": "Brown",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -3237,6 +3353,7 @@
   "heightm": 1.1,
   "weightkg": 14,
   "color": "Brown",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -3266,6 +3383,7 @@
   "heightm": 0.7,
   "weightkg": 9.5,
   "color": "Brown",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -3295,6 +3413,7 @@
   "heightm": 1.7,
   "weightkg": 39,
   "color": "Brown",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -3324,6 +3443,7 @@
   "heightm": 1.5,
   "weightkg": 40,
   "color": "Blue",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -3351,6 +3471,7 @@
   "heightm": 1.5,
   "weightkg": 40,
   "color": "Blue",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -3379,6 +3500,7 @@
   "heightm": 6.5,
   "weightkg": 235,
   "color": "Blue",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -3406,6 +3528,7 @@
   "heightm": 6.5,
   "weightkg": 305,
   "color": "Blue",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -3435,6 +3558,7 @@
   "heightm": 2.1,
   "weightkg": 5.1,
   "color": "Pink",
+  "gender": "F",
   "moveCount": 59
  },
  {
@@ -3464,6 +3588,7 @@
   "heightm": 0.8,
   "weightkg": 21.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 74
  },
  {
@@ -3491,6 +3616,7 @@
   "heightm": 1,
   "weightkg": 25,
   "color": "Green",
+  "gender": null,
   "moveCount": 74
  },
  {
@@ -3520,6 +3646,7 @@
   "heightm": 1,
   "weightkg": 21,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -3549,6 +3676,7 @@
   "heightm": 1.5,
   "weightkg": 54,
   "color": "Blue",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -3576,6 +3704,7 @@
   "heightm": 1.7,
   "weightkg": 62.5,
   "color": "Blue",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -3603,6 +3732,7 @@
   "heightm": 2,
   "weightkg": 300,
   "color": "Brown",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -3632,6 +3762,7 @@
   "heightm": 1.4,
   "weightkg": 35,
   "color": "Black",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -3659,6 +3790,7 @@
   "heightm": 1.9,
   "weightkg": 49.5,
   "color": "Black",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -3688,6 +3820,7 @@
   "heightm": 1.8,
   "weightkg": 93,
   "color": "Green",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -3715,6 +3848,7 @@
   "heightm": 1.8,
   "weightkg": 160,
   "color": "Blue",
+  "gender": null,
   "moveCount": 78
  },
  {
@@ -3743,6 +3877,7 @@
   "heightm": 1.8,
   "weightkg": 83,
   "color": "Red",
+  "gender": null,
   "moveCount": 77
  },
  {
@@ -3771,6 +3906,7 @@
   "heightm": 1.2,
   "weightkg": 55,
   "color": "Brown",
+  "gender": null,
   "moveCount": 88
  },
  {
@@ -3798,6 +3934,7 @@
   "heightm": 0.8,
   "weightkg": 24.5,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 59
  },
  {
@@ -3826,6 +3963,7 @@
   "heightm": 2.2,
   "weightkg": 80,
   "color": "Brown",
+  "gender": "F",
   "moveCount": 67
  },
  {
@@ -3852,6 +3990,7 @@
   "heightm": 2.2,
   "weightkg": 100,
   "color": "Brown",
+  "gender": "F",
   "moveCount": 67
  },
  {
@@ -3881,6 +4020,7 @@
   "heightm": 2,
   "weightkg": 120,
   "color": "Black",
+  "gender": null,
   "moveCount": 52
  },
  {
@@ -3910,6 +4050,7 @@
   "heightm": 1.8,
   "weightkg": 89,
   "color": "Brown",
+  "gender": null,
   "moveCount": 56
  },
  {
@@ -3938,6 +4079,7 @@
   "heightm": 0.2,
   "weightkg": 3,
   "color": "Gray",
+  "gender": null,
   "moveCount": 44
  },
  {
@@ -3967,6 +4109,7 @@
   "heightm": 1.6,
   "weightkg": 78.2,
   "color": "Gray",
+  "gender": null,
   "moveCount": 78
  },
  {
@@ -3996,6 +4139,7 @@
   "heightm": 1.5,
   "weightkg": 96.3,
   "color": "Red",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -4023,6 +4167,7 @@
   "heightm": 1,
   "weightkg": 25.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -4051,6 +4196,7 @@
   "heightm": 1.1,
   "weightkg": 37.5,
   "color": "Purple",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -4079,6 +4225,7 @@
   "heightm": 1.2,
   "weightkg": 33.3,
   "color": "Brown",
+  "gender": null,
   "moveCount": 76
  },
  {
@@ -4106,6 +4253,7 @@
   "heightm": 1.3,
   "weightkg": 28.3,
   "color": "Brown",
+  "gender": null,
   "moveCount": 76
  },
  {
@@ -4135,6 +4283,7 @@
   "heightm": 1.2,
   "weightkg": 54,
   "color": "Blue",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -4162,6 +4311,7 @@
   "heightm": 1.3,
   "weightkg": 57.5,
   "color": "Blue",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -4190,6 +4340,7 @@
   "heightm": 1.4,
   "weightkg": 42,
   "color": "Blue",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -4218,6 +4369,7 @@
   "heightm": 0.8,
   "weightkg": 25,
   "color": "Brown",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -4244,6 +4396,7 @@
   "heightm": 0.8,
   "weightkg": 25,
   "color": "Brown",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -4272,6 +4425,7 @@
   "heightm": 1.1,
   "weightkg": 25,
   "color": "Red",
+  "gender": null,
   "moveCount": 68
  },
  {
@@ -4300,6 +4454,7 @@
   "heightm": 1.6,
   "weightkg": 130,
   "color": "Gray",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -4329,6 +4484,7 @@
   "heightm": 2.5,
   "weightkg": 291,
   "color": "Brown",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -4357,6 +4513,7 @@
   "heightm": 1.5,
   "weightkg": 40.2,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 49
  },
  {
@@ -4383,6 +4540,7 @@
   "heightm": 1.8,
   "weightkg": 44,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 49
  },
  {
@@ -4411,6 +4569,7 @@
   "heightm": 0.3,
   "weightkg": 2.3,
   "color": "White",
+  "gender": "N",
   "moveCount": 50
  },
  {
@@ -4439,6 +4598,7 @@
   "heightm": 1.3,
   "weightkg": 31.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 77
  },
  {
@@ -4466,6 +4626,7 @@
   "heightm": 1.3,
   "weightkg": 31.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 77
  },
  {
@@ -4493,6 +4654,7 @@
   "heightm": 1.8,
   "weightkg": 100.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -4520,6 +4682,7 @@
   "heightm": 2.4,
   "weightkg": 201,
   "color": "Green",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -4548,6 +4711,7 @@
   "heightm": 1.5,
   "weightkg": 31.2,
   "color": "Green",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -4576,6 +4740,7 @@
   "heightm": 0.6,
   "weightkg": 8.5,
   "color": "Blue",
+  "gender": "M",
   "moveCount": 59
  },
  {
@@ -4604,6 +4769,7 @@
   "heightm": 0.6,
   "weightkg": 8.5,
   "color": "White",
+  "gender": "F",
   "moveCount": 56
  },
  {
@@ -4630,6 +4796,7 @@
   "heightm": 0.8,
   "weightkg": 10.1,
   "color": "White",
+  "gender": "F",
   "moveCount": 56
  },
  {
@@ -4656,6 +4823,7 @@
   "heightm": 0.8,
   "weightkg": 10.1,
   "color": "Blue",
+  "gender": "M",
   "moveCount": 59
  },
  {
@@ -4684,6 +4852,7 @@
   "heightm": 6.2,
   "weightkg": 162,
   "color": "Pink",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -4711,6 +4880,7 @@
   "heightm": 0.2,
   "weightkg": 0.7,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -4738,6 +4908,7 @@
   "heightm": 0.3,
   "weightkg": 3,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 65
  },
  {
@@ -4767,6 +4938,7 @@
   "heightm": 1.5,
   "weightkg": 58.2,
   "color": "Purple",
+  "gender": null,
   "moveCount": 93
  },
  {
@@ -4795,6 +4967,7 @@
   "heightm": 2.5,
   "weightkg": 920,
   "color": "Brown",
+  "gender": null,
   "moveCount": 45
  },
  {
@@ -4822,6 +4995,7 @@
   "heightm": 1.1,
   "weightkg": 19.9,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -4850,6 +5024,7 @@
   "heightm": 1.1,
   "weightkg": 19.9,
   "color": "Blue",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -4879,6 +5054,7 @@
   "heightm": 1.5,
   "weightkg": 85,
   "color": "Purple",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -4908,6 +5084,7 @@
   "heightm": 1.5,
   "weightkg": 76,
   "color": "White",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -4935,6 +5112,7 @@
   "heightm": 2.5,
   "weightkg": 310,
   "color": "Pink",
+  "gender": null,
   "moveCount": 40
  },
  {
@@ -4961,6 +5139,7 @@
   "heightm": 1.3,
   "weightkg": 60.2,
   "color": "Blue",
+  "gender": null,
   "moveCount": 58
  },
  {
@@ -4990,6 +5169,7 @@
   "heightm": 2.1,
   "weightkg": 136,
   "color": "White",
+  "gender": null,
   "moveCount": 80
  },
  {
@@ -5017,6 +5197,7 @@
   "heightm": 2,
   "weightkg": 82.8,
   "color": "White",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -5046,6 +5227,7 @@
   "heightm": 1.2,
   "weightkg": 28,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -5075,6 +5257,7 @@
   "heightm": 1.5,
   "weightkg": 39.5,
   "color": "Brown",
+  "gender": null,
   "moveCount": 31
  },
  {
@@ -5102,6 +5285,7 @@
   "heightm": 2.2,
   "weightkg": 50.5,
   "color": "Brown",
+  "gender": null,
   "moveCount": 31
  },
  {
@@ -5129,6 +5313,7 @@
   "heightm": 0.4,
   "weightkg": 6,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 60
  },
  {
@@ -5157,6 +5342,7 @@
   "heightm": 1.5,
   "weightkg": 55,
   "color": "Brown",
+  "gender": null,
   "moveCount": 52
  },
  {
@@ -5184,6 +5370,7 @@
   "heightm": 1.7,
   "weightkg": 59,
   "color": "Brown",
+  "gender": null,
   "moveCount": 52
  },
  {
@@ -5212,6 +5399,7 @@
   "heightm": 1.1,
   "weightkg": 33.9,
   "color": "Green",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -5239,6 +5427,7 @@
   "heightm": 0.2,
   "weightkg": 0.4,
   "color": "Purple",
+  "gender": "N",
   "moveCount": 46
  },
  {
@@ -5267,6 +5456,7 @@
   "heightm": 1.8,
   "weightkg": 44,
   "color": "Blue",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -5295,6 +5485,7 @@
   "heightm": 1.8,
   "weightkg": 61.9,
   "color": "Blue",
+  "gender": null,
   "moveCount": 59
  },
  {
@@ -5322,6 +5513,7 @@
   "heightm": 0.8,
   "weightkg": 30,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -5349,6 +5541,7 @@
   "heightm": 0.7,
   "weightkg": 21,
   "color": "Brown",
+  "gender": null,
   "moveCount": 74
  },
  {
@@ -5376,6 +5569,7 @@
   "heightm": 1.6,
   "weightkg": 102.5,
   "color": "Blue",
+  "gender": null,
   "moveCount": 74
  },
  {
@@ -5404,6 +5598,7 @@
   "heightm": 1,
   "weightkg": 20.1,
   "color": "Green",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -5433,6 +5628,7 @@
   "heightm": 2.4,
   "weightkg": 282.8,
   "color": "Gray",
+  "gender": null,
   "moveCount": 91
  },
  {
@@ -5462,6 +5658,7 @@
   "heightm": 0.9,
   "weightkg": 14.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -5489,6 +5686,7 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "color": "Red",
+  "gender": "N",
   "moveCount": 42
  },
  {
@@ -5516,6 +5714,7 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "color": "Red",
+  "gender": "N",
   "moveCount": 1
  },
  {
@@ -5543,6 +5742,7 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "color": "Red",
+  "gender": "N",
   "moveCount": 1
  },
  {
@@ -5570,6 +5770,7 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "color": "Red",
+  "gender": "N",
   "moveCount": 1
  },
  {
@@ -5597,6 +5798,7 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "color": "Red",
+  "gender": "N",
   "moveCount": 1
  },
  {
@@ -5624,6 +5826,7 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "color": "Red",
+  "gender": "N",
   "moveCount": 1
  },
  {
@@ -5651,6 +5854,7 @@
   "heightm": 1.6,
   "weightkg": 66.6,
   "color": "Gray",
+  "gender": null,
   "moveCount": 69
  },
  {
@@ -5680,6 +5884,7 @@
   "heightm": 0.5,
   "weightkg": 11,
   "color": "Purple",
+  "gender": null,
   "moveCount": 88
  },
  {
@@ -5707,6 +5912,7 @@
   "heightm": 0.5,
   "weightkg": 161,
   "color": "Purple",
+  "gender": null,
   "moveCount": 88
  },
  {
@@ -5735,6 +5941,7 @@
   "heightm": 1.2,
   "weightkg": 22.2,
   "color": "Black",
+  "gender": "F",
   "moveCount": 70
  },
  {
@@ -5762,6 +5969,7 @@
   "heightm": 1.5,
   "weightkg": 94.6,
   "color": "Blue",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -5790,6 +5998,7 @@
   "heightm": 1.5,
   "weightkg": 58.2,
   "color": "Blue",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -5818,6 +6027,7 @@
   "heightm": 3.8,
   "weightkg": 65.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 48
  },
  {
@@ -5847,6 +6057,7 @@
   "heightm": 1.8,
   "weightkg": 118,
   "color": "Red",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -5874,6 +6085,7 @@
   "heightm": 2,
   "weightkg": 125,
   "color": "Red",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -5903,6 +6115,7 @@
   "heightm": 0.9,
   "weightkg": 15,
   "color": "Green",
+  "gender": null,
   "moveCount": 48
  },
  {
@@ -5930,6 +6143,7 @@
   "heightm": 1.2,
   "weightkg": 22,
   "color": "Green",
+  "gender": null,
   "moveCount": 48
  },
  {
@@ -5957,6 +6171,7 @@
   "heightm": 3.3,
   "weightkg": 63,
   "color": "Green",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -5985,6 +6200,7 @@
   "heightm": 1.8,
   "weightkg": 88.8,
   "color": "Blue",
+  "gender": null,
   "moveCount": 56
  },
  {
@@ -6012,6 +6228,7 @@
   "heightm": 2.5,
   "weightkg": 130.3,
   "color": "Blue",
+  "gender": null,
   "moveCount": 56
  },
  {
@@ -6039,6 +6256,7 @@
   "heightm": 1,
   "weightkg": 29,
   "color": "Blue",
+  "gender": null,
   "moveCount": 52
  },
  {
@@ -6066,6 +6284,7 @@
   "heightm": 1.1,
   "weightkg": 30.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 50
  },
  {
@@ -6093,6 +6312,7 @@
   "heightm": 1,
   "weightkg": 28,
   "color": "Red",
+  "gender": null,
   "moveCount": 55
  },
  {
@@ -6121,6 +6341,7 @@
   "heightm": 0.2,
   "weightkg": 2.2,
   "color": "Green",
+  "gender": "N",
   "moveCount": 35
  },
  {
@@ -6150,6 +6371,7 @@
   "heightm": 1.7,
   "weightkg": 50.5,
   "color": "Gray",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -6177,6 +6399,7 @@
   "heightm": 1.7,
   "weightkg": 40.4,
   "color": "Gray",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -6205,6 +6428,7 @@
   "heightm": 1.6,
   "weightkg": 326.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 56
  },
  {
@@ -6234,6 +6458,7 @@
   "heightm": 1.6,
   "weightkg": 78.5,
   "color": "Pink",
+  "gender": null,
   "moveCount": 78
  },
  {
@@ -6263,6 +6488,7 @@
   "heightm": 1.6,
   "weightkg": 70.5,
   "color": "Pink",
+  "gender": null,
   "moveCount": 92
  },
  {
@@ -6290,6 +6516,7 @@
   "heightm": 2,
   "weightkg": 120,
   "color": "Pink",
+  "gender": null,
   "moveCount": 78
  },
  {
@@ -6319,6 +6546,7 @@
   "heightm": 2,
   "weightkg": 79.5,
   "color": "Pink",
+  "gender": null,
   "moveCount": 85
  },
  {
@@ -6348,6 +6576,7 @@
   "heightm": 1.8,
   "weightkg": 79.5,
   "color": "Pink",
+  "gender": null,
   "moveCount": 95
  },
  {
@@ -6375,6 +6604,7 @@
   "heightm": 0.8,
   "weightkg": 5,
   "color": "White",
+  "gender": null,
   "moveCount": 42
  },
  {
@@ -6404,6 +6634,7 @@
   "heightm": 1.3,
   "weightkg": 43,
   "color": "Blue",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -6432,6 +6663,7 @@
   "heightm": 2.1,
   "weightkg": 460,
   "color": "Black",
+  "gender": null,
   "moveCount": 83
  },
  {
@@ -6460,6 +6692,7 @@
   "heightm": 1,
   "weightkg": 108,
   "color": "Purple",
+  "gender": null,
   "moveCount": 54
  },
  {
@@ -6489,6 +6722,7 @@
   "heightm": 1.1,
   "weightkg": 80,
   "color": "Purple",
+  "gender": "N",
   "moveCount": 62
  },
  {
@@ -6516,6 +6750,7 @@
   "heightm": 2.3,
   "weightkg": 80,
   "color": "Purple",
+  "gender": "N",
   "moveCount": 62
  },
  {
@@ -6545,6 +6780,7 @@
   "heightm": 9.2,
   "weightkg": 400,
   "color": "Gray",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -6572,6 +6808,7 @@
   "heightm": 10.5,
   "weightkg": 740,
   "color": "Gray",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -6601,6 +6838,7 @@
   "heightm": 0.7,
   "weightkg": 11,
   "color": "Brown",
+  "gender": null,
   "moveCount": 48
  },
  {
@@ -6628,6 +6866,7 @@
   "heightm": 0.7,
   "weightkg": 20.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 52
  },
  {
@@ -6655,6 +6894,7 @@
   "heightm": 1,
   "weightkg": 23.5,
   "color": "Pink",
+  "gender": null,
   "moveCount": 55
  },
  {
@@ -6683,6 +6923,7 @@
   "heightm": 1.2,
   "weightkg": 24.5,
   "color": "Red",
+  "gender": null,
   "moveCount": 50
  },
  {
@@ -6711,6 +6952,7 @@
   "heightm": 1.4,
   "weightkg": 88.4,
   "color": "Brown",
+  "gender": "M",
   "moveCount": 57
  },
  {
@@ -6740,6 +6982,7 @@
   "heightm": 1.4,
   "weightkg": 110,
   "color": "Black",
+  "gender": "M",
   "moveCount": 52
  },
  {
@@ -6769,6 +7012,7 @@
   "heightm": 1.4,
   "weightkg": 85,
   "color": "Black",
+  "gender": "M",
   "moveCount": 53
  },
  {
@@ -6797,6 +7041,7 @@
   "heightm": 1.4,
   "weightkg": 115,
   "color": "Black",
+  "gender": "M",
   "moveCount": 48
  },
  {
@@ -6826,6 +7071,7 @@
   "heightm": 0.7,
   "weightkg": 112.8,
   "color": "Pink",
+  "gender": "F",
   "moveCount": 47
  },
  {
@@ -6854,6 +7100,7 @@
   "heightm": 0.5,
   "weightkg": 80.4,
   "color": "Brown",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -6882,6 +7129,7 @@
   "heightm": 2.2,
   "weightkg": 310,
   "color": "Green",
+  "gender": null,
   "moveCount": 72
  },
  {
@@ -6911,6 +7159,7 @@
   "heightm": 1.1,
   "weightkg": 26,
   "color": "Black",
+  "gender": null,
   "moveCount": 53
  },
  {
@@ -6940,6 +7189,7 @@
   "heightm": 0.7,
   "weightkg": 14.5,
   "color": "Blue",
+  "gender": null,
   "moveCount": 51
  },
  {
@@ -6969,6 +7219,7 @@
   "heightm": 1.3,
   "weightkg": 44.4,
   "color": "Blue",
+  "gender": null,
   "moveCount": 81
  },
  {
@@ -6998,6 +7249,7 @@
   "heightm": 1.5,
   "weightkg": 71,
   "color": "Brown",
+  "gender": null,
   "moveCount": 73
  },
  {
@@ -7026,6 +7278,7 @@
   "heightm": 1.2,
   "weightkg": 21.4,
   "color": "Purple",
+  "gender": "F",
   "moveCount": 54
  },
  {
@@ -7053,6 +7306,7 @@
   "heightm": 1.7,
   "weightkg": 79.5,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 63
  },
  {
@@ -7081,6 +7335,7 @@
   "heightm": 1.6,
   "weightkg": 69.8,
   "color": "Yellow",
+  "gender": null,
   "moveCount": 66
  },
  {
@@ -7109,6 +7364,7 @@
   "heightm": 2,
   "weightkg": 202,
   "color": "Green",
+  "gender": null,
   "moveCount": 92
  },
  {
@@ -7136,6 +7392,7 @@
   "heightm": 2.5,
   "weightkg": 255,
   "color": "Green",
+  "gender": null,
   "moveCount": 92
  },
  {
@@ -7164,6 +7421,7 @@
   "heightm": 2.5,
   "weightkg": 270,
   "color": "Red",
+  "gender": null,
   "moveCount": 64
  },
  {
@@ -7191,6 +7449,7 @@
   "heightm": 1,
   "weightkg": 27,
   "color": "Black",
+  "gender": null,
   "moveCount": 67
  },
  {
@@ -7219,6 +7478,7 @@
   "heightm": 1.3,
   "weightkg": 57.5,
   "color": "White",
+  "gender": null,
   "moveCount": 41
  },
  {
@@ -7246,6 +7506,7 @@
   "heightm": 1,
   "weightkg": 29,
   "color": "Blue",
+  "gender": null,
   "moveCount": 59
  },
  {
@@ -7274,6 +7535,7 @@
   "heightm": 2,
   "weightkg": 100,
   "color": "Green",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -7301,6 +7563,7 @@
   "heightm": 2.4,
   "weightkg": 155.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -7329,6 +7592,7 @@
   "heightm": 1.7,
   "weightkg": 15.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 59
  },
  {
@@ -7356,6 +7620,7 @@
   "heightm": 4.5,
   "weightkg": 125.5,
   "color": "Green",
+  "gender": null,
   "moveCount": 59
  },
  {
@@ -7385,6 +7650,7 @@
   "heightm": 1.2,
   "weightkg": 17,
   "color": "Pink",
+  "gender": null,
   "moveCount": 43
  },
  {
@@ -7413,6 +7679,7 @@
   "heightm": 1.6,
   "weightkg": 46,
   "color": "White",
+  "gender": null,
   "moveCount": 57
  },
  {
@@ -7441,6 +7708,7 @@
   "heightm": 1.1,
   "weightkg": 27,
   "color": "Brown",
+  "gender": null,
   "moveCount": 52
  },
  {
@@ -7469,6 +7737,7 @@
   "heightm": 1.1,
   "weightkg": 34,
   "color": "Black",
+  "gender": null,
   "moveCount": 72
  },
  {
@@ -7498,6 +7767,7 @@
   "heightm": 0.7,
   "weightkg": 6.6,
   "color": "Green",
+  "gender": null,
   "moveCount": 50
  },
  {
@@ -7527,6 +7797,7 @@
   "heightm": 1.8,
   "weightkg": 95.1,
   "color": "Gray",
+  "gender": null,
   "moveCount": 61
  },
  {
@@ -7553,6 +7824,7 @@
   "heightm": 1.6,
   "weightkg": 81.1,
   "color": "Gray",
+  "gender": null,
   "moveCount": 70
  },
  {
@@ -7580,6 +7852,7 @@
   "heightm": 1.6,
   "weightkg": 73,
   "color": "Gray",
+  "gender": null,
   "moveCount": 73
  }
 ]
