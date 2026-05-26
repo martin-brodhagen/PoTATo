@@ -217,14 +217,44 @@ export class TeamBuilderWidget {
     const spriteFile = isFilled ? this.opts.spriteMap[species.id] : undefined;
     const spriteHtml = spriteFile ? `<img class="tb-sprite" src="${SPRITE_PATH}/${spriteFile}">` : '';
     const nameValue = isFilled ? species.name : '';
-    const selectedGender = (isFilled && slot.gender) ? slot.gender : 'Neutral';
     const nameHtml = `<input type="text" class="tb-name-input" placeholder="Pokémon name…" autocomplete="off" value="${nameValue}">`;
-    const genderHtml = `
-      <select class="tb-gender-select">
-        <option value="Male"${selectedGender === 'Male' ? ' selected' : ''}>Male ♂</option>
-        <option value="Neutral"${selectedGender === 'Neutral' ? ' selected' : ''}>—</option>
-        <option value="Female"${selectedGender === 'Female' ? ' selected' : ''}>Female ♀</option>
+
+    function genderOption(value: string, label: string, current: string): string {
+      return `<option value="${value}"${current === value ? ' selected' : ''}>${label}</option>`;
+    }
+
+    let genderHtml: string;
+    if (!isFilled) {
+      // Empty slot: show all options but disabled
+      genderHtml = `<select class="tb-gender-select" disabled>
+        ${genderOption('Male', 'Male ♂', '')}
+        ${genderOption('Neutral', '—', '')}
+        ${genderOption('Female', 'Female ♀', '')}
       </select>`;
+    } else {
+      const sg = species.gender;
+      const currentGender = (isFilled && slot.gender) ? slot.gender : 'Male';
+      if (sg === null) {
+        // 50/50 — Male / Female only
+        genderHtml = `<select class="tb-gender-select">
+          ${genderOption('Male', 'Male ♂', currentGender)}
+          ${genderOption('Female', 'Female ♀', currentGender)}
+        </select>`;
+      } else if (sg === 'M') {
+        genderHtml = `<select class="tb-gender-select" disabled>
+          ${genderOption('Male', 'Male ♂', 'Male')}
+        </select>`;
+      } else if (sg === 'F') {
+        genderHtml = `<select class="tb-gender-select" disabled>
+          ${genderOption('Female', 'Female ♀', 'Female')}
+        </select>`;
+      } else {
+        // 'N' — genderless
+        genderHtml = `<select class="tb-gender-select" disabled>
+          ${genderOption('Neutral', '—', 'Neutral')}
+        </select>`;
+      }
+    }
 
     const itemValue = isFilled && slot.item && this.items?.[slot.item] ? this.items[slot.item].name : (slot.item || '');
 
@@ -570,7 +600,7 @@ export class TeamBuilderWidget {
     slot.speciesId = speciesId;
     slot.ability = '0';
     slot.nature = 'Serious';
-    slot.gender = 'Neutral';
+    slot.gender = species.gender === 'M' ? 'Male' : species.gender === 'F' ? 'Female' : 'Male';
     slot.moves = [null, null, null, null];
     slot.stats = {};
     for (const k of STAT_NAMES) slot.stats[k] = 0;
