@@ -95,6 +95,8 @@ export class MoveSearchWidget {
   private filterFlags: FilterFlag[] = [];
   private filterMode: 'and' | 'or' = 'and';
   private highlightIndex = -1;
+  private selectedIndex = -1;
+  private filteredForNav: { id: string; [key: string]: unknown }[] = [];
   private activeMoveId = '';
 
   private sortSelect!: HTMLSelectElement;
@@ -226,6 +228,7 @@ export class MoveSearchWidget {
     this.grid = document.createElement('div');
     this.grid.className = 'ms-grid';
     this.grid.setAttribute('role', 'list');
+    this.grid.setAttribute('tabindex', '0');
 
     container.appendChild(filterRow);
     container.appendChild(this.filterPopup);
@@ -235,6 +238,22 @@ export class MoveSearchWidget {
 
   private bindEvents() {
     const { signal } = this.abort;
+
+    // Keyboard navigation for list
+    this.grid.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (!this.filteredForNav.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredForNav.length - 1);
+        this.updateListSelection();
+        this.scrollSelectedIntoView();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+        this.updateListSelection();
+        this.scrollSelectedIntoView();
+      }
+    });
 
     // Sort
     const statSortKeys = new Set(['bp', 'acc', 'pri']);
@@ -551,6 +570,9 @@ export class MoveSearchWidget {
       return this.sortAsc ? cmp : -cmp;
     });
 
+    this.filteredForNav = list;
+    this.selectedIndex = -1;
+
     this.resultCount.textContent = `${list.length} Result${list.length === 1 ? '' : 's'}`;
     this.resultCount.classList.toggle('hidden', false);
 
@@ -585,6 +607,7 @@ export class MoveSearchWidget {
         el.addEventListener('click', () => {
           this.grid.querySelector('.move-entry.selected')?.classList.remove('selected');
           el.classList.add('selected');
+          this.selectedIndex = list.indexOf(m);
           this.activeMoveId = m.id;
           this.opts.onMoveClick!(m.id, m);
         });
@@ -598,6 +621,26 @@ export class MoveSearchWidget {
     this.moves = moves;
     this.loaded = true;
     this.render();
+  }
+
+  private updateListSelection() {
+    document.querySelectorAll('.move-entry.selected').forEach(el => el.classList.remove('selected'));
+    if (this.selectedIndex < 0 || this.selectedIndex >= this.filteredForNav.length) return;
+    const items = this.grid.querySelectorAll('.move-entry');
+    const item = items[this.selectedIndex] as HTMLElement;
+    if (item) {
+      item.classList.add('selected');
+      const moveData = this.filteredForNav[this.selectedIndex];
+      const moveId = moveData['id'] as string;
+      const move = this.moves[moveId];
+      if (move && this.opts.onMoveClick) this.opts.onMoveClick(moveId, move);
+    }
+  }
+
+  private scrollSelectedIntoView() {
+    const items = this.grid.querySelectorAll('.move-entry');
+    const item = items[this.selectedIndex] as HTMLElement;
+    if (item) item.scrollIntoView({ block: 'nearest' });
   }
 
   destroy() {

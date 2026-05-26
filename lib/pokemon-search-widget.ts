@@ -29,6 +29,8 @@ export class PokemonSearchWidget {
   private filterFlags: FilterFlag[] = [];
   private filterMode: 'and' | 'or' = 'and';
   private filterHighlightIndex = -1;
+  private selectedIndex = -1;
+  private filteredForNav: Species[] = [];
   private allAbilities: string[] = [];
   private learnedByFilter: Set<string> | null = null;
   private moveNames: Record<string, string> = {};
@@ -166,6 +168,7 @@ export class PokemonSearchWidget {
     const grid = document.createElement('div');
     grid.className = 'ps-pokemon-grid';
     grid.setAttribute('role', 'list');
+    grid.setAttribute('tabindex', '0');
     this.grid = grid;
     container.appendChild(grid);
   }
@@ -275,6 +278,22 @@ export class PokemonSearchWidget {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && (this.filterInput.value || this.filterFlags.length > 0)) {
         this.clear();
+      }
+    });
+
+    // List keyboard navigation (ArrowUp/Down when list items are selected)
+    this.grid.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (!this.filteredForNav.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredForNav.length - 1);
+        this.updateListSelection();
+        this.scrollSelectedIntoView();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+        this.updateListSelection();
+        this.scrollSelectedIntoView();
       }
     });
 
@@ -596,6 +615,24 @@ export class PokemonSearchWidget {
     });
   }
 
+  private updateListSelection() {
+    document.querySelectorAll('.pokemon-list-item.selected').forEach(el => el.classList.remove('selected'));
+    if (this.selectedIndex < 0 || this.selectedIndex >= this.filteredForNav.length) return;
+    const items = this.grid.querySelectorAll('.pokemon-list-item');
+    const item = items[this.selectedIndex] as HTMLElement;
+    if (item) {
+      item.classList.add('selected');
+      const species = this.filteredForNav[this.selectedIndex];
+      if (species) this.opts.onPokemonClick(species.id, species);
+    }
+  }
+
+  private scrollSelectedIntoView() {
+    const items = this.grid.querySelectorAll('.pokemon-list-item');
+    const item = items[this.selectedIndex] as HTMLElement;
+    if (item) item.scrollIntoView({ block: 'nearest' });
+  }
+
   destroy() {
     this.opts.container.innerHTML = '';
   }
@@ -623,6 +660,9 @@ export class PokemonSearchWidget {
       }
       return this.sortAsc ? cmp : -cmp;
     });
+
+    this.filteredForNav = filtered;
+    this.selectedIndex = -1;
 
     this.resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
     this.resultCount.classList.toggle('hidden', speciesList.length === 0);
@@ -708,6 +748,7 @@ export class PokemonSearchWidget {
       item.addEventListener('click', () => {
         document.querySelectorAll('.pokemon-list-item.selected').forEach(el => el.classList.remove('selected'));
         item.classList.add('selected');
+        this.selectedIndex = filtered.indexOf(s);
         this.opts.onPokemonClick(s.id, s);
       });
       this.grid.appendChild(item);

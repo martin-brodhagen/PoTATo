@@ -27,6 +27,7 @@ let spriteMap: Record<string, string> = {};
 let shinySpriteMap: Record<string, string> = {};
 let pendingSlotIndex: number | null = null;
 let detailSpecies: Species | null = null;
+let detailShiny = false;
 
 let movesWidget: MoveSearchWidget | null = null;
 let detailMovesWidget: MoveSearchWidget | null = null;
@@ -292,6 +293,7 @@ function switchToDetail() {
 async function showDetail(s: Species) {
   updateBreadcrumbs({ type: 'pokemon', id: s.id, name: s.name });
   detailSpecies = s;
+  detailShiny = false;
   if (detailMovesWidget) { detailMovesWidget.destroy(); detailMovesWidget = null; }
   if (moveDetailPokemonWidget) { moveDetailPokemonWidget.destroy(); moveDetailPokemonWidget = null; }
   if (abilityDetailPokemonWidget) { abilityDetailPokemonWidget.destroy(); abilityDetailPokemonWidget = null; }
@@ -307,7 +309,8 @@ async function showDetail(s: Species) {
   }
 
   const bst = Object.values(s.baseStats).reduce((a, b) => a + b, 0);
-  const spriteFile = spriteMap[s.id];
+  const spriteFile = detailShiny ? shinySpriteMap[s.id] : spriteMap[s.id];
+  const spritePath = detailShiny ? 'sprites/shiny' : 'sprites/champions';
   let html = `
     <div class="detail-top">
       <div class="stats-block">
@@ -323,7 +326,7 @@ async function showDetail(s: Species) {
 
       <div class="detail-header-wrap">
         <div class="detail-header">
-          ${spriteFile ? `<img class="detail-sprite" src="${SPRITE_PATH}/${spriteFile}" alt="${s.name}">` : ''}
+          ${spriteFile ? `<img class="detail-sprite" src="${spritePath}/${spriteFile}" alt="${s.name}" style="cursor:pointer" title="Click to toggle shiny">` : ''}
           <div>
             <h2>${s.name}</h2>
             <div class="types">${[0, 1].map(i => {
@@ -364,6 +367,17 @@ async function showDetail(s: Species) {
 
   searchDetailContent.innerHTML = html;
   renderBreadcrumbBar();
+
+  // Toggle shiny on sprite click
+  const detailSpriteEl = searchDetailContent.querySelector('.detail-sprite') as HTMLImageElement | null;
+  if (detailSpriteEl) {
+    detailSpriteEl.addEventListener('click', () => {
+      detailShiny = !detailShiny;
+      const newPath = detailShiny ? 'sprites/shiny' : 'sprites/champions';
+      const newFile = detailShiny ? shinySpriteMap[s.id] : spriteMap[s.id];
+      detailSpriteEl.src = `${newPath}/${newFile}`;
+    });
+  }
 
   // Wire up ability buttons → ability detail
   const abilityNames = new Set(Object.values(s.abilities).filter(Boolean));
@@ -440,7 +454,7 @@ function showMoveDetail(moveId: string, move: Move) {
       ${flagLabels.length > 0 || effectLabels.length > 0 ? `<div class="move-detail-badges">${[...flagLabels, ...effectLabels].map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
       ${move.shortDesc ? `<div class="move-detail-desc">${move.shortDesc}</div>` : ''}
       <div class="move-detail-learned">
-        <span class="badge-group-label">Learned By (${learnedBy.length})</span>
+        <h3 class="badge-group-label">Learned By (${learnedBy.length})</h3>
         <div id="move-detail-learned-container"></div>
       </div>
     </div>`;
@@ -480,7 +494,7 @@ function showAbilityDetail(abilityId: string, ability: Ability) {
       ${effectLabels.length > 0 ? `<div class="move-detail-badges">${effectLabels.map(l => `<span class="badge">${l}</span>`).join('')}</div>` : ''}
       <div class="move-detail-desc">${ability.desc}</div>
       <div class="move-detail-learned">
-        <span class="badge-group-label">Pokémon with ${ability.name} (${pokemonIds.length})</span>
+        <h3 class="badge-group-label">Pokémon with ${ability.name} (${pokemonIds.length})</h3>
         <div id="ability-detail-pokemon-container"></div>
       </div>
     </div>`;

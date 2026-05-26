@@ -154,3 +154,7 @@ npm start                # → http://localhost:8787
 - `PokemonSearchWidget` accepts `learnedByFilter` in constructor to avoid a double render (all species → filtered)
 - Breadcrumbs at the top of the Search Detail view, rendered into `#breadcrumb-bar` (outside the content area), with click-navigation and trail management (truncation, index shift)
 - **`ItemSearchWidget`**: `ITEM_CATEGORIES` exports Game8 item types — Defense, Mega Stone, Other, Power Boost, Recovery, Stat Boost. Type-resist berries classified as Defense; Oran/Sitrus berries as Recovery. Category buttons filter items; sorting alphabetical only.
+
+## TODOs
+
+- [ ] Finish formatting the items.json file (remove remaining non-display fields: fling, isChoice, isBerry, itemUser)

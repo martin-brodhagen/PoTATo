@@ -155,7 +155,7 @@ export class ItemSearchWidget {
             el.className = 'item-entry';
             el.dataset.itemId = item.id;
             const spriteHtml = item.sprite
-                ? `<img class="item-entry-sprite" src="${ITEM_SPRITE_PATH}/${item.sprite.split('/').pop()}" alt="${item.name}">`
+                ? `<img class="item-entry-sprite" src="${ITEM_SPRITE_PATH}/${item.sprite}.png" alt="${item.name}">`
                 : '';
             el.innerHTML =
                 spriteHtml +

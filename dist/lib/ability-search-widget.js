@@ -28,6 +28,8 @@ export class AbilitySearchWidget {
     loading = false;
     searchQuery = '';
     highlightIndex = -1;
+    selectedIndex = -1;
+    filteredForNav = [];
     filterFlags = [];
     filterMode = 'and';
     sortAsc = true;
@@ -113,10 +115,28 @@ export class AbilitySearchWidget {
         this.grid = document.createElement('div');
         this.grid.className = 'as-grid';
         this.grid.setAttribute('role', 'list');
+        this.grid.setAttribute('tabindex', '0');
         container.appendChild(this.grid);
     }
     bindEvents() {
         const { signal } = this.abort;
+        // Keyboard navigation for list
+        this.grid.addEventListener('keydown', (e) => {
+            if (!this.filteredForNav.length)
+                return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredForNav.length - 1);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
+            }
+            else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
+            }
+        });
         this.sortSelect.addEventListener('change', () => {
             this.render();
         }, { signal });
@@ -298,6 +318,8 @@ export class AbilitySearchWidget {
         }
         if (!this.sortAsc)
             list.reverse();
+        this.filteredForNav = list;
+        this.selectedIndex = -1;
         this.resultCount.textContent = `${list.length} Result${list.length === 1 ? '' : 's'}`;
         this.resultCount.classList.toggle('hidden', false);
         this.grid.innerHTML = '';
@@ -316,12 +338,34 @@ export class AbilitySearchWidget {
             el.addEventListener('click', () => {
                 this.grid.querySelector('.ability-entry.selected')?.classList.remove('selected');
                 el.classList.add('selected');
+                this.selectedIndex = list.indexOf(a);
                 const ability = this.abilities[a.id];
                 if (ability)
                     this.opts.onAbilityClick?.(a.id, ability);
             });
             this.grid.appendChild(el);
         }
+    }
+    updateListSelection() {
+        document.querySelectorAll('.ability-entry.selected').forEach(el => el.classList.remove('selected'));
+        if (this.selectedIndex < 0 || this.selectedIndex >= this.filteredForNav.length)
+            return;
+        const items = this.grid.querySelectorAll('.ability-entry');
+        const item = items[this.selectedIndex];
+        if (item) {
+            item.classList.add('selected');
+            const abilityData = this.filteredForNav[this.selectedIndex];
+            const abilityId = abilityData['id'];
+            const ability = this.abilities[abilityId];
+            if (ability)
+                this.opts.onAbilityClick?.(abilityId, ability);
+        }
+    }
+    scrollSelectedIntoView() {
+        const items = this.grid.querySelectorAll('.ability-entry');
+        const item = items[this.selectedIndex];
+        if (item)
+            item.scrollIntoView({ block: 'nearest' });
     }
     destroy() {
         this.abort.abort();

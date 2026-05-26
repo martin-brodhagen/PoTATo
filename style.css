@@ -1033,7 +1033,6 @@ button:hover {
 
 /* ── Ability Search Widget ──────────────────────────── */
 .as-grid {
-  padding: 0.5rem 0.75rem;
   overflow-y: auto;
   flex: 1;
   min-height: 0;
@@ -1207,7 +1206,6 @@ button:hover {
   height: 28px;
   flex-shrink: 0;
   margin-right: 0.4rem;
-  image-rendering: pixelated;
 }
 
 .item-entry-name {
@@ -1452,6 +1450,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding-left: 1rem;
 }
 
 .move-detail-name {
@@ -1468,6 +1467,7 @@ button:hover {
 .move-detail-stats {
   display: flex;
   gap: 0.4rem;
+  padding-left: 1rem;
 }
 
 .move-detail-stat {
@@ -1503,15 +1503,13 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.3rem;
+  padding-left: 1rem;
 }
 
 .badge-group-label {
-  font-size: 0.65rem;
-  color: #888;
+  font-size: 0.9rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-right: 0.2rem;
+  padding-left: 1rem;
 }
 
 .badge {
@@ -1533,7 +1531,7 @@ button:hover {
   font-size: 0.82rem;
   color: #e0e0e8;
   line-height: 1.4;
-  padding: 0.3rem 0;
+  padding: 0.3rem 0 0.3rem 1rem;
   border-top: 1px solid #2a2a3a;
   border-bottom: 1px solid #2a2a3a;
 }

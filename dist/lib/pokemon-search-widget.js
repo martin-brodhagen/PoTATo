@@ -15,6 +15,8 @@ export class PokemonSearchWidget {
     filterFlags = [];
     filterMode = 'and';
     filterHighlightIndex = -1;
+    selectedIndex = -1;
+    filteredForNav = [];
     allAbilities = [];
     learnedByFilter = null;
     moveNames = {};
@@ -136,6 +138,7 @@ export class PokemonSearchWidget {
         const grid = document.createElement('div');
         grid.className = 'ps-pokemon-grid';
         grid.setAttribute('role', 'list');
+        grid.setAttribute('tabindex', '0');
         this.grid = grid;
         container.appendChild(grid);
     }
@@ -240,6 +243,23 @@ export class PokemonSearchWidget {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && (this.filterInput.value || this.filterFlags.length > 0)) {
                 this.clear();
+            }
+        });
+        // List keyboard navigation (ArrowUp/Down when list items are selected)
+        this.grid.addEventListener('keydown', (e) => {
+            if (!this.filteredForNav.length)
+                return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredForNav.length - 1);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
+            }
+            else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
             }
         });
         document.addEventListener('click', (e) => {
@@ -548,6 +568,25 @@ export class PokemonSearchWidget {
             btn.classList.toggle('active', btn.dataset.mode === this.filterMode);
         });
     }
+    updateListSelection() {
+        document.querySelectorAll('.pokemon-list-item.selected').forEach(el => el.classList.remove('selected'));
+        if (this.selectedIndex < 0 || this.selectedIndex >= this.filteredForNav.length)
+            return;
+        const items = this.grid.querySelectorAll('.pokemon-list-item');
+        const item = items[this.selectedIndex];
+        if (item) {
+            item.classList.add('selected');
+            const species = this.filteredForNav[this.selectedIndex];
+            if (species)
+                this.opts.onPokemonClick(species.id, species);
+        }
+    }
+    scrollSelectedIntoView() {
+        const items = this.grid.querySelectorAll('.pokemon-list-item');
+        const item = items[this.selectedIndex];
+        if (item)
+            item.scrollIntoView({ block: 'nearest' });
+    }
     destroy() {
         this.opts.container.innerHTML = '';
     }
@@ -575,6 +614,8 @@ export class PokemonSearchWidget {
             }
             return this.sortAsc ? cmp : -cmp;
         });
+        this.filteredForNav = filtered;
+        this.selectedIndex = -1;
         this.resultCount.textContent = `${filtered.length} Result${filtered.length === 1 ? '' : 's'}`;
         this.resultCount.classList.toggle('hidden', speciesList.length === 0);
         if (filtered.length === 0) {
@@ -647,6 +688,7 @@ export class PokemonSearchWidget {
             item.addEventListener('click', () => {
                 document.querySelectorAll('.pokemon-list-item.selected').forEach(el => el.classList.remove('selected'));
                 item.classList.add('selected');
+                this.selectedIndex = filtered.indexOf(s);
                 this.opts.onPokemonClick(s.id, s);
             });
             this.grid.appendChild(item);

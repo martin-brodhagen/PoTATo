@@ -934,6 +934,10 @@ for iid in MA_LEGAL_ITEMS:
 for iid in items_out:
     items_out[iid]['sprite'] = iid
 
+for iid in items_out:
+    for key in ['spritenum', 'onBasePowerPriority', 'num', 'gen', 'shortDesc', 'naturalGift', 'onAfterMoveSecondarySelfPriority', 'onAfterSetStatusPriority', 'onAnySwitchInPriority', 'onDamagePriority', 'onFractionalPriorityPriority', 'onModifyAccuracyPriority', 'onModifyAtkPriority', 'onModifyMovePriority', 'onModifySpAPriority', 'onResidualOrder', 'onResidualSubOrder']:
+        items_out[iid].pop(key, None)
+
 # ---------------------------------------------------------------------------
 # 10. Build moves-with-learnsets.json — moves enriched with learnedBy list
 # ---------------------------------------------------------------------------
@@ -1179,8 +1183,8 @@ def write_json(filename, data, indent=None):
 write_json("index.json", index, indent=1)
 write_json("moves.json", moves_out, indent=1)
 write_json("moves-with-learnsets.json", moves_with_learnsets_out, indent=1)
-write_json("learnsets.json", learnset_out)
-write_json("items.json", items_out)
-write_json("abilities.json", abilities_out)
+write_json("learnsets.json", learnset_out, indent=1)
+write_json("items.json", items_out, indent=1)
+write_json("abilities.json", abilities_out, indent=1)
 
 print(f"\nDone! Generated {len(index)} battle forms, {len(moves_out)} moves, {len(items_out)} items, {len(learnset_out)} learnsets, {len(moves_with_learnsets_out)} moves-with-learnsets, {len(abilities_out)} abilities.", file=sys.stderr)

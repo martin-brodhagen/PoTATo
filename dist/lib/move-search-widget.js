@@ -81,6 +81,8 @@ export class MoveSearchWidget {
     filterFlags = [];
     filterMode = 'and';
     highlightIndex = -1;
+    selectedIndex = -1;
+    filteredForNav = [];
     activeMoveId = '';
     sortSelect;
     sortDirBtn;
@@ -192,6 +194,7 @@ export class MoveSearchWidget {
         this.grid = document.createElement('div');
         this.grid.className = 'ms-grid';
         this.grid.setAttribute('role', 'list');
+        this.grid.setAttribute('tabindex', '0');
         container.appendChild(filterRow);
         container.appendChild(this.filterPopup);
         container.appendChild(this.filterBar);
@@ -199,6 +202,23 @@ export class MoveSearchWidget {
     }
     bindEvents() {
         const { signal } = this.abort;
+        // Keyboard navigation for list
+        this.grid.addEventListener('keydown', (e) => {
+            if (!this.filteredForNav.length)
+                return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredForNav.length - 1);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
+            }
+            else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
+            }
+        });
         // Sort
         const statSortKeys = new Set(['bp', 'acc', 'pri']);
         this.sortSelect.addEventListener('change', () => {
@@ -492,6 +512,8 @@ export class MoveSearchWidget {
             }
             return this.sortAsc ? cmp : -cmp;
         });
+        this.filteredForNav = list;
+        this.selectedIndex = -1;
         this.resultCount.textContent = `${list.length} Result${list.length === 1 ? '' : 's'}`;
         this.resultCount.classList.toggle('hidden', false);
         this.grid.innerHTML = '';
@@ -523,6 +545,7 @@ export class MoveSearchWidget {
                 el.addEventListener('click', () => {
                     this.grid.querySelector('.move-entry.selected')?.classList.remove('selected');
                     el.classList.add('selected');
+                    this.selectedIndex = list.indexOf(m);
                     this.activeMoveId = m.id;
                     this.opts.onMoveClick(m.id, m);
                 });
@@ -534,6 +557,27 @@ export class MoveSearchWidget {
         this.moves = moves;
         this.loaded = true;
         this.render();
+    }
+    updateListSelection() {
+        document.querySelectorAll('.move-entry.selected').forEach(el => el.classList.remove('selected'));
+        if (this.selectedIndex < 0 || this.selectedIndex >= this.filteredForNav.length)
+            return;
+        const items = this.grid.querySelectorAll('.move-entry');
+        const item = items[this.selectedIndex];
+        if (item) {
+            item.classList.add('selected');
+            const moveData = this.filteredForNav[this.selectedIndex];
+            const moveId = moveData['id'];
+            const move = this.moves[moveId];
+            if (move && this.opts.onMoveClick)
+                this.opts.onMoveClick(moveId, move);
+        }
+    }
+    scrollSelectedIntoView() {
+        const items = this.grid.querySelectorAll('.move-entry');
+        const item = items[this.selectedIndex];
+        if (item)
+            item.scrollIntoView({ block: 'nearest' });
     }
     destroy() {
         this.abort.abort();

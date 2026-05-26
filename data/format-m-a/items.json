@@ -1,1 +1,1083 @@
-{"fairyfeather": {"name": "Fairy Feather", "spritenum": 754, "fling": {"basePower": 10}, "onBasePowerPriority": 15, "num": 2401, "gen": 9, "desc": "Holder's Fairy-type attacks have 1.2x power.", "shortDesc": "Holder's Fairy-type attacks have 1.2x power.", "sprite": "fairyfeather"}, "hardstone": {"name": "Hard Stone", "spritenum": 187, "fling": {"basePower": 100}, "onBasePowerPriority": 15, "num": 238, "gen": 2, "desc": "Holder's Rock-type attacks have 1.2x power.", "shortDesc": "Holder's Rock-type attacks have 1.2x power.", "sprite": "hardstone"}, "whiteherb": {"name": "White Herb", "spritenum": 535, "fling": {"basePower": 10}, "onAnySwitchInPriority": -2, "onResidualOrder": 29, "num": 214, "gen": 3, "desc": "Restores all lowered stat stages to 0 when one is less than 0. Single use.", "shortDesc": "Restores all lowered stat stages to 0 when one is less than 0. Single use.", "sprite": "whiteherb"}, "dragonfang": {"name": "Dragon Fang", "spritenum": 106, "fling": {"basePower": 70}, "onBasePowerPriority": 15, "num": 250, "gen": 2, "desc": "Holder's Dragon-type attacks have 1.2x power.", "shortDesc": "Holder's Dragon-type attacks have 1.2x power.", "sprite": "dragonfang"}, "pechaberry": {"name": "Pecha Berry", "spritenum": 333, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Electric"}, "num": 151, "gen": 3, "desc": "Holder is cured if it is poisoned. Single use.", "shortDesc": "Holder is cured if it is poisoned. Single use.", "sprite": "pechaberry"}, "abomasite": {"name": "Abomasite", "spritenum": 575, "megaStone": {"Abomasnow": "Abomasnow-Mega"}, "itemUser": ["Abomasnow"], "num": 674, "gen": 6, "desc": "If held by an Abomasnow, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Abomasnow, this item allows it to Mega Evolve in battle.", "sprite": "abomasite"}, "leftovers": {"name": "Leftovers", "spritenum": 242, "fling": {"basePower": 10}, "onResidualOrder": 5, "onResidualSubOrder": 4, "num": 234, "gen": 2, "desc": "At the end of every turn, holder restores 1/16 of its max HP.", "shortDesc": "At the end of every turn, holder restores 1/16 of its max HP.", "sprite": "leftovers"}, "gengarite": {"name": "Gengarite", "spritenum": 588, "megaStone": {"Gengar": "Gengar-Mega"}, "itemUser": ["Gengar"], "num": 656, "gen": 6, "desc": "If held by a Gengar, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Gengar, this item allows it to Mega Evolve in battle.", "sprite": "gengarite"}, "focusband": {"name": "Focus Band", "spritenum": 150, "fling": {"basePower": 10}, "onDamagePriority": -40, "num": 230, "gen": 2, "desc": "Holder has a 10% chance to survive an attack that would KO it with 1 HP.", "shortDesc": "Holder has a 10% chance to survive an attack that would KO it with 1 HP.", "sprite": "focusband"}, "tyranitarite": {"name": "Tyranitarite", "spritenum": 607, "megaStone": {"Tyranitar": "Tyranitar-Mega"}, "itemUser": ["Tyranitar"], "num": 669, "gen": 6, "desc": "If held by a Tyranitar, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Tyranitar, this item allows it to Mega Evolve in battle.", "sprite": "tyranitarite"}, "charcoal": {"name": "Charcoal", "spritenum": 61, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 249, "gen": 2, "desc": "Holder's Fire-type attacks have 1.2x power.", "shortDesc": "Holder's Fire-type attacks have 1.2x power.", "sprite": "charcoal"}, "chilanberry": {"name": "Chilan Berry", "spritenum": 66, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Normal"}, "num": 200, "gen": 4, "desc": "Halves damage taken from a Normal-type attack. Single use.", "shortDesc": "Halves damage taken from a Normal-type attack. Single use.", "sprite": "chilanberry"}, "delphoxite": {"name": "Delphoxite", "spritenum": 559, "megaStone": {"Delphox": "Delphox-Mega"}, "itemUser": ["Delphox"], "num": 2576, "gen": 9, "desc": "If held by a Delphox, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Delphox, this item allows it to Mega Evolve in battle.", "sprite": "delphoxite"}, "greninjite": {"name": "Greninjite", "spritenum": 560, "megaStone": {"Greninja": "Greninja-Mega"}, "itemUser": ["Greninja"], "num": 2577, "gen": 9, "desc": "If held by a Greninja, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Greninja, this item allows it to Mega Evolve in battle.", "sprite": "greninjite"}, "drampanite": {"name": "Drampanite", "spritenum": 569, "megaStone": {"Drampa": "Drampa-Mega"}, "itemUser": ["Drampa"], "num": 2585, "gen": 9, "desc": "If held by a Drampa, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Drampa, this item allows it to Mega Evolve in battle.", "sprite": "drampanite"}, "galladite": {"name": "Galladite", "spritenum": 616, "megaStone": {"Gallade": "Gallade-Mega"}, "itemUser": ["Gallade"], "num": 756, "gen": 6, "desc": "If held by a Gallade, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Gallade, this item allows it to Mega Evolve in battle.", "sprite": "galladite"}, "habanberry": {"name": "Haban Berry", "spritenum": 185, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Dragon"}, "num": 197, "gen": 4, "desc": "Halves damage taken from a supereffective Dragon-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Dragon-type attack. Single use.", "sprite": "habanberry"}, "alakazite": {"name": "Alakazite", "spritenum": 579, "megaStone": {"Alakazam": "Alakazam-Mega"}, "itemUser": ["Alakazam"], "num": 679, "gen": 6, "desc": "If held by an Alakazam, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Alakazam, this item allows it to Mega Evolve in battle.", "sprite": "alakazite"}, "silkscarf": {"name": "Silk Scarf", "spritenum": 444, "fling": {"basePower": 10}, "onBasePowerPriority": 15, "num": 251, "gen": 3, "desc": "Holder's Normal-type attacks have 1.2x power.", "shortDesc": "Holder's Normal-type attacks have 1.2x power.", "sprite": "silkscarf"}, "skarmorite": {"name": "Skarmorite", "spritenum": 550, "megaStone": {"Skarmory": "Skarmory-Mega"}, "itemUser": ["Skarmory"], "num": 2565, "gen": 9, "desc": "If held by a Skarmory, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Skarmory, this item allows it to Mega Evolve in battle.", "sprite": "skarmorite"}, "cheriberry": {"name": "Cheri Berry", "spritenum": 63, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Fire"}, "num": 149, "gen": 3, "desc": "Holder cures itself if it is paralyzed. Single use.", "shortDesc": "Holder cures itself if it is paralyzed. Single use.", "sprite": "cheriberry"}, "victreebelite": {"name": "Victreebelite", "spritenum": 545, "megaStone": {"Victreebel": "Victreebel-Mega"}, "itemUser": ["Victreebel"], "num": 2560, "gen": 9, "desc": "If held by a Victreebel, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Victreebel, this item allows it to Mega Evolve in battle.", "sprite": "victreebelite"}, "lightball": {"name": "Light Ball", "spritenum": 251, "fling": {"basePower": 30, "status": "par"}, "onModifyAtkPriority": 1, "onModifySpAPriority": 1, "itemUser": ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World"], "num": 236, "gen": 2, "desc": "If held by a Pikachu, its Attack and Sp. Atk are doubled.", "shortDesc": "If held by a Pikachu, its Attack and Sp. Atk are doubled.", "sprite": "lightball"}, "payapaberry": {"name": "Payapa Berry", "spritenum": 330, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Psychic"}, "num": 193, "gen": 4, "desc": "Halves damage taken from a supereffective Psychic-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Psychic-type attack. Single use.", "sprite": "payapaberry"}, "golurkite": {"name": "Golurkite", "spritenum": 505, "megaStone": {"Golurk": "Golurk-Mega"}, "itemUser": ["Golurk"], "num": 2642, "gen": 9, "desc": "If held by a Golurk, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Golurk, this item allows it to Mega Evolve in battle.", "sprite": "golurkite"}, "spelltag": {"name": "Spell Tag", "spritenum": 461, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 247, "gen": 2, "desc": "Holder's Ghost-type attacks have 1.2x power.", "shortDesc": "Holder's Ghost-type attacks have 1.2x power.", "sprite": "spelltag"}, "venusaurite": {"name": "Venusaurite", "spritenum": 608, "megaStone": {"Venusaur": "Venusaur-Mega"}, "itemUser": ["Venusaur"], "num": 659, "gen": 6, "desc": "If held by a Venusaur, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Venusaur, this item allows it to Mega Evolve in battle.", "sprite": "venusaurite"}, "lucarionite": {"name": "Lucarionite", "spritenum": 594, "megaStone": {"Lucario": "Lucario-Mega"}, "itemUser": ["Lucario"], "num": 673, "gen": 6, "desc": "If held by a Lucario, this item allows it to Mega Evolve into Mega Lucario in battle.", "shortDesc": "If held by a Lucario, this item allows it to Mega Evolve into Mega Lucario in battle.", "sprite": "lucarionite"}, "poisonbarb": {"name": "Poison Barb", "spritenum": 343, "fling": {"basePower": 70, "status": "psn"}, "onBasePowerPriority": 15, "num": 245, "gen": 2, "desc": "Holder's Poison-type attacks have 1.2x power.", "shortDesc": "Holder's Poison-type attacks have 1.2x power.", "sprite": "poisonbarb"}, "dragoninite": {"name": "Dragoninite", "spritenum": 547, "megaStone": {"Dragonite": "Dragonite-Mega"}, "itemUser": ["Dragonite"], "num": 2562, "gen": 9, "desc": "If held by a Dragonite, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Dragonite, this item allows it to Mega Evolve in battle.", "sprite": "dragoninite"}, "rawstberry": {"name": "Rawst Berry", "spritenum": 381, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Grass"}, "num": 152, "gen": 3, "desc": "Holder is cured if it is burned. Single use.", "shortDesc": "Holder is cured if it is burned. Single use.", "sprite": "rawstberry"}, "heracronite": {"name": "Heracronite", "spritenum": 590, "megaStone": {"Heracross": "Heracross-Mega"}, "itemUser": ["Heracross"], "num": 680, "gen": 6, "desc": "If held by a Heracross, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Heracross, this item allows it to Mega Evolve in battle.", "sprite": "heracronite"}, "altarianite": {"name": "Altarianite", "spritenum": 615, "megaStone": {"Altaria": "Altaria-Mega"}, "itemUser": ["Altaria"], "num": 755, "gen": 6, "desc": "If held by an Altaria, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Altaria, this item allows it to Mega Evolve in battle.", "sprite": "altarianite"}, "glalitite": {"name": "Glalitite", "spritenum": 623, "megaStone": {"Glalie": "Glalie-Mega"}, "itemUser": ["Glalie"], "num": 763, "gen": 6, "desc": "If held by a Glalie, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Glalie, this item allows it to Mega Evolve in battle.", "sprite": "glalitite"}, "colburberry": {"name": "Colbur Berry", "spritenum": 78, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Dark"}, "num": 198, "gen": 4, "desc": "Halves damage taken from a supereffective Dark-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Dark-type attack. Single use.", "sprite": "colburberry"}, "beedrillite": {"name": "Beedrillite", "spritenum": 628, "megaStone": {"Beedrill": "Beedrill-Mega"}, "itemUser": ["Beedrill"], "num": 770, "gen": 6, "desc": "If held by a Beedrill, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Beedrill, this item allows it to Mega Evolve in battle.", "sprite": "beedrillite"}, "kasibberry": {"name": "Kasib Berry", "spritenum": 233, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Ghost"}, "num": 196, "gen": 4, "desc": "Halves damage taken from a supereffective Ghost-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Ghost-type attack. Single use.", "sprite": "kasibberry"}, "mentalherb": {"name": "Mental Herb", "spritenum": 285, "fling": {"basePower": 10}, "num": 219, "gen": 3, "desc": "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use.", "shortDesc": "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use.", "sprite": "mentalherb"}, "banettite": {"name": "Banettite", "spritenum": 582, "megaStone": {"Banette": "Banette-Mega"}, "itemUser": ["Banette"], "num": 668, "gen": 6, "desc": "If held by a Banette, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Banette, this item allows it to Mega Evolve in battle.", "sprite": "banettite"}, "sablenite": {"name": "Sablenite", "spritenum": 614, "megaStone": {"Sableye": "Sableye-Mega"}, "itemUser": ["Sableye"], "num": 754, "gen": 6, "desc": "If held by a Sableye, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Sableye, this item allows it to Mega Evolve in battle.", "sprite": "sablenite"}, "froslassite": {"name": "Froslassite", "spritenum": 551, "megaStone": {"Froslass": "Froslass-Mega"}, "itemUser": ["Froslass"], "num": 2566, "gen": 9, "desc": "If held by a Froslass, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Froslass, this item allows it to Mega Evolve in battle.", "sprite": "froslassite"}, "hawluchanite": {"name": "Hawluchanite", "spritenum": 566, "megaStone": {"Hawlucha": "Hawlucha-Mega"}, "itemUser": ["Hawlucha"], "num": 2583, "gen": 9, "desc": "If held by a Hawlucha, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Hawlucha, this item allows it to Mega Evolve in battle.", "sprite": "hawluchanite"}, "shellbell": {"name": "Shell Bell", "spritenum": 438, "fling": {"basePower": 30}, "onAfterMoveSecondarySelfPriority": -1, "num": 253, "gen": 3, "desc": "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon.", "shortDesc": "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon.", "sprite": "shellbell"}, "scovillainite": {"name": "Scovillainite", "spritenum": 511, "megaStone": {"Scovillain": "Scovillain-Mega"}, "itemUser": ["Scovillain"], "num": 2647, "gen": 9, "desc": "If held by a Scovillain, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Scovillain, this item allows it to Mega Evolve in battle.", "sprite": "scovillainite"}, "cameruptite": {"name": "Cameruptite", "spritenum": 625, "megaStone": {"Camerupt": "Camerupt-Mega"}, "itemUser": ["Camerupt"], "num": 767, "gen": 6, "desc": "If held by a Camerupt, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Camerupt, this item allows it to Mega Evolve in battle.", "sprite": "cameruptite"}, "excadrite": {"name": "Excadrite", "spritenum": 553, "megaStone": {"Excadrill": "Excadrill-Mega"}, "itemUser": ["Excadrill"], "num": 2570, "gen": 9, "desc": "If held by an Excadrill, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Excadrill, this item allows it to Mega Evolve in battle.", "sprite": "excadrite"}, "babiriberry": {"name": "Babiri Berry", "spritenum": 17, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Steel"}, "num": 199, "gen": 4, "desc": "Halves damage taken from a supereffective Steel-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Steel-type attack. Single use.", "sprite": "babiriberry"}, "kingsrock": {"name": "King's Rock", "spritenum": 236, "fling": {"basePower": 30, "volatileStatus": "flinch"}, "onModifyMovePriority": -1, "num": 221, "gen": 2, "desc": "Holder's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Evolves Poliwhirl into Politoed and Slowpoke into Slowking when traded.", "shortDesc": "Holder's attacks without a chance to flinch gain a 10% chance to flinch.", "sprite": "kingsrock"}, "lopunnite": {"name": "Lopunnite", "spritenum": 626, "megaStone": {"Lopunny": "Lopunny-Mega"}, "itemUser": ["Lopunny"], "num": 768, "gen": 6, "desc": "If held by a Lopunny, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Lopunny, this item allows it to Mega Evolve in battle.", "sprite": "lopunnite"}, "manectite": {"name": "Manectite", "spritenum": 596, "megaStone": {"Manectric": "Manectric-Mega"}, "itemUser": ["Manectric"], "num": 682, "gen": 6, "desc": "If held by a Manectric, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Manectric, this item allows it to Mega Evolve in battle.", "sprite": "manectite"}, "garchompite": {"name": "Garchompite", "spritenum": 573, "megaStone": {"Garchomp": "Garchomp-Mega"}, "itemUser": ["Garchomp"], "num": 683, "gen": 6, "desc": "If held by a Garchomp, this item allows it to Mega Evolve into Mega Garchomp.", "shortDesc": "If held by a Garchomp, this item allows it to Mega Evolve into Mega Garchomp.", "sprite": "garchompite"}, "tangaberry": {"name": "Tanga Berry", "spritenum": 487, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Bug"}, "num": 194, "gen": 4, "desc": "Halves damage taken from a supereffective Bug-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Bug-type attack. Single use.", "sprite": "tangaberry"}, "sharpbeak": {"name": "Sharp Beak", "spritenum": 436, "fling": {"basePower": 50}, "onBasePowerPriority": 15, "num": 244, "gen": 2, "desc": "Holder's Flying-type attacks have 1.2x power.", "shortDesc": "Holder's Flying-type attacks have 1.2x power.", "sprite": "sharpbeak"}, "blackglasses": {"name": "Black Glasses", "spritenum": 35, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 240, "gen": 2, "desc": "Holder's Dark-type attacks have 1.2x power.", "shortDesc": "Holder's Dark-type attacks have 1.2x power.", "sprite": "blackglasses"}, "chartiberry": {"name": "Charti Berry", "spritenum": 62, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Rock"}, "num": 195, "gen": 4, "desc": "Halves damage taken from a supereffective Rock-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Rock-type attack. Single use.", "sprite": "chartiberry"}, "passhoberry": {"name": "Passho Berry", "spritenum": 329, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Water"}, "num": 185, "gen": 4, "desc": "Halves damage taken from a supereffective Water-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Water-type attack. Single use.", "sprite": "passhoberry"}, "chimechite": {"name": "Chimechite", "spritenum": 498, "megaStone": {"Chimecho": "Chimecho-Mega"}, "itemUser": ["Chimecho"], "num": 2637, "gen": 9, "desc": "If held by a Chimecho, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Chimecho, this item allows it to Mega Evolve in battle.", "sprite": "chimechite"}, "brightpowder": {"name": "Bright Powder", "spritenum": 51, "fling": {"basePower": 10}, "onModifyAccuracyPriority": -2, "num": 213, "gen": 2, "desc": "The accuracy of attacks against the holder is 0.9x.", "shortDesc": "The accuracy of attacks against the holder is 0.9x.", "sprite": "brightpowder"}, "feraligite": {"name": "Feraligite", "spritenum": 549, "megaStone": {"Feraligatr": "Feraligatr-Mega"}, "itemUser": ["Feraligatr"], "num": 2564, "gen": 9, "desc": "If held by a Feraligatr, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Feraligatr, this item allows it to Mega Evolve in battle.", "sprite": "feraligite"}, "softsand": {"name": "Soft Sand", "spritenum": 456, "fling": {"basePower": 10}, "onBasePowerPriority": 15, "num": 237, "gen": 2, "desc": "Holder's Ground-type attacks have 1.2x power.", "shortDesc": "Holder's Ground-type attacks have 1.2x power.", "sprite": "softsand"}, "quickclaw": {"onFractionalPriorityPriority": -2, "name": "Quick Claw", "spritenum": 373, "fling": {"basePower": 80}, "num": 217, "gen": 2, "desc": "Each turn, holder has a 20% chance to move first in its priority bracket.", "shortDesc": "Each turn, holder has a 20% chance to move first in its priority bracket.", "sprite": "quickclaw"}, "charizarditey": {"name": "Charizardite Y", "spritenum": 586, "megaStone": {"Charizard": "Charizard-Mega-Y"}, "itemUser": ["Charizard"], "num": 678, "gen": 6, "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard Y.", "shortDesc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard Y.", "sprite": "charizarditey"}, "rindoberry": {"name": "Rindo Berry", "spritenum": 409, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Grass"}, "num": 187, "gen": 4, "desc": "Halves damage taken from a supereffective Grass-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Grass-type attack. Single use.", "sprite": "rindoberry"}, "chestoberry": {"name": "Chesto Berry", "spritenum": 65, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Water"}, "num": 150, "gen": 3, "desc": "Holder wakes up if it is asleep. Single use.", "shortDesc": "Holder wakes up if it is asleep. Single use.", "sprite": "chestoberry"}, "occaberry": {"name": "Occa Berry", "spritenum": 311, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Fire"}, "num": 184, "gen": 4, "desc": "Halves damage taken from a supereffective Fire-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Fire-type attack. Single use.", "sprite": "occaberry"}, "meganiumite": {"name": "Meganiumite", "spritenum": 548, "megaStone": {"Meganium": "Meganium-Mega"}, "itemUser": ["Meganium"], "num": 2563, "gen": 9, "desc": "If held by a Meganium, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Meganium, this item allows it to Mega Evolve in battle.", "sprite": "meganiumite"}, "gyaradosite": {"name": "Gyaradosite", "spritenum": 589, "megaStone": {"Gyarados": "Gyarados-Mega"}, "itemUser": ["Gyarados"], "num": 676, "gen": 6, "desc": "If held by a Gyarados, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Gyarados, this item allows it to Mega Evolve in battle.", "sprite": "gyaradosite"}, "absolite": {"name": "Absolite", "spritenum": 576, "megaStone": {"Absol": "Absol-Mega"}, "itemUser": ["Absol"], "num": 677, "gen": 6, "desc": "If held by an Absol, this item allows it to Mega Evolve into Mega Absol in battle.", "shortDesc": "If held by an Absol, this item allows it to Mega Evolve into Mega Absol in battle.", "sprite": "absolite"}, "charizarditex": {"name": "Charizardite X", "spritenum": 585, "megaStone": {"Charizard": "Charizard-Mega-X"}, "itemUser": ["Charizard"], "num": 660, "gen": 6, "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard X.", "shortDesc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard X.", "sprite": "charizarditex"}, "kangaskhanite": {"name": "Kangaskhanite", "spritenum": 592, "megaStone": {"Kangaskhan": "Kangaskhan-Mega"}, "itemUser": ["Kangaskhan"], "num": 675, "gen": 6, "desc": "If held by a Kangaskhan, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Kangaskhan, this item allows it to Mega Evolve in battle.", "sprite": "kangaskhanite"}, "gardevoirite": {"name": "Gardevoirite", "spritenum": 587, "megaStone": {"Gardevoir": "Gardevoir-Mega"}, "itemUser": ["Gardevoir"], "num": 657, "gen": 6, "desc": "If held by a Gardevoir, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Gardevoir, this item allows it to Mega Evolve in battle.", "sprite": "gardevoirite"}, "leppaberry": {"name": "Leppa Berry", "spritenum": 244, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Fighting"}, "num": 154, "gen": 3, "desc": "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use.", "shortDesc": "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use.", "sprite": "leppaberry"}, "choicescarf": {"name": "Choice Scarf", "spritenum": 69, "fling": {"basePower": 10}, "isChoice": true, "num": 287, "gen": 4, "desc": "Holder's Speed is 1.5x, but it can only select the first move it executes.", "shortDesc": "Holder's Speed is 1.5x, but it can only select the first move it executes.", "sprite": "choicescarf"}, "magnet": {"name": "Magnet", "spritenum": 273, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 242, "gen": 2, "desc": "Holder's Electric-type attacks have 1.2x power.", "shortDesc": "Holder's Electric-type attacks have 1.2x power.", "sprite": "magnet"}, "medichamite": {"name": "Medichamite", "spritenum": 599, "megaStone": {"Medicham": "Medicham-Mega"}, "itemUser": ["Medicham"], "num": 665, "gen": 6, "desc": "If held by a Medicham, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Medicham, this item allows it to Mega Evolve in battle.", "sprite": "medichamite"}, "lumberry": {"name": "Lum Berry", "spritenum": 262, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Flying"}, "onAfterSetStatusPriority": -1, "num": 157, "gen": 3, "desc": "Holder cures itself if it has a non-volatile status or is confused. Single use.", "shortDesc": "Holder cures itself if it has a non-volatile status or is confused. Single use.", "sprite": "lumberry"}, "nevermeltice": {"name": "Never-Melt Ice", "spritenum": 305, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 246, "gen": 2, "desc": "Holder's Ice-type attacks have 1.2x power.", "shortDesc": "Holder's Ice-type attacks have 1.2x power.", "sprite": "nevermeltice"}, "pidgeotite": {"name": "Pidgeotite", "spritenum": 622, "megaStone": {"Pidgeot": "Pidgeot-Mega"}, "itemUser": ["Pidgeot"], "num": 762, "gen": 6, "desc": "If held by a Pidgeot, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Pidgeot, this item allows it to Mega Evolve in battle.", "sprite": "pidgeotite"}, "floettite": {"name": "Floettite", "spritenum": 562, "megaStone": {"Floette-Eternal": "Floette-Mega"}, "itemUser": ["Floette-Eternal"], "num": 2579, "gen": 9, "desc": "If held by an Eternal Flower Floette, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Eternal Flower Floette, this item allows it to Mega Evolve in battle.", "sprite": "floettite"}, "ampharosite": {"name": "Ampharosite", "spritenum": 580, "megaStone": {"Ampharos": "Ampharos-Mega"}, "itemUser": ["Ampharos"], "num": 658, "gen": 6, "desc": "If held by an Ampharos, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Ampharos, this item allows it to Mega Evolve in battle.", "sprite": "ampharosite"}, "metalcoat": {"name": "Metal Coat", "spritenum": 286, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 233, "gen": 2, "desc": "Holder's Steel-type attacks have 1.2x power. Evolves Onix into Steelix and Scyther into Scizor when traded.", "shortDesc": "Holder's Steel-type attacks have 1.2x power.", "sprite": "metalcoat"}, "cobaberry": {"name": "Coba Berry", "spritenum": 76, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Flying"}, "num": 192, "gen": 4, "desc": "Halves damage taken from a supereffective Flying-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Flying-type attack. Single use.", "sprite": "cobaberry"}, "blackbelt": {"name": "Black Belt", "spritenum": 32, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 241, "gen": 2, "desc": "Holder's Fighting-type attacks have 1.2x power.", "shortDesc": "Holder's Fighting-type attacks have 1.2x power.", "sprite": "blackbelt"}, "scizorite": {"name": "Scizorite", "spritenum": 605, "megaStone": {"Scizor": "Scizor-Mega"}, "itemUser": ["Scizor"], "num": 670, "gen": 6, "desc": "If held by a Scizor, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Scizor, this item allows it to Mega Evolve in battle.", "sprite": "scizorite"}, "sitrusberry": {"name": "Sitrus Berry", "spritenum": 448, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Psychic"}, "num": 158, "gen": 3, "desc": "Restores 1/4 max HP when at 1/2 max HP or less. Single use.", "shortDesc": "Restores 1/4 max HP when at 1/2 max HP or less. Single use.", "sprite": "sitrusberry"}, "clefablite": {"name": "Clefablite", "spritenum": 544, "megaStone": {"Clefable": "Clefable-Mega"}, "itemUser": ["Clefable"], "num": 2559, "gen": 9, "desc": "If held by a Clefable, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Clefable, this item allows it to Mega Evolve in battle.", "sprite": "clefablite"}, "slowbronite": {"name": "Slowbronite", "spritenum": 620, "megaStone": {"Slowbro": "Slowbro-Mega"}, "itemUser": ["Slowbro"], "num": 760, "gen": 6, "desc": "If held by a Slowbro, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Slowbro (not Galarian Slowbro), this item allows it to Mega Evolve.", "sprite": "slowbronite"}, "kebiaberry": {"name": "Kebia Berry", "spritenum": 234, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Poison"}, "num": 190, "gen": 4, "desc": "Halves damage taken from a supereffective Poison-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Poison-type attack. Single use.", "sprite": "kebiaberry"}, "shucaberry": {"name": "Shuca Berry", "spritenum": 443, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Ground"}, "num": 191, "gen": 4, "desc": "Halves damage taken from a supereffective Ground-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Ground-type attack. Single use.", "sprite": "shucaberry"}, "silverpowder": {"name": "Silver Powder", "spritenum": 447, "fling": {"basePower": 10}, "onBasePowerPriority": 15, "num": 222, "gen": 2, "desc": "Holder's Bug-type attacks have 1.2x power.", "shortDesc": "Holder's Bug-type attacks have 1.2x power.", "sprite": "silverpowder"}, "yacheberry": {"name": "Yache Berry", "spritenum": 567, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Ice"}, "num": 188, "gen": 4, "desc": "Halves damage taken from a supereffective Ice-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Ice-type attack. Single use.", "sprite": "yacheberry"}, "oranberry": {"name": "Oran Berry", "spritenum": 319, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Poison"}, "num": 155, "gen": 3, "desc": "Restores 10 HP when at 1/2 max HP or less. Single use.", "shortDesc": "Restores 10 HP when at 1/2 max HP or less. Single use.", "sprite": "oranberry"}, "miracleseed": {"name": "Miracle Seed", "fling": {"basePower": 30}, "spritenum": 292, "onBasePowerPriority": 15, "num": 239, "gen": 2, "desc": "Holder's Grass-type attacks have 1.2x power.", "shortDesc": "Holder's Grass-type attacks have 1.2x power.", "sprite": "miracleseed"}, "mysticwater": {"name": "Mystic Water", "spritenum": 300, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 243, "gen": 2, "desc": "Holder's Water-type attacks have 1.2x power.", "shortDesc": "Holder's Water-type attacks have 1.2x power.", "sprite": "mysticwater"}, "aspearberry": {"name": "Aspear Berry", "spritenum": 13, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Ice"}, "num": 153, "gen": 3, "desc": "Holder is cured if it is frozen. Single use.", "shortDesc": "Holder is cured if it is frozen. Single use.", "sprite": "aspearberry"}, "starminite": {"name": "Starminite", "spritenum": 546, "megaStone": {"Starmie": "Starmie-Mega"}, "itemUser": ["Starmie"], "num": 2561, "gen": 9, "desc": "If held by a Starmie, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Starmie, this item allows it to Mega Evolve in battle.", "sprite": "starminite"}, "audinite": {"name": "Audinite", "spritenum": 617, "megaStone": {"Audino": "Audino-Mega"}, "itemUser": ["Audino"], "num": 757, "gen": 6, "desc": "If held by an Audino, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Audino, this item allows it to Mega Evolve in battle.", "sprite": "audinite"}, "sharpedonite": {"name": "Sharpedonite", "spritenum": 619, "megaStone": {"Sharpedo": "Sharpedo-Mega"}, "itemUser": ["Sharpedo"], "num": 759, "gen": 6, "desc": "If held by a Sharpedo, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Sharpedo, this item allows it to Mega Evolve in battle.", "sprite": "sharpedonite"}, "chopleberry": {"name": "Chople Berry", "spritenum": 71, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Fighting"}, "num": 189, "gen": 4, "desc": "Halves damage taken from a supereffective Fighting-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Fighting-type attack. Single use.", "sprite": "chopleberry"}, "scopelens": {"name": "Scope Lens", "spritenum": 429, "fling": {"basePower": 30}, "num": 232, "gen": 2, "desc": "Holder's critical hit ratio is raised by 1 stage.", "shortDesc": "Holder's critical hit ratio is raised by 1 stage.", "sprite": "scopelens"}, "chandelurite": {"name": "Chandelurite", "spritenum": 557, "megaStone": {"Chandelure": "Chandelure-Mega"}, "itemUser": ["Chandelure"], "num": 2574, "gen": 9, "desc": "If held by a Chandelure, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Chandelure, this item allows it to Mega Evolve in battle.", "sprite": "chandelurite"}, "blastoisinite": {"name": "Blastoisinite", "spritenum": 583, "megaStone": {"Blastoise": "Blastoise-Mega"}, "itemUser": ["Blastoise"], "num": 661, "gen": 6, "desc": "If held by a Blastoise, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Blastoise, this item allows it to Mega Evolve in battle.", "sprite": "blastoisinite"}, "houndoominite": {"name": "Houndoominite", "spritenum": 591, "megaStone": {"Houndoom": "Houndoom-Mega"}, "itemUser": ["Houndoom"], "num": 666, "gen": 6, "desc": "If held by a Houndoom, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Houndoom, this item allows it to Mega Evolve in battle.", "sprite": "houndoominite"}, "roseliberry": {"name": "Roseli Berry", "spritenum": 603, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Fairy"}, "num": 686, "gen": 6, "desc": "Halves damage taken from a supereffective Fairy-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Fairy-type attack. Single use.", "sprite": "roseliberry"}, "steelixite": {"name": "Steelixite", "spritenum": 621, "megaStone": {"Steelix": "Steelix-Mega"}, "itemUser": ["Steelix"], "num": 761, "gen": 6, "desc": "If held by a Steelix, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Steelix, this item allows it to Mega Evolve in battle.", "sprite": "steelixite"}, "crabominite": {"name": "Crabominite", "spritenum": 507, "megaStone": {"Crabominable": "Crabominable-Mega"}, "itemUser": ["Crabominable"], "num": 2644, "gen": 9, "desc": "If held by a Crabominable, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Crabominable, this item allows it to Mega Evolve in battle.", "sprite": "crabominite"}, "focussash": {"name": "Focus Sash", "spritenum": 151, "fling": {"basePower": 10}, "onDamagePriority": -40, "num": 275, "gen": 4, "desc": "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use.", "shortDesc": "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use.", "sprite": "focussash"}, "emboarite": {"name": "Emboarite", "spritenum": 552, "megaStone": {"Emboar": "Emboar-Mega"}, "itemUser": ["Emboar"], "num": 2569, "gen": 9, "desc": "If held by an Emboar, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Emboar, this item allows it to Mega Evolve in battle.", "sprite": "emboarite"}, "aerodactylite": {"name": "Aerodactylite", "spritenum": 577, "megaStone": {"Aerodactyl": "Aerodactyl-Mega"}, "itemUser": ["Aerodactyl"], "num": 672, "gen": 6, "desc": "If held by an Aerodactyl, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Aerodactyl, this item allows it to Mega Evolve in battle.", "sprite": "aerodactylite"}, "twistedspoon": {"name": "Twisted Spoon", "spritenum": 520, "fling": {"basePower": 30}, "onBasePowerPriority": 15, "num": 248, "gen": 2, "desc": "Holder's Psychic-type attacks have 1.2x power.", "shortDesc": "Holder's Psychic-type attacks have 1.2x power.", "sprite": "twistedspoon"}, "pinsirite": {"name": "Pinsirite", "spritenum": 602, "megaStone": {"Pinsir": "Pinsir-Mega"}, "itemUser": ["Pinsir"], "num": 671, "gen": 6, "desc": "If held by a Pinsir, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Pinsir, this item allows it to Mega Evolve in battle.", "sprite": "pinsirite"}, "glimmoranite": {"name": "Glimmoranite", "spritenum": 512, "megaStone": {"Glimmora": "Glimmora-Mega"}, "itemUser": ["Glimmora"], "num": 2650, "gen": 9, "desc": "If held by a Glimmora, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Glimmora, this item allows it to Mega Evolve in battle.", "sprite": "glimmoranite"}, "meowsticite": {"name": "Meowsticite", "spritenum": 506, "megaStone": {"Meowstic": "Meowstic-M-Mega", "Meowstic-F": "Meowstic-F-Mega"}, "itemUser": ["Meowstic", "Meowstic-F"], "num": 2643, "gen": 9, "desc": "If held by a Meowstic, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Meowstic, this item allows it to Mega Evolve in battle.", "sprite": "meowsticite"}, "chesnaughtite": {"name": "Chesnaughtite", "spritenum": 558, "megaStone": {"Chesnaught": "Chesnaught-Mega"}, "itemUser": ["Chesnaught"], "num": 2575, "gen": 9, "desc": "If held by a Chesnaught, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by a Chesnaught, this item allows it to Mega Evolve in battle.", "sprite": "chesnaughtite"}, "persimberry": {"name": "Persim Berry", "spritenum": 334, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Ground"}, "num": 156, "gen": 3, "desc": "Holder is cured if it is confused. Single use.", "shortDesc": "Holder is cured if it is confused. Single use.", "sprite": "persimberry"}, "aggronite": {"name": "Aggronite", "spritenum": 578, "megaStone": {"Aggron": "Aggron-Mega"}, "itemUser": ["Aggron"], "num": 667, "gen": 6, "desc": "If held by an Aggron, this item allows it to Mega Evolve in battle.", "shortDesc": "If held by an Aggron, this item allows it to Mega Evolve in battle.", "sprite": "aggronite"}, "wacanberry": {"name": "Wacan Berry", "spritenum": 526, "isBerry": true, "naturalGift": {"basePower": 80, "type": "Electric"}, "num": 186, "gen": 4, "desc": "Halves damage taken from a supereffective Electric-type attack. Single use.", "shortDesc": "Halves damage taken from a supereffective Electric-type attack. Single use.", "sprite": "wacanberry"}}
+{
+ "gengarite": {
+  "name": "Gengarite",
+  "megaStone": {
+   "Gengar": "Gengar-Mega"
+  },
+  "itemUser": [
+   "Gengar"
+  ],
+  "desc": "If held by a Gengar, this item allows it to Mega Evolve in battle.",
+  "sprite": "gengarite"
+ },
+ "shellbell": {
+  "name": "Shell Bell",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon.",
+  "sprite": "shellbell"
+ },
+ "scovillainite": {
+  "name": "Scovillainite",
+  "megaStone": {
+   "Scovillain": "Scovillain-Mega"
+  },
+  "itemUser": [
+   "Scovillain"
+  ],
+  "desc": "If held by a Scovillain, this item allows it to Mega Evolve in battle.",
+  "sprite": "scovillainite"
+ },
+ "whiteherb": {
+  "name": "White Herb",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "Restores all lowered stat stages to 0 when one is less than 0. Single use.",
+  "sprite": "whiteherb"
+ },
+ "oranberry": {
+  "name": "Oran Berry",
+  "isBerry": true,
+  "desc": "Restores 10 HP when at 1/2 max HP or less. Single use.",
+  "sprite": "oranberry"
+ },
+ "hawluchanite": {
+  "name": "Hawluchanite",
+  "megaStone": {
+   "Hawlucha": "Hawlucha-Mega"
+  },
+  "itemUser": [
+   "Hawlucha"
+  ],
+  "desc": "If held by a Hawlucha, this item allows it to Mega Evolve in battle.",
+  "sprite": "hawluchanite"
+ },
+ "steelixite": {
+  "name": "Steelixite",
+  "megaStone": {
+   "Steelix": "Steelix-Mega"
+  },
+  "itemUser": [
+   "Steelix"
+  ],
+  "desc": "If held by a Steelix, this item allows it to Mega Evolve in battle.",
+  "sprite": "steelixite"
+ },
+ "drampanite": {
+  "name": "Drampanite",
+  "megaStone": {
+   "Drampa": "Drampa-Mega"
+  },
+  "itemUser": [
+   "Drampa"
+  ],
+  "desc": "If held by a Drampa, this item allows it to Mega Evolve in battle.",
+  "sprite": "drampanite"
+ },
+ "scizorite": {
+  "name": "Scizorite",
+  "megaStone": {
+   "Scizor": "Scizor-Mega"
+  },
+  "itemUser": [
+   "Scizor"
+  ],
+  "desc": "If held by a Scizor, this item allows it to Mega Evolve in battle.",
+  "sprite": "scizorite"
+ },
+ "sharpbeak": {
+  "name": "Sharp Beak",
+  "fling": {
+   "basePower": 50
+  },
+  "desc": "Holder's Flying-type attacks have 1.2x power.",
+  "sprite": "sharpbeak"
+ },
+ "kingsrock": {
+  "name": "King's Rock",
+  "fling": {
+   "basePower": 30,
+   "volatileStatus": "flinch"
+  },
+  "desc": "Holder's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Evolves Poliwhirl into Politoed and Slowpoke into Slowking when traded.",
+  "sprite": "kingsrock"
+ },
+ "froslassite": {
+  "name": "Froslassite",
+  "megaStone": {
+   "Froslass": "Froslass-Mega"
+  },
+  "itemUser": [
+   "Froslass"
+  ],
+  "desc": "If held by a Froslass, this item allows it to Mega Evolve in battle.",
+  "sprite": "froslassite"
+ },
+ "miracleseed": {
+  "name": "Miracle Seed",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Grass-type attacks have 1.2x power.",
+  "sprite": "miracleseed"
+ },
+ "silkscarf": {
+  "name": "Silk Scarf",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "Holder's Normal-type attacks have 1.2x power.",
+  "sprite": "silkscarf"
+ },
+ "sharpedonite": {
+  "name": "Sharpedonite",
+  "megaStone": {
+   "Sharpedo": "Sharpedo-Mega"
+  },
+  "itemUser": [
+   "Sharpedo"
+  ],
+  "desc": "If held by a Sharpedo, this item allows it to Mega Evolve in battle.",
+  "sprite": "sharpedonite"
+ },
+ "beedrillite": {
+  "name": "Beedrillite",
+  "megaStone": {
+   "Beedrill": "Beedrill-Mega"
+  },
+  "itemUser": [
+   "Beedrill"
+  ],
+  "desc": "If held by a Beedrill, this item allows it to Mega Evolve in battle.",
+  "sprite": "beedrillite"
+ },
+ "chimechite": {
+  "name": "Chimechite",
+  "megaStone": {
+   "Chimecho": "Chimecho-Mega"
+  },
+  "itemUser": [
+   "Chimecho"
+  ],
+  "desc": "If held by a Chimecho, this item allows it to Mega Evolve in battle.",
+  "sprite": "chimechite"
+ },
+ "kebiaberry": {
+  "name": "Kebia Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Poison-type attack. Single use.",
+  "sprite": "kebiaberry"
+ },
+ "aerodactylite": {
+  "name": "Aerodactylite",
+  "megaStone": {
+   "Aerodactyl": "Aerodactyl-Mega"
+  },
+  "itemUser": [
+   "Aerodactyl"
+  ],
+  "desc": "If held by an Aerodactyl, this item allows it to Mega Evolve in battle.",
+  "sprite": "aerodactylite"
+ },
+ "galladite": {
+  "name": "Galladite",
+  "megaStone": {
+   "Gallade": "Gallade-Mega"
+  },
+  "itemUser": [
+   "Gallade"
+  ],
+  "desc": "If held by a Gallade, this item allows it to Mega Evolve in battle.",
+  "sprite": "galladite"
+ },
+ "houndoominite": {
+  "name": "Houndoominite",
+  "megaStone": {
+   "Houndoom": "Houndoom-Mega"
+  },
+  "itemUser": [
+   "Houndoom"
+  ],
+  "desc": "If held by a Houndoom, this item allows it to Mega Evolve in battle.",
+  "sprite": "houndoominite"
+ },
+ "metalcoat": {
+  "name": "Metal Coat",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Steel-type attacks have 1.2x power. Evolves Onix into Steelix and Scyther into Scizor when traded.",
+  "sprite": "metalcoat"
+ },
+ "absolite": {
+  "name": "Absolite",
+  "megaStone": {
+   "Absol": "Absol-Mega"
+  },
+  "itemUser": [
+   "Absol"
+  ],
+  "desc": "If held by an Absol, this item allows it to Mega Evolve into Mega Absol in battle.",
+  "sprite": "absolite"
+ },
+ "tangaberry": {
+  "name": "Tanga Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Bug-type attack. Single use.",
+  "sprite": "tangaberry"
+ },
+ "kasibberry": {
+  "name": "Kasib Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Ghost-type attack. Single use.",
+  "sprite": "kasibberry"
+ },
+ "charcoal": {
+  "name": "Charcoal",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Fire-type attacks have 1.2x power.",
+  "sprite": "charcoal"
+ },
+ "mentalherb": {
+  "name": "Mental Herb",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use.",
+  "sprite": "mentalherb"
+ },
+ "magnet": {
+  "name": "Magnet",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Electric-type attacks have 1.2x power.",
+  "sprite": "magnet"
+ },
+ "victreebelite": {
+  "name": "Victreebelite",
+  "megaStone": {
+   "Victreebel": "Victreebel-Mega"
+  },
+  "itemUser": [
+   "Victreebel"
+  ],
+  "desc": "If held by a Victreebel, this item allows it to Mega Evolve in battle.",
+  "sprite": "victreebelite"
+ },
+ "poisonbarb": {
+  "name": "Poison Barb",
+  "fling": {
+   "basePower": 70,
+   "status": "psn"
+  },
+  "desc": "Holder's Poison-type attacks have 1.2x power.",
+  "sprite": "poisonbarb"
+ },
+ "venusaurite": {
+  "name": "Venusaurite",
+  "megaStone": {
+   "Venusaur": "Venusaur-Mega"
+  },
+  "itemUser": [
+   "Venusaur"
+  ],
+  "desc": "If held by a Venusaur, this item allows it to Mega Evolve in battle.",
+  "sprite": "venusaurite"
+ },
+ "blastoisinite": {
+  "name": "Blastoisinite",
+  "megaStone": {
+   "Blastoise": "Blastoise-Mega"
+  },
+  "itemUser": [
+   "Blastoise"
+  ],
+  "desc": "If held by a Blastoise, this item allows it to Mega Evolve in battle.",
+  "sprite": "blastoisinite"
+ },
+ "fairyfeather": {
+  "name": "Fairy Feather",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "Holder's Fairy-type attacks have 1.2x power.",
+  "sprite": "fairyfeather"
+ },
+ "lopunnite": {
+  "name": "Lopunnite",
+  "megaStone": {
+   "Lopunny": "Lopunny-Mega"
+  },
+  "itemUser": [
+   "Lopunny"
+  ],
+  "desc": "If held by a Lopunny, this item allows it to Mega Evolve in battle.",
+  "sprite": "lopunnite"
+ },
+ "kangaskhanite": {
+  "name": "Kangaskhanite",
+  "megaStone": {
+   "Kangaskhan": "Kangaskhan-Mega"
+  },
+  "itemUser": [
+   "Kangaskhan"
+  ],
+  "desc": "If held by a Kangaskhan, this item allows it to Mega Evolve in battle.",
+  "sprite": "kangaskhanite"
+ },
+ "silverpowder": {
+  "name": "Silver Powder",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "Holder's Bug-type attacks have 1.2x power.",
+  "sprite": "silverpowder"
+ },
+ "cheriberry": {
+  "name": "Cheri Berry",
+  "isBerry": true,
+  "desc": "Holder cures itself if it is paralyzed. Single use.",
+  "sprite": "cheriberry"
+ },
+ "slowbronite": {
+  "name": "Slowbronite",
+  "megaStone": {
+   "Slowbro": "Slowbro-Mega"
+  },
+  "itemUser": [
+   "Slowbro"
+  ],
+  "desc": "If held by a Slowbro, this item allows it to Mega Evolve in battle.",
+  "sprite": "slowbronite"
+ },
+ "dragoninite": {
+  "name": "Dragoninite",
+  "megaStone": {
+   "Dragonite": "Dragonite-Mega"
+  },
+  "itemUser": [
+   "Dragonite"
+  ],
+  "desc": "If held by a Dragonite, this item allows it to Mega Evolve in battle.",
+  "sprite": "dragoninite"
+ },
+ "quickclaw": {
+  "name": "Quick Claw",
+  "fling": {
+   "basePower": 80
+  },
+  "desc": "Each turn, holder has a 20% chance to move first in its priority bracket.",
+  "sprite": "quickclaw"
+ },
+ "emboarite": {
+  "name": "Emboarite",
+  "megaStone": {
+   "Emboar": "Emboar-Mega"
+  },
+  "itemUser": [
+   "Emboar"
+  ],
+  "desc": "If held by an Emboar, this item allows it to Mega Evolve in battle.",
+  "sprite": "emboarite"
+ },
+ "lightball": {
+  "name": "Light Ball",
+  "fling": {
+   "basePower": 30,
+   "status": "par"
+  },
+  "itemUser": [
+   "Pikachu",
+   "Pikachu-Cosplay",
+   "Pikachu-Rock-Star",
+   "Pikachu-Belle",
+   "Pikachu-Pop-Star",
+   "Pikachu-PhD",
+   "Pikachu-Libre",
+   "Pikachu-Original",
+   "Pikachu-Hoenn",
+   "Pikachu-Sinnoh",
+   "Pikachu-Unova",
+   "Pikachu-Kalos",
+   "Pikachu-Alola",
+   "Pikachu-Partner",
+   "Pikachu-Starter",
+   "Pikachu-World"
+  ],
+  "desc": "If held by a Pikachu, its Attack and Sp. Atk are doubled.",
+  "sprite": "lightball"
+ },
+ "skarmorite": {
+  "name": "Skarmorite",
+  "megaStone": {
+   "Skarmory": "Skarmory-Mega"
+  },
+  "itemUser": [
+   "Skarmory"
+  ],
+  "desc": "If held by a Skarmory, this item allows it to Mega Evolve in battle.",
+  "sprite": "skarmorite"
+ },
+ "wacanberry": {
+  "name": "Wacan Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Electric-type attack. Single use.",
+  "sprite": "wacanberry"
+ },
+ "delphoxite": {
+  "name": "Delphoxite",
+  "megaStone": {
+   "Delphox": "Delphox-Mega"
+  },
+  "itemUser": [
+   "Delphox"
+  ],
+  "desc": "If held by a Delphox, this item allows it to Mega Evolve in battle.",
+  "sprite": "delphoxite"
+ },
+ "payapaberry": {
+  "name": "Payapa Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Psychic-type attack. Single use.",
+  "sprite": "payapaberry"
+ },
+ "chestoberry": {
+  "name": "Chesto Berry",
+  "isBerry": true,
+  "desc": "Holder wakes up if it is asleep. Single use.",
+  "sprite": "chestoberry"
+ },
+ "leppaberry": {
+  "name": "Leppa Berry",
+  "isBerry": true,
+  "desc": "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use.",
+  "sprite": "leppaberry"
+ },
+ "focussash": {
+  "name": "Focus Sash",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use.",
+  "sprite": "focussash"
+ },
+ "golurkite": {
+  "name": "Golurkite",
+  "megaStone": {
+   "Golurk": "Golurk-Mega"
+  },
+  "itemUser": [
+   "Golurk"
+  ],
+  "desc": "If held by a Golurk, this item allows it to Mega Evolve in battle.",
+  "sprite": "golurkite"
+ },
+ "gardevoirite": {
+  "name": "Gardevoirite",
+  "megaStone": {
+   "Gardevoir": "Gardevoir-Mega"
+  },
+  "itemUser": [
+   "Gardevoir"
+  ],
+  "desc": "If held by a Gardevoir, this item allows it to Mega Evolve in battle.",
+  "sprite": "gardevoirite"
+ },
+ "mysticwater": {
+  "name": "Mystic Water",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Water-type attacks have 1.2x power.",
+  "sprite": "mysticwater"
+ },
+ "occaberry": {
+  "name": "Occa Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Fire-type attack. Single use.",
+  "sprite": "occaberry"
+ },
+ "passhoberry": {
+  "name": "Passho Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Water-type attack. Single use.",
+  "sprite": "passhoberry"
+ },
+ "colburberry": {
+  "name": "Colbur Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Dark-type attack. Single use.",
+  "sprite": "colburberry"
+ },
+ "chartiberry": {
+  "name": "Charti Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Rock-type attack. Single use.",
+  "sprite": "chartiberry"
+ },
+ "blackbelt": {
+  "name": "Black Belt",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Fighting-type attacks have 1.2x power.",
+  "sprite": "blackbelt"
+ },
+ "roseliberry": {
+  "name": "Roseli Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Fairy-type attack. Single use.",
+  "sprite": "roseliberry"
+ },
+ "ampharosite": {
+  "name": "Ampharosite",
+  "megaStone": {
+   "Ampharos": "Ampharos-Mega"
+  },
+  "itemUser": [
+   "Ampharos"
+  ],
+  "desc": "If held by an Ampharos, this item allows it to Mega Evolve in battle.",
+  "sprite": "ampharosite"
+ },
+ "feraligite": {
+  "name": "Feraligite",
+  "megaStone": {
+   "Feraligatr": "Feraligatr-Mega"
+  },
+  "itemUser": [
+   "Feraligatr"
+  ],
+  "desc": "If held by a Feraligatr, this item allows it to Mega Evolve in battle.",
+  "sprite": "feraligite"
+ },
+ "excadrite": {
+  "name": "Excadrite",
+  "megaStone": {
+   "Excadrill": "Excadrill-Mega"
+  },
+  "itemUser": [
+   "Excadrill"
+  ],
+  "desc": "If held by an Excadrill, this item allows it to Mega Evolve in battle.",
+  "sprite": "excadrite"
+ },
+ "clefablite": {
+  "name": "Clefablite",
+  "megaStone": {
+   "Clefable": "Clefable-Mega"
+  },
+  "itemUser": [
+   "Clefable"
+  ],
+  "desc": "If held by a Clefable, this item allows it to Mega Evolve in battle.",
+  "sprite": "clefablite"
+ },
+ "glalitite": {
+  "name": "Glalitite",
+  "megaStone": {
+   "Glalie": "Glalie-Mega"
+  },
+  "itemUser": [
+   "Glalie"
+  ],
+  "desc": "If held by a Glalie, this item allows it to Mega Evolve in battle.",
+  "sprite": "glalitite"
+ },
+ "glimmoranite": {
+  "name": "Glimmoranite",
+  "megaStone": {
+   "Glimmora": "Glimmora-Mega"
+  },
+  "itemUser": [
+   "Glimmora"
+  ],
+  "desc": "If held by a Glimmora, this item allows it to Mega Evolve in battle.",
+  "sprite": "glimmoranite"
+ },
+ "sablenite": {
+  "name": "Sablenite",
+  "megaStone": {
+   "Sableye": "Sableye-Mega"
+  },
+  "itemUser": [
+   "Sableye"
+  ],
+  "desc": "If held by a Sableye, this item allows it to Mega Evolve in battle.",
+  "sprite": "sablenite"
+ },
+ "heracronite": {
+  "name": "Heracronite",
+  "megaStone": {
+   "Heracross": "Heracross-Mega"
+  },
+  "itemUser": [
+   "Heracross"
+  ],
+  "desc": "If held by a Heracross, this item allows it to Mega Evolve in battle.",
+  "sprite": "heracronite"
+ },
+ "abomasite": {
+  "name": "Abomasite",
+  "megaStone": {
+   "Abomasnow": "Abomasnow-Mega"
+  },
+  "itemUser": [
+   "Abomasnow"
+  ],
+  "desc": "If held by an Abomasnow, this item allows it to Mega Evolve in battle.",
+  "sprite": "abomasite"
+ },
+ "choicescarf": {
+  "name": "Choice Scarf",
+  "fling": {
+   "basePower": 10
+  },
+  "isChoice": true,
+  "desc": "Holder's Speed is 1.5x, but it can only select the first move it executes.",
+  "sprite": "choicescarf"
+ },
+ "scopelens": {
+  "name": "Scope Lens",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's critical hit ratio is raised by 1 stage.",
+  "sprite": "scopelens"
+ },
+ "pinsirite": {
+  "name": "Pinsirite",
+  "megaStone": {
+   "Pinsir": "Pinsir-Mega"
+  },
+  "itemUser": [
+   "Pinsir"
+  ],
+  "desc": "If held by a Pinsir, this item allows it to Mega Evolve in battle.",
+  "sprite": "pinsirite"
+ },
+ "blackglasses": {
+  "name": "Black Glasses",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Dark-type attacks have 1.2x power.",
+  "sprite": "blackglasses"
+ },
+ "lucarionite": {
+  "name": "Lucarionite",
+  "megaStone": {
+   "Lucario": "Lucario-Mega"
+  },
+  "itemUser": [
+   "Lucario"
+  ],
+  "desc": "If held by a Lucario, this item allows it to Mega Evolve into Mega Lucario in battle.",
+  "sprite": "lucarionite"
+ },
+ "softsand": {
+  "name": "Soft Sand",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "Holder's Ground-type attacks have 1.2x power.",
+  "sprite": "softsand"
+ },
+ "persimberry": {
+  "name": "Persim Berry",
+  "isBerry": true,
+  "desc": "Holder is cured if it is confused. Single use.",
+  "sprite": "persimberry"
+ },
+ "aggronite": {
+  "name": "Aggronite",
+  "megaStone": {
+   "Aggron": "Aggron-Mega"
+  },
+  "itemUser": [
+   "Aggron"
+  ],
+  "desc": "If held by an Aggron, this item allows it to Mega Evolve in battle.",
+  "sprite": "aggronite"
+ },
+ "chesnaughtite": {
+  "name": "Chesnaughtite",
+  "megaStone": {
+   "Chesnaught": "Chesnaught-Mega"
+  },
+  "itemUser": [
+   "Chesnaught"
+  ],
+  "desc": "If held by a Chesnaught, this item allows it to Mega Evolve in battle.",
+  "sprite": "chesnaughtite"
+ },
+ "meganiumite": {
+  "name": "Meganiumite",
+  "megaStone": {
+   "Meganium": "Meganium-Mega"
+  },
+  "itemUser": [
+   "Meganium"
+  ],
+  "desc": "If held by a Meganium, this item allows it to Mega Evolve in battle.",
+  "sprite": "meganiumite"
+ },
+ "dragonfang": {
+  "name": "Dragon Fang",
+  "fling": {
+   "basePower": 70
+  },
+  "desc": "Holder's Dragon-type attacks have 1.2x power.",
+  "sprite": "dragonfang"
+ },
+ "yacheberry": {
+  "name": "Yache Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Ice-type attack. Single use.",
+  "sprite": "yacheberry"
+ },
+ "alakazite": {
+  "name": "Alakazite",
+  "megaStone": {
+   "Alakazam": "Alakazam-Mega"
+  },
+  "itemUser": [
+   "Alakazam"
+  ],
+  "desc": "If held by an Alakazam, this item allows it to Mega Evolve in battle.",
+  "sprite": "alakazite"
+ },
+ "charizarditey": {
+  "name": "Charizardite Y",
+  "megaStone": {
+   "Charizard": "Charizard-Mega-Y"
+  },
+  "itemUser": [
+   "Charizard"
+  ],
+  "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard Y.",
+  "sprite": "charizarditey"
+ },
+ "meowsticite": {
+  "name": "Meowsticite",
+  "megaStone": {
+   "Meowstic": "Meowstic-M-Mega",
+   "Meowstic-F": "Meowstic-F-Mega"
+  },
+  "itemUser": [
+   "Meowstic",
+   "Meowstic-F"
+  ],
+  "desc": "If held by a Meowstic, this item allows it to Mega Evolve in battle.",
+  "sprite": "meowsticite"
+ },
+ "floettite": {
+  "name": "Floettite",
+  "megaStone": {
+   "Floette-Eternal": "Floette-Mega"
+  },
+  "itemUser": [
+   "Floette-Eternal"
+  ],
+  "desc": "If held by an Eternal Flower Floette, this item allows it to Mega Evolve in battle.",
+  "sprite": "floettite"
+ },
+ "aspearberry": {
+  "name": "Aspear Berry",
+  "isBerry": true,
+  "desc": "Holder is cured if it is frozen. Single use.",
+  "sprite": "aspearberry"
+ },
+ "chilanberry": {
+  "name": "Chilan Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a Normal-type attack. Single use.",
+  "sprite": "chilanberry"
+ },
+ "sitrusberry": {
+  "name": "Sitrus Berry",
+  "isBerry": true,
+  "desc": "Restores 1/4 max HP when at 1/2 max HP or less. Single use.",
+  "sprite": "sitrusberry"
+ },
+ "gyaradosite": {
+  "name": "Gyaradosite",
+  "megaStone": {
+   "Gyarados": "Gyarados-Mega"
+  },
+  "itemUser": [
+   "Gyarados"
+  ],
+  "desc": "If held by a Gyarados, this item allows it to Mega Evolve in battle.",
+  "sprite": "gyaradosite"
+ },
+ "leftovers": {
+  "name": "Leftovers",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "At the end of every turn, holder restores 1/16 of its max HP.",
+  "sprite": "leftovers"
+ },
+ "crabominite": {
+  "name": "Crabominite",
+  "megaStone": {
+   "Crabominable": "Crabominable-Mega"
+  },
+  "itemUser": [
+   "Crabominable"
+  ],
+  "desc": "If held by a Crabominable, this item allows it to Mega Evolve in battle.",
+  "sprite": "crabominite"
+ },
+ "audinite": {
+  "name": "Audinite",
+  "megaStone": {
+   "Audino": "Audino-Mega"
+  },
+  "itemUser": [
+   "Audino"
+  ],
+  "desc": "If held by an Audino, this item allows it to Mega Evolve in battle.",
+  "sprite": "audinite"
+ },
+ "altarianite": {
+  "name": "Altarianite",
+  "megaStone": {
+   "Altaria": "Altaria-Mega"
+  },
+  "itemUser": [
+   "Altaria"
+  ],
+  "desc": "If held by an Altaria, this item allows it to Mega Evolve in battle.",
+  "sprite": "altarianite"
+ },
+ "pidgeotite": {
+  "name": "Pidgeotite",
+  "megaStone": {
+   "Pidgeot": "Pidgeot-Mega"
+  },
+  "itemUser": [
+   "Pidgeot"
+  ],
+  "desc": "If held by a Pidgeot, this item allows it to Mega Evolve in battle.",
+  "sprite": "pidgeotite"
+ },
+ "pechaberry": {
+  "name": "Pecha Berry",
+  "isBerry": true,
+  "desc": "Holder is cured if it is poisoned. Single use.",
+  "sprite": "pechaberry"
+ },
+ "chopleberry": {
+  "name": "Chople Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Fighting-type attack. Single use.",
+  "sprite": "chopleberry"
+ },
+ "rindoberry": {
+  "name": "Rindo Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Grass-type attack. Single use.",
+  "sprite": "rindoberry"
+ },
+ "banettite": {
+  "name": "Banettite",
+  "megaStone": {
+   "Banette": "Banette-Mega"
+  },
+  "itemUser": [
+   "Banette"
+  ],
+  "desc": "If held by a Banette, this item allows it to Mega Evolve in battle.",
+  "sprite": "banettite"
+ },
+ "rawstberry": {
+  "name": "Rawst Berry",
+  "isBerry": true,
+  "desc": "Holder is cured if it is burned. Single use.",
+  "sprite": "rawstberry"
+ },
+ "starminite": {
+  "name": "Starminite",
+  "megaStone": {
+   "Starmie": "Starmie-Mega"
+  },
+  "itemUser": [
+   "Starmie"
+  ],
+  "desc": "If held by a Starmie, this item allows it to Mega Evolve in battle.",
+  "sprite": "starminite"
+ },
+ "cameruptite": {
+  "name": "Cameruptite",
+  "megaStone": {
+   "Camerupt": "Camerupt-Mega"
+  },
+  "itemUser": [
+   "Camerupt"
+  ],
+  "desc": "If held by a Camerupt, this item allows it to Mega Evolve in battle.",
+  "sprite": "cameruptite"
+ },
+ "focusband": {
+  "name": "Focus Band",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "Holder has a 10% chance to survive an attack that would KO it with 1 HP.",
+  "sprite": "focusband"
+ },
+ "twistedspoon": {
+  "name": "Twisted Spoon",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Psychic-type attacks have 1.2x power.",
+  "sprite": "twistedspoon"
+ },
+ "medichamite": {
+  "name": "Medichamite",
+  "megaStone": {
+   "Medicham": "Medicham-Mega"
+  },
+  "itemUser": [
+   "Medicham"
+  ],
+  "desc": "If held by a Medicham, this item allows it to Mega Evolve in battle.",
+  "sprite": "medichamite"
+ },
+ "hardstone": {
+  "name": "Hard Stone",
+  "fling": {
+   "basePower": 100
+  },
+  "desc": "Holder's Rock-type attacks have 1.2x power.",
+  "sprite": "hardstone"
+ },
+ "babiriberry": {
+  "name": "Babiri Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Steel-type attack. Single use.",
+  "sprite": "babiriberry"
+ },
+ "cobaberry": {
+  "name": "Coba Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Flying-type attack. Single use.",
+  "sprite": "cobaberry"
+ },
+ "garchompite": {
+  "name": "Garchompite",
+  "megaStone": {
+   "Garchomp": "Garchomp-Mega"
+  },
+  "itemUser": [
+   "Garchomp"
+  ],
+  "desc": "If held by a Garchomp, this item allows it to Mega Evolve into Mega Garchomp.",
+  "sprite": "garchompite"
+ },
+ "brightpowder": {
+  "name": "Bright Powder",
+  "fling": {
+   "basePower": 10
+  },
+  "desc": "The accuracy of attacks against the holder is 0.9x.",
+  "sprite": "brightpowder"
+ },
+ "shucaberry": {
+  "name": "Shuca Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Ground-type attack. Single use.",
+  "sprite": "shucaberry"
+ },
+ "spelltag": {
+  "name": "Spell Tag",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Ghost-type attacks have 1.2x power.",
+  "sprite": "spelltag"
+ },
+ "tyranitarite": {
+  "name": "Tyranitarite",
+  "megaStone": {
+   "Tyranitar": "Tyranitar-Mega"
+  },
+  "itemUser": [
+   "Tyranitar"
+  ],
+  "desc": "If held by a Tyranitar, this item allows it to Mega Evolve in battle.",
+  "sprite": "tyranitarite"
+ },
+ "nevermeltice": {
+  "name": "Never-Melt Ice",
+  "fling": {
+   "basePower": 30
+  },
+  "desc": "Holder's Ice-type attacks have 1.2x power.",
+  "sprite": "nevermeltice"
+ },
+ "chandelurite": {
+  "name": "Chandelurite",
+  "megaStone": {
+   "Chandelure": "Chandelure-Mega"
+  },
+  "itemUser": [
+   "Chandelure"
+  ],
+  "desc": "If held by a Chandelure, this item allows it to Mega Evolve in battle.",
+  "sprite": "chandelurite"
+ },
+ "greninjite": {
+  "name": "Greninjite",
+  "megaStone": {
+   "Greninja": "Greninja-Mega"
+  },
+  "itemUser": [
+   "Greninja"
+  ],
+  "desc": "If held by a Greninja, this item allows it to Mega Evolve in battle.",
+  "sprite": "greninjite"
+ },
+ "manectite": {
+  "name": "Manectite",
+  "megaStone": {
+   "Manectric": "Manectric-Mega"
+  },
+  "itemUser": [
+   "Manectric"
+  ],
+  "desc": "If held by a Manectric, this item allows it to Mega Evolve in battle.",
+  "sprite": "manectite"
+ },
+ "lumberry": {
+  "name": "Lum Berry",
+  "isBerry": true,
+  "desc": "Holder cures itself if it has a non-volatile status or is confused. Single use.",
+  "sprite": "lumberry"
+ },
+ "charizarditex": {
+  "name": "Charizardite X",
+  "megaStone": {
+   "Charizard": "Charizard-Mega-X"
+  },
+  "itemUser": [
+   "Charizard"
+  ],
+  "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard X.",
+  "sprite": "charizarditex"
+ },
+ "habanberry": {
+  "name": "Haban Berry",
+  "isBerry": true,
+  "desc": "Halves damage taken from a supereffective Dragon-type attack. Single use.",
+  "sprite": "habanberry"
+ }
+}
