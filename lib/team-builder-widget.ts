@@ -251,7 +251,18 @@ export class TeamBuilderWidget {
 
     // Name area with gender select
     const spriteFile = isFilled ? this.opts.spriteMap[species.id] : undefined;
-    const spriteHtml = spriteFile ? `<img class="tb-sprite" src="${SPRITE_PATH}/${spriteFile}">` : '';
+    const itemRec = isFilled && slot.item && this.items?.[slot.item] ? this.items[slot.item] : null;
+    const itemSprite = itemRec?.sprite || null;
+    let spriteHtml: string;
+    if (spriteFile) {
+      spriteHtml = `<div class="tb-sprite-wrap"><img class="tb-sprite" src="${SPRITE_PATH}/${spriteFile}">`;
+      if (itemSprite) {
+        spriteHtml += `<img class="tb-item-overlay" src="${itemSprite}">`;
+      }
+      spriteHtml += `</div>`;
+    } else {
+      spriteHtml = '';
+    }
     const nameValue = isFilled ? (slot.name || species.name) : '';
     const nameHtml = `<input type="text" class="tb-name-input" placeholder="Pokémon name…" autocomplete="off" value="${nameValue}">`;
 

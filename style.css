@@ -2104,9 +2104,23 @@ button:hover {
 }
 
 .tb-sprite {
-  width: 64px;
+  width: 80px;
   height: auto;
+  display: block;
+}
+
+.tb-sprite-wrap {
+  position: relative;
+  display: inline-block;
   flex-shrink: 0;
+}
+
+.tb-item-overlay {
+  position: absolute;
+  bottom: -2px;
+  right: -10px;
+  width: 32px;
+  height: auto;
 }
 
 .tb-left-selectors {
