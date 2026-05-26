@@ -1,5 +1,6 @@
 import { loadLearnsets, loadMoves, loadItems } from './data-loader.js';
 const SPRITE_PATH = 'sprites/champions';
+const SHINY_SPRITE_PATH = 'sprites/shiny';
 const ITEM_SPRITE_PATH = 'sprites/items';
 const STAT_NAMES = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
 const STAT_LABELS = { hp: 'HP', atk: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', spe: 'Spe' };
@@ -91,9 +92,10 @@ export class TeamBuilderWidget {
         this.moveSearchPopup.classList.add('hidden');
         this.itemSearchPopup.classList.add('hidden');
     }
-    setData(species, spriteMap, formatId) {
+    setData(species, spriteMap, shinySpriteMap, formatId) {
         this.opts.species = species;
         this.opts.spriteMap = spriteMap;
+        this.opts.shinySpriteMap = shinySpriteMap;
         if (formatId)
             this.opts.formatId = formatId;
         this.learnsets = null;
@@ -220,11 +222,14 @@ export class TeamBuilderWidget {
         }
         // Name area with gender select
         const spriteFile = isFilled ? this.opts.spriteMap[species.id] : undefined;
+        const shinySpriteFile = isFilled ? this.opts.shinySpriteMap[species.id] : undefined;
+        const activeSpriteFile = slot.shiny ? shinySpriteFile : spriteFile;
         const itemRec = isFilled && slot.item && this.items?.[slot.item] ? this.items[slot.item] : null;
         const itemSprite = itemRec?.sprite || null;
         let spriteHtml;
-        if (spriteFile) {
-            spriteHtml = `<div class="tb-sprite-wrap"><img class="tb-sprite" src="${SPRITE_PATH}/${spriteFile}">`;
+        if (activeSpriteFile) {
+            const spritePath = slot.shiny ? SHINY_SPRITE_PATH : SPRITE_PATH;
+            spriteHtml = `<div class="tb-sprite-wrap"><img class="tb-sprite" src="${spritePath}/${activeSpriteFile}">`;
             if (itemSprite) {
                 spriteHtml += `<img class="tb-item-overlay" src="${ITEM_SPRITE_PATH}/${itemSprite}.png">`;
             }
@@ -234,6 +239,8 @@ export class TeamBuilderWidget {
             spriteHtml = '';
         }
         const nameValue = isFilled ? (slot.name || species.name) : '';
+        const shinyChecked = slot.shiny ? 'checked' : '';
+        const shinyActive = slot.shiny ? 'active' : '';
         const nameHtml = `<input type="text" class="tb-name-input" placeholder="Pokémon name…" autocomplete="off" value="${nameValue}">`;
         function genderOption(value, label, current) {
             return `<option value="${value}"${current === value ? ' selected' : ''}>${label}</option>`;
@@ -305,6 +312,10 @@ export class TeamBuilderWidget {
           ${nameHtml}
           <button class="tb-slot-remove" title="Remove">×</button>
           ${genderHtml}
+          <label class="tb-shiny-toggle ${shinyActive}" title="Shiny">
+            <input type="checkbox" class="tb-shiny-checkbox"${shinyChecked}>
+            <span>✨</span>
+          </label>
         </div>
         <div class="tb-left-bottom">
           <div class="tb-left-sprite">${spriteHtml}</div>
@@ -577,6 +588,26 @@ export class TeamBuilderWidget {
             team.slots[index].gender = e.target.value;
             this.opts.onSlotChange();
         });
+        // Shiny toggle
+        const shinyCheckbox = el.querySelector('.tb-shiny-checkbox');
+        if (shinyCheckbox) {
+            shinyCheckbox.addEventListener('change', () => {
+                const team = this.opts.getTeam();
+                if (!team)
+                    return;
+                team.slots[index].shiny = shinyCheckbox.checked;
+                const label = shinyCheckbox.parentElement;
+                label.classList.toggle('active', shinyCheckbox.checked);
+                if (shinyCheckbox.checked) {
+                    label.style.borderColor = '#f0c060';
+                }
+                else {
+                    label.style.borderColor = '#3a3a4a';
+                }
+                this.opts.onSlotChange();
+                this.render();
+            });
+        }
         // Item input (always present)
         const itemInput = el.querySelector('.tb-item-input');
         if (itemInput) {

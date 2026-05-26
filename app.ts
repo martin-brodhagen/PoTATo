@@ -24,6 +24,7 @@ let teams: Team[] = [];
 let currentTeamId: string | null = null;
 let allSpecies: Species[] = [];
 let spriteMap: Record<string, string> = {};
+let shinySpriteMap: Record<string, string> = {};
 let pendingSlotIndex: number | null = null;
 let detailSpecies: Species | null = null;
 
@@ -151,12 +152,14 @@ async function loadFormat(format: FormatId) {
   renderBreadcrumbBar();
   pendingSlotIndex = null;
 
-  const [index, map] = await Promise.all([
+  const [index, map, shinyMap] = await Promise.all([
     loadIndex(format),
     fetch(`data/format-${format}/sprite-map.json`).then(r => r.json()),
+    fetch(`data/format-${format}/shiny-sprite-map.json`).then(r => r.json()),
   ]);
   allSpecies = index;
   spriteMap = map as Record<string, string>;
+  shinySpriteMap = shinyMap as Record<string, string>;
 
   if (pokemonWidget) {
     pokemonWidget.clear();
@@ -164,7 +167,7 @@ async function loadFormat(format: FormatId) {
   }
 
   if (teamBuilderWidget) {
-    teamBuilderWidget.setData(index, map as Record<string, string>, currentFormat);
+    teamBuilderWidget.setData(index, map as Record<string, string>, shinySpriteMap, currentFormat);
   }
 
   renderTeamBar();
@@ -540,6 +543,7 @@ function lazyInitTeamBuilder() {
     container,
     species: allSpecies,
     spriteMap,
+    shinySpriteMap,
     formatId: currentFormat,
     getTeam: getCurrentTeam,
     onSlotChange: () => {

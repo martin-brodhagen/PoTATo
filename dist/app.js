@@ -18,6 +18,7 @@ let teams = [];
 let currentTeamId = null;
 let allSpecies = [];
 let spriteMap = {};
+let shinySpriteMap = {};
 let pendingSlotIndex = null;
 let detailSpecies = null;
 let movesWidget = null;
@@ -157,18 +158,20 @@ async function loadFormat(format) {
     activeBreadcrumbIndex = -1;
     renderBreadcrumbBar();
     pendingSlotIndex = null;
-    const [index, map] = await Promise.all([
+    const [index, map, shinyMap] = await Promise.all([
         loadIndex(format),
         fetch(`data/format-${format}/sprite-map.json`).then(r => r.json()),
+        fetch(`data/format-${format}/shiny-sprite-map.json`).then(r => r.json()),
     ]);
     allSpecies = index;
     spriteMap = map;
+    shinySpriteMap = shinyMap;
     if (pokemonWidget) {
         pokemonWidget.clear();
         pokemonWidget.setData(index, map);
     }
     if (teamBuilderWidget) {
-        teamBuilderWidget.setData(index, map, currentFormat);
+        teamBuilderWidget.setData(index, map, shinySpriteMap, currentFormat);
     }
     renderTeamBar();
 }
@@ -568,6 +571,7 @@ function lazyInitTeamBuilder() {
         container,
         species: allSpecies,
         spriteMap,
+        shinySpriteMap,
         formatId: currentFormat,
         getTeam: getCurrentTeam,
         onSlotChange: () => {

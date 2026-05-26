@@ -70,6 +70,7 @@ export interface TeamSlot {
   stats?: Record<string, number>;
   gender?: string;
   item?: string | null;
+  shiny?: boolean;
 }
 
 export interface Team {
