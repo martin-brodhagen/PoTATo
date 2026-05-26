@@ -174,6 +174,7 @@ function fillSlot(slotIndex: number, speciesId: string) {
   const team = getCurrentTeam();
   if (!team) return;
   team.slots[slotIndex].speciesId = speciesId;
+  team.slots[slotIndex].name = getSpeciesById(speciesId)?.name || null;
   team.slots[slotIndex].ability = '0';
   team.slots[slotIndex].nature = 'Serious';
   team.slots[slotIndex].moves = [null, null, null, null];

@@ -1930,10 +1930,10 @@ button:hover {
   background: #1a1a24;
   border: 1px solid #2a2a3a;
   border-radius: 6px;
-  padding: 0.5rem;
+  padding: 0.2rem;
   transition: border-color 0.15s;
   flex-shrink: 0;
-  height: 7.5rem;
+  height: 7.8rem;
 }
 
 .tb-name-input {
@@ -2224,7 +2224,7 @@ button:hover {
   color: #e0e0e8;
   border: 1px solid #3a3a4a;
   border-radius: 3px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   outline: none;
 }
 
@@ -2250,6 +2250,14 @@ button:hover {
 .tb-stat-label {
   color: #888;
   font-weight: 700;
+  width: 1.2rem;
+  text-align: right;
+  flex-shrink: 0;
+  font-size: 0.65rem;
+}
+
+.tb-stat-base {
+  color: #888;
   width: 1.2rem;
   text-align: right;
   flex-shrink: 0;
@@ -2295,23 +2303,35 @@ button:hover {
   cursor: pointer;
 }
 
+.tb-stat-slider.full {
+  background: linear-gradient(to right, #d4880f 0%, #d4880f var(--slider-pct, 0%), #3a3a4a var(--slider-pct, 0%), #3a3a4a 100%);
+}
+
 .tb-stat-slider::-webkit-slider-thumb {
   appearance: none;
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #f0c060;
   cursor: pointer;
   border: none;
 }
 
+.tb-stat-slider.full::-webkit-slider-thumb {
+  background: #d4880f;
+}
+
 .tb-stat-slider::-moz-range-thumb {
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #f0c060;
   cursor: pointer;
   border: none;
+}
+
+.tb-stat-slider.full::-moz-range-thumb {
+  background: #d4880f;
 }
 
 .tb-stat-slider:disabled {
@@ -2326,6 +2346,43 @@ button:hover {
   color: #e0e0e8;
   font-size: 0.75rem;
   flex-shrink: 0;
+}
+
+.tb-stat-boosted {
+  color: #f06060;
+}
+
+.tb-stat-hindered {
+  color: #60a0f0;
+}
+
+.tb-stat-remaining {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.tb-stat-remaining > span:nth-child(1) {
+  width: 1.2rem;
+  flex-shrink: 0;
+}
+
+.tb-stat-remaining > span:nth-child(2) {
+  width: 1.2rem;
+  flex-shrink: 0;
+}
+
+.tb-stat-remaining > span:nth-child(3) {
+  width: 1.6rem;
+  flex-shrink: 0;
+  text-align: center;
+  color: #5fbb63;
+}
+
+.tb-stat-remaining-empty > span:nth-child(3) {
+  color: #c44d4d;
 }
 
 @media (max-width: 767px) {

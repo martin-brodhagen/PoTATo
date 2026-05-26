@@ -158,6 +158,42 @@ export class TeamBuilderWidget {
     ]).then(() => { this.loadingData = false; this.render(); });
   }
 
+  private static readonly FOCUS_SELECTORS = [
+    '.tb-ability-select',
+    '.tb-nature-select',
+    '.tb-item-input',
+    '.tb-move-slot[data-move-index="0"] .tb-move-input',
+    '.tb-move-slot[data-move-index="1"] .tb-move-input',
+    '.tb-move-slot[data-move-index="2"] .tb-move-input',
+    '.tb-move-slot[data-move-index="3"] .tb-move-input',
+    '.tb-stat-row[data-stat="hp"] .tb-stat-input',
+    '.tb-stat-row[data-stat="atk"] .tb-stat-input',
+    '.tb-stat-row[data-stat="def"] .tb-stat-input',
+    '.tb-stat-row[data-stat="spa"] .tb-stat-input',
+    '.tb-stat-row[data-stat="spd"] .tb-stat-input',
+    '.tb-stat-row[data-stat="spe"] .tb-stat-input',
+  ];
+
+  private focusNextInSlot(slotIndex: number, currentEl: HTMLElement) {
+    const slotEl = this.slotsContainer.querySelector<HTMLElement>(`[data-slot-index="${slotIndex}"]`);
+    if (!slotEl) return;
+    const all = TeamBuilderWidget.FOCUS_SELECTORS.map(s => slotEl.querySelector<HTMLElement>(s)).filter(Boolean) as HTMLElement[];
+    const idx = all.indexOf(currentEl);
+    if (idx < 0) return; // element not in this slot (e.g. detached after re-render)
+    if (idx < all.length - 1) {
+      const next = all[idx + 1];
+      next.focus();
+      if (next.tagName === 'SELECT') setTimeout(() => next.click(), 0);
+      return;
+    }
+    // Last element — jump to next slot's name input
+    const nextSlot = this.slotsContainer.querySelector<HTMLElement>(`[data-slot-index="${slotIndex + 1}"]`);
+    if (nextSlot) {
+      const nameInput = nextSlot.querySelector<HTMLElement>('.tb-name-input');
+      nameInput?.focus();
+    }
+  }
+
   render(): Promise<void> {
     const team = this.opts.getTeam();
     this.slotsContainer.innerHTML = '';
@@ -216,7 +252,7 @@ export class TeamBuilderWidget {
     // Name area with gender select
     const spriteFile = isFilled ? this.opts.spriteMap[species.id] : undefined;
     const spriteHtml = spriteFile ? `<img class="tb-sprite" src="${SPRITE_PATH}/${spriteFile}">` : '';
-    const nameValue = isFilled ? species.name : '';
+    const nameValue = isFilled ? (slot.name || species.name) : '';
     const nameHtml = `<input type="text" class="tb-name-input" placeholder="Pokémon name…" autocomplete="off" value="${nameValue}">`;
 
     function genderOption(value: string, label: string, current: string): string {
@@ -227,9 +263,9 @@ export class TeamBuilderWidget {
     if (!isFilled) {
       // Empty slot: show all options but disabled
       genderHtml = `<select class="tb-gender-select" disabled>
-        ${genderOption('Male', 'Male ♂', '')}
-        ${genderOption('Neutral', '—', '')}
-        ${genderOption('Female', 'Female ♀', '')}
+        ${genderOption('Male', 'Male ♂', 'Neutral')}
+        ${genderOption('Neutral', '—', 'Neutral')}
+        ${genderOption('Female', 'Female ♀', 'Neutral')}
       </select>`;
     } else {
       const sg = species.gender;
@@ -317,16 +353,27 @@ export class TeamBuilderWidget {
     // Stats section
     let statsHtml = '';
     if (isFilled) {
+      const totalAllocated = STAT_NAMES.reduce((s, n) => s + (slot.stats?.[n] || 0), 0);
+      const full = totalAllocated >= 66;
       for (const statName of STAT_NAMES) {
         const baseVal = species.baseStats[statName];
         const allocated = slot.stats?.[statName] || 0;
-        const total = baseVal + allocated;
+        const pct = (allocated / 32) * 100;
+        const natureRec = NATURE_DATA.find(n => n.name === selectedNature);
+        const label = STAT_LABELS[statName];
+        const isHp = statName === 'hp';
+        const natureMod = natureRec && natureRec.up !== natureRec.down && !isHp
+          ? (natureRec.up === label ? 1.1 : natureRec.down === label ? 0.9 : 1)
+          : 1;
+        const total = Math.floor(((2 * baseVal + 31 + 2 * allocated) * 0.5 + (isHp ? 60 : 5)) * (isHp ? 1 : natureMod));
+        const natureClass = natureMod === 1.1 ? ' tb-stat-boosted' : natureMod === 0.9 ? ' tb-stat-hindered' : '';
         statsHtml += `
           <div class="tb-stat-row" data-stat="${statName}">
-            <span class="tb-stat-label">${STAT_LABELS[statName]}</span>
-            <input type="number" class="tb-stat-input" value="${allocated}" min="0" max="32">
-            <input type="range" class="tb-stat-slider" value="${allocated}" min="0" max="32" style="--slider-pct: ${(allocated / 32) * 100}%">
-            <span class="tb-stat-total">${total}</span>
+            <span class="tb-stat-label">${label}</span>
+            <span class="tb-stat-base">${baseVal}</span>
+            <input type="text" class="tb-stat-input" value="${allocated}" inputmode="numeric" maxlength="2">
+            <input type="range" class="tb-stat-slider${full ? ' full' : ''}" value="${allocated}" min="0" max="32" tabindex="-1" style="--slider-pct: ${pct}%">
+            <span class="tb-stat-total${natureClass}">${total}</span>
           </div>`;
       }
     } else {
@@ -334,12 +381,16 @@ export class TeamBuilderWidget {
         statsHtml += `
           <div class="tb-stat-row" data-stat="${statName}">
             <span class="tb-stat-label">${STAT_LABELS[statName]}</span>
-            <input type="number" class="tb-stat-input" value="0" min="0" max="32" disabled>
-            <input type="range" class="tb-stat-slider" value="0" min="0" max="32" disabled>
+            <span class="tb-stat-base">0</span>
+            <input type="text" class="tb-stat-input" value="0" inputmode="numeric" disabled>
+            <input type="range" class="tb-stat-slider" value="0" min="0" max="0" tabindex="-1" disabled>
             <span class="tb-stat-total">0</span>
           </div>`;
       }
     }
+    const remaining = isFilled ? 66 - STAT_NAMES.reduce((s, n) => s + (slot.stats?.[n] || 0), 0) : 66;
+    const remainingClass = remaining === 0 ? ' tb-stat-remaining-empty' : '';
+    statsHtml += `<div class="tb-stat-remaining${remainingClass}"><span></span><span></span><span>${isFilled ? remaining : '—'}</span></div>`;
     const section4Html = `<div class="tb-section tb-section-stats">${statsHtml}</div>`;
 
     el.innerHTML = `
@@ -364,14 +415,33 @@ export class TeamBuilderWidget {
         if (!team) return;
         team.slots[index].ability = (e.target as HTMLSelectElement).value;
         this.opts.onSlotChange();
+        this.focusNextInSlot(index, e.target as HTMLElement);
       });
 
       // Nature selector
       el.querySelector('.tb-nature-select')!.addEventListener('change', (e) => {
         const team = this.opts.getTeam();
         if (!team) return;
-        team.slots[index].nature = (e.target as HTMLSelectElement).value;
+        const natureName = (e.target as HTMLSelectElement).value;
+        team.slots[index].nature = natureName;
+        const natureRec = NATURE_DATA.find(n => n.name === natureName);
+        el.querySelectorAll('.tb-stat-row').forEach(row => {
+          const sn = (row as HTMLElement).dataset.stat!;
+          const allocated = team.slots[index].stats?.[sn] || 0;
+          const baseVal = species.baseStats[sn as keyof typeof species.baseStats] || 0;
+          const label = STAT_LABELS[sn];
+          const isHp = sn === 'hp';
+          const natureMod = natureRec && natureRec.up !== natureRec.down && !isHp
+            ? (natureRec.up === label ? 1.1 : natureRec.down === label ? 0.9 : 1)
+            : 1;
+          const total = Math.floor(((2 * baseVal + 31 + 2 * allocated) * 0.5 + (isHp ? 60 : 5)) * (isHp ? 1 : natureMod));
+          const totalEl = row.querySelector('.tb-stat-total')!;
+          totalEl.textContent = String(total);
+          totalEl.classList.toggle('tb-stat-boosted', natureMod === 1.1);
+          totalEl.classList.toggle('tb-stat-hindered', natureMod === 0.9);
+        });
         this.opts.onSlotChange();
+        this.focusNextInSlot(index, e.target as HTMLElement);
       });
 
       // Stat inputs
@@ -381,24 +451,96 @@ export class TeamBuilderWidget {
         const slider = row.querySelector('.tb-stat-slider') as HTMLInputElement;
         const totalEl = row.querySelector('.tb-stat-total') as HTMLSpanElement;
         const baseVal = species.baseStats[statName as keyof typeof species.baseStats] || 0;
+        const sliderEls = el.querySelectorAll('.tb-stat-slider');
+
+        const allocatedTotal = () => {
+          const team = this.opts.getTeam();
+          if (!team) return 0;
+          const st = team.slots[index].stats;
+          if (!st) return 0;
+          return (Object.values(st) as number[]).reduce((a, b) => a + b, 0);
+        };
 
         const updateStat = (val: number) => {
-          val = Math.max(0, Math.min(32, Math.round(val)));
+          const team = this.opts.getTeam();
+          if (!team) return;
+          const otherTotal = allocatedTotal() - (team.slots[index].stats?.[statName] || 0);
+          const effectiveMax = Math.min(32, 66 - otherTotal);
+          val = Math.max(0, Math.min(effectiveMax, Math.round(val)));
+          if (team.slots[index].stats?.[statName] === val && parseInt(slider.value) === val) return;
           numInput.value = String(val);
           slider.value = String(val);
           slider.style.setProperty('--slider-pct', `${(val / 32) * 100}%`);
-          totalEl.textContent = String(baseVal + val);
-          const team = this.opts.getTeam();
-          if (!team) return;
+          const natureEl = el.querySelector('.tb-nature-select') as HTMLSelectElement;
+          const natureName = natureEl?.value || 'Serious';
+          const natureRec = NATURE_DATA.find(n => n.name === natureName);
+          const label = STAT_LABELS[statName];
+          const isHp = statName === 'hp';
+          const natureMod = natureRec && natureRec.up !== natureRec.down && !isHp
+            ? (natureRec.up === label ? 1.1 : natureRec.down === label ? 0.9 : 1)
+            : 1;
+          const total = Math.floor(((2 * baseVal + 31 + 2 * val) * 0.5 + (isHp ? 60 : 5)) * (isHp ? 1 : natureMod));
+          totalEl.textContent = String(total);
+          totalEl.classList.toggle('tb-stat-boosted', natureMod === 1.1);
+          totalEl.classList.toggle('tb-stat-hindered', natureMod === 0.9);
           if (!team.slots[index].stats) team.slots[index].stats = {};
           team.slots[index].stats![statName] = val;
+          const newTotal = allocatedTotal();
+          sliderEls.forEach(s => s.classList.toggle('full', newTotal >= 66));
+          const remaining = 66 - newTotal;
+          const remainingVal = el.querySelector('.tb-stat-remaining > span:nth-child(3)');
+          if (remainingVal) {
+            remainingVal.textContent = String(remaining);
+            remainingVal.parentElement!.className = 'tb-stat-remaining' + (remaining === 0 ? ' tb-stat-remaining-empty' : '');
+          }
           this.opts.onSlotChange();
         };
 
-        numInput.addEventListener('input', () => updateStat(parseInt(numInput.value) || 0));
+        numInput.addEventListener('input', () => {
+          numInput.value = numInput.value.replace(/\D/g, '');
+          updateStat(parseInt(numInput.value) || 0);
+        });
+        numInput.addEventListener('focus', () => numInput.setSelectionRange(numInput.value.length, numInput.value.length));
+        numInput.addEventListener('blur', () => updateStat(parseInt(numInput.value) || 0));
         slider.addEventListener('input', () => updateStat(parseInt(slider.value) || 0));
+        numInput.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            updateStat(parseInt(numInput.value) - 1);
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            updateStat(parseInt(numInput.value) + 1);
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            const rows = [...el.querySelectorAll('.tb-stat-row')];
+            const idx = rows.indexOf(row as HTMLElement);
+            if (idx > 0) {
+              const prev = rows[idx - 1].querySelector<HTMLElement>('.tb-stat-input');
+              prev?.focus();
+            }
+          } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            const rows = [...el.querySelectorAll('.tb-stat-row')];
+            const idx = rows.indexOf(row as HTMLElement);
+            if (idx < rows.length - 1) {
+              const next = rows[idx + 1].querySelector<HTMLElement>('.tb-stat-input');
+              next?.focus();
+            }
+          } else if (e.key === 'Enter' || e.key === 'Tab') {
+            e.preventDefault();
+            this.focusNextInSlot(index, numInput);
+          }
+        });
       });
 
+    } else {
+      // Nature selector (empty slot — just persist, stats aren't shown)
+      el.querySelector('.tb-nature-select')!.addEventListener('change', (e) => {
+        const team = this.opts.getTeam();
+        if (!team) return;
+        team.slots[index].nature = (e.target as HTMLSelectElement).value;
+        this.opts.onSlotChange();
+      });
     }
 
     // Move inputs (always present)
@@ -407,12 +549,30 @@ export class TeamBuilderWidget {
       const input = moveSlotEl.querySelector('.tb-move-input') as HTMLInputElement;
       if (!input) return;
       this.setupMoveSearch(input, index, mi);
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && this.moveSearchPopup.classList.contains('hidden')) {
+          e.preventDefault();
+          this.focusNextInSlot(index, input);
+        }
+      });
     });
 
     // Species name input (always present — filled or empty)
     const nameInput = el.querySelector('.tb-name-input') as HTMLInputElement;
     if (nameInput) {
       this.setupSpeciesSearch(nameInput, index);
+      nameInput.addEventListener('change', () => {
+        const team = this.opts.getTeam();
+        if (!team) return;
+        team.slots[index].name = nameInput.value || null;
+        this.opts.onSlotChange();
+      });
+      nameInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && isFilled && this.searchPopup.classList.contains('hidden')) {
+          e.preventDefault();
+          this.focusNextInSlot(index, nameInput);
+        }
+      });
     }
 
     // Gender selector (always works)
@@ -423,18 +583,16 @@ export class TeamBuilderWidget {
       this.opts.onSlotChange();
     });
 
-    // Nature selector (always works)
-    el.querySelector('.tb-nature-select')!.addEventListener('change', (e) => {
-      const team = this.opts.getTeam();
-      if (!team) return;
-      team.slots[index].nature = (e.target as HTMLSelectElement).value;
-      this.opts.onSlotChange();
-    });
-
     // Item input (always present)
     const itemInput = el.querySelector('.tb-item-input') as HTMLInputElement;
     if (itemInput) {
       this.setupItemSearch(itemInput, index);
+      itemInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && this.itemSearchPopup.classList.contains('hidden')) {
+          e.preventDefault();
+          this.focusNextInSlot(index, itemInput);
+        }
+      });
     }
 
     // Mega checkbox: swap between base and mega form (item stays unchanged)
@@ -598,6 +756,7 @@ export class TeamBuilderWidget {
     if (!species) return;
 
     slot.speciesId = speciesId;
+    slot.name = species.name;
     slot.ability = '0';
     slot.nature = 'Serious';
     slot.gender = species.gender === 'M' ? 'Male' : species.gender === 'F' ? 'Female' : 'Male';
@@ -626,6 +785,14 @@ export class TeamBuilderWidget {
     this.closePopups();
     this.opts.onSlotChange();
     this.render();
+
+    // Focus the ability select after species is filled
+    const slotEl = this.slotsContainer.querySelector<HTMLElement>(`[data-slot-index="${slotIndex}"]`);
+    const abilitySelect = slotEl?.querySelector<HTMLElement>('.tb-ability-select');
+    if (abilitySelect) {
+      abilitySelect.focus();
+      setTimeout(() => abilitySelect.click(), 0);
+    }
 
     // Preload data for move search
     this.loadDataIfNeeded();
@@ -755,6 +922,16 @@ export class TeamBuilderWidget {
     this.closePopups();
     this.opts.onSlotChange();
     this.render();
+
+    // Focus next move input, or first stat if last move
+    const slotEl = this.slotsContainer.querySelector<HTMLElement>(`[data-slot-index="${slotIndex}"]`);
+    if (moveIndex < 3) {
+      const nextMove = slotEl?.querySelector<HTMLElement>(`.tb-move-slot[data-move-index="${moveIndex + 1}"] .tb-move-input`);
+      nextMove?.focus();
+    } else {
+      const firstStat = slotEl?.querySelector<HTMLElement>('.tb-stat-row[data-stat="hp"] .tb-stat-input');
+      firstStat?.focus();
+    }
   }
 
   private setupItemSearch(input: HTMLInputElement, index: number) {
@@ -888,6 +1065,11 @@ export class TeamBuilderWidget {
     this.closePopups();
     this.opts.onSlotChange();
     this.render();
+
+    // Focus the first move input
+    const slotEl = this.slotsContainer.querySelector<HTMLElement>(`[data-slot-index="${slotIndex}"]`);
+    const firstMove = slotEl?.querySelector<HTMLElement>('.tb-move-slot[data-move-index="0"] .tb-move-input');
+    firstMove?.focus();
   }
 
   clearSlot(index: number) {
