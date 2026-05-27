@@ -50,10 +50,10 @@ export interface Item {
   megaStone?: Record<string, string> | null;
   itemUser?: string[] | null;
   sprite?: string;
-  category?: string;
+  category?: ItemCategory[];
 }
 
-export type ItemCategory = 'Stat Boost' | 'Power Boost' | 'Defense' | 'Recovery' | 'Mega Stone' | 'Other';
+export type ItemCategory = 'Stat Boost' | 'Power Boost' | 'Defense' | 'Recovery' | 'Effect Extend' | 'Berry' | 'Mega Stone' | 'Other';
 
 export interface FilterFlag {
   category: 'type' | 'ability' | 'move' | 'pokemon' | 'classification' | 'effect' | 'range' | 'ability_category';

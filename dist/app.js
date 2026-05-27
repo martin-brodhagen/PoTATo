@@ -430,7 +430,7 @@ async function showDetail(s) {
     });
 }
 function showMoveDetail(moveId, move) {
-    updateBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+    resetBreadcrumbs({ type: 'move', id: moveId, name: move.name });
     if (detailMovesWidget) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
@@ -544,6 +544,35 @@ function showAbilityDetail(abilityId, ability) {
         });
     }
 }
+function showItemDetail(itemId, item) {
+    resetBreadcrumbs({ type: 'item', id: itemId, name: item.name });
+    if (detailMovesWidget) {
+        detailMovesWidget.destroy();
+        detailMovesWidget = null;
+    }
+    if (moveDetailPokemonWidget) {
+        moveDetailPokemonWidget.destroy();
+        moveDetailPokemonWidget = null;
+    }
+    if (abilityDetailPokemonWidget) {
+        abilityDetailPokemonWidget.destroy();
+        abilityDetailPokemonWidget = null;
+    }
+    detailSpecies = null;
+    switchToDetail();
+    const categories = (item.category || []).map((c) => `<span class="badge">${c}</span>`).join('');
+    const html = `
+    <div class="move-detail">
+      <div class="move-detail-header">
+        <img class="item-detail-sprite" src="sprites/items/${item.sprite || itemId}.png" alt="${item.name}" onerror="this.style.display='none'">
+        <span class="move-detail-name">${item.name}</span>
+      </div>
+      ${categories ? `<div class="move-detail-badges">${categories}</div>` : ''}
+      ${item.shortDesc || item.desc ? `<div class="move-detail-desc">${item.shortDesc || item.desc}</div>` : ''}
+    </div>`;
+    searchDetailContent.innerHTML = html;
+    renderBreadcrumbBar();
+}
 // ── Tab system ─────────────────────────────────────────────
 const leftSection = document.querySelector('.section-left');
 function selectTab(tabId, section) {
@@ -649,7 +678,7 @@ document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () =>
         for (const s of allSpecies)
             speciesNames[s.id] = s.name;
         movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => {
-                resetBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+                updateBreadcrumbs({ type: 'move', id: moveId, name: move.name });
                 showMoveDetail(moveId, move);
             } });
     }
@@ -666,7 +695,7 @@ document.querySelector('[data-subtab="abilities"]')?.addEventListener('click', (
 document.querySelector('[data-subtab="items"]')?.addEventListener('click', () => {
     if (!itemsWidget) {
         const container = document.getElementById('subtab-content-items');
-        itemsWidget = new ItemSearchWidget({ container, formatId: currentFormat });
+        itemsWidget = new ItemSearchWidget({ container, formatId: currentFormat, onItemClick: (id, item) => showItemDetail(id, item) });
     }
 });
 const pokemonContainer = document.getElementById('subtab-content-pokemon');

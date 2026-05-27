@@ -1,6 +1,6 @@
 import { loadItems } from './data-loader.js';
 const ITEM_SPRITE_PATH = 'sprites/items';
-export const ITEM_CATEGORIES = ['Stat Boost', 'Power Boost', 'Defense', 'Recovery', 'Mega Stone', 'Other'];
+export const ITEM_CATEGORIES = ['Stat Boost', 'Power Boost', 'Defense', 'Recovery', 'Effect Extend', 'Berry', 'Mega Stone', 'Other'];
 export class ItemSearchWidget {
     opts;
     abort = new AbortController();
@@ -11,6 +11,8 @@ export class ItemSearchWidget {
     sortBy = 'alpha';
     sortAsc = true;
     catFilter = null;
+    selectedIndex = -1;
+    filteredForNav = [];
     filterInput;
     sortSelect;
     sortDirBtn;
@@ -86,10 +88,27 @@ export class ItemSearchWidget {
         this.grid = document.createElement('div');
         this.grid.className = 'is-grid';
         this.grid.setAttribute('role', 'list');
+        this.grid.setAttribute('tabindex', '0');
         container.appendChild(this.grid);
     }
     bindEvents() {
         const { signal } = this.abort;
+        this.grid.addEventListener('keydown', (e) => {
+            if (!this.filteredForNav.length)
+                return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredForNav.length - 1);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
+            }
+            else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+                this.updateListSelection();
+                this.scrollSelectedIntoView();
+            }
+        });
         this.sortSelect.addEventListener('change', () => {
             this.sortBy = this.sortSelect.value;
             this.render();
@@ -130,7 +149,7 @@ export class ItemSearchWidget {
     render() {
         let list = Object.entries(this.items).map(([id, item]) => ({ id, ...item }));
         if (this.catFilter) {
-            list = list.filter(item => item.category === this.catFilter);
+            list = list.filter(item => (item.category ?? []).includes(this.catFilter));
         }
         if (this.searchQuery) {
             const q = this.searchQuery.toLowerCase();
@@ -150,10 +169,13 @@ export class ItemSearchWidget {
             this.grid.innerHTML = '<div class="loading">No items match your search.</div>';
             return;
         }
+        this.filteredForNav = list;
+        this.selectedIndex = -1;
         for (const item of list) {
             const el = document.createElement('div');
             el.className = 'item-entry';
             el.dataset.itemId = item.id;
+            el.setAttribute('tabindex', '-1');
             const spriteHtml = item.sprite
                 ? `<img class="item-entry-sprite" src="${ITEM_SPRITE_PATH}/${item.sprite}.png" alt="${item.name}">`
                 : '';
@@ -163,14 +185,32 @@ export class ItemSearchWidget {
                     `<span class="item-entry-divider"></span>` +
                     `<span class="item-entry-desc">${item.shortDesc || item.desc || ''}</span>`;
             el.addEventListener('click', () => {
-                this.grid.querySelector('.item-entry.selected')?.classList.remove('selected');
-                el.classList.add('selected');
-                const i = this.items[item.id];
-                if (i)
-                    this.opts.onItemClick?.(item.id, i);
+                this.selectedIndex = list.indexOf(item);
+                this.updateListSelection();
             });
             this.grid.appendChild(el);
         }
+    }
+    updateListSelection() {
+        this.grid.querySelectorAll('.item-entry.selected').forEach(el => el.classList.remove('selected'));
+        const items = this.grid.querySelectorAll('.item-entry');
+        const item = items[this.selectedIndex];
+        if (item) {
+            item.classList.add('selected');
+            item.focus();
+            const entry = this.filteredForNav[this.selectedIndex];
+            if (entry) {
+                const i = this.items[entry.id];
+                if (i)
+                    this.opts.onItemClick?.(entry.id, i);
+            }
+        }
+    }
+    scrollSelectedIntoView() {
+        const items = this.grid.querySelectorAll('.item-entry');
+        const item = items[this.selectedIndex];
+        if (item)
+            item.scrollIntoView({ block: 'nearest' });
     }
     destroy() {
         this.abort.abort();

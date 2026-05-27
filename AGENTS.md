@@ -17,7 +17,7 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 ├── scripts/
 │   ├── download-sprites.py    # Downloads Champions menu sprites from Bulbagarden Archives
 │   ├── build-sprite-map.py    # Builds sprite filename → species ID mapping
-│   └── categorize_items.py   # Classifies items into Game8 categories (Defense/Recovery/Power Boost/Stat Boost/Mega Stone/Other)
+│   └── prep_items.py          # Finalizes items.json: sprites, descriptions, categories, strip fields
 ├── data/format-m-a/           # Generated per-format data
 │   ├── index.json             # 270 battle forms (species + megas + regionals)
 │   ├── moves.json             # 477 legal moves (Champions buffs/nerfs baked in)
@@ -93,11 +93,19 @@ Menu sprites are downloaded from [Bulbagarden Archives](https://archives.bulbaga
 6. Battle Bond excluded (not on Game8 list)
 7. Categories defined in `get_ability_categories()` in `prep_data.py` using explicit ID-based assignment
 
-### Item Data Pipeline (categorize_items.py)
-1. Categories match Game8's official item types: **Defense, Recovery, Power Boost, Other, Stat Boost, Mega Stone**
-2. Type-resist berries (Chilan, Haban, Babiri, etc.) → **Defense**; Oran/Sitrus berries → **Recovery**; Leftovers/Black Sludge → **Recovery**
-3. `ITEM_CATEGORIES` in `item-search-widget.ts` defines the category order for filter buttons
-4. `category` field added to each item in `items.json`
+### Item Data Pipeline (prep_items.py)
+1. Fetches item sprites and descriptions from Game8's local HTML cache per format
+2. Patches sprite paths to `sprites/items/{id}.png` and `shortDesc` field
+3. Strips non-display fields (`fling`, `isChoice`, `isBerry`, `itemUser`, etc.)
+4. Assigns `category` array via explicit ID-based and keyword rules:
+   - **Mega Stone**: items with `.megaStone` field
+   - **Berry**: item ID contains `'berry'`
+   - **Power Boost**: desc contains `'1.2x power'` OR shortDesc contains `'by 20%'` / `'boosts the power'`
+   - **Stat Boost**: White Herb, Choice Scarf, Light Ball (explicit IDs)
+   - **Defense**: Focus Band/Sash + type-resist berries (keyword: `'supereffective'` in shortDesc)
+   - **Recovery**: status-cure/HP/PP berries + Leftovers, Shell Bell, Mental Herb
+   - **Other**: items with no other category
+5. Downloads missing item sprites
 
 ## Data Stats (Regulation M-A)
 - 273 battle forms (213 non-Mega + 60 Mega)
@@ -153,8 +161,9 @@ npm start                # → http://localhost:8787
 - `switchToDetail()` guards against redundant tab-switching when already on the detail tab
 - `PokemonSearchWidget` accepts `learnedByFilter` in constructor to avoid a double render (all species → filtered)
 - Breadcrumbs at the top of the Search Detail view, rendered into `#breadcrumb-bar` (outside the content area), with click-navigation and trail management (truncation, index shift)
-- **`ItemSearchWidget`**: `ITEM_CATEGORIES` exports Game8 item types — Defense, Mega Stone, Other, Power Boost, Recovery, Stat Boost. Type-resist berries classified as Defense; Oran/Sitrus berries as Recovery. Category buttons filter items; sorting alphabetical only.
+- **`ItemSearchWidget`**: `ITEM_CATEGORIES` exports Game8 item types — Stat Boost, Power Boost, Defense, Recovery, Effect Extend, Berry, Mega Stone, Other. Category buttons filter items; sorting alphabetical only. Item categorization is assigned explicitly by ID in prep_items.py.
 
 ## TODOs
 
-- [ ] Finish formatting the items.json file (remove remaining non-display fields: fling, isChoice, isBerry, itemUser)
+- [x] Finish formatting the items.json file (remove remaining non-display fields: fling, isChoice, isBerry, itemUser) — handled by prep_items.py in `npm run prep` chain
+- [x] Assign item categories explicitly by ID in prep_items.py

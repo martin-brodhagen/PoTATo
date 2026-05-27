@@ -1,4 +1,4 @@
-import type { Species, FormatId, Team, Move, Ability } from './lib/types.js';
+import type { Species, FormatId, Team, Move, Ability, Item } from './lib/types.js';
 import { setFormat, loadIndex, loadMovesWithLearnsets, loadAbilities } from './lib/data-loader.js';
 import { createTeam, loadTeams, saveTeams } from './lib/team-store.js';
 import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './lib/move-search-widget.js';
@@ -39,7 +39,7 @@ let itemsWidget: ItemSearchWidget | null = null;
 let teamBuilderWidget: TeamBuilderWidget | null = null;
 
 interface BreadcrumbItem {
-  type: 'pokemon' | 'move' | 'ability';
+  type: 'pokemon' | 'move' | 'ability' | 'item';
   id: string;
   name: string;
 }
@@ -410,7 +410,7 @@ async function showDetail(s: Species) {
 }
 
 function showMoveDetail(moveId: string, move: Move) {
-  updateBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+  resetBreadcrumbs({ type: 'move', id: moveId, name: move.name });
   if (detailMovesWidget) { detailMovesWidget.destroy(); detailMovesWidget = null; }
   if (moveDetailPokemonWidget) { moveDetailPokemonWidget.destroy(); moveDetailPokemonWidget = null; }
   if (abilityDetailPokemonWidget) { abilityDetailPokemonWidget.destroy(); abilityDetailPokemonWidget = null; }
@@ -513,6 +513,30 @@ function showAbilityDetail(abilityId: string, ability: Ability) {
       learnedByFilter: pokemonIds,
     });
   }
+}
+
+function showItemDetail(itemId: string, item: Item) {
+  resetBreadcrumbs({ type: 'item', id: itemId, name: item.name });
+  if (detailMovesWidget) { detailMovesWidget.destroy(); detailMovesWidget = null; }
+  if (moveDetailPokemonWidget) { moveDetailPokemonWidget.destroy(); moveDetailPokemonWidget = null; }
+  if (abilityDetailPokemonWidget) { abilityDetailPokemonWidget.destroy(); abilityDetailPokemonWidget = null; }
+  detailSpecies = null;
+  switchToDetail();
+
+  const categories = (item.category || []).map((c: string) => `<span class="badge">${c}</span>`).join('');
+
+  const html = `
+    <div class="move-detail">
+      <div class="move-detail-header">
+        <img class="item-detail-sprite" src="sprites/items/${item.sprite || itemId}.png" alt="${item.name}" onerror="this.style.display='none'">
+        <span class="move-detail-name">${item.name}</span>
+      </div>
+      ${categories ? `<div class="move-detail-badges">${categories}</div>` : ''}
+      ${item.shortDesc || item.desc ? `<div class="move-detail-desc">${item.shortDesc || item.desc}</div>` : ''}
+    </div>`;
+
+  searchDetailContent.innerHTML = html;
+  renderBreadcrumbBar();
 }
 
 // ── Tab system ─────────────────────────────────────────────
@@ -626,7 +650,7 @@ document.querySelector<HTMLElement>('[data-subtab="moves"]')?.addEventListener('
     const speciesNames: Record<string, string> = {};
     for (const s of allSpecies) speciesNames[s.id] = s.name;
     movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => {
-      resetBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+updateBreadcrumbs({ type: 'move', id: moveId, name: move.name });
       showMoveDetail(moveId, move);
     } });
   }
@@ -645,7 +669,7 @@ document.querySelector<HTMLElement>('[data-subtab="abilities"]')?.addEventListen
 document.querySelector<HTMLElement>('[data-subtab="items"]')?.addEventListener('click', () => {
   if (!itemsWidget) {
     const container = document.getElementById('subtab-content-items')!;
-    itemsWidget = new ItemSearchWidget({ container, formatId: currentFormat });
+    itemsWidget = new ItemSearchWidget({ container, formatId: currentFormat, onItemClick: (id, item) => showItemDetail(id, item) });
   }
 });
 

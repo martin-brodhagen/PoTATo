@@ -106,7 +106,6 @@ button:hover {
 .header-slot-sprite {
   width: 40px;
   height: 40px;
-  image-rendering: pixelated;
 }
 
 /* ── Main sections (two-column layout) ──────────────────── */
@@ -1116,6 +1115,7 @@ button:hover {
   overflow-y: auto;
   flex: 1;
   min-height: 0;
+  outline: none;
 }
 
 .is-filter-input {
@@ -1199,6 +1199,7 @@ button:hover {
 .item-entry.selected {
   background: #1e1e2e;
   border-left: 2px solid #f0c060;
+  outline: none;
 }
 
 .item-entry-sprite {
@@ -1460,8 +1461,9 @@ button:hover {
   margin-right: 0.2rem;
 }
 
-.move-detail .move-entry-cat {
-  width: 3.8rem;
+.item-detail-sprite {
+  width: 4rem;
+  height: 4rem;
 }
 
 .move-detail-stats {
