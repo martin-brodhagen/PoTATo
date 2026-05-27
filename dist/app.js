@@ -4,6 +4,7 @@ import { MoveSearchWidget, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGO
 import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
 import { AbilitySearchWidget, ABILITY_EFFECT_CATEGORIES } from './lib/ability-search-widget.js';
 import { ItemSearchWidget } from './lib/item-search-widget.js';
+import { DefensiveCoverageWidget } from './lib/defensive-coverage-widget.js';
 import { TeamBuilderWidget } from './lib/team-builder-widget.js';
 const SPRITE_PATH = 'sprites/champions';
 const LAST_TEAM_KEY = 'potato-last-team';
@@ -429,8 +430,13 @@ async function showDetail(s) {
         onMoveClick: (moveId, move) => showMoveDetail(moveId, move),
     });
 }
-function showMoveDetail(moveId, move) {
-    resetBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+function showMoveDetail(moveId, move, resetTrail = false) {
+    if (resetTrail) {
+        resetBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+    }
+    else {
+        updateBreadcrumbs({ type: 'move', id: moveId, name: move.name });
+    }
     if (detailMovesWidget) {
         detailMovesWidget.destroy();
         detailMovesWidget = null;
@@ -603,6 +609,16 @@ function selectTab(tabId, section) {
             el.classList.toggle('hidden', el !== activeSection);
         });
     }
+    if (tabId === 'defensive-coverage') {
+        lazyInitDefensiveCoverage();
+    }
+    if (tabId !== 'search-detail') {
+        breadcrumbBar.innerHTML = '';
+        breadcrumbBar.classList.add('hidden');
+    }
+    else if (breadcrumbs.length > 0) {
+        renderBreadcrumbBar();
+    }
 }
 function lazyInitTeamBuilder() {
     if (teamBuilderWidget)
@@ -633,6 +649,19 @@ function switchToTeamBuilder() {
     else {
         selectTab('team-builder');
     }
+}
+let defensiveCoverageWidget = null;
+function lazyInitDefensiveCoverage() {
+    if (defensiveCoverageWidget)
+        return;
+    const container = document.getElementById('defensive-coverage-content');
+    container.innerHTML = '';
+    defensiveCoverageWidget = new DefensiveCoverageWidget({
+        container: document.getElementById('tab-content-defensive-coverage'),
+        species: allSpecies,
+        spriteMap,
+        getTeam: getCurrentTeam,
+    });
 }
 // ── Sub-tab system (inside Pokedex) ────────────────────────
 function selectSubTab(subTabId, container) {
@@ -678,8 +707,7 @@ document.querySelector('[data-subtab="moves"]')?.addEventListener('click', () =>
         for (const s of allSpecies)
             speciesNames[s.id] = s.name;
         movesWidget = new MoveSearchWidget({ container, formatId: currentFormat, speciesNames, onMoveClick: (moveId, move) => {
-                updateBreadcrumbs({ type: 'move', id: moveId, name: move.name });
-                showMoveDetail(moveId, move);
+                showMoveDetail(moveId, move, true);
             } });
     }
 });

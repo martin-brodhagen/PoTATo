@@ -1927,13 +1927,15 @@ button:hover {
 }
 
 .tb-slot {
-  background: #1a1a24;
+  background: transparent;
   border: 1px solid #2a2a3a;
   border-radius: 6px;
   padding: 0.2rem;
-  transition: border-color 0.15s;
-  flex-shrink: 0;
-  height: 7.8rem;
+  box-sizing: border-box;
+}
+
+.tb-slot:hover {
+  background: #1a1a24;
 }
 
 .tb-name-input {
@@ -2470,4 +2472,103 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* ── Defensive Coverage Widget ─────────────────────────────── */
+.dc-layout {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dc-team-list {
+  width: auto;
+  flex-shrink: 0;
+  border-right: 1px solid #1e1e2a;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  align-items: flex-start;
+}
+
+.dc-team-slot {
+  background: transparent;
+  border: 1px solid #2a2a3a;
+  border-radius: 6px;
+  padding: 0.2rem;
+  height: 7.8rem;
+  width: 7.8rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.dc-team-slot:hover {
+  background: #1a1a24;
+}
+
+.dc-slot-empty {
+  color: #555;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.dc-sprite-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.dc-sprite {
+  width: 36px;
+  height: 36px;
+}
+
+.dc-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dc-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e0e0e8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dc-ability {
+  font-size: 0.72rem;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dc-types {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.dc-empty-msg {
+  color: #555;
+  font-size: 0.82rem;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.dc-main {
+  flex: 1;
+  overflow: auto;
+  padding: 1rem;
 }
