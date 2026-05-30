@@ -280,9 +280,9 @@ export class PokemonSearchWidget {
         this.spriteMap = spriteMap;
         const abilitySet = new Set();
         for (const s of species) {
-            for (const v of Object.values(s.abilities)) {
-                if (v)
-                    abilitySet.add(v);
+            for (const a of s.abilities) {
+                if (a)
+                    abilitySet.add(a);
             }
         }
         this.allAbilities = [...abilitySet].sort();
@@ -335,7 +335,7 @@ export class PokemonSearchWidget {
             case 'type':
                 return species.types.some(t => t.toLowerCase() === flag.id);
             case 'ability':
-                return Object.values(species.abilities).some(a => a.toLowerCase() === flag.id);
+                return species.abilities.some(a => a.toLowerCase() === flag.id);
             case 'move':
                 if (!this.filterLearnsets)
                     return false;
@@ -658,10 +658,10 @@ export class PokemonSearchWidget {
             infoBottom.className = 'list-info-bottom';
             const abilEl = document.createElement('span');
             abilEl.className = 'list-abilities';
-            for (const key of ['0', '1', 'H']) {
+            for (let i = 0; i < 3; i++) {
                 const span = document.createElement('span');
-                span.className = 'list-ability' + (s.abilities[key] ? '' : ' list-ability-empty');
-                span.textContent = s.abilities[key] || '-';
+                span.className = 'list-ability' + (s.abilities[i] ? '' : ' list-ability-empty');
+                span.textContent = s.abilities[i] || '-';
                 abilEl.appendChild(span);
             }
             infoBottom.appendChild(abilEl);

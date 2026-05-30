@@ -4,7 +4,7 @@ export interface Species {
   num: number;
   types: string[];
   baseStats: { hp: number; atk: number; def: number; spa: number; spd: number; spe: number };
-  abilities: Record<string, string>;
+  abilities: string[];
   forme: string | null;
   baseSpecies: string | null;
   requiredItem: string | null;

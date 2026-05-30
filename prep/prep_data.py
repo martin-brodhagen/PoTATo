@@ -557,7 +557,7 @@ for pid in sorted(all_legal_ids):
     base_species = entry.get('baseSpecies', entry.get('name', ''))
 
     # Normalize abilities to always include 0 and H at minimum
-    abilities = dict(entry.get('abilities', {}))
+    abilities = list(entry.get('abilities', {}).values())
 
     obj = {
         "id": pid,
@@ -982,7 +982,7 @@ for aid, entry in abilities_raw.items():
 
 legal_ability_names: set[str] = set()
 for s in index:
-    for a in s['abilities'].values():
+    for a in s['abilities']:
         if a:
             legal_ability_names.add(a)
 
@@ -1006,7 +1006,7 @@ except Exception as e:
 # Build ability → species mapping from index
 ability_to_species: dict[str, list[str]] = {}
 for s in index:
-    for a in s['abilities'].values():
+    for a in s['abilities']:
         if a:
             akey = a.lower().replace(' ', '').replace('-', '').replace('.', '').replace("'", '')
             if akey not in ability_to_species:

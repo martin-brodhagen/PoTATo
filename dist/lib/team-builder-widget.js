@@ -4,7 +4,6 @@ const SHINY_SPRITE_PATH = 'sprites/shiny';
 const ITEM_SPRITE_PATH = 'sprites/items';
 const STAT_NAMES = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
 const STAT_LABELS = { hp: 'HP', atk: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', spe: 'Spe' };
-const ABILITY_KEYS = ['0', '1', 'H'];
 const NATURE_DATA = [
     { name: 'Adamant', up: 'Atk', down: 'SpA' },
     { name: 'Bashful', up: 'SpA', down: 'SpA' },
@@ -198,15 +197,13 @@ export class TeamBuilderWidget {
         // Build ability options (default to first ability if empty)
         let abilityOpts = '';
         if (isFilled) {
-            let selectedAbilityKey = slot.ability || '0';
-            if (!['0', '1', 'H'].includes(selectedAbilityKey))
-                selectedAbilityKey = '0';
-            for (const key of ABILITY_KEYS) {
-                const name = species.abilities[key];
+            const selectedAbilityName = slot.ability || species.abilities[0] || '';
+            for (let i = 0; i < species.abilities.length; i++) {
+                const name = species.abilities[i];
                 if (!name)
                     continue;
-                const sel = key === selectedAbilityKey ? ' selected' : '';
-                abilityOpts += `<option value="${key}"${sel}>${name}</option>`;
+                const sel = name === selectedAbilityName ? ' selected' : '';
+                abilityOpts += `<option value="${name}"${sel}>${name}</option>`;
             }
         }
         // Build nature options
@@ -413,7 +410,7 @@ export class TeamBuilderWidget {
                 const team = this.opts.getTeam();
                 if (!team)
                     return;
-                team.slots[index].ability = e.target.value;
+                team.slots[index].ability = e.target.value; // value is now the ability name
                 this.opts.onSlotChange();
                 this.focusNextInSlot(index, e.target);
             });
@@ -651,7 +648,7 @@ export class TeamBuilderWidget {
                         return;
                     // Preserve moves, stats, nature, gender, item; reset ability
                     slot.speciesId = newSpeciesId;
-                    slot.ability = '0';
+                    slot.ability = newSpecies.abilities[0] || null;
                     slot.nature = slot.nature;
                     slot.gender = slot.gender;
                     slot.moves = slot.moves;
@@ -771,7 +768,7 @@ export class TeamBuilderWidget {
             return;
         slot.speciesId = speciesId;
         slot.name = species.name;
-        slot.ability = '0';
+        slot.ability = species.abilities[0] || null;
         slot.nature = 'Serious';
         slot.gender = species.gender === 'M' ? 'Male' : species.gender === 'F' ? 'Female' : 'Male';
         slot.moves = [null, null, null, null];
@@ -1075,7 +1072,7 @@ export class TeamBuilderWidget {
                 const base = this.opts.species.find(s => s.name === speciesBase);
                 if (base) {
                     slot.speciesId = base.id;
-                    slot.ability = '0';
+                    slot.ability = species.abilities[0] || null;
                 }
             }
         }

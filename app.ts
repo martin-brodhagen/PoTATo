@@ -6,6 +6,7 @@ import { PokemonSearchWidget } from './lib/pokemon-search-widget.js';
 import { AbilitySearchWidget, ABILITY_EFFECT_CATEGORIES } from './lib/ability-search-widget.js';
 import { ItemSearchWidget } from './lib/item-search-widget.js';
 import { DefensiveCoverageWidget } from './lib/defensive-coverage-widget.js';
+import { MoveTypeCoverageWidget } from './lib/move-type-coverage-widget.js';
 import { TeamBuilderWidget } from './lib/team-builder-widget.js';
 
 const SPRITE_PATH = 'sprites/champions';
@@ -190,6 +191,7 @@ function fillSlot(slotIndex: number, speciesId: string) {
   renderTeamBar();
   reRenderDetail();
   if (teamBuilderWidget) teamBuilderWidget.refresh();
+  defensiveCoverageWidget?.refresh();
 }
 
 function reRenderDetail() {
@@ -263,6 +265,7 @@ function selectTeam(id: string) {
   renderTeamWarning();
   renderTeamBar();
   if (teamBuilderWidget) teamBuilderWidget.refresh();
+  defensiveCoverageWidget?.refresh();
 }
 
 function handleNewTeam() {
@@ -342,7 +345,7 @@ async function showDetail(s: Species) {
             </div>
           </div>
         </div>
-        <div class="ability-buttons">${Object.values(s.abilities).map(a => `<button class="ability-btn">${a}</button>`).join('')}</div>
+        <div class="ability-buttons">${s.abilities.map(a => `<button class="ability-btn">${a}</button>`).join('')}</div>
       </div>
     </div>`;
 
@@ -381,7 +384,7 @@ async function showDetail(s: Species) {
   }
 
   // Wire up ability buttons → ability detail
-  const abilityNames = new Set(Object.values(s.abilities).filter(Boolean));
+  const abilityNames = new Set(s.abilities.filter(Boolean));
   if (abilityNames.size > 0) {
     loadAbilities(currentFormat).then(allAbilities => {
       const nameToId: Record<string, string> = {};
@@ -579,6 +582,11 @@ function selectTab(tabId: string, section?: HTMLElement | null) {
 
   if (tabId === 'defensive-coverage') {
     lazyInitDefensiveCoverage();
+    defensiveCoverageWidget?.refresh();
+  }
+
+  if (tabId === 'move-coverage') {
+    lazyInitMoveCoverage();
   }
 
   if (tabId !== 'search-detail') {
@@ -605,6 +613,7 @@ function lazyInitTeamBuilder() {
       renderTeamWarning();
       renderTeamBar();
       reRenderDetail();
+      defensiveCoverageWidget?.refresh();
     },
     onPokemonClick: (species) => showDetail(species),
   });
@@ -620,6 +629,7 @@ function switchToTeamBuilder() {
 }
 
 let defensiveCoverageWidget: DefensiveCoverageWidget | null = null;
+let moveCoverageWidget: MoveTypeCoverageWidget | null = null;
 
 function lazyInitDefensiveCoverage() {
   if (defensiveCoverageWidget) return;
@@ -627,6 +637,31 @@ function lazyInitDefensiveCoverage() {
   container.innerHTML = '';
   defensiveCoverageWidget = new DefensiveCoverageWidget({
     container: document.getElementById('tab-content-defensive-coverage')!,
+    species: allSpecies,
+    spriteMap,
+    getTeam: getCurrentTeam,
+    onKeywordClick: (type, id) => {
+      if (type === 'ability') {
+        loadAbilities(currentFormat).then(allAbilities => {
+          const ability = allAbilities[id];
+          if (ability) showAbilityDetail(id, ability);
+        });
+      } else if (type === 'move') {
+        loadMovesWithLearnsets(currentFormat).then(allMoves => {
+          const move = allMoves[id];
+          if (move) showMoveDetail(id, move, true);
+        });
+      }
+    },
+  });
+}
+
+function lazyInitMoveCoverage() {
+  if (moveCoverageWidget) return;
+  const container = document.getElementById('move-coverage-content')!;
+  container.innerHTML = '';
+  moveCoverageWidget = new MoveTypeCoverageWidget({
+    container: document.getElementById('tab-content-move-coverage')!,
     species: allSpecies,
     spriteMap,
     getTeam: getCurrentTeam,

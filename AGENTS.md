@@ -167,4 +167,4 @@ npm start                # → http://localhost:8787
 
 - [x] Finish formatting the items.json file (remove remaining non-display fields: fling, isChoice, isBerry, itemUser) — handled by prep_items.py in `npm run prep` chain
 - [x] Assign item categories explicitly by ID in prep_items.py
-- [ ] Add defensive coverage tool (team list on left, coverage analysis on right)
+- [x] Add defensive coverage tool (team list on left, coverage analysis on right)

@@ -15,10 +15,10 @@
    "spd": 85,
    "spe": 60
   },
-  "abilities": {
-   "0": "Snow Warning",
-   "H": "Soundproof"
-  },
+  "abilities": [
+   "Snow Warning",
+   "Soundproof"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -44,9 +44,9 @@
    "spd": 105,
    "spe": 30
   },
-  "abilities": {
-   "0": "Snow Warning"
-  },
+  "abilities": [
+   "Snow Warning"
+  ],
   "forme": "Mega",
   "baseSpecies": "Abomasnow",
   "requiredItem": "Abomasite",
@@ -71,11 +71,11 @@
    "spd": 60,
    "spe": 75
   },
-  "abilities": {
-   "0": "Pressure",
-   "1": "Super Luck",
-   "H": "Justified"
-  },
+  "abilities": [
+   "Pressure",
+   "Super Luck",
+   "Justified"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -100,9 +100,9 @@
    "spd": 60,
    "spe": 115
   },
-  "abilities": {
-   "0": "Magic Bounce"
-  },
+  "abilities": [
+   "Magic Bounce"
+  ],
   "forme": "Mega",
   "baseSpecies": "Absol",
   "requiredItem": "Absolite",
@@ -128,9 +128,9 @@
    "spd": 140,
    "spe": 60
   },
-  "abilities": {
-   "0": "Stance Change"
-  },
+  "abilities": [
+   "Stance Change"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -156,11 +156,11 @@
    "spd": 75,
    "spe": 130
   },
-  "abilities": {
-   "0": "Rock Head",
-   "1": "Pressure",
-   "H": "Unnerve"
-  },
+  "abilities": [
+   "Rock Head",
+   "Pressure",
+   "Unnerve"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -186,9 +186,9 @@
    "spd": 95,
    "spe": 150
   },
-  "abilities": {
-   "0": "Tough Claws"
-  },
+  "abilities": [
+   "Tough Claws"
+  ],
   "forme": "Mega",
   "baseSpecies": "Aerodactyl",
   "requiredItem": "Aerodactylite",
@@ -214,11 +214,11 @@
    "spd": 60,
    "spe": 50
   },
-  "abilities": {
-   "0": "Sturdy",
-   "1": "Rock Head",
-   "H": "Heavy Metal"
-  },
+  "abilities": [
+   "Sturdy",
+   "Rock Head",
+   "Heavy Metal"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -243,9 +243,9 @@
    "spd": 80,
    "spe": 50
   },
-  "abilities": {
-   "0": "Filter"
-  },
+  "abilities": [
+   "Filter"
+  ],
   "forme": "Mega",
   "baseSpecies": "Aggron",
   "requiredItem": "Aggronite",
@@ -270,11 +270,11 @@
    "spd": 95,
    "spe": 120
   },
-  "abilities": {
-   "0": "Synchronize",
-   "1": "Inner Focus",
-   "H": "Magic Guard"
-  },
+  "abilities": [
+   "Synchronize",
+   "Inner Focus",
+   "Magic Guard"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -299,9 +299,9 @@
    "spd": 105,
    "spe": 150
   },
-  "abilities": {
-   "0": "Trace"
-  },
+  "abilities": [
+   "Trace"
+  ],
   "forme": "Mega",
   "baseSpecies": "Alakazam",
   "requiredItem": "Alakazite",
@@ -326,10 +326,10 @@
    "spd": 121,
    "spe": 64
   },
-  "abilities": {
-   "0": "Sweet Veil",
-   "H": "Aroma Veil"
-  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -355,10 +355,10 @@
    "spd": 105,
    "spe": 80
   },
-  "abilities": {
-   "0": "Natural Cure",
-   "H": "Cloud Nine"
-  },
+  "abilities": [
+   "Natural Cure",
+   "Cloud Nine"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -384,9 +384,9 @@
    "spd": 105,
    "spe": 80
   },
-  "abilities": {
-   "0": "Pixilate"
-  },
+  "abilities": [
+   "Pixilate"
+  ],
   "forme": "Mega",
   "baseSpecies": "Altaria",
   "requiredItem": "Altarianite",
@@ -411,10 +411,10 @@
    "spd": 90,
    "spe": 55
   },
-  "abilities": {
-   "0": "Static",
-   "H": "Plus"
-  },
+  "abilities": [
+   "Static",
+   "Plus"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -440,9 +440,9 @@
    "spd": 110,
    "spe": 45
   },
-  "abilities": {
-   "0": "Mold Breaker"
-  },
+  "abilities": [
+   "Mold Breaker"
+  ],
   "forme": "Mega",
   "baseSpecies": "Ampharos",
   "requiredItem": "Ampharosite",
@@ -468,11 +468,11 @@
    "spd": 80,
    "spe": 30
   },
-  "abilities": {
-   "0": "Ripen",
-   "1": "Gluttony",
-   "H": "Thick Fat"
-  },
+  "abilities": [
+   "Ripen",
+   "Gluttony",
+   "Thick Fat"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -498,10 +498,10 @@
    "spd": 132,
    "spe": 42
   },
-  "abilities": {
-   "0": "Water Bubble",
-   "H": "Water Absorb"
-  },
+  "abilities": [
+   "Water Bubble",
+   "Water Absorb"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -526,11 +526,11 @@
    "spd": 79,
    "spe": 80
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Shed Skin",
-   "H": "Unnerve"
-  },
+  "abilities": [
+   "Intimidate",
+   "Shed Skin",
+   "Unnerve"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -555,11 +555,11 @@
    "spd": 80,
    "spe": 95
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Flash Fire",
-   "H": "Justified"
-  },
+  "abilities": [
+   "Intimidate",
+   "Flash Fire",
+   "Justified"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -585,11 +585,11 @@
    "spd": 80,
    "spe": 90
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Flash Fire",
-   "H": "Rock Head"
-  },
+  "abilities": [
+   "Intimidate",
+   "Flash Fire",
+   "Rock Head"
+  ],
   "forme": "Hisui",
   "baseSpecies": "Arcanine",
   "requiredItem": null,
@@ -615,11 +615,11 @@
    "spd": 65,
    "spe": 85
   },
-  "abilities": {
-   "0": "Stamina",
-   "1": "Sturdy",
-   "H": "Stalwart"
-  },
+  "abilities": [
+   "Stamina",
+   "Sturdy",
+   "Stalwart"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -645,11 +645,11 @@
    "spd": 70,
    "spe": 40
   },
-  "abilities": {
-   "0": "Swarm",
-   "1": "Insomnia",
-   "H": "Sniper"
-  },
+  "abilities": [
+   "Swarm",
+   "Insomnia",
+   "Sniper"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -675,10 +675,10 @@
    "spd": 80,
    "spe": 75
   },
-  "abilities": {
-   "0": "Flash Fire",
-   "H": "Weak Armor"
-  },
+  "abilities": [
+   "Flash Fire",
+   "Weak Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -703,10 +703,10 @@
    "spd": 89,
    "spe": 29
   },
-  "abilities": {
-   "0": "Healer",
-   "H": "Aroma Veil"
-  },
+  "abilities": [
+   "Healer",
+   "Aroma Veil"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -731,11 +731,11 @@
    "spd": 86,
    "spe": 50
   },
-  "abilities": {
-   "0": "Healer",
-   "1": "Regenerator",
-   "H": "Klutz"
-  },
+  "abilities": [
+   "Healer",
+   "Regenerator",
+   "Klutz"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -761,9 +761,9 @@
    "spd": 126,
    "spe": 50
   },
-  "abilities": {
-   "0": "Healer"
-  },
+  "abilities": [
+   "Healer"
+  ],
   "forme": "Mega",
   "baseSpecies": "Audino",
   "requiredItem": "Audinite",
@@ -789,10 +789,10 @@
    "spd": 92,
    "spe": 58
   },
-  "abilities": {
-   "0": "Refrigerate",
-   "H": "Snow Warning"
-  },
+  "abilities": [
+   "Refrigerate",
+   "Snow Warning"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -817,11 +817,11 @@
    "spd": 46,
    "spe": 28
   },
-  "abilities": {
-   "0": "Own Tempo",
-   "1": "Ice Body",
-   "H": "Sturdy"
-  },
+  "abilities": [
+   "Own Tempo",
+   "Ice Body",
+   "Sturdy"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -847,11 +847,11 @@
    "spd": 36,
    "spe": 38
   },
-  "abilities": {
-   "0": "Strong Jaw",
-   "1": "Ice Body",
-   "H": "Sturdy"
-  },
+  "abilities": [
+   "Strong Jaw",
+   "Ice Body",
+   "Sturdy"
+  ],
   "forme": "Hisui",
   "baseSpecies": "Avalugg",
   "requiredItem": null,
@@ -877,11 +877,11 @@
    "spd": 80,
    "spe": 50
   },
-  "abilities": {
-   "0": "Thick Fat",
-   "1": "Huge Power",
-   "H": "Sap Sipper"
-  },
+  "abilities": [
+   "Thick Fat",
+   "Huge Power",
+   "Sap Sipper"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -906,11 +906,11 @@
    "spd": 63,
    "spe": 65
   },
-  "abilities": {
-   "0": "Insomnia",
-   "1": "Frisk",
-   "H": "Cursed Body"
-  },
+  "abilities": [
+   "Insomnia",
+   "Frisk",
+   "Cursed Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -935,9 +935,9 @@
    "spd": 83,
    "spe": 75
   },
-  "abilities": {
-   "0": "Prankster"
-  },
+  "abilities": [
+   "Prankster"
+  ],
   "forme": "Mega",
   "baseSpecies": "Banette",
   "requiredItem": "Banettite",
@@ -963,11 +963,11 @@
    "spd": 75,
    "spe": 78
   },
-  "abilities": {
-   "0": "Swift Swim",
-   "1": "Adaptability",
-   "H": "Mold Breaker"
-  },
+  "abilities": [
+   "Swift Swim",
+   "Adaptability",
+   "Mold Breaker"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -993,11 +993,11 @@
    "spd": 75,
    "spe": 78
   },
-  "abilities": {
-   "0": "Swift Swim",
-   "1": "Adaptability",
-   "H": "Mold Breaker"
-  },
+  "abilities": [
+   "Swift Swim",
+   "Adaptability",
+   "Mold Breaker"
+  ],
   "forme": "F",
   "baseSpecies": "Basculegion",
   "requiredItem": null,
@@ -1023,10 +1023,10 @@
    "spd": 138,
    "spe": 30
   },
-  "abilities": {
-   "0": "Sturdy",
-   "H": "Soundproof"
-  },
+  "abilities": [
+   "Sturdy",
+   "Soundproof"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1051,11 +1051,11 @@
    "spd": 80,
    "spe": 50
   },
-  "abilities": {
-   "0": "Snow Cloak",
-   "1": "Slush Rush",
-   "H": "Swift Swim"
-  },
+  "abilities": [
+   "Snow Cloak",
+   "Slush Rush",
+   "Swift Swim"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1081,10 +1081,10 @@
    "spd": 80,
    "spe": 75
   },
-  "abilities": {
-   "0": "Swarm",
-   "H": "Sniper"
-  },
+  "abilities": [
+   "Swarm",
+   "Sniper"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1110,9 +1110,9 @@
    "spd": 80,
    "spe": 145
   },
-  "abilities": {
-   "0": "Adaptability"
-  },
+  "abilities": [
+   "Adaptability"
+  ],
   "forme": "Mega",
   "baseSpecies": "Beedrill",
   "requiredItem": "Beedrillite",
@@ -1137,11 +1137,11 @@
    "spd": 83,
    "spe": 45
   },
-  "abilities": {
-   "0": "Electromorphosis",
-   "1": "Static",
-   "H": "Damp"
-  },
+  "abilities": [
+   "Electromorphosis",
+   "Static",
+   "Damp"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1166,10 +1166,10 @@
    "spd": 105,
    "spe": 78
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Rain Dish"
-  },
+  "abilities": [
+   "Torrent",
+   "Rain Dish"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1194,9 +1194,9 @@
    "spd": 115,
    "spe": 78
   },
-  "abilities": {
-   "0": "Mega Launcher"
-  },
+  "abilities": [
+   "Mega Launcher"
+  ],
   "forme": "Mega",
   "baseSpecies": "Blastoise",
   "requiredItem": "Blastoisinite",
@@ -1222,11 +1222,11 @@
    "spd": 75,
    "spe": 40
   },
-  "abilities": {
-   "0": "Magma Armor",
-   "1": "Solid Rock",
-   "H": "Anger Point"
-  },
+  "abilities": [
+   "Magma Armor",
+   "Solid Rock",
+   "Anger Point"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1252,9 +1252,9 @@
    "spd": 105,
    "spe": 20
   },
-  "abilities": {
-   "0": "Sheer Force"
-  },
+  "abilities": [
+   "Sheer Force"
+  ],
   "forme": "Mega",
   "baseSpecies": "Camerupt",
   "requiredItem": "Cameruptite",
@@ -1279,9 +1279,9 @@
    "spd": 70,
    "spe": 70
   },
-  "abilities": {
-   "0": "Forecast"
-  },
+  "abilities": [
+   "Forecast"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1307,10 +1307,10 @@
    "spd": 100,
    "spe": 85
   },
-  "abilities": {
-   "0": "Flash Fire",
-   "H": "Weak Armor"
-  },
+  "abilities": [
+   "Flash Fire",
+   "Weak Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1336,11 +1336,11 @@
    "spd": 90,
    "spe": 80
   },
-  "abilities": {
-   "0": "Flash Fire",
-   "1": "Flame Body",
-   "H": "Infiltrator"
-  },
+  "abilities": [
+   "Flash Fire",
+   "Flame Body",
+   "Infiltrator"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1366,9 +1366,9 @@
    "spd": 110,
    "spe": 90
   },
-  "abilities": {
-   "0": "Infiltrator"
-  },
+  "abilities": [
+   "Infiltrator"
+  ],
   "forme": "Mega",
   "baseSpecies": "Chandelure",
   "requiredItem": "Chandelurite",
@@ -1394,10 +1394,10 @@
    "spd": 85,
    "spe": 100
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Solar Power"
-  },
+  "abilities": [
+   "Blaze",
+   "Solar Power"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1423,9 +1423,9 @@
    "spd": 85,
    "spe": 100
   },
-  "abilities": {
-   "0": "Tough Claws"
-  },
+  "abilities": [
+   "Tough Claws"
+  ],
   "forme": "Mega-X",
   "baseSpecies": "Charizard",
   "requiredItem": "Charizardite X",
@@ -1451,9 +1451,9 @@
    "spd": 115,
    "spe": 100
   },
-  "abilities": {
-   "0": "Drought"
-  },
+  "abilities": [
+   "Drought"
+  ],
   "forme": "Mega-Y",
   "baseSpecies": "Charizard",
   "requiredItem": "Charizardite Y",
@@ -1479,10 +1479,10 @@
    "spd": 75,
    "spe": 64
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Bulletproof"
-  },
+  "abilities": [
+   "Overgrow",
+   "Bulletproof"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1508,9 +1508,9 @@
    "spd": 115,
    "spe": 44
   },
-  "abilities": {
-   "0": "Bulletproof"
-  },
+  "abilities": [
+   "Bulletproof"
+  ],
   "forme": "Mega",
   "baseSpecies": "Chesnaught",
   "requiredItem": "Chesnaughtite",
@@ -1535,9 +1535,9 @@
    "spd": 90,
    "spe": 65
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1563,9 +1563,9 @@
    "spd": 120,
    "spe": 65
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": "Mega",
   "baseSpecies": "Chimecho",
   "requiredItem": "Chimechite",
@@ -1590,9 +1590,9 @@
    "spd": 89,
    "spe": 59
   },
-  "abilities": {
-   "0": "Mega Launcher"
-  },
+  "abilities": [
+   "Mega Launcher"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1617,11 +1617,11 @@
    "spd": 90,
    "spe": 60
   },
-  "abilities": {
-   "0": "Cute Charm",
-   "1": "Magic Guard",
-   "H": "Unaware"
-  },
+  "abilities": [
+   "Cute Charm",
+   "Magic Guard",
+   "Unaware"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1647,9 +1647,9 @@
    "spd": 110,
    "spe": 70
   },
-  "abilities": {
-   "0": "Magic Bounce"
-  },
+  "abilities": [
+   "Magic Bounce"
+  ],
   "forme": "Mega",
   "baseSpecies": "Clefable",
   "requiredItem": "Clefablite",
@@ -1674,9 +1674,9 @@
    "spd": 105,
    "spe": 30
   },
-  "abilities": {
-   "0": "Mummy"
-  },
+  "abilities": [
+   "Mummy"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1701,11 +1701,11 @@
    "spd": 65,
    "spe": 45
   },
-  "abilities": {
-   "0": "Guts",
-   "1": "Sheer Force",
-   "H": "Iron Fist"
-  },
+  "abilities": [
+   "Guts",
+   "Sheer Force",
+   "Iron Fist"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1731,11 +1731,11 @@
    "spd": 85,
    "spe": 67
   },
-  "abilities": {
-   "0": "Pressure",
-   "1": "Unnerve",
-   "H": "Mirror Armor"
-  },
+  "abilities": [
+   "Pressure",
+   "Unnerve",
+   "Mirror Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1761,11 +1761,11 @@
    "spd": 67,
    "spe": 43
   },
-  "abilities": {
-   "0": "Hyper Cutter",
-   "1": "Iron Fist",
-   "H": "Anger Point"
-  },
+  "abilities": [
+   "Hyper Cutter",
+   "Iron Fist",
+   "Anger Point"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1791,9 +1791,9 @@
    "spd": 107,
    "spe": 33
   },
-  "abilities": {
-   "0": "Iron Fist"
-  },
+  "abilities": [
+   "Iron Fist"
+  ],
   "forme": "Mega",
   "baseSpecies": "Crabominable",
   "requiredItem": "Crabominite",
@@ -1819,10 +1819,10 @@
    "spd": 100,
    "spe": 70
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Long Reach"
-  },
+  "abilities": [
+   "Overgrow",
+   "Long Reach"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1848,10 +1848,10 @@
    "spd": 95,
    "spe": 60
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Scrappy"
-  },
+  "abilities": [
+   "Overgrow",
+   "Scrappy"
+  ],
   "forme": "Hisui",
   "baseSpecies": "Decidueye",
   "requiredItem": null,
@@ -1877,11 +1877,11 @@
    "spd": 67,
    "spe": 101
   },
-  "abilities": {
-   "0": "Cheek Pouch",
-   "1": "Pickup",
-   "H": "Plus"
-  },
+  "abilities": [
+   "Cheek Pouch",
+   "Pickup",
+   "Plus"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1907,10 +1907,10 @@
    "spd": 100,
    "spe": 104
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Magician"
-  },
+  "abilities": [
+   "Blaze",
+   "Magician"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1936,9 +1936,9 @@
    "spd": 125,
    "spe": 134
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": "Mega",
   "baseSpecies": "Delphox",
   "requiredItem": "Delphoxite",
@@ -1964,11 +1964,11 @@
    "spd": 77,
    "spe": 78
   },
-  "abilities": {
-   "0": "Pickup",
-   "1": "Cheek Pouch",
-   "H": "Huge Power"
-  },
+  "abilities": [
+   "Pickup",
+   "Cheek Pouch",
+   "Huge Power"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -1993,10 +1993,10 @@
    "spd": 48,
    "spe": 48
   },
-  "abilities": {
-   "0": "Limber",
-   "H": "Imposter"
-  },
+  "abilities": [
+   "Limber",
+   "Imposter"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2022,11 +2022,11 @@
    "spd": 75,
    "spe": 142
   },
-  "abilities": {
-   "0": "Clear Body",
-   "1": "Infiltrator",
-   "H": "Cursed Body"
-  },
+  "abilities": [
+   "Clear Body",
+   "Infiltrator",
+   "Cursed Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2052,10 +2052,10 @@
    "spd": 100,
    "spe": 80
   },
-  "abilities": {
-   "0": "Inner Focus",
-   "H": "Multiscale"
-  },
+  "abilities": [
+   "Inner Focus",
+   "Multiscale"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2081,9 +2081,9 @@
    "spd": 125,
    "spe": 100
   },
-  "abilities": {
-   "0": "Multiscale"
-  },
+  "abilities": [
+   "Multiscale"
+  ],
   "forme": "Mega",
   "baseSpecies": "Dragonite",
   "requiredItem": "Dragoninite",
@@ -2109,11 +2109,11 @@
    "spd": 91,
    "spe": 36
   },
-  "abilities": {
-   "0": "Berserk",
-   "1": "Sap Sipper",
-   "H": "Cloud Nine"
-  },
+  "abilities": [
+   "Berserk",
+   "Sap Sipper",
+   "Cloud Nine"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2139,9 +2139,9 @@
    "spd": 116,
    "spe": 36
   },
-  "abilities": {
-   "0": "Berserk"
-  },
+  "abilities": [
+   "Berserk"
+  ],
   "forme": "Mega",
   "baseSpecies": "Drampa",
   "requiredItem": "Drampanite",
@@ -2167,10 +2167,10 @@
    "spd": 65,
    "spe": 65
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Reckless"
-  },
+  "abilities": [
+   "Blaze",
+   "Reckless"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2196,9 +2196,9 @@
    "spd": 110,
    "spe": 75
   },
-  "abilities": {
-   "0": "Mold Breaker"
-  },
+  "abilities": [
+   "Mold Breaker"
+  ],
   "forme": "Mega",
   "baseSpecies": "Emboar",
   "requiredItem": "Emboarite",
@@ -2224,10 +2224,10 @@
    "spd": 60,
    "spe": 103
   },
-  "abilities": {
-   "0": "Static",
-   "H": "Motor Drive"
-  },
+  "abilities": [
+   "Static",
+   "Motor Drive"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2253,10 +2253,10 @@
    "spd": 101,
    "spe": 60
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Competitive"
-  },
+  "abilities": [
+   "Torrent",
+   "Competitive"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2281,11 +2281,11 @@
    "spd": 60,
    "spe": 105
   },
-  "abilities": {
-   "0": "Opportunist",
-   "1": "Frisk",
-   "H": "Speed Boost"
-  },
+  "abilities": [
+   "Opportunist",
+   "Frisk",
+   "Speed Boost"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2310,10 +2310,10 @@
    "spd": 95,
    "spe": 110
   },
-  "abilities": {
-   "0": "Synchronize",
-   "H": "Magic Bounce"
-  },
+  "abilities": [
+   "Synchronize",
+   "Magic Bounce"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2339,11 +2339,11 @@
    "spd": 65,
    "spe": 88
   },
-  "abilities": {
-   "0": "Sand Rush",
-   "1": "Sand Force",
-   "H": "Mold Breaker"
-  },
+  "abilities": [
+   "Sand Rush",
+   "Sand Force",
+   "Mold Breaker"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2369,9 +2369,9 @@
    "spd": 65,
    "spe": 103
   },
-  "abilities": {
-   "0": "Piercing Drill"
-  },
+  "abilities": [
+   "Piercing Drill"
+  ],
   "forme": "Mega",
   "baseSpecies": "Excadrill",
   "requiredItem": "Excadrite",
@@ -2397,11 +2397,11 @@
    "spd": 70,
    "spe": 60
   },
-  "abilities": {
-   "0": "Cud Chew",
-   "1": "Armor Tail",
-   "H": "Sap Sipper"
-  },
+  "abilities": [
+   "Cud Chew",
+   "Armor Tail",
+   "Sap Sipper"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2426,10 +2426,10 @@
    "spd": 83,
    "spe": 78
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Sheer Force"
-  },
+  "abilities": [
+   "Torrent",
+   "Sheer Force"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2455,9 +2455,9 @@
    "spd": 93,
    "spe": 78
   },
-  "abilities": {
-   "0": "Dragonize"
-  },
+  "abilities": [
+   "Dragonize"
+  ],
   "forme": "Mega",
   "baseSpecies": "Feraligatr",
   "requiredItem": "Feraligite",
@@ -2483,11 +2483,11 @@
    "spd": 60,
    "spe": 70
   },
-  "abilities": {
-   "0": "Ripen",
-   "1": "Gluttony",
-   "H": "Hustle"
-  },
+  "abilities": [
+   "Ripen",
+   "Gluttony",
+   "Hustle"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2512,10 +2512,10 @@
    "spd": 110,
    "spe": 65
   },
-  "abilities": {
-   "0": "Flash Fire",
-   "H": "Guts"
-  },
+  "abilities": [
+   "Flash Fire",
+   "Guts"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2540,10 +2540,10 @@
    "spd": 128,
    "spe": 92
   },
-  "abilities": {
-   "0": "Flower Veil",
-   "H": "Symbiosis"
-  },
+  "abilities": [
+   "Flower Veil",
+   "Symbiosis"
+  ],
   "forme": "Eternal",
   "baseSpecies": "Floette",
   "requiredItem": null,
@@ -2568,9 +2568,9 @@
    "spd": 148,
    "spe": 102
   },
-  "abilities": {
-   "0": "Fairy Aura"
-  },
+  "abilities": [
+   "Fairy Aura"
+  ],
   "forme": "Mega",
   "baseSpecies": "Floette",
   "requiredItem": "Floettite",
@@ -2595,10 +2595,10 @@
    "spd": 154,
    "spe": 75
   },
-  "abilities": {
-   "0": "Flower Veil",
-   "H": "Symbiosis"
-  },
+  "abilities": [
+   "Flower Veil",
+   "Symbiosis"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2624,10 +2624,10 @@
    "spd": 60,
    "spe": 40
   },
-  "abilities": {
-   "0": "Sturdy",
-   "H": "Overcoat"
-  },
+  "abilities": [
+   "Sturdy",
+   "Overcoat"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2653,10 +2653,10 @@
    "spd": 70,
    "spe": 110
   },
-  "abilities": {
-   "0": "Snow Cloak",
-   "H": "Cursed Body"
-  },
+  "abilities": [
+   "Snow Cloak",
+   "Cursed Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2682,9 +2682,9 @@
    "spd": 100,
    "spe": 120
   },
-  "abilities": {
-   "0": "Snow Warning"
-  },
+  "abilities": [
+   "Snow Warning"
+  ],
   "forme": "Mega",
   "baseSpecies": "Froslass",
   "requiredItem": "Froslassite",
@@ -2709,9 +2709,9 @@
    "spd": 90,
    "spe": 102
   },
-  "abilities": {
-   "0": "Fur Coat"
-  },
+  "abilities": [
+   "Fur Coat"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2737,11 +2737,11 @@
    "spd": 115,
    "spe": 80
   },
-  "abilities": {
-   "0": "Steadfast",
-   "1": "Sharpness",
-   "H": "Justified"
-  },
+  "abilities": [
+   "Steadfast",
+   "Sharpness",
+   "Justified"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2767,9 +2767,9 @@
    "spd": 115,
    "spe": 110
   },
-  "abilities": {
-   "0": "Inner Focus"
-  },
+  "abilities": [
+   "Inner Focus"
+  ],
   "forme": "Mega",
   "baseSpecies": "Gallade",
   "requiredItem": "Galladite",
@@ -2794,11 +2794,11 @@
    "spd": 82,
    "spe": 75
   },
-  "abilities": {
-   "0": "Stench",
-   "1": "Weak Armor",
-   "H": "Aftermath"
-  },
+  "abilities": [
+   "Stench",
+   "Weak Armor",
+   "Aftermath"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2824,10 +2824,10 @@
    "spd": 85,
    "spe": 102
   },
-  "abilities": {
-   "0": "Sand Veil",
-   "H": "Rough Skin"
-  },
+  "abilities": [
+   "Sand Veil",
+   "Rough Skin"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2853,9 +2853,9 @@
    "spd": 95,
    "spe": 92
   },
-  "abilities": {
-   "0": "Sand Force"
-  },
+  "abilities": [
+   "Sand Force"
+  ],
   "forme": "Mega",
   "baseSpecies": "Garchomp",
   "requiredItem": "Garchompite",
@@ -2881,11 +2881,11 @@
    "spd": 115,
    "spe": 80
   },
-  "abilities": {
-   "0": "Synchronize",
-   "1": "Trace",
-   "H": "Telepathy"
-  },
+  "abilities": [
+   "Synchronize",
+   "Trace",
+   "Telepathy"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2911,9 +2911,9 @@
    "spd": 135,
    "spe": 100
   },
-  "abilities": {
-   "0": "Pixilate"
-  },
+  "abilities": [
+   "Pixilate"
+  ],
   "forme": "Mega",
   "baseSpecies": "Gardevoir",
   "requiredItem": "Gardevoirite",
@@ -2938,11 +2938,11 @@
    "spd": 90,
    "spe": 35
   },
-  "abilities": {
-   "0": "Purifying Salt",
-   "1": "Sturdy",
-   "H": "Clear Body"
-  },
+  "abilities": [
+   "Purifying Salt",
+   "Sturdy",
+   "Clear Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2968,9 +2968,9 @@
    "spd": 75,
    "spe": 110
   },
-  "abilities": {
-   "0": "Cursed Body"
-  },
+  "abilities": [
+   "Cursed Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -2996,9 +2996,9 @@
    "spd": 95,
    "spe": 130
   },
-  "abilities": {
-   "0": "Shadow Tag"
-  },
+  "abilities": [
+   "Shadow Tag"
+  ],
   "forme": "Mega",
   "baseSpecies": "Gengar",
   "requiredItem": "Gengarite",
@@ -3023,10 +3023,10 @@
    "spd": 95,
    "spe": 65
   },
-  "abilities": {
-   "0": "Snow Cloak",
-   "H": "Ice Body"
-  },
+  "abilities": [
+   "Snow Cloak",
+   "Ice Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3051,11 +3051,11 @@
    "spd": 80,
    "spe": 80
   },
-  "abilities": {
-   "0": "Inner Focus",
-   "1": "Ice Body",
-   "H": "Moody"
-  },
+  "abilities": [
+   "Inner Focus",
+   "Ice Body",
+   "Moody"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3080,9 +3080,9 @@
    "spd": 80,
    "spe": 100
   },
-  "abilities": {
-   "0": "Refrigerate"
-  },
+  "abilities": [
+   "Refrigerate"
+  ],
   "forme": "Mega",
   "baseSpecies": "Glalie",
   "requiredItem": "Glalitite",
@@ -3108,10 +3108,10 @@
    "spd": 81,
    "spe": 86
   },
-  "abilities": {
-   "0": "Toxic Debris",
-   "H": "Corrosion"
-  },
+  "abilities": [
+   "Toxic Debris",
+   "Corrosion"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3137,9 +3137,9 @@
    "spd": 96,
    "spe": 101
   },
-  "abilities": {
-   "0": "Adaptability"
-  },
+  "abilities": [
+   "Adaptability"
+  ],
   "forme": "Mega",
   "baseSpecies": "Glimmora",
   "requiredItem": "Glimmoranite",
@@ -3165,11 +3165,11 @@
    "spd": 75,
    "spe": 95
   },
-  "abilities": {
-   "0": "Hyper Cutter",
-   "1": "Sand Veil",
-   "H": "Poison Heal"
-  },
+  "abilities": [
+   "Hyper Cutter",
+   "Sand Veil",
+   "Poison Heal"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3195,11 +3195,11 @@
    "spd": 80,
    "spe": 55
   },
-  "abilities": {
-   "0": "Iron Fist",
-   "1": "Klutz",
-   "H": "No Guard"
-  },
+  "abilities": [
+   "Iron Fist",
+   "Klutz",
+   "No Guard"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3225,9 +3225,9 @@
    "spd": 105,
    "spe": 55
   },
-  "abilities": {
-   "0": "Unseen Fist"
-  },
+  "abilities": [
+   "Unseen Fist"
+  ],
   "forme": "Mega",
   "baseSpecies": "Golurk",
   "requiredItem": "Golurkite",
@@ -3252,11 +3252,11 @@
    "spd": 150,
    "spe": 80
   },
-  "abilities": {
-   "0": "Sap Sipper",
-   "1": "Hydration",
-   "H": "Gooey"
-  },
+  "abilities": [
+   "Sap Sipper",
+   "Hydration",
+   "Gooey"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3282,11 +3282,11 @@
    "spd": 150,
    "spe": 60
   },
-  "abilities": {
-   "0": "Sap Sipper",
-   "1": "Shell Armor",
-   "H": "Gooey"
-  },
+  "abilities": [
+   "Sap Sipper",
+   "Shell Armor",
+   "Gooey"
+  ],
   "forme": "Hisui",
   "baseSpecies": "Goodra",
   "requiredItem": null,
@@ -3312,11 +3312,11 @@
    "spd": 75,
    "spe": 84
   },
-  "abilities": {
-   "0": "Pickup",
-   "1": "Frisk",
-   "H": "Insomnia"
-  },
+  "abilities": [
+   "Pickup",
+   "Frisk",
+   "Insomnia"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3342,11 +3342,11 @@
    "spd": 75,
    "spe": 69
   },
-  "abilities": {
-   "0": "Pickup",
-   "1": "Frisk",
-   "H": "Insomnia"
-  },
+  "abilities": [
+   "Pickup",
+   "Frisk",
+   "Insomnia"
+  ],
   "forme": "Large",
   "baseSpecies": "Gourgeist",
   "requiredItem": null,
@@ -3372,11 +3372,11 @@
    "spd": 75,
    "spe": 99
   },
-  "abilities": {
-   "0": "Pickup",
-   "1": "Frisk",
-   "H": "Insomnia"
-  },
+  "abilities": [
+   "Pickup",
+   "Frisk",
+   "Insomnia"
+  ],
   "forme": "Small",
   "baseSpecies": "Gourgeist",
   "requiredItem": null,
@@ -3402,11 +3402,11 @@
    "spd": 75,
    "spe": 54
   },
-  "abilities": {
-   "0": "Pickup",
-   "1": "Frisk",
-   "H": "Insomnia"
-  },
+  "abilities": [
+   "Pickup",
+   "Frisk",
+   "Insomnia"
+  ],
   "forme": "Super",
   "baseSpecies": "Gourgeist",
   "requiredItem": null,
@@ -3432,11 +3432,11 @@
    "spd": 71,
    "spe": 122
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Protean",
-   "S": "Battle Bond"
-  },
+  "abilities": [
+   "Torrent",
+   "Protean",
+   "Battle Bond"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3462,9 +3462,9 @@
    "spd": 81,
    "spe": 142
   },
-  "abilities": {
-   "0": "Protean"
-  },
+  "abilities": [
+   "Protean"
+  ],
   "forme": "Mega",
   "baseSpecies": "Greninja",
   "requiredItem": "Greninjite",
@@ -3490,10 +3490,10 @@
    "spd": 100,
    "spe": 81
   },
-  "abilities": {
-   "0": "Intimidate",
-   "H": "Moxie"
-  },
+  "abilities": [
+   "Intimidate",
+   "Moxie"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3519,9 +3519,9 @@
    "spd": 130,
    "spe": 81
   },
-  "abilities": {
-   "0": "Mold Breaker"
-  },
+  "abilities": [
+   "Mold Breaker"
+  ],
   "forme": "Mega",
   "baseSpecies": "Gyarados",
   "requiredItem": "Gyaradosite",
@@ -3547,11 +3547,11 @@
    "spd": 103,
    "spe": 29
   },
-  "abilities": {
-   "0": "Healer",
-   "1": "Anticipation",
-   "H": "Magic Bounce"
-  },
+  "abilities": [
+   "Healer",
+   "Anticipation",
+   "Magic Bounce"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3577,11 +3577,11 @@
    "spd": 63,
    "spe": 118
   },
-  "abilities": {
-   "0": "Limber",
-   "1": "Unburden",
-   "H": "Mold Breaker"
-  },
+  "abilities": [
+   "Limber",
+   "Unburden",
+   "Mold Breaker"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3607,9 +3607,9 @@
    "spd": 93,
    "spe": 118
   },
-  "abilities": {
-   "0": "No Guard"
-  },
+  "abilities": [
+   "No Guard"
+  ],
   "forme": "Mega",
   "baseSpecies": "Hawlucha",
   "requiredItem": "Hawluchanite",
@@ -3635,11 +3635,11 @@
    "spd": 94,
    "spe": 109
   },
-  "abilities": {
-   "0": "Dry Skin",
-   "1": "Sand Veil",
-   "H": "Solar Power"
-  },
+  "abilities": [
+   "Dry Skin",
+   "Sand Veil",
+   "Solar Power"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3665,11 +3665,11 @@
    "spd": 95,
    "spe": 85
   },
-  "abilities": {
-   "0": "Swarm",
-   "1": "Guts",
-   "H": "Moxie"
-  },
+  "abilities": [
+   "Swarm",
+   "Guts",
+   "Moxie"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3695,9 +3695,9 @@
    "spd": 105,
    "spe": 75
   },
-  "abilities": {
-   "0": "Skill Link"
-  },
+  "abilities": [
+   "Skill Link"
+  ],
   "forme": "Mega",
   "baseSpecies": "Heracross",
   "requiredItem": "Heracronite",
@@ -3722,10 +3722,10 @@
    "spd": 72,
    "spe": 47
   },
-  "abilities": {
-   "0": "Sand Stream",
-   "H": "Sand Force"
-  },
+  "abilities": [
+   "Sand Stream",
+   "Sand Force"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3751,11 +3751,11 @@
    "spd": 80,
    "spe": 95
   },
-  "abilities": {
-   "0": "Early Bird",
-   "1": "Flash Fire",
-   "H": "Unnerve"
-  },
+  "abilities": [
+   "Early Bird",
+   "Flash Fire",
+   "Unnerve"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3781,9 +3781,9 @@
    "spd": 90,
    "spe": 115
   },
-  "abilities": {
-   "0": "Solar Power"
-  },
+  "abilities": [
+   "Solar Power"
+  ],
   "forme": "Mega",
   "baseSpecies": "Houndoom",
   "requiredItem": "Houndoominite",
@@ -3809,11 +3809,11 @@
    "spd": 80,
    "spe": 44
   },
-  "abilities": {
-   "0": "Supersweet Syrup",
-   "1": "Regenerator",
-   "H": "Sticky Hold"
-  },
+  "abilities": [
+   "Supersweet Syrup",
+   "Regenerator",
+   "Sticky Hold"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3839,9 +3839,9 @@
    "spd": 90,
    "spe": 98
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3867,10 +3867,10 @@
    "spd": 90,
    "spe": 60
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Intimidate"
-  },
+  "abilities": [
+   "Blaze",
+   "Intimidate"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3896,10 +3896,10 @@
    "spd": 71,
    "spe": 108
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Iron Fist"
-  },
+  "abilities": [
+   "Blaze",
+   "Iron Fist"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3924,10 +3924,10 @@
    "spd": 95,
    "spe": 130
   },
-  "abilities": {
-   "0": "Volt Absorb",
-   "H": "Quick Feet"
-  },
+  "abilities": [
+   "Volt Absorb",
+   "Quick Feet"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3952,11 +3952,11 @@
    "spd": 80,
    "spe": 90
   },
-  "abilities": {
-   "0": "Early Bird",
-   "1": "Scrappy",
-   "H": "Inner Focus"
-  },
+  "abilities": [
+   "Early Bird",
+   "Scrappy",
+   "Inner Focus"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -3981,9 +3981,9 @@
    "spd": 100,
    "spe": 100
   },
-  "abilities": {
-   "0": "Parental Bond"
-  },
+  "abilities": [
+   "Parental Bond"
+  ],
   "forme": "Mega",
   "baseSpecies": "Kangaskhan",
   "requiredItem": "Kangaskhanite",
@@ -4009,11 +4009,11 @@
    "spd": 85,
    "spe": 50
   },
-  "abilities": {
-   "0": "Defiant",
-   "1": "Supreme Overlord",
-   "H": "Pressure"
-  },
+  "abilities": [
+   "Defiant",
+   "Supreme Overlord",
+   "Pressure"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4039,11 +4039,11 @@
    "spd": 70,
    "spe": 85
   },
-  "abilities": {
-   "0": "Swarm",
-   "1": "Sheer Force",
-   "H": "Sharpness"
-  },
+  "abilities": [
+   "Swarm",
+   "Sheer Force",
+   "Sharpness"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4069,10 +4069,10 @@
    "spd": 87,
    "spe": 75
   },
-  "abilities": {
-   "0": "Prankster",
-   "H": "Magician"
-  },
+  "abilities": [
+   "Prankster",
+   "Magician"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4098,11 +4098,11 @@
    "spd": 105,
    "spe": 85
   },
-  "abilities": {
-   "0": "Bulletproof",
-   "1": "Soundproof",
-   "H": "Overcoat"
-  },
+  "abilities": [
+   "Bulletproof",
+   "Soundproof",
+   "Overcoat"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4128,11 +4128,11 @@
    "spd": 70,
    "spe": 92
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Moxie",
-   "H": "Anger Point"
-  },
+  "abilities": [
+   "Intimidate",
+   "Moxie",
+   "Anger Point"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4157,10 +4157,10 @@
    "spd": 65,
    "spe": 95
   },
-  "abilities": {
-   "0": "Leaf Guard",
-   "H": "Chlorophyll"
-  },
+  "abilities": [
+   "Leaf Guard",
+   "Chlorophyll"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4185,11 +4185,11 @@
    "spd": 50,
    "spe": 106
   },
-  "abilities": {
-   "0": "Limber",
-   "1": "Unburden",
-   "H": "Prankster"
-  },
+  "abilities": [
+   "Limber",
+   "Unburden",
+   "Prankster"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4214,11 +4214,11 @@
    "spd": 96,
    "spe": 105
   },
-  "abilities": {
-   "0": "Cute Charm",
-   "1": "Klutz",
-   "H": "Limber"
-  },
+  "abilities": [
+   "Cute Charm",
+   "Klutz",
+   "Limber"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4244,9 +4244,9 @@
    "spd": 96,
    "spe": 135
   },
-  "abilities": {
-   "0": "Scrappy"
-  },
+  "abilities": [
+   "Scrappy"
+  ],
   "forme": "Mega",
   "baseSpecies": "Lopunny",
   "requiredItem": "Lopunnite",
@@ -4272,11 +4272,11 @@
    "spd": 70,
    "spe": 90
   },
-  "abilities": {
-   "0": "Steadfast",
-   "1": "Inner Focus",
-   "H": "Justified"
-  },
+  "abilities": [
+   "Steadfast",
+   "Inner Focus",
+   "Justified"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4302,9 +4302,9 @@
    "spd": 70,
    "spe": 112
   },
-  "abilities": {
-   "0": "Adaptability"
-  },
+  "abilities": [
+   "Adaptability"
+  ],
   "forme": "Mega",
   "baseSpecies": "Lucario",
   "requiredItem": "Lucarionite",
@@ -4329,11 +4329,11 @@
    "spd": 79,
    "spe": 70
   },
-  "abilities": {
-   "0": "Rivalry",
-   "1": "Intimidate",
-   "H": "Guts"
-  },
+  "abilities": [
+   "Rivalry",
+   "Intimidate",
+   "Guts"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4358,11 +4358,11 @@
    "spd": 65,
    "spe": 112
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Sand Rush",
-   "H": "Steadfast"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Sand Rush",
+   "Steadfast"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4387,9 +4387,9 @@
    "spd": 65,
    "spe": 110
   },
-  "abilities": {
-   "0": "Tough Claws"
-  },
+  "abilities": [
+   "Tough Claws"
+  ],
   "forme": "Dusk",
   "baseSpecies": "Lycanroc",
   "requiredItem": null,
@@ -4414,11 +4414,11 @@
    "spd": 75,
    "spe": 82
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Vital Spirit",
-   "H": "No Guard"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Vital Spirit",
+   "No Guard"
+  ],
   "forme": "Midnight",
   "baseSpecies": "Lycanroc",
   "requiredItem": null,
@@ -4443,11 +4443,11 @@
    "spd": 85,
    "spe": 55
   },
-  "abilities": {
-   "0": "Guts",
-   "1": "No Guard",
-   "H": "Steadfast"
-  },
+  "abilities": [
+   "Guts",
+   "No Guard",
+   "Steadfast"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4473,11 +4473,11 @@
    "spd": 60,
    "spe": 80
   },
-  "abilities": {
-   "0": "Oblivious",
-   "1": "Snow Cloak",
-   "H": "Thick Fat"
-  },
+  "abilities": [
+   "Oblivious",
+   "Snow Cloak",
+   "Thick Fat"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4502,11 +4502,11 @@
    "spd": 60,
    "spe": 105
   },
-  "abilities": {
-   "0": "Static",
-   "1": "Lightning Rod",
-   "H": "Minus"
-  },
+  "abilities": [
+   "Static",
+   "Lightning Rod",
+   "Minus"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4531,9 +4531,9 @@
    "spd": 80,
    "spe": 135
   },
-  "abilities": {
-   "0": "Intimidate"
-  },
+  "abilities": [
+   "Intimidate"
+  ],
   "forme": "Mega",
   "baseSpecies": "Manectric",
   "requiredItem": "Manectite",
@@ -4558,11 +4558,11 @@
    "spd": 75,
    "spe": 111
   },
-  "abilities": {
-   "0": "Friend Guard",
-   "1": "Cheek Pouch",
-   "H": "Technician"
-  },
+  "abilities": [
+   "Friend Guard",
+   "Cheek Pouch",
+   "Technician"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4588,10 +4588,10 @@
    "spd": 75,
    "spe": 80
   },
-  "abilities": {
-   "0": "Pure Power",
-   "H": "Telepathy"
-  },
+  "abilities": [
+   "Pure Power",
+   "Telepathy"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4617,9 +4617,9 @@
    "spd": 85,
    "spe": 100
   },
-  "abilities": {
-   "0": "Pure Power"
-  },
+  "abilities": [
+   "Pure Power"
+  ],
   "forme": "Mega",
   "baseSpecies": "Medicham",
   "requiredItem": "Medichamite",
@@ -4644,10 +4644,10 @@
    "spd": 100,
    "spe": 80
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Leaf Guard"
-  },
+  "abilities": [
+   "Overgrow",
+   "Leaf Guard"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4673,9 +4673,9 @@
    "spd": 115,
    "spe": 80
   },
-  "abilities": {
-   "0": "Mega Sol"
-  },
+  "abilities": [
+   "Mega Sol"
+  ],
   "forme": "Mega",
   "baseSpecies": "Meganium",
   "requiredItem": "Meganiumite",
@@ -4701,10 +4701,10 @@
    "spd": 70,
    "spe": 123
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Protean"
-  },
+  "abilities": [
+   "Overgrow",
+   "Protean"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4729,11 +4729,11 @@
    "spd": 81,
    "spe": 104
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Infiltrator",
-   "H": "Prankster"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Infiltrator",
+   "Prankster"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4758,11 +4758,11 @@
    "spd": 81,
    "spe": 104
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Infiltrator",
-   "H": "Competitive"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Infiltrator",
+   "Competitive"
+  ],
   "forme": "F",
   "baseSpecies": "Meowstic",
   "requiredItem": null,
@@ -4787,9 +4787,9 @@
    "spd": 101,
    "spe": 124
   },
-  "abilities": {
-   "0": "Trace"
-  },
+  "abilities": [
+   "Trace"
+  ],
   "forme": "F-Mega",
   "baseSpecies": "Meowstic",
   "requiredItem": "Meowsticite",
@@ -4814,9 +4814,9 @@
    "spd": 101,
    "spe": 124
   },
-  "abilities": {
-   "0": "Trace"
-  },
+  "abilities": [
+   "Trace"
+  ],
   "forme": "M-Mega",
   "baseSpecies": "Meowstic",
   "requiredItem": "Meowsticite",
@@ -4841,11 +4841,11 @@
    "spd": 125,
    "spe": 81
   },
-  "abilities": {
-   "0": "Marvel Scale",
-   "1": "Competitive",
-   "H": "Cute Charm"
-  },
+  "abilities": [
+   "Marvel Scale",
+   "Competitive",
+   "Cute Charm"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4871,9 +4871,9 @@
    "spd": 105,
    "spe": 96
   },
-  "abilities": {
-   "0": "Disguise"
-  },
+  "abilities": [
+   "Disguise"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4899,9 +4899,9 @@
    "spd": 58,
    "spe": 97
   },
-  "abilities": {
-   "0": "Hunger Switch"
-  },
+  "abilities": [
+   "Hunger Switch"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4927,11 +4927,11 @@
    "spd": 100,
    "spe": 70
   },
-  "abilities": {
-   "0": "Tangled Feet",
-   "1": "Screen Cleaner",
-   "H": "Ice Body"
-  },
+  "abilities": [
+   "Tangled Feet",
+   "Screen Cleaner",
+   "Ice Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4956,11 +4956,11 @@
    "spd": 85,
    "spe": 35
   },
-  "abilities": {
-   "0": "Own Tempo",
-   "1": "Stamina",
-   "H": "Inner Focus"
-  },
+  "abilities": [
+   "Own Tempo",
+   "Stamina",
+   "Inner Focus"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -4985,10 +4985,10 @@
    "spd": 100,
    "spe": 100
   },
-  "abilities": {
-   "0": "Flash Fire",
-   "H": "Drought"
-  },
+  "abilities": [
+   "Flash Fire",
+   "Drought"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5014,10 +5014,10 @@
    "spd": 100,
    "spe": 109
   },
-  "abilities": {
-   "0": "Snow Cloak",
-   "H": "Snow Warning"
-  },
+  "abilities": [
+   "Snow Cloak",
+   "Snow Warning"
+  ],
   "forme": "Alola",
   "baseSpecies": "Ninetales",
   "requiredItem": null,
@@ -5043,11 +5043,11 @@
    "spd": 80,
    "spe": 123
   },
-  "abilities": {
-   "0": "Frisk",
-   "1": "Infiltrator",
-   "H": "Telepathy"
-  },
+  "abilities": [
+   "Frisk",
+   "Infiltrator",
+   "Telepathy"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5073,11 +5073,11 @@
    "spd": 110,
    "spe": 60
   },
-  "abilities": {
-   "0": "Inner Focus",
-   "1": "Telepathy",
-   "H": "Symbiosis"
-  },
+  "abilities": [
+   "Inner Focus",
+   "Telepathy",
+   "Symbiosis"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5102,10 +5102,10 @@
    "spd": 55,
    "spe": 65
   },
-  "abilities": {
-   "0": "Earth Eater",
-   "H": "Sand Veil"
-  },
+  "abilities": [
+   "Earth Eater",
+   "Sand Veil"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5130,9 +5130,9 @@
    "spd": 62,
    "spe": 100
   },
-  "abilities": {
-   "0": "Zero to Hero"
-  },
+  "abilities": [
+   "Zero to Hero"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5158,11 +5158,11 @@
    "spd": 71,
    "spe": 58
   },
-  "abilities": {
-   "0": "Iron Fist",
-   "1": "Mold Breaker",
-   "H": "Scrappy"
-  },
+  "abilities": [
+   "Iron Fist",
+   "Mold Breaker",
+   "Scrappy"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5187,10 +5187,10 @@
    "spd": 60,
    "spe": 80
   },
-  "abilities": {
-   "0": "Receiver",
-   "H": "Defiant"
-  },
+  "abilities": [
+   "Receiver",
+   "Defiant"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5216,11 +5216,11 @@
    "spd": 70,
    "spe": 65
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Drizzle",
-   "H": "Rain Dish"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Drizzle",
+   "Rain Dish"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5246,11 +5246,11 @@
    "spd": 70,
    "spe": 101
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Tangled Feet",
-   "H": "Big Pecks"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Tangled Feet",
+   "Big Pecks"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5276,9 +5276,9 @@
    "spd": 80,
    "spe": 121
   },
-  "abilities": {
-   "0": "No Guard"
-  },
+  "abilities": [
+   "No Guard"
+  ],
   "forme": "Mega",
   "baseSpecies": "Pidgeot",
   "requiredItem": "Pidgeotite",
@@ -5303,10 +5303,10 @@
    "spd": 50,
    "spe": 90
   },
-  "abilities": {
-   "0": "Static",
-   "H": "Lightning Rod"
-  },
+  "abilities": [
+   "Static",
+   "Lightning Rod"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5331,11 +5331,11 @@
    "spd": 70,
    "spe": 85
   },
-  "abilities": {
-   "0": "Hyper Cutter",
-   "1": "Mold Breaker",
-   "H": "Moxie"
-  },
+  "abilities": [
+   "Hyper Cutter",
+   "Mold Breaker",
+   "Moxie"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5361,9 +5361,9 @@
    "spd": 90,
    "spe": 105
   },
-  "abilities": {
-   "0": "Aerilate"
-  },
+  "abilities": [
+   "Aerilate"
+  ],
   "forme": "Mega",
   "baseSpecies": "Pinsir",
   "requiredItem": "Pinsirite",
@@ -5388,11 +5388,11 @@
    "spd": 100,
    "spe": 70
   },
-  "abilities": {
-   "0": "Water Absorb",
-   "1": "Damp",
-   "H": "Drizzle"
-  },
+  "abilities": [
+   "Water Absorb",
+   "Damp",
+   "Drizzle"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5417,10 +5417,10 @@
    "spd": 114,
    "spe": 70
   },
-  "abilities": {
-   "0": "Weak Armor",
-   "H": "Cursed Body"
-  },
+  "abilities": [
+   "Weak Armor",
+   "Cursed Body"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5446,10 +5446,10 @@
    "spd": 116,
    "spe": 60
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Liquid Voice"
-  },
+  "abilities": [
+   "Torrent",
+   "Liquid Voice"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5475,10 +5475,10 @@
    "spd": 75,
    "spe": 85
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Moxie"
-  },
+  "abilities": [
+   "Torrent",
+   "Moxie"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5503,10 +5503,10 @@
    "spd": 80,
    "spe": 110
   },
-  "abilities": {
-   "0": "Static",
-   "H": "Lightning Rod"
-  },
+  "abilities": [
+   "Static",
+   "Lightning Rod"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5532,9 +5532,9 @@
    "spd": 85,
    "spe": 110
   },
-  "abilities": {
-   "0": "Surge Surfer"
-  },
+  "abilities": [
+   "Surge Surfer"
+  ],
   "forme": "Alola",
   "baseSpecies": "Raichu",
   "requiredItem": null,
@@ -5559,10 +5559,10 @@
    "spd": 50,
    "spe": 58
   },
-  "abilities": {
-   "0": "Mold Breaker",
-   "H": "Sheer Force"
-  },
+  "abilities": [
+   "Mold Breaker",
+   "Sheer Force"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5587,11 +5587,11 @@
    "spd": 85,
    "spe": 30
   },
-  "abilities": {
-   "0": "Overcoat",
-   "1": "Magic Guard",
-   "H": "Regenerator"
-  },
+  "abilities": [
+   "Overcoat",
+   "Magic Guard",
+   "Regenerator"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5617,11 +5617,11 @@
    "spd": 55,
    "spe": 40
   },
-  "abilities": {
-   "0": "Lightning Rod",
-   "1": "Solid Rock",
-   "H": "Reckless"
-  },
+  "abilities": [
+   "Lightning Rod",
+   "Solid Rock",
+   "Reckless"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5647,11 +5647,11 @@
    "spd": 105,
    "spe": 90
   },
-  "abilities": {
-   "0": "Natural Cure",
-   "1": "Poison Point",
-   "H": "Technician"
-  },
+  "abilities": [
+   "Natural Cure",
+   "Poison Point",
+   "Technician"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5677,9 +5677,9 @@
    "spd": 77,
    "spe": 91
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5705,9 +5705,9 @@
    "spd": 107,
    "spe": 86
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": "Fan",
   "baseSpecies": "Rotom",
   "requiredItem": null,
@@ -5733,9 +5733,9 @@
    "spd": 107,
    "spe": 86
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": "Frost",
   "baseSpecies": "Rotom",
   "requiredItem": null,
@@ -5761,9 +5761,9 @@
    "spd": 107,
    "spe": 86
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": "Heat",
   "baseSpecies": "Rotom",
   "requiredItem": null,
@@ -5789,9 +5789,9 @@
    "spd": 107,
    "spe": 86
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": "Mow",
   "baseSpecies": "Rotom",
   "requiredItem": null,
@@ -5817,9 +5817,9 @@
    "spd": 107,
    "spe": 86
   },
-  "abilities": {
-   "0": "Levitate"
-  },
+  "abilities": [
+   "Levitate"
+  ],
   "forme": "Wash",
   "baseSpecies": "Rotom",
   "requiredItem": null,
@@ -5845,9 +5845,9 @@
    "spd": 105,
    "spe": 30
   },
-  "abilities": {
-   "0": "Wandering Spirit"
-  },
+  "abilities": [
+   "Wandering Spirit"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5873,11 +5873,11 @@
    "spd": 65,
    "spe": 50
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Stall",
-   "H": "Prankster"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Stall",
+   "Prankster"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5903,9 +5903,9 @@
    "spd": 115,
    "spe": 20
   },
-  "abilities": {
-   "0": "Magic Bounce"
-  },
+  "abilities": [
+   "Magic Bounce"
+  ],
   "forme": "Mega",
   "baseSpecies": "Sableye",
   "requiredItem": "Sablenite",
@@ -5931,10 +5931,10 @@
    "spd": 60,
    "spe": 117
   },
-  "abilities": {
-   "0": "Corrosion",
-   "H": "Oblivious"
-  },
+  "abilities": [
+   "Corrosion",
+   "Oblivious"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5959,10 +5959,10 @@
    "spd": 70,
    "spe": 70
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Shell Armor"
-  },
+  "abilities": [
+   "Torrent",
+   "Shell Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -5988,10 +5988,10 @@
    "spd": 65,
    "spe": 85
   },
-  "abilities": {
-   "0": "Torrent",
-   "H": "Sharpness"
-  },
+  "abilities": [
+   "Torrent",
+   "Sharpness"
+  ],
   "forme": "Hisui",
   "baseSpecies": "Samurott",
   "requiredItem": null,
@@ -6016,11 +6016,11 @@
    "spd": 70,
    "spe": 71
   },
-  "abilities": {
-   "0": "Sand Spit",
-   "1": "Shed Skin",
-   "H": "Sand Veil"
-  },
+  "abilities": [
+   "Sand Spit",
+   "Shed Skin",
+   "Sand Veil"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6046,11 +6046,11 @@
    "spd": 80,
    "spe": 65
   },
-  "abilities": {
-   "0": "Swarm",
-   "1": "Technician",
-   "H": "Light Metal"
-  },
+  "abilities": [
+   "Swarm",
+   "Technician",
+   "Light Metal"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6076,9 +6076,9 @@
    "spd": 100,
    "spe": 75
   },
-  "abilities": {
-   "0": "Technician"
-  },
+  "abilities": [
+   "Technician"
+  ],
   "forme": "Mega",
   "baseSpecies": "Scizor",
   "requiredItem": "Scizorite",
@@ -6104,11 +6104,11 @@
    "spd": 65,
    "spe": 75
   },
-  "abilities": {
-   "0": "Chlorophyll",
-   "1": "Insomnia",
-   "H": "Moody"
-  },
+  "abilities": [
+   "Chlorophyll",
+   "Insomnia",
+   "Moody"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6134,9 +6134,9 @@
    "spd": 85,
    "spe": 75
   },
-  "abilities": {
-   "0": "Spicy Spray"
-  },
+  "abilities": [
+   "Spicy Spray"
+  ],
   "forme": "Mega",
   "baseSpecies": "Scovillain",
   "requiredItem": "Scovillainite",
@@ -6161,10 +6161,10 @@
    "spd": 95,
    "spe": 113
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Contrary"
-  },
+  "abilities": [
+   "Overgrow",
+   "Contrary"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6190,10 +6190,10 @@
    "spd": 40,
    "spe": 95
   },
-  "abilities": {
-   "0": "Rough Skin",
-   "H": "Speed Boost"
-  },
+  "abilities": [
+   "Rough Skin",
+   "Speed Boost"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6219,9 +6219,9 @@
    "spd": 65,
    "spe": 105
   },
-  "abilities": {
-   "0": "Strong Jaw"
-  },
+  "abilities": [
+   "Strong Jaw"
+  ],
   "forme": "Mega",
   "baseSpecies": "Sharpedo",
   "requiredItem": "Sharpedonite",
@@ -6246,10 +6246,10 @@
    "spd": 63,
    "spe": 101
   },
-  "abilities": {
-   "0": "Gluttony",
-   "H": "Torrent"
-  },
+  "abilities": [
+   "Gluttony",
+   "Torrent"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6274,10 +6274,10 @@
    "spd": 63,
    "spe": 101
   },
-  "abilities": {
-   "0": "Gluttony",
-   "H": "Overgrow"
-  },
+  "abilities": [
+   "Gluttony",
+   "Overgrow"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6302,10 +6302,10 @@
    "spd": 63,
    "spe": 101
   },
-  "abilities": {
-   "0": "Gluttony",
-   "H": "Blaze"
-  },
+  "abilities": [
+   "Gluttony",
+   "Blaze"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6331,10 +6331,10 @@
    "spd": 80,
    "spe": 70
   },
-  "abilities": {
-   "0": "Hospitality",
-   "H": "Heatproof"
-  },
+  "abilities": [
+   "Hospitality",
+   "Heatproof"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6360,11 +6360,11 @@
    "spd": 70,
    "spe": 70
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Sturdy",
-   "H": "Weak Armor"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Sturdy",
+   "Weak Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6390,9 +6390,9 @@
    "spd": 100,
    "spe": 110
   },
-  "abilities": {
-   "0": "Stalwart"
-  },
+  "abilities": [
+   "Stalwart"
+  ],
   "forme": "Mega",
   "baseSpecies": "Skarmory",
   "requiredItem": "Skarmorite",
@@ -6418,10 +6418,10 @@
    "spd": 75,
    "spe": 66
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Unaware"
-  },
+  "abilities": [
+   "Blaze",
+   "Unaware"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6447,11 +6447,11 @@
    "spd": 80,
    "spe": 30
   },
-  "abilities": {
-   "0": "Oblivious",
-   "1": "Own Tempo",
-   "H": "Regenerator"
-  },
+  "abilities": [
+   "Oblivious",
+   "Own Tempo",
+   "Regenerator"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6477,11 +6477,11 @@
    "spd": 70,
    "spe": 30
   },
-  "abilities": {
-   "0": "Quick Draw",
-   "1": "Own Tempo",
-   "H": "Regenerator"
-  },
+  "abilities": [
+   "Quick Draw",
+   "Own Tempo",
+   "Regenerator"
+  ],
   "forme": "Galar",
   "baseSpecies": "Slowbro",
   "requiredItem": null,
@@ -6507,9 +6507,9 @@
    "spd": 80,
    "spe": 30
   },
-  "abilities": {
-   "0": "Shell Armor"
-  },
+  "abilities": [
+   "Shell Armor"
+  ],
   "forme": "Mega",
   "baseSpecies": "Slowbro",
   "requiredItem": "Slowbronite",
@@ -6535,11 +6535,11 @@
    "spd": 110,
    "spe": 30
   },
-  "abilities": {
-   "0": "Oblivious",
-   "1": "Own Tempo",
-   "H": "Regenerator"
-  },
+  "abilities": [
+   "Oblivious",
+   "Own Tempo",
+   "Regenerator"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6565,11 +6565,11 @@
    "spd": 110,
    "spe": 30
   },
-  "abilities": {
-   "0": "Curious Medicine",
-   "1": "Own Tempo",
-   "H": "Regenerator"
-  },
+  "abilities": [
+   "Curious Medicine",
+   "Own Tempo",
+   "Regenerator"
+  ],
   "forme": "Galar",
   "baseSpecies": "Slowking",
   "requiredItem": null,
@@ -6594,10 +6594,10 @@
    "spd": 75,
    "spe": 72
   },
-  "abilities": {
-   "0": "Sweet Veil",
-   "H": "Unburden"
-  },
+  "abilities": [
+   "Sweet Veil",
+   "Unburden"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6623,11 +6623,11 @@
    "spd": 80,
    "spe": 120
   },
-  "abilities": {
-   "0": "Pressure",
-   "1": "Unburden",
-   "H": "Poison Touch"
-  },
+  "abilities": [
+   "Pressure",
+   "Unburden",
+   "Poison Touch"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6652,11 +6652,11 @@
    "spd": 110,
    "spe": 30
   },
-  "abilities": {
-   "0": "Immunity",
-   "1": "Thick Fat",
-   "H": "Gluttony"
-  },
+  "abilities": [
+   "Immunity",
+   "Thick Fat",
+   "Gluttony"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6682,10 +6682,10 @@
    "spd": 108,
    "spe": 35
   },
-  "abilities": {
-   "0": "Pressure",
-   "H": "Infiltrator"
-  },
+  "abilities": [
+   "Pressure",
+   "Infiltrator"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6711,11 +6711,11 @@
    "spd": 85,
    "spe": 115
   },
-  "abilities": {
-   "0": "Illuminate",
-   "1": "Natural Cure",
-   "H": "Analytic"
-  },
+  "abilities": [
+   "Illuminate",
+   "Natural Cure",
+   "Analytic"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6741,9 +6741,9 @@
    "spd": 105,
    "spe": 120
   },
-  "abilities": {
-   "0": "Huge Power"
-  },
+  "abilities": [
+   "Huge Power"
+  ],
   "forme": "Mega",
   "baseSpecies": "Starmie",
   "requiredItem": "Starminite",
@@ -6769,11 +6769,11 @@
    "spd": 65,
    "spe": 30
   },
-  "abilities": {
-   "0": "Rock Head",
-   "1": "Sturdy",
-   "H": "Sheer Force"
-  },
+  "abilities": [
+   "Rock Head",
+   "Sturdy",
+   "Sheer Force"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6799,9 +6799,9 @@
    "spd": 95,
    "spe": 30
   },
-  "abilities": {
-   "0": "Sand Force"
-  },
+  "abilities": [
+   "Sand Force"
+  ],
   "forme": "Mega",
   "baseSpecies": "Steelix",
   "requiredItem": "Steelixite",
@@ -6827,11 +6827,11 @@
    "spd": 99,
    "spe": 32
   },
-  "abilities": {
-   "0": "Static",
-   "1": "Limber",
-   "H": "Sand Veil"
-  },
+  "abilities": [
+   "Static",
+   "Limber",
+   "Sand Veil"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6857,9 +6857,9 @@
    "spd": 84,
    "spe": 32
   },
-  "abilities": {
-   "0": "Mimicry"
-  },
+  "abilities": [
+   "Mimicry"
+  ],
   "forme": "Galar",
   "baseSpecies": "Stunfisk",
   "requiredItem": null,
@@ -6884,10 +6884,10 @@
    "spd": 130,
    "spe": 60
   },
-  "abilities": {
-   "0": "Cute Charm",
-   "H": "Pixilate"
-  },
+  "abilities": [
+   "Cute Charm",
+   "Pixilate"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6913,10 +6913,10 @@
    "spd": 69,
    "spe": 126
   },
-  "abilities": {
-   "0": "Flame Body",
-   "H": "Gale Wings"
-  },
+  "abilities": [
+   "Flame Body",
+   "Gale Wings"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6941,11 +6941,11 @@
    "spd": 70,
    "spe": 110
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Anger Point",
-   "H": "Sheer Force"
-  },
+  "abilities": [
+   "Intimidate",
+   "Anger Point",
+   "Sheer Force"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -6971,11 +6971,11 @@
    "spd": 70,
    "spe": 100
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Anger Point",
-   "H": "Cud Chew"
-  },
+  "abilities": [
+   "Intimidate",
+   "Anger Point",
+   "Cud Chew"
+  ],
   "forme": "Paldea-Aqua",
   "baseSpecies": "Tauros",
   "requiredItem": null,
@@ -7001,11 +7001,11 @@
    "spd": 70,
    "spe": 100
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Anger Point",
-   "H": "Cud Chew"
-  },
+  "abilities": [
+   "Intimidate",
+   "Anger Point",
+   "Cud Chew"
+  ],
   "forme": "Paldea-Blaze",
   "baseSpecies": "Tauros",
   "requiredItem": null,
@@ -7030,11 +7030,11 @@
    "spd": 70,
    "spe": 100
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Anger Point",
-   "H": "Cud Chew"
-  },
+  "abilities": [
+   "Intimidate",
+   "Anger Point",
+   "Cud Chew"
+  ],
   "forme": "Paldea-Combat",
   "baseSpecies": "Tauros",
   "requiredItem": null,
@@ -7060,11 +7060,11 @@
    "spd": 105,
    "spe": 94
   },
-  "abilities": {
-   "0": "Mold Breaker",
-   "1": "Own Tempo",
-   "H": "Pickpocket"
-  },
+  "abilities": [
+   "Mold Breaker",
+   "Own Tempo",
+   "Pickpocket"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7089,11 +7089,11 @@
    "spd": 70,
    "spe": 20
   },
-  "abilities": {
-   "0": "White Smoke",
-   "1": "Drought",
-   "H": "Shell Armor"
-  },
+  "abilities": [
+   "White Smoke",
+   "Drought",
+   "Shell Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7119,10 +7119,10 @@
    "spd": 85,
    "spe": 56
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Shell Armor"
-  },
+  "abilities": [
+   "Overgrow",
+   "Shell Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7148,11 +7148,11 @@
    "spd": 75,
    "spe": 60
   },
-  "abilities": {
-   "0": "Keen Eye",
-   "1": "Skill Link",
-   "H": "Sheer Force"
-  },
+  "abilities": [
+   "Keen Eye",
+   "Skill Link",
+   "Sheer Force"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7178,11 +7178,11 @@
    "spd": 142,
    "spe": 35
   },
-  "abilities": {
-   "0": "Merciless",
-   "1": "Limber",
-   "H": "Regenerator"
-  },
+  "abilities": [
+   "Merciless",
+   "Limber",
+   "Regenerator"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7208,11 +7208,11 @@
    "spd": 65,
    "spe": 85
   },
-  "abilities": {
-   "0": "Anticipation",
-   "1": "Dry Skin",
-   "H": "Poison Touch"
-  },
+  "abilities": [
+   "Anticipation",
+   "Dry Skin",
+   "Poison Touch"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7238,11 +7238,11 @@
    "spd": 82,
    "spe": 56
   },
-  "abilities": {
-   "0": "Natural Cure",
-   "1": "Frisk",
-   "H": "Harvest"
-  },
+  "abilities": [
+   "Natural Cure",
+   "Frisk",
+   "Harvest"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7267,11 +7267,11 @@
    "spd": 98,
    "spe": 72
   },
-  "abilities": {
-   "0": "Leaf Guard",
-   "1": "Queenly Majesty",
-   "H": "Sweet Veil"
-  },
+  "abilities": [
+   "Leaf Guard",
+   "Queenly Majesty",
+   "Sweet Veil"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7296,10 +7296,10 @@
    "spd": 85,
    "spe": 100
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Flash Fire"
-  },
+  "abilities": [
+   "Blaze",
+   "Flash Fire"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7325,10 +7325,10 @@
    "spd": 85,
    "spe": 95
   },
-  "abilities": {
-   "0": "Blaze",
-   "H": "Frisk"
-  },
+  "abilities": [
+   "Blaze",
+   "Frisk"
+  ],
   "forme": "Hisui",
   "baseSpecies": "Typhlosion",
   "requiredItem": null,
@@ -7354,10 +7354,10 @@
    "spd": 100,
    "spe": 61
   },
-  "abilities": {
-   "0": "Sand Stream",
-   "H": "Unnerve"
-  },
+  "abilities": [
+   "Sand Stream",
+   "Unnerve"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7383,9 +7383,9 @@
    "spd": 120,
    "spe": 71
   },
-  "abilities": {
-   "0": "Sand Stream"
-  },
+  "abilities": [
+   "Sand Stream"
+  ],
   "forme": "Mega",
   "baseSpecies": "Tyranitar",
   "requiredItem": "Tyranitarite",
@@ -7411,10 +7411,10 @@
    "spd": 59,
    "spe": 71
   },
-  "abilities": {
-   "0": "Strong Jaw",
-   "H": "Rock Head"
-  },
+  "abilities": [
+   "Strong Jaw",
+   "Rock Head"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7439,10 +7439,10 @@
    "spd": 130,
    "spe": 65
   },
-  "abilities": {
-   "0": "Synchronize",
-   "H": "Inner Focus"
-  },
+  "abilities": [
+   "Synchronize",
+   "Inner Focus"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7467,11 +7467,11 @@
    "spd": 95,
    "spe": 79
   },
-  "abilities": {
-   "0": "Ice Body",
-   "1": "Snow Warning",
-   "H": "Weak Armor"
-  },
+  "abilities": [
+   "Ice Body",
+   "Snow Warning",
+   "Weak Armor"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7496,10 +7496,10 @@
    "spd": 95,
    "spe": 65
   },
-  "abilities": {
-   "0": "Water Absorb",
-   "H": "Hydration"
-  },
+  "abilities": [
+   "Water Absorb",
+   "Hydration"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7525,10 +7525,10 @@
    "spd": 100,
    "spe": 80
   },
-  "abilities": {
-   "0": "Overgrow",
-   "H": "Chlorophyll"
-  },
+  "abilities": [
+   "Overgrow",
+   "Chlorophyll"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7554,9 +7554,9 @@
    "spd": 120,
    "spe": 80
   },
-  "abilities": {
-   "0": "Thick Fat"
-  },
+  "abilities": [
+   "Thick Fat"
+  ],
   "forme": "Mega",
   "baseSpecies": "Venusaur",
   "requiredItem": "Venusaurite",
@@ -7582,10 +7582,10 @@
    "spd": 70,
    "spe": 70
   },
-  "abilities": {
-   "0": "Chlorophyll",
-   "H": "Gluttony"
-  },
+  "abilities": [
+   "Chlorophyll",
+   "Gluttony"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7611,9 +7611,9 @@
    "spd": 95,
    "spe": 70
   },
-  "abilities": {
-   "0": "Innards Out"
-  },
+  "abilities": [
+   "Innards Out"
+  ],
   "forme": "Mega",
   "baseSpecies": "Victreebel",
   "requiredItem": "Victreebelite",
@@ -7639,11 +7639,11 @@
    "spd": 50,
    "spe": 89
   },
-  "abilities": {
-   "0": "Shield Dust",
-   "1": "Compound Eyes",
-   "H": "Friend Guard"
-  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7669,10 +7669,10 @@
    "spd": 105,
    "spe": 100
   },
-  "abilities": {
-   "0": "Flame Body",
-   "H": "Swarm"
-  },
+  "abilities": [
+   "Flame Body",
+   "Swarm"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7697,11 +7697,11 @@
    "spd": 69,
    "spe": 77
   },
-  "abilities": {
-   "0": "Illuminate",
-   "1": "Keen Eye",
-   "H": "Analytic"
-  },
+  "abilities": [
+   "Illuminate",
+   "Keen Eye",
+   "Analytic"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7727,10 +7727,10 @@
    "spd": 85,
    "spe": 125
   },
-  "abilities": {
-   "0": "Pressure",
-   "H": "Pickpocket"
-  },
+  "abilities": [
+   "Pressure",
+   "Pickpocket"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7756,11 +7756,11 @@
    "spd": 75,
    "spe": 116
   },
-  "abilities": {
-   "0": "Prankster",
-   "1": "Infiltrator",
-   "H": "Chlorophyll"
-  },
+  "abilities": [
+   "Prankster",
+   "Infiltrator",
+   "Chlorophyll"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7786,11 +7786,11 @@
    "spd": 75,
    "spe": 65
   },
-  "abilities": {
-   "0": "Intimidate",
-   "1": "Frisk",
-   "H": "Sap Sipper"
-  },
+  "abilities": [
+   "Intimidate",
+   "Frisk",
+   "Sap Sipper"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7815,9 +7815,9 @@
    "spd": 60,
    "spe": 105
   },
-  "abilities": {
-   "0": "Illusion"
-  },
+  "abilities": [
+   "Illusion"
+  ],
   "forme": null,
   "baseSpecies": null,
   "requiredItem": null,
@@ -7843,9 +7843,9 @@
    "spd": 60,
    "spe": 110
   },
-  "abilities": {
-   "0": "Illusion"
-  },
+  "abilities": [
+   "Illusion"
+  ],
   "forme": "Hisui",
   "baseSpecies": "Zoroark",
   "requiredItem": null,
