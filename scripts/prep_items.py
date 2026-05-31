@@ -1,26 +1,38 @@
 #!/usr/bin/env python3
 """Finalize items.json: patch descriptions/sprites, categorize, strip non-display fields.
 
-Data fetched from Game8's local HTML cache.
+Data fetched from Game8 (cached persistently).
 """
 
 import json
 import re
+import sys
+import urllib.request
 from pathlib import Path
 
 ROOT = Path('/home/martin/Projects/PoTATo')
+sys.path.insert(0, str(ROOT / 'prep'))
+from cache import CacheManager, parse_refresh_args
+
 ITEMS_JSON = ROOT / 'data/format-m-a/items.json'
-HTML_FILE = Path('/home/martin/.local/share/opencode/tool-output/tool_e50ecf3f9001lhmWvLd64uGSvb')
 SPRITES_DIR = ROOT / 'sprites/items'
+GAME8_ITEMS_URL = "https://game8.co/games/Pokemon-Champions/archives/588871"
+HTML_FILE = Path('/home/martin/.local/share/opencode/tool-output/tool_e50ecf3f9001lhmWvLd64uGSvb')
+
 
 def item_id_from_name(name: str) -> str:
     return name.lower().replace(" ", "").replace("'", "").replace("-", "")
 
-def fetch_game8_items_html() -> tuple[dict[str, dict], dict[str, str]]:
-    """Returns (sprite_map, desc_map) from the cached HTML."""
-    if not HTML_FILE.exists():
-        return {}, {}
-    html = HTML_FILE.read_text(encoding='utf-8')
+
+def fetch_game8_items_html(cache: CacheManager) -> tuple[dict[str, dict], dict[str, str]]:
+    """Returns (sprite_map, desc_map) from Game8, using cache or HTML_FILE fallback."""
+    try:
+        html = cache.fetch_text(GAME8_ITEMS_URL)
+    except Exception:
+        if HTML_FILE.exists():
+            html = HTML_FILE.read_text(encoding='utf-8')
+        else:
+            return {}, {}
 
     sprite_map: dict[str, dict] = {}
     desc_map: dict[str, str] = {}
@@ -46,6 +58,7 @@ def fetch_game8_items_html() -> tuple[dict[str, dict], dict[str, str]]:
 
     return sprite_map, desc_map
 
+
 def download_sprites(game8_data: dict[str, dict]) -> tuple[int, int]:
     SPRITES_DIR.mkdir(parents=True, exist_ok=True)
     downloaded = skipped = 0
@@ -66,12 +79,16 @@ def download_sprites(game8_data: dict[str, dict]) -> tuple[int, int]:
             print(f"  WARNING: failed to download {iid}: {e}", flush=True)
     return downloaded, skipped
 
+
 def main():
+    refresh_modes = parse_refresh_args()
+    cache = CacheManager(refresh_modes)
+
     items = json.loads(ITEMS_JSON.read_text())
     print(f"Loaded {len(items)} items")
 
     print("Fetching Game8 item sprites and data...")
-    sprite_map, desc_map = fetch_game8_items_html()
+    sprite_map, desc_map = fetch_game8_items_html(cache)
     if not sprite_map:
         print("  WARNING: no HTML cache, skipping sprite/descs patch")
         game8_data = {}
@@ -155,6 +172,7 @@ def main():
 
     ITEMS_JSON.write_text(json.dumps(items, indent=2, ensure_ascii=False))
     print(f"Done! {len(items)} items")
+
 
 if __name__ == '__main__':
     main()

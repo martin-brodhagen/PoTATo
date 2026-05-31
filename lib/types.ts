@@ -10,9 +10,7 @@ export interface Species {
   requiredItem: string | null;
   heightm: number | null;
   weightkg: number | null;
-  color: string | null;
   gender: string | null;
-  moveCount: number;
 }
 
 export interface Move {

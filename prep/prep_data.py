@@ -7,45 +7,31 @@
 """
 
 import json, re, urllib.request, os, sys, time
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from prep.cache import CacheManager, parse_refresh_args
 
 SHOWDOWN = "https://play.pokemonshowdown.com/data"
 GITHUB_RAW = "https://raw.githubusercontent.com/smogon/pokemon-showdown/master"
 MOD_DIR = f"{GITHUB_RAW}/data/mods/champions"
 OUT = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
-FETCH_CACHE = {}
-
-def fetch(url, cache=True):
-    if cache and url in FETCH_CACHE:
-        return FETCH_CACHE[url]
-    print(f"  fetching {url}", file=sys.stderr)
-    req = urllib.request.Request(url, headers={"User-Agent": "PoTATo/0.1"})
-    data = urllib.request.urlopen(req, timeout=30).read()
-    if cache:
-        FETCH_CACHE[url] = data
-    return data
-
-def fetch_json(url):
-    return json.loads(fetch(url))
-
-def fetch_text(url):
-    return fetch(url).decode("utf-8")
+refresh_modes = parse_refresh_args()
+cache = CacheManager(refresh_modes)
 
 # ---------------------------------------------------------------------------
 # 1. Fetch base data
 # ---------------------------------------------------------------------------
 print("Fetching base data from Showdown...", file=sys.stderr)
-pokedex   = fetch_json(f"{SHOWDOWN}/pokedex.json")
-moves_raw = fetch_json(f"{SHOWDOWN}/moves.json")
+pokedex   = cache.fetch_json(f"{SHOWDOWN}/pokedex.json")
+moves_raw = cache.fetch_json(f"{SHOWDOWN}/moves.json")
 
 # learnsets is huge; only pull when needed
 print("Fetching learnsets...", file=sys.stderr)
-learnsets = fetch_json(f"{SHOWDOWN}/learnsets.json")
+learnsets = cache.fetch_json(f"{SHOWDOWN}/learnsets.json")
 
-def fetch_js_data(url):
+def fetch_js_data(text: str):
     """Parse a Showdown .js data file like items.js into a Python dict.
     Format: exports.BattleItems = {key:{...},key:{...},...};"""
-    text = fetch_text(url)
     # Strip exports.Xxx = prefix and trailing ;
     text = re.sub(r'^exports\.\w+\s*=\s*', '', text)
     text = text.rstrip().rstrip(';').strip()
@@ -57,7 +43,7 @@ def fetch_js_data(url):
     text = re.sub(r':\s*null(?=[,}])', ':null', text)
     return json.loads(text)
 
-items_raw = fetch_js_data(f"{SHOWDOWN}/items.js")
+items_raw = fetch_js_data(cache.fetch_text(f"{SHOWDOWN}/items.js"))
 
 # ---------------------------------------------------------------------------
 # 2. Fetch overrides from mod files
@@ -232,15 +218,14 @@ def _parse_ts_obj(text):
         props[key] = val
     return props
 
-def parse_ts_overrides(url):
+def parse_ts_overrides(text: str):
     """Parse a TypeScript file with {inherit:true} entries.
-    
+
     Uses brace-depth matching to correctly handle nested objects, arrays,
     strings with escapes, and single-line comments.
-    
+
     Returns a dict of key → {prop: value}
     """
-    text = fetch_text(url)
     # Remove the `export const ... = {` wrapper
     m = re.search(r'=\s*\{', text)
     if m:
@@ -266,17 +251,16 @@ def parse_ts_overrides(url):
             pos += 1
     return result
 
-move_overrides = parse_ts_overrides(f"{MOD_DIR}/moves.ts")
-item_overrides = parse_ts_overrides(f"{MOD_DIR}/items.ts")
-ability_overrides = parse_ts_overrides(f"{MOD_DIR}/abilities.ts")
-mod_formats_data = parse_ts_overrides(f"{MOD_DIR}/formats-data.ts")
+move_overrides = parse_ts_overrides(cache.fetch_text(f"{MOD_DIR}/moves.ts"))
+item_overrides = parse_ts_overrides(cache.fetch_text(f"{MOD_DIR}/items.ts"))
+ability_overrides = parse_ts_overrides(cache.fetch_text(f"{MOD_DIR}/abilities.ts"))
+mod_formats_data = parse_ts_overrides(cache.fetch_text(f"{MOD_DIR}/formats-data.ts"))
 
-def parse_learnsets_ts(url):
+def parse_learnsets_ts(text: str):
     """Parse a nested learnset file where entries have {learnset:{move:[sources]}} structure.
-    
+
     Strategy: count brace depth rather than using non-greedy regex.
     """
-    text = fetch_text(url)
     # Strip export wrapper
     m = re.search(r'=\s*\{', text)
     if m:
@@ -332,7 +316,7 @@ def parse_learnsets_ts(url):
             pos += 1
     return result
 
-mod_learnsets = parse_learnsets_ts(f"{MOD_DIR}/learnsets.ts")
+mod_learnsets = parse_learnsets_ts(cache.fetch_text(f"{MOD_DIR}/learnsets.ts"))
 
 # ---------------------------------------------------------------------------
 # 3. Apply overrides to base data
@@ -571,15 +555,8 @@ for pid in sorted(all_legal_ids):
         "requiredItem": required_item,
         "heightm": entry.get('heightm'),
         "weightkg": entry.get('weightkg'),
-        "color": entry.get('color'),
         "gender": entry.get('gender'),
     }
-
-    # Add learnset size
-    if pid in learnset_out:
-        obj["moveCount"] = len(learnset_out[pid])
-    else:
-        obj["moveCount"] = 0
 
     index.append(obj)
 
@@ -968,7 +945,7 @@ for mid in sorted(moves_out):
 print("Building abilities list...", file=sys.stderr)
 
 try:
-    abilities_raw = fetch_js_data(f"{SHOWDOWN}/abilities.js")
+    abilities_raw = fetch_js_data(cache.fetch_text(f"{SHOWDOWN}/abilities.js"))
 except Exception as e:
     print(f"  WARNING: could not fetch abilities data: {e}", file=sys.stderr)
     abilities_raw = {}
@@ -990,7 +967,7 @@ for s in index:
 print("  Fetching Game8 ability descriptions...", file=sys.stderr)
 game8_descs: dict[str, str] = {}
 try:
-    game8_html = fetch_text("https://game8.co/games/Pokemon-Champions/archives/590403")
+    game8_html = cache.fetch_text("https://game8.co/games/Pokemon-Champions/archives/590403")
     for m in re.finditer(
         r'<tr>\s*<td[^>]*class="center"[^>]*>\s*(?:<a[^>]*>)?\s*([A-Za-z][A-Za-z\s\'\-]+?)\s*(?:</a>)?\s*</td>\s*<td[^>]*>([^<]+)</td>',
         game8_html,

@@ -24,9 +24,7 @@
   "requiredItem": null,
   "heightm": 2.2,
   "weightkg": 135.5,
-  "color": "White",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "abomasnowmega",
@@ -52,9 +50,7 @@
   "requiredItem": "Abomasite",
   "heightm": 2.7,
   "weightkg": 185,
-  "color": "White",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "absol",
@@ -81,9 +77,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 47,
-  "color": "White",
-  "gender": null,
-  "moveCount": 71
+  "gender": null
  },
  {
   "id": "absolmega",
@@ -108,9 +102,7 @@
   "requiredItem": "Absolite",
   "heightm": 1.2,
   "weightkg": 49,
-  "color": "White",
-  "gender": null,
-  "moveCount": 71
+  "gender": null
  },
  {
   "id": "aegislash",
@@ -136,9 +128,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 53,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 45
+  "gender": null
  },
  {
   "id": "aerodactyl",
@@ -166,9 +156,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 59,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "aerodactylmega",
@@ -194,9 +182,7 @@
   "requiredItem": "Aerodactylite",
   "heightm": 2.1,
   "weightkg": 79,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "aggron",
@@ -224,9 +210,7 @@
   "requiredItem": null,
   "heightm": 2.1,
   "weightkg": 360,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "aggronmega",
@@ -251,9 +235,7 @@
   "requiredItem": "Aggronite",
   "heightm": 2.2,
   "weightkg": 395,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "alakazam",
@@ -280,9 +262,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 48,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "alakazammega",
@@ -307,9 +287,7 @@
   "requiredItem": "Alakazite",
   "heightm": 1.2,
   "weightkg": 48,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "alcremie",
@@ -335,9 +313,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.5,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 49
+  "gender": "F"
  },
  {
   "id": "altaria",
@@ -364,9 +340,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 20.6,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "altariamega",
@@ -392,9 +366,7 @@
   "requiredItem": "Altarianite",
   "heightm": 1.5,
   "weightkg": 20.6,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "ampharos",
@@ -420,9 +392,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 61.5,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "ampharosmega",
@@ -448,9 +418,7 @@
   "requiredItem": "Ampharosite",
   "heightm": 1.4,
   "weightkg": 61.5,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "appletun",
@@ -478,9 +446,7 @@
   "requiredItem": null,
   "heightm": 0.4,
   "weightkg": 13,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "araquanid",
@@ -507,9 +473,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 82,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "arbok",
@@ -536,9 +500,7 @@
   "requiredItem": null,
   "heightm": 3.5,
   "weightkg": 65,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 70
+  "gender": null
  },
  {
   "id": "arcanine",
@@ -565,9 +527,7 @@
   "requiredItem": null,
   "heightm": 1.9,
   "weightkg": 155,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "arcaninehisui",
@@ -595,9 +555,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 168,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "archaludon",
@@ -625,9 +583,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 60,
-  "color": "White",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "ariados",
@@ -655,9 +611,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 33.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "armarouge",
@@ -684,9 +638,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 85,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 55
+  "gender": null
  },
  {
   "id": "aromatisse",
@@ -712,9 +664,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 15.5,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 48
+  "gender": null
  },
  {
   "id": "audino",
@@ -741,9 +691,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 31,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 69
+  "gender": null
  },
  {
   "id": "audinomega",
@@ -769,9 +717,7 @@
   "requiredItem": "Audinite",
   "heightm": 1.5,
   "weightkg": 32,
-  "color": "White",
-  "gender": null,
-  "moveCount": 69
+  "gender": null
  },
  {
   "id": "aurorus",
@@ -798,9 +744,7 @@
   "requiredItem": null,
   "heightm": 2.7,
   "weightkg": 225,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 56
+  "gender": null
  },
  {
   "id": "avalugg",
@@ -827,9 +771,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 505,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 49
+  "gender": null
  },
  {
   "id": "avalugghisui",
@@ -857,9 +799,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 262.4,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 49
+  "gender": null
  },
  {
   "id": "azumarill",
@@ -887,9 +827,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 28.5,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "banette",
@@ -916,9 +854,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 12.5,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "banettemega",
@@ -943,9 +879,7 @@
   "requiredItem": "Banettite",
   "heightm": 1.2,
   "weightkg": 13,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "basculegion",
@@ -973,9 +907,7 @@
   "requiredItem": null,
   "heightm": 3,
   "weightkg": 110,
-  "color": "Green",
-  "gender": "M",
-  "moveCount": 49
+  "gender": "M"
  },
  {
   "id": "basculegionf",
@@ -1003,9 +935,7 @@
   "requiredItem": null,
   "heightm": 3,
   "weightkg": 110,
-  "color": "Green",
-  "gender": "F",
-  "moveCount": 49
+  "gender": "F"
  },
  {
   "id": "bastiodon",
@@ -1032,9 +962,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 149.5,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 68
+  "gender": null
  },
  {
   "id": "beartic",
@@ -1061,9 +989,7 @@
   "requiredItem": null,
   "heightm": 2.6,
   "weightkg": 260,
-  "color": "White",
-  "gender": null,
-  "moveCount": 75
+  "gender": null
  },
  {
   "id": "beedrill",
@@ -1090,9 +1016,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 29.5,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "beedrillmega",
@@ -1118,9 +1042,7 @@
   "requiredItem": "Beedrillite",
   "heightm": 1.4,
   "weightkg": 40.5,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "bellibolt",
@@ -1147,9 +1069,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 113,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 39
+  "gender": null
  },
  {
   "id": "blastoise",
@@ -1175,9 +1095,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 85.5,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 73
+  "gender": null
  },
  {
   "id": "blastoisemega",
@@ -1202,9 +1120,7 @@
   "requiredItem": "Blastoisinite",
   "heightm": 1.6,
   "weightkg": 101.1,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 73
+  "gender": null
  },
  {
   "id": "camerupt",
@@ -1232,9 +1148,7 @@
   "requiredItem": null,
   "heightm": 1.9,
   "weightkg": 220,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "cameruptmega",
@@ -1260,9 +1174,7 @@
   "requiredItem": "Cameruptite",
   "heightm": 2.5,
   "weightkg": 320.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "castform",
@@ -1287,9 +1199,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.8,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 37
+  "gender": null
  },
  {
   "id": "ceruledge",
@@ -1316,9 +1226,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 62,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 55
+  "gender": null
  },
  {
   "id": "chandelure",
@@ -1346,9 +1254,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 34.3,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 54
+  "gender": null
  },
  {
   "id": "chandeluremega",
@@ -1374,9 +1280,7 @@
   "requiredItem": "Chandelurite",
   "heightm": 2.5,
   "weightkg": 69.6,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 54
+  "gender": null
  },
  {
   "id": "charizard",
@@ -1403,9 +1307,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 90.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 72
+  "gender": null
  },
  {
   "id": "charizardmegax",
@@ -1431,9 +1333,7 @@
   "requiredItem": "Charizardite X",
   "heightm": 1.7,
   "weightkg": 110.5,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 72
+  "gender": null
  },
  {
   "id": "charizardmegay",
@@ -1459,9 +1359,7 @@
   "requiredItem": "Charizardite Y",
   "heightm": 1.7,
   "weightkg": 100.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 72
+  "gender": null
  },
  {
   "id": "chesnaught",
@@ -1488,9 +1386,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 90,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 87
+  "gender": null
  },
  {
   "id": "chesnaughtmega",
@@ -1516,9 +1412,7 @@
   "requiredItem": "Chesnaughtite",
   "heightm": 1.6,
   "weightkg": 90,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 87
+  "gender": null
  },
  {
   "id": "chimecho",
@@ -1543,9 +1437,7 @@
   "requiredItem": null,
   "heightm": 0.6,
   "weightkg": 1,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "chimechomega",
@@ -1571,9 +1463,7 @@
   "requiredItem": "Chimechite",
   "heightm": 1.2,
   "weightkg": 8,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "clawitzer",
@@ -1598,9 +1488,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 35.3,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 52
+  "gender": null
  },
  {
   "id": "clefable",
@@ -1627,9 +1515,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 40,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 91
+  "gender": null
  },
  {
   "id": "clefablemega",
@@ -1655,9 +1541,7 @@
   "requiredItem": "Clefablite",
   "heightm": 1.7,
   "weightkg": 42.3,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 91
+  "gender": null
  },
  {
   "id": "cofagrigus",
@@ -1682,9 +1566,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 76.5,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 54
+  "gender": null
  },
  {
   "id": "conkeldurr",
@@ -1711,9 +1593,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 87,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "corviknight",
@@ -1741,9 +1621,7 @@
   "requiredItem": null,
   "heightm": 2.2,
   "weightkg": 75,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 55
+  "gender": null
  },
  {
   "id": "crabominable",
@@ -1771,9 +1649,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 180,
-  "color": "White",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "crabominablemega",
@@ -1799,9 +1675,7 @@
   "requiredItem": "Crabominite",
   "heightm": 2.6,
   "weightkg": 252.8,
-  "color": "White",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "decidueye",
@@ -1828,9 +1702,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 36.6,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "decidueyehisui",
@@ -1857,9 +1729,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 37,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "dedenne",
@@ -1887,9 +1757,7 @@
   "requiredItem": null,
   "heightm": 0.2,
   "weightkg": 2.2,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 50
+  "gender": null
  },
  {
   "id": "delphox",
@@ -1916,9 +1784,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 39,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 72
+  "gender": null
  },
  {
   "id": "delphoxmega",
@@ -1944,9 +1810,7 @@
   "requiredItem": "Delphoxite",
   "heightm": 1.5,
   "weightkg": 39,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 72
+  "gender": null
  },
  {
   "id": "diggersby",
@@ -1974,9 +1838,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 42.4,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "ditto",
@@ -2002,9 +1864,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 4,
-  "color": "Purple",
-  "gender": "N",
-  "moveCount": 1
+  "gender": "N"
  },
  {
   "id": "dragapult",
@@ -2032,9 +1892,7 @@
   "requiredItem": null,
   "heightm": 3,
   "weightkg": 50,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "dragonite",
@@ -2061,9 +1919,7 @@
   "requiredItem": null,
   "heightm": 2.2,
   "weightkg": 210,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "dragonitemega",
@@ -2089,9 +1945,7 @@
   "requiredItem": "Dragoninite",
   "heightm": 2.2,
   "weightkg": 290,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "drampa",
@@ -2119,9 +1973,7 @@
   "requiredItem": null,
   "heightm": 3,
   "weightkg": 185,
-  "color": "White",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "drampamega",
@@ -2147,9 +1999,7 @@
   "requiredItem": "Drampanite",
   "heightm": 3,
   "weightkg": 240.5,
-  "color": "White",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "emboar",
@@ -2176,9 +2026,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 150,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 79
+  "gender": null
  },
  {
   "id": "emboarmega",
@@ -2204,9 +2052,7 @@
   "requiredItem": "Emboarite",
   "heightm": 1.8,
   "weightkg": 180.3,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 79
+  "gender": null
  },
  {
   "id": "emolga",
@@ -2233,9 +2079,7 @@
   "requiredItem": null,
   "heightm": 0.4,
   "weightkg": 5,
-  "color": "White",
-  "gender": null,
-  "moveCount": 46
+  "gender": null
  },
  {
   "id": "empoleon",
@@ -2262,9 +2106,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 84.5,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 74
+  "gender": null
  },
  {
   "id": "espathra",
@@ -2291,9 +2133,7 @@
   "requiredItem": null,
   "heightm": 1.9,
   "weightkg": 90,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "espeon",
@@ -2319,9 +2159,7 @@
   "requiredItem": null,
   "heightm": 0.9,
   "weightkg": 26.5,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "excadrill",
@@ -2349,9 +2187,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 40.4,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "excadrillmega",
@@ -2377,9 +2213,7 @@
   "requiredItem": "Excadrite",
   "heightm": 0.9,
   "weightkg": 60,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "farigiraf",
@@ -2407,9 +2241,7 @@
   "requiredItem": null,
   "heightm": 3.2,
   "weightkg": 160,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 70
+  "gender": null
  },
  {
   "id": "feraligatr",
@@ -2435,9 +2267,7 @@
   "requiredItem": null,
   "heightm": 2.3,
   "weightkg": 88.8,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 82
+  "gender": null
  },
  {
   "id": "feraligatrmega",
@@ -2463,9 +2293,7 @@
   "requiredItem": "Feraligite",
   "heightm": 2.3,
   "weightkg": 108.8,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 82
+  "gender": null
  },
  {
   "id": "flapple",
@@ -2493,9 +2321,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 1,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 44
+  "gender": null
  },
  {
   "id": "flareon",
@@ -2521,9 +2347,7 @@
   "requiredItem": null,
   "heightm": 0.9,
   "weightkg": 25,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "floetteeternal",
@@ -2549,9 +2373,7 @@
   "requiredItem": null,
   "heightm": 0.2,
   "weightkg": 0.9,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 41
+  "gender": "F"
  },
  {
   "id": "floettemega",
@@ -2576,9 +2398,7 @@
   "requiredItem": "Floettite",
   "heightm": 0.2,
   "weightkg": 100.8,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 41
+  "gender": "F"
  },
  {
   "id": "florges",
@@ -2604,9 +2424,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 10,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 46
+  "gender": "F"
  },
  {
   "id": "forretress",
@@ -2633,9 +2451,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 125.8,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 69
+  "gender": null
  },
  {
   "id": "froslass",
@@ -2662,9 +2478,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 26.6,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 68
+  "gender": "F"
  },
  {
   "id": "froslassmega",
@@ -2690,9 +2504,7 @@
   "requiredItem": "Froslassite",
   "heightm": 2.6,
   "weightkg": 29.6,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 68
+  "gender": "F"
  },
  {
   "id": "furfrou",
@@ -2717,9 +2529,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 28,
-  "color": "White",
-  "gender": null,
-  "moveCount": 40
+  "gender": null
  },
  {
   "id": "gallade",
@@ -2747,9 +2557,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 52,
-  "color": "White",
-  "gender": "M",
-  "moveCount": 105
+  "gender": "M"
  },
  {
   "id": "gallademega",
@@ -2775,9 +2583,7 @@
   "requiredItem": "Galladite",
   "heightm": 1.6,
   "weightkg": 56.4,
-  "color": "White",
-  "gender": "M",
-  "moveCount": 105
+  "gender": "M"
  },
  {
   "id": "garbodor",
@@ -2804,9 +2610,7 @@
   "requiredItem": null,
   "heightm": 1.9,
   "weightkg": 107.3,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "garchomp",
@@ -2833,9 +2637,7 @@
   "requiredItem": null,
   "heightm": 1.9,
   "weightkg": 95,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "garchompmega",
@@ -2861,9 +2663,7 @@
   "requiredItem": "Garchompite",
   "heightm": 1.9,
   "weightkg": 95,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "gardevoir",
@@ -2891,9 +2691,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 48.4,
-  "color": "White",
-  "gender": null,
-  "moveCount": 80
+  "gender": null
  },
  {
   "id": "gardevoirmega",
@@ -2919,9 +2717,7 @@
   "requiredItem": "Gardevoirite",
   "heightm": 1.6,
   "weightkg": 48.4,
-  "color": "White",
-  "gender": null,
-  "moveCount": 80
+  "gender": null
  },
  {
   "id": "garganacl",
@@ -2948,9 +2744,7 @@
   "requiredItem": null,
   "heightm": 2.3,
   "weightkg": 240,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 54
+  "gender": null
  },
  {
   "id": "gengar",
@@ -2976,9 +2770,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 40.5,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 76
+  "gender": null
  },
  {
   "id": "gengarmega",
@@ -3004,9 +2796,7 @@
   "requiredItem": "Gengarite",
   "heightm": 1.4,
   "weightkg": 40.5,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 76
+  "gender": null
  },
  {
   "id": "glaceon",
@@ -3032,9 +2822,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 25.9,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "glalie",
@@ -3061,9 +2849,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 256.5,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 54
+  "gender": null
  },
  {
   "id": "glaliemega",
@@ -3088,9 +2874,7 @@
   "requiredItem": "Glalitite",
   "heightm": 2.1,
   "weightkg": 350.2,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 54
+  "gender": null
  },
  {
   "id": "glimmora",
@@ -3117,9 +2901,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 45,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 46
+  "gender": null
  },
  {
   "id": "glimmoramega",
@@ -3145,9 +2927,7 @@
   "requiredItem": "Glimmoranite",
   "heightm": 2.8,
   "weightkg": 77,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 46
+  "gender": null
  },
  {
   "id": "gliscor",
@@ -3175,9 +2955,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 42.5,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 74
+  "gender": null
  },
  {
   "id": "golurk",
@@ -3205,9 +2983,7 @@
   "requiredItem": null,
   "heightm": 2.8,
   "weightkg": 330,
-  "color": "Green",
-  "gender": "N",
-  "moveCount": 78
+  "gender": "N"
  },
  {
   "id": "golurkmega",
@@ -3233,9 +3009,7 @@
   "requiredItem": "Golurkite",
   "heightm": 4,
   "weightkg": 330,
-  "color": "Green",
-  "gender": "N",
-  "moveCount": 78
+  "gender": "N"
  },
  {
   "id": "goodra",
@@ -3262,9 +3036,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 150.5,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "goodrahisui",
@@ -3292,9 +3064,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 334.1,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "gourgeist",
@@ -3322,9 +3092,7 @@
   "requiredItem": null,
   "heightm": 0.9,
   "weightkg": 12.5,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "gourgeistlarge",
@@ -3352,9 +3120,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 14,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "gourgeistsmall",
@@ -3382,9 +3148,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 9.5,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "gourgeistsuper",
@@ -3412,9 +3176,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 39,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "greninja",
@@ -3442,9 +3204,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 40,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "greninjamega",
@@ -3470,9 +3230,7 @@
   "requiredItem": "Greninjite",
   "heightm": 1.5,
   "weightkg": 40,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "gyarados",
@@ -3499,9 +3257,7 @@
   "requiredItem": null,
   "heightm": 6.5,
   "weightkg": 235,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "gyaradosmega",
@@ -3527,9 +3283,7 @@
   "requiredItem": "Gyaradosite",
   "heightm": 6.5,
   "weightkg": 305,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "hatterene",
@@ -3557,9 +3311,7 @@
   "requiredItem": null,
   "heightm": 2.1,
   "weightkg": 5.1,
-  "color": "Pink",
-  "gender": "F",
-  "moveCount": 59
+  "gender": "F"
  },
  {
   "id": "hawlucha",
@@ -3587,9 +3339,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 21.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 74
+  "gender": null
  },
  {
   "id": "hawluchamega",
@@ -3615,9 +3365,7 @@
   "requiredItem": "Hawluchanite",
   "heightm": 1,
   "weightkg": 25,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 74
+  "gender": null
  },
  {
   "id": "heliolisk",
@@ -3645,9 +3393,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 21,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "heracross",
@@ -3675,9 +3421,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 54,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "heracrossmega",
@@ -3703,9 +3447,7 @@
   "requiredItem": "Heracronite",
   "heightm": 1.7,
   "weightkg": 62.5,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "hippowdon",
@@ -3731,9 +3473,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 300,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "houndoom",
@@ -3761,9 +3501,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 35,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "houndoommega",
@@ -3789,9 +3527,7 @@
   "requiredItem": "Houndoominite",
   "heightm": 1.9,
   "weightkg": 49.5,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "hydrapple",
@@ -3819,9 +3555,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 93,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "hydreigon",
@@ -3847,9 +3581,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 160,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 78
+  "gender": null
  },
  {
   "id": "incineroar",
@@ -3876,9 +3608,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 83,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 77
+  "gender": null
  },
  {
   "id": "infernape",
@@ -3905,9 +3635,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 55,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 88
+  "gender": null
  },
  {
   "id": "jolteon",
@@ -3933,9 +3661,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 24.5,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 59
+  "gender": null
  },
  {
   "id": "kangaskhan",
@@ -3962,9 +3688,7 @@
   "requiredItem": null,
   "heightm": 2.2,
   "weightkg": 80,
-  "color": "Brown",
-  "gender": "F",
-  "moveCount": 67
+  "gender": "F"
  },
  {
   "id": "kangaskhanmega",
@@ -3989,9 +3713,7 @@
   "requiredItem": "Kangaskhanite",
   "heightm": 2.2,
   "weightkg": 100,
-  "color": "Brown",
-  "gender": "F",
-  "moveCount": 67
+  "gender": "F"
  },
  {
   "id": "kingambit",
@@ -4019,9 +3741,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 120,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 52
+  "gender": null
  },
  {
   "id": "kleavor",
@@ -4049,9 +3769,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 89,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 56
+  "gender": null
  },
  {
   "id": "klefki",
@@ -4078,9 +3796,7 @@
   "requiredItem": null,
   "heightm": 0.2,
   "weightkg": 3,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 44
+  "gender": null
  },
  {
   "id": "kommoo",
@@ -4108,9 +3824,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 78.2,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 78
+  "gender": null
  },
  {
   "id": "krookodile",
@@ -4138,9 +3852,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 96.3,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "leafeon",
@@ -4166,9 +3878,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 25.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "liepard",
@@ -4195,9 +3905,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 37.5,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "lopunny",
@@ -4224,9 +3932,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 33.3,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 76
+  "gender": null
  },
  {
   "id": "lopunnymega",
@@ -4252,9 +3958,7 @@
   "requiredItem": "Lopunnite",
   "heightm": 1.3,
   "weightkg": 28.3,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 76
+  "gender": null
  },
  {
   "id": "lucario",
@@ -4282,9 +3986,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 54,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "lucariomega",
@@ -4310,9 +4012,7 @@
   "requiredItem": "Lucarionite",
   "heightm": 1.3,
   "weightkg": 57.5,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "luxray",
@@ -4339,9 +4039,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 42,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "lycanroc",
@@ -4368,9 +4066,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 25,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "lycanrocdusk",
@@ -4395,9 +4091,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 25,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "lycanrocmidnight",
@@ -4424,9 +4118,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 25,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 68
+  "gender": null
  },
  {
   "id": "machamp",
@@ -4453,9 +4145,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 130,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "mamoswine",
@@ -4483,9 +4173,7 @@
   "requiredItem": null,
   "heightm": 2.5,
   "weightkg": 291,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "manectric",
@@ -4512,9 +4200,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 40.2,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 49
+  "gender": null
  },
  {
   "id": "manectricmega",
@@ -4539,9 +4225,7 @@
   "requiredItem": "Manectite",
   "heightm": 1.8,
   "weightkg": 44,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 49
+  "gender": null
  },
  {
   "id": "maushold",
@@ -4568,9 +4252,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 2.3,
-  "color": "White",
-  "gender": "N",
-  "moveCount": 50
+  "gender": "N"
  },
  {
   "id": "medicham",
@@ -4597,9 +4279,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 31.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 77
+  "gender": null
  },
  {
   "id": "medichammega",
@@ -4625,9 +4305,7 @@
   "requiredItem": "Medichamite",
   "heightm": 1.3,
   "weightkg": 31.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 77
+  "gender": null
  },
  {
   "id": "meganium",
@@ -4653,9 +4331,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 100.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "meganiummega",
@@ -4681,9 +4357,7 @@
   "requiredItem": "Meganiumite",
   "heightm": 2.4,
   "weightkg": 201,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "meowscarada",
@@ -4710,9 +4384,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 31.2,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "meowstic",
@@ -4739,9 +4411,7 @@
   "requiredItem": null,
   "heightm": 0.6,
   "weightkg": 8.5,
-  "color": "Blue",
-  "gender": "M",
-  "moveCount": 59
+  "gender": "M"
  },
  {
   "id": "meowsticf",
@@ -4768,9 +4438,7 @@
   "requiredItem": null,
   "heightm": 0.6,
   "weightkg": 8.5,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 56
+  "gender": "F"
  },
  {
   "id": "meowsticfmega",
@@ -4795,9 +4463,7 @@
   "requiredItem": "Meowsticite",
   "heightm": 0.8,
   "weightkg": 10.1,
-  "color": "White",
-  "gender": "F",
-  "moveCount": 56
+  "gender": "F"
  },
  {
   "id": "meowsticmmega",
@@ -4822,9 +4488,7 @@
   "requiredItem": "Meowsticite",
   "heightm": 0.8,
   "weightkg": 10.1,
-  "color": "Blue",
-  "gender": "M",
-  "moveCount": 59
+  "gender": "M"
  },
  {
   "id": "milotic",
@@ -4851,9 +4515,7 @@
   "requiredItem": null,
   "heightm": 6.2,
   "weightkg": 162,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "mimikyu",
@@ -4879,9 +4541,7 @@
   "requiredItem": null,
   "heightm": 0.2,
   "weightkg": 0.7,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "morpeko",
@@ -4907,9 +4567,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 3,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 65
+  "gender": null
  },
  {
   "id": "mrrime",
@@ -4937,9 +4595,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 58.2,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 93
+  "gender": null
  },
  {
   "id": "mudsdale",
@@ -4966,9 +4622,7 @@
   "requiredItem": null,
   "heightm": 2.5,
   "weightkg": 920,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 45
+  "gender": null
  },
  {
   "id": "ninetales",
@@ -4994,9 +4648,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 19.9,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "ninetalesalola",
@@ -5023,9 +4675,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 19.9,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "noivern",
@@ -5053,9 +4703,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 85,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "oranguru",
@@ -5083,9 +4731,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 76,
-  "color": "White",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "orthworm",
@@ -5111,9 +4757,7 @@
   "requiredItem": null,
   "heightm": 2.5,
   "weightkg": 310,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 40
+  "gender": null
  },
  {
   "id": "palafin",
@@ -5138,9 +4782,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 60.2,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 58
+  "gender": null
  },
  {
   "id": "pangoro",
@@ -5168,9 +4810,7 @@
   "requiredItem": null,
   "heightm": 2.1,
   "weightkg": 136,
-  "color": "White",
-  "gender": null,
-  "moveCount": 80
+  "gender": null
  },
  {
   "id": "passimian",
@@ -5196,9 +4836,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 82.8,
-  "color": "White",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "pelipper",
@@ -5226,9 +4864,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 28,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "pidgeot",
@@ -5256,9 +4892,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 39.5,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 31
+  "gender": null
  },
  {
   "id": "pidgeotmega",
@@ -5284,9 +4918,7 @@
   "requiredItem": "Pidgeotite",
   "heightm": 2.2,
   "weightkg": 50.5,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 31
+  "gender": null
  },
  {
   "id": "pikachu",
@@ -5312,9 +4944,7 @@
   "requiredItem": null,
   "heightm": 0.4,
   "weightkg": 6,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 60
+  "gender": null
  },
  {
   "id": "pinsir",
@@ -5341,9 +4971,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 55,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 52
+  "gender": null
  },
  {
   "id": "pinsirmega",
@@ -5369,9 +4997,7 @@
   "requiredItem": "Pinsirite",
   "heightm": 1.7,
   "weightkg": 59,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 52
+  "gender": null
  },
  {
   "id": "politoed",
@@ -5398,9 +5024,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 33.9,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "polteageist",
@@ -5426,9 +5050,7 @@
   "requiredItem": null,
   "heightm": 0.2,
   "weightkg": 0.4,
-  "color": "Purple",
-  "gender": "N",
-  "moveCount": 46
+  "gender": "N"
  },
  {
   "id": "primarina",
@@ -5455,9 +5077,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 44,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "quaquaval",
@@ -5484,9 +5104,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 61.9,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 59
+  "gender": null
  },
  {
   "id": "raichu",
@@ -5512,9 +5130,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 30,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "raichualola",
@@ -5540,9 +5156,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 21,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 74
+  "gender": null
  },
  {
   "id": "rampardos",
@@ -5568,9 +5182,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 102.5,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 74
+  "gender": null
  },
  {
   "id": "reuniclus",
@@ -5597,9 +5209,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 20.1,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "rhyperior",
@@ -5627,9 +5237,7 @@
   "requiredItem": null,
   "heightm": 2.4,
   "weightkg": 282.8,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 91
+  "gender": null
  },
  {
   "id": "roserade",
@@ -5657,9 +5265,7 @@
   "requiredItem": null,
   "heightm": 0.9,
   "weightkg": 14.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "rotom",
@@ -5685,9 +5291,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.3,
-  "color": "Red",
-  "gender": "N",
-  "moveCount": 42
+  "gender": "N"
  },
  {
   "id": "rotomfan",
@@ -5713,9 +5317,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.3,
-  "color": "Red",
-  "gender": "N",
-  "moveCount": 42
+  "gender": "N"
  },
  {
   "id": "rotomfrost",
@@ -5741,9 +5343,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.3,
-  "color": "Red",
-  "gender": "N",
-  "moveCount": 42
+  "gender": "N"
  },
  {
   "id": "rotomheat",
@@ -5769,9 +5369,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.3,
-  "color": "Red",
-  "gender": "N",
-  "moveCount": 42
+  "gender": "N"
  },
  {
   "id": "rotommow",
@@ -5797,9 +5395,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.3,
-  "color": "Red",
-  "gender": "N",
-  "moveCount": 42
+  "gender": "N"
  },
  {
   "id": "rotomwash",
@@ -5825,9 +5421,7 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 0.3,
-  "color": "Red",
-  "gender": "N",
-  "moveCount": 42
+  "gender": "N"
  },
  {
   "id": "runerigus",
@@ -5853,9 +5447,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 66.6,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 69
+  "gender": null
  },
  {
   "id": "sableye",
@@ -5883,9 +5475,7 @@
   "requiredItem": null,
   "heightm": 0.5,
   "weightkg": 11,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 88
+  "gender": null
  },
  {
   "id": "sableyemega",
@@ -5911,9 +5501,7 @@
   "requiredItem": "Sablenite",
   "heightm": 0.5,
   "weightkg": 161,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 88
+  "gender": null
  },
  {
   "id": "salazzle",
@@ -5940,9 +5528,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 22.2,
-  "color": "Black",
-  "gender": "F",
-  "moveCount": 70
+  "gender": "F"
  },
  {
   "id": "samurott",
@@ -5968,9 +5554,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 94.6,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "samurotthisui",
@@ -5997,9 +5581,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 58.2,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "sandaconda",
@@ -6026,9 +5608,7 @@
   "requiredItem": null,
   "heightm": 3.8,
   "weightkg": 65.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 48
+  "gender": null
  },
  {
   "id": "scizor",
@@ -6056,9 +5636,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 118,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "scizormega",
@@ -6084,9 +5662,7 @@
   "requiredItem": "Scizorite",
   "heightm": 2,
   "weightkg": 125,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "scovillain",
@@ -6114,9 +5690,7 @@
   "requiredItem": null,
   "heightm": 0.9,
   "weightkg": 15,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 48
+  "gender": null
  },
  {
   "id": "scovillainmega",
@@ -6142,9 +5716,7 @@
   "requiredItem": "Scovillainite",
   "heightm": 1.2,
   "weightkg": 22,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 48
+  "gender": null
  },
  {
   "id": "serperior",
@@ -6170,9 +5742,7 @@
   "requiredItem": null,
   "heightm": 3.3,
   "weightkg": 63,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "sharpedo",
@@ -6199,9 +5769,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 88.8,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 56
+  "gender": null
  },
  {
   "id": "sharpedomega",
@@ -6227,9 +5795,7 @@
   "requiredItem": "Sharpedonite",
   "heightm": 2.5,
   "weightkg": 130.3,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 56
+  "gender": null
  },
  {
   "id": "simipour",
@@ -6255,9 +5821,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 29,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 52
+  "gender": null
  },
  {
   "id": "simisage",
@@ -6283,9 +5847,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 30.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 50
+  "gender": null
  },
  {
   "id": "simisear",
@@ -6311,9 +5873,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 28,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 55
+  "gender": null
  },
  {
   "id": "sinistcha",
@@ -6340,9 +5900,7 @@
   "requiredItem": null,
   "heightm": 0.2,
   "weightkg": 2.2,
-  "color": "Green",
-  "gender": "N",
-  "moveCount": 35
+  "gender": "N"
  },
  {
   "id": "skarmory",
@@ -6370,9 +5928,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 50.5,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "skarmorymega",
@@ -6398,9 +5954,7 @@
   "requiredItem": "Skarmorite",
   "heightm": 1.7,
   "weightkg": 40.4,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "skeledirge",
@@ -6427,9 +5981,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 326.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 56
+  "gender": null
  },
  {
   "id": "slowbro",
@@ -6457,9 +6009,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 78.5,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 78
+  "gender": null
  },
  {
   "id": "slowbrogalar",
@@ -6487,9 +6037,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 70.5,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 92
+  "gender": null
  },
  {
   "id": "slowbromega",
@@ -6515,9 +6063,7 @@
   "requiredItem": "Slowbronite",
   "heightm": 2,
   "weightkg": 120,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 78
+  "gender": null
  },
  {
   "id": "slowking",
@@ -6545,9 +6091,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 79.5,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 85
+  "gender": null
  },
  {
   "id": "slowkinggalar",
@@ -6575,9 +6119,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 79.5,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 95
+  "gender": null
  },
  {
   "id": "slurpuff",
@@ -6603,9 +6145,7 @@
   "requiredItem": null,
   "heightm": 0.8,
   "weightkg": 5,
-  "color": "White",
-  "gender": null,
-  "moveCount": 42
+  "gender": null
  },
  {
   "id": "sneasler",
@@ -6633,9 +6173,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 43,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "snorlax",
@@ -6662,9 +6200,7 @@
   "requiredItem": null,
   "heightm": 2.1,
   "weightkg": 460,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 83
+  "gender": null
  },
  {
   "id": "spiritomb",
@@ -6691,9 +6227,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 108,
-  "color": "Purple",
-  "gender": null,
-  "moveCount": 54
+  "gender": null
  },
  {
   "id": "starmie",
@@ -6721,9 +6255,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 80,
-  "color": "Purple",
-  "gender": "N",
-  "moveCount": 62
+  "gender": "N"
  },
  {
   "id": "starmiemega",
@@ -6749,9 +6281,7 @@
   "requiredItem": "Starminite",
   "heightm": 2.3,
   "weightkg": 80,
-  "color": "Purple",
-  "gender": "N",
-  "moveCount": 62
+  "gender": "N"
  },
  {
   "id": "steelix",
@@ -6779,9 +6309,7 @@
   "requiredItem": null,
   "heightm": 9.2,
   "weightkg": 400,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "steelixmega",
@@ -6807,9 +6335,7 @@
   "requiredItem": "Steelixite",
   "heightm": 10.5,
   "weightkg": 740,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "stunfisk",
@@ -6837,9 +6363,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 11,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 48
+  "gender": null
  },
  {
   "id": "stunfiskgalar",
@@ -6865,9 +6389,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 20.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 52
+  "gender": null
  },
  {
   "id": "sylveon",
@@ -6893,9 +6415,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 23.5,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 55
+  "gender": null
  },
  {
   "id": "talonflame",
@@ -6922,9 +6442,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 24.5,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 50
+  "gender": null
  },
  {
   "id": "tauros",
@@ -6951,9 +6469,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 88.4,
-  "color": "Brown",
-  "gender": "M",
-  "moveCount": 57
+  "gender": "M"
  },
  {
   "id": "taurospaldeaaqua",
@@ -6981,9 +6497,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 110,
-  "color": "Black",
-  "gender": "M",
-  "moveCount": 52
+  "gender": "M"
  },
  {
   "id": "taurospaldeablaze",
@@ -7011,9 +6525,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 85,
-  "color": "Black",
-  "gender": "M",
-  "moveCount": 53
+  "gender": "M"
  },
  {
   "id": "taurospaldeacombat",
@@ -7040,9 +6552,7 @@
   "requiredItem": null,
   "heightm": 1.4,
   "weightkg": 115,
-  "color": "Black",
-  "gender": "M",
-  "moveCount": 48
+  "gender": "M"
  },
  {
   "id": "tinkaton",
@@ -7070,9 +6580,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 112.8,
-  "color": "Pink",
-  "gender": "F",
-  "moveCount": 47
+  "gender": "F"
  },
  {
   "id": "torkoal",
@@ -7099,9 +6607,7 @@
   "requiredItem": null,
   "heightm": 0.5,
   "weightkg": 80.4,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "torterra",
@@ -7128,9 +6634,7 @@
   "requiredItem": null,
   "heightm": 2.2,
   "weightkg": 310,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 72
+  "gender": null
  },
  {
   "id": "toucannon",
@@ -7158,9 +6662,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 26,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 53
+  "gender": null
  },
  {
   "id": "toxapex",
@@ -7188,9 +6690,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 14.5,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 51
+  "gender": null
  },
  {
   "id": "toxicroak",
@@ -7218,9 +6718,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 44.4,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 81
+  "gender": null
  },
  {
   "id": "trevenant",
@@ -7248,9 +6746,7 @@
   "requiredItem": null,
   "heightm": 1.5,
   "weightkg": 71,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 73
+  "gender": null
  },
  {
   "id": "tsareena",
@@ -7277,9 +6773,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 21.4,
-  "color": "Purple",
-  "gender": "F",
-  "moveCount": 54
+  "gender": "F"
  },
  {
   "id": "typhlosion",
@@ -7305,9 +6799,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 79.5,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 63
+  "gender": null
  },
  {
   "id": "typhlosionhisui",
@@ -7334,9 +6826,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 69.8,
-  "color": "Yellow",
-  "gender": null,
-  "moveCount": 66
+  "gender": null
  },
  {
   "id": "tyranitar",
@@ -7363,9 +6853,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 202,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 92
+  "gender": null
  },
  {
   "id": "tyranitarmega",
@@ -7391,9 +6879,7 @@
   "requiredItem": "Tyranitarite",
   "heightm": 2.5,
   "weightkg": 255,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 92
+  "gender": null
  },
  {
   "id": "tyrantrum",
@@ -7420,9 +6906,7 @@
   "requiredItem": null,
   "heightm": 2.5,
   "weightkg": 270,
-  "color": "Red",
-  "gender": null,
-  "moveCount": 64
+  "gender": null
  },
  {
   "id": "umbreon",
@@ -7448,9 +6932,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 27,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 67
+  "gender": null
  },
  {
   "id": "vanilluxe",
@@ -7477,9 +6959,7 @@
   "requiredItem": null,
   "heightm": 1.3,
   "weightkg": 57.5,
-  "color": "White",
-  "gender": null,
-  "moveCount": 41
+  "gender": null
  },
  {
   "id": "vaporeon",
@@ -7505,9 +6985,7 @@
   "requiredItem": null,
   "heightm": 1,
   "weightkg": 29,
-  "color": "Blue",
-  "gender": null,
-  "moveCount": 59
+  "gender": null
  },
  {
   "id": "venusaur",
@@ -7534,9 +7012,7 @@
   "requiredItem": null,
   "heightm": 2,
   "weightkg": 100,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "venusaurmega",
@@ -7562,9 +7038,7 @@
   "requiredItem": "Venusaurite",
   "heightm": 2.4,
   "weightkg": 155.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "victreebel",
@@ -7591,9 +7065,7 @@
   "requiredItem": null,
   "heightm": 1.7,
   "weightkg": 15.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 59
+  "gender": null
  },
  {
   "id": "victreebelmega",
@@ -7619,9 +7091,7 @@
   "requiredItem": "Victreebelite",
   "heightm": 4.5,
   "weightkg": 125.5,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 59
+  "gender": null
  },
  {
   "id": "vivillon",
@@ -7649,9 +7119,7 @@
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 17,
-  "color": "Pink",
-  "gender": null,
-  "moveCount": 43
+  "gender": null
  },
  {
   "id": "volcarona",
@@ -7678,9 +7146,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 46,
-  "color": "White",
-  "gender": null,
-  "moveCount": 57
+  "gender": null
  },
  {
   "id": "watchog",
@@ -7707,9 +7173,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 27,
-  "color": "Brown",
-  "gender": null,
-  "moveCount": 52
+  "gender": null
  },
  {
   "id": "weavile",
@@ -7736,9 +7200,7 @@
   "requiredItem": null,
   "heightm": 1.1,
   "weightkg": 34,
-  "color": "Black",
-  "gender": null,
-  "moveCount": 72
+  "gender": null
  },
  {
   "id": "whimsicott",
@@ -7766,9 +7228,7 @@
   "requiredItem": null,
   "heightm": 0.7,
   "weightkg": 6.6,
-  "color": "Green",
-  "gender": null,
-  "moveCount": 50
+  "gender": null
  },
  {
   "id": "wyrdeer",
@@ -7796,9 +7256,7 @@
   "requiredItem": null,
   "heightm": 1.8,
   "weightkg": 95.1,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 61
+  "gender": null
  },
  {
   "id": "zoroark",
@@ -7823,9 +7281,7 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 81.1,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 70
+  "gender": null
  },
  {
   "id": "zoroarkhisui",
@@ -7851,8 +7307,6 @@
   "requiredItem": null,
   "heightm": 1.6,
   "weightkg": 73,
-  "color": "Gray",
-  "gender": null,
-  "moveCount": 73
+  "gender": null
  }
 ]
