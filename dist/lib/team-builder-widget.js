@@ -91,15 +91,16 @@ export class TeamBuilderWidget {
         this.moveSearchPopup.classList.add('hidden');
         this.itemSearchPopup.classList.add('hidden');
     }
-    setData(species, spriteMap, shinySpriteMap, formatId) {
+    setData(species, spriteMap, shinySpriteMap, formatId, items) {
         this.opts.species = species;
         this.opts.spriteMap = spriteMap;
         this.opts.shinySpriteMap = shinySpriteMap;
         if (formatId)
             this.opts.formatId = formatId;
+        if (items)
+            this.items = items;
         this.learnsets = null;
         this.moves = null;
-        this.items = null;
         this.closePopups();
         // Build mega form maps
         this.baseToMega = {};
@@ -1089,7 +1090,7 @@ export class TeamBuilderWidget {
         const team = this.opts.getTeam();
         if (!team)
             return;
-        team.slots[index] = { speciesId: null };
+        team.slots[index] = { speciesId: null, item: null };
         this.closePopups();
         this.opts.onSlotChange();
         this.render();

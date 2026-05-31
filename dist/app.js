@@ -1,4 +1,4 @@
-import { loadAbilities, loadIndex, loadMovesWithLearnsets, setFormat, } from "./lib/data-loader.js";
+import { loadAbilities, loadIndex, loadItems, loadMovesWithLearnsets, setFormat, } from "./lib/data-loader.js";
 import { createTeam, loadTeams, saveTeams } from "./lib/team-store.js";
 import { EFFECT_CATEGORIES, MOVE_CLASSIFICATIONS, MoveSearchWidget, RANGE_CATEGORIES, } from "./lib/move-search-widget.js";
 import { PokemonSearchWidget } from "./lib/pokemon-search-widget.js";
@@ -23,6 +23,8 @@ let spriteMap = {};
 let shinySpriteMap = {};
 let pendingSlotIndex = null;
 let detailShiny = false;
+let detailSpeciesId = null;
+let cachedItems = null;
 let movesWidget = null;
 let detailMovesWidget = null;
 let pokemonWidget = null;
@@ -162,11 +164,13 @@ async function loadFormat(format) {
     activeBreadcrumbIndex = -1;
     renderBreadcrumbBar();
     pendingSlotIndex = null;
-    const [index, map, shinyMap] = await Promise.all([
+    const [index, map, shinyMap, items] = await Promise.all([
         loadIndex(format),
         fetch(`data/format-${format}/sprite-map.json`).then((r) => r.json()),
         fetch(`data/format-${format}/shiny-sprite-map.json`).then((r) => r.json()),
+        loadItems(format),
     ]);
+    cachedItems = items;
     allSpecies = index;
     spriteMap = map;
     shinySpriteMap = shinyMap;
@@ -175,16 +179,32 @@ async function loadFormat(format) {
         pokemonWidget.setData(index, map);
     }
     if (teamBuilderWidget) {
-        teamBuilderWidget.setData(index, map, shinySpriteMap, currentFormat);
+        teamBuilderWidget.setData(index, map, shinySpriteMap, currentFormat, items);
     }
     renderTeamBar();
 }
-function fillSlot(slotIndex, speciesId) {
+function fillSlot(slotIndex, speciesId, item) {
     const team = getCurrentTeam();
     if (!team)
         return;
-    team.slots[slotIndex].speciesId = speciesId;
-    team.slots[slotIndex].name = getSpeciesById(speciesId)?.name || null;
+    const species = getSpeciesById(speciesId);
+    let finalSpeciesId = speciesId;
+    let finalItem = item !== undefined ? item : null;
+    // Mega form: fill with base species + matching mega stone
+    if (species?.requiredItem && species.baseSpecies && !finalItem && cachedItems) {
+        const baseName = species.baseSpecies;
+        for (const [itemId, itemRec] of Object.entries(cachedItems)) {
+            if (itemRec.megaStone && itemRec.megaStone[baseName] === species.name) {
+                finalItem = itemId;
+                const base = allSpecies.find((sp) => sp.name === baseName);
+                if (base)
+                    finalSpeciesId = base.id;
+                break;
+            }
+        }
+    }
+    team.slots[slotIndex].speciesId = finalSpeciesId;
+    team.slots[slotIndex].name = getSpeciesById(finalSpeciesId)?.name || null;
     team.slots[slotIndex].ability = "0";
     team.slots[slotIndex].nature = "Serious";
     team.slots[slotIndex].moves = [null, null, null, null];
@@ -196,14 +216,12 @@ function fillSlot(slotIndex, speciesId) {
         spd: 0,
         spe: 0,
     };
+    team.slots[slotIndex].item = finalItem;
     persist();
     renderTeamWarning();
-    if (pokemonWidget)
-        pokemonWidget.clear();
     renderTeamBar();
     if (teamBuilderWidget)
         teamBuilderWidget.refresh();
-    defensiveCoverageWidget?.refresh();
 }
 function renderTeamBar() {
     const headerTeam = document.getElementById("header-team");
@@ -259,6 +277,7 @@ function renderTeamSelect() {
     currentTeamId = teamSelect.value || null;
     renderTeamWarning();
     renderTeamBar();
+    window.dispatchEvent(new Event("potato-team-change"));
 }
 function selectTeam(id) {
     switchToTeamBuilder();
@@ -276,6 +295,7 @@ function selectTeam(id) {
     if (teamBuilderWidget)
         teamBuilderWidget.refresh();
     defensiveCoverageWidget?.refresh();
+    window.dispatchEvent(new Event("potato-team-change"));
 }
 function handleNewTeam() {
     const count = teams.filter((t) => t.format === currentFormat).length + 1;
@@ -305,6 +325,7 @@ function switchToDetail() {
 }
 async function showDetail(s) {
     updateBreadcrumbs({ type: "pokemon", id: s.id, name: s.name });
+    detailSpeciesId = s.id;
     detailShiny = false;
     if (detailMovesWidget) {
         detailMovesWidget.destroy();
@@ -358,6 +379,7 @@ async function showDetail(s) {
       </div>
 
       <div class="detail-header-wrap">
+        <button class="add-to-team-btn" id="add-to-team-btn">Add to Team</button>
         <div class="detail-header">
           ${spriteFile
         ? `<img class="detail-sprite" src="${spritePath}/${spriteFile}" alt="${s.name}" style="cursor:pointer" title="Click to toggle shiny">`
@@ -407,6 +429,91 @@ async function showDetail(s) {
     <div id="detail-moves-container"></div>`;
     searchDetailContent.innerHTML = html;
     renderBreadcrumbBar();
+    // Add-to-team button
+    const addBtn = searchDetailContent.querySelector("#add-to-team-btn");
+    if (addBtn) {
+        const team = getCurrentTeam();
+        const baseId = s.baseSpecies
+            ? (allSpecies.find((sp) => sp.name === s.baseSpecies)?.id ?? s.id)
+            : s.id;
+        const isInTeam = team?.slots.some((slot) => slot.speciesId === s.id ||
+            (s.baseSpecies && slot.speciesId === baseId)) ?? false;
+        const hasEmptySlot = team?.slots.some((slot) => slot.speciesId === null) ?? false;
+        if (isInTeam) {
+            addBtn.textContent = "Remove from Team";
+            addBtn.className = "add-to-team-btn remove-from-team";
+        }
+        else if (!hasEmptySlot) {
+            addBtn.textContent = "Add to Team";
+            addBtn.className = "add-to-team-btn add-to-team";
+            addBtn.disabled = true;
+            addBtn.title = "Team is full";
+        }
+        else {
+            addBtn.className = "add-to-team-btn add-to-team";
+        }
+        addBtn.addEventListener("click", () => {
+            const t = getCurrentTeam();
+            if (!t)
+                return;
+            // Resolve species ID and base ID for mega check
+            const speciesIdToCheck = s.baseSpecies
+                ? (allSpecies.find((sp) => sp.name === s.baseSpecies)?.id ?? s.id)
+                : s.id;
+            const inTeamIdx = t.slots.findIndex((slot) => slot.speciesId === s.id ||
+                (s.baseSpecies && slot.speciesId === speciesIdToCheck));
+            if (inTeamIdx !== -1) {
+                t.slots[inTeamIdx].speciesId = null;
+                t.slots[inTeamIdx].item = null;
+                persist();
+                renderTeamBar();
+                if (teamBuilderWidget)
+                    teamBuilderWidget.refresh();
+                refreshAddBtn();
+            }
+            else {
+                const emptyIdx = t.slots.findIndex((slot) => slot.speciesId === null);
+                if (emptyIdx === -1)
+                    return;
+                fillSlot(emptyIdx, s.id);
+                refreshAddBtn();
+            }
+        });
+    }
+    // Refresh add-to-team button when team changes
+    const refreshAddBtn = () => {
+        const btn = searchDetailContent.querySelector("#add-to-team-btn");
+        if (!btn || !detailSpeciesId)
+            return;
+        const t = getCurrentTeam();
+        // Resolve base species ID for mega check
+        const detailSpecies = allSpecies.find((sp) => sp.id === detailSpeciesId);
+        const baseId = detailSpecies?.baseSpecies
+            ? (allSpecies.find((sp) => sp.name === detailSpecies.baseSpecies)?.id ?? detailSpeciesId)
+            : detailSpeciesId;
+        const isInTeam = t?.slots.some((slot) => slot.speciesId === detailSpeciesId ||
+            (detailSpecies?.baseSpecies && slot.speciesId === baseId)) ?? false;
+        const hasEmptySlot = t?.slots.some((slot) => slot.speciesId === null) ?? false;
+        if (isInTeam) {
+            btn.textContent = "Remove from Team";
+            btn.className = "add-to-team-btn remove-from-team";
+            btn.disabled = false;
+            btn.title = "";
+        }
+        else if (!hasEmptySlot) {
+            btn.textContent = "Add to Team";
+            btn.className = "add-to-team-btn add-to-team";
+            btn.disabled = true;
+            btn.title = "Team is full";
+        }
+        else {
+            btn.textContent = "Add to Team";
+            btn.className = "add-to-team-btn add-to-team";
+            btn.disabled = false;
+            btn.title = "";
+        }
+    };
+    window.addEventListener("potato-team-change", refreshAddBtn);
     // Toggle shiny on sprite click
     const detailSpriteEl = searchDetailContent.querySelector(".detail-sprite");
     if (detailSpriteEl) {
@@ -643,13 +750,6 @@ function selectTab(tabId, section) {
     if (tabId === "move-coverage") {
         lazyInitMoveCoverage();
     }
-    if (tabId !== "search-detail") {
-        breadcrumbBar.innerHTML = "";
-        breadcrumbBar.classList.add("hidden");
-    }
-    else if (breadcrumbs.length > 0) {
-        renderBreadcrumbBar();
-    }
 }
 function lazyInitTeamBuilder() {
     if (teamBuilderWidget)
@@ -668,6 +768,7 @@ function lazyInitTeamBuilder() {
             renderTeamWarning();
             renderTeamBar();
             defensiveCoverageWidget?.refresh();
+            window.dispatchEvent(new Event("potato-team-change"));
         },
         onPokemonClick: (species) => showDetail(species),
     });
@@ -804,6 +905,15 @@ document.querySelector('[data-subtab="items"]')?.addEventListener("click", () =>
         });
     }
 });
+const pokemonDataPromise = (async () => {
+    const [index, map] = await Promise.all([
+        loadIndex("m-a"),
+        fetch("data/format-m-a/sprite-map.json").then((r) => r.json()),
+    ]);
+    allSpecies = index;
+    spriteMap = map;
+    return { index, map };
+})();
 const pokemonContainer = document.getElementById("subtab-content-pokemon");
 pokemonWidget = new PokemonSearchWidget({
     container: pokemonContainer,
@@ -817,6 +927,9 @@ pokemonWidget = new PokemonSearchWidget({
             showDetail(species);
         }
     },
+});
+pokemonDataPromise.then(({ index, map }) => {
+    pokemonWidget.setData(index, map);
 });
 teams = loadTeams();
 if (teams.length === 0) {

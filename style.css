@@ -1383,6 +1383,45 @@ button:hover {
   background: var(--bg-active);
 }
 
+#search-detail-content .add-to-team-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border-accent);
+  color: var(--text-primary);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  margin-bottom: 0.4rem;
+  align-self: flex-start;
+}
+
+#search-detail-content .add-to-team-btn:hover:not(:disabled) {
+  border-color: var(--accent-gold);
+  color: #fff;
+}
+
+#search-detail-content .add-to-team-btn.add-to-team {
+  background: rgba(95, 187, 99, 0.15);
+}
+
+#search-detail-content .add-to-team-btn.add-to-team:hover:not(:disabled) {
+  background: rgba(95, 187, 99, 0.3);
+}
+
+#search-detail-content .add-to-team-btn.remove-from-team {
+  background: rgba(196, 77, 77, 0.15);
+}
+
+#search-detail-content .add-to-team-btn.remove-from-team:hover:not(:disabled) {
+  background: rgba(196, 77, 77, 0.3);
+}
+
+#search-detail-content .add-to-team-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
 #search-detail-content .detail-header {
   display: flex;
   align-items: center;

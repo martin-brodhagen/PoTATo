@@ -672,6 +672,7 @@ export class PokemonSearchWidget {
       return;
     }
 
+    let itemIdx = 0;
     for (const s of filtered) {
       const item = document.createElement('div');
       item.className = 'pokemon-list-item';
@@ -683,9 +684,10 @@ export class PokemonSearchWidget {
         img.className = 'list-sprite';
         img.src = `${SPRITE_PATH}/${spriteFile}`;
         img.alt = s.name;
-        img.loading = 'lazy';
+        img.loading = itemIdx < 20 ? 'eager' : 'lazy';
         item.appendChild(img);
       }
+      itemIdx++;
 
       const info = document.createElement('div');
       info.className = 'list-info';
