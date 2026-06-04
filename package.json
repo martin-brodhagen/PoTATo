@@ -1,11 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "npx tsc",
     "start": "python3 -m http.server 8787",
     "prep": "python3 prep/prep_data.py && python3 prep/patch_descriptions.py && python3 scripts/prep_items.py"
-  },
-  "devDependencies": {
-    "typescript": "^6.0.3"
   }
 }

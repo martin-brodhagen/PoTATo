@@ -1,10 +1,8 @@
-import type {
-  Ability,
-  FormatId,
-  Item,
-  Move,
-  Species,
-  Team,
+import {
+  EFFECT_CATEGORIES,
+  MOVE_CLASSIFICATIONS,
+  RANGE_CATEGORIES,
+  ABILITY_EFFECT_CATEGORIES,
 } from "./lib/types.js";
 import {
   loadAbilities,
@@ -14,73 +12,53 @@ import {
   setFormat,
 } from "./lib/data-loader.js";
 import { createTeam, loadTeams, saveTeams } from "./lib/team-store.js";
-import {
-  EFFECT_CATEGORIES,
-  MOVE_CLASSIFICATIONS,
-  MoveSearchWidget,
-  RANGE_CATEGORIES,
-} from "./lib/move-search-widget.js";
+import { MoveSearchWidget } from "./lib/move-search-widget.js";
 import { PokemonSearchWidget } from "./lib/pokemon-search-widget.js";
-import {
-  ABILITY_EFFECT_CATEGORIES,
-  AbilitySearchWidget,
-} from "./lib/ability-search-widget.js";
+import { AbilitySearchWidget } from "./lib/ability-search-widget.js";
 import { ItemSearchWidget } from "./lib/item-search-widget.js";
 import { DefensiveCoverageWidget } from "./lib/defensive-coverage-widget.js";
 import { MoveTypeCoverageWidget } from "./lib/move-type-coverage-widget.js";
 import { TeamBuilderWidget } from "./lib/team-builder-widget.js";
 
 const SPRITE_PATH = "sprites/champions";
-
 const LAST_TEAM_KEY = "potato-last-team";
 
-const formatSelect = document.getElementById(
-  "format-select",
-) as HTMLSelectElement;
-const teamSelect = document.getElementById("team-select") as HTMLSelectElement;
-const newTeamBtn = document.getElementById("new-team-btn") as HTMLButtonElement;
-const teamWarning = document.getElementById("team-warning") as HTMLSpanElement;
-const searchDetailContent = document.getElementById(
-  "search-detail-content",
-) as HTMLDivElement;
-const breadcrumbBar = document.getElementById(
-  "breadcrumb-bar",
-) as HTMLDivElement;
+const formatSelect = document.getElementById("format-select");
+const teamSelect = document.getElementById("team-select");
+const newTeamBtn = document.getElementById("new-team-btn");
+const teamWarning = document.getElementById("team-warning");
+const searchDetailContent = document.getElementById("search-detail-content");
+const breadcrumbBar = document.getElementById("breadcrumb-bar");
 
-let currentFormat: FormatId = "m-a";
-let teams: Team[] = [];
-let currentTeamId: string | null = null;
-let allSpecies: Species[] = [];
-let spriteMap: Record<string, string> = {};
-let shinySpriteMap: Record<string, string> = {};
-let pendingSlotIndex: number | null = null;
+let currentFormat = "m-a";
+let teams = [];
+let currentTeamId = null;
+let allSpecies = [];
+let spriteMap = {};
+let shinySpriteMap = {};
+let pendingSlotIndex = null;
 let detailShiny = false;
-let detailSpeciesId: string | null = null;
-let cachedItems: Record<string, import("./lib/types.js").Item> | null = null;
+let detailSpeciesId = null;
+let cachedItems = null;
 
-let movesWidget: MoveSearchWidget | null = null;
-let detailMovesWidget: MoveSearchWidget | null = null;
-let pokemonWidget: PokemonSearchWidget | null = null;
-let moveDetailPokemonWidget: PokemonSearchWidget | null = null;
-let abilityDetailPokemonWidget: PokemonSearchWidget | null = null;
-let abilitiesWidget: AbilitySearchWidget | null = null;
-let itemsWidget: ItemSearchWidget | null = null;
-let teamBuilderWidget: TeamBuilderWidget | null = null;
+let movesWidget = null;
+let detailMovesWidget = null;
+let pokemonWidget = null;
+let moveDetailPokemonWidget = null;
+let abilityDetailPokemonWidget = null;
+let abilitiesWidget = null;
+let itemsWidget = null;
+let teamBuilderWidget = null;
 
-interface BreadcrumbItem {
-  type: "pokemon" | "move" | "ability" | "item";
-  id: string;
-  name: string;
-}
-let breadcrumbs: BreadcrumbItem[] = [];
+let breadcrumbs = [];
 let activeBreadcrumbIndex = -1;
 
-function resetBreadcrumbs(item: BreadcrumbItem) {
+function resetBreadcrumbs(item) {
   breadcrumbs = [item];
   activeBreadcrumbIndex = 0;
 }
 
-function updateBreadcrumbs(item: BreadcrumbItem) {
+function updateBreadcrumbs(item) {
   const existing = breadcrumbs.findIndex((b) =>
     b.type === item.type && b.id === item.id
   );
@@ -93,7 +71,7 @@ function updateBreadcrumbs(item: BreadcrumbItem) {
   }
 }
 
-function navigateToBreadcrumb(index: number) {
+function navigateToBreadcrumb(index) {
   activeBreadcrumbIndex = index;
   const b = breadcrumbs[index];
   if (b.type === "pokemon") {
@@ -126,34 +104,28 @@ function renderBreadcrumbBar() {
     const cls = i === activeBreadcrumbIndex
       ? "breadcrumb breadcrumb-active"
       : "breadcrumb";
-    html +=
-      `<span class="${cls}" data-breadcrumb-index="${i}">${b.name}</span>`;
+    html += `<span class="${cls}" data-breadcrumb-index="${i}">${b.name}</span>`;
   }
   html += "</div>";
   breadcrumbBar.innerHTML = html;
-  breadcrumbBar.querySelector(".breadcrumbs")?.addEventListener(
-    "click",
-    (e) => {
-      const target = (e.target as HTMLElement).closest(".breadcrumb") as
-        | HTMLElement
-        | null;
-      if (!target) return;
-      const index = parseInt(target.dataset.breadcrumbIndex!);
-      navigateToBreadcrumb(index);
-    },
-  );
+  breadcrumbBar.querySelector(".breadcrumbs")?.addEventListener("click", (e) => {
+    const target = e.target.closest(".breadcrumb");
+    if (!target) return;
+    const index = parseInt(target.dataset.breadcrumbIndex);
+    navigateToBreadcrumb(index);
+  });
 }
 
-function getCurrentTeam(): Team | undefined {
+function getCurrentTeam() {
   return teams.find((t) => t.id === currentTeamId);
 }
 
-function getSpeciesById(id: string): Species | undefined {
+function getSpeciesById(id) {
   return allSpecies.find((s) => s.id === id);
 }
 
-function isTeamLegal(team: Team): boolean {
-  const nums: number[] = [];
+function isTeamLegal(team) {
+  const nums = [];
   for (const slot of team.slots) {
     if (!slot.speciesId) continue;
     const species = getSpeciesById(slot.speciesId);
@@ -177,7 +149,7 @@ function persist() {
   saveTeams(teams);
 }
 
-async function loadFormat(format: FormatId) {
+async function loadFormat(format) {
   currentFormat = format;
   setFormat(format);
   if (movesWidget) {
@@ -217,18 +189,18 @@ async function loadFormat(format: FormatId) {
   ]);
   cachedItems = items;
   allSpecies = index;
-  spriteMap = map as Record<string, string>;
-  shinySpriteMap = shinyMap as Record<string, string>;
+  spriteMap = map;
+  shinySpriteMap = shinyMap;
 
   if (pokemonWidget) {
     pokemonWidget.clear();
-    pokemonWidget.setData(index, map as Record<string, string>);
+    pokemonWidget.setData(index, map);
   }
 
   if (teamBuilderWidget) {
     teamBuilderWidget.setData(
       index,
-      map as Record<string, string>,
+      map,
       shinySpriteMap,
       currentFormat,
       items,
@@ -238,15 +210,14 @@ async function loadFormat(format: FormatId) {
   renderTeamBar();
 }
 
-function fillSlot(slotIndex: number, speciesId: string, item?: string | null) {
+function fillSlot(slotIndex, speciesId, item) {
   const team = getCurrentTeam();
   if (!team) return;
 
   const species = getSpeciesById(speciesId);
   let finalSpeciesId = speciesId;
-  let finalItem: string | null = item !== undefined ? item : null;
+  let finalItem = item !== undefined ? item : null;
 
-  // Mega form: fill with base species + matching mega stone
   if (species?.requiredItem && species.baseSpecies && !finalItem && cachedItems) {
     const baseName = species.baseSpecies;
     for (const [itemId, itemRec] of Object.entries(cachedItems)) {
@@ -265,12 +236,7 @@ function fillSlot(slotIndex: number, speciesId: string, item?: string | null) {
   team.slots[slotIndex].nature = "Serious";
   team.slots[slotIndex].moves = [null, null, null, null];
   team.slots[slotIndex].stats = {
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spa: 0,
-    spd: 0,
-    spe: 0,
+    hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0,
   };
   team.slots[slotIndex].item = finalItem;
   persist();
@@ -280,7 +246,7 @@ function fillSlot(slotIndex: number, speciesId: string, item?: string | null) {
 }
 
 function renderTeamBar() {
-  const headerTeam = document.getElementById("header-team")!;
+  const headerTeam = document.getElementById("header-team");
   headerTeam.innerHTML = "";
   const team = getCurrentTeam();
   if (!team) {
@@ -339,7 +305,7 @@ function renderTeamSelect() {
   window.dispatchEvent(new Event("potato-team-change"));
 }
 
-function selectTeam(id: string) {
+function selectTeam(id) {
   switchToTeamBuilder();
   currentTeamId = id;
   teamSelect.value = id;
@@ -365,17 +331,16 @@ function handleNewTeam() {
   selectTeam(team.id);
 }
 
-function isDetailTabActive(): boolean {
-  const rightSection = document.querySelector<HTMLElement>(".section-right");
+function isDetailTabActive() {
+  const rightSection = document.querySelector(".section-right");
   const contentId = "tab-content-search-detail";
-  const panel = rightSection?.querySelector<HTMLElement>(`#${contentId}`) ??
-    document.getElementById(contentId);
+  const panel = rightSection?.querySelector(`#${contentId}`) ?? document.getElementById(contentId);
   return panel ? !panel.classList.contains("hidden") : false;
 }
 
 function switchToDetail() {
   if (isDetailTabActive()) return;
-  const rightSection = document.querySelector<HTMLElement>(".section-right");
+  const rightSection = document.querySelector(".section-right");
   if (window.innerWidth >= 768 && rightSection) {
     selectTab("search-detail", rightSection);
   } else {
@@ -383,7 +348,7 @@ function switchToDetail() {
   }
 }
 
-async function showDetail(s: Species) {
+async function showDetail(s) {
   updateBreadcrumbs({ type: "pokemon", id: s.id, name: s.name });
   detailSpeciesId = s.id;
   detailShiny = false;
@@ -401,7 +366,7 @@ async function showDetail(s: Species) {
   }
   switchToDetail();
 
-  function statBarColor(val: number): string {
+  function statBarColor(val) {
     if (val <= 29) return "#c44d4d";
     if (val <= 59) return "#cc9f4a";
     if (val <= 94) return "#e5c531";
@@ -417,20 +382,10 @@ async function showDetail(s: Species) {
     <div class="detail-top">
       <div class="stats-block">
         ${
-    (["hp", "atk", "def", "spa", "spd", "spe"] as const).map((key) => {
+    ["hp", "atk", "def", "spa", "spd", "spe"].map((key) => {
       const val = s.baseStats[key];
-      const label =
-        {
-          hp: "HP",
-          atk: "Atk",
-          def: "Def",
-          spa: "SpA",
-          spd: "SpD",
-          spe: "Spe",
-        }[key];
-      const hl = pokemonWidget && pokemonWidget.getSortBy() === key
-        ? " stat-highlighted"
-        : "";
+      const label = { hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" }[key];
+      const hl = pokemonWidget && pokemonWidget.getSortBy() === key ? " stat-highlighted" : "";
       const barColor = statBarColor(val);
       return `<div class="stat-row${hl}"><span class="stat-label">${label}</span><span class="stat-val">${val}</span><span class="stat-bar-track"><span class="stat-bar-fill" style="background-color:${barColor};width:${val}px"></span></span></div>`;
     }).join("\n        ")
@@ -451,34 +406,22 @@ async function showDetail(s: Species) {
             <div class="types">${
     [0, 1].map((i) => {
       const t = s.types[i];
-      return `<span class="type-tag${
-        t ? " " + t.toLowerCase() : " type-tag-empty"
-      }">${t || ""}</span>`;
+      return `<span class="type-tag${t ? " " + t.toLowerCase() : " type-tag-empty"}">${t || ""}</span>`;
     }).join("")
   }</div>
             <div class="detail-meta">
-            <span class="detail-meta-item"><span class="detail-meta-label">Height</span><span class="detail-meta-value">${
-    s.heightm ?? "—"
-  }m</span></span>
-            <span class="detail-meta-item"><span class="detail-meta-label">Weight</span><span class="detail-meta-value">${
-    s.weightkg ?? "—"
-  }kg</span></span>
-              <span class="detail-meta-item" title="Weight-based Base Damage of Low Kick and Grass Knot"><span class="detail-meta-label">Low Kick</span><span class="detail-meta-value">${
-    getWeightTier(s.weightkg)
-  } BP</span></span>
-              <span class="detail-meta-item"><span class="detail-meta-label">Gender</span><span class="detail-meta-value">${
-    formatGender(s.gender)
-  }</span></span>
+            <span class="detail-meta-item"><span class="detail-meta-label">Height</span><span class="detail-meta-value">${s.heightm ?? "—"}m</span></span>
+            <span class="detail-meta-item"><span class="detail-meta-label">Weight</span><span class="detail-meta-value">${s.weightkg ?? "—"}kg</span></span>
+              <span class="detail-meta-item" title="Weight-based Base Damage of Low Kick and Grass Knot"><span class="detail-meta-label">Low Kick</span><span class="detail-meta-value">${getWeightTier(s.weightkg)} BP</span></span>
+              <span class="detail-meta-item"><span class="detail-meta-label">Gender</span><span class="detail-meta-value">${formatGender(s.gender)}</span></span>
             </div>
           </div>
         </div>
-        <div class="ability-buttons">${
-    s.abilities.map((a) => `<button class="ability-btn">${a}</button>`).join("")
-  }</div>
+        <div class="ability-buttons">${s.abilities.map((a) => `<button class="ability-btn">${a}</button>`).join("")}</div>
       </div>
     </div>`;
 
-  function getWeightTier(kg: number | null): string {
+  function getWeightTier(kg) {
     if (kg === null) return "—";
     if (kg <= 9.9) return "20";
     if (kg <= 24.9) return "40";
@@ -488,7 +431,7 @@ async function showDetail(s: Species) {
     return "120";
   }
 
-  function formatGender(g: string | null): string {
+  function formatGender(g) {
     if (g === null) return "♂ ♀";
     if (g === "M") return "♂";
     if (g === "F") return "♀";
@@ -501,8 +444,7 @@ async function showDetail(s: Species) {
   searchDetailContent.innerHTML = html;
   renderBreadcrumbBar();
 
-  // Add-to-team button
-  const addBtn = searchDetailContent.querySelector("#add-to-team-btn") as HTMLButtonElement | null;
+  const addBtn = searchDetailContent.querySelector("#add-to-team-btn");
   if (addBtn) {
     const team = getCurrentTeam();
     const baseId = s.baseSpecies
@@ -531,7 +473,6 @@ async function showDetail(s: Species) {
       const t = getCurrentTeam();
       if (!t) return;
 
-      // Resolve species ID and base ID for mega check
       const speciesIdToCheck = s.baseSpecies
         ? (allSpecies.find((sp) => sp.name === s.baseSpecies)?.id ?? s.id)
         : s.id;
@@ -557,16 +498,14 @@ async function showDetail(s: Species) {
     });
   }
 
-  // Refresh add-to-team button when team changes
   const refreshAddBtn = () => {
-    const btn = searchDetailContent.querySelector("#add-to-team-btn") as HTMLButtonElement | null;
+    const btn = searchDetailContent.querySelector("#add-to-team-btn");
     if (!btn || !detailSpeciesId) return;
     const t = getCurrentTeam();
 
-    // Resolve base species ID for mega check
     const detailSpecies = allSpecies.find((sp) => sp.id === detailSpeciesId);
     const baseId = detailSpecies?.baseSpecies
-      ? (allSpecies.find((sp) => sp.name === detailSpecies!.baseSpecies)?.id ?? detailSpeciesId)
+      ? (allSpecies.find((sp) => sp.name === detailSpecies.baseSpecies)?.id ?? detailSpeciesId)
       : detailSpeciesId;
 
     const isInTeam = t?.slots.some(
@@ -594,10 +533,7 @@ async function showDetail(s: Species) {
   };
   window.addEventListener("potato-team-change", refreshAddBtn);
 
-  // Toggle shiny on sprite click
-  const detailSpriteEl = searchDetailContent.querySelector(".detail-sprite") as
-    | HTMLImageElement
-    | null;
+  const detailSpriteEl = searchDetailContent.querySelector(".detail-sprite");
   if (detailSpriteEl) {
     detailSpriteEl.addEventListener("click", () => {
       detailShiny = !detailShiny;
@@ -607,28 +543,23 @@ async function showDetail(s: Species) {
     });
   }
 
-  // Wire up ability buttons → ability detail
   const abilityNames = new Set(s.abilities.filter(Boolean));
   if (abilityNames.size > 0) {
     loadAbilities(currentFormat).then((allAbilities) => {
-      const nameToId: Record<string, string> = {};
+      const nameToId = {};
       for (const [id, a] of Object.entries(allAbilities)) nameToId[a.name] = id;
       searchDetailContent.querySelectorAll(".ability-btn").forEach((btn) => {
-        const name = (btn as HTMLElement).textContent || "";
+        const name = btn.textContent || "";
         const id = nameToId[name];
         if (id) {
-          btn.addEventListener(
-            "click",
-            () => showAbilityDetail(id, allAbilities[id]),
-          );
+          btn.addEventListener("click", () => showAbilityDetail(id, allAbilities[id]));
         }
       });
     });
   }
 
-  // Detail move search widget
-  const container = document.getElementById("detail-moves-container")!;
-  const speciesNames: Record<string, string> = {};
+  const container = document.getElementById("detail-moves-container");
+  const speciesNames = {};
   for (const sp of allSpecies) speciesNames[sp.id] = sp.name;
   detailMovesWidget = new MoveSearchWidget({
     container,
@@ -639,7 +570,7 @@ async function showDetail(s: Species) {
   });
 }
 
-function showMoveDetail(moveId: string, move: Move, resetTrail = false) {
+function showMoveDetail(moveId, move, resetTrail = false) {
   if (resetTrail) {
     resetBreadcrumbs({ type: "move", id: moveId, name: move.name });
   } else {
@@ -659,14 +590,14 @@ function showMoveDetail(moveId: string, move: Move, resetTrail = false) {
   }
   switchToDetail();
 
-  const bpDisplay = (m: Move): string => {
+  const bpDisplay = (m) => {
     if (m.category === "Status") return "—";
     if (m.basePower !== 0) return String(m.basePower);
     if (m.name === "Night Shade" || m.name === "Seismic Toss") return "50";
     return "?";
   };
 
-  const accDisplay = (m: Move): string => {
+  const accDisplay = (m) => {
     if (typeof m.accuracy === "number") return m.accuracy + "%";
     return "—";
   };
@@ -677,18 +608,14 @@ function showMoveDetail(moveId: string, move: Move, resetTrail = false) {
   const effectLabels = (move.effectCategories || []).map((e) =>
     EFFECT_CATEGORIES[e] || e
   );
-  const rangeLabel = move.range
-    ? (RANGE_CATEGORIES[move.range] || move.range)
-    : "";
+  const rangeLabel = move.range ? (RANGE_CATEGORIES[move.range] || move.range) : "";
   const rangeHtml = rangeLabel
     ? `<div class="move-detail-stat move-detail-stat-range"><span class="move-detail-stat-label">Range</span><span class="move-detail-stat-value">${rangeLabel}</span></div>`
     : "";
 
   const learnedBy = move.learnedBy || [];
   const priorityHtml = move.priority !== 0
-    ? `<div class="move-detail-stat"><span class="move-detail-stat-label">Priority</span><span class="move-detail-stat-value">${
-      move.priority > 0 ? "+" + move.priority : move.priority
-    }</span></div>`
+    ? `<div class="move-detail-stat"><span class="move-detail-stat-label">Priority</span><span class="move-detail-stat-value">${move.priority > 0 ? "+" + move.priority : move.priority}</span></div>`
     : "";
 
   const html = `
@@ -699,12 +626,8 @@ function showMoveDetail(moveId: string, move: Move, resetTrail = false) {
         <span class="move-entry-cat cat-${move.category.toLowerCase()}"><img class="cat-icon-small" src="sprites/categories/${move.category}_CP.png" alt="${move.category}"></span>
       </div>
       <div class="move-detail-stats">
-        <div class="move-detail-stat"><span class="move-detail-stat-label">BP</span><span class="move-detail-stat-value">${
-    bpDisplay(move)
-  }</span></div>
-        <div class="move-detail-stat"><span class="move-detail-stat-label">ACC</span><span class="move-detail-stat-value">${
-    accDisplay(move)
-  }</span></div>
+        <div class="move-detail-stat"><span class="move-detail-stat-label">BP</span><span class="move-detail-stat-value">${bpDisplay(move)}</span></div>
+        <div class="move-detail-stat"><span class="move-detail-stat-label">ACC</span><span class="move-detail-stat-value">${accDisplay(move)}</span></div>
         <div class="move-detail-stat"><span class="move-detail-stat-label">PP</span><span class="move-detail-stat-value">${move.pp}</span></div>
         ${rangeHtml}
         ${priorityHtml}
@@ -712,9 +635,7 @@ function showMoveDetail(moveId: string, move: Move, resetTrail = false) {
       ${
     flagLabels.length > 0 || effectLabels.length > 0
       ? `<div class="move-detail-badges">${
-        [...flagLabels, ...effectLabels].map((l) =>
-          `<span class="badge">${l}</span>`
-        ).join("")
+        [...flagLabels, ...effectLabels].map((l) => `<span class="badge">${l}</span>`).join("")
       }</div>`
       : ""
   }
@@ -733,7 +654,7 @@ function showMoveDetail(moveId: string, move: Move, resetTrail = false) {
   renderBreadcrumbBar();
 
   if (learnedBy.length > 0) {
-    const container = document.getElementById("move-detail-learned-container")!;
+    const container = document.getElementById("move-detail-learned-container");
     moveDetailPokemonWidget = new PokemonSearchWidget({
       container,
       formatId: currentFormat,
@@ -745,7 +666,7 @@ function showMoveDetail(moveId: string, move: Move, resetTrail = false) {
   }
 }
 
-function showAbilityDetail(abilityId: string, ability: Ability) {
+function showAbilityDetail(abilityId, ability) {
   updateBreadcrumbs({ type: "ability", id: abilityId, name: ability.name });
   if (detailMovesWidget) {
     detailMovesWidget.destroy();
@@ -789,9 +710,7 @@ function showAbilityDetail(abilityId: string, ability: Ability) {
   renderBreadcrumbBar();
 
   if (pokemonIds.length > 0) {
-    const container = document.getElementById(
-      "ability-detail-pokemon-container",
-    )!;
+    const container = document.getElementById("ability-detail-pokemon-container");
     abilityDetailPokemonWidget = new PokemonSearchWidget({
       container,
       formatId: currentFormat,
@@ -803,7 +722,7 @@ function showAbilityDetail(abilityId: string, ability: Ability) {
   }
 }
 
-function showItemDetail(itemId: string, item: Item) {
+function showItemDetail(itemId, item) {
   resetBreadcrumbs({ type: "item", id: itemId, name: item.name });
   if (detailMovesWidget) {
     detailMovesWidget.destroy();
@@ -819,16 +738,14 @@ function showItemDetail(itemId: string, item: Item) {
   }
   switchToDetail();
 
-  const categories = (item.category || []).map((c: string) =>
+  const categories = (item.category || []).map((c) =>
     `<span class="badge">${c}</span>`
   ).join("");
 
   const html = `
     <div class="move-detail">
       <div class="move-detail-header">
-        <img class="item-detail-sprite" src="sprites/items/${
-    item.sprite || itemId
-  }.png" alt="${item.name}" onerror="this.style.display='none'">
+        <img class="item-detail-sprite" src="sprites/items/${item.sprite || itemId}.png" alt="${item.name}" onerror="this.style.display='none'">
         <span class="move-detail-name">${item.name}</span>
       </div>
       ${categories ? `<div class="move-detail-badges">${categories}</div>` : ""}
@@ -843,35 +760,31 @@ function showItemDetail(itemId: string, item: Item) {
   renderBreadcrumbBar();
 }
 
-// ── Tab system ─────────────────────────────────────────────
-const leftSection = document.querySelector<HTMLElement>(".section-left");
+const leftSection = document.querySelector(".section-left");
 
-function selectTab(tabId: string, section?: HTMLElement | null) {
+function selectTab(tabId, section) {
   const isMobile = window.innerWidth < 768;
 
   if (section && !isMobile) {
-    // Desktop: scope to the given section
-    section.querySelectorAll<HTMLElement>(".tab").forEach((el) => {
+    section.querySelectorAll(".tab").forEach((el) => {
       el.classList.toggle("active", el.dataset.tab === tabId);
     });
-    section.querySelectorAll<HTMLElement>(".tab-content").forEach((el) => {
+    section.querySelectorAll(".tab-content").forEach((el) => {
       el.classList.toggle("hidden", el.id !== `tab-content-${tabId}`);
     });
   } else {
-    // Mobile or programmatic: global scoping
-    document.querySelectorAll<HTMLElement>(".tab").forEach((el) => {
+    document.querySelectorAll(".tab").forEach((el) => {
       el.classList.toggle("active", el.dataset.tab === tabId);
     });
-    document.querySelectorAll<HTMLElement>(".tab-content").forEach((el) => {
+    document.querySelectorAll(".tab-content").forEach((el) => {
       el.classList.toggle("hidden", el.id !== `tab-content-${tabId}`);
     });
   }
 
-  // On mobile: show only the section containing the active tab
   if (isMobile) {
     const activePanel = document.getElementById(`tab-content-${tabId}`);
-    const activeSection = activePanel?.closest<HTMLElement>(".section");
-    document.querySelectorAll<HTMLElement>(".section").forEach((el) => {
+    const activeSection = activePanel?.closest(".section");
+    document.querySelectorAll(".section").forEach((el) => {
       el.classList.toggle("hidden", el !== activeSection);
     });
   }
@@ -888,7 +801,7 @@ function selectTab(tabId: string, section?: HTMLElement | null) {
 
 function lazyInitTeamBuilder() {
   if (teamBuilderWidget) return;
-  const container = document.getElementById("tab-content-team-builder")!;
+  const container = document.getElementById("tab-content-team-builder");
   container.innerHTML = "";
   teamBuilderWidget = new TeamBuilderWidget({
     container,
@@ -917,15 +830,15 @@ function switchToTeamBuilder() {
   }
 }
 
-let defensiveCoverageWidget: DefensiveCoverageWidget | null = null;
-let moveCoverageWidget: MoveTypeCoverageWidget | null = null;
+let defensiveCoverageWidget = null;
+let moveCoverageWidget = null;
 
 function lazyInitDefensiveCoverage() {
   if (defensiveCoverageWidget) return;
-  const container = document.getElementById("defensive-coverage-content")!;
+  const container = document.getElementById("defensive-coverage-content");
   container.innerHTML = "";
   defensiveCoverageWidget = new DefensiveCoverageWidget({
-    container: document.getElementById("tab-content-defensive-coverage")!,
+    container: document.getElementById("tab-content-defensive-coverage"),
     species: allSpecies,
     spriteMap,
     getTeam: getCurrentTeam,
@@ -947,48 +860,45 @@ function lazyInitDefensiveCoverage() {
 
 function lazyInitMoveCoverage() {
   if (moveCoverageWidget) return;
-  const container = document.getElementById("move-coverage-content")!;
+  const container = document.getElementById("move-coverage-content");
   container.innerHTML = "";
   moveCoverageWidget = new MoveTypeCoverageWidget({
-    container: document.getElementById("tab-content-move-coverage")!,
+    container: document.getElementById("tab-content-move-coverage"),
     species: allSpecies,
     spriteMap,
     getTeam: getCurrentTeam,
   });
 }
 
-// ── Sub-tab system (inside Pokedex) ────────────────────────
-function selectSubTab(subTabId: string, container: HTMLElement) {
-  container.querySelectorAll<HTMLElement>(".sub-tab").forEach((el) => {
+function selectSubTab(subTabId, container) {
+  container.querySelectorAll(".sub-tab").forEach((el) => {
     el.classList.toggle("active", el.dataset.subtab === subTabId);
   });
-  container.querySelectorAll<HTMLElement>(".subtab-content").forEach((el) => {
+  container.querySelectorAll(".subtab-content").forEach((el) => {
     el.classList.toggle("hidden", el.id !== `subtab-content-${subTabId}`);
   });
 }
 
-document.querySelectorAll<HTMLElement>(".sub-tab").forEach((el) => {
+document.querySelectorAll(".sub-tab").forEach((el) => {
   el.addEventListener("click", () => {
     const subTabId = el.dataset.subtab;
     if (!subTabId) return;
-    const container = el.closest<HTMLElement>(".tab-content")!;
+    const container = el.closest(".tab-content");
     selectSubTab(subTabId, container);
   });
 });
 
-// Wire up all tab click handlers
-document.querySelectorAll<HTMLElement>(".tab").forEach((el) => {
+document.querySelectorAll(".tab").forEach((el) => {
   el.addEventListener("click", () => {
     const tabId = el.dataset.tab;
     if (!tabId) return;
-    const section = el.closest<HTMLElement>(".section");
+    const section = el.closest(".section");
     selectTab(tabId, section);
   });
 });
 
-// ── Events ────────────────────────────────────────────────
 formatSelect.addEventListener("change", () => {
-  loadFormat(formatSelect.value as FormatId);
+  loadFormat(formatSelect.value);
 });
 
 teamSelect.addEventListener("change", () => {
@@ -997,58 +907,46 @@ teamSelect.addEventListener("change", () => {
 
 newTeamBtn.addEventListener("click", handleNewTeam);
 
-// ── Moves subtab event ──────────────────────────────────
-document.querySelector<HTMLElement>('[data-subtab="moves"]')?.addEventListener(
-  "click",
-  () => {
-    if (!movesWidget) {
-      const container = document.getElementById("subtab-content-moves")!;
-      const speciesNames: Record<string, string> = {};
-      for (const s of allSpecies) speciesNames[s.id] = s.name;
-      movesWidget = new MoveSearchWidget({
-        container,
-        formatId: currentFormat,
-        speciesNames,
-        onMoveClick: (moveId, move) => {
-          showMoveDetail(moveId, move, true);
-        },
-      });
-    }
-  },
-);
+document.querySelector('[data-subtab="moves"]')?.addEventListener("click", () => {
+  if (!movesWidget) {
+    const container = document.getElementById("subtab-content-moves");
+    const speciesNames = {};
+    for (const s of allSpecies) speciesNames[s.id] = s.name;
+    movesWidget = new MoveSearchWidget({
+      container,
+      formatId: currentFormat,
+      speciesNames,
+      onMoveClick: (moveId, move) => {
+        showMoveDetail(moveId, move, true);
+      },
+    });
+  }
+});
 
-document.querySelector<HTMLElement>('[data-subtab="abilities"]')
-  ?.addEventListener("click", () => {
-    if (!abilitiesWidget) {
-      const container = document.getElementById("subtab-content-abilities")!;
-      abilitiesWidget = new AbilitySearchWidget({
-        container,
-        formatId: currentFormat,
-        onAbilityClick: (abilityId, ability) => {
-          resetBreadcrumbs({
-            type: "ability",
-            id: abilityId,
-            name: ability.name,
-          });
-          showAbilityDetail(abilityId, ability);
-        },
-      });
-    }
-  });
+document.querySelector('[data-subtab="abilities"]')?.addEventListener("click", () => {
+  if (!abilitiesWidget) {
+    const container = document.getElementById("subtab-content-abilities");
+    abilitiesWidget = new AbilitySearchWidget({
+      container,
+      formatId: currentFormat,
+      onAbilityClick: (abilityId, ability) => {
+        resetBreadcrumbs({ type: "ability", id: abilityId, name: ability.name });
+        showAbilityDetail(abilityId, ability);
+      },
+    });
+  }
+});
 
-document.querySelector<HTMLElement>('[data-subtab="items"]')?.addEventListener(
-  "click",
-  () => {
-    if (!itemsWidget) {
-      const container = document.getElementById("subtab-content-items")!;
-      itemsWidget = new ItemSearchWidget({
-        container,
-        formatId: currentFormat,
-        onItemClick: (id, item) => showItemDetail(id, item),
-      });
-    }
-  },
-);
+document.querySelector('[data-subtab="items"]')?.addEventListener("click", () => {
+  if (!itemsWidget) {
+    const container = document.getElementById("subtab-content-items");
+    itemsWidget = new ItemSearchWidget({
+      container,
+      formatId: currentFormat,
+      onItemClick: (id, item) => showItemDetail(id, item),
+    });
+  }
+});
 
 const pokemonDataPromise = (async () => {
   const [index, map] = await Promise.all([
@@ -1056,11 +954,11 @@ const pokemonDataPromise = (async () => {
     fetch("data/format-m-a/sprite-map.json").then((r) => r.json()),
   ]);
   allSpecies = index;
-  spriteMap = map as Record<string, string>;
+  spriteMap = map;
   return { index, map };
 })();
 
-const pokemonContainer = document.getElementById("subtab-content-pokemon")!;
+const pokemonContainer = document.getElementById("subtab-content-pokemon");
 pokemonWidget = new PokemonSearchWidget({
   container: pokemonContainer,
   formatId: currentFormat,
@@ -1075,7 +973,7 @@ pokemonWidget = new PokemonSearchWidget({
 });
 
 pokemonDataPromise.then(({ index, map }) => {
-  pokemonWidget!.setData(index, map);
+  pokemonWidget.setData(index, map);
 });
 
 teams = loadTeams();
