@@ -20,6 +20,7 @@ import { DefensiveCoverageWidget } from "./lib/defensive-coverage-widget.js";
 import { MoveTypeCoverageWidget } from "./lib/move-type-coverage-widget.js";
 import { TeamBuilderWidget } from "./lib/team-builder-widget.js";
 import { BreadcrumbView } from "./lib/views/breadcrumb-view.js";
+import { SearchDetailView } from "./lib/views/search-detail-view.js";
 
 const SPRITE_PATH = "sprites/champions";
 const LAST_TEAM_KEY = "potato-last-team";
@@ -38,18 +39,14 @@ let allSpecies = [];
 let spriteMap = {};
 let shinySpriteMap = {};
 let pendingSlotIndex = null;
-let detailShiny = false;
-let detailSpeciesId = null;
 let cachedItems = null;
 
 let movesWidget = null;
-let detailMovesWidget = null;
 let pokemonWidget = null;
-let moveDetailPokemonWidget = null;
-let abilityDetailPokemonWidget = null;
 let abilitiesWidget = null;
 let itemsWidget = null;
 let teamBuilderWidget = null;
+let searchDetailView = null;
 
 let breadcrumbView = null;
 
@@ -93,18 +90,6 @@ async function loadFormat(format) {
     movesWidget.destroy();
     movesWidget = null;
   }
-  if (detailMovesWidget) {
-    detailMovesWidget.destroy();
-    detailMovesWidget = null;
-  }
-  if (moveDetailPokemonWidget) {
-    moveDetailPokemonWidget.destroy();
-    moveDetailPokemonWidget = null;
-  }
-  if (abilityDetailPokemonWidget) {
-    abilityDetailPokemonWidget.destroy();
-    abilityDetailPokemonWidget = null;
-  }
   if (abilitiesWidget) {
     abilitiesWidget.destroy();
     abilitiesWidget = null;
@@ -112,6 +97,9 @@ async function loadFormat(format) {
   if (itemsWidget) {
     itemsWidget.destroy();
     itemsWidget = null;
+  }
+  if (searchDetailView) {
+    searchDetailView.destroy();
   }
   pendingSlotIndex = null;
 
@@ -244,10 +232,6 @@ function selectTeam(id) {
   currentTeamId = id;
   teamSelect.value = id;
   localStorage.setItem(LAST_TEAM_KEY, id);
-  if (detailMovesWidget) {
-    detailMovesWidget.destroy();
-    detailMovesWidget = null;
-  }
   if (pokemonWidget) pokemonWidget.clear();
   renderTeamWarning();
   renderTeamBar();
@@ -284,223 +268,8 @@ function switchToDetail() {
 
 async function showDetail(s) {
   breadcrumbView?.push({ type: "pokemon", id: s.id, name: s.name });
-  detailSpeciesId = s.id;
-  detailShiny = false;
-  if (detailMovesWidget) {
-    detailMovesWidget.destroy();
-    detailMovesWidget = null;
-  }
-  if (moveDetailPokemonWidget) {
-    moveDetailPokemonWidget.destroy();
-    moveDetailPokemonWidget = null;
-  }
-  if (abilityDetailPokemonWidget) {
-    abilityDetailPokemonWidget.destroy();
-    abilityDetailPokemonWidget = null;
-  }
   switchToDetail();
-
-  function statBarColor(val) {
-    if (val <= 29) return "#c44d4d";
-    if (val <= 59) return "#cc9f4a";
-    if (val <= 94) return "#e5c531";
-    if (val <= 134) return "#5fbb63";
-    if (val <= 159) return "#4f8ed4";
-    return "#ab6ac8";
-  }
-
-  const bst = Object.values(s.baseStats).reduce((a, b) => a + b, 0);
-  const spriteFile = detailShiny ? shinySpriteMap[s.id] : spriteMap[s.id];
-  const spritePath = detailShiny ? "sprites/shiny" : "sprites/champions";
-  let html = `
-    <div class="detail-top">
-      <div class="stats-block">
-        ${
-    ["hp", "atk", "def", "spa", "spd", "spe"].map((key) => {
-      const val = s.baseStats[key];
-      const label = { hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" }[key];
-      const hl = pokemonWidget && pokemonWidget.getSortBy() === key ? " stat-highlighted" : "";
-      const barColor = statBarColor(val);
-      return `<div class="stat-row${hl}"><span class="stat-label">${label}</span><span class="stat-val">${val}</span><span class="stat-bar-track"><span class="stat-bar-fill" style="background-color:${barColor};width:${val}px"></span></span></div>`;
-    }).join("\n        ")
-  }
-        <div class="stat-row stat-bst"><span class="stat-label">BST</span><span class="stat-val">${bst}</span><span class="stat-bar-track"></span></div>
-      </div>
-
-      <div class="detail-header-wrap">
-        <button class="add-to-team-btn" id="add-to-team-btn">Add to Team</button>
-        <div class="detail-header">
-          ${
-    spriteFile
-      ? `<img class="detail-sprite" src="${spritePath}/${spriteFile}" alt="${s.name}" style="cursor:pointer" title="Click to toggle shiny">`
-      : ""
-  }
-          <div>
-            <h2>${s.name}</h2>
-            <div class="types">${
-    [0, 1].map((i) => {
-      const t = s.types[i];
-      return `<span class="type-tag${t ? " " + t.toLowerCase() : " type-tag-empty"}">${t || ""}</span>`;
-    }).join("")
-  }</div>
-            <div class="detail-meta">
-            <span class="detail-meta-item"><span class="detail-meta-label">Height</span><span class="detail-meta-value">${s.heightm ?? "—"}m</span></span>
-            <span class="detail-meta-item"><span class="detail-meta-label">Weight</span><span class="detail-meta-value">${s.weightkg ?? "—"}kg</span></span>
-              <span class="detail-meta-item" title="Weight-based Base Damage of Low Kick and Grass Knot"><span class="detail-meta-label">Low Kick</span><span class="detail-meta-value">${getWeightTier(s.weightkg)} BP</span></span>
-              <span class="detail-meta-item"><span class="detail-meta-label">Gender</span><span class="detail-meta-value">${formatGender(s.gender)}</span></span>
-            </div>
-          </div>
-        </div>
-        <div class="ability-buttons">${s.abilities.map((a) => `<button class="ability-btn">${a}</button>`).join("")}</div>
-      </div>
-    </div>`;
-
-  function getWeightTier(kg) {
-    if (kg === null) return "—";
-    if (kg <= 9.9) return "20";
-    if (kg <= 24.9) return "40";
-    if (kg <= 49.9) return "60";
-    if (kg <= 99.9) return "80";
-    if (kg <= 199.9) return "100";
-    return "120";
-  }
-
-  function formatGender(g) {
-    if (g === null) return "♂ ♀";
-    if (g === "M") return "♂";
-    if (g === "F") return "♀";
-    return "—";
-  }
-
-  html += `<h3 class="detail-moves-heading">Moves</h3>
-    <div id="detail-moves-container"></div>`;
-
-  searchDetailContent.innerHTML = html;
-
-  const addBtn = searchDetailContent.querySelector("#add-to-team-btn");
-  if (addBtn) {
-    const team = getCurrentTeam();
-    const baseId = s.baseSpecies
-      ? (allSpecies.find((sp) => sp.name === s.baseSpecies)?.id ?? s.id)
-      : s.id;
-    const isInTeam = team?.slots.some(
-      (slot) =>
-        slot.speciesId === s.id ||
-        (s.baseSpecies && slot.speciesId === baseId),
-    ) ?? false;
-    const hasEmptySlot = team?.slots.some((slot) => slot.speciesId === null) ?? false;
-
-    if (isInTeam) {
-      addBtn.textContent = "Remove from Team";
-      addBtn.className = "add-to-team-btn remove-from-team";
-    } else if (!hasEmptySlot) {
-      addBtn.textContent = "Add to Team";
-      addBtn.className = "add-to-team-btn add-to-team";
-      addBtn.disabled = true;
-      addBtn.title = "Team is full";
-    } else {
-      addBtn.className = "add-to-team-btn add-to-team";
-    }
-
-    addBtn.addEventListener("click", () => {
-      const t = getCurrentTeam();
-      if (!t) return;
-
-      const speciesIdToCheck = s.baseSpecies
-        ? (allSpecies.find((sp) => sp.name === s.baseSpecies)?.id ?? s.id)
-        : s.id;
-      const inTeamIdx = t.slots.findIndex(
-        (slot) =>
-          slot.speciesId === s.id ||
-          (s.baseSpecies && slot.speciesId === speciesIdToCheck),
-      );
-
-      if (inTeamIdx !== -1) {
-        t.slots[inTeamIdx].speciesId = null;
-        t.slots[inTeamIdx].item = null;
-        persist();
-        renderTeamBar();
-        if (teamBuilderWidget) teamBuilderWidget.refresh();
-        refreshAddBtn();
-      } else {
-        const emptyIdx = t.slots.findIndex((slot) => slot.speciesId === null);
-        if (emptyIdx === -1) return;
-        fillSlot(emptyIdx, s.id);
-        refreshAddBtn();
-      }
-    });
-  }
-
-  const refreshAddBtn = () => {
-    const btn = searchDetailContent.querySelector("#add-to-team-btn");
-    if (!btn || !detailSpeciesId) return;
-    const t = getCurrentTeam();
-
-    const detailSpecies = allSpecies.find((sp) => sp.id === detailSpeciesId);
-    const baseId = detailSpecies?.baseSpecies
-      ? (allSpecies.find((sp) => sp.name === detailSpecies.baseSpecies)?.id ?? detailSpeciesId)
-      : detailSpeciesId;
-
-    const isInTeam = t?.slots.some(
-      (slot) =>
-        slot.speciesId === detailSpeciesId ||
-        (detailSpecies?.baseSpecies && slot.speciesId === baseId),
-    ) ?? false;
-    const hasEmptySlot = t?.slots.some((slot) => slot.speciesId === null) ?? false;
-    if (isInTeam) {
-      btn.textContent = "Remove from Team";
-      btn.className = "add-to-team-btn remove-from-team";
-      btn.disabled = false;
-      btn.title = "";
-    } else if (!hasEmptySlot) {
-      btn.textContent = "Add to Team";
-      btn.className = "add-to-team-btn add-to-team";
-      btn.disabled = true;
-      btn.title = "Team is full";
-    } else {
-      btn.textContent = "Add to Team";
-      btn.className = "add-to-team-btn add-to-team";
-      btn.disabled = false;
-      btn.title = "";
-    }
-  };
-  window.addEventListener("potato-team-change", refreshAddBtn);
-
-  const detailSpriteEl = searchDetailContent.querySelector(".detail-sprite");
-  if (detailSpriteEl) {
-    detailSpriteEl.addEventListener("click", () => {
-      detailShiny = !detailShiny;
-      const newPath = detailShiny ? "sprites/shiny" : "sprites/champions";
-      const newFile = detailShiny ? shinySpriteMap[s.id] : spriteMap[s.id];
-      detailSpriteEl.src = `${newPath}/${newFile}`;
-    });
-  }
-
-  const abilityNames = new Set(s.abilities.filter(Boolean));
-  if (abilityNames.size > 0) {
-    loadAbilities(currentFormat).then((allAbilities) => {
-      const nameToId = {};
-      for (const [id, a] of Object.entries(allAbilities)) nameToId[a.name] = id;
-      searchDetailContent.querySelectorAll(".ability-btn").forEach((btn) => {
-        const name = btn.textContent || "";
-        const id = nameToId[name];
-        if (id) {
-          btn.addEventListener("click", () => showAbilityDetail(id, allAbilities[id]));
-        }
-      });
-    });
-  }
-
-  const container = document.getElementById("detail-moves-container");
-  const speciesNames = {};
-  for (const sp of allSpecies) speciesNames[sp.id] = sp.name;
-  detailMovesWidget = new MoveSearchWidget({
-    container,
-    formatId: currentFormat,
-    learnsetSpecies: s.id,
-    speciesNames,
-    onMoveClick: (moveId, move) => showMoveDetail(moveId, move),
-  });
+  searchDetailView?.showPokemonDetail(s);
 }
 
 function showMoveDetail(moveId, move, resetTrail = false) {
@@ -509,185 +278,20 @@ function showMoveDetail(moveId, move, resetTrail = false) {
   } else {
     breadcrumbView?.push({ type: "move", id: moveId, name: move.name });
   }
-  if (detailMovesWidget) {
-    detailMovesWidget.destroy();
-    detailMovesWidget = null;
-  }
-  if (moveDetailPokemonWidget) {
-    moveDetailPokemonWidget.destroy();
-    moveDetailPokemonWidget = null;
-  }
-  if (abilityDetailPokemonWidget) {
-    abilityDetailPokemonWidget.destroy();
-    abilityDetailPokemonWidget = null;
-  }
   switchToDetail();
-
-  const bpDisplay = (m) => {
-    if (m.category === "Status") return "—";
-    if (m.basePower !== 0) return String(m.basePower);
-    if (m.name === "Night Shade" || m.name === "Seismic Toss") return "50";
-    return "?";
-  };
-
-  const accDisplay = (m) => {
-    if (typeof m.accuracy === "number") return m.accuracy + "%";
-    return "—";
-  };
-
-  const flagLabels = (move.flags || []).map((f) =>
-    MOVE_CLASSIFICATIONS[f] || f
-  );
-  const effectLabels = (move.effectCategories || []).map((e) =>
-    EFFECT_CATEGORIES[e] || e
-  );
-  const rangeLabel = move.range ? (RANGE_CATEGORIES[move.range] || move.range) : "";
-  const rangeHtml = rangeLabel
-    ? `<div class="move-detail-stat move-detail-stat-range"><span class="move-detail-stat-label">Range</span><span class="move-detail-stat-value">${rangeLabel}</span></div>`
-    : "";
-
-  const learnedBy = move.learnedBy || [];
-  const priorityHtml = move.priority !== 0
-    ? `<div class="move-detail-stat"><span class="move-detail-stat-label">Priority</span><span class="move-detail-stat-value">${move.priority > 0 ? "+" + move.priority : move.priority}</span></div>`
-    : "";
-
-  const html = `
-    <div class="move-detail">
-      <div class="move-detail-header">
-        <span class="move-detail-name">${move.name}</span>
-        <span class="type-tag ${move.type.toLowerCase()}">${move.type}</span>
-        <span class="move-entry-cat cat-${move.category.toLowerCase()}"><img class="cat-icon-small" src="sprites/categories/${move.category}_CP.png" alt="${move.category}"></span>
-      </div>
-      <div class="move-detail-stats">
-        <div class="move-detail-stat"><span class="move-detail-stat-label">BP</span><span class="move-detail-stat-value">${bpDisplay(move)}</span></div>
-        <div class="move-detail-stat"><span class="move-detail-stat-label">ACC</span><span class="move-detail-stat-value">${accDisplay(move)}</span></div>
-        <div class="move-detail-stat"><span class="move-detail-stat-label">PP</span><span class="move-detail-stat-value">${move.pp}</span></div>
-        ${rangeHtml}
-        ${priorityHtml}
-      </div>
-      ${
-    flagLabels.length > 0 || effectLabels.length > 0
-      ? `<div class="move-detail-badges">${
-        [...flagLabels, ...effectLabels].map((l) => `<span class="badge">${l}</span>`).join("")
-      }</div>`
-      : ""
-  }
-      ${
-    move.shortDesc
-      ? `<div class="move-detail-desc">${move.shortDesc}</div>`
-      : ""
-  }
-      <div class="move-detail-learned">
-        <h3 class="badge-group-label">Learned By (${learnedBy.length})</h3>
-        <div id="move-detail-learned-container"></div>
-      </div>
-    </div>`;
-
-  searchDetailContent.innerHTML = html;
-
-  if (learnedBy.length > 0) {
-    const container = document.getElementById("move-detail-learned-container");
-    moveDetailPokemonWidget = new PokemonSearchWidget({
-      container,
-      formatId: currentFormat,
-      onPokemonClick: (_speciesId, species) => showDetail(species),
-      species: allSpecies,
-      spriteMap,
-      learnedByFilter: learnedBy,
-    });
-  }
+  searchDetailView?.showMoveDetail(moveId, move, resetTrail);
 }
 
 function showAbilityDetail(abilityId, ability) {
   breadcrumbView?.push({ type: "ability", id: abilityId, name: ability.name });
-  if (detailMovesWidget) {
-    detailMovesWidget.destroy();
-    detailMovesWidget = null;
-  }
-  if (moveDetailPokemonWidget) {
-    moveDetailPokemonWidget.destroy();
-    moveDetailPokemonWidget = null;
-  }
-  if (abilityDetailPokemonWidget) {
-    abilityDetailPokemonWidget.destroy();
-    abilityDetailPokemonWidget = null;
-  }
   switchToDetail();
-
-  const effectLabels = (ability.effectCategories || []).map((e) =>
-    ABILITY_EFFECT_CATEGORIES[e] || e
-  );
-  const pokemonIds = ability.pokemon || [];
-
-  const html = `
-    <div class="move-detail">
-      <div class="move-detail-header">
-        <span class="move-detail-name">${ability.name}</span>
-      </div>
-      ${
-    effectLabels.length > 0
-      ? `<div class="move-detail-badges">${
-        effectLabels.map((l) => `<span class="badge">${l}</span>`).join("")
-      }</div>`
-      : ""
-  }
-      <div class="move-detail-desc">${ability.desc}</div>
-      <div class="move-detail-learned">
-        <h3 class="badge-group-label">Pokémon with ${ability.name} (${pokemonIds.length})</h3>
-        <div id="ability-detail-pokemon-container"></div>
-      </div>
-    </div>`;
-
-  searchDetailContent.innerHTML = html;
-
-  if (pokemonIds.length > 0) {
-    const container = document.getElementById("ability-detail-pokemon-container");
-    abilityDetailPokemonWidget = new PokemonSearchWidget({
-      container,
-      formatId: currentFormat,
-      onPokemonClick: (_speciesId, species) => showDetail(species),
-      species: allSpecies,
-      spriteMap,
-      learnedByFilter: pokemonIds,
-    });
-  }
+  searchDetailView?.showAbilityDetail(abilityId, ability);
 }
 
 function showItemDetail(itemId, item) {
   breadcrumbView?.reset({ type: "item", id: itemId, name: item.name });
-  if (detailMovesWidget) {
-    detailMovesWidget.destroy();
-    detailMovesWidget = null;
-  }
-  if (moveDetailPokemonWidget) {
-    moveDetailPokemonWidget.destroy();
-    moveDetailPokemonWidget = null;
-  }
-  if (abilityDetailPokemonWidget) {
-    abilityDetailPokemonWidget.destroy();
-    abilityDetailPokemonWidget = null;
-  }
   switchToDetail();
-
-  const categories = (item.category || []).map((c) =>
-    `<span class="badge">${c}</span>`
-  ).join("");
-
-  const html = `
-    <div class="move-detail">
-      <div class="move-detail-header">
-        <img class="item-detail-sprite" src="sprites/items/${item.sprite || itemId}.png" alt="${item.name}" onerror="this.style.display='none'">
-        <span class="move-detail-name">${item.name}</span>
-      </div>
-      ${categories ? `<div class="move-detail-badges">${categories}</div>` : ""}
-      ${
-    item.shortDesc || item.desc
-      ? `<div class="move-detail-desc">${item.shortDesc || item.desc}</div>`
-      : ""
-  }
-    </div>`;
-
-  searchDetailContent.innerHTML = html;
+  searchDetailView?.showItemDetail(itemId, item);
 }
 
 const leftSection = document.querySelector(".section-left");
@@ -936,6 +540,38 @@ breadcrumbView = new BreadcrumbView({
       });
     }
   },
+});
+
+searchDetailView = new SearchDetailView({
+  container: searchDetailContent,
+  getTeam: () => getCurrentTeam(),
+  getAllSpecies: () => allSpecies,
+  getSpriteMap: () => spriteMap,
+  getShinySpriteMap: () => shinySpriteMap,
+  getFormat: () => currentFormat,
+  onAddToTeam: (speciesId) => {
+    const team = getCurrentTeam();
+    if (!team) return;
+    const emptyIdx = team.slots.findIndex((slot) => slot.speciesId === null);
+    if (emptyIdx === -1) return;
+    fillSlot(emptyIdx, speciesId);
+  },
+  onRemoveFromTeam: (speciesId) => {
+    const team = getCurrentTeam();
+    if (!team) return;
+    const idx = team.slots.findIndex((slot) => slot.speciesId === speciesId);
+    if (idx !== -1) {
+      team.slots[idx].speciesId = null;
+      team.slots[idx].item = null;
+      persist();
+      renderTeamBar();
+      if (teamBuilderWidget) teamBuilderWidget.refresh();
+    }
+  },
+  onShowMoveDetail: (moveId, move) => showMoveDetail(moveId, move),
+  onShowAbilityDetail: (abilityId, ability) => showAbilityDetail(abilityId, ability),
+  onPokemonClick: (species) => showDetail(species),
+  loadAbilitiesModule: { loadAbilities },
 });
 
 const lastTeamId = localStorage.getItem(LAST_TEAM_KEY);
