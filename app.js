@@ -19,6 +19,7 @@ import { ItemSearchWidget } from "./lib/item-search-widget.js";
 import { DefensiveCoverageWidget } from "./lib/defensive-coverage-widget.js";
 import { MoveTypeCoverageWidget } from "./lib/move-type-coverage-widget.js";
 import { TeamBuilderWidget } from "./lib/team-builder-widget.js";
+import { BreadcrumbView } from "./lib/views/breadcrumb-view.js";
 
 const SPRITE_PATH = "sprites/champions";
 const LAST_TEAM_KEY = "potato-last-team";
@@ -50,71 +51,7 @@ let abilitiesWidget = null;
 let itemsWidget = null;
 let teamBuilderWidget = null;
 
-let breadcrumbs = [];
-let activeBreadcrumbIndex = -1;
-
-function resetBreadcrumbs(item) {
-  breadcrumbs = [item];
-  activeBreadcrumbIndex = 0;
-}
-
-function updateBreadcrumbs(item) {
-  const existing = breadcrumbs.findIndex((b) =>
-    b.type === item.type && b.id === item.id
-  );
-  if (existing !== -1) {
-    activeBreadcrumbIndex = existing;
-  } else {
-    breadcrumbs = breadcrumbs.slice(0, activeBreadcrumbIndex + 1);
-    breadcrumbs.push(item);
-    activeBreadcrumbIndex = breadcrumbs.length - 1;
-  }
-}
-
-function navigateToBreadcrumb(index) {
-  activeBreadcrumbIndex = index;
-  const b = breadcrumbs[index];
-  if (b.type === "pokemon") {
-    const species = getSpeciesById(b.id);
-    if (species) showDetail(species);
-  } else if (b.type === "move") {
-    loadMovesWithLearnsets(currentFormat).then((allMoves) => {
-      const move = allMoves[b.id];
-      if (move) showMoveDetail(b.id, move);
-    });
-  } else if (b.type === "ability") {
-    loadAbilities(currentFormat).then((allAbilities) => {
-      const ability = allAbilities[b.id];
-      if (ability) showAbilityDetail(b.id, ability);
-    });
-  }
-}
-
-function renderBreadcrumbBar() {
-  if (breadcrumbs.length === 0) {
-    breadcrumbBar.innerHTML = "";
-    breadcrumbBar.classList.add("hidden");
-    return;
-  }
-  breadcrumbBar.classList.remove("hidden");
-  let html = '<div class="breadcrumbs">';
-  for (let i = 0; i < breadcrumbs.length; i++) {
-    const b = breadcrumbs[i];
-    if (i > 0) html += '<span class="breadcrumb-sep">›</span>';
-    const cls = i === activeBreadcrumbIndex
-      ? "breadcrumb breadcrumb-active"
-      : "breadcrumb";
-    html += `<span class="${cls}" data-breadcrumb-index="${i}">${b.name}</span>`;
-  }
-  html += "</div>";
-  breadcrumbBar.innerHTML = html;
-  breadcrumbBar.querySelector(".breadcrumbs")?.addEventListener("click", (e) => {
-    const target = e.target.closest(".breadcrumb");
-    if (!target) return;
-    const index = parseInt(target.dataset.breadcrumbIndex);
-    navigateToBreadcrumb(index);
-  });
-}
+let breadcrumbView = null;
 
 function getCurrentTeam() {
   return teams.find((t) => t.id === currentTeamId);
@@ -176,9 +113,6 @@ async function loadFormat(format) {
     itemsWidget.destroy();
     itemsWidget = null;
   }
-  breadcrumbs = [];
-  activeBreadcrumbIndex = -1;
-  renderBreadcrumbBar();
   pendingSlotIndex = null;
 
   const [index, map, shinyMap, items] = await Promise.all([
@@ -349,7 +283,7 @@ function switchToDetail() {
 }
 
 async function showDetail(s) {
-  updateBreadcrumbs({ type: "pokemon", id: s.id, name: s.name });
+  breadcrumbView?.push({ type: "pokemon", id: s.id, name: s.name });
   detailSpeciesId = s.id;
   detailShiny = false;
   if (detailMovesWidget) {
@@ -442,7 +376,6 @@ async function showDetail(s) {
     <div id="detail-moves-container"></div>`;
 
   searchDetailContent.innerHTML = html;
-  renderBreadcrumbBar();
 
   const addBtn = searchDetailContent.querySelector("#add-to-team-btn");
   if (addBtn) {
@@ -572,9 +505,9 @@ async function showDetail(s) {
 
 function showMoveDetail(moveId, move, resetTrail = false) {
   if (resetTrail) {
-    resetBreadcrumbs({ type: "move", id: moveId, name: move.name });
+    breadcrumbView?.reset({ type: "move", id: moveId, name: move.name });
   } else {
-    updateBreadcrumbs({ type: "move", id: moveId, name: move.name });
+    breadcrumbView?.push({ type: "move", id: moveId, name: move.name });
   }
   if (detailMovesWidget) {
     detailMovesWidget.destroy();
@@ -651,7 +584,6 @@ function showMoveDetail(moveId, move, resetTrail = false) {
     </div>`;
 
   searchDetailContent.innerHTML = html;
-  renderBreadcrumbBar();
 
   if (learnedBy.length > 0) {
     const container = document.getElementById("move-detail-learned-container");
@@ -667,7 +599,7 @@ function showMoveDetail(moveId, move, resetTrail = false) {
 }
 
 function showAbilityDetail(abilityId, ability) {
-  updateBreadcrumbs({ type: "ability", id: abilityId, name: ability.name });
+  breadcrumbView?.push({ type: "ability", id: abilityId, name: ability.name });
   if (detailMovesWidget) {
     detailMovesWidget.destroy();
     detailMovesWidget = null;
@@ -707,7 +639,6 @@ function showAbilityDetail(abilityId, ability) {
     </div>`;
 
   searchDetailContent.innerHTML = html;
-  renderBreadcrumbBar();
 
   if (pokemonIds.length > 0) {
     const container = document.getElementById("ability-detail-pokemon-container");
@@ -723,7 +654,7 @@ function showAbilityDetail(abilityId, ability) {
 }
 
 function showItemDetail(itemId, item) {
-  resetBreadcrumbs({ type: "item", id: itemId, name: item.name });
+  breadcrumbView?.reset({ type: "item", id: itemId, name: item.name });
   if (detailMovesWidget) {
     detailMovesWidget.destroy();
     detailMovesWidget = null;
@@ -757,7 +688,6 @@ function showItemDetail(itemId, item) {
     </div>`;
 
   searchDetailContent.innerHTML = html;
-  renderBreadcrumbBar();
 }
 
 const leftSection = document.querySelector(".section-left");
@@ -930,7 +860,7 @@ document.querySelector('[data-subtab="abilities"]')?.addEventListener("click", (
       container,
       formatId: currentFormat,
       onAbilityClick: (abilityId, ability) => {
-        resetBreadcrumbs({ type: "ability", id: abilityId, name: ability.name });
+        breadcrumbView?.reset({ type: "ability", id: abilityId, name: ability.name });
         showAbilityDetail(abilityId, ability);
       },
     });
@@ -966,7 +896,7 @@ pokemonWidget = new PokemonSearchWidget({
     if (pendingSlotIndex !== null) {
       fillSlot(pendingSlotIndex, speciesId);
     } else {
-      resetBreadcrumbs({ type: "pokemon", id: speciesId, name: species.name });
+      breadcrumbView?.reset({ type: "pokemon", id: speciesId, name: species.name });
       showDetail(species);
     }
   },
@@ -987,6 +917,26 @@ if (teams.length === 0) {
 teamWarning.title = "duplicate species - Team not legal for regulation M-A";
 
 renderTeamSelect();
+
+breadcrumbView = new BreadcrumbView({
+  container: breadcrumbBar,
+  onNavigate: (item) => {
+    if (item.type === "pokemon") {
+      const species = getSpeciesById(item.id);
+      if (species) showDetail(species);
+    } else if (item.type === "move") {
+      loadMovesWithLearnsets(currentFormat).then((allMoves) => {
+        const move = allMoves[item.id];
+        if (move) showMoveDetail(item.id, move);
+      });
+    } else if (item.type === "ability") {
+      loadAbilities(currentFormat).then((allAbilities) => {
+        const ability = allAbilities[item.id];
+        if (ability) showAbilityDetail(item.id, ability);
+      });
+    }
+  },
+});
 
 const lastTeamId = localStorage.getItem(LAST_TEAM_KEY);
 const initialTeam = teams.find((t) => t.id === lastTeamId) || teams[0];
