@@ -37,10 +37,9 @@ Build a browser-based Pokémon Champions planning tool with format-accurate data
 │   ├── team-builder-widget.js  # Full team builder with 6 slots (class-based)
 │   ├── defensive-coverage-widget.js  # Type matchup table for team analysis
 │   ├── team-store.js          # localStorage-backed team CRUD
-│   └── breadcrumb-widget.js   # Breadcrumb trail rendering and navigation
-├── views/                     # View-specific widgets
-│   └── ...
-├── app.js                     # Main app: format selector, grid, search detail, move/ability detail, breadcrumbs, team header
+│   └── views/
+│       ├── breadcrumb-view.js  # Breadcrumb trail management
+│       └── search-detail-view.js  # Pokemon/Move/Ability/Item detail rendering
 ├── index.html                 # Entry point
 ├── style.css                  # Dark theme, type colors, sprites, responsive
 ├── package.json               # Scripts: prep, start
@@ -140,33 +139,153 @@ npm start                # → http://localhost:8787
 - `index.html` loads `app.js` directly as module
 
 ## Frontend Architecture
-- **`app.js`**: Main app: format selector, grid, search detail, move/ability detail, breadcrumbs, team header
-- **`lib/data-loader.js`**: `setFormat()`, `loadIndex()`, `loadLearnsets()`, `loadMoves()`, `loadMovesWithLearnsets()`, `loadAbilities()`, `loadItems()` — each returns a promise, cached after first fetch. Layer 1 = fetch JSON; Layer 2 = render from cache
-- **`lib/types.js`**: Constants export — `TYPES`, `TYPE_COLORS`, `MOVE_CLASSIFICATIONS`, `EFFECT_CATEGORIES`, `RANGE_CATEGORIES`, `ABILITY_EFFECT_CATEGORIES`, `ITEM_CATEGORIES`
-- **`lib/move-search-widget.js`**: `MoveSearchWidget` class — builds own DOM for search input, filter popup, sort controls, result grid. Emits `onMoveClick`. Includes `RANGE_CATEGORIES`, `MOVE_CLASSIFICATIONS`, `EFFECT_CATEGORIES`, `TYPES`, `TYPE_COLORS` exports.
-- **`lib/pokemon-search-widget.js`**: `PokemonSearchWidget` class — builds own DOM with `.ps-*` prefixed selectors (avoids ID conflicts with multiple instances). Supports card/list view, sort by dex/alpha/stats, mega toggle, filter popup (type/ability/move/classification/effect/ability_category), `setLearnedByFilter()`, `onPokemonClick`. Accepts `species`/`spriteMap`/`learnedByFilter` in constructor for one-shot initialization.
-- **`lib/ability-search-widget.js`**: `AbilitySearchWidget` class — builds own DOM for search input, filter popup with effect categories, sort controls, result list. Emits `onAbilityClick`. Exports `ABILITY_EFFECT_CATEGORIES` label map.
-- **`lib/item-search-widget.js`**: `ItemSearchWidget` class — builds own DOM with category buttons, search input, sort controls, result grid. Emits `onItemClick`. Exports `ITEM_CATEGORIES` label map.
-- **`lib/team-builder-widget.js`**: `TeamBuilderWidget` class — full team builder with 6 slots, species/move/item search popups, stat allocation (EVs), nature selection, ability selection, gender, shiny toggle, mega stone checkbox.
-- **`lib/defensive-coverage-widget.js`**: `DefensiveCoverageWidget` class — type matchup table for all 18 types against team of 6, with species search, ability selector, and notes section on Mold Breaker/Scrappy/Gravity.
-- **`lib/team-store.js`**: `createTeam()`, `loadTeams()`, `saveTeams()` — localStorage-backed team CRUD with per-format team storage.
-- **`lib/breadcrumb-widget.js`**: `BreadcrumbWidget` class — breadcrumb trail rendering and navigation.
-- **`lib/views/`**: Sub-directory containing view-specific widgets.
+
+### Current State
+- **`app.js`** (~580 lines): Main orchestrator — handles initialization, tab navigation, team management callbacks, and coordinates between components.
+- **`lib/data-loader.js`**: Fetch + cache layer for JSON data per format.
+- **`lib/types.js`**: Constants exports (TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, etc.).
+- **`lib/team-store.js`**: Team CRUD with localStorage persistence.
+- **`lib/widgets/`**: Search widgets (Pokemon, Move, Ability, Item) — self-contained, manage their own DOM and state.
+- **`lib/team-builder-widget.js`**: Full team builder with 6 slots, EV allocation, nature selection.
+- **`lib/defensive-coverage-widget.js`**: Type matchup table for team analysis.
+- **`lib/views/`**: Extracted view components (see below).
+
+### Extracted View Components (lib/views/)
+
+| Component | Status | Purpose |
+|-----------|--------|---------|
+| `breadcrumb-view.js` | ✅ Done | Breadcrumb trail management, click navigation |
+| `search-detail-view.js` | ✅ Done | Pokemon/Move/Ability/Item detail rendering |
+| `team-header-view.js` | 🔲 Todo | Team bar, team select dropdown, warning indicator |
+| `navigation-controller.js` | 🔲 Todo | Tab/subtab switching, lazy widget init |
+| `app-state.js` | 🔲 Todo | Centralized state (teams, species, sprite maps) |
+| `app-init.js` | 🔲 Todo | Initialization sequence orchestration |
+
+### Widgets (lib/)
+- **`move-search-widget.js`**: Move search/filter/browse. Emits `onMoveClick`.
+- **`pokemon-search-widget.js`**: Pokémon grid with card/list view, filters, sort. Emits `onPokemonClick`.
+- **`ability-search-widget.js`**: Ability search with effect category filter. Emits `onAbilityClick`.
+- **`item-search-widget.js`**: Item search with category buttons. Emits `onItemClick`.
+
+### Widget Lifecycle Pattern
+Widgets are created lazily on first tab activation. App.js holds references and destroys/recreates them on format change:
+
+```javascript
+// Lazy init pattern
+if (!movesWidget) {
+  movesWidget = new MoveSearchWidget({ container, formatId, ... });
+}
+
+// Cleanup on format change
+if (movesWidget) { movesWidget.destroy(); movesWidget = null; }
+```
+
+## Refactoring Plan
+
+### Completed Steps
+
+**Step 1 — BreadcrumbView** (`lib/views/breadcrumb-view.js`)
+- Extracted from `app.js` lines 56-117
+- Manages `items[]`, `activeIndex` internally
+- `reset(item)`, `push(item)`, `render()`
+- `onNavigate` callback for navigation events
+
+**Step 2 — SearchDetailView** (`lib/views/search-detail-view.js`)
+- Extracted from `app.js` lines ~285-692
+- `showPokemonDetail()`, `showMoveDetail()`, `showAbilityDetail()`, `showItemDetail()`
+- Manages child widgets (detailMovesWidget, *PokemonWidget instances)
+- Listens to `potato-team-change` for add-to-team button refresh
+- Uses callbacks for navigation: `onShowMoveDetail`, `onShowAbilityDetail`, `onPokemonClick`
+
+### Remaining Steps (Priority Order)
+
+**Step 3 — TeamHeaderView** (`lib/views/team-header-view.js`)
+- Extract: `renderTeamBar()`, `renderTeamSelect()`, `selectTeam()`, `handleNewTeam()`, `renderTeamWarning()`
+- New file: `lib/views/team-header-view.js`
+- Callbacks: `onSelectTeam(id)`, `onNewTeam()`, `onNavigateToBuilder()`
+- Takes team data as parameter (doesn't hold state internally)
+- Removes: ~80 lines from app.js
+
+**Step 4 — NavigationController** (`lib/navigation-controller.js`)
+- Extract: `selectTab()`, `selectSubTab()`, `switchToDetail()`, `switchToTeamBuilder()`, `lazyInit*` functions, event listeners
+- New file: `lib/navigation-controller.js`
+- Centralizes all tab/responsive routing logic
+- Removes: ~120 lines from app.js
+
+**Step 5 — AppState** (`lib/app-state.js`)
+- Centralize scattered `let` variables: `currentFormat`, `teams`, `currentTeamId`, `allSpecies`, `spriteMap`, `shinySpriteMap`, `pendingSlotIndex`
+- Plain object module with getter functions
+- Components receive getters via constructor options
+- Removes: ~40 lines from app.js
+
+**Step 6 — AppInit** (`lib/app-init.js`)
+- Extract initialization sequence (lines ~485-580)
+- Creates PokemonSearchWidget, BreadcrumbView, SearchDetailView
+- Loads teams, kicks off initial format load
+- Removes: ~100 lines from app.js
+
+### Target Line Counts
+
+| File | Before | After Step 3 | After Step 4 | After Step 5 | After Step 6 |
+|------|--------|--------------|--------------|--------------|--------------|
+| app.js | 994 → 580 | ~500 | ~380 | ~340 | ~240 |
+| lib/views/ | 0 → 492 | +170 | +120 | +40 | +100 |
 
 ## Key Patterns
-- Three `PokemonSearchWidget` instances can exist: main grid (`pokemonWidget`), move-detail learned-by (`moveDetailPokemonWidget`), and ability-detail pokemon list (`abilityDetailPokemonWidget`) — `.ps-*` classes prevent CSS ID conflicts
-- Two `MoveSearchWidget` instances exist: one for the Moves subtab (`movesWidget`), one for per-species detail (`detailMovesWidget`)
-- Click-highlight uses direct DOM class toggling (`.selected`), not re-renders
-- Move descriptions come only from Game8 (`shortDesc`); `desc` stripped in prep pipeline
-- `target` field renamed to `range` in both data and frontend; values remapped to natural labels
-- Only classification flags kept in move data; mechanical flags and `protect` stripped
-- `switchToDetail()` guards against redundant tab-switching when already on the detail tab
-- `PokemonSearchWidget` accepts `learnedByFilter` in constructor to avoid a double render (all species → filtered)
-- Breadcrumbs at the top of the Search Detail view, rendered into `#breadcrumb-bar` (outside the content area), with click-navigation and trail management (truncation, index shift)
-- **`ItemSearchWidget`**: `ITEM_CATEGORIES` exports Game8 item types — Stat Boost, Power Boost, Defense, Recovery, Effect Extend, Berry, Mega Stone, Other. Category buttons filter items; sorting alphabetical only. Item categorization is assigned explicitly by ID in prep_items.py.
+
+### Component Communication
+- View components (breadcrumb-view, search-detail-view, team-header-view) receive callbacks and data getters in their constructors
+- App.js acts as a coordinator, wiring callbacks between components
+- Components do NOT hold app state directly — they receive data via getters passed as options
+
+### Three PokemonSearchWidget Instances
+1. Main grid (`pokemonWidget`) — Pokédex tab
+2. Move detail "Learned By" list — within SearchDetailView
+3. Ability detail "Pokémon with..." list — within SearchDetailView
+- All use `.ps-*` prefixed class selectors to avoid CSS ID conflicts
+
+### Two MoveSearchWidget Instances
+1. Moves subtab (`movesWidget`) — full move list
+2. Pokemon detail moves list (`detailMovesWidget`) — filtered by species learnset
+
+### Click-Highlight Pattern
+- Uses direct DOM class toggling (`.selected`), not re-renders
+- Avoids full widget refresh on selection change
+
+### Breadcrumb Navigation
+- BreadcrumbView manages `items[]` and `activeIndex` internally
+- `reset(item)` — starts new trail
+- `push(item)` — appends if not duplicate, truncates if navigating back
+- `onNavigate` callback fires on breadcrumb click
+
+### Widget Lifecycle
+- Widgets created lazily on first tab activation
+- App.js holds widget references and calls `destroy()` on format change
+- New data passed via `setData()` or re-initialization
+
+### SearchDetailView Sub-Widgets
+- Manages its own child widgets: `detailMovesWidget`, `moveDetailPokemonWidget`, `abilityDetailPokemonWidget`
+- Destroys children before rendering new content
+- Listens to `potato-team-change` event for add-to-team button refresh
 
 ## TODOs
 
+### Completed
 - [x] Finish formatting the items.json file (remove remaining non-display fields: fling, isChoice, isBerry, itemUser) — handled by prep_items.py in `npm run prep` chain
 - [x] Assign item categories explicitly by ID in prep_items.py
 - [x] Add defensive coverage tool (team list on left, coverage analysis on right)
+- [x] Extract BreadcrumbView component (`lib/views/breadcrumb-view.js`)
+- [x] Extract SearchDetailView component (`lib/views/search-detail-view.js`)
+
+### Refactoring (In Progress)
+- [ ] Extract TeamHeaderView component (`lib/views/team-header-view.js`) — next step
+- [ ] Extract NavigationController (`lib/navigation-controller.js`)
+- [ ] Extract AppState (`lib/app-state.js`)
+- [ ] Extract AppInit (`lib/app-init.js`)
+- [ ] Slim app.js to ~240 lines
+
+### Pending / Future
+- [ ] Breadcrumb optimizations (early return on same index, bounds checking)
+- [ ] Implement Move Type Coverage tool (currently placeholder)
+- [ ] Implement Damage Calculator (currently placeholder)
+- [ ] Implement Imports feature (currently placeholder)

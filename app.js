@@ -20,15 +20,14 @@ import { DefensiveCoverageWidget } from "./lib/defensive-coverage-widget.js";
 import { MoveTypeCoverageWidget } from "./lib/move-type-coverage-widget.js";
 import { TeamBuilderWidget } from "./lib/team-builder-widget.js";
 import { BreadcrumbView } from "./lib/views/breadcrumb-view.js";
+import { HeaderView } from "./lib/views/header-view.js";
 import { SearchDetailView } from "./lib/views/search-detail-view.js";
-
-const SPRITE_PATH = "sprites/champions";
-const LAST_TEAM_KEY = "potato-last-team";
 
 const formatSelect = document.getElementById("format-select");
 const teamSelect = document.getElementById("team-select");
 const newTeamBtn = document.getElementById("new-team-btn");
 const teamWarning = document.getElementById("team-warning");
+const headerTeam = document.getElementById("header-team");
 const searchDetailContent = document.getElementById("search-detail-content");
 const breadcrumbBar = document.getElementById("breadcrumb-bar");
 
@@ -49,14 +48,7 @@ let teamBuilderWidget = null;
 let searchDetailView = null;
 
 let breadcrumbView = null;
-
-function getCurrentTeam() {
-  return teams.find((t) => t.id === currentTeamId);
-}
-
-function getSpeciesById(id) {
-  return allSpecies.find((s) => s.id === id);
-}
+let headerView = null;
 
 function isTeamLegal(team) {
   const nums = [];
@@ -70,13 +62,12 @@ function isTeamLegal(team) {
   return true;
 }
 
-function renderTeamWarning() {
-  const team = getCurrentTeam();
-  if (team && !isTeamLegal(team)) {
-    teamWarning.classList.remove("hidden");
-  } else {
-    teamWarning.classList.add("hidden");
-  }
+function getCurrentTeam() {
+  return teams.find((t) => t.id === currentTeamId);
+}
+
+function getSpeciesById(id) {
+  return allSpecies.find((s) => s.id === id);
 }
 
 function persist() {
@@ -129,7 +120,7 @@ async function loadFormat(format) {
     );
   }
 
-  renderTeamBar();
+  headerView?.renderTeamBar();
 }
 
 function fillSlot(slotIndex, speciesId, item) {
@@ -162,91 +153,9 @@ function fillSlot(slotIndex, speciesId, item) {
   };
   team.slots[slotIndex].item = finalItem;
   persist();
-  renderTeamWarning();
-  renderTeamBar();
+  headerView?.renderTeamWarning();
+  headerView?.renderTeamBar();
   if (teamBuilderWidget) teamBuilderWidget.refresh();
-}
-
-function renderTeamBar() {
-  const headerTeam = document.getElementById("header-team");
-  headerTeam.innerHTML = "";
-  const team = getCurrentTeam();
-  if (!team) {
-    headerTeam.classList.add("hidden");
-    return;
-  }
-  headerTeam.classList.remove("hidden");
-
-  for (let i = 0; i < 6; i++) {
-    const slot = team.slots[i];
-    const el = document.createElement("div");
-    el.className = "header-slot";
-
-    if (slot.speciesId) {
-      const species = getSpeciesById(slot.speciesId);
-      el.classList.add("filled");
-      if (species) {
-        const spriteFile = spriteMap[species.id];
-        if (spriteFile) {
-          const img = document.createElement("img");
-          img.className = "header-slot-sprite";
-          img.src = `${SPRITE_PATH}/${spriteFile}`;
-          img.alt = species.name;
-          el.appendChild(img);
-        }
-      }
-    } else {
-      el.classList.add("empty");
-    }
-
-    headerTeam.appendChild(el);
-  }
-
-  headerTeam.addEventListener("click", () => {
-    switchToTeamBuilder();
-  });
-}
-
-function renderTeamSelect() {
-  const prev = teamSelect.value;
-  teamSelect.innerHTML = "";
-  for (const t of teams) {
-    const opt = document.createElement("option");
-    opt.value = t.id;
-    opt.textContent = t.name;
-    teamSelect.appendChild(opt);
-  }
-  if (teams.some((t) => t.id === prev)) {
-    teamSelect.value = prev;
-  } else if (teams.length > 0) {
-    teamSelect.value = teams[0].id;
-  }
-  currentTeamId = teamSelect.value || null;
-  renderTeamWarning();
-  renderTeamBar();
-  window.dispatchEvent(new Event("potato-team-change"));
-}
-
-function selectTeam(id) {
-  switchToTeamBuilder();
-  currentTeamId = id;
-  teamSelect.value = id;
-  localStorage.setItem(LAST_TEAM_KEY, id);
-  if (pokemonWidget) pokemonWidget.clear();
-  renderTeamWarning();
-  renderTeamBar();
-  if (teamBuilderWidget) teamBuilderWidget.refresh();
-  defensiveCoverageWidget?.refresh();
-  window.dispatchEvent(new Event("potato-team-change"));
-}
-
-function handleNewTeam() {
-  const count = teams.filter((t) => t.format === currentFormat).length + 1;
-  const team = createTeam(`Team ${count}`, currentFormat);
-  teams.push(team);
-  persist();
-  renderTeamSelect();
-  selectTeam(team.id);
 }
 
 function isDetailTabActive() {
@@ -333,10 +242,9 @@ function selectTab(tabId, section) {
   }
 }
 
-function lazyInitTeamBuilder() {
+function initTeamBuilder() {
   if (teamBuilderWidget) return;
   const container = document.getElementById("tab-content-team-builder");
-  container.innerHTML = "";
   teamBuilderWidget = new TeamBuilderWidget({
     container,
     species: allSpecies,
@@ -346,8 +254,8 @@ function lazyInitTeamBuilder() {
     getTeam: getCurrentTeam,
     onSlotChange: () => {
       persist();
-      renderTeamWarning();
-      renderTeamBar();
+      headerView?.renderTeamWarning();
+      headerView?.renderTeamBar();
       defensiveCoverageWidget?.refresh();
       window.dispatchEvent(new Event("potato-team-change"));
     },
@@ -356,7 +264,7 @@ function lazyInitTeamBuilder() {
 }
 
 function switchToTeamBuilder() {
-  lazyInitTeamBuilder();
+  initTeamBuilder();
   if (window.innerWidth >= 768 && leftSection) {
     selectTab("team-builder", leftSection);
   } else {
@@ -435,12 +343,6 @@ formatSelect.addEventListener("change", () => {
   loadFormat(formatSelect.value);
 });
 
-teamSelect.addEventListener("change", () => {
-  selectTeam(teamSelect.value);
-});
-
-newTeamBtn.addEventListener("click", handleNewTeam);
-
 document.querySelector('[data-subtab="moves"]')?.addEventListener("click", () => {
   if (!movesWidget) {
     const container = document.getElementById("subtab-content-moves");
@@ -508,6 +410,7 @@ pokemonWidget = new PokemonSearchWidget({
 
 pokemonDataPromise.then(({ index, map }) => {
   pokemonWidget.setData(index, map);
+  initTeamBuilder();
 });
 
 teams = loadTeams();
@@ -520,7 +423,46 @@ if (teams.length === 0) {
 
 teamWarning.title = "duplicate species - Team not legal for regulation M-A";
 
-renderTeamSelect();
+headerView = new HeaderView({
+  container: document.getElementById("header-team"),
+  headerTeam,
+  teamSelect,
+  newTeamBtn,
+  teamWarning,
+  getTeam: () => getCurrentTeam(),
+  getTeams: () => teams,
+  getSpriteMap: () => spriteMap,
+  getSpeciesById,
+  isTeamLegal,
+  getCurrentFormat: () => currentFormat,
+  onSelectTeam: (id) => {
+    currentTeamId = id;
+    localStorage.setItem("potato-last-team", id);
+    if (pokemonWidget) pokemonWidget.clear();
+    headerView?.renderTeamWarning();
+    headerView?.renderTeamBar();
+    if (teamBuilderWidget) teamBuilderWidget.refresh();
+    defensiveCoverageWidget?.refresh();
+    window.dispatchEvent(new Event("potato-team-change"));
+  },
+  onNewTeam: () => {
+    const count = teams.filter((t) => t.format === currentFormat).length + 1;
+    const team = createTeam(`Team ${count}`, currentFormat);
+    teams.push(team);
+    persist();
+    headerView?.renderTeamSelect();
+    currentTeamId = team.id;
+    localStorage.setItem("potato-last-team", team.id);
+    headerView?.renderTeamWarning();
+    headerView?.renderTeamBar();
+    window.dispatchEvent(new Event("potato-team-change"));
+  },
+  onNavigateToBuilder: () => {
+    switchToTeamBuilder();
+  },
+});
+
+headerView.renderTeamSelect();
 
 breadcrumbView = new BreadcrumbView({
   container: breadcrumbBar,
@@ -564,7 +506,7 @@ searchDetailView = new SearchDetailView({
       team.slots[idx].speciesId = null;
       team.slots[idx].item = null;
       persist();
-      renderTeamBar();
+      headerView?.renderTeamBar();
       if (teamBuilderWidget) teamBuilderWidget.refresh();
     }
   },
@@ -574,7 +516,11 @@ searchDetailView = new SearchDetailView({
   loadAbilitiesModule: { loadAbilities },
 });
 
-const lastTeamId = localStorage.getItem(LAST_TEAM_KEY);
+const lastTeamId = localStorage.getItem("potato-last-team");
 const initialTeam = teams.find((t) => t.id === lastTeamId) || teams[0];
-selectTeam(initialTeam.id);
+currentTeamId = initialTeam.id;
+teamSelect.value = initialTeam.id;
+headerView?.renderTeamBar();
+headerView?.renderTeamWarning();
+window.dispatchEvent(new Event("potato-team-change"));
 loadFormat("m-a");
