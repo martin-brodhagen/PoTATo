@@ -22,6 +22,7 @@ import { TeamBuilderWidget } from "./lib/team-builder-widget.js";
 import { BreadcrumbView } from "./lib/views/breadcrumb-view.js";
 import { HeaderView } from "./lib/views/header-view.js";
 import { SearchDetailView } from "./lib/views/search-detail-view.js";
+import { NavigationController } from "./lib/navigation-controller.js";
 
 const formatSelect = document.getElementById("format-select");
 const teamSelect = document.getElementById("team-select");
@@ -158,26 +159,11 @@ function fillSlot(slotIndex, speciesId, item) {
   if (teamBuilderWidget) teamBuilderWidget.refresh();
 }
 
-function isDetailTabActive() {
-  const rightSection = document.querySelector(".section-right");
-  const contentId = "tab-content-search-detail";
-  const panel = rightSection?.querySelector(`#${contentId}`) ?? document.getElementById(contentId);
-  return panel ? !panel.classList.contains("hidden") : false;
-}
+let nav = null;
 
-function switchToDetail() {
-  if (isDetailTabActive()) return;
-  const rightSection = document.querySelector(".section-right");
-  if (window.innerWidth >= 768 && rightSection) {
-    selectTab("search-detail", rightSection);
-  } else {
-    selectTab("search-detail");
-  }
-}
-
-async function showDetail(s) {
+function showDetail(s) {
   breadcrumbView?.push({ type: "pokemon", id: s.id, name: s.name });
-  switchToDetail();
+  nav?.navigate("search-detail");
   searchDetailView?.showPokemonDetail(s);
 }
 
@@ -187,62 +173,26 @@ function showMoveDetail(moveId, move, resetTrail = false) {
   } else {
     breadcrumbView?.push({ type: "move", id: moveId, name: move.name });
   }
-  switchToDetail();
+  nav?.navigate("search-detail");
   searchDetailView?.showMoveDetail(moveId, move, resetTrail);
 }
 
 function showAbilityDetail(abilityId, ability) {
   breadcrumbView?.push({ type: "ability", id: abilityId, name: ability.name });
-  switchToDetail();
+  nav?.navigate("search-detail");
   searchDetailView?.showAbilityDetail(abilityId, ability);
 }
 
 function showItemDetail(itemId, item) {
   breadcrumbView?.reset({ type: "item", id: itemId, name: item.name });
-  switchToDetail();
+  nav?.navigate("search-detail");
   searchDetailView?.showItemDetail(itemId, item);
 }
 
-const leftSection = document.querySelector(".section-left");
+let defensiveCoverageWidget = null;
+let moveCoverageWidget = null;
 
-function selectTab(tabId, section) {
-  const isMobile = window.innerWidth < 768;
-
-  if (section && !isMobile) {
-    section.querySelectorAll(".tab").forEach((el) => {
-      el.classList.toggle("active", el.dataset.tab === tabId);
-    });
-    section.querySelectorAll(".tab-content").forEach((el) => {
-      el.classList.toggle("hidden", el.id !== `tab-content-${tabId}`);
-    });
-  } else {
-    document.querySelectorAll(".tab").forEach((el) => {
-      el.classList.toggle("active", el.dataset.tab === tabId);
-    });
-    document.querySelectorAll(".tab-content").forEach((el) => {
-      el.classList.toggle("hidden", el.id !== `tab-content-${tabId}`);
-    });
-  }
-
-  if (isMobile) {
-    const activePanel = document.getElementById(`tab-content-${tabId}`);
-    const activeSection = activePanel?.closest(".section");
-    document.querySelectorAll(".section").forEach((el) => {
-      el.classList.toggle("hidden", el !== activeSection);
-    });
-  }
-
-  if (tabId === "defensive-coverage") {
-    lazyInitDefensiveCoverage();
-    defensiveCoverageWidget?.refresh();
-  }
-
-  if (tabId === "move-coverage") {
-    lazyInitMoveCoverage();
-  }
-}
-
-function initTeamBuilder() {
+function ensureTeamBuilder() {
   if (teamBuilderWidget) return;
   const container = document.getElementById("tab-content-team-builder");
   teamBuilderWidget = new TeamBuilderWidget({
@@ -263,22 +213,8 @@ function initTeamBuilder() {
   });
 }
 
-function switchToTeamBuilder() {
-  initTeamBuilder();
-  if (window.innerWidth >= 768 && leftSection) {
-    selectTab("team-builder", leftSection);
-  } else {
-    selectTab("team-builder");
-  }
-}
-
-let defensiveCoverageWidget = null;
-let moveCoverageWidget = null;
-
-function lazyInitDefensiveCoverage() {
+function ensureDefensiveCoverage() {
   if (defensiveCoverageWidget) return;
-  const container = document.getElementById("defensive-coverage-content");
-  container.innerHTML = "";
   defensiveCoverageWidget = new DefensiveCoverageWidget({
     container: document.getElementById("tab-content-defensive-coverage"),
     species: allSpecies,
@@ -300,10 +236,8 @@ function lazyInitDefensiveCoverage() {
   });
 }
 
-function lazyInitMoveCoverage() {
+function ensureMoveCoverage() {
   if (moveCoverageWidget) return;
-  const container = document.getElementById("move-coverage-content");
-  container.innerHTML = "";
   moveCoverageWidget = new MoveTypeCoverageWidget({
     container: document.getElementById("tab-content-move-coverage"),
     species: allSpecies,
@@ -311,33 +245,6 @@ function lazyInitMoveCoverage() {
     getTeam: getCurrentTeam,
   });
 }
-
-function selectSubTab(subTabId, container) {
-  container.querySelectorAll(".sub-tab").forEach((el) => {
-    el.classList.toggle("active", el.dataset.subtab === subTabId);
-  });
-  container.querySelectorAll(".subtab-content").forEach((el) => {
-    el.classList.toggle("hidden", el.id !== `subtab-content-${subTabId}`);
-  });
-}
-
-document.querySelectorAll(".sub-tab").forEach((el) => {
-  el.addEventListener("click", () => {
-    const subTabId = el.dataset.subtab;
-    if (!subTabId) return;
-    const container = el.closest(".tab-content");
-    selectSubTab(subTabId, container);
-  });
-});
-
-document.querySelectorAll(".tab").forEach((el) => {
-  el.addEventListener("click", () => {
-    const tabId = el.dataset.tab;
-    if (!tabId) return;
-    const section = el.closest(".section");
-    selectTab(tabId, section);
-  });
-});
 
 formatSelect.addEventListener("change", () => {
   loadFormat(formatSelect.value);
@@ -410,7 +317,7 @@ pokemonWidget = new PokemonSearchWidget({
 
 pokemonDataPromise.then(({ index, map }) => {
   pokemonWidget.setData(index, map);
-  initTeamBuilder();
+  ensureTeamBuilder();
 });
 
 teams = loadTeams();
@@ -422,6 +329,18 @@ if (teams.length === 0) {
 }
 
 teamWarning.title = "duplicate species - Team not legal for regulation M-A";
+
+nav = new NavigationController({
+  onActivate: {
+    'defensive-coverage': () => {
+      ensureDefensiveCoverage();
+      defensiveCoverageWidget?.refresh();
+    },
+    'move-coverage': () => {
+      ensureMoveCoverage();
+    },
+  },
+});
 
 headerView = new HeaderView({
   container: document.getElementById("header-team"),
@@ -458,7 +377,7 @@ headerView = new HeaderView({
     window.dispatchEvent(new Event("potato-team-change"));
   },
   onNavigateToBuilder: () => {
-    switchToTeamBuilder();
+    nav?.navigate("team-builder");
   },
 });
 
