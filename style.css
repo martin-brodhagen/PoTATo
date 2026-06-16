@@ -512,9 +512,6 @@ button:hover {
   margin: 0;
 }
 
-.stat-range-label input[type=number] {
-  -moz-appearance: textfield;
-}
 
 .filter-input-wrap {
   position: relative;
@@ -2401,7 +2398,6 @@ button:hover {
   text-align: center;
   outline: none;
   flex-shrink: 0;
-  -moz-appearance: textfield;
 }
 
 .tb-stat-input::-webkit-inner-spin-button,
@@ -2905,7 +2901,6 @@ button:hover {
 
 .dc-type-table .matchup-cell.x4 { color: var(--stat-boosted); font-weight: 900; background: rgba(196,77,77,0.15); }
 .dc-type-table .matchup-cell.x2 { color: #e88080; font-weight: 400; }
-.dc-type-table .matchup-cell.x1 { }
 .dc-type-table .matchup-cell.x05 { color: #80c080; font-weight: 400; }
   .dc-type-table .matchup-cell.x025 { color: var(--stat-positive); font-weight: 900; background: rgba(95,187,99,0.15); }
   .dc-type-table .matchup-cell.x0 { color: var(--accent-purple); }
