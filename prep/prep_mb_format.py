@@ -961,8 +961,9 @@ def main():
                     ability_to_species[akey].append(s['id'])
 
     abilities_out = {}
-    # First, add all M-B abilities that exist in base Showdown
-    for akey in MB_NEW_ABILITIES:
+    # Add all abilities used by M-B legal species that exist in base Showdown
+    legal_ability_keys = set(ability_to_species.keys())
+    for akey in sorted(legal_ability_keys):
         if akey in MB_UNIQUE_ABILITIES:
             continue
         aid = ability_name_to_id.get(akey)

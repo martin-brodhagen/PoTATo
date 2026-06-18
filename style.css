@@ -512,6 +512,11 @@ button:hover {
   margin: 0;
 }
 
+.stat-range-label input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
 
 .filter-input-wrap {
   position: relative;

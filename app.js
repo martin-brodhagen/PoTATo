@@ -1,6 +1,8 @@
 import {
   loadIndex,
   loadItems,
+  loadAbilities,
+  loadMovesWithLearnsets,
   setFormat,
 } from "./lib/data-loader.js";
 import {
@@ -11,7 +13,7 @@ import {
   saveLastTeamId,
   migrateFromLegacy,
 } from "./lib/team-store.js";
-import { initApp } from "./lib/app-init.js";
+import { initApp, createPokedexSubtabWidgets } from "./lib/app-init.js";
 import {
   setState,
   getCurrentTeam,
@@ -83,7 +85,7 @@ function loadTeamsForFormat(format) {
   setCurrentTeamId(teamId);
 }
 
-function refreshWidgetsForFormatChange() {
+async function refreshWidgetsForFormatChange(data) {
   if (widgets.movesWidget) {
     widgets.movesWidget.destroy();
     widgets.movesWidget = null;
@@ -105,6 +107,8 @@ function refreshWidgetsForFormatChange() {
     widgets.pokemonWidget.setData(getAllSpecies(), getSpriteMap());
   }
 
+  createPokedexSubtabWidgets(widgets, getFormat(), getAllSpecies(), data);
+
   if (widgets.teamBuilderWidget) {
     widgets.teamBuilderWidget.setData(
       getAllSpecies(),
@@ -113,6 +117,12 @@ function refreshWidgetsForFormatChange() {
       getFormat(),
       getCachedItems(),
     );
+  }
+
+  if (widgets.defensiveCoverageWidget) {
+    widgets.defensiveCoverageWidget.opts.species = getAllSpecies();
+    widgets.defensiveCoverageWidget.opts.spriteMap = getSpriteMap();
+    widgets.defensiveCoverageWidget.refresh();
   }
 
   widgets.headerView?.renderTeamSelect();
@@ -127,7 +137,11 @@ async function switchFormat(format) {
   await loadFormatData(format);
   loadTeamsForFormat(format);
   ensureInitialTeam(format);
-  refreshWidgetsForFormatChange();
+  const [moves, abilities] = await Promise.all([
+    loadMovesWithLearnsets(format),
+    loadAbilities(format),
+  ]);
+  await refreshWidgetsForFormatChange({ moves, abilities, items: getCachedItems() });
 }
 
 function ensureInitialTeam(format) {
@@ -154,9 +168,15 @@ const initialFormat = "m-b";
 
   teamWarning.title = "duplicate species - Team not legal for this regulation";
 
+  const [moves, abilities] = await Promise.all([
+    loadMovesWithLearnsets(initialFormat),
+    loadAbilities(initialFormat),
+  ]);
+
   initApp({
     dom: { headerTeam, searchDetailContent, breadcrumbBar, teamSelect, teamWarning },
     state: { getCurrentTeam, getTeams, getSpriteMap, getSpeciesById, isTeamLegal, getFormat, getAllSpecies, getShinySpriteMap, setCurrentTeamId, addTeam },
+    data: { moves, abilities, items: getCachedItems() },
     callbacks: {
       onTeamChange: () => window.dispatchEvent(new Event("potato-team-change")),
       onAddToTeam: (speciesId) => {
