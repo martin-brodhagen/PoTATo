@@ -8,6 +8,14 @@
 
 import json, re, urllib.request, os, sys, time
 
+from _lib.ts_parser import (
+    parse_ts_overrides,
+    parse_learnsets_ts,
+    fetch_js_data,
+    species_name_to_key,
+    _apply_overrides,
+)
+
 SHOWDOWN = "https://play.pokemonshowdown.com/data"
 GITHUB_RAW = "https://raw.githubusercontent.com/smogon/pokemon-showdown/master"
 MOD_DIR = f"{GITHUB_RAW}/data/mods/champions"
@@ -42,310 +50,23 @@ moves_raw = fetch_json(f"{SHOWDOWN}/moves.json")
 print("Fetching learnsets...", file=sys.stderr)
 learnsets = fetch_json(f"{SHOWDOWN}/learnsets.json")
 
-def fetch_js_data(url):
-    """Parse a Showdown .js data file like items.js into a Python dict.
-    Format: exports.BattleItems = {key:{...},key:{...},...};"""
-    text = fetch_text(url)
-    # Strip exports.Xxx = prefix and trailing ;
-    text = re.sub(r'^exports\.\w+\s*=\s*', '', text)
-    text = text.rstrip().rstrip(';').strip()
-    # Quote unquoted JS object keys
-    text = re.sub(r'(?<=[{,])\s*([a-zA-Z_$][a-zA-Z0-9_$]*)(?=\s*:)', r'"\1"', text)
-    # Replace JS true/false/null
-    text = re.sub(r':\s*true(?=[,}])', ':true', text)
-    text = re.sub(r':\s*false(?=[,}])', ':false', text)
-    text = re.sub(r':\s*null(?=[,}])', ':null', text)
-    return json.loads(text)
-
-items_raw = fetch_js_data(f"{SHOWDOWN}/items.js")
+items_raw = fetch_js_data(fetch_text(f"{SHOWDOWN}/items.js"))
 
 # ---------------------------------------------------------------------------
 # 2. Fetch overrides from mod files
 # ---------------------------------------------------------------------------
 print("Fetching Champions mod overrides...", file=sys.stderr)
 
-def _skip_string(text, i):
-    """Skip past a string literal at position i (i points to the opening quote).
-    Handles backslash escapes. Returns new position (past closing quote)."""
-    quote = text[i]
-    i += 1
-    while i < len(text):
-        if text[i] == '\\':
-            i += 2
-            continue
-        if text[i] == quote:
-            return i + 1
-        i += 1
-    return i
-
-def _skip_line_comment(text, i):
-    """Skip past a // comment starting at position i."""
-    end = text.find('\n', i)
-    return len(text) if end == -1 else end + 1
-
-def _find_brace_end(text, start):
-    """Find matching closing brace from position start (which is after '{').
-    Returns position past the matching '}'. Handles strings, comments, nested braces."""
-    depth = 1
-    i = start
-    while i < len(text) and depth > 0:
-        c = text[i]
-        if c == '"' or c == "'":
-            i = _skip_string(text, i)
-        elif c == '/' and i + 1 < len(text) and text[i + 1] == '/':
-            i = _skip_line_comment(text, i)
-        elif c == '{':
-            depth += 1
-            i += 1
-        elif c == '}':
-            depth -= 1
-            i += 1
-        else:
-            i += 1
-    return i
-
-def _parse_ts_value(text):
-    """Parse a single TS value. Returns Python value."""
-    text = text.strip()
-    if not text:
-        return None
-    
-    if text[0] == '{':
-        end = _find_brace_end(text, 1)
-        inner = text[1:end - 1]
-        return _parse_ts_obj(inner)
-    
-    if text[0] == '[':
-        depth = 1
-        i = 1
-        while i < len(text) and depth > 0:
-            c = text[i]
-            if c == '"' or c == "'":
-                i = _skip_string(text, i)
-            elif c == '/':
-                if i + 1 < len(text) and text[i + 1] == '/':
-                    i = _skip_line_comment(text, i)
-                else:
-                    i += 1
-            elif c == '[':
-                depth += 1
-                i += 1
-            elif c == ']':
-                depth -= 1
-                i += 1
-            else:
-                i += 1
-        inner = text[1:i - 1]
-        items = _split_top_level(inner, ',')
-        return [_parse_ts_value(item) for item in items if item.strip()]
-    
-    # Scalars
-    text_stripped = text.rstrip(',')
-    if text_stripped == 'true':
-        return True
-    if text_stripped == 'false':
-        return False
-    if text_stripped in ('null', 'undefined'):
-        return None
-    
-    if text_stripped.startswith('"') or text_stripped.startswith("'"):
-        raw = text_stripped[1:]
-        result = []
-        quote = text_stripped[0]
-        i = 0
-        while i < len(raw) and raw[i] != quote:
-            if raw[i] == '\\':
-                i += 1
-                if i < len(raw):
-                    result.append(raw[i])
-                    i += 1
-            else:
-                result.append(raw[i])
-                i += 1
-        return ''.join(result)
-    
-    try:
-        if '.' in text_stripped:
-            return float(text_stripped)
-        return int(text_stripped)
-    except ValueError:
-        pass
-    
-    # Identifier (function name, enum, etc.) — discard by returning None
-    return None
-
-def _split_top_level(text, sep=','):
-    """Split text by separator, respecting braces, brackets, strings, and // comments."""
-    parts = []
-    depth_brace = 0
-    depth_bracket = 0
-    start = 0
-    i = 0
-    while i < len(text):
-        c = text[i]
-        if c == '"' or c == "'":
-            i = _skip_string(text, i)
-        elif c == '/':
-            if i + 1 < len(text) and text[i + 1] == '/':
-                i = _skip_line_comment(text, i)
-            else:
-                i += 1
-        elif c == '{':
-            depth_brace += 1
-            i += 1
-        elif c == '}':
-            depth_brace -= 1
-            i += 1
-        elif c == '[':
-            depth_bracket += 1
-            i += 1
-        elif c == ']':
-            depth_bracket -= 1
-            i += 1
-        elif c == sep and depth_brace == 0 and depth_bracket == 0:
-            parts.append(text[start:i])
-            start = i + 1
-            i += 1
-        else:
-            i += 1
-    remaining = text[start:].strip()
-    if remaining:
-        parts.append(remaining)
-    return parts
-
-def _parse_ts_obj(text):
-    """Parse key: value pairs from a TS object body (no outer braces)."""
-    props = {}
-    entries = _split_top_level(text, ',')
-    for entry in entries:
-        entry = entry.strip()
-        if not entry or entry.startswith('//'):
-            continue
-        m = re.match(r'([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*', entry)
-        if not m:
-            continue
-        key = m.group(1)
-        if key == 'inherit':
-            continue
-        val_text = entry[m.end():]
-        val = _parse_ts_value(val_text)
-        props[key] = val
-    return props
-
-def parse_ts_overrides(url):
-    """Parse a TypeScript file with {inherit:true} entries.
-    
-    Uses brace-depth matching to correctly handle nested objects, arrays,
-    strings with escapes, and single-line comments.
-    
-    Returns a dict of key → {prop: value}
-    """
-    text = fetch_text(url)
-    # Remove the `export const ... = {` wrapper
-    m = re.search(r'=\s*\{', text)
-    if m:
-        text = text[m.end():]
-    # Remove trailing `};` and anything after
-    text = re.sub(r'\}\s*;\s*$', '', text.rstrip())
-    text = re.sub(r'\}\s*$', '', text.rstrip())
-    
-    result = {}
-    pos = 0
-    while pos < len(text):
-        m = re.compile(r'\s*([a-z0-9_]+)\s*:\s*\{').search(text, pos)
-        if not m:
-            break
-        key = m.group(1)
-        body_start = m.end()
-        end = _find_brace_end(text, body_start)
-        body_raw = text[body_start:end - 1]
-        result[key] = _parse_ts_obj(body_raw)
-        pos = end
-        # Skip trailing whitespace/comma
-        while pos < len(text) and text[pos] in ' \t\n\r,':
-            pos += 1
-    return result
-
-move_overrides = parse_ts_overrides(f"{MOD_DIR}/moves.ts")
-item_overrides = parse_ts_overrides(f"{MOD_DIR}/items.ts")
-ability_overrides = parse_ts_overrides(f"{MOD_DIR}/abilities.ts")
-mod_formats_data = parse_ts_overrides(f"{MOD_DIR}/formats-data.ts")
-
-def parse_learnsets_ts(url):
-    """Parse a nested learnset file where entries have {learnset:{move:[sources]}} structure.
-    
-    Strategy: count brace depth rather than using non-greedy regex.
-    """
-    text = fetch_text(url)
-    # Strip export wrapper
-    m = re.search(r'=\s*\{', text)
-    if m:
-        text = text[m.end():]
-    text = re.sub(r'\}\s*;\s*$', '', text.rstrip())
-    
-    result = {}
-    pos = 0
-    while pos < len(text):
-        m = re.compile(r'\s*([a-z0-9_]+)\s*:\s*\{').search(text, pos)
-        if not m:
-            break
-        key = m.group(1)
-        pos = m.end()
-        # Find matching closing brace for outer block
-        depth = 1
-        while pos < len(text) and depth > 0:
-            if text[pos] == '{':
-                depth += 1
-            elif text[pos] == '}':
-                depth -= 1
-            pos += 1
-        body = text[m.end():pos-1]
-        
-        # Extract learnset: { ... } from body
-        lsm = re.search(r'learnset\s*:\s*\{', body)
-        if lsm:
-            ls_start = lsm.end()
-            ls_pos, ls_depth = ls_start, 1
-            while ls_pos < len(body) and ls_depth > 0:
-                if body[ls_pos] == '{':
-                    ls_depth += 1
-                elif body[ls_pos] == '}':
-                    ls_depth -= 1
-                ls_pos += 1
-            ls_body = body[ls_start:ls_pos-1]
-            learnset = {}
-            for line in ls_body.split('\n'):
-                line = line.strip()
-                if not line or line.startswith('//'):
-                    continue
-                pm = re.compile(r'''([a-z0-9_]+)\s*:\s*(\[.*?\])\s*,?\s*$''').match(line)
-                if pm:
-                    move, val = pm.group(1), pm.group(2)
-                    try:
-                        learnset[move] = json.loads(val)
-                    except json.JSONDecodeError:
-                        learnset[move] = val
-            result[key] = {"learnset": learnset}
-        
-        # Skip trailing whitespace/comma
-        while pos < len(text) and text[pos] in ' \t\n\r,':
-            pos += 1
-    return result
-
-mod_learnsets = parse_learnsets_ts(f"{MOD_DIR}/learnsets.ts")
+move_overrides = parse_ts_overrides(fetch_text(f"{MOD_DIR}/moves.ts"))
+item_overrides = parse_ts_overrides(fetch_text(f"{MOD_DIR}/items.ts"))
+ability_overrides = parse_ts_overrides(fetch_text(f"{MOD_DIR}/abilities.ts"))
+mod_formats_data = parse_ts_overrides(fetch_text(f"{MOD_DIR}/formats-data.ts"))
+mod_learnsets = parse_learnsets_ts(fetch_text(f"{MOD_DIR}/learnsets.ts"))
 
 # ---------------------------------------------------------------------------
 # 3. Apply overrides to base data
 # ---------------------------------------------------------------------------
 print("Applying overrides...", file=sys.stderr)
-
-def _apply_overrides(base: dict, overrides: dict) -> None:
-    """Apply overrides dict to base, deleting keys for None values (TS null/undefined)."""
-    for k, v in overrides.items():
-        if v is None:
-            base.pop(k, None)
-        else:
-            base[k] = v
 
 moves = dict(moves_raw)
 for mid, overrides in move_overrides.items():
@@ -480,9 +201,6 @@ print("Filtering learnsets...", file=sys.stderr)
 # Mod entries fully replace base entries for covered species
 merged_learnsets = dict(learnsets)
 merged_learnsets.update(mod_learnsets)
-
-def species_name_to_key(name: str) -> str:
-    return name.lower().replace('-', '').replace(' ', '').replace("'", '').replace('.', '')
 
 learnset_out: dict[str, list[str]] = {}
 for pid in all_legal_ids:
@@ -968,7 +686,7 @@ for mid in sorted(moves_out):
 print("Building abilities list...", file=sys.stderr)
 
 try:
-    abilities_raw = fetch_js_data(f"{SHOWDOWN}/abilities.js")
+    abilities_raw = fetch_js_data(fetch_text(f"{SHOWDOWN}/abilities.js"))
 except Exception as e:
     print(f"  WARNING: could not fetch abilities data: {e}", file=sys.stderr)
     abilities_raw = {}

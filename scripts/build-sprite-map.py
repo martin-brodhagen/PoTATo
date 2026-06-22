@@ -9,9 +9,9 @@ import json, os, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INDEX = ROOT / "data" / "format-m-a" / "index.json"
+INDEX = ROOT / "data" / "base" / "pokedex.json"
 SPRITE_DIR = ROOT / "sprites" / "champions"
-OUT = ROOT / "data" / "format-m-a" / "sprite-map.json"
+OUT = ROOT / "data" / "base" / "sprite-map.json"
 
 # Load index
 with open(INDEX) as f:

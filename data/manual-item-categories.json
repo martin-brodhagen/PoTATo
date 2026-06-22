@@ -1,0 +1,14 @@
+{
+  "_comment": [
+    "Manual corrections to Game8 item categories.",
+    "Each entry fully REPLACES the Game8 category for that item.",
+    "An empty array [] clears the category (use sparingly; defaults to 'Other').",
+    "Valid categories are listed in lib/types.js → ITEM_CATEGORIES:",
+    "  Stat Boost, Power Boost, Defense, Recovery, Effect Extend,",
+    "  Berry, Mega Stone, Other",
+    "Items not listed here fall back to their Game8 category, then to 'Other'."
+  ],
+  "lightball":  ["Stat Boost"],
+  "focusband":  ["Defense"],
+  "focussash":  ["Stat Boost"]
+}

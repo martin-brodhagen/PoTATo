@@ -1,0 +1,12 @@
+{
+  "_comment": [
+    "Manual PP mapping for moves. Each entry maps an old PP value to a new",
+    "PP value. Applied uniformly to every move in data/base/moves.json whose",
+    "PP matches the old value. A move whose PP is not a key in this map is",
+    "left untouched.",
+    "Edit the values below to adjust. Re-run `npm run prep:moves:patch` to apply."
+  ],
+  "5":  8,
+  "10": 12,
+  "15": 16
+}

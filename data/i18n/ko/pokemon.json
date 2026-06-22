@@ -1,0 +1,935 @@
+{
+ "abomasnow": {
+  "name": "눈설왕"
+ },
+ "abomasnowmega": {
+  "name": "눈설왕"
+ },
+ "absol": {
+  "name": "앱솔"
+ },
+ "absolmega": {
+  "name": "앱솔"
+ },
+ "aegislash": {
+  "name": "킬가르도"
+ },
+ "aerodactyl": {
+  "name": "프테라"
+ },
+ "aerodactylmega": {
+  "name": "프테라"
+ },
+ "aggron": {
+  "name": "보스로라"
+ },
+ "aggronmega": {
+  "name": "보스로라"
+ },
+ "alakazam": {
+  "name": "후딘"
+ },
+ "alakazammega": {
+  "name": "후딘"
+ },
+ "alcremie": {
+  "name": "마휘핑"
+ },
+ "altaria": {
+  "name": "파비코리"
+ },
+ "altariamega": {
+  "name": "파비코리"
+ },
+ "ampharos": {
+  "name": "전룡"
+ },
+ "ampharosmega": {
+  "name": "전룡"
+ },
+ "annihilape": {
+  "name": "저승갓숭"
+ },
+ "appletun": {
+  "name": "단지래플"
+ },
+ "araquanid": {
+  "name": "깨비물거미"
+ },
+ "arbok": {
+  "name": "아보크"
+ },
+ "arcanine": {
+  "name": "윈디"
+ },
+ "arcaninehisui": {
+  "name": "윈디"
+ },
+ "archaludon": {
+  "name": "브리두라스"
+ },
+ "ariados": {
+  "name": "아리아도스"
+ },
+ "armarouge": {
+  "name": "카디나르마"
+ },
+ "aromatisse": {
+  "name": "프레프티르"
+ },
+ "audino": {
+  "name": "다부니"
+ },
+ "audinomega": {
+  "name": "다부니"
+ },
+ "aurorus": {
+  "name": "아마루르가"
+ },
+ "avalugg": {
+  "name": "크레베이스"
+ },
+ "avalugghisui": {
+  "name": "크레베이스"
+ },
+ "azumarill": {
+  "name": "마릴리"
+ },
+ "banette": {
+  "name": "다크펫"
+ },
+ "banettemega": {
+  "name": "다크펫"
+ },
+ "barbaracle": {
+  "name": "거북손데스"
+ },
+ "barbaraclemega": {
+  "name": "거북손데스"
+ },
+ "basculegion": {
+  "name": "대쓰여너"
+ },
+ "basculegionf": {
+  "name": "대쓰여너"
+ },
+ "bastiodon": {
+  "name": "바리톱스"
+ },
+ "beartic": {
+  "name": "툰베어"
+ },
+ "beedrill": {
+  "name": "독침붕"
+ },
+ "beedrillmega": {
+  "name": "독침붕"
+ },
+ "bellibolt": {
+  "name": "찌리배리"
+ },
+ "blastoise": {
+  "name": "거북왕"
+ },
+ "blastoisemega": {
+  "name": "거북왕"
+ },
+ "blaziken": {
+  "name": "번치코"
+ },
+ "blazikenmega": {
+  "name": "번치코"
+ },
+ "camerupt": {
+  "name": "폭타"
+ },
+ "cameruptmega": {
+  "name": "폭타"
+ },
+ "castform": {
+  "name": "캐스퐁"
+ },
+ "ceruledge": {
+  "name": "파라블레이즈"
+ },
+ "chandelure": {
+  "name": "샹델라"
+ },
+ "chandeluremega": {
+  "name": "샹델라"
+ },
+ "charizard": {
+  "name": "리자몽"
+ },
+ "charizardmegax": {
+  "name": "리자몽"
+ },
+ "charizardmegay": {
+  "name": "리자몽"
+ },
+ "chesnaught": {
+  "name": "브리가론"
+ },
+ "chesnaughtmega": {
+  "name": "브리가론"
+ },
+ "chimecho": {
+  "name": "치렁"
+ },
+ "chimechomega": {
+  "name": "치렁"
+ },
+ "clawitzer": {
+  "name": "블로스터"
+ },
+ "clefable": {
+  "name": "픽시"
+ },
+ "clefablemega": {
+  "name": "픽시"
+ },
+ "cofagrigus": {
+  "name": "데스니칸"
+ },
+ "conkeldurr": {
+  "name": "노보청"
+ },
+ "corviknight": {
+  "name": "아머까오"
+ },
+ "crabominable": {
+  "name": "모단단게"
+ },
+ "crabominablemega": {
+  "name": "모단단게"
+ },
+ "decidueye": {
+  "name": "모크나이퍼"
+ },
+ "decidueyehisui": {
+  "name": "모크나이퍼"
+ },
+ "dedenne": {
+  "name": "데덴네"
+ },
+ "delphox": {
+  "name": "마폭시"
+ },
+ "delphoxmega": {
+  "name": "마폭시"
+ },
+ "diggersby": {
+  "name": "파르토"
+ },
+ "ditto": {
+  "name": "메타몽"
+ },
+ "dragalge": {
+  "name": "드래캄"
+ },
+ "dragalgemega": {
+  "name": "드래캄"
+ },
+ "dragapult": {
+  "name": "드래펄트"
+ },
+ "dragonite": {
+  "name": "망나뇽"
+ },
+ "dragonitemega": {
+  "name": "망나뇽"
+ },
+ "drampa": {
+  "name": "할비롱"
+ },
+ "drampamega": {
+  "name": "할비롱"
+ },
+ "eelektross": {
+  "name": "저리더프"
+ },
+ "eelektrossmega": {
+  "name": "저리더프"
+ },
+ "emboar": {
+  "name": "염무왕"
+ },
+ "emboarmega": {
+  "name": "염무왕"
+ },
+ "emolga": {
+  "name": "에몽가"
+ },
+ "empoleon": {
+  "name": "엠페르트"
+ },
+ "espathra": {
+  "name": "클레스퍼트라"
+ },
+ "espeon": {
+  "name": "에브이"
+ },
+ "excadrill": {
+  "name": "몰드류"
+ },
+ "excadrillmega": {
+  "name": "몰드류"
+ },
+ "falinks": {
+  "name": "대여르"
+ },
+ "falinksmega": {
+  "name": "대여르"
+ },
+ "farigiraf": {
+  "name": "키키링"
+ },
+ "feraligatr": {
+  "name": "장크로다일"
+ },
+ "feraligatrmega": {
+  "name": "장크로다일"
+ },
+ "flapple": {
+  "name": "애프룡"
+ },
+ "flareon": {
+  "name": "부스터"
+ },
+ "floetteeternal": {
+  "name": "플라엣테"
+ },
+ "floettemega": {
+  "name": "플라엣테"
+ },
+ "florges": {
+  "name": "플라제스"
+ },
+ "forretress": {
+  "name": "쏘콘"
+ },
+ "froslass": {
+  "name": "눈여아"
+ },
+ "froslassmega": {
+  "name": "눈여아"
+ },
+ "furfrou": {
+  "name": "트리미앙"
+ },
+ "gallade": {
+  "name": "엘레이드"
+ },
+ "gallademega": {
+  "name": "엘레이드"
+ },
+ "garbodor": {
+  "name": "더스트나"
+ },
+ "garchomp": {
+  "name": "한카리아스"
+ },
+ "garchompmega": {
+  "name": "한카리아스"
+ },
+ "gardevoir": {
+  "name": "가디안"
+ },
+ "gardevoirmega": {
+  "name": "가디안"
+ },
+ "garganacl": {
+  "name": "콜로솔트"
+ },
+ "gengar": {
+  "name": "팬텀"
+ },
+ "gengarmega": {
+  "name": "팬텀"
+ },
+ "gholdengo": {
+  "name": "타부자고"
+ },
+ "glaceon": {
+  "name": "글레이시아"
+ },
+ "glalie": {
+  "name": "얼음귀신"
+ },
+ "glaliemega": {
+  "name": "얼음귀신"
+ },
+ "glimmora": {
+  "name": "킬라플로르"
+ },
+ "glimmoramega": {
+  "name": "킬라플로르"
+ },
+ "gliscor": {
+  "name": "글라이온"
+ },
+ "golurk": {
+  "name": "골루그"
+ },
+ "golurkmega": {
+  "name": "골루그"
+ },
+ "goodra": {
+  "name": "미끄래곤"
+ },
+ "goodrahisui": {
+  "name": "미끄래곤"
+ },
+ "gourgeist": {
+  "name": "펌킨인"
+ },
+ "gourgeistlarge": {
+  "name": "펌킨인"
+ },
+ "gourgeistsmall": {
+  "name": "펌킨인"
+ },
+ "gourgeistsuper": {
+  "name": "펌킨인"
+ },
+ "greninja": {
+  "name": "개굴닌자"
+ },
+ "greninjamega": {
+  "name": "개굴닌자"
+ },
+ "grimmsnarl": {
+  "name": "오롱털"
+ },
+ "gyarados": {
+  "name": "갸라도스"
+ },
+ "gyaradosmega": {
+  "name": "갸라도스"
+ },
+ "hatterene": {
+  "name": "브리무음"
+ },
+ "hawlucha": {
+  "name": "루차불"
+ },
+ "hawluchamega": {
+  "name": "루차불"
+ },
+ "heliolisk": {
+  "name": "일레도리자드"
+ },
+ "heracross": {
+  "name": "헤라크로스"
+ },
+ "heracrossmega": {
+  "name": "헤라크로스"
+ },
+ "hippowdon": {
+  "name": "하마돈"
+ },
+ "houndoom": {
+  "name": "헬가"
+ },
+ "houndoommega": {
+  "name": "헬가"
+ },
+ "houndstone": {
+  "name": "묘두기"
+ },
+ "hydrapple": {
+  "name": "과미드라"
+ },
+ "hydreigon": {
+  "name": "삼삼드래"
+ },
+ "incineroar": {
+  "name": "어흥염"
+ },
+ "infernape": {
+  "name": "초염몽"
+ },
+ "jolteon": {
+  "name": "쥬피썬더"
+ },
+ "kangaskhan": {
+  "name": "캥카"
+ },
+ "kangaskhanmega": {
+  "name": "캥카"
+ },
+ "kingambit": {
+  "name": "대도각참"
+ },
+ "kleavor": {
+  "name": "사마자르"
+ },
+ "klefki": {
+  "name": "클레피"
+ },
+ "kommoo": {
+  "name": "짜랑고우거"
+ },
+ "krookodile": {
+  "name": "악비아르"
+ },
+ "leafeon": {
+  "name": "리피아"
+ },
+ "liepard": {
+  "name": "레파르다스"
+ },
+ "lopunny": {
+  "name": "이어롭"
+ },
+ "lopunnymega": {
+  "name": "이어롭"
+ },
+ "lucario": {
+  "name": "루카리오"
+ },
+ "lucariomega": {
+  "name": "루카리오"
+ },
+ "luxray": {
+  "name": "렌트라"
+ },
+ "lycanroc": {
+  "name": "루가루암"
+ },
+ "lycanrocdusk": {
+  "name": "루가루암"
+ },
+ "lycanrocmidnight": {
+  "name": "루가루암"
+ },
+ "machamp": {
+  "name": "괴력몬"
+ },
+ "malamar": {
+  "name": "칼라마네로"
+ },
+ "malamarmega": {
+  "name": "칼라마네로"
+ },
+ "mamoswine": {
+  "name": "맘모꾸리"
+ },
+ "manectric": {
+  "name": "썬더볼트"
+ },
+ "manectricmega": {
+  "name": "썬더볼트"
+ },
+ "maushold": {
+  "name": "파밀리쥐"
+ },
+ "mawile": {
+  "name": "입치트"
+ },
+ "mawilemega": {
+  "name": "입치트"
+ },
+ "medicham": {
+  "name": "요가램"
+ },
+ "medichammega": {
+  "name": "요가램"
+ },
+ "meganium": {
+  "name": "메가니움"
+ },
+ "meganiummega": {
+  "name": "메가니움"
+ },
+ "meowscarada": {
+  "name": "마스카나"
+ },
+ "meowstic": {
+  "name": "냐오닉스"
+ },
+ "meowsticf": {
+  "name": "냐오닉스"
+ },
+ "meowsticfmega": {
+  "name": "냐오닉스"
+ },
+ "meowsticmmega": {
+  "name": "냐오닉스"
+ },
+ "metagross": {
+  "name": "메타그로스"
+ },
+ "metagrossmega": {
+  "name": "메타그로스"
+ },
+ "milotic": {
+  "name": "밀로틱"
+ },
+ "mimikyu": {
+  "name": "따라큐"
+ },
+ "morpeko": {
+  "name": "모르페코"
+ },
+ "mrrime": {
+  "name": "마임꽁꽁"
+ },
+ "mudsdale": {
+  "name": "만마드"
+ },
+ "musharna": {
+  "name": "몽얌나"
+ },
+ "ninetales": {
+  "name": "나인테일"
+ },
+ "ninetalesalola": {
+  "name": "나인테일"
+ },
+ "noivern": {
+  "name": "음번"
+ },
+ "oranguru": {
+  "name": "하랑우탄"
+ },
+ "orthworm": {
+  "name": "꿈트렁"
+ },
+ "overqwil": {
+  "name": "장침바루"
+ },
+ "palafin": {
+  "name": "돌핀맨"
+ },
+ "pangoro": {
+  "name": "부란다"
+ },
+ "passimian": {
+  "name": "내던숭이"
+ },
+ "pelipper": {
+  "name": "패리퍼"
+ },
+ "pidgeot": {
+  "name": "피죤투"
+ },
+ "pidgeotmega": {
+  "name": "피죤투"
+ },
+ "pikachu": {
+  "name": "피카츄"
+ },
+ "pinsir": {
+  "name": "쁘사이저"
+ },
+ "pinsirmega": {
+  "name": "쁘사이저"
+ },
+ "politoed": {
+  "name": "왕구리"
+ },
+ "polteageist": {
+  "name": "포트데스"
+ },
+ "primarina": {
+  "name": "누리레느"
+ },
+ "pyroar": {
+  "name": "화염레오"
+ },
+ "pyroarmega": {
+  "name": "화염레오"
+ },
+ "quaquaval": {
+  "name": "웨이니발"
+ },
+ "qwilfish": {
+  "name": "침바루"
+ },
+ "raichu": {
+  "name": "라이츄"
+ },
+ "raichualola": {
+  "name": "라이츄"
+ },
+ "raichumegax": {
+  "name": "라이츄"
+ },
+ "raichumegay": {
+  "name": "라이츄"
+ },
+ "rampardos": {
+  "name": "램펄드"
+ },
+ "reuniclus": {
+  "name": "란쿨루스"
+ },
+ "rhyperior": {
+  "name": "거대코뿌리"
+ },
+ "roserade": {
+  "name": "로즈레이드"
+ },
+ "rotom": {
+  "name": "로토무"
+ },
+ "rotomfan": {
+  "name": "로토무"
+ },
+ "rotomfrost": {
+  "name": "로토무"
+ },
+ "rotomheat": {
+  "name": "로토무"
+ },
+ "rotommow": {
+  "name": "로토무"
+ },
+ "rotomwash": {
+  "name": "로토무"
+ },
+ "runerigus": {
+  "name": "데스판"
+ },
+ "sableye": {
+  "name": "깜까미"
+ },
+ "sableyemega": {
+  "name": "깜까미"
+ },
+ "salazzle": {
+  "name": "염뉴트"
+ },
+ "samurott": {
+  "name": "대검귀"
+ },
+ "samurotthisui": {
+  "name": "대검귀"
+ },
+ "sandaconda": {
+  "name": "사다이사"
+ },
+ "sceptile": {
+  "name": "나무킹"
+ },
+ "sceptilemega": {
+  "name": "나무킹"
+ },
+ "scizor": {
+  "name": "핫삼"
+ },
+ "scizormega": {
+  "name": "핫삼"
+ },
+ "scolipede": {
+  "name": "펜드라"
+ },
+ "scolipedemega": {
+  "name": "펜드라"
+ },
+ "scovillain": {
+  "name": "스코빌런"
+ },
+ "scovillainmega": {
+  "name": "스코빌런"
+ },
+ "scrafty": {
+  "name": "곤율거니"
+ },
+ "scraftymega": {
+  "name": "곤율거니"
+ },
+ "serperior": {
+  "name": "샤로다"
+ },
+ "sharpedo": {
+  "name": "샤크니아"
+ },
+ "sharpedomega": {
+  "name": "샤크니아"
+ },
+ "simipour": {
+  "name": "앗차키"
+ },
+ "simisage": {
+  "name": "야나키"
+ },
+ "simisear": {
+  "name": "바오키"
+ },
+ "sinistcha": {
+  "name": "그우린차"
+ },
+ "skarmory": {
+  "name": "무장조"
+ },
+ "skarmorymega": {
+  "name": "무장조"
+ },
+ "skeledirge": {
+  "name": "라우드본"
+ },
+ "slowbro": {
+  "name": "야도란"
+ },
+ "slowbrogalar": {
+  "name": "야도란"
+ },
+ "slowbromega": {
+  "name": "야도란"
+ },
+ "slowking": {
+  "name": "야도킹"
+ },
+ "slowkinggalar": {
+  "name": "야도킹"
+ },
+ "slurpuff": {
+  "name": "나루림"
+ },
+ "sneasler": {
+  "name": "포푸니크"
+ },
+ "snorlax": {
+  "name": "잠만보"
+ },
+ "spiritomb": {
+  "name": "화강돌"
+ },
+ "staraptor": {
+  "name": "찌르호크"
+ },
+ "staraptormega": {
+  "name": "찌르호크"
+ },
+ "starmie": {
+  "name": "아쿠스타"
+ },
+ "starmiemega": {
+  "name": "아쿠스타"
+ },
+ "steelix": {
+  "name": "강철톤"
+ },
+ "steelixmega": {
+  "name": "강철톤"
+ },
+ "stunfisk": {
+  "name": "메더"
+ },
+ "stunfiskgalar": {
+  "name": "메더"
+ },
+ "swampert": {
+  "name": "대짱이"
+ },
+ "swampertmega": {
+  "name": "대짱이"
+ },
+ "sylveon": {
+  "name": "님피아"
+ },
+ "talonflame": {
+  "name": "파이어로"
+ },
+ "tauros": {
+  "name": "켄타로스"
+ },
+ "taurospaldeaaqua": {
+  "name": "켄타로스"
+ },
+ "taurospaldeablaze": {
+  "name": "켄타로스"
+ },
+ "taurospaldeacombat": {
+  "name": "켄타로스"
+ },
+ "tinkaton": {
+  "name": "두드리짱"
+ },
+ "torkoal": {
+  "name": "코터스"
+ },
+ "torterra": {
+  "name": "토대부기"
+ },
+ "toucannon": {
+  "name": "왕큰부리"
+ },
+ "toxapex": {
+  "name": "더시마사리"
+ },
+ "toxicroak": {
+  "name": "독개굴"
+ },
+ "trevenant": {
+  "name": "대로트"
+ },
+ "tsareena": {
+  "name": "달코퀸"
+ },
+ "typhlosion": {
+  "name": "블레이범"
+ },
+ "typhlosionhisui": {
+  "name": "블레이범"
+ },
+ "tyranitar": {
+  "name": "마기라스"
+ },
+ "tyranitarmega": {
+  "name": "마기라스"
+ },
+ "tyrantrum": {
+  "name": "견고라스"
+ },
+ "umbreon": {
+  "name": "블래키"
+ },
+ "vanilluxe": {
+  "name": "배바닐라"
+ },
+ "vaporeon": {
+  "name": "샤미드"
+ },
+ "venusaur": {
+  "name": "이상해꽃"
+ },
+ "venusaurmega": {
+  "name": "이상해꽃"
+ },
+ "victreebel": {
+  "name": "우츠보트"
+ },
+ "victreebelmega": {
+  "name": "우츠보트"
+ },
+ "vileplume": {
+  "name": "라플레시아"
+ },
+ "vivillon": {
+  "name": "비비용"
+ },
+ "volcarona": {
+  "name": "불카모스"
+ },
+ "watchog": {
+  "name": "보르그"
+ },
+ "weavile": {
+  "name": "포푸니라"
+ },
+ "whimsicott": {
+  "name": "엘풍"
+ },
+ "wyrdeer": {
+  "name": "신비록"
+ },
+ "zoroark": {
+  "name": "조로아크"
+ },
+ "zoroarkhisui": {
+  "name": "조로아크"
+ }
+}
