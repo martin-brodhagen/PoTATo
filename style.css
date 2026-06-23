@@ -2598,14 +2598,22 @@ button:hover {
   color: var(--stat-negative);
 }
 
-/* ── Move Type Coverage Widget ─────────────────────────────── */
-.mc-layout {
+/* ── Offensive Coverage Widget ─────────────────────────────── */
+#offensive-coverage-content {
+  flex: 1;
+  min-height: 0;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+}
+
+.oc-layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
 }
 
-.mc-team-list {
+.oc-team-list {
   width: auto;
   flex-shrink: 0;
   border-right: 1px solid var(--border-subtle);
@@ -2615,6 +2623,188 @@ button:hover {
   gap: 0.3rem;
   padding: 0.5rem;
   align-items: flex-start;
+}
+
+.oc-team-slot {
+  width: 7.8rem;
+  height: 7.8rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: box-shadow 0.1s ease;
+}
+
+.oc-team-slot-active {
+  box-shadow: 0 0 0 2px var(--accent-gold);
+}
+
+.oc-team-slot:not(.oc-team-slot-active) .oc-team-sprite {
+  filter: grayscale(0.55) brightness(0.7);
+  opacity: 0.65;
+  transition: filter 0.1s ease, opacity 0.1s ease;
+}
+
+.oc-team-slot:hover:not(.oc-team-slot-active) .oc-team-sprite {
+  filter: grayscale(0.2) brightness(0.9);
+  opacity: 0.9;
+}
+
+.oc-team-sprite-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oc-team-sprite {
+  width: 6.4rem;
+  height: 6.4rem;
+  display: block;
+  image-rendering: auto;
+  transition: filter 0.1s ease, opacity 0.1s ease;
+}
+
+.oc-team-slot-empty {
+  color: var(--text-placeholder);
+  font-size: 0.7rem;
+  text-align: center;
+  cursor: default;
+}
+
+.oc-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.oc-type-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.oc-type-toggle {
+  cursor: pointer;
+  border: 0;
+  font-family: inherit;
+  padding: 0.18rem 0.25rem;
+  border-radius: 3px;
+  transition: transform 0.05s ease, box-shadow 0.1s ease, filter 0.1s ease;
+  filter: grayscale(0.55) brightness(0.7);
+  opacity: 0.65;
+}
+
+.oc-type-toggle:hover {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
+}
+
+.oc-type-toggle.active {
+  filter: none;
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--accent-gold);
+  transform: translateY(-1px);
+}
+
+.oc-type-toggle:focus-visible {
+  outline: 2px solid var(--accent-gold, #ffd700);
+  outline-offset: 1px;
+}
+
+.oc-pokemon-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.oc-pokemon-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.oc-pokemon-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  padding: 0.2rem 0.3rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.oc-pokemon-section-count {
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+
+.oc-pokemon-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 0.3rem;
+  align-content: start;
+}
+
+.oc-pokemon-btn {
+  appearance: none;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  padding: 0.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s ease, border-color 0.1s ease, transform 0.05s ease;
+  aspect-ratio: 1 / 1;
+}
+
+.oc-pokemon-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+}
+
+.oc-pokemon-btn:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 1px;
+}
+
+.oc-pokemon-btn:active {
+  transform: translateY(1px);
+}
+
+.oc-pokemon-sprite {
+  width: 48px;
+  height: 48px;
+  display: block;
+  image-rendering: auto;
+}
+
+.oc-pokemon-sprite-missing {
+  width: 48px;
+  height: 48px;
+  display: block;
+  background: var(--bg-input);
+  border-radius: 4px;
 }
 
 /* ── Defensive Coverage Widget ─────────────────────────────── */

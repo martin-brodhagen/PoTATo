@@ -5,7 +5,7 @@ Produces `data/i18n/<lang>/{pokemon,moves,items,abilities}.json` for each
 language declared in `config.json`.
 
 Sources:
-  - Pokémon names: PokeAPI (translated, for 8 of 11 langs) or fall back to
+  - Pokémon names: PokeAPI (translated, for de; en falls back to English) or fall back to
     English from the format data.
   - Move/ability/item names: from the format data (English; no
     translations available for these entities).

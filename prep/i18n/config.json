@@ -1,18 +1,9 @@
 {
   "default": "en",
-  "languages": ["en", "ja", "de", "fr", "es", "it", "ko", "zh-Hans", "zh-Hant", "pt-BR", "ru"],
+  "languages": ["en", "de"],
   "formats": ["m-b", "m-a"],
   "pokeapi_locale_map": {
-    "ja":      ["ja-Hrkt"],
-    "de":      ["de"],
-    "fr":      ["fr"],
-    "es":      ["es"],
-    "it":      ["it"],
-    "ko":      ["ko"],
-    "zh-Hans": ["zh-Hans"],
-    "zh-Hant": ["zh-Hant"],
-    "pt-BR":   [],
-    "ru":      []
+    "de":      ["de"]
   },
   "_pokeapi_locale_note": "PokeAPI uses lowercase locale codes (ja-hrkt, zh-hant, etc). The build script lowercases our codes before matching."
 }

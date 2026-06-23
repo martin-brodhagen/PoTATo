@@ -51,7 +51,7 @@ prep/                            python data pipeline
 data/
   base/                          # shared, format-agnostic (8 JSONs)
   formats/<id>.json              # {id, label, version, species[], items[], abilities[]}
-  i18n/<lang>/                   # 11 langs × 4 entity types
+  i18n/<lang>/                   # 2 langs × 4 entity types (en, de)
   manual-*.json                  # user-edited patches applied after the base build
   game8-descriptions.json        # cached Game8 scrape
 lib/
@@ -127,7 +127,7 @@ To add a new cosmetic family: append the base id (e.g. `"unown"`) to `data/manua
 
 ## Pending / Future
 
-- [ ] Move Type Coverage tool (placeholder)
+- [ ] Offensive Coverage tool (placeholder)
 - [ ] Damage Calculator (placeholder)
 - [ ] Imports feature (placeholder)
 - [ ] Breadcrumb optimizations (early return on same index, bounds checking)

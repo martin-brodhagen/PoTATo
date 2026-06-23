@@ -53,7 +53,7 @@ const widgets = {
   pokemonWidget: null,
   teamBuilderWidget: null,
   defensiveCoverageWidget: null,
-  moveCoverageWidget: null,
+  offensiveCoverageWidget: null,
   movesWidget: null,
   abilitiesWidget: null,
   itemsWidget: null,
@@ -130,6 +130,13 @@ async function refreshWidgetsForFormatChange(data) {
     widgets.defensiveCoverageWidget.refresh();
   }
 
+  if (widgets.offensiveCoverageWidget) {
+    widgets.offensiveCoverageWidget.opts.species = getAllSpecies();
+    widgets.offensiveCoverageWidget.opts.spriteMap = getSpriteMap();
+    if (data?.moves) widgets.offensiveCoverageWidget.opts.moves = data.moves;
+    widgets.offensiveCoverageWidget.refresh();
+  }
+
   widgets.headerView?.renderTeamSelect();
 }
 
@@ -180,16 +187,7 @@ formatSelect.addEventListener("change", () => {
 // them with their own native name where recognizable, and react to changes.
 const LANG_LABELS = {
   "en": "English",
-  "ja": "日本語",
   "de": "Deutsch",
-  "fr": "Français",
-  "es": "Español",
-  "it": "Italiano",
-  "ko": "한국어",
-  "zh-Hans": "简体中文",
-  "zh-Hant": "繁體中文",
-  "pt-BR": "Português (BR)",
-  "ru": "Русский",
 };
 
 function populateLangSelect(currentLangCode) {
