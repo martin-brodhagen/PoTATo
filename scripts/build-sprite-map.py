@@ -74,13 +74,48 @@ FORM_MAP: list[tuple[re.Pattern, str]] = [
     (re.compile(r"^(\w+)paldeaaqua$"),   "Paldea_Aqua"),
     # Basculin
     (re.compile(r"^(\w+)f$"),       "Female"),
-    # Vivillon - the actual sprite filenames have patterns but we skip those
-    # Alcremie - similarly complex patterns
-    # Furfrou - complex patterns (Dandy, Debutante, etc.)
     # Indeedee, Meowstic, Oinkologne - female forms
     (re.compile(r"^indeedee$"), None),  # skip indeedee-female, just use base
     (re.compile(r"^meowstic$"), None),  # skip meowstic-female
+    # Cosmetic / combat-switch formes with sprite-specific file naming
+    # inconsistencies. The form-specific lookup below handles most cases
+    # via `entry.forme`; these patterns catch the rest.
 ]
+
+# Special cases: forme value → sprite form suffix override. Used when the
+# forme value (as listed in upstream pokedex.json) does not match the
+# sprite file naming by simple space/dash replacement.
+FORME_SPRITE_OVERRIDES = {
+    # Vivillon-Pokeball: forme='Pokeball' but sprite is 'Poke_Ball.png'
+    "Pokeball": "Poke_Ball",
+}
+
+
+# Special cases: species id → (dex_number, form_suffix) override. Used
+# when the sprite file naming doesn't match the convention (e.g. the
+# "base" form is named after a forme in the sprite directory, and the
+# unnamed sprite belongs to a different forme).
+SPECIES_SPRITE_OVERRIDES: dict[str, tuple[int, str | None]] = {
+    # Maushold: in Bulbagarden's Champions sprite set, the unnamed
+    # `Menu_CP_0925.png` is the Family of Four variant, while the
+    # three-segment base is `Menu_CP_0925-Three.png`. Showdown lists
+    # the Three form as the base (baseForme: "Three"), so swap them.
+    "maushold": (925, "Three"),
+    "mausholdfour": (925, None),
+}
+
+
+def forme_to_sprite_form(forme: str) -> str:
+    """Convert a forme value to a Bulbagarden sprite form suffix.
+
+    The sprite filenames use underscores for spaces/dashes (e.g.
+    'Menu_CP_0666-High_Plains.png'). Most formes match this rule
+    directly; see FORME_SPRITE_OVERRIDES for the exceptions.
+    """
+    if forme in FORME_SPRITE_OVERRIDES:
+        return FORME_SPRITE_OVERRIDES[forme]
+    return forme.replace(" ", "_").replace("-", "_")
+
 
 def find_sprite(species_id: str, dex_num: int) -> str | None:
     """Find sprite filename for a given species."""
@@ -120,25 +155,36 @@ def find_sprite(species_id: str, dex_num: int) -> str | None:
 for entry in index:
     sid = entry["id"]
     num = entry["num"]
+    file = None
 
-    # Try the pattern matcher
-    file = find_sprite(sid, num)
+    # 0. Try the species-specific override (e.g. Maushold's swapped
+    # base/forme sprites — see SPECIES_SPRITE_OVERRIDES).
+    override = SPECIES_SPRITE_OVERRIDES.get(sid)
+    if override is not None:
+        file = num_form_to_file.get(override)
 
-    # Fallback: any file for this dex number
+    # 1. Try the form-specific sprite first, using entry.forme to derive
+    # the sprite suffix. This is how the cosmetic recolors (Florges
+    # colors, Furfrou trims, Alcremie flavors, Vivillon patterns, ...)
+    # and the per-form combat-switch sprites (Castform weather,
+    # Aegislash Blade, Lycanroc Dusk/Midnight, etc.) are picked up
+    # when they have a form-specific sprite file.
+    forme = entry.get("forme", "")
+    if forme:
+        sprite_form = forme_to_sprite_form(forme)
+        file = num_form_to_file.get((num, sprite_form))
+        if not file and sprite_form.endswith("_X"):
+            file = num_form_to_file.get((num, "Mega_X"))
+        elif not file and sprite_form.endswith("_Y"):
+            file = num_form_to_file.get((num, "Mega_Y"))
+
+    # 2. Try the pattern matcher (handles Mega / Alola / Hisui / ... forms
+    # whose sprite id pattern doesn't match `entry.forme` exactly).
     if not file:
-        # Try matching by form name from the entry
-        forme = entry.get("forme", "")
-        if forme:
-            # Convert forme to Bulbagarden style
-            bg_form = forme.replace("Mega ", "Mega_").replace(" ", "_")
-            file = num_form_to_file.get((num, bg_form))
-            if not file and bg_form.endswith("_X"):
-                file = num_form_to_file.get((num, "Mega_X"))
-            elif not file and bg_form.endswith("_Y"):
-                file = num_form_to_file.get((num, "Mega_Y"))
+        file = find_sprite(sid, num)
 
+    # 3. Last resort: grab any file for this dex number.
     if not file:
-        # Last resort: grab any file for this dex number
         for (n, f), fn in num_form_to_file.items():
             if n == num:
                 file = fn

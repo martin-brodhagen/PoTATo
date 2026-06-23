@@ -13,6 +13,7 @@ npm run prep:mb:refresh-game8            # re-scrape game8.co (writes data/game8
 npm run prep:items:patch                 # re-apply item category patches
 npm run prep:moves:patch                 # re-apply move PP patches
 npm run prep:abilities:patch             # re-apply ability removals
+npm run prep:species:patch               # re-apply cosmetic-forme synthesis to data/base/pokedex.json
 ```
 
 First run of `npm run prep:base` needs network; subsequent runs use the `.cache/` disk cache.
@@ -32,10 +33,11 @@ First run of `npm run prep:base` needs network; subsequent runs use the `.cache/
 
 ```
 prep/                            python data pipeline
-  base/build.py                  # 13 stages → data/base/
+  base/build.py                  # 14 stages → data/base/ (step 2 injects cosmetic formes)
   items/patch_categories.py      # Game8 + manual categories → data/base/items.json
   moves/patch_pp.py              # manual PP map → data/base/moves.json
   abilities/patch_remove.py      # manual ability removals → data/base/abilities.json
+  species/patch_cosmetic_formes.py # re-applies cosmetic-form synthesis to data/base/pokedex.json
   formats/
     build.py                     # writes data/formats/<id>.json
     m-a/config.json              # flat {species, items} or split {species_non_mega, species_mega}
@@ -72,7 +74,8 @@ Each `data/manual-*.json` is a small, user-edited file applied as a patch after 
 | `manual-item-categories.json` | `{item_id: [category, ...]}` | Per-item category tags (replaces Game8). |
 | `manual-move-pp.json` | `{old_pp: new_pp}` | Uniform PP remap (5→8, 10→12, 15→16 today). |
 | `manual-ability-removals.json` | `{remove: [ability_id, ...]}` | Abilities to drop from base + every format whitelist. |
-| `manual-forme-overrides.json` | `{forme: {name, kind}}` | Display name + kind per forme. See Forme Override System below. |
+| `manual-forme-overrides.json` | `{forme: {name, kind}}` + `_base: {species_id: {name, kind}}` | Display name + kind per forme. `_base` covers the base species when it IS a named forme (Male Basculegion, Disguised Mimikyu, etc.). See Forme Override System below. |
+| `manual-cosmetic-formes.json` | `{base_id: [forme, ...]}` | Cosmetic-only formes to enable per base (synthesized in step 2 of the base build, idempotent re-apply in `prep/species/patch_cosmetic_formes.py`). |
 
 To add a new kind or category of override, follow the same pattern: a JSON file in `data/`, a `prep/<area>/patch_*.py` script that reads it, and a call in `prep/build_mb.py`.
 
@@ -90,6 +93,24 @@ To add a new kind or category of override, follow the same pattern: a JSON file 
 The hidden kinds are exported from `lib/data-loader.js` as `HIDDEN_FORME_KINDS`. The `pokemon-search-widget` filters them out of the search grid; the `search-detail-view` forme switcher still shows them (reachable via the forme button).
 
 To add a M-B-relevant forme that should be hidden from search (e.g. Aegislash's Blade Forme in M-A): add it to `data/manual-forme-overrides.json` with `kind: "combat-switch"`, and add the species to the M-B config's `species_overrides` if it's not in the mod's tier table.
+
+### Base Formes
+
+When the base species is itself a named forme (Male Basculegion, Disguised Mimikyu, Shield Forme Aegislash, Midday Lycanroc, etc.), upstream Showdown leaves `species.forme` empty on the base entry, so the search detail view would otherwise show an empty forme line. Add a `_base: {species_id: {name, kind}}` section to `manual-forme-overrides.json` to fill it in. The `kind` should be `pre-battle` (these are encounterable pokemon, even when their alternative forme is `combat-switch`). Mega and regional bases are excluded — only pokemon whose alternatives are non-mega, non-regional belong here.
+
+## Cosmetic-Only Formes
+
+`data/manual-cosmetic-formes.json` lists cosmetic-only forme variants to enable per base species (e.g. Florges colors, Furfrou trims, Alcremie flavors, Vivillon patterns). These formes:
+
+- Are not in upstream Showdown's `pokedex.json` (only listed in each base's `cosmeticFormes` metadata).
+- Are marked `Illegal` by the Champions mod.
+- Have **no competitive difference** from the base (identical stats/types/abilities).
+
+The base build's step 2 (`inject_cosmetic_formes`) synthesizes a placeholder entry for each missing forme by copying the base's stat-bearing fields, and backfills any missing fields on in-upstream cosmetic entries (Vivillon patterns, Alcremie cream/swirl variants, etc.). Format configs then list the resulting species IDs in `species_overrides` to whitelist them; the forme switcher surfaces them in the search detail view, and the `cosmetic` kind in `manual-forme-overrides.json` hides them from the search grid.
+
+To add a new cosmetic family: append the base id (e.g. `"unown"`) to `data/manual-cosmetic-formes.json` with the list of forme values (case-sensitive, matching `species.forme` in upstream), and add the synthesized species IDs to the format configs' `species_overrides` plus the display names to `manual-forme-overrides.json`. Re-run `npm run prep` to rebuild.
+
+`scripts/build-sprite-map.py` and `scripts/build-shiny-sprite-map.py` look up form-specific sprites by converting `entry.forme` to a Bulbagarden sprite suffix (spaces/dashes → underscores) and matching against `Menu_CP_<dex>-<form>.png`. If a sprite file exists for a forme, it's used; otherwise the base sprite is used as fallback. Special-case overrides (e.g. `Pokeball` → `Poke_Ball`) live in `FORME_SPRITE_OVERRIDES` at the top of each sprite script.
 
 ## Architecture
 

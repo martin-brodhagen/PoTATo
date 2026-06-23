@@ -7,6 +7,7 @@
     "prep:items:patch": "python3 prep/items/patch_categories.py",
     "prep:moves:patch": "python3 prep/moves/patch_pp.py",
     "prep:abilities:patch": "python3 prep/abilities/patch_remove.py",
+    "prep:species:patch": "python3 prep/species/patch_cosmetic_formes.py",
     "prep:format": "python3 prep/formats/build.py",
     "prep:mb": "python3 prep/base/build.py && python3 prep/formats/build.py m-b && python3 prep/i18n/build.py",
     "prep:mb:i18n": "python3 prep/i18n/build.py",

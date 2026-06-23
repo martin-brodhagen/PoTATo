@@ -2,12 +2,13 @@
 """Orchestrator: build the shared base data, per-format whitelists, and i18n bundles.
 
 Runs in order:
-  1. `prep/base/build.py`               — generates data/base/{...}.json
-  2. `prep/items/patch_categories.py`   — overlays Game8 + manual item categories
-  3. `prep/moves/patch_pp.py`           — applies manual PP mapping to moves
-  4. `prep/abilities/patch_remove.py`   — removes manually-flagged abilities
-  5. `prep/formats/build.py`            — generates data/formats/<id>.json
-  6. `prep/i18n/build.py`               — generates data/i18n/<lang>/{...}.json
+  1. `prep/base/build.py`                   — generates data/base/{...}.json
+  2. `prep/items/patch_categories.py`       — overlays Game8 + manual item categories
+  3. `prep/moves/patch_pp.py`               — applies manual PP mapping to moves
+  4. `prep/abilities/patch_remove.py`       — removes manually-flagged abilities
+  5. `prep/species/patch_cosmetic_formes.py`— re-applies cosmetic-forme synthesis to base
+  6. `prep/formats/build.py`                — generates data/formats/<id>.json
+  7. `prep/i18n/build.py`                   — generates data/i18n/<lang>/{...}.json
 """
 
 import os
@@ -36,6 +37,8 @@ def main():
     run_module(os.path.join(HERE, "moves", "patch_pp.py"))
 
     run_module(os.path.join(HERE, "abilities", "patch_remove.py"))
+
+    run_module(os.path.join(HERE, "species", "patch_cosmetic_formes.py"))
 
     formats_dir = os.path.join(HERE, "formats")
     format_ids = sorted(

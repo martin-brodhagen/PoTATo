@@ -38,6 +38,30 @@
  "alcremie": {
   "name": "Charmilly"
  },
+ "alcremiecaramelswirl": {
+  "name": "Charmilly"
+ },
+ "alcremielemoncream": {
+  "name": "Charmilly"
+ },
+ "alcremiematchacream": {
+  "name": "Charmilly"
+ },
+ "alcremiemintcream": {
+  "name": "Charmilly"
+ },
+ "alcremierainbowswirl": {
+  "name": "Charmilly"
+ },
+ "alcremierubycream": {
+  "name": "Charmilly"
+ },
+ "alcremierubyswirl": {
+  "name": "Charmilly"
+ },
+ "alcremiesaltedcream": {
+  "name": "Charmilly"
+ },
  "altaria": {
   "name": "Altaria"
  },
@@ -317,6 +341,18 @@
  "florges": {
   "name": "Florges"
  },
+ "florgesblue": {
+  "name": "Florges"
+ },
+ "florgesorange": {
+  "name": "Florges"
+ },
+ "florgeswhite": {
+  "name": "Florges"
+ },
+ "florgesyellow": {
+  "name": "Florges"
+ },
  "forretress": {
   "name": "Foretress"
  },
@@ -327,6 +363,33 @@
   "name": "Momartik"
  },
  "furfrou": {
+  "name": "Couafarel"
+ },
+ "furfroudandy": {
+  "name": "Couafarel"
+ },
+ "furfroudebutante": {
+  "name": "Couafarel"
+ },
+ "furfroudiamond": {
+  "name": "Couafarel"
+ },
+ "furfrouheart": {
+  "name": "Couafarel"
+ },
+ "furfroukabuki": {
+  "name": "Couafarel"
+ },
+ "furfroulareine": {
+  "name": "Couafarel"
+ },
+ "furfroumatron": {
+  "name": "Couafarel"
+ },
+ "furfroupharaoh": {
+  "name": "Couafarel"
+ },
+ "furfroustar": {
   "name": "Couafarel"
  },
  "gallade": {
@@ -534,6 +597,9 @@
   "name": "Élecsprint"
  },
  "maushold": {
+  "name": "Famignol"
+ },
+ "mausholdfour": {
   "name": "Famignol"
  },
  "mawile": {
@@ -930,6 +996,63 @@
   "name": "Rafflesia"
  },
  "vivillon": {
+  "name": "Prismillon"
+ },
+ "vivillonarchipelago": {
+  "name": "Prismillon"
+ },
+ "vivilloncontinental": {
+  "name": "Prismillon"
+ },
+ "vivillonelegant": {
+  "name": "Prismillon"
+ },
+ "vivillonfancy": {
+  "name": "Prismillon"
+ },
+ "vivillongarden": {
+  "name": "Prismillon"
+ },
+ "vivillonhighplains": {
+  "name": "Prismillon"
+ },
+ "vivillonicysnow": {
+  "name": "Prismillon"
+ },
+ "vivillonjungle": {
+  "name": "Prismillon"
+ },
+ "vivillonmarine": {
+  "name": "Prismillon"
+ },
+ "vivillonmodern": {
+  "name": "Prismillon"
+ },
+ "vivillonmonsoon": {
+  "name": "Prismillon"
+ },
+ "vivillonocean": {
+  "name": "Prismillon"
+ },
+ "vivillonpokeball": {
+  "name": "Prismillon"
+ },
+ "vivillonpolar": {
+  "name": "Prismillon"
+ },
+ "vivillonriver": {
+  "name": "Prismillon"
+ },
+ "vivillonsandstorm": {
+  "name": "Prismillon"
+ },
+ "vivillonsavanna": {
+  "name": "Prismillon"
+ },
+ "vivillonsun": {
+  "name": "Prismillon"
+ },
+ "vivillontundra": {
   "name": "Prismillon"
  },
  "volcarona": {

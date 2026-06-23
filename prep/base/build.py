@@ -52,6 +52,7 @@ from _lib.ts_parser import (  # noqa: E402
 
 REPO_ROOT = os.path.dirname(os.path.dirname(HERE))
 GAME8_DESCRIPTIONS_PATH = os.path.join(REPO_ROOT, "data", "game8-descriptions.json")
+MANUAL_COSMETIC_FORMES_PATH = os.path.join(REPO_ROOT, "data", "manual-cosmetic-formes.json")
 
 SOURCES = {
     "showdown_base": "https://play.pokemonshowdown.com/data",
@@ -64,7 +65,7 @@ SOURCES = {
 # 1. scrape_base
 # ---------------------------------------------------------------------------
 def scrape_base(cache: Cache):
-    print("[1/13] scrape_base", file=sys.stderr)
+    print("[1/14] scrape_base", file=sys.stderr)
     base_url = SOURCES["showdown_base"]
     return {
         "pokedex": cache.fetch_json(f"{base_url}/pokedex.json"),
@@ -79,7 +80,7 @@ def scrape_base(cache: Cache):
 # 2. scrape_mod
 # ---------------------------------------------------------------------------
 def scrape_mod(cache: Cache):
-    print("[2/13] scrape_mod", file=sys.stderr)
+    print("[3/14] scrape_mod", file=sys.stderr)
     mod_url = SOURCES["showdown_mod"]
     return {
         "moves": parse_ts_overrides(cache.fetch_text(f"{mod_url}/moves.ts")),
@@ -94,7 +95,7 @@ def scrape_mod(cache: Cache):
 # 3. apply_overrides
 # ---------------------------------------------------------------------------
 def apply_overrides_stage(base: dict, mod: dict):
-    print("[3/13] apply_overrides", file=sys.stderr)
+    print("[4/14] apply_overrides", file=sys.stderr)
     moves = dict(base["moves_raw"])
     for mid, overrides in mod["moves"].items():
         if mid in moves:
@@ -108,6 +109,111 @@ def apply_overrides_stage(base: dict, mod: dict):
             apply_overrides(items[iid], overrides)
 
     return {"moves": moves, "items": items}
+
+
+# ---------------------------------------------------------------------------
+# 3.5. inject_cosmetic_formes — synthesize entries for cosmetic-only formes
+# ---------------------------------------------------------------------------
+def _cosmetic_forme_id(base_id: str, forme: str) -> str:
+    """Compute the upstream-style species id for a cosmetic forme.
+
+    Mirrors Showdown's id convention: base_id + forme-normalized
+    (lowercased, spaces and dashes removed). Examples:
+      ('florges', 'Blue')         -> 'florgesblue'
+      ('vivillon', 'High Plains') -> 'vivillonhighplains'
+      ('alcremie', 'Ruby-Cream')  -> 'alcremierubycream'
+      ('furfrou', 'La Reine')     -> 'furfroulareine'
+    """
+    return base_id + forme.lower().replace(" ", "").replace("-", "")
+
+
+def inject_cosmetic_formes(pokedex: dict) -> dict[str, list[str]]:
+    """Inject synthetic entries for cosmetic-only formes into the upstream pokedex.
+
+    Reads `data/manual-cosmetic-formes.json` (mapping of base species id →
+    list of forme values to enable) and adds an entry for each forme. For
+    formes already present in the upstream pokedex (e.g. Vivillon patterns,
+    most Alcremie flavors), missing stat-bearing fields are backfilled
+    from the base so the formes have a complete profile. For formes not
+    in upstream (e.g. Florges colors, Furfrou trims, Alcremie-Salted-Cream),
+    a full placeholder entry is synthesized by copying the base's
+    stat-bearing fields and adding the forme-specific id / name /
+    baseSpecies / forme.
+
+    Returns a dict of {synthesized_id: source_base_id} for logging. The
+    pokedex is mutated in place.
+    """
+    if not os.path.isfile(MANUAL_COSMETIC_FORMES_PATH):
+        return {}
+
+    with open(MANUAL_COSMETIC_FORMES_PATH, "r", encoding="utf-8") as f:
+        manual = json.load(f)
+
+    synthesized: dict[str, str] = {}
+    backfilled: list[str] = []
+    skipped_existing_base: list[str] = []
+
+    # Fields that a cosmetic forme should inherit from its base when
+    # missing in the upstream entry. Mirrors the synthesize branch below.
+    INHERIT_FIELDS = (
+        "num", "types", "baseStats", "abilities",
+        "heightm", "weightkg", "gender", "color",
+    )
+
+    for raw_key, formes in manual.items():
+        if raw_key.startswith("_"):
+            continue
+        base_id = raw_key
+        base = pokedex.get(base_id)
+        if not base:
+            print(f"  NOTE: cosmetic base {base_id!r} not in upstream pokedex; "
+                  f"skipping {len(formes)} forme(s)", file=sys.stderr)
+            skipped_existing_base.append(base_id)
+            continue
+        base_name = base.get("name", base_id)
+        for forme in formes:
+            sid = _cosmetic_forme_id(base_id, forme)
+            if sid in pokedex:
+                # Already in upstream (e.g. vivillon patterns, mausholdfour).
+                # Backfill any stat-bearing fields the upstream left null —
+                # Showdown marks cosmetic formes with `isCosmeticForme: true`
+                # and omits the inherited fields, but the data-loader needs
+                # them so the team builder / ability views work.
+                entry = pokedex[sid]
+                patched = False
+                if not entry.get("isCosmeticForme"):
+                    entry["isCosmeticForme"] = True
+                    patched = True
+                for f in INHERIT_FIELDS:
+                    if entry.get(f) is None and base.get(f) is not None:
+                        entry[f] = base.get(f)
+                        patched = True
+                if patched:
+                    backfilled.append(sid)
+                continue
+            pokedex[sid] = {
+                "isCosmeticForme": True,
+                "name": f"{base_name}-{forme}",
+                "baseSpecies": base_name,
+                "forme": forme,
+            }
+            for f in INHERIT_FIELDS:
+                pokedex[sid][f] = base.get(f)
+            synthesized[sid] = base_id
+
+    if synthesized or backfilled:
+        print(f"  cosmetic formes: {len(synthesized)} synthesized, "
+              f"{len(backfilled)} backfilled from upstream entries", file=sys.stderr)
+        if synthesized:
+            sample = ", ".join(f"{sid} (from {synthesized[sid]})"
+                              for sid in list(synthesized)[:5])
+            print(f"    synthesized: {sample}{'...' if len(synthesized) > 5 else ''}",
+                  file=sys.stderr)
+        if backfilled:
+            sample = ", ".join(backfilled[:5])
+            print(f"    backfilled:  {sample}{'...' if len(backfilled) > 5 else ''}",
+                  file=sys.stderr)
+    return synthesized
 
 
 # ---------------------------------------------------------------------------
@@ -140,7 +246,7 @@ def _format_overrides() -> set[str]:
 
 
 def compute_legal_species(pokedex: dict, formats_data: dict):
-    print("[4/13] compute_legal_species", file=sys.stderr)
+    print("[5/14] compute_legal_species", file=sys.stderr)
     legal: set[str] = set()
     for pid, entry in formats_data.items():
         tier = entry.get("tier", "")
@@ -159,7 +265,7 @@ def compute_legal_species(pokedex: dict, formats_data: dict):
 # 5. compute_legal_moves
 # ---------------------------------------------------------------------------
 def compute_legal_moves(moves: dict):
-    print("[5/13] compute_legal_moves", file=sys.stderr)
+    print("[6/14] compute_legal_moves", file=sys.stderr)
     excluded = {"Past", "Unobtainable", "CAP", "LGPE", "Gigantamax", "Future"}
     legal: set[str] = set()
     for mid, entry in moves.items():
@@ -179,7 +285,7 @@ def compute_legal_moves(moves: dict):
 # ---------------------------------------------------------------------------
 def build_learnsets(legal_ids: set[str], legal_moves: set[str],
                     base_learnsets: dict, mod_learnsets: dict, pokedex: dict):
-    print("[6/13] build_learnsets", file=sys.stderr)
+    print("[7/14] build_learnsets", file=sys.stderr)
     merged = dict(base_learnsets)
     merged.update(mod_learnsets)
 
@@ -240,7 +346,7 @@ POKEDEX_FIELDS = (
 
 
 def build_pokedex(legal_ids: set[str], pokedex: dict, learnsets: dict):
-    print("[7/13] build_pokedex", file=sys.stderr)
+    print("[8/14] build_pokedex", file=sys.stderr)
     index: list[dict] = []
     for pid in sorted(legal_ids):
         entry = pokedex.get(pid)
@@ -458,7 +564,7 @@ def _move_effect_categories(entry: dict, mid: str) -> list[str]:
 
 
 def build_moves(legal_moves: set[str], moves: dict):
-    print("[8/13] build_moves", file=sys.stderr)
+    print("[9/14] build_moves", file=sys.stderr)
     out: dict[str, dict] = {}
     for mid in sorted(legal_moves):
         if mid in moves:
@@ -491,7 +597,7 @@ ITEM_DROP_KEYS = [
 
 
 def build_items(items: dict):
-    print("[9/13] build_items", file=sys.stderr)
+    print("[10/14] build_items", file=sys.stderr)
     out: dict[str, dict] = {}
     for iid, entry in items.items():
         out[iid] = dict(entry)
@@ -615,7 +721,7 @@ def _ability_categories(aid: str) -> list[str]:
 
 
 def build_abilities(abilities_raw: dict):
-    print("[10/13] build_abilities", file=sys.stderr)
+    print("[11/14] build_abilities", file=sys.stderr)
     out: dict[str, dict] = {}
     for aid, entry in abilities_raw.items():
         if not isinstance(entry, dict):
@@ -635,7 +741,7 @@ def build_abilities(abilities_raw: dict):
 # 11. build_moves_with_learnsets
 # ---------------------------------------------------------------------------
 def build_moves_with_learnsets(moves_out: dict, learnsets: dict):
-    print("[11/13] build_moves_with_learnsets", file=sys.stderr)
+    print("[12/14] build_moves_with_learnsets", file=sys.stderr)
     move_to_species: dict[str, list[str]] = {}
     for species_id, move_ids in learnsets.items():
         for move_id in move_ids:
@@ -660,7 +766,7 @@ def apply_game8_descriptions(moves_out: dict, items_out: dict, abilities_out: di
     Drops `desc` for entities not in Game8 (frontend renders "—" when absent).
     Preserves bare em-dash (U+2014) as a valid empty description.
     """
-    print("[12/13] apply_game8_descriptions", file=sys.stderr)
+    print("[13/14] apply_game8_descriptions", file=sys.stderr)
     game8 = scrape_game8(force=False, output_path=GAME8_DESCRIPTIONS_PATH)
     g8_moves = game8.get("moves", {})
     g8_items = game8.get("items", {})
@@ -714,7 +820,7 @@ def apply_game8_descriptions(moves_out: dict, items_out: dict, abilities_out: di
 # ---------------------------------------------------------------------------
 def write_outputs(out_dir: str, pokedex, moves_out, learnsets_out, items_out,
                   abilities_out, moves_with_learnsets_out):
-    print("[13/13] write_outputs", file=sys.stderr)
+    print("[14/14] write_outputs", file=sys.stderr)
     os.makedirs(out_dir, exist_ok=True)
 
     def write(name, data, indent=1):
@@ -737,6 +843,8 @@ def main():
     cache = Cache()
 
     base = scrape_base(cache)
+    print("[2/14] inject_cosmetic_formes", file=sys.stderr)
+    inject_cosmetic_formes(base["pokedex"])
     mod = scrape_mod(cache)
     merged = apply_overrides_stage(base, mod)
     legal_species = compute_legal_species(base["pokedex"], mod["formats_data"])

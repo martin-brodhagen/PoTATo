@@ -6,10 +6,12 @@ Drops the listed ability ids from:
   - `data/base/abilities.json` — the canonical ability data.
   - `data/formats/<id>.json` — every format whitelist.
 
-The data-loader resolves species abilities against the per-format
-whitelist, so any species that had a removed ability in its
-`abilities` array will silently lose it at render time without
-needing the species record itself to be edited.
+The data-loader filters each species' `abilities` array against the
+per-format ability whitelist when building the per-format view
+(see `lib/data-loader.js`), so any species that had a removed ability
+in its `abilities` field will silently lose it in the search detail
+and team builder without needing the species record itself to be
+edited.
 
 Usage:
     python3 prep/abilities/patch_remove.py

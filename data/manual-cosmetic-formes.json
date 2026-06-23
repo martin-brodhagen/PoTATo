@@ -1,0 +1,49 @@
+{
+  "_comment": [
+    "Cosmetic-only forme species to enable in PoTATo. The base pokedex",
+    "in upstream Showdown only contains the base species for many pokemon;",
+    "purely cosmetic recolors (Florges colors, Furfrou trims, Alcremie",
+    "flavors, Vivillon patterns, etc.) are listed in the base's",
+    "`cosmeticFormes` metadata field but have no entry of their own. The",
+    "Champions mod marks them as Illegal, so they never reach the base.",
+    "",
+    "This file lists which cosmetic formes to re-introduce. The patch",
+    "script `prep/species/patch_cosmetic_formes.py` synthesizes an entry",
+    "for each forme by copying the base's stats/types/abilities and sets",
+    "the forme-specific id/name/forme. The format configs (m-a, m-b) list",
+    "the resulting species ids in their `species_overrides` so the base",
+    "build picks them up; the data-loader surfaces them in the search",
+    "detail's forme switcher (and hides them from the search grid via the",
+    "`cosmetic` kind set in data/manual-forme-overrides.json).",
+    "",
+    "Adding a forme here: append its display value (matching species.forme",
+    "in upstream — case-sensitive, e.g. 'High Plains' has a space) to the",
+    "appropriate base's list. The synthesis is idempotent; re-running the",
+    "patch is safe."
+  ],
+
+  "florges": [
+    "Blue", "Orange", "White", "Yellow"
+  ],
+
+  "furfrou": [
+    "Dandy", "Debutante", "Diamond", "Heart", "Kabuki",
+    "La Reine", "Matron", "Pharaoh", "Star"
+  ],
+
+  "alcremie": [
+    "Ruby-Cream", "Matcha-Cream", "Mint-Cream", "Lemon-Cream", "Salted-Cream",
+    "Ruby-Swirl", "Caramel-Swirl", "Rainbow-Swirl"
+  ],
+
+  "vivillon": [
+    "Archipelago", "Continental", "Elegant", "Fancy", "Garden",
+    "High Plains", "Icy Snow", "Jungle", "Marine", "Modern",
+    "Monsoon", "Ocean", "Polar", "Pokeball", "River",
+    "Sandstorm", "Savanna", "Sun", "Tundra"
+  ],
+
+  "maushold": [
+    "Four"
+  ]
+}

@@ -38,6 +38,30 @@
  "alcremie": {
   "name": "Pokusan"
  },
+ "alcremiecaramelswirl": {
+  "name": "Pokusan"
+ },
+ "alcremielemoncream": {
+  "name": "Pokusan"
+ },
+ "alcremiematchacream": {
+  "name": "Pokusan"
+ },
+ "alcremiemintcream": {
+  "name": "Pokusan"
+ },
+ "alcremierainbowswirl": {
+  "name": "Pokusan"
+ },
+ "alcremierubycream": {
+  "name": "Pokusan"
+ },
+ "alcremierubyswirl": {
+  "name": "Pokusan"
+ },
+ "alcremiesaltedcream": {
+  "name": "Pokusan"
+ },
  "altaria": {
   "name": "Altaria"
  },
@@ -317,6 +341,18 @@
  "florges": {
   "name": "Florges"
  },
+ "florgesblue": {
+  "name": "Florges"
+ },
+ "florgesorange": {
+  "name": "Florges"
+ },
+ "florgeswhite": {
+  "name": "Florges"
+ },
+ "florgesyellow": {
+  "name": "Florges"
+ },
  "forretress": {
   "name": "Forstellka"
  },
@@ -327,6 +363,33 @@
   "name": "Frosdedje"
  },
  "furfrou": {
+  "name": "Coiffwaff"
+ },
+ "furfroudandy": {
+  "name": "Coiffwaff"
+ },
+ "furfroudebutante": {
+  "name": "Coiffwaff"
+ },
+ "furfroudiamond": {
+  "name": "Coiffwaff"
+ },
+ "furfrouheart": {
+  "name": "Coiffwaff"
+ },
+ "furfroukabuki": {
+  "name": "Coiffwaff"
+ },
+ "furfroulareine": {
+  "name": "Coiffwaff"
+ },
+ "furfroumatron": {
+  "name": "Coiffwaff"
+ },
+ "furfroupharaoh": {
+  "name": "Coiffwaff"
+ },
+ "furfroustar": {
   "name": "Coiffwaff"
  },
  "gallade": {
@@ -534,6 +597,9 @@
   "name": "Voltenso"
  },
  "maushold": {
+  "name": "Famieps"
+ },
+ "mausholdfour": {
   "name": "Famieps"
  },
  "mawile": {
@@ -930,6 +996,63 @@
   "name": "Giflor"
  },
  "vivillon": {
+  "name": "Vivillon"
+ },
+ "vivillonarchipelago": {
+  "name": "Vivillon"
+ },
+ "vivilloncontinental": {
+  "name": "Vivillon"
+ },
+ "vivillonelegant": {
+  "name": "Vivillon"
+ },
+ "vivillonfancy": {
+  "name": "Vivillon"
+ },
+ "vivillongarden": {
+  "name": "Vivillon"
+ },
+ "vivillonhighplains": {
+  "name": "Vivillon"
+ },
+ "vivillonicysnow": {
+  "name": "Vivillon"
+ },
+ "vivillonjungle": {
+  "name": "Vivillon"
+ },
+ "vivillonmarine": {
+  "name": "Vivillon"
+ },
+ "vivillonmodern": {
+  "name": "Vivillon"
+ },
+ "vivillonmonsoon": {
+  "name": "Vivillon"
+ },
+ "vivillonocean": {
+  "name": "Vivillon"
+ },
+ "vivillonpokeball": {
+  "name": "Vivillon"
+ },
+ "vivillonpolar": {
+  "name": "Vivillon"
+ },
+ "vivillonriver": {
+  "name": "Vivillon"
+ },
+ "vivillonsandstorm": {
+  "name": "Vivillon"
+ },
+ "vivillonsavanna": {
+  "name": "Vivillon"
+ },
+ "vivillonsun": {
+  "name": "Vivillon"
+ },
+ "vivillontundra": {
   "name": "Vivillon"
  },
  "volcarona": {

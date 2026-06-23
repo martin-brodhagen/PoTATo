@@ -38,6 +38,30 @@
  "alcremie": {
   "name": "マホイップ"
  },
+ "alcremiecaramelswirl": {
+  "name": "マホイップ"
+ },
+ "alcremielemoncream": {
+  "name": "マホイップ"
+ },
+ "alcremiematchacream": {
+  "name": "マホイップ"
+ },
+ "alcremiemintcream": {
+  "name": "マホイップ"
+ },
+ "alcremierainbowswirl": {
+  "name": "マホイップ"
+ },
+ "alcremierubycream": {
+  "name": "マホイップ"
+ },
+ "alcremierubyswirl": {
+  "name": "マホイップ"
+ },
+ "alcremiesaltedcream": {
+  "name": "マホイップ"
+ },
  "altaria": {
   "name": "チルタリス"
  },
@@ -317,6 +341,18 @@
  "florges": {
   "name": "フラージェス"
  },
+ "florgesblue": {
+  "name": "フラージェス"
+ },
+ "florgesorange": {
+  "name": "フラージェス"
+ },
+ "florgeswhite": {
+  "name": "フラージェス"
+ },
+ "florgesyellow": {
+  "name": "フラージェス"
+ },
  "forretress": {
   "name": "フォレトス"
  },
@@ -327,6 +363,33 @@
   "name": "ユキメノコ"
  },
  "furfrou": {
+  "name": "トリミアン"
+ },
+ "furfroudandy": {
+  "name": "トリミアン"
+ },
+ "furfroudebutante": {
+  "name": "トリミアン"
+ },
+ "furfroudiamond": {
+  "name": "トリミアン"
+ },
+ "furfrouheart": {
+  "name": "トリミアン"
+ },
+ "furfroukabuki": {
+  "name": "トリミアン"
+ },
+ "furfroulareine": {
+  "name": "トリミアン"
+ },
+ "furfroumatron": {
+  "name": "トリミアン"
+ },
+ "furfroupharaoh": {
+  "name": "トリミアン"
+ },
+ "furfroustar": {
   "name": "トリミアン"
  },
  "gallade": {
@@ -534,6 +597,9 @@
   "name": "ライボルト"
  },
  "maushold": {
+  "name": "イッカネズミ"
+ },
+ "mausholdfour": {
   "name": "イッカネズミ"
  },
  "mawile": {
@@ -930,6 +996,63 @@
   "name": "ラフレシア"
  },
  "vivillon": {
+  "name": "ビビヨン"
+ },
+ "vivillonarchipelago": {
+  "name": "ビビヨン"
+ },
+ "vivilloncontinental": {
+  "name": "ビビヨン"
+ },
+ "vivillonelegant": {
+  "name": "ビビヨン"
+ },
+ "vivillonfancy": {
+  "name": "ビビヨン"
+ },
+ "vivillongarden": {
+  "name": "ビビヨン"
+ },
+ "vivillonhighplains": {
+  "name": "ビビヨン"
+ },
+ "vivillonicysnow": {
+  "name": "ビビヨン"
+ },
+ "vivillonjungle": {
+  "name": "ビビヨン"
+ },
+ "vivillonmarine": {
+  "name": "ビビヨン"
+ },
+ "vivillonmodern": {
+  "name": "ビビヨン"
+ },
+ "vivillonmonsoon": {
+  "name": "ビビヨン"
+ },
+ "vivillonocean": {
+  "name": "ビビヨン"
+ },
+ "vivillonpokeball": {
+  "name": "ビビヨン"
+ },
+ "vivillonpolar": {
+  "name": "ビビヨン"
+ },
+ "vivillonriver": {
+  "name": "ビビヨン"
+ },
+ "vivillonsandstorm": {
+  "name": "ビビヨン"
+ },
+ "vivillonsavanna": {
+  "name": "ビビヨン"
+ },
+ "vivillonsun": {
+  "name": "ビビヨン"
+ },
+ "vivillontundra": {
   "name": "ビビヨン"
  },
  "volcarona": {

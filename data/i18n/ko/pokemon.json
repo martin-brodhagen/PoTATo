@@ -38,6 +38,30 @@
  "alcremie": {
   "name": "마휘핑"
  },
+ "alcremiecaramelswirl": {
+  "name": "마휘핑"
+ },
+ "alcremielemoncream": {
+  "name": "마휘핑"
+ },
+ "alcremiematchacream": {
+  "name": "마휘핑"
+ },
+ "alcremiemintcream": {
+  "name": "마휘핑"
+ },
+ "alcremierainbowswirl": {
+  "name": "마휘핑"
+ },
+ "alcremierubycream": {
+  "name": "마휘핑"
+ },
+ "alcremierubyswirl": {
+  "name": "마휘핑"
+ },
+ "alcremiesaltedcream": {
+  "name": "마휘핑"
+ },
  "altaria": {
   "name": "파비코리"
  },
@@ -317,6 +341,18 @@
  "florges": {
   "name": "플라제스"
  },
+ "florgesblue": {
+  "name": "플라제스"
+ },
+ "florgesorange": {
+  "name": "플라제스"
+ },
+ "florgeswhite": {
+  "name": "플라제스"
+ },
+ "florgesyellow": {
+  "name": "플라제스"
+ },
  "forretress": {
   "name": "쏘콘"
  },
@@ -327,6 +363,33 @@
   "name": "눈여아"
  },
  "furfrou": {
+  "name": "트리미앙"
+ },
+ "furfroudandy": {
+  "name": "트리미앙"
+ },
+ "furfroudebutante": {
+  "name": "트리미앙"
+ },
+ "furfroudiamond": {
+  "name": "트리미앙"
+ },
+ "furfrouheart": {
+  "name": "트리미앙"
+ },
+ "furfroukabuki": {
+  "name": "트리미앙"
+ },
+ "furfroulareine": {
+  "name": "트리미앙"
+ },
+ "furfroumatron": {
+  "name": "트리미앙"
+ },
+ "furfroupharaoh": {
+  "name": "트리미앙"
+ },
+ "furfroustar": {
   "name": "트리미앙"
  },
  "gallade": {
@@ -534,6 +597,9 @@
   "name": "썬더볼트"
  },
  "maushold": {
+  "name": "파밀리쥐"
+ },
+ "mausholdfour": {
   "name": "파밀리쥐"
  },
  "mawile": {
@@ -930,6 +996,63 @@
   "name": "라플레시아"
  },
  "vivillon": {
+  "name": "비비용"
+ },
+ "vivillonarchipelago": {
+  "name": "비비용"
+ },
+ "vivilloncontinental": {
+  "name": "비비용"
+ },
+ "vivillonelegant": {
+  "name": "비비용"
+ },
+ "vivillonfancy": {
+  "name": "비비용"
+ },
+ "vivillongarden": {
+  "name": "비비용"
+ },
+ "vivillonhighplains": {
+  "name": "비비용"
+ },
+ "vivillonicysnow": {
+  "name": "비비용"
+ },
+ "vivillonjungle": {
+  "name": "비비용"
+ },
+ "vivillonmarine": {
+  "name": "비비용"
+ },
+ "vivillonmodern": {
+  "name": "비비용"
+ },
+ "vivillonmonsoon": {
+  "name": "비비용"
+ },
+ "vivillonocean": {
+  "name": "비비용"
+ },
+ "vivillonpokeball": {
+  "name": "비비용"
+ },
+ "vivillonpolar": {
+  "name": "비비용"
+ },
+ "vivillonriver": {
+  "name": "비비용"
+ },
+ "vivillonsandstorm": {
+  "name": "비비용"
+ },
+ "vivillonsavanna": {
+  "name": "비비용"
+ },
+ "vivillonsun": {
+  "name": "비비용"
+ },
+ "vivillontundra": {
   "name": "비비용"
  },
  "volcarona": {

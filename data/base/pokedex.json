@@ -368,6 +368,230 @@
   "moveCount": 49
  },
  {
+  "id": "alcremiecaramelswirl",
+  "name": "Alcremie-Caramel-Swirl",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Caramel-Swirl",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "Yellow",
+  "moveCount": 49
+ },
+ {
+  "id": "alcremielemoncream",
+  "name": "Alcremie-Lemon-Cream",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Lemon-Cream",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "Yellow",
+  "moveCount": 49
+ },
+ {
+  "id": "alcremiematchacream",
+  "name": "Alcremie-Matcha-Cream",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Matcha-Cream",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "Green",
+  "moveCount": 49
+ },
+ {
+  "id": "alcremiemintcream",
+  "name": "Alcremie-Mint-Cream",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Mint-Cream",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "Blue",
+  "moveCount": 49
+ },
+ {
+  "id": "alcremierainbowswirl",
+  "name": "Alcremie-Rainbow-Swirl",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Rainbow-Swirl",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "Yellow",
+  "moveCount": 49
+ },
+ {
+  "id": "alcremierubycream",
+  "name": "Alcremie-Ruby-Cream",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Ruby-Cream",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "Pink",
+  "moveCount": 49
+ },
+ {
+  "id": "alcremierubyswirl",
+  "name": "Alcremie-Ruby-Swirl",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Ruby-Swirl",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "Yellow",
+  "moveCount": 49
+ },
+ {
+  "id": "alcremiesaltedcream",
+  "name": "Alcremie-Salted-Cream",
+  "num": 869,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 65,
+   "atk": 60,
+   "def": 75,
+   "spa": 110,
+   "spd": 121,
+   "spe": 64
+  },
+  "abilities": [
+   "Sweet Veil",
+   "Aroma Veil"
+  ],
+  "forme": "Salted-Cream",
+  "baseSpecies": "Alcremie",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 0.5,
+  "gender": "F",
+  "color": "White",
+  "moveCount": 49
+ },
+ {
   "id": "altaria",
   "name": "Altaria",
   "num": 334,
@@ -3659,6 +3883,118 @@
   "moveCount": 46
  },
  {
+  "id": "florgesblue",
+  "name": "Florges-Blue",
+  "num": 671,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 78,
+   "atk": 65,
+   "def": 68,
+   "spa": 112,
+   "spd": 154,
+   "spe": 75
+  },
+  "abilities": [
+   "Flower Veil",
+   "Symbiosis"
+  ],
+  "forme": "Blue",
+  "baseSpecies": "Florges",
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 10,
+  "gender": "F",
+  "color": "White",
+  "moveCount": 46
+ },
+ {
+  "id": "florgesorange",
+  "name": "Florges-Orange",
+  "num": 671,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 78,
+   "atk": 65,
+   "def": 68,
+   "spa": 112,
+   "spd": 154,
+   "spe": 75
+  },
+  "abilities": [
+   "Flower Veil",
+   "Symbiosis"
+  ],
+  "forme": "Orange",
+  "baseSpecies": "Florges",
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 10,
+  "gender": "F",
+  "color": "White",
+  "moveCount": 46
+ },
+ {
+  "id": "florgeswhite",
+  "name": "Florges-White",
+  "num": 671,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 78,
+   "atk": 65,
+   "def": 68,
+   "spa": 112,
+   "spd": 154,
+   "spe": 75
+  },
+  "abilities": [
+   "Flower Veil",
+   "Symbiosis"
+  ],
+  "forme": "White",
+  "baseSpecies": "Florges",
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 10,
+  "gender": "F",
+  "color": "White",
+  "moveCount": 46
+ },
+ {
+  "id": "florgesyellow",
+  "name": "Florges-Yellow",
+  "num": 671,
+  "types": [
+   "Fairy"
+  ],
+  "baseStats": {
+   "hp": 78,
+   "atk": 65,
+   "def": 68,
+   "spa": 112,
+   "spd": 154,
+   "spe": 75
+  },
+  "abilities": [
+   "Flower Veil",
+   "Symbiosis"
+  ],
+  "forme": "Yellow",
+  "baseSpecies": "Florges",
+  "requiredItem": null,
+  "heightm": 1.1,
+  "weightkg": 10,
+  "gender": "F",
+  "color": "White",
+  "moveCount": 46
+ },
+ {
   "id": "forretress",
   "name": "Forretress",
   "num": 205,
@@ -3764,6 +4100,249 @@
   ],
   "forme": null,
   "baseSpecies": null,
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroudandy",
+  "name": "Furfrou-Dandy",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Dandy",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroudebutante",
+  "name": "Furfrou-Debutante",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Debutante",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroudiamond",
+  "name": "Furfrou-Diamond",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Diamond",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfrouheart",
+  "name": "Furfrou-Heart",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Heart",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroukabuki",
+  "name": "Furfrou-Kabuki",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Kabuki",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroulareine",
+  "name": "Furfrou-La Reine",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "La Reine",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroumatron",
+  "name": "Furfrou-Matron",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Matron",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroupharaoh",
+  "name": "Furfrou-Pharaoh",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Pharaoh",
+  "baseSpecies": "Furfrou",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 28,
+  "gender": null,
+  "color": "White",
+  "moveCount": 40
+ },
+ {
+  "id": "furfroustar",
+  "name": "Furfrou-Star",
+  "num": 676,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 60,
+   "spa": 65,
+   "spd": 90,
+   "spe": 102
+  },
+  "abilities": [
+   "Fur Coat"
+  ],
+  "forme": "Star",
+  "baseSpecies": "Furfrou",
   "requiredItem": null,
   "heightm": 1.2,
   "weightkg": 28,
@@ -5874,6 +6453,35 @@
   "requiredItem": null,
   "heightm": 0.3,
   "weightkg": 2.3,
+  "gender": "N",
+  "color": "White",
+  "moveCount": 50
+ },
+ {
+  "id": "mausholdfour",
+  "name": "Maushold-Four",
+  "num": 925,
+  "types": [
+   "Normal"
+  ],
+  "baseStats": {
+   "hp": 74,
+   "atk": 75,
+   "def": 70,
+   "spa": 65,
+   "spd": 75,
+   "spe": 111
+  },
+  "abilities": [
+   "Friend Guard",
+   "Cheek Pouch",
+   "Technician"
+  ],
+  "forme": "Four",
+  "baseSpecies": "Maushold",
+  "requiredItem": null,
+  "heightm": 0.3,
+  "weightkg": 2.8,
   "gender": "N",
   "color": "White",
   "moveCount": 50
@@ -10056,6 +10664,576 @@
   "weightkg": 17,
   "gender": null,
   "color": "Pink",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonarchipelago",
+  "name": "Vivillon-Archipelago",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Archipelago",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Brown",
+  "moveCount": 43
+ },
+ {
+  "id": "vivilloncontinental",
+  "name": "Vivillon-Continental",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Continental",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Yellow",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonelegant",
+  "name": "Vivillon-Elegant",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Elegant",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Purple",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonfancy",
+  "name": "Vivillon-Fancy",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Fancy",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Pink",
+  "moveCount": 49
+ },
+ {
+  "id": "vivillongarden",
+  "name": "Vivillon-Garden",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Garden",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Green",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonhighplains",
+  "name": "Vivillon-High Plains",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "High Plains",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Brown",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonicysnow",
+  "name": "Vivillon-Icy Snow",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Icy Snow",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "White",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonjungle",
+  "name": "Vivillon-Jungle",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Jungle",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Green",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonmarine",
+  "name": "Vivillon-Marine",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Marine",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Blue",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonmodern",
+  "name": "Vivillon-Modern",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Modern",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Red",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonmonsoon",
+  "name": "Vivillon-Monsoon",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Monsoon",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Gray",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonocean",
+  "name": "Vivillon-Ocean",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Ocean",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Red",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonpokeball",
+  "name": "Vivillon-Pokeball",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Pokeball",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Red",
+  "moveCount": 49
+ },
+ {
+  "id": "vivillonpolar",
+  "name": "Vivillon-Polar",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Polar",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Blue",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonriver",
+  "name": "Vivillon-River",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "River",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Brown",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonsandstorm",
+  "name": "Vivillon-Sandstorm",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Sandstorm",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Brown",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonsavanna",
+  "name": "Vivillon-Savanna",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Savanna",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Green",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillonsun",
+  "name": "Vivillon-Sun",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Sun",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Red",
+  "moveCount": 43
+ },
+ {
+  "id": "vivillontundra",
+  "name": "Vivillon-Tundra",
+  "num": 666,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "abilities": [
+   "Shield Dust",
+   "Compound Eyes",
+   "Friend Guard"
+  ],
+  "forme": "Tundra",
+  "baseSpecies": "Vivillon",
+  "requiredItem": null,
+  "heightm": 1.2,
+  "weightkg": 17,
+  "gender": null,
+  "color": "Blue",
   "moveCount": 43
  },
  {

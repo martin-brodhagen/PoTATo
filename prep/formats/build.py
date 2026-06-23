@@ -61,8 +61,13 @@ def whitelist_species(config: dict, pokedex: list[dict]) -> list[str]:
             | set(config.get("m_b_new_species", []))
             | set(config.get("species_mega", []))
             | set(config.get("m_b_new_mega", []))
-            | set(config.get("species_overrides", []))
         )
+    # `species_overrides` is always merged in: species that the mod
+    # doesn't list (e.g. cosmetic-only formes synthesized into the base,
+    # or species the format wants to whitelist that the mod marks
+    # Illegal). Silently dropped from the whitelist if missing from
+    # the base; logged as a NOTE below.
+    candidates |= set(config.get("species_overrides", []))
     legal = sorted(candidates & base_ids)
 
     missing = sorted(candidates - base_ids)
