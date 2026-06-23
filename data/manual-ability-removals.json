@@ -1,0 +1,14 @@
+{
+  "_comment": [
+    "Abilities to remove from the base. Each id is dropped from",
+    "data/base/abilities.json and from every format whitelist in",
+    "data/formats/*.json. Any species that listed the ability in its",
+    "abilities field will silently lose it at render time (the data-loader",
+    "resolves species abilities against the per-format whitelist, so a",
+    "missing id just doesn't show up in the species's resolved list).",
+    "Edit the list below; re-run `npm run prep:abilities:patch` to apply."
+  ],
+  "remove": [
+    "battlebond"
+  ]
+}

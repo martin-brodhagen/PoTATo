@@ -132,9 +132,6 @@ in place, exactly as before. **No widget code changes are required.**
 ## Verifying the build
 
 ```bash
-# Unit tests
-npm test
-
 # Full rebuild (network required on first run)
 npm run prep
 

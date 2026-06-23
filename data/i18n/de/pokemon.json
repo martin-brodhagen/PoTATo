@@ -14,6 +14,9 @@
  "aegislash": {
   "name": "Durengard"
  },
+ "aegislashblade": {
+  "name": "Durengard"
+ },
  "aerodactyl": {
   "name": "Aerodactyl"
  },
@@ -147,6 +150,15 @@
   "name": "Camerupt"
  },
  "castform": {
+  "name": "Formeo"
+ },
+ "castformrainy": {
+  "name": "Formeo"
+ },
+ "castformsnowy": {
+  "name": "Formeo"
+ },
+ "castformsunny": {
   "name": "Formeo"
  },
  "ceruledge": {
@@ -569,7 +581,13 @@
  "mimikyu": {
   "name": "Mimigma"
  },
+ "mimikyubusted": {
+  "name": "Mimigma"
+ },
  "morpeko": {
+  "name": "Morpeko"
+ },
+ "morpekohangry": {
   "name": "Morpeko"
  },
  "mrrime": {
@@ -600,6 +618,9 @@
   "name": "Myriador"
  },
  "palafin": {
+  "name": "Delfinator"
+ },
+ "palafinhero": {
   "name": "Delfinator"
  },
  "pangoro": {

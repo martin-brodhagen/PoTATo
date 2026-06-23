@@ -14,6 +14,9 @@
  "aegislash": {
   "name": "堅盾劍怪"
  },
+ "aegislashblade": {
+  "name": "堅盾劍怪"
+ },
  "aerodactyl": {
   "name": "化石翼龍"
  },
@@ -147,6 +150,15 @@
   "name": "噴火駝"
  },
  "castform": {
+  "name": "飄浮泡泡"
+ },
+ "castformrainy": {
+  "name": "飄浮泡泡"
+ },
+ "castformsnowy": {
+  "name": "飄浮泡泡"
+ },
+ "castformsunny": {
   "name": "飄浮泡泡"
  },
  "ceruledge": {
@@ -569,7 +581,13 @@
  "mimikyu": {
   "name": "謎擬Ｑ"
  },
+ "mimikyubusted": {
+  "name": "謎擬Ｑ"
+ },
  "morpeko": {
+  "name": "莫魯貝可"
+ },
+ "morpekohangry": {
   "name": "莫魯貝可"
  },
  "mrrime": {
@@ -600,6 +618,9 @@
   "name": "萬針魚"
  },
  "palafin": {
+  "name": "海豚俠"
+ },
+ "palafinhero": {
   "name": "海豚俠"
  },
  "pangoro": {

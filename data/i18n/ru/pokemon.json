@@ -3,34 +3,37 @@
   "name": "Abomasnow"
  },
  "abomasnowmega": {
-  "name": "Abomasnow-Mega"
+  "name": "Abomasnow"
  },
  "absol": {
   "name": "Absol"
  },
  "absolmega": {
-  "name": "Absol-Mega"
+  "name": "Absol"
  },
  "aegislash": {
+  "name": "Aegislash"
+ },
+ "aegislashblade": {
   "name": "Aegislash"
  },
  "aerodactyl": {
   "name": "Aerodactyl"
  },
  "aerodactylmega": {
-  "name": "Aerodactyl-Mega"
+  "name": "Aerodactyl"
  },
  "aggron": {
   "name": "Aggron"
  },
  "aggronmega": {
-  "name": "Aggron-Mega"
+  "name": "Aggron"
  },
  "alakazam": {
   "name": "Alakazam"
  },
  "alakazammega": {
-  "name": "Alakazam-Mega"
+  "name": "Alakazam"
  },
  "alcremie": {
   "name": "Alcremie"
@@ -39,13 +42,13 @@
   "name": "Altaria"
  },
  "altariamega": {
-  "name": "Altaria-Mega"
+  "name": "Altaria"
  },
  "ampharos": {
   "name": "Ampharos"
  },
  "ampharosmega": {
-  "name": "Ampharos-Mega"
+  "name": "Ampharos"
  },
  "annihilape": {
   "name": "Annihilape"
@@ -63,7 +66,7 @@
   "name": "Arcanine"
  },
  "arcaninehisui": {
-  "name": "Arcanine-Hisui"
+  "name": "Arcanine"
  },
  "archaludon": {
   "name": "Archaludon"
@@ -81,7 +84,7 @@
   "name": "Audino"
  },
  "audinomega": {
-  "name": "Audino-Mega"
+  "name": "Audino"
  },
  "aurorus": {
   "name": "Aurorus"
@@ -90,7 +93,7 @@
   "name": "Avalugg"
  },
  "avalugghisui": {
-  "name": "Avalugg-Hisui"
+  "name": "Avalugg"
  },
  "azumarill": {
   "name": "Azumarill"
@@ -99,19 +102,19 @@
   "name": "Banette"
  },
  "banettemega": {
-  "name": "Banette-Mega"
+  "name": "Banette"
  },
  "barbaracle": {
   "name": "Barbaracle"
  },
  "barbaraclemega": {
-  "name": "Barbaracle-Mega"
+  "name": "Barbaracle"
  },
  "basculegion": {
   "name": "Basculegion"
  },
  "basculegionf": {
-  "name": "Basculegion-F"
+  "name": "Basculegion"
  },
  "bastiodon": {
   "name": "Bastiodon"
@@ -123,7 +126,7 @@
   "name": "Beedrill"
  },
  "beedrillmega": {
-  "name": "Beedrill-Mega"
+  "name": "Beedrill"
  },
  "bellibolt": {
   "name": "Bellibolt"
@@ -132,21 +135,30 @@
   "name": "Blastoise"
  },
  "blastoisemega": {
-  "name": "Blastoise-Mega"
+  "name": "Blastoise"
  },
  "blaziken": {
   "name": "Blaziken"
  },
  "blazikenmega": {
-  "name": "Blaziken-Mega"
+  "name": "Blaziken"
  },
  "camerupt": {
   "name": "Camerupt"
  },
  "cameruptmega": {
-  "name": "Camerupt-Mega"
+  "name": "Camerupt"
  },
  "castform": {
+  "name": "Castform"
+ },
+ "castformrainy": {
+  "name": "Castform"
+ },
+ "castformsnowy": {
+  "name": "Castform"
+ },
+ "castformsunny": {
   "name": "Castform"
  },
  "ceruledge": {
@@ -156,28 +168,28 @@
   "name": "Chandelure"
  },
  "chandeluremega": {
-  "name": "Chandelure-Mega"
+  "name": "Chandelure"
  },
  "charizard": {
   "name": "Charizard"
  },
  "charizardmegax": {
-  "name": "Charizard-Mega-X"
+  "name": "Charizard"
  },
  "charizardmegay": {
-  "name": "Charizard-Mega-Y"
+  "name": "Charizard"
  },
  "chesnaught": {
   "name": "Chesnaught"
  },
  "chesnaughtmega": {
-  "name": "Chesnaught-Mega"
+  "name": "Chesnaught"
  },
  "chimecho": {
   "name": "Chimecho"
  },
  "chimechomega": {
-  "name": "Chimecho-Mega"
+  "name": "Chimecho"
  },
  "clawitzer": {
   "name": "Clawitzer"
@@ -186,7 +198,7 @@
   "name": "Clefable"
  },
  "clefablemega": {
-  "name": "Clefable-Mega"
+  "name": "Clefable"
  },
  "cofagrigus": {
   "name": "Cofagrigus"
@@ -201,13 +213,13 @@
   "name": "Crabominable"
  },
  "crabominablemega": {
-  "name": "Crabominable-Mega"
+  "name": "Crabominable"
  },
  "decidueye": {
   "name": "Decidueye"
  },
  "decidueyehisui": {
-  "name": "Decidueye-Hisui"
+  "name": "Decidueye"
  },
  "dedenne": {
   "name": "Dedenne"
@@ -216,7 +228,7 @@
   "name": "Delphox"
  },
  "delphoxmega": {
-  "name": "Delphox-Mega"
+  "name": "Delphox"
  },
  "diggersby": {
   "name": "Diggersby"
@@ -228,7 +240,7 @@
   "name": "Dragalge"
  },
  "dragalgemega": {
-  "name": "Dragalge-Mega"
+  "name": "Dragalge"
  },
  "dragapult": {
   "name": "Dragapult"
@@ -237,25 +249,25 @@
   "name": "Dragonite"
  },
  "dragonitemega": {
-  "name": "Dragonite-Mega"
+  "name": "Dragonite"
  },
  "drampa": {
   "name": "Drampa"
  },
  "drampamega": {
-  "name": "Drampa-Mega"
+  "name": "Drampa"
  },
  "eelektross": {
   "name": "Eelektross"
  },
  "eelektrossmega": {
-  "name": "Eelektross-Mega"
+  "name": "Eelektross"
  },
  "emboar": {
   "name": "Emboar"
  },
  "emboarmega": {
-  "name": "Emboar-Mega"
+  "name": "Emboar"
  },
  "emolga": {
   "name": "Emolga"
@@ -273,13 +285,13 @@
   "name": "Excadrill"
  },
  "excadrillmega": {
-  "name": "Excadrill-Mega"
+  "name": "Excadrill"
  },
  "falinks": {
   "name": "Falinks"
  },
  "falinksmega": {
-  "name": "Falinks-Mega"
+  "name": "Falinks"
  },
  "farigiraf": {
   "name": "Farigiraf"
@@ -288,7 +300,7 @@
   "name": "Feraligatr"
  },
  "feraligatrmega": {
-  "name": "Feraligatr-Mega"
+  "name": "Feraligatr"
  },
  "flapple": {
   "name": "Flapple"
@@ -297,10 +309,10 @@
   "name": "Flareon"
  },
  "floetteeternal": {
-  "name": "Floette-Eternal"
+  "name": "Floette"
  },
  "floettemega": {
-  "name": "Floette-Mega"
+  "name": "Floette"
  },
  "florges": {
   "name": "Florges"
@@ -312,7 +324,7 @@
   "name": "Froslass"
  },
  "froslassmega": {
-  "name": "Froslass-Mega"
+  "name": "Froslass"
  },
  "furfrou": {
   "name": "Furfrou"
@@ -321,7 +333,7 @@
   "name": "Gallade"
  },
  "gallademega": {
-  "name": "Gallade-Mega"
+  "name": "Gallade"
  },
  "garbodor": {
   "name": "Garbodor"
@@ -330,13 +342,13 @@
   "name": "Garchomp"
  },
  "garchompmega": {
-  "name": "Garchomp-Mega"
+  "name": "Garchomp"
  },
  "gardevoir": {
   "name": "Gardevoir"
  },
  "gardevoirmega": {
-  "name": "Gardevoir-Mega"
+  "name": "Gardevoir"
  },
  "garganacl": {
   "name": "Garganacl"
@@ -345,7 +357,7 @@
   "name": "Gengar"
  },
  "gengarmega": {
-  "name": "Gengar-Mega"
+  "name": "Gengar"
  },
  "gholdengo": {
   "name": "Gholdengo"
@@ -357,13 +369,13 @@
   "name": "Glalie"
  },
  "glaliemega": {
-  "name": "Glalie-Mega"
+  "name": "Glalie"
  },
  "glimmora": {
   "name": "Glimmora"
  },
  "glimmoramega": {
-  "name": "Glimmora-Mega"
+  "name": "Glimmora"
  },
  "gliscor": {
   "name": "Gliscor"
@@ -372,31 +384,31 @@
   "name": "Golurk"
  },
  "golurkmega": {
-  "name": "Golurk-Mega"
+  "name": "Golurk"
  },
  "goodra": {
   "name": "Goodra"
  },
  "goodrahisui": {
-  "name": "Goodra-Hisui"
+  "name": "Goodra"
  },
  "gourgeist": {
   "name": "Gourgeist"
  },
  "gourgeistlarge": {
-  "name": "Gourgeist-Large"
+  "name": "Gourgeist"
  },
  "gourgeistsmall": {
-  "name": "Gourgeist-Small"
+  "name": "Gourgeist"
  },
  "gourgeistsuper": {
-  "name": "Gourgeist-Super"
+  "name": "Gourgeist"
  },
  "greninja": {
   "name": "Greninja"
  },
  "greninjamega": {
-  "name": "Greninja-Mega"
+  "name": "Greninja"
  },
  "grimmsnarl": {
   "name": "Grimmsnarl"
@@ -405,7 +417,7 @@
   "name": "Gyarados"
  },
  "gyaradosmega": {
-  "name": "Gyarados-Mega"
+  "name": "Gyarados"
  },
  "hatterene": {
   "name": "Hatterene"
@@ -414,7 +426,7 @@
   "name": "Hawlucha"
  },
  "hawluchamega": {
-  "name": "Hawlucha-Mega"
+  "name": "Hawlucha"
  },
  "heliolisk": {
   "name": "Heliolisk"
@@ -423,7 +435,7 @@
   "name": "Heracross"
  },
  "heracrossmega": {
-  "name": "Heracross-Mega"
+  "name": "Heracross"
  },
  "hippowdon": {
   "name": "Hippowdon"
@@ -432,7 +444,7 @@
   "name": "Houndoom"
  },
  "houndoommega": {
-  "name": "Houndoom-Mega"
+  "name": "Houndoom"
  },
  "houndstone": {
   "name": "Houndstone"
@@ -456,7 +468,7 @@
   "name": "Kangaskhan"
  },
  "kangaskhanmega": {
-  "name": "Kangaskhan-Mega"
+  "name": "Kangaskhan"
  },
  "kingambit": {
   "name": "Kingambit"
@@ -483,13 +495,13 @@
   "name": "Lopunny"
  },
  "lopunnymega": {
-  "name": "Lopunny-Mega"
+  "name": "Lopunny"
  },
  "lucario": {
   "name": "Lucario"
  },
  "lucariomega": {
-  "name": "Lucario-Mega"
+  "name": "Lucario"
  },
  "luxray": {
   "name": "Luxray"
@@ -498,10 +510,10 @@
   "name": "Lycanroc"
  },
  "lycanrocdusk": {
-  "name": "Lycanroc-Dusk"
+  "name": "Lycanroc"
  },
  "lycanrocmidnight": {
-  "name": "Lycanroc-Midnight"
+  "name": "Lycanroc"
  },
  "machamp": {
   "name": "Machamp"
@@ -510,7 +522,7 @@
   "name": "Malamar"
  },
  "malamarmega": {
-  "name": "Malamar-Mega"
+  "name": "Malamar"
  },
  "mamoswine": {
   "name": "Mamoswine"
@@ -519,7 +531,7 @@
   "name": "Manectric"
  },
  "manectricmega": {
-  "name": "Manectric-Mega"
+  "name": "Manectric"
  },
  "maushold": {
   "name": "Maushold"
@@ -528,19 +540,19 @@
   "name": "Mawile"
  },
  "mawilemega": {
-  "name": "Mawile-Mega"
+  "name": "Mawile"
  },
  "medicham": {
   "name": "Medicham"
  },
  "medichammega": {
-  "name": "Medicham-Mega"
+  "name": "Medicham"
  },
  "meganium": {
   "name": "Meganium"
  },
  "meganiummega": {
-  "name": "Meganium-Mega"
+  "name": "Meganium"
  },
  "meowscarada": {
   "name": "Meowscarada"
@@ -549,19 +561,19 @@
   "name": "Meowstic"
  },
  "meowsticf": {
-  "name": "Meowstic-F"
+  "name": "Meowstic"
  },
  "meowsticfmega": {
-  "name": "Meowstic-F-Mega"
+  "name": "Meowstic"
  },
  "meowsticmmega": {
-  "name": "Meowstic-M-Mega"
+  "name": "Meowstic"
  },
  "metagross": {
   "name": "Metagross"
  },
  "metagrossmega": {
-  "name": "Metagross-Mega"
+  "name": "Metagross"
  },
  "milotic": {
   "name": "Milotic"
@@ -569,7 +581,13 @@
  "mimikyu": {
   "name": "Mimikyu"
  },
+ "mimikyubusted": {
+  "name": "Mimikyu"
+ },
  "morpeko": {
+  "name": "Morpeko"
+ },
+ "morpekohangry": {
   "name": "Morpeko"
  },
  "mrrime": {
@@ -585,7 +603,7 @@
   "name": "Ninetales"
  },
  "ninetalesalola": {
-  "name": "Ninetales-Alola"
+  "name": "Ninetales"
  },
  "noivern": {
   "name": "Noivern"
@@ -602,6 +620,9 @@
  "palafin": {
   "name": "Palafin"
  },
+ "palafinhero": {
+  "name": "Palafin"
+ },
  "pangoro": {
   "name": "Pangoro"
  },
@@ -615,7 +636,7 @@
   "name": "Pidgeot"
  },
  "pidgeotmega": {
-  "name": "Pidgeot-Mega"
+  "name": "Pidgeot"
  },
  "pikachu": {
   "name": "Pikachu"
@@ -624,7 +645,7 @@
   "name": "Pinsir"
  },
  "pinsirmega": {
-  "name": "Pinsir-Mega"
+  "name": "Pinsir"
  },
  "politoed": {
   "name": "Politoed"
@@ -639,7 +660,7 @@
   "name": "Pyroar"
  },
  "pyroarmega": {
-  "name": "Pyroar-Mega"
+  "name": "Pyroar"
  },
  "quaquaval": {
   "name": "Quaquaval"
@@ -651,13 +672,13 @@
   "name": "Raichu"
  },
  "raichualola": {
-  "name": "Raichu-Alola"
+  "name": "Raichu"
  },
  "raichumegax": {
-  "name": "Raichu-Mega-X"
+  "name": "Raichu"
  },
  "raichumegay": {
-  "name": "Raichu-Mega-Y"
+  "name": "Raichu"
  },
  "rampardos": {
   "name": "Rampardos"
@@ -675,19 +696,19 @@
   "name": "Rotom"
  },
  "rotomfan": {
-  "name": "Rotom-Fan"
+  "name": "Rotom"
  },
  "rotomfrost": {
-  "name": "Rotom-Frost"
+  "name": "Rotom"
  },
  "rotomheat": {
-  "name": "Rotom-Heat"
+  "name": "Rotom"
  },
  "rotommow": {
-  "name": "Rotom-Mow"
+  "name": "Rotom"
  },
  "rotomwash": {
-  "name": "Rotom-Wash"
+  "name": "Rotom"
  },
  "runerigus": {
   "name": "Runerigus"
@@ -696,7 +717,7 @@
   "name": "Sableye"
  },
  "sableyemega": {
-  "name": "Sableye-Mega"
+  "name": "Sableye"
  },
  "salazzle": {
   "name": "Salazzle"
@@ -705,7 +726,7 @@
   "name": "Samurott"
  },
  "samurotthisui": {
-  "name": "Samurott-Hisui"
+  "name": "Samurott"
  },
  "sandaconda": {
   "name": "Sandaconda"
@@ -714,31 +735,31 @@
   "name": "Sceptile"
  },
  "sceptilemega": {
-  "name": "Sceptile-Mega"
+  "name": "Sceptile"
  },
  "scizor": {
   "name": "Scizor"
  },
  "scizormega": {
-  "name": "Scizor-Mega"
+  "name": "Scizor"
  },
  "scolipede": {
   "name": "Scolipede"
  },
  "scolipedemega": {
-  "name": "Scolipede-Mega"
+  "name": "Scolipede"
  },
  "scovillain": {
   "name": "Scovillain"
  },
  "scovillainmega": {
-  "name": "Scovillain-Mega"
+  "name": "Scovillain"
  },
  "scrafty": {
   "name": "Scrafty"
  },
  "scraftymega": {
-  "name": "Scrafty-Mega"
+  "name": "Scrafty"
  },
  "serperior": {
   "name": "Serperior"
@@ -747,7 +768,7 @@
   "name": "Sharpedo"
  },
  "sharpedomega": {
-  "name": "Sharpedo-Mega"
+  "name": "Sharpedo"
  },
  "simipour": {
   "name": "Simipour"
@@ -765,7 +786,7 @@
   "name": "Skarmory"
  },
  "skarmorymega": {
-  "name": "Skarmory-Mega"
+  "name": "Skarmory"
  },
  "skeledirge": {
   "name": "Skeledirge"
@@ -774,16 +795,16 @@
   "name": "Slowbro"
  },
  "slowbrogalar": {
-  "name": "Slowbro-Galar"
+  "name": "Slowbro"
  },
  "slowbromega": {
-  "name": "Slowbro-Mega"
+  "name": "Slowbro"
  },
  "slowking": {
   "name": "Slowking"
  },
  "slowkinggalar": {
-  "name": "Slowking-Galar"
+  "name": "Slowking"
  },
  "slurpuff": {
   "name": "Slurpuff"
@@ -801,31 +822,31 @@
   "name": "Staraptor"
  },
  "staraptormega": {
-  "name": "Staraptor-Mega"
+  "name": "Staraptor"
  },
  "starmie": {
   "name": "Starmie"
  },
  "starmiemega": {
-  "name": "Starmie-Mega"
+  "name": "Starmie"
  },
  "steelix": {
   "name": "Steelix"
  },
  "steelixmega": {
-  "name": "Steelix-Mega"
+  "name": "Steelix"
  },
  "stunfisk": {
   "name": "Stunfisk"
  },
  "stunfiskgalar": {
-  "name": "Stunfisk-Galar"
+  "name": "Stunfisk"
  },
  "swampert": {
   "name": "Swampert"
  },
  "swampertmega": {
-  "name": "Swampert-Mega"
+  "name": "Swampert"
  },
  "sylveon": {
   "name": "Sylveon"
@@ -837,13 +858,13 @@
   "name": "Tauros"
  },
  "taurospaldeaaqua": {
-  "name": "Tauros-Paldea-Aqua"
+  "name": "Tauros"
  },
  "taurospaldeablaze": {
-  "name": "Tauros-Paldea-Blaze"
+  "name": "Tauros"
  },
  "taurospaldeacombat": {
-  "name": "Tauros-Paldea-Combat"
+  "name": "Tauros"
  },
  "tinkaton": {
   "name": "Tinkaton"
@@ -873,13 +894,13 @@
   "name": "Typhlosion"
  },
  "typhlosionhisui": {
-  "name": "Typhlosion-Hisui"
+  "name": "Typhlosion"
  },
  "tyranitar": {
   "name": "Tyranitar"
  },
  "tyranitarmega": {
-  "name": "Tyranitar-Mega"
+  "name": "Tyranitar"
  },
  "tyrantrum": {
   "name": "Tyrantrum"
@@ -897,13 +918,13 @@
   "name": "Venusaur"
  },
  "venusaurmega": {
-  "name": "Venusaur-Mega"
+  "name": "Venusaur"
  },
  "victreebel": {
   "name": "Victreebel"
  },
  "victreebelmega": {
-  "name": "Victreebel-Mega"
+  "name": "Victreebel"
  },
  "vileplume": {
   "name": "Vileplume"
@@ -930,6 +951,6 @@
   "name": "Zoroark"
  },
  "zoroarkhisui": {
-  "name": "Zoroark-Hisui"
+  "name": "Zoroark"
  }
 }

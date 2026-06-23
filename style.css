@@ -1475,6 +1475,12 @@ button:hover {
   padding: 1rem;
 }
 
+#search-detail-content .stats-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
 #search-detail-content .detail-meta {
   display: flex;
   gap: 0.3rem;
@@ -1527,6 +1533,78 @@ button:hover {
   display: flex;
   gap: 0.3rem;
   flex-wrap: wrap;
+}
+
+#search-detail-content .formes-section {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+#search-detail-content .formes-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+#search-detail-content .formes-buttons {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* Pill button — shared filter/switcher style. Active state gets a
+   gold border per the project's accent (--accent-gold). */
+.pill-btn {
+  padding: 0.15rem 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.pill-btn:hover {
+  border-color: var(--accent-gold);
+}
+
+.pill-btn.active {
+  background: var(--bg-active);
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+}
+
+#search-detail-content .forme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  font: inherit;
+}
+
+#search-detail-content .forme-btn:hover {
+  background: var(--bg-surface-hover, var(--bg-surface));
+}
+
+#search-detail-content .forme-sprite {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#search-detail-content .forme-sprite-empty {
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-default);
+  border-radius: 4px;
 }
 
 #search-detail-content .ability-btn {
@@ -1602,6 +1680,14 @@ button:hover {
 
 #search-detail-content .detail-header h2 {
   margin-bottom: 0.3rem;
+}
+
+#search-detail-content .detail-forme {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
 }
 
 #search-detail-content h2 { margin-bottom: 0.5rem; }

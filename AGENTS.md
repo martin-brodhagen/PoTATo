@@ -3,100 +3,112 @@
 ## Dev Commands
 
 ```bash
-# Run parser unit tests
-npm test
-
-# Build base + all formats + all i18n bundles (network required on first run, caches to .cache/)
-npm run prep
-
-# Build just the shared base data
-npm run prep:base
-
-# Build just the format whitelists (e.g. for one specific id)
-npm run prep:format
-python3 prep/formats/build.py m-c   # single format
-
-# Build just the i18n bundles
-npm run prep:mb:i18n
-
-# Start dev server → http://localhost:8787
-npm start
+npm start                                # dev server on http://localhost:8787
+npm run prep                             # full data pipeline (base → patches → formats → i18n)
+npm run prep:base                        # just data/base/ (slowest, network)
+npm run prep:format                      # just data/formats/<id>.json (also accepts CLI args)
+python3 prep/formats/build.py m-c        # single format
+npm run prep:mb:i18n                     # just i18n bundles
+npm run prep:mb:refresh-game8            # re-scrape game8.co (writes data/game8-descriptions.json)
+npm run prep:items:patch                 # re-apply item category patches
+npm run prep:moves:patch                 # re-apply move PP patches
+npm run prep:abilities:patch             # re-apply ability removals
 ```
 
-`npm run prep` runs in order: `prep/base/build.py` → `prep/formats/build.py` → `prep/i18n/build.py`. Each stage is also runnable individually.
+First run of `npm run prep:base` needs network; subsequent runs use the `.cache/` disk cache.
 
-## Data Pipeline
+## Data Pipeline (in `prep/build_mb.py` order)
 
-- **Base**: `https://play.pokemonshowdown.com/data/{pokedex,moves,learnsets}.json` + `items.js` + `abilities.js`
-- **Mod overrides**: `https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/mods/champions/{moves,items,abilities,formats-data,learnsets}.ts`
-- **i18n (English)**: `https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/text/{pokedex,moves,items,abilities}.ts`
-- **i18n (other languages, Pokémon names only)**: `https://pokeapi.co/api/v2/pokemon-species/{id}`
+1. `prep/base/build.py` — fetches Showdown raw + Champions mod, applies mod overrides, builds 8 files in `data/base/`. Network required on first run.
+2. `prep/items/patch_categories.py` — applies `data/manual-item-categories.json` on top of Game8 categories.
+3. `prep/moves/patch_pp.py` — applies `data/manual-move-pp.json` PP mapping.
+4. `prep/abilities/patch_remove.py` — applies `data/manual-ability-removals.json`.
+5. `prep/formats/build.py` — reads `prep/formats/<id>/config.json` whitelists, writes `data/formats/<id>.json`.
+6. `prep/i18n/build.py` — writes `data/i18n/<lang>/{pokemon,moves,items,abilities}.json` from PokeAPI + base.
 
-`isNonstandard` is unreliable for legality filtering — use the mod's `tier` field as source of truth instead.
+`isNonstandard` is unreliable for legality — use the mod's `tier` field as the source of truth.
 
 ## Layout
 
 ```
-prep/
-  build_mb.py                          # orchestrator
-  base/
-    build.py                           # 13 stages → data/base/*.json
+prep/                            python data pipeline
+  base/build.py                  # 13 stages → data/base/
+  items/patch_categories.py      # Game8 + manual categories → data/base/items.json
+  moves/patch_pp.py              # manual PP map → data/base/moves.json
+  abilities/patch_remove.py      # manual ability removals → data/base/abilities.json
   formats/
-    build.py                           # applies per-format whitelists
-    m-a/config.json                    # whitelists + label + version
-    m-b/config.json
-  i18n/
-    config.json                        # which languages, which formats
-    build.py
+    build.py                     # writes data/formats/<id>.json
+    m-a/config.json              # flat {species, items} or split {species_non_mega, species_mega}
+    m-b/config.json              # species_overrides bypasses the mod's tier check
+  i18n/build.py                   # writes data/i18n/<lang>/*.json
   _lib/
-    cache.py                           # disk-backed HTTP cache
-    ts_parser.py                       # TS/JS parser
-    game8.py                           # Game8 description scraper
-    tests/                             # 39 unit tests
+    cache.py                     # disk-backed HTTP cache for Showdown/PokeAPI
+    game8.py                     # Game8 description + category scraper
+    ts_parser.py                 # brace-counting parser for Showdown's TS
+  prep_data.py / patch_descriptions.py    # LEGACY M-A pipeline, out of scope, do not use
 data/
-  base/                                # shared, format-agnostic
-    pokedex.json
-    moves.json
-    items.json                         # includes sprite + category
-    abilities.json                     # no per-format pokemon[] (derived)
-    learnsets.json
-    moves-with-learnsets.json
-    sprite-map.json
-    shiny-sprite-map.json
-  formats/                             # whitelists only
-    m-a.json                           # { id, label, version, species[], items[], abilities[] }
-    m-b.json
-  i18n/{en,ja,de,fr,es,it,ko,zh-Hans,zh-Hant,pt-BR,ru}/{pokemon,moves,items,abilities}.json
+  base/                          # shared, format-agnostic (8 JSONs)
+  formats/<id>.json              # {id, label, version, species[], items[], abilities[]}
+  i18n/<lang>/                   # 11 langs × 4 entity types
+  manual-*.json                  # user-edited patches applied after the base build
+  game8-descriptions.json        # cached Game8 scrape
+lib/
+  data-loader.js                 # loads base once, derives per-format views in memory
+  i18n.js                        # post-process layer: overlays localized name/desc onto cache
+  app-init.js                    # wires widgets, rebuilt on format change
+  views/                         # breadcrumb, header, search-detail panels
+  <widget>.js                    # one file per widget (pokemon/move/ability/item search, team builder, etc)
+app.js                           # entry point, runs `initI18n` then `loadFormatData(initialFormat)`
+index.html                       # no build step, served as-is
+style.css                        # all styling in one file
 ```
 
-The legacy M-A pipeline (`prep/prep_data.py` + `prep/patch_descriptions.py` + `scripts/prep_items.py`) is **untouched** and out of scope. It uses the older single-script approach; its outputs are no longer consumed by the frontend. It can be deleted in a follow-up once we no longer need the comparison.
+## Manual Patches (the post-build override layer)
 
-## Key Constants (`lib/types.js`)
+Each `data/manual-*.json` is a small, user-edited file applied as a patch after the base build. The base alone is never the source of truth.
 
-Labels here are user-facing. Keep them human-readable.
+| File | Format | What it overrides |
+|---|---|---|
+| `manual-item-categories.json` | `{item_id: [category, ...]}` | Per-item category tags (replaces Game8). |
+| `manual-move-pp.json` | `{old_pp: new_pp}` | Uniform PP remap (5→8, 10→12, 15→16 today). |
+| `manual-ability-removals.json` | `{remove: [ability_id, ...]}` | Abilities to drop from base + every format whitelist. |
+| `manual-forme-overrides.json` | `{forme: {name, kind}}` | Display name + kind per forme. See Forme Override System below. |
 
-### ABILITY_EFFECT_CATEGORIES (19)
-`weather`, `terrain`, `stats`, `power`, `move_type`, `damage_reduction`, `immunity`, `status`, `contact`, `on_hit`, `priority`, `bypass`, `item`, `berries`, `form_change`, `ability_control`, `healing`, `field_control`, `switch_in_out`
+To add a new kind or category of override, follow the same pattern: a JSON file in `data/`, a `prep/<area>/patch_*.py` script that reads it, and a call in `prep/build_mb.py`.
 
-## Architecture Notes
+## Forme Override System
 
-- ES modules, no bundler, no build step — served by `python3 -m http.server`
-- Widgets created lazily on first tab activation; destroyed/recreated on format change via `app-init.js`
-- Three `PokemonSearchWidget` instances: main grid, move detail "Learned By", ability detail "Pokémon with..."
-- Two `MoveSearchWidget` instances: moves tab + pokemon detail filtered list
-- `lib/data-loader.js` loads the shared base once (cached) and derives per-format views in memory by filtering against `data/formats/<id>.json` whitelists
-- i18n is a **post-process layer** in `lib/i18n.js` — overlays localized names/descriptions onto the loaded data cache after fetch. Existing widgets read localized values transparently.
+`data/manual-forme-overrides.json` controls per-forme display + visibility:
+
+- **`name`** — display string used in the search detail header (under the pokemon name) and in forme switcher tooltips. Falls back to the raw `species.forme` value.
+- **`kind`** — one of:
+  - `pre-battle` (default) — visible in the search grid
+  - `mega` — visible in the search grid (Mega evolutions)
+  - `combat-switch` — **hidden** from the search grid (in-battle transformations: Hero, Blade, Zen, etc.)
+  - `cosmetic` — **hidden** from the search grid (visual-only recolors: Antique, Original, etc.)
+
+The hidden kinds are exported from `lib/data-loader.js` as `HIDDEN_FORME_KINDS`. The `pokemon-search-widget` filters them out of the search grid; the `search-detail-view` forme switcher still shows them (reachable via the forme button).
+
+To add a M-B-relevant forme that should be hidden from search (e.g. Aegislash's Blade Forme in M-A): add it to `data/manual-forme-overrides.json` with `kind: "combat-switch"`, and add the species to the M-B config's `species_overrides` if it's not in the mod's tier table.
+
+## Architecture
+
+- ES modules, no bundler, no build step. Served directly by `python3 -m http.server`.
+- `lib/data-loader.js` loads `data/base/*` once (cached), augments each species with `formeInfo`, and filters against `data/formats/<id>.json` to build the per-format view. All `loadX(format)` helpers go through this.
+- `lib/i18n.js` is a post-process layer: takes a snapshot of `name`/`desc` from the in-memory cache, then overlays translated values from `data/i18n/<lang>/*.json`. Widgets read the cache transparently.
+- Widgets: three `PokemonSearchWidget` instances (main pokedex grid, move-detail "Learned By", ability-detail "Pokémon with..."), two `MoveSearchWidget` instances (moves tab, pokemon-detail filtered list). All widgets are destroyed and recreated on format switch.
 
 ## CSS Conventions
 
-- Sort/filter pills share `.sort-bar-btn` with `.is-cat-btn` styling (font-size 0.68rem, font-weight 600, 6px radius, bg-surface, border-strong)
-- Widget-specific column widths set via `nth-child(n)` on `.sort-bar-btn`
-- Class prefixes: `.ps-*` Pokemon, `.ms-*` Moves, `.as-*` Abilities, `.is-*` Items, `.tb-*` Team builder
+- Class prefixes: `.ps-*` Pokemon, `.ms-*` Moves, `.as-*` Abilities, `.is-*` Items, `.tb-*` Team builder. `.dc-*` Defensive Coverage. `.move-detail-*` Move/Ability/Item detail panels.
+- Filter/sort pill: shared `.pill-btn` (font-size 0.68rem, font-weight 600, 6px radius, `bg-surface`, `border-strong`). Active state uses `var(--accent-gold)`. The legacy `.is-cat-btn` has the same look but isn't a single source of truth yet.
+- The `.detail-forme` line under a pokemon's name in search detail is always rendered (uses `&nbsp;` for forme-less pokemon) so the type/meta block sits at a consistent vertical position.
 
 ## Pending / Future
+
 - [ ] Move Type Coverage tool (placeholder)
 - [ ] Damage Calculator (placeholder)
 - [ ] Imports feature (placeholder)
 - [ ] Breadcrumb optimizations (early return on same index, bounds checking)
-- [ ] Translate move/ability/item descriptions (currently English only for non-entity names)
-- [ ] Delete legacy M-A pipeline (`prep/prep_data.py`, `prep/patch_descriptions.py`, `scripts/prep_items.py`)
+- [ ] Translate move/ability/item descriptions beyond English (descriptions are Game8-sourced for `en`; other langs fall back to English)
+- [ ] Delete legacy M-A pipeline (`prep/prep_data.py`, `prep/patch_descriptions.py`) — these are no longer consumed by the frontend, only kept for comparison

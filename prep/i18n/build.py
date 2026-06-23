@@ -156,12 +156,14 @@ def build_lang_files(lang: str, ids: dict[str, set[str]],
     out = {"pokemon": {}, "moves": {}, "items": {}, "abilities": {}}
 
     # Pokémon: translated name (or English), no desc (PokeAPI doesn't expose
-    # species descriptions for Champions)
+    # species descriptions for Champions). Strip the forme suffix from the
+    # English fallback so the name is the base species name (e.g. "Gengar"
+    # not "Gengar-Mega"), matching the search detail view's display.
     for mon in pokedex:
         mid = mon["id"]
         if mid not in ids["pokemon"]:
             continue
-        en_name = mon.get("name", mid)
+        en_name = mon.get("baseSpecies") or mon.get("name", mid)
         translated = pokeapi_translations.get(lang, {}).get(mid, en_name)
         out["pokemon"][mid] = {"name": translated}
 

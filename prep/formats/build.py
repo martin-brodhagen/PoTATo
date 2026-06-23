@@ -51,13 +51,18 @@ def load_base():
 
 def whitelist_species(config: dict, pokedex: list[dict]) -> list[str]:
     base_ids = {p["id"] for p in pokedex}
-    candidates = (
-        set(config.get("species_non_mega", []))
-        | set(config.get("m_b_new_species", []))
-        | set(config.get("species_mega", []))
-        | set(config.get("m_b_new_mega", []))
-        | set(config.get("species_overrides", []))
-    )
+    # If a flat `species` list is provided, use it directly. Otherwise
+    # combine the split fields (legacy M-A style).
+    if "species" in config:
+        candidates = set(config["species"])
+    else:
+        candidates = (
+            set(config.get("species_non_mega", []))
+            | set(config.get("m_b_new_species", []))
+            | set(config.get("species_mega", []))
+            | set(config.get("m_b_new_mega", []))
+            | set(config.get("species_overrides", []))
+        )
     legal = sorted(candidates & base_ids)
 
     missing = sorted(candidates - base_ids)
@@ -70,10 +75,15 @@ def whitelist_species(config: dict, pokedex: list[dict]) -> list[str]:
 
 def whitelist_items(config: dict, items: dict) -> list[str]:
     base_ids = set(items.keys())
-    candidates = (
-        set(config.get("items", []))
-        | set(config.get("m_b_new_items", []))
-    )
+    # If a flat `items` list is provided, use it directly. Otherwise
+    # combine the split fields.
+    if "items" in config and not config.get("m_b_new_items"):
+        candidates = set(config["items"])
+    else:
+        candidates = (
+            set(config.get("items", []))
+            | set(config.get("m_b_new_items", []))
+        )
     legal = sorted(candidates & base_ids)
 
     missing = sorted(candidates - base_ids)
