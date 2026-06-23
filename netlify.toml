@@ -1,7 +1,36 @@
 [build]
   publish = "."
 
+# Security headers for every response.
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "interest-cohort=()"
+
+# Never cache the entry HTML — the app fetches fresh data and we want
+# users to pick up deploys immediately on next load.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# Long cache for the static asset graph. Files are content-addressed by
+# virtue of `npm run prep` rebuilding data/* with stable filenames, so
+# the only one that ever changes between deploys is index.html.
+[[headers]]
+  for = "/lib/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/sprites/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
