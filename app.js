@@ -15,6 +15,7 @@ import {
   loadLastTeamId,
   saveLastTeamId,
   migrateFromLegacy,
+  migrateTeamsToV2,
 } from "./lib/team-store.js";
 import { initApp, createPokedexSubtabWidgets } from "./lib/app-init.js";
 import {
@@ -33,11 +34,10 @@ import {
   setTeams,
   addTeam,
 } from "./lib/app-state.js";
-import { initI18n, applyI18n, getLang, setLang, getSupportedLanguages } from "./lib/i18n.js";
+import { applyI18n } from "./lib/i18n.js";
 
 const formatSelect = document.getElementById("format-select");
 const teamSelect = document.getElementById("team-select");
-const langSelect = document.getElementById("lang-select");
 const newTeamBtn = document.getElementById("new-team-btn");
 const teamWarning = document.getElementById("team-warning");
 const headerTeam = document.getElementById("header-team");
@@ -83,6 +83,9 @@ async function loadFormatData(format) {
 
 function loadTeamsForFormat(format) {
   const teams = loadTeams(format);
+  if (migrateTeamsToV2(teams, getCachedItems(), getAllSpecies())) {
+    saveTeams(format, teams);
+  }
   setTeams(teams);
 
   const savedId = loadLastTeamId(format);
@@ -183,30 +186,10 @@ formatSelect.addEventListener("change", () => {
   switchFormat(formatSelect.value);
 });
 
-// Populate the language dropdown with all supported languages, label
-// them with their own native name where recognizable, and react to changes.
-const LANG_LABELS = {
-  "en": "English",
-  "de": "Deutsch",
-};
-
-function populateLangSelect(currentLangCode) {
-  langSelect.innerHTML = "";
-  for (const code of getSupportedLanguages()) {
-    const opt = document.createElement("option");
-    opt.value = code;
-    opt.textContent = LANG_LABELS[code] || code;
-    if (code === currentLangCode) opt.selected = true;
-    langSelect.appendChild(opt);
-  }
-}
-
-langSelect.addEventListener("change", async () => {
-  const newLang = langSelect.value;
-  if (newLang === getLang()) return;
-  await setLang(newLang);
-  await reRenderForLanguageChange();
-});
+// Language dropdown removed from the header (see index.html). The i18n
+// module and bundles are kept on disk for re-enable later; applyI18n
+// is still called below but is a no-op when there's no active language
+// switcher to drive it.
 
 migrateFromLegacy();
 
@@ -214,10 +197,6 @@ const initialFormat = "m-b";
 
 (async function main() {
   try {
-    await initI18n();
-    console.info(`[i18n] language: ${getLang()}`);
-    populateLangSelect(getLang());
-
     await loadFormatData(initialFormat);
     loadTeamsForFormat(initialFormat);
     ensureInitialTeam(initialFormat);
@@ -243,30 +222,53 @@ const initialFormat = "m-b";
         onAddToTeam: (speciesId) => {
           const team = getCurrentTeam();
           if (!team) return;
-          const emptyIdx = team.slots.findIndex((slot) => slot.speciesId === null);
-          if (emptyIdx === -1) return;
-          widgets.teamBuilderWidget?.fillSlot(emptyIdx, speciesId);
+          const species = getSpeciesById(speciesId);
+          if (!species) return;
+          // If adding a forme and a slot already holds the matching base,
+          // upgrade that slot (overwrite primary + set partner) per the
+          // design. Otherwise pick the first empty slot. If all filled,
+          // do nothing — never silently overwrite a user's pokemon.
+          let targetIdx = -1;
+          if (species.baseSpecies) {
+            const baseName = species.baseSpecies;
+            const base = getAllSpecies().find((s) => s.name === baseName);
+            if (base) {
+              targetIdx = team.slots.findIndex((slot) => slot.speciesId === base.id);
+            }
+          }
+          if (targetIdx === -1) {
+            targetIdx = team.slots.findIndex((slot) => slot.speciesId === null);
+          }
+          if (targetIdx === -1) return;
+          widgets.teamBuilderWidget?.fillSlot(targetIdx, speciesId);
         },
         onRemoveFromTeam: (speciesId) => {
           const team = getCurrentTeam();
           if (!team) return;
-          const idx = team.slots.findIndex((slot) => slot.speciesId === speciesId);
-          if (idx !== -1) {
-            team.slots[idx].speciesId = null;
-            team.slots[idx].item = null;
-            persist();
-            widgets.headerView?.renderTeamBar();
-            if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
-          }
+          // Find the slot. The search detail passes whatever species the
+          // user is currently viewing — could be the base or a forme.
+          // "Remove from Team" clears the whole slot, regardless of
+          // whether the user is viewing the base or a forme. Match by
+          // primary OR any forme's id so the button works for both.
+          const idx = team.slots.findIndex((slot) => {
+            if (slot.speciesId === speciesId) return true;
+            if (Array.isArray(slot.formes)) {
+              return slot.formes.some((f) => f.speciesId === speciesId);
+            }
+            return false;
+          });
+          if (idx === -1) return;
+          widgets.teamBuilderWidget?.clearSlot(idx);
+          persist();
+          widgets.headerView?.renderTeamBar();
+          if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
         },
       },
       widgets,
     });
   } catch (err) {
+    // Log to console; don't pollute the search-detail panel (which is
+    // for Pokémon details, not debug output) with red stack-trace text.
     console.error("Fatal error during init:", err);
-    const detail = document.getElementById("search-detail-content");
-    if (detail) {
-      detail.innerHTML = `<pre style="color:red;white-space:pre-wrap">${err.stack || err}</pre>`;
-    }
   }
 })();

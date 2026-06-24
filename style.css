@@ -2362,20 +2362,28 @@ button:hover {
 }
 
 .tb-item-input-wrap .tb-item-input {
-  width: 100%;
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
 }
 
-.tb-mega-checkbox {
+.tb-cycle-btn {
   flex-shrink: 0;
-  width: 1rem;
-  height: 1rem;
-  cursor: pointer;
-  accent-color: var(--accent-gold);
+  max-width: 4.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.62rem;
+  padding: 0.12rem 0.35rem;
 }
 
-.tb-mega-checkbox:disabled {
+.tb-cycle-btn.active {
+  background: var(--bg-active);
+  border-color: var(--accent-gold);
+}
+
+.tb-cycle-btn:disabled {
+  opacity: 0.5;
   cursor: not-allowed;
-  opacity: 0.4;
 }
 
 .tb-section-label {
@@ -2427,13 +2435,9 @@ button:hover {
   z-index: 1;
 }
 
-.tb-move-input.has-type {
-  padding-left: 4.4rem;
-}
-
 .tb-move-input {
   width: 100%;
-  padding: 0.15rem 0.2rem;
+  padding: 0.15rem 0.2rem 0.15rem 4.4rem; /* left padding reserves space for the type badge so text doesn't jump when it appears/disappears */
   background: var(--bg-input);
   color: var(--text-primary);
   border: 1px solid var(--border-strong);
@@ -2444,6 +2448,44 @@ button:hover {
 
 .tb-move-input:focus {
   border-color: var(--accent-gold);
+}
+
+.tb-move-input-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tb-move-input-wrap .tb-move-input {
+  width: 100%;
+  padding-right: 1.5rem;
+}
+
+.tb-move-clear {
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.1rem;
+  height: 1.1rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.tb-move-clear:hover {
+  background: var(--bg-hover, rgba(255, 255, 255, 0.08));
+  color: var(--text-primary);
 }
 
 /* ── Section 4: Stats ───────────────────────── */
