@@ -489,7 +489,7 @@
  },
  "shedshell": {
   "name": "Shed Shell",
-  "desc": "When the holder deals damage with its moves, its HP is restored by 1/8 of the damage dealt."
+  "desc": "Enables the holder to ignore any effects that would usually prevent it from switching out of battle and being replaced by another party Pokémon."
  },
  "shellbell": {
   "name": "Shell Bell",

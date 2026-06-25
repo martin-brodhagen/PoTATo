@@ -1,0 +1,27 @@
+# Netlify headers — applied to drag-and-drop / exported deploys.
+# The same rules also live in netlify.toml for the git-based deploy path.
+# When the export/ bundle is uploaded to Netlify, this file at the site
+# root applies the headers automatically.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=()
+
+# Never cache the entry HTML — the app fetches fresh data and we want
+# users to pick up deploys immediately on next load.
+/index.html
+  Cache-Control: no-cache
+
+# Long cache for the static asset graph. Files are content-addressed by
+# virtue of `npm run prep` rebuilding data/* with stable filenames, so
+# the only one that ever changes between deploys is index.html.
+/lib/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/data/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/sprites/*
+  Cache-Control: public, max-age=31536000, immutable

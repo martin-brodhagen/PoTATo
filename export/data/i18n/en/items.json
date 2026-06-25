@@ -1,0 +1,594 @@
+{
+ "abomasite": {
+  "name": "Abomasite",
+  "desc": "A held item that allows Abomasnow to Mega Evolve."
+ },
+ "absolite": {
+  "name": "Absolite",
+  "desc": "A held item that allows Absol to Mega Evolve into Mega Absol."
+ },
+ "aerodactylite": {
+  "name": "Aerodactylite",
+  "desc": "A held item that allows Aerodactyl to Mega Evolve."
+ },
+ "aggronite": {
+  "name": "Aggronite",
+  "desc": "A held item that allows Aggron to Mega Evolve."
+ },
+ "alakazite": {
+  "name": "Alakazite",
+  "desc": "A held item that allows Alakazam to Mega Evolve."
+ },
+ "altarianite": {
+  "name": "Altarianite",
+  "desc": "A held item that allows Altaria to Mega Evolve."
+ },
+ "ampharosite": {
+  "name": "Ampharosite",
+  "desc": "A held item that allows Ampharos to Mega Evolve."
+ },
+ "aspearberry": {
+  "name": "Aspear Berry",
+  "desc": "Cures being frozen. Disappears for the duration of the battle after a single use."
+ },
+ "audinite": {
+  "name": "Audinite",
+  "desc": "A held item that allows Audino to Mega Evolve."
+ },
+ "babiriberry": {
+  "name": "Babiri Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Steel-type move. Disappears for the duration of the battle after a single use."
+ },
+ "banettite": {
+  "name": "Banettite",
+  "desc": "A held item that allows Banette to Mega Evolve."
+ },
+ "barbaracite": {
+  "name": "Barbaracite",
+  "desc": "A held item that allows Barbaracle to Mega Evolve."
+ },
+ "beedrillite": {
+  "name": "Beedrillite",
+  "desc": "A held item that allows Beedrill to Mega Evolve."
+ },
+ "bigroot": {
+  "name": "Big Root",
+  "desc": "An item to be held by a Pokemon. Increases the amount of HP the holder recovers after using moves that steal HP by 30%."
+ },
+ "blackbelt": {
+  "name": "Black Belt",
+  "desc": "Boosts the power of the holder's Fighting-type moves by 20%."
+ },
+ "blackglasses": {
+  "name": "Black Glasses",
+  "desc": "Boosts the power of the holder's Dark-type moves by 20%."
+ },
+ "blastoisinite": {
+  "name": "Blastoisinite",
+  "desc": "A held item that allows Blastoise to Mega Evolve."
+ },
+ "blazikenite": {
+  "name": "Blazikenite",
+  "desc": "A held item that allows Blaziken to Mega Evolve."
+ },
+ "brightpowder": {
+  "name": "Bright Powder",
+  "desc": "Lowers the accuracy of moves used by opponents against the holder by 10%."
+ },
+ "cameruptite": {
+  "name": "Cameruptite",
+  "desc": "A held item that allows Camerupt to Mega Evolve."
+ },
+ "chandelurite": {
+  "name": "Chandelurite",
+  "desc": "A held item that allows Chandelure to Mega Evolve."
+ },
+ "charcoal": {
+  "name": "Charcoal",
+  "desc": "Boosts the power of the holder's Fire-type moves by 20%."
+ },
+ "charizarditex": {
+  "name": "Charizardite X",
+  "desc": "A held item that allows Charizard to Mega Evolve into Mega Charizard X."
+ },
+ "charizarditey": {
+  "name": "Charizardite Y",
+  "desc": "A held item that allows Charizard to Mega Evolve into Mega Charizard Y."
+ },
+ "chartiberry": {
+  "name": "Charti Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Rock-type move. Disappears for the duration of the battle after a single use."
+ },
+ "cheriberry": {
+  "name": "Cheri Berry",
+  "desc": "Cures being paralyzed. Disappears for the duration of the battle after a single use"
+ },
+ "chesnaughtite": {
+  "name": "Chesnaughtite",
+  "desc": "A held item that allows Chesnaught to Mega Evolve."
+ },
+ "chestoberry": {
+  "name": "Chesto Berry",
+  "desc": "Cures being sleep. Disappears for the duration of the battle after a single use."
+ },
+ "chilanberry": {
+  "name": "Chilan Berry",
+  "desc": "Halves the damage taken when the holder is hit with a Normal-type move. Disappears for the duration of the battle after a single use."
+ },
+ "chimechite": {
+  "name": "Chimechite",
+  "desc": "A held item that allows Chimecho to Mega Evolve."
+ },
+ "choicescarf": {
+  "name": "Choice Scarf",
+  "desc": "Boosts the holder's Speed stat by 50%. However, once the holder uses a move, it becomes unable to use any other move but the one until it switches out of battle."
+ },
+ "chopleberry": {
+  "name": "Chople Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Fighting-type move. Disappears for the duration of the battle after a single use."
+ },
+ "clefablite": {
+  "name": "Clefablite",
+  "desc": "A held item that allows Clefable to Mega Evolve."
+ },
+ "cobaberry": {
+  "name": "Coba Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Flying-type move. Disappears for the duration of the battle after a single use."
+ },
+ "colburberry": {
+  "name": "Colbur Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Dark-type move. Disappears for the duration of the battle after a single use."
+ },
+ "crabominite": {
+  "name": "Crabominite",
+  "desc": "A held item that allows Crabominable to Mega Evolve."
+ },
+ "damprock": {
+  "name": "Damp Rock",
+  "desc": "An item to be held by a Pokemon. If the holder uses Rain Dance, the effects will last for 8 turns instead of 5."
+ },
+ "delphoxite": {
+  "name": "Delphoxite",
+  "desc": "A held item that allows Delphox to Mega Evolve."
+ },
+ "dragalgite": {
+  "name": "Dragalgite",
+  "desc": "A held item that allows Dragalge to Mega Evolve."
+ },
+ "dragonfang": {
+  "name": "Dragon Fang",
+  "desc": "Boosts the power of the holder's Dragon-type moves by 20%."
+ },
+ "dragoninite": {
+  "name": "Dragoninite",
+  "desc": "A held item that allows Dragonite to Mega Evolve."
+ },
+ "drampanite": {
+  "name": "Drampanite",
+  "desc": "A held item that allows Drampa to Mega Evolve."
+ },
+ "eelektrossite": {
+  "name": "Eelektrossite",
+  "desc": "A held item that allows Eelektross to Mega Evolve."
+ },
+ "emboarite": {
+  "name": "Emboarite",
+  "desc": "A held item that allows Emboar to Mega Evolve."
+ },
+ "excadrite": {
+  "name": "Excadrite",
+  "desc": "A held item that allows Excadrill to Mega Evolve."
+ },
+ "expertbelt": {
+  "name": "Expert Belt",
+  "desc": "An item to be held by a Pokemon. Increases the holder's super effective moves by 20%."
+ },
+ "fairyfeather": {
+  "name": "Fairy Feather",
+  "desc": "Boosts the power of the holder's Fairy-type moves by 20%."
+ },
+ "falinksite": {
+  "name": "Falinksite",
+  "desc": "A held item that allows Falinks to Mega Evolve."
+ },
+ "feraligite": {
+  "name": "Feraligite",
+  "desc": "A held item that allows Feraligatr to Mega Evolve."
+ },
+ "floettite": {
+  "name": "Floettite",
+  "desc": "A held item that allows Floette to Mega Evolve."
+ },
+ "focusband": {
+  "name": "Focus Band",
+  "desc": "If the holder takes damage from a move that would knock it out, there's a 10% chance the holder will endure the hit with 1 HP."
+ },
+ "focussash": {
+  "name": "Focus Sash",
+  "desc": "If the holder has full HP and takes damage from a move that would knock it out in one hit, it will endure the hit with 1 HP. Disappears for the duration of the battle after a single use."
+ },
+ "froslassite": {
+  "name": "Froslassite",
+  "desc": "A held item that allows Froslass to Mega Evolve."
+ },
+ "galladite": {
+  "name": "Galladite",
+  "desc": "A held item that allows Gallade to Mega Evolve."
+ },
+ "garchompite": {
+  "name": "Garchompite",
+  "desc": "A held item that allows Garchomp to Mega Evolve."
+ },
+ "gardevoirite": {
+  "name": "Gardevoirite",
+  "desc": "A held item that allows Gardevoir to Mega Evolve."
+ },
+ "gengarite": {
+  "name": "Gengarite",
+  "desc": "A held item that allows Gengar to Mega Evolve."
+ },
+ "glalitite": {
+  "name": "Glalitite",
+  "desc": "A held item that allows Glalie to Mega Evolve."
+ },
+ "glimmoranite": {
+  "name": "Glimmoranite",
+  "desc": "A held item that allows Glimmora to Mega Evolve."
+ },
+ "golurkite": {
+  "name": "Golurkite",
+  "desc": "A held item that allows Golurk to Mega Evolve."
+ },
+ "greninjite": {
+  "name": "Greninjite",
+  "desc": "A held item that allows Greninja to Mega Evolve."
+ },
+ "gyaradosite": {
+  "name": "Gyaradosite",
+  "desc": "A held item that allows Gyarados to Mega Evolve."
+ },
+ "habanberry": {
+  "name": "Haban Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Dragon-type move. Disappears for the duration of the battle after a single use."
+ },
+ "hardstone": {
+  "name": "Hard Stone",
+  "desc": "Boosts the power of the holder's Rock-type moves by 20%."
+ },
+ "hawluchanite": {
+  "name": "Hawluchanite",
+  "desc": "A held item that allows Hawlucha to Mega Evolve."
+ },
+ "heatrock": {
+  "name": "Heat Rock",
+  "desc": "An item to be held by a Pokemon. If the holder uses Sunny Day, the effects will last for 8 turns instead of 5."
+ },
+ "heracronite": {
+  "name": "Heracronite",
+  "desc": "A held item that allows Heracross to Mega Evolve."
+ },
+ "houndoominite": {
+  "name": "Houndoominite",
+  "desc": "A held item that allows Houndoom to Mega Evolve."
+ },
+ "icyrock": {
+  "name": "Icy Rock",
+  "desc": "An item to be held by a Pokemon. If the holder summons a snowstorm, the effects will last for 8 turns instead of 5."
+ },
+ "ironball": {
+  "name": "Iron Ball",
+  "desc": "An item to be held by a Pokemon. Reduces the holder's Speed by 50%, if it is a Flying-type or has the Levitate ability, the holder becomes susceptible to Ground type attacks."
+ },
+ "kangaskhanite": {
+  "name": "Kangaskhanite",
+  "desc": "A held item that allows Kangaskhan to Mega Evolve."
+ },
+ "kasibberry": {
+  "name": "Kasib Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Ghost-type move. Disappears for the duration of the battle after a single use."
+ },
+ "kebiaberry": {
+  "name": "Kebia Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Poison-type move. Disappears for the duration of the battle after a single use."
+ },
+ "kingsrock": {
+  "name": "King's Rock",
+  "desc": "When the holder deals damage with its moves, there is a 10% chance that targets will flinch."
+ },
+ "leftovers": {
+  "name": "Leftovers",
+  "desc": "Restores 1/16 of the holder's max HP at the end of every turn."
+ },
+ "leppaberry": {
+  "name": "Leppa Berry",
+  "desc": "Restores 10 PP to a move when its PP is fully depleted. Disappears for the duration of the battle after a single use."
+ },
+ "lifeorb": {
+  "name": "Life Orb",
+  "desc": "An item to be held by a Pokemon. Increases the damage of the holder's moves by 30% but the holder loses 10% of its max HP after using a damaging move."
+ },
+ "lightball": {
+  "name": "Light Ball",
+  "desc": "When held by a Pikachu, doubles the holder's Attack and Sp. Atk."
+ },
+ "lightclay": {
+  "name": "Light Clay",
+  "desc": "An item to be held by a Pokemon. Prolongs the effects of moves like Light Screen, Reflect, and Aurora Veil to make them last eight turns instead of five."
+ },
+ "lopunnite": {
+  "name": "Lopunnite",
+  "desc": "A held item that allows Lopunny to Mega Evolve."
+ },
+ "lucarionite": {
+  "name": "Lucarionite",
+  "desc": "A held item that allows Lucario to Mega Evolve into Mega Lucario."
+ },
+ "lumberry": {
+  "name": "Lum Berry",
+  "desc": "Cures any status condition or confusion. Disappears for the duration of the battle after a single use."
+ },
+ "magnet": {
+  "name": "Magnet",
+  "desc": "Boosts the power of the holder's Electric-type moves by 20%."
+ },
+ "malamarite": {
+  "name": "Malamarite",
+  "desc": "A held item that allows Malamar to Mega Evolve."
+ },
+ "manectite": {
+  "name": "Manectite",
+  "desc": "A held item that allows Manectric to Mega Evolve."
+ },
+ "mawilite": {
+  "name": "Mawilite",
+  "desc": "A held item that allows Mawile to Mega Evolve."
+ },
+ "medichamite": {
+  "name": "Medichamite",
+  "desc": "A held item that allows Medicham to Mega Evolve."
+ },
+ "meganiumite": {
+  "name": "Meganiumite",
+  "desc": "A held item that allows Meganium to Mega Evolve."
+ },
+ "mentalherb": {
+  "name": "Mental Herb",
+  "desc": "Cures the holder of the Infatuated, Taunted, Unable to Repeat, Move Disabled, Healing Prevented, and Encore statuses. Disappears for the duration of the battle after a single use."
+ },
+ "meowsticite": {
+  "name": "Meowsticite",
+  "desc": "A held item that allows Meowstic to Mega Evolve."
+ },
+ "metagrossite": {
+  "name": "Metagrossite",
+  "desc": "A held item that allows Metagross to Mega Evolve."
+ },
+ "metalcoat": {
+  "name": "Metal Coat",
+  "desc": "Boosts the power of the holder's Steel-type moves by 20%."
+ },
+ "metronome": {
+  "name": "Metronome",
+  "desc": "An item to be held by a Pokemon. Increases the damage of moves used consecutively by 20%. It stops increasing at 100% and resets if a different move is used."
+ },
+ "miracleseed": {
+  "name": "Miracle Seed",
+  "desc": "Boosts the power of the holder's Grass-type moves by 20%."
+ },
+ "muscleband": {
+  "name": "Muscle Band",
+  "desc": "An item to be held by a Pokemon. Increases the holder's physical attacks by 10%."
+ },
+ "mysticwater": {
+  "name": "Mystic Water",
+  "desc": "Boosts the power of the holder's Water-type moves by 20%."
+ },
+ "nevermeltice": {
+  "name": "Never-Melt Ice",
+  "desc": "Boosts the power of the holder's Ice-type moves by 20%."
+ },
+ "occaberry": {
+  "name": "Occa Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Fire-type move. Disappears for the duration of the battle after a single use."
+ },
+ "oranberry": {
+  "name": "Oran Berry",
+  "desc": "Restores 10 HP to the holder when its HP drops to 1/2 or less of its max. Disappears for the duration of the battle after a single use."
+ },
+ "passhoberry": {
+  "name": "Passho Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Water-type move. Disappears for the duration of the battle after a single use."
+ },
+ "payapaberry": {
+  "name": "Payapa Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Psychic-type move. Disappears for the duration of the battle after a single use."
+ },
+ "pechaberry": {
+  "name": "Pecha Berry",
+  "desc": "Cures being poisoned or badly poisoned. Disappears for the duration of the battle after a single use."
+ },
+ "persimberry": {
+  "name": "Persim Berry",
+  "desc": "Cures being confused. Disappears for the duration of the battle after a single use."
+ },
+ "pidgeotite": {
+  "name": "Pidgeotite",
+  "desc": "A held item that allows Pidgeot to Mega Evolve."
+ },
+ "pinsirite": {
+  "name": "Pinsirite",
+  "desc": "A held item that allows Pinsir to Mega Evolve."
+ },
+ "poisonbarb": {
+  "name": "Poison Barb",
+  "desc": "Boosts the power of the holder's Poison-type moves by 20%."
+ },
+ "pyroarite": {
+  "name": "Pyroarite",
+  "desc": "A held item that allows Pyroar to Mega Evolve."
+ },
+ "quickclaw": {
+  "name": "Quick Claw",
+  "desc": "Gives the holder's moves a 20% chance of going first among moves of the same priority."
+ },
+ "raichunitex": {
+  "name": "Raichunite X",
+  "desc": "A held item that allows Raichu to Mega Evolve to Mega Raichu X."
+ },
+ "raichunitey": {
+  "name": "Raichunite Y",
+  "desc": "A held item that allows Raichu to Mega Evolve to Mega Raichu Y."
+ },
+ "rawstberry": {
+  "name": "Rawst Berry",
+  "desc": "Cures being burned. Disappears for the duration of the battle after a single use."
+ },
+ "rindoberry": {
+  "name": "Rindo Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Grass-type move. Disappears for the duration of the battle after a single use."
+ },
+ "roseliberry": {
+  "name": "Roseli Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Fairy-type move. Disappears for the duration of the battle after a single use."
+ },
+ "sablenite": {
+  "name": "Sablenite",
+  "desc": "A held item that allows Sableye to Mega Evolve."
+ },
+ "sceptilite": {
+  "name": "Sceptilite",
+  "desc": "A held item that allows Sceptile to Mega Evolve."
+ },
+ "scizorite": {
+  "name": "Scizorite",
+  "desc": "A held item that allows Scizor to Mega Evolve."
+ },
+ "scolipite": {
+  "name": "Scolipite",
+  "desc": "A held item that allows Scolipede to Mega Evolve."
+ },
+ "scopelens": {
+  "name": "Scope Lens",
+  "desc": "Gives the holder a 1-stage Critical-Hit Ratio Boost."
+ },
+ "scovillainite": {
+  "name": "Scovillainite",
+  "desc": "A held item that allows Scovillain to Mega Evolve."
+ },
+ "scraftinite": {
+  "name": "Scraftinite",
+  "desc": "A held item that allows Scrafty to Mega Evolve."
+ },
+ "sharpbeak": {
+  "name": "Sharp Beak",
+  "desc": "Boosts the power of the holder's Flying-type moves by 20%."
+ },
+ "sharpedonite": {
+  "name": "Sharpedonite",
+  "desc": "A held item that allows Sharpedo to Mega Evolve."
+ },
+ "shedshell": {
+  "name": "Shed Shell",
+  "desc": "Enables the holder to ignore any effects that would usually prevent it from switching out of battle and being replaced by another party Pokémon."
+ },
+ "shellbell": {
+  "name": "Shell Bell",
+  "desc": "When the holder deals damage with its moves, its HP is restored by 1/8 of the damage dealt."
+ },
+ "shucaberry": {
+  "name": "Shuca Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Ground-type move. Disappears for the duration of the battle after a single use."
+ },
+ "silkscarf": {
+  "name": "Silk Scarf",
+  "desc": "Boosts the power of the holder's Normal-type moves by 20%."
+ },
+ "silverpowder": {
+  "name": "Silver Powder",
+  "desc": "Boosts the power of the holder's Bug-type moves by 20%."
+ },
+ "sitrusberry": {
+  "name": "Sitrus Berry",
+  "desc": "Restores 1/4 of the holder's max HP when the holder's HP drops to 1/2 or less of its max. Disappears for the duration of the battle after a single use."
+ },
+ "skarmorite": {
+  "name": "Skarmorite",
+  "desc": "A held item that allows Skarmory to Mega Evolve."
+ },
+ "slowbronite": {
+  "name": "Slowbronite",
+  "desc": "A held item that allows Slowbro to Mega Evolve. It has no effect on Galarian Slowbro."
+ },
+ "smoothrock": {
+  "name": "Smooth Rock",
+  "desc": "An item to be held by a Pokemon. If the holder uses Sandstorm, the effects will last for 8 turns instead of 5."
+ },
+ "softsand": {
+  "name": "Soft Sand",
+  "desc": "Boosts the power of the holder's Ground-type moves by 20%."
+ },
+ "spelltag": {
+  "name": "Spell Tag",
+  "desc": "Boosts the power of the holder's Ghost-type moves by 20%."
+ },
+ "staraptite": {
+  "name": "Staraptite",
+  "desc": "A held item that allows Staraptor to Mega Evolve."
+ },
+ "starminite": {
+  "name": "Starminite",
+  "desc": "A held item that allows Starmie to Mega Evolve."
+ },
+ "steelixite": {
+  "name": "Steelixite",
+  "desc": "A held item that allows Steelix to Mega Evolve."
+ },
+ "swampertite": {
+  "name": "Swampertite",
+  "desc": "A held item that allows Swampert to Mega Evolve."
+ },
+ "tangaberry": {
+  "name": "Tanga Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Bug-type move. Disappears for the duration of the battle after a single use."
+ },
+ "twistedspoon": {
+  "name": "Twisted Spoon",
+  "desc": "Boosts the power of the holder's Psychic-type moves by 20%."
+ },
+ "tyranitarite": {
+  "name": "Tyranitarite",
+  "desc": "A held item that allows Tyranitar to Mega Evolve."
+ },
+ "venusaurite": {
+  "name": "Venusaurite",
+  "desc": "A held item that allows Venusaur to Mega Evolve."
+ },
+ "victreebelite": {
+  "name": "Victreebelite",
+  "desc": "A held item that allows Victreebel to Mega Evolve."
+ },
+ "wacanberry": {
+  "name": "Wacan Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Electric-type move. Disappears for the duration of the battle after a single use."
+ },
+ "whiteherb": {
+  "name": "White Herb",
+  "desc": "Restores the holder's stats to their usual value when they are lowered. Disappears for the duration of the battle after a single use."
+ },
+ "widelens": {
+  "name": "Wide Lens",
+  "desc": "An item to be held by a Pokemon. Increases the Accuracy of the moves used by the holder by 10%."
+ },
+ "wiseglasses": {
+  "name": "Wise Glasses",
+  "desc": "An item to be held by a Pokemon. Increases the holder's Special Attack by 10%."
+ },
+ "yacheberry": {
+  "name": "Yache Berry",
+  "desc": "Halves the damage taken when the holder is hit with a supereffective Ice-type move. Disappears for the duration of the battle after a single use."
+ },
+ "zoomlens": {
+  "name": "Zoom Lens",
+  "desc": "An item to be held by a Pokemon. Increases the holder's Accuracy by 20% if it moves last in the turn."
+ }
+}

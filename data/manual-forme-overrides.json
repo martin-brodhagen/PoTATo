@@ -115,6 +115,7 @@
     "basculegion": { "name": "Male",                  "kind": "pre-battle" },
     "mimikyu":     { "name": "Disguised",             "kind": "pre-battle" },
     "meowstic":    { "name": "Male",                  "kind": "pre-battle" },
+    "meowsticf":   { "name": "Female",                "kind": "pre-battle" },
     "aegislash":   { "name": "Shield Forme",          "kind": "pre-battle" },
     "lycanroc":    { "name": "Midday Form",           "kind": "pre-battle" },
     "castform":    { "name": "Normal",                "kind": "pre-battle" },

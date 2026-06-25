@@ -1,0 +1,16 @@
+{
+  "_comment": [
+    "Per-species baseSpecies / forme overrides. Applied to",
+    "data/base/pokedex.json by prep/species/patch_base_species.py after",
+    "the base build. Use when upstream's baseSpecies points at the wrong",
+    "base for the team-builder's model — e.g. meowsticfmega should be a",
+    "forme of meowsticf (the female base), not meowstic (male). The mega",
+    "stone's megaStone mapping is the source of truth for which base a",
+    "mega belongs to; this file just makes the pokedex agree.",
+    "Each entry: {baseSpecies: <name|null>, forme: <value|null>}.",
+    "Both fields are optional — only fields you list are touched."
+  ],
+
+  "meowsticf":     { "baseSpecies": null,         "forme": null },
+  "meowsticfmega": { "baseSpecies": "Meowstic-F", "forme": "F-Mega" }
+}

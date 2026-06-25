@@ -804,41 +804,6 @@ button:hover {
   background: var(--bg-hover);
 }
 
-.filter-chip[data-category="type"] {
-  border-left: 4px solid var(--stat-positive);
-  background: rgba(95, 187, 99, 0.08);
-}
-
-.filter-chip[data-category="ability"] {
-  border-left: 4px solid #ab6ac8;
-  background: rgba(171, 106, 200, 0.08);
-}
-
-.filter-chip[data-category="move"] {
-  border-left: 4px solid #4f8ed4;
-  background: rgba(79, 142, 212, 0.08);
-}
-
-.filter-chip[data-category="pokemon"] {
-  border-left: 4px solid #f0c060;
-  background: rgba(240, 192, 96, 0.08);
-}
-
-.filter-chip[data-category="classification"] {
-  border-left: 4px solid #70cde7;
-  background: rgba(112, 205, 231, 0.08);
-}
-
-.filter-chip[data-category="effect"] {
-  border-left: 4px solid #f0a050;
-  background: rgba(240, 160, 80, 0.08);
-}
-
-.filter-chip[data-category="range"] {
-  border-left: 4px solid #5a8ea2;
-  background: rgba(90, 142, 162, 0.08);
-}
-
 .chip-remove {
   cursor: pointer;
   color: var(--text-secondary);
