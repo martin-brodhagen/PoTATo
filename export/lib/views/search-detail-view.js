@@ -1,6 +1,6 @@
 import { MoveSearchWidget } from "../move-search-widget.js";
 import { PokemonSearchWidget } from "../pokemon-search-widget.js";
-import { MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES, ABILITY_EFFECT_CATEGORIES } from "../types.js";
+import { MOVE_CLASSIFICATIONS, MOVE_EFFECT_CATEGORIES, RANGE_CATEGORIES, ABILITY_EFFECT_CATEGORIES } from "../types.js";
 
 function statBarColor(val) {
   if (val <= 29) return "#c44d4d";
@@ -277,7 +277,7 @@ export class SearchDetailView {
       MOVE_CLASSIFICATIONS[f] || f
     );
     const effectLabels = (move.effectCategories || []).map((e) =>
-      EFFECT_CATEGORIES[e] || e
+      MOVE_EFFECT_CATEGORIES[e] || e
     );
     const rangeLabel = move.range ? (RANGE_CATEGORIES[move.range] || move.range) : "";
     const rangeHtml = rangeLabel

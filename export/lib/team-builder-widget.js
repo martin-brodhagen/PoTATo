@@ -6,6 +6,11 @@ const SHINY_SPRITE_PATH = 'sprites/shiny';
 const ITEM_SPRITE_PATH = 'sprites/items';
 const STAT_NAMES = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
 const STAT_LABELS = { hp: 'HP', atk: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', spe: 'Spe' };
+
+function isPreBattleForme(species) {
+  return species?.formeInfo?.kind === 'pre-battle';
+}
+
 const NATURE_DATA = [
   { name: 'Adamant', up: 'Atk', down: 'SpA' },
   { name: 'Bashful', up: 'SpA', down: 'SpA' },
@@ -200,6 +205,23 @@ export class TeamBuilderWidget {
   // equipped, so a fresh Charizard has no formes until a stone is picked.
   applySpeciesToSlot(slot, species) {
     if (!slot || !species) return;
+
+    if (isPreBattleForme(species)) {
+      slot.speciesId = species.id;
+      slot.name = species.name;
+      slot.nature = 'Serious';
+      slot.gender = species.gender === 'M' ? 'Male' : species.gender === 'F' ? 'Female' : 'Male';
+      slot.moves = [null, null, null, null];
+      slot.stats = { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
+      slot.shiny = slot.shiny || false;
+      slot.item = null;
+      slot.formes = [];
+      slot.activeFormeIndex = 0;
+      slot.baseAbility = species.abilities?.[0] || null;
+      slot.ability = slot.baseAbility;
+      return;
+    }
+
     const baseSpecies = species.baseSpecies
       ? this.opts.species.find((s) => s.name === species.baseSpecies) || null
       : species;

@@ -1,5 +1,5 @@
 import { loadMovesWithLearnsets } from './data-loader.js';
-import { TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES, RANGE_CATEGORIES } from './types.js';
+import { TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, MOVE_EFFECT_CATEGORIES, RANGE_CATEGORIES } from './types.js';
 import { SortBar } from './sort-bar.js';
 
 function getBpDisplay(move) {
@@ -303,7 +303,7 @@ export class MoveSearchWidget {
       classHtml += `<div class="popup-item" data-category="classification" data-id="${flagId}" data-label="${label}">${label}</div>`;
     }
     classHtml += '</div><div class="popup-group"><div class="popup-group-label">Effect</div>';
-    for (const [eid, label] of Object.entries(EFFECT_CATEGORIES)) {
+    for (const [eid, label] of Object.entries(MOVE_EFFECT_CATEGORIES)) {
       classHtml += `<div class="popup-item" data-category="effect" data-id="${eid}" data-label="${label}">${label}</div>`;
     }
     classHtml += '</div>';
@@ -570,7 +570,7 @@ export class MoveSearchWidget {
     }
     const matchingClassifications = Object.entries(MOVE_CLASSIFICATIONS)
       .filter(([, label]) => label.toLowerCase().includes(lower));
-    const matchingEffects = Object.entries(EFFECT_CATEGORIES)
+    const matchingEffects = Object.entries(MOVE_EFFECT_CATEGORIES)
       .filter(([, label]) => label.toLowerCase().includes(lower));
     const matchingRanges = Object.entries(RANGE_CATEGORIES)
       .filter(([, label]) => label.toLowerCase().includes(lower));

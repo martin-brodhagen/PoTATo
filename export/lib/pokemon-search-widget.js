@@ -1,5 +1,5 @@
 import { loadLearnsets, loadMovesWithLearnsets, loadAbilities, HIDDEN_FORME_KINDS } from './data-loader.js';
-import { TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, EFFECT_CATEGORIES } from './types.js';
+import { TYPES, TYPE_COLORS, MOVE_CLASSIFICATIONS, MOVE_EFFECT_CATEGORIES } from './types.js';
 import { ABILITY_EFFECT_CATEGORIES } from './types.js';
 import { SortBar } from './sort-bar.js';
 
@@ -622,7 +622,7 @@ export class PokemonSearchWidget {
     }
     const matchingClassifications = Object.entries(MOVE_CLASSIFICATIONS)
       .filter(([, label]) => label.toLowerCase().includes(lower));
-    const matchingEffects = Object.entries(EFFECT_CATEGORIES)
+    const matchingEffects = Object.entries(MOVE_EFFECT_CATEGORIES)
       .filter(([, label]) => label.toLowerCase().includes(lower));
     const matchingAbilityCats = Object.entries(ABILITY_EFFECT_CATEGORIES)
       .filter(([, label]) => label.toLowerCase().includes(lower));
