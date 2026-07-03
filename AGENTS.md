@@ -84,13 +84,17 @@ data/
 lib/
   data-loader.js                 # loads base once, derives per-format views in memory
   team-store.js                  # team persistence in localStorage (schema v2, with v1 migration)
+                                # exports: createTeam, loadTeams, saveTeams, removeTeam, loadLastTeamId, saveLastTeamId, migrateTeamsToV2, migrateFromLegacy
+  team-browser-widget.js         # left-side team CRUD UI (default left tab); renders, renames, deletes, switches to active
   i18n.js                        # post-process layer: overlays localized name/desc onto cache
   app-init.js                    # wires widgets; rebuilds Pokedex subtab widgets on format change
-  navigation-controller.js       # tab/subtab switching (TAB_REGISTRY)
+  app-state.js                   # in-memory state container (currentFormat, teams, currentTeamId, etc.)
+  navigation-controller.js       # tab/subtab switching (TAB_REGISTRY; default leftTab = 'team-browser')
   detail-controller.js           # routes clicks → breadcrumb + search-detail
   types.js                       # TYPES, TYPE_COLORS, EFFECT_CATEGORIES, etc. (shared constants)
   <widget>.js                    # one file per widget (pokemon/move/ability/item search, team builder, etc)
   views/                         # breadcrumb / header / search-detail views
+    header-view.js               # top-bar slot preview + legality warning; click preview to jump to team builder
 export/                          # output of scripts/export.py — Netlify drag-and-drop bundle
   _headers                       # mirrors netlify.toml (long-cache + security headers)
 app.js                           # entry point — runs initI18n, then loadFormatData('m-b')
@@ -159,21 +163,22 @@ To redirect another species: add an entry to `data/manual-base-species.json` wit
 
 - ES modules, no bundler, no build step. Served directly by `python3 -m http.server`.
 - `lib/data-loader.js` loads `data/base/*` once (cached), augments each species with `formeInfo`, and filters against `data/formats/<id>.json` to build the per-format view. All `loadX(format)` helpers go through this.
-- `lib/i18n.js` is a post-process layer: takes a snapshot of `name`/`desc` from the in-memory cache, then overlays translated values from `data/i18n/<lang>/*.json`. Widgets read the cache transparently.
+- `lib/i18n.js` is a post-process layer: takes a snapshot of `name`/`desc` from the in-memory cache, then overlays translated values from `data/i18n/<lang>/<lang>/*.json`. Widgets read the cache transparently.
 - Widgets: three `PokemonSearchWidget` instances (main pokedex grid, move-detail "Learned By", ability-detail "Pokémon with..."), two `MoveSearchWidget` instances (moves tab, pokemon-detail filtered list). All widgets are destroyed and recreated on format switch.
+- **Team browser** (`lib/team-browser-widget.js`) is the default left tab and the only place for team CRUD UI. It shows teams for the current global format, handles create/rename/delete via callbacks into `app-init.js`, and clicking a team (or its Edit button) makes it active and navigates to the team builder. Team persistence is per-format under `potato-teams-<format>` in localStorage (see `lib/team-store.js`).
 - **Team builder + pre-battle formes**: in `applySpeciesToSlot` (`lib/team-builder-widget.js:209`), a forme with `formeInfo.kind === "pre-battle"` is treated as its own base — `slot.speciesId` is the forme's own id and `slot.formes` stays empty, so the regular form never enters the cycle. The same `kind` field drives search grid visibility (`HIDDEN_FORME_KINDS = {"combat-switch", "cosmetic"}`), so the two views stay in sync. Combat-switch, cosmetic, and mega formes keep the regular base + cycle.
 
 ## CSS Conventions
 
-- Class prefixes: `.ps-*` Pokemon, `.ms-*` Moves, `.as-*` Abilities, `.is-*` Items, `.tb-*` Team builder. `.dc-*` Defensive Coverage. `.move-detail-*` Move/Ability/Item detail panels.
+- Class prefixes: `.ps-*` Pokemon, `.ms-*` Moves, `.as-*` Abilities, `.is-*` Items, `.tb-*` Team builder, `.tbr-*` Team browser, `.dc-*` Defensive Coverage. `.move-detail-*` Move/Ability/Item detail panels.
 - Filter/sort pill: shared `.pill-btn` (font-size 0.68rem, font-weight 600, 6px radius, `bg-surface`, `border-strong`). Active state uses `var(--accent-gold)`. The legacy `.is-cat-btn` has the same look but isn't a single source of truth yet.
+- Team browser base slot styles (`.tbr-slot`, `.tbr-slot-sprite`) share their base rules with the header-view equivalents (`.header-slot`, `.header-slot-sprite`) via CSS selector lists — `.tbr-team-slots-grid .tbr-slot` adds the team-browser-specific size overrides on top.
 - The `.detail-forme` line under a pokemon's name in search detail is always rendered (uses `&nbsp;` for forme-less pokemon) so the type/meta block sits at a consistent vertical position.
 
 ## Pending / Future
 
 - [ ] Offensive Coverage tool (placeholder)
 - [ ] Damage Calculator (placeholder)
-- [ ] Imports feature (placeholder)
 - [ ] Breadcrumb optimizations (early return on same index, bounds checking)
 - [ ] Translate move/ability/item descriptions beyond English (descriptions are Game8-sourced for `en`; other langs fall back to English)
 - [ ] Delete legacy M-A pipeline (`prep/prep_data.py`, `prep/patch_descriptions.py`) — these are no longer consumed by the frontend, only kept for comparison

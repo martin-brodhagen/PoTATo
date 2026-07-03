@@ -37,8 +37,6 @@ import {
 import { applyI18n } from "./lib/i18n.js";
 
 const formatSelect = document.getElementById("format-select");
-const teamSelect = document.getElementById("team-select");
-const newTeamBtn = document.getElementById("new-team-btn");
 const teamWarning = document.getElementById("team-warning");
 const headerTeam = document.getElementById("header-team");
 const searchDetailContent = document.getElementById("search-detail-content");
@@ -52,12 +50,18 @@ const widgets = {
   detailController: null,
   pokemonWidget: null,
   teamBuilderWidget: null,
+  teamBrowserWidget: null,
   defensiveCoverageWidget: null,
   offensiveCoverageWidget: null,
   movesWidget: null,
   abilitiesWidget: null,
   itemsWidget: null,
 };
+
+const FORMATS = [
+  { value: "m-b", label: "Regulation M-B" },
+  { value: "m-a", label: "Regulation M-A" },
+];
 
 function persist() {
   saveTeams(getFormat(), getTeams());
@@ -140,7 +144,8 @@ async function refreshWidgetsForFormatChange(data) {
     widgets.offensiveCoverageWidget.refresh();
   }
 
-  widgets.headerView?.renderTeamSelect();
+  widgets.headerView?.renderTeamBar();
+  widgets.headerView?.renderTeamWarning();
 }
 
 async function switchFormat(format) {
@@ -158,6 +163,7 @@ async function switchFormat(format) {
   ]);
   applyI18n(getAllCaches());
   await refreshWidgetsForFormatChange({ moves, abilities, items: getCachedItems() });
+  window.dispatchEvent(new Event("potato-format-change"));
 }
 
 // Re-load the move/ability data for the current format (no format switch),
@@ -214,8 +220,8 @@ const initialFormat = "m-b";
     applyI18n(getAllCaches());
 
     initApp({
-      dom: { headerTeam, searchDetailContent, breadcrumbBar, teamSelect, teamWarning },
-      state: { getCurrentTeam, getTeams, getSpriteMap, getSpeciesById, isTeamLegal, getFormat, getAllSpecies, getShinySpriteMap, setCurrentTeamId, addTeam },
+      dom: { headerTeam, searchDetailContent, breadcrumbBar, teamWarning },
+      state: { getCurrentTeam, getTeams, getSpriteMap, getSpeciesById, isTeamLegal, getFormat, getAllSpecies, getShinySpriteMap, setCurrentTeamId, getCurrentTeamId, setTeams, addTeam, formats: FORMATS },
       data: { moves, abilities, items: getCachedItems() },
       callbacks: {
         onTeamChange: () => window.dispatchEvent(new Event("potato-team-change")),
