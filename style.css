@@ -411,6 +411,45 @@ button:hover {
 .tbr-team-action:hover {
   background: var(--bg-input);
 }
+.tbr-team-action.active {
+  border-color: var(--accent-gold);
+}
+.tbr-import-export-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.tbr-import-export-ok {
+  align-self: flex-end;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.tbr-import-export-ok:hover {
+  background: var(--bg-input);
+  border-color: var(--accent-gold);
+}
+.tbr-import-export-textarea {
+  width: 100%;
+  min-height: 10rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.4rem;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  resize: vertical;
+}
+.tbr-import-export-textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
 /* .tbr-team-name {
   flex: 1;
   min-width: 0;
@@ -2179,6 +2218,12 @@ button:hover {
   font-weight: 700;
   outline: none;
   box-sizing: border-box;
+}
+
+.tbr-team-name {
+  flex: 1 1 0;
+  min-width: 18rem;
+  width: auto;
 }
 
 .tb-name-input:focus,

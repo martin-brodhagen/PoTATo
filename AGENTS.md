@@ -84,8 +84,8 @@ data/
 lib/
   data-loader.js                 # loads base once, derives per-format views in memory
   team-store.js                  # team persistence in localStorage (schema v2, with v1 migration)
-                                # exports: createTeam, loadTeams, saveTeams, removeTeam, loadLastTeamId, saveLastTeamId, migrateTeamsToV2, migrateFromLegacy
-  team-browser-widget.js         # left-side team CRUD UI (default left tab); renders, renames, deletes, switches to active
+                                # exports: createTeam, duplicateTeam, loadTeams, saveTeams, removeTeam, loadLastTeamId, saveLastTeamId, migrateTeamsToV2, migrateFromLegacy
+  team-browser-widget.js         # left-side team CRUD UI (default left tab); renders, renames, deletes, duplicates, switches to active
   i18n.js                        # post-process layer: overlays localized name/desc onto cache
   app-init.js                    # wires widgets; rebuilds Pokedex subtab widgets on format change
   app-state.js                   # in-memory state container (currentFormat, teams, currentTeamId, etc.)
@@ -165,7 +165,7 @@ To redirect another species: add an entry to `data/manual-base-species.json` wit
 - `lib/data-loader.js` loads `data/base/*` once (cached), augments each species with `formeInfo`, and filters against `data/formats/<id>.json` to build the per-format view. All `loadX(format)` helpers go through this.
 - `lib/i18n.js` is a post-process layer: takes a snapshot of `name`/`desc` from the in-memory cache, then overlays translated values from `data/i18n/<lang>/<lang>/*.json`. Widgets read the cache transparently.
 - Widgets: three `PokemonSearchWidget` instances (main pokedex grid, move-detail "Learned By", ability-detail "Pokémon with..."), two `MoveSearchWidget` instances (moves tab, pokemon-detail filtered list). All widgets are destroyed and recreated on format switch.
-- **Team browser** (`lib/team-browser-widget.js`) is the default left tab and the only place for team CRUD UI. It shows teams for the current global format, handles create/rename/delete via callbacks into `app-init.js`, and clicking a team (or its Edit button) makes it active and navigates to the team builder. Team persistence is per-format under `potato-teams-<format>` in localStorage (see `lib/team-store.js`).
+- **Team browser** (`lib/team-browser-widget.js`) is the default left tab and the only place for team CRUD UI. It shows teams for the current global format, handles create/rename/delete/duplicate via callbacks into `app-init.js`, and clicking a team (or its Edit button) makes it active and navigates to the team builder. Per-team action row: Duplicate, Import, Export, Edit; the × delete button sits in the header row of each item. Duplicates are auto-named `<base> v2`, `v3`, … — a trailing `v\d+` is stripped from the source name first, then the next free version is picked. Team persistence is per-format under `potato-teams-<format>` in localStorage (see `lib/team-store.js`).
 - **Team builder + pre-battle formes**: in `applySpeciesToSlot` (`lib/team-builder-widget.js:209`), a forme with `formeInfo.kind === "pre-battle"` is treated as its own base — `slot.speciesId` is the forme's own id and `slot.formes` stays empty, so the regular form never enters the cycle. The same `kind` field drives search grid visibility (`HIDDEN_FORME_KINDS = {"combat-switch", "cosmetic"}`), so the two views stay in sync. Combat-switch, cosmetic, and mega formes keep the regular base + cycle.
 
 ## CSS Conventions

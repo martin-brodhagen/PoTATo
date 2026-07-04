@@ -131,6 +131,14 @@ async function refreshWidgetsForFormatChange(data) {
     );
   }
 
+  if (widgets.teamBrowserWidget) {
+    widgets.teamBrowserWidget.setData({
+      items: getCachedItems(),
+      moves: data?.moves,
+      abilities: data?.abilities,
+    });
+  }
+
   if (widgets.defensiveCoverageWidget) {
     widgets.defensiveCoverageWidget.opts.species = getAllSpecies();
     widgets.defensiveCoverageWidget.opts.spriteMap = getSpriteMap();
