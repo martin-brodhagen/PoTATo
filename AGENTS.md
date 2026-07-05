@@ -3,8 +3,9 @@
 ## Dev Commands
 
 ```bash
-npm start                                # dev server on http://localhost:8787
-npm run prep                             # full data pipeline (base → patches → formats → i18n)
+npm start                                # dev server on http://localhost:8787 (python3 -m http.server 8787)
+npm run prep                             # full data pipeline (all 8 steps, all formats, all i18n langs)
+npm run prep:mb                          # M-B-only shortcut: base + formats/m-b + i18n
 npm run prep:base                        # just data/base/ (slowest, network)
 npm run prep:format                      # just data/formats/<id>.json (also accepts CLI args)
 python3 prep/formats/build.py m-c        # single format
@@ -13,7 +14,7 @@ npm run prep:mb:refresh-game8            # re-scrape game8.co (writes data/game8
 npm run prep:items:patch                 # re-apply item category patches
 npm run prep:moves:patch                 # re-apply move PP patches
 npm run prep:abilities:patch             # re-apply ability removals
-npm run prep:species:patch                 # re-apply cosmetic-forme synthesis to data/base/pokedex.json
+npm run prep:species:patch                 # re-synthesize cosmetic formes to data/base/pokedex.json
 npm run prep:species:base                  # re-apply per-species baseSpecies/forme overrides to data/base/pokedex.json
 
 python3 scripts/export.py                 # build a portable ./export/ bundle (Netlify drag-and-drop)
@@ -21,6 +22,11 @@ python3 scripts/export.py /tmp/bundle     # custom output dir; refuses to write 
 ```
 
 First run of `npm run prep:base` needs network; subsequent runs use the `.cache/` disk cache.
+Delete `.cache/` to force a network refetch (e.g. after a Champions mod update).
+
+There is **no test runner, no linter, and no typecheck** configured — no `npm test`, no
+`npm run lint`, no `tsc`. JS is plain ES modules with no transpile step. Don't add a test
+framework without confirming the user wants one.
 
 ## Deploy
 
@@ -30,6 +36,8 @@ Two paths, both served by Netlify:
 - **Drag-and-drop** — run `python3 scripts/export.py` then upload `export/` to Netlify. The export copies only the runtime files (excludes `prep/`, `scripts/*`, `.cache/`, scrape caches, all `data/manual-*.json` except `manual-forme-overrides.json` which the frontend fetches) and writes `export/_headers` mirroring the `netlify.toml` rules. Output dir is wiped + recreated each run, so stale files from prior schemas can't linger.
 
 ## Data Pipeline (in `prep/build_mb.py` order)
+
+See `prep/PIPELINE.md` for the full architecture write-up (principles, layer responsibilities, output shapes). The eight-step orchestrator is:
 
 1. `prep/base/build.py` — fetches Showdown raw + Champions mod, applies mod overrides, builds 8 files in `data/base/`. Network required on first run.
 2. `prep/items/patch_categories.py` — overlays Game8 + `data/manual-item-categories.json`.
@@ -166,7 +174,8 @@ To redirect another species: add an entry to `data/manual-base-species.json` wit
 - `lib/i18n.js` is a post-process layer: takes a snapshot of `name`/`desc` from the in-memory cache, then overlays translated values from `data/i18n/<lang>/<lang>/*.json`. Widgets read the cache transparently.
 - Widgets: three `PokemonSearchWidget` instances (main pokedex grid, move-detail "Learned By", ability-detail "Pokémon with..."), two `MoveSearchWidget` instances (moves tab, pokemon-detail filtered list). All widgets are destroyed and recreated on format switch.
 - **Team browser** (`lib/team-browser-widget.js`) is the default left tab and the only place for team CRUD UI. It shows teams for the current global format, handles create/rename/delete/duplicate via callbacks into `app-init.js`, and clicking a team (or its Edit button) makes it active and navigates to the team builder. Per-team action row: Duplicate, Import, Export, Edit; the × delete button sits in the header row of each item. Duplicates are auto-named `<base> v2`, `v3`, … — a trailing `v\d+` is stripped from the source name first, then the next free version is picked. Team persistence is per-format under `potato-teams-<format>` in localStorage (see `lib/team-store.js`).
-- **Team builder + pre-battle formes**: in `applySpeciesToSlot` (`lib/team-builder-widget.js:209`), a forme with `formeInfo.kind === "pre-battle"` is treated as its own base — `slot.speciesId` is the forme's own id and `slot.formes` stays empty, so the regular form never enters the cycle. The same `kind` field drives search grid visibility (`HIDDEN_FORME_KINDS = {"combat-switch", "cosmetic"}`), so the two views stay in sync. Combat-switch, cosmetic, and mega formes keep the regular base + cycle.
+- **Team import**: the per-team Import panel accepts either a raw Showdown-format team string or a `pokepast.es/{id}` URL. URLs are fetched from `https://pokepast.es/{id}/json` (CORS-friendly: `access-control-allow-origin: *`; the HTML page is NOT CORS-friendly — use `/json`, not the root URL). The JSON's `title` becomes the team name (author is ignored — it's already in the paste text). Parser + slot builder live in `lib/team-browser-widget.js` (`parseShowdownText`, `buildImportedSlots`); the unknown-entry rule: unknown species → empty slot, unknown item/ability/move → that field empty, ability must be on the species' `abilities[]` list to be set.
+- **Team builder + pre-battle formes**: in `applySpeciesToSlot` (`lib/team-builder-widget.js:206`), a forme with `formeInfo.kind === "pre-battle"` is treated as its own base — `slot.speciesId` is the forme's own id and `slot.formes` stays empty, so the regular form never enters the cycle. The same `kind` field drives search grid visibility (`HIDDEN_FORME_KINDS = {"combat-switch", "cosmetic"}`), so the two views stay in sync. Combat-switch, cosmetic, and mega formes keep the regular base + cycle.
 
 ## CSS Conventions
 
@@ -177,10 +186,11 @@ To redirect another species: add an entry to `data/manual-base-species.json` wit
 
 ## Pending / Future
 
-- [ ] Offensive Coverage tool (placeholder)
-- [ ] Damage Calculator (placeholder)
+- [ ] Damage Calculator (placeholder; tab renders but body is `coming soon`)
 - [ ] Breadcrumb optimizations (early return on same index, bounds checking)
 - [ ] Translate move/ability/item descriptions beyond English (descriptions are Game8-sourced for `en`; other langs fall back to English)
 - [ ] Delete legacy M-A pipeline (`prep/prep_data.py`, `prep/patch_descriptions.py`) — these are no longer consumed by the frontend, only kept for comparison
 - [ ] Review and correct move categorization
 - [ ] Review and correct ability categorization
+- [ ] Consolidate unused `lib/css/` directory (leftover from an abandoned refactor; empty)
+- [ ] Re-enable the gitignored `prep/_lib/tests/` directory when a real test runner is added

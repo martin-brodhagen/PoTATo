@@ -215,7 +215,7 @@ const initialFormat = "m-b";
     loadTeamsForFormat(initialFormat);
     ensureInitialTeam(initialFormat);
 
-    teamWarning.title = "duplicate species - Team not legal for this regulation";
+    teamWarning.title = "duplicate species or item - Team not legal for this regulation";
 
     const [moves, abilities] = await Promise.all([
       loadMovesWithLearnsets(initialFormat),

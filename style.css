@@ -301,8 +301,10 @@ button:hover {
 }
 
 /* ── Team Browser ─────────────────────────────────────── */
-.tbr-actions {
+.tbr-new-team {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.4rem;
   padding: 0.6rem 0.8rem;
   border-bottom: 1px solid var(--border-default);
@@ -383,6 +385,12 @@ button:hover {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   background: var(--bg-hover);
+}
+.tbr-team-format.legal {
+  background: rgba(95, 187, 99, 0.15);
+}
+.tbr-team-format.illegal {
+  background: rgba(196, 77, 77, 0.18);
 }
 .tbr-team-slots {
   display: flex;
