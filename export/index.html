@@ -8,7 +8,6 @@
 </head>
 <body>
 <header>
-  <h1>PoTATo</h1>
   <label>
     Format:
     <select id="format-select">
@@ -16,13 +15,8 @@
       <option value="m-a">Regulation M-A (Apr–Jun 2026)</option>
     </select>
   </label>
-  <label>
-    Team:
-    <select id="team-select"></select>
-    <span id="team-warning" class="team-warning hidden">⚠</span>
-  </label>
   <div id="header-team"></div>
-  <button id="new-team-btn">+ New Team</button>
+  <span id="team-warning" class="team-warning hidden">⚠</span>
 </header>
 
 <div class="app-wrapper">
@@ -31,12 +25,14 @@
   <!-- Left section — input & research -->
   <div class="section section-left">
     <div class="tab-bar">
-      <button class="tab active" data-tab="team-builder">Team Builder</button>
+      <button class="tab active" data-tab="team-browser">Team Browser</button>
+      <button class="tab" data-tab="team-builder">Team Builder</button>
       <button class="tab" data-tab="pokedex">Pokédex</button>
-      <button class="tab" data-tab="imports">Imports</button>
     </div>
 
-    <div id="tab-content-team-builder" class="tab-content">
+    <div id="tab-content-team-browser" class="tab-content">
+    </div>
+    <div id="tab-content-team-builder" class="tab-content hidden">
     </div>
     <div id="tab-content-pokedex" class="tab-content hidden">
       <div class="sub-tab-bar">
@@ -49,9 +45,6 @@
       <div id="subtab-content-moves" class="subtab-content hidden"></div>
       <div id="subtab-content-abilities" class="subtab-content hidden"></div>
       <div id="subtab-content-items" class="subtab-content hidden"></div>
-    </div>
-    <div id="tab-content-imports" class="tab-content hidden">
-      <div class="placeholder">Imports coming soon</div>
     </div>
   </div>
 

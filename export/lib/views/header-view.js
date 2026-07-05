@@ -1,49 +1,25 @@
 export class HeaderView {
   constructor({
-    container,
     headerTeam,
-    teamSelect,
-    newTeamBtn,
     teamWarning,
     getTeam,
-    getTeams,
     getSpriteMap,
     getSpeciesById,
     isTeamLegal,
-    getCurrentFormat,
-    onSelectTeam,
-    onNewTeam,
     onNavigateToBuilder,
   }) {
-    this.container = container;
     this.headerTeam = headerTeam;
-    this.teamSelect = teamSelect;
-    this.newTeamBtn = newTeamBtn;
     this.teamWarning = teamWarning;
     this.getTeam = getTeam;
-    this.getTeams = getTeams;
     this.getSpriteMap = getSpriteMap;
     this.getSpeciesById = getSpeciesById;
     this.isTeamLegal = isTeamLegal;
-    this.getCurrentFormat = getCurrentFormat;
-    this.onSelectTeam = onSelectTeam;
-    this.onNewTeam = onNewTeam;
     this.onNavigateToBuilder = onNavigateToBuilder;
-
-    this._boundListeners = [];
 
     this._init();
   }
 
   _init() {
-    this.teamSelect.addEventListener("change", () => {
-      this.onSelectTeam(this.teamSelect.value);
-    });
-
-    this.newTeamBtn.addEventListener("click", () => {
-      this.onNewTeam();
-    });
-
     this.headerTeam.addEventListener("click", () => {
       this.onNavigateToBuilder();
     });
@@ -95,25 +71,6 @@ export class HeaderView {
     }
   }
 
-  renderTeamSelect() {
-    const prev = this.teamSelect.value;
-    this.teamSelect.innerHTML = "";
-    const teams = this.getTeams();
-    for (const t of teams) {
-      const opt = document.createElement("option");
-      opt.value = t.id;
-      opt.textContent = t.name;
-      this.teamSelect.appendChild(opt);
-    }
-    if (teams.some((t) => t.id === prev)) {
-      this.teamSelect.value = prev;
-    } else if (teams.length > 0) {
-      this.teamSelect.value = teams[0].id;
-    }
-    this.renderTeamWarning();
-    this.renderTeamBar();
-  }
-
   renderTeamWarning() {
     const team = this.getTeam();
     if (team && !this.isTeamLegal(team)) {
@@ -124,8 +81,6 @@ export class HeaderView {
   }
 
   destroy() {
-    this.teamSelect.removeEventListener("change", this._onTeamSelect);
-    this.newTeamBtn.removeEventListener("click", this._onNewTeam);
     this.headerTeam.removeEventListener("click", this._onHeaderTeamClick);
   }
 }

@@ -41,6 +41,14 @@ export function isTeamLegal(team) {
     if (nums.includes(species.num)) return false;
     nums.push(species.num);
   }
+  // Most held items are limited to one per team. Two slots sharing the
+  // same item id is illegal; empty item slots are fine.
+  const items = new Set();
+  for (const slot of team.slots) {
+    if (!slot || !slot.item) continue;
+    if (items.has(slot.item)) return false;
+    items.add(slot.item);
+  }
   return true;
 }
 

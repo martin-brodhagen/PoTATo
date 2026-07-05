@@ -3,18 +3,19 @@ import { HeaderView } from "./views/header-view.js";
 import { SearchDetailView } from "./views/search-detail-view.js";
 import { NavigationController } from "./navigation-controller.js";
 import { createDetailController } from "./detail-controller.js";
-import { createTeam, saveTeams, saveLastTeamId } from "./team-store.js";
+import { createTeam, duplicateTeam, saveTeams, saveLastTeamId, loadTeams, removeTeam } from "./team-store.js";
 import { loadAbilities, loadMovesWithLearnsets } from "./data-loader.js";
 import { MoveSearchWidget } from "./move-search-widget.js";
 import { AbilitySearchWidget } from "./ability-search-widget.js";
 import { ItemSearchWidget } from "./item-search-widget.js";
 import { PokemonSearchWidget } from "./pokemon-search-widget.js";
 import { TeamBuilderWidget } from "./team-builder-widget.js";
+import { TeamBrowserWidget } from "./team-browser-widget.js";
 import { DefensiveCoverageWidget } from "./defensive-coverage-widget.js";
 import { OffensiveCoverageWidget } from "./offensive-coverage-widget.js";
 
 export function initApp({ dom, state, callbacks, widgets, data }) {
-  const { headerTeam, searchDetailContent, breadcrumbBar, teamSelect, teamWarning } = dom;
+  const { headerTeam, searchDetailContent, breadcrumbBar, teamWarning } = dom;
   const {
     getCurrentTeam,
     getTeams,
@@ -25,13 +26,120 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
     getAllSpecies,
     getShinySpriteMap,
     setCurrentTeamId,
+    getCurrentTeamId,
+    setTeams,
     addTeam,
+    formats,
   } = state;
   const { onTeamChange, onAddToTeam, onRemoveFromTeam } = callbacks;
   const { moves, abilities, items } = data || {};
 
   function persistTeams() {
     saveTeams(getFormat(), getTeams());
+  }
+
+  function ensureTeamBrowser() {
+    if (widgets.teamBrowserWidget) return;
+    widgets.teamBrowserWidget = new TeamBrowserWidget({
+      container: document.getElementById("tab-content-team-browser"),
+      formats: formats || [],
+      items,
+      abilities,
+      moves,
+      getFormat,
+      getCurrentTeamId,
+      getSpriteMap,
+      getSpeciesById,
+      getAllSpecies,
+      isTeamLegal,
+      onRenameTeam: (team, newName, { sync = true } = {}) => {
+        const trimmed = (newName || "").trim() || "Untitled";
+        const stored = loadTeams(team.format);
+        const t = stored.find((x) => x.id === team.id);
+        if (t) {
+          t.name = trimmed;
+          saveTeams(team.format, stored);
+        }
+        if (!sync) return;
+        if (team.format === getFormat()) {
+          const live = getTeams();
+          const lt = live.find((x) => x.id === team.id);
+          if (lt) lt.name = trimmed;
+        }
+        onTeamChange?.();
+      },
+      onSelectTeam: (team) => {
+        setCurrentTeamId(team.id);
+        saveLastTeamId(getFormat(), team.id);
+        if (widgets.pokemonWidget) widgets.pokemonWidget.clear();
+        widgets.headerView?.renderTeamWarning();
+        widgets.headerView?.renderTeamBar();
+        if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
+        widgets.defensiveCoverageWidget?.refresh();
+        widgets.offensiveCoverageWidget?.refresh();
+        onTeamChange?.();
+        widgets.nav?.navigate("team-builder");
+      },
+      onDeleteTeam: (team) => {
+        if (team.format !== getFormat()) return;
+        const updated = removeTeam(getTeams(), team.id);
+        saveTeams(team.format, updated);
+        setTeams(updated);
+        if (getCurrentTeamId() === team.id) {
+          const nextId = updated[0]?.id ?? null;
+          setCurrentTeamId(nextId);
+          if (nextId) saveLastTeamId(team.format, nextId);
+          widgets.headerView?.renderTeamWarning();
+          widgets.headerView?.renderTeamBar();
+          if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
+        }
+        onTeamChange?.();
+      },
+      onCreateTeam: () => {
+        const count = getTeams().length + 1;
+        const team = createTeam(`Team ${count}`, getFormat());
+        addTeam(team);
+        saveTeams(getFormat(), getTeams());
+        setCurrentTeamId(team.id);
+        saveLastTeamId(getFormat(), team.id);
+        onTeamChange?.();
+        const input = widgets.teamBrowserWidget?.opts.container.querySelector(
+          `.tbr-team-item[data-team-id="${team.id}"] .tbr-team-name`,
+        );
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      },
+      onDuplicateTeam: (team) => {
+        if (team.format !== getFormat()) return;
+        const existingNames = new Set(getTeams().map((t) => t.name));
+        const match = team.name.match(/^(.*?)\s+v(\d+)$/);
+        const base = match ? match[1] : team.name;
+        let v = 2;
+        while (existingNames.has(`${base} v${v}`)) v++;
+        const copy = duplicateTeam(team);
+        copy.name = `${base} v${v}`;
+        addTeam(copy);
+        saveTeams(getFormat(), getTeams());
+        setCurrentTeamId(copy.id);
+        saveLastTeamId(getFormat(), copy.id);
+        onTeamChange?.();
+      },
+      onImportTeam: (teamId, slots, name) => {
+        const teams = getTeams();
+        const team = teams.find((t) => t.id === teamId);
+        if (!team) return;
+        team.slots = slots;
+        if (name) team.name = name;
+        saveTeams(getFormat(), teams);
+        setTeams(teams);
+        if (getCurrentTeamId() === teamId) {
+          widgets.teamBuilderWidget?.refresh();
+        }
+        onTeamChange?.();
+      },
+    });
   }
 
   function ensureTeamBuilder() {
@@ -104,47 +212,19 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
   });
 
   widgets.headerView = new HeaderView({
-    container: document.getElementById("header-team"),
     headerTeam,
-    teamSelect,
-    newTeamBtn: document.getElementById("new-team-btn"),
     teamWarning,
     getTeam: getCurrentTeam,
-    getTeams,
     getSpriteMap,
     getSpeciesById,
     isTeamLegal,
-    getCurrentFormat: getFormat,
-    onSelectTeam: (id) => {
-      setCurrentTeamId(id);
-      saveLastTeamId(getFormat(), id);
-      if (widgets.pokemonWidget) widgets.pokemonWidget.clear();
-      widgets.headerView?.renderTeamWarning();
-      widgets.headerView?.renderTeamBar();
-      if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
-      widgets.defensiveCoverageWidget?.refresh();
-      widgets.offensiveCoverageWidget?.refresh();
-      onTeamChange?.();
-    },
-    onNewTeam: () => {
-      const count = getTeams().length + 1;
-      const team = createTeam(`Team ${count}`, getFormat());
-      addTeam(team);
-      persistTeams();
-      setCurrentTeamId(team.id);
-      saveLastTeamId(getFormat(), team.id);
-      widgets.headerView?.renderTeamSelect();
-      widgets.headerView?.renderTeamWarning();
-      widgets.headerView?.renderTeamBar();
-      widgets.offensiveCoverageWidget?.refresh();
-      onTeamChange?.();
-    },
     onNavigateToBuilder: () => {
       widgets.nav?.navigate("team-builder");
     },
   });
 
-  widgets.headerView.renderTeamSelect();
+  widgets.headerView.renderTeamBar();
+  widgets.headerView.renderTeamWarning();
 
   widgets.breadcrumbView = new BreadcrumbView({
     container: breadcrumbBar,
@@ -201,13 +281,13 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
 
   createPokedexSubtabWidgets(widgets, getFormat(), getAllSpecies(), { moves, abilities, items });
 
+  ensureTeamBrowser();
   ensureTeamBuilder();
 
   const lastTeamId = getCurrentTeamId();
   const initialTeam = getTeams().find((t) => t.id === lastTeamId) || getTeams()[0];
   if (initialTeam) {
     setCurrentTeamId(initialTeam.id);
-    teamSelect.value = initialTeam.id;
   }
   widgets.headerView?.renderTeamBar();
   widgets.headerView?.renderTeamWarning();

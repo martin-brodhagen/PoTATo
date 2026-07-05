@@ -1,4 +1,8 @@
 export const TAB_REGISTRY = {
+  'team-browser': {
+    side: 'left',
+    panelId: 'tab-content-team-browser',
+  },
   'team-builder': {
     side: 'left',
     panelId: 'tab-content-team-builder',
@@ -7,10 +11,6 @@ export const TAB_REGISTRY = {
     side: 'left',
     panelId: 'tab-content-pokedex',
     subTabs: ['pokemon', 'moves', 'abilities', 'items'],
-  },
-  'imports': {
-    side: 'left',
-    panelId: 'tab-content-imports',
   },
   'search-detail': {
     side: 'right',
@@ -33,7 +33,7 @@ export const TAB_REGISTRY = {
 export class NavigationController {
   constructor(options = {}) {
     this._state = {
-      leftTab: 'team-builder',
+      leftTab: 'team-browser',
       rightTab: 'search-detail',
       subTab: 'pokemon',
     };

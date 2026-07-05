@@ -143,9 +143,10 @@ button:hover {
   border-color: var(--accent-gold);
 }
 
-.header-slot {
-  width: 44px;
-  height: 44px;
+.header-slot,
+.tbr-slot {
+  width: 56px;
+  height: 56px;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -153,18 +154,21 @@ button:hover {
   overflow: hidden;
 }
 
-.header-slot.filled {
+.header-slot.filled,
+.tbr-slot.filled {
   background: var(--bg-slot-filled);
 }
 
-.header-slot.empty {
+.header-slot.empty,
+.tbr-slot.empty {
   background: transparent;
   border: 1px dashed var(--border-default);
 }
 
-.header-slot-sprite {
-  width: 40px;
-  height: 40px;
+.header-slot-sprite,
+.tbr-slot-sprite {
+  width: 48px;
+  height: 48px;
 }
 
 /* ── Main sections (two-column layout) ──────────────────── */
@@ -294,6 +298,192 @@ button:hover {
   text-align: center;
   color: var(--text-placeholder);
   font-size: 0.9rem;
+}
+
+/* ── Team Browser ─────────────────────────────────────── */
+.tbr-new-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--border-default);
+  background: var(--bg-elevated);
+}
+.tbr-action-btn {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tbr-action-btn:hover {
+  background: var(--bg-input);
+}
+.tbr-team-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.tbr-team-item {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  background: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.tbr-team-item:hover {
+  border-color: var(--border-strong);
+  background: var(--bg-surface);
+}
+.tbr-team-item.active {
+  border-color: var(--accent-gold);
+}
+.tbr-team-delete {
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0;
+  margin-left: auto;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: var(--text-placeholder);
+  cursor: pointer;
+}
+.tbr-team-delete:hover {
+  background: rgba(224, 96, 96, 0.22);
+  border-color: var(--border-strong);
+  color: var(--color-danger);
+}
+.tbr-team-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tbr-team-format {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--bg-hover);
+}
+.tbr-team-format.legal {
+  background: rgba(95, 187, 99, 0.15);
+}
+.tbr-team-format.illegal {
+  background: rgba(196, 77, 77, 0.18);
+}
+.tbr-team-slots {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.tbr-team-slots-grid {
+  display: flex;
+  gap: 2px;
+}
+.tbr-team-actions {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+.tbr-team-action {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.tbr-team-action:hover {
+  background: var(--bg-input);
+}
+.tbr-team-action.active {
+  border-color: var(--accent-gold);
+}
+.tbr-import-export-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.tbr-import-export-ok {
+  align-self: flex-end;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.tbr-import-export-ok:hover {
+  background: var(--bg-input);
+  border-color: var(--accent-gold);
+}
+.tbr-import-export-textarea {
+  width: 100%;
+  min-height: 10rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.4rem;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  resize: vertical;
+}
+.tbr-import-export-textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+/* .tbr-team-name {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tbr-team-name:hover {
+  border-color: var(--border-default);
+}
+.tbr-team-name:focus {
+  background: var(--bg-input);
+  border-color: var(--border-strong);
+} */
+.tbr-team-empty {
+  padding: 0.4rem 0.6rem;
+  color: var(--text-placeholder);
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
 /* ── Filter row (input + mega toggle) ────────────────── */
@@ -2023,7 +2213,8 @@ button:hover {
   background: var(--bg-surface);
 }
 
-.tb-name-input {
+.tb-name-input,
+.tbr-team-name {
   width: 9.6rem;
   flex-shrink: 0;
   padding: 0.1rem 0.2rem;
@@ -2037,7 +2228,14 @@ button:hover {
   box-sizing: border-box;
 }
 
-.tb-name-input:focus {
+.tbr-team-name {
+  flex: 1 1 0;
+  min-width: 18rem;
+  width: auto;
+}
+
+.tb-name-input:focus,
+.tbr-team-name:focus {
   border-color: var(--accent-gold);
 }
 
