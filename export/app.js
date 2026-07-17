@@ -37,7 +37,6 @@ import {
 import { applyI18n } from "./lib/i18n.js";
 
 const formatSelect = document.getElementById("format-select");
-const teamWarning = document.getElementById("team-warning");
 const headerTeam = document.getElementById("header-team");
 const searchDetailContent = document.getElementById("search-detail-content");
 const breadcrumbBar = document.getElementById("breadcrumb-bar");
@@ -153,7 +152,7 @@ async function refreshWidgetsForFormatChange(data) {
   }
 
   widgets.headerView?.renderTeamBar();
-  widgets.headerView?.renderTeamWarning();
+  widgets.headerView?.renderTeamLegality();
 }
 
 async function switchFormat(format) {
@@ -215,8 +214,6 @@ const initialFormat = "m-b";
     loadTeamsForFormat(initialFormat);
     ensureInitialTeam(initialFormat);
 
-    teamWarning.title = "duplicate species or item - Team not legal for this regulation";
-
     const [moves, abilities] = await Promise.all([
       loadMovesWithLearnsets(initialFormat),
       loadAbilities(initialFormat),
@@ -228,7 +225,7 @@ const initialFormat = "m-b";
     applyI18n(getAllCaches());
 
     initApp({
-      dom: { headerTeam, searchDetailContent, breadcrumbBar, teamWarning },
+      dom: { headerTeam, searchDetailContent, breadcrumbBar },
       state: { getCurrentTeam, getTeams, getSpriteMap, getSpeciesById, isTeamLegal, getFormat, getAllSpecies, getShinySpriteMap, setCurrentTeamId, getCurrentTeamId, setTeams, addTeam, formats: FORMATS },
       data: { moves, abilities, items: getCachedItems() },
       callbacks: {

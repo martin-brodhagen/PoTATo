@@ -139,6 +139,11 @@ button:hover {
   padding: 2px 3px;
 }
 
+#header-team.illegal {
+  background: rgba(196, 77, 77, 0.22);
+  border-color: rgba(196, 77, 77, 0.6);
+}
+
 #header-team:hover {
   border-color: var(--accent-gold);
 }
@@ -421,6 +426,13 @@ button:hover {
 }
 .tbr-team-action.active {
   border-color: var(--accent-gold);
+}
+.tbr-team-action:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.tbr-team-action:disabled:hover {
+  background: var(--bg-hover);
 }
 .tbr-import-export-panel {
   display: flex;
@@ -2126,17 +2138,6 @@ button:hover {
 .overlay-slot .slot-empty-label {
   color: var(--text-placeholder);
   font-weight: 400;
-}
-
-/* ── Team warning ⚠ ──────────────────────────────────────── */
-.team-warning {
-  color: var(--color-danger-soft);
-  cursor: help;
-  font-size: 0.85rem;
-}
-
-.team-warning.hidden {
-  display: none;
 }
 
 /* ── Breadcrumbs ─────────────────────────────────────────── */

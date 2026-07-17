@@ -1,4 +1,4 @@
-import { loadTeams, createEmptySlot } from './team-store.js';
+import { loadTeams, createEmptySlot, isTeamEmpty } from './team-store.js';
 
 const SPRITE_PATH = 'sprites/champions';
 
@@ -135,7 +135,16 @@ function parseShowdownText(text) {
 function findSpeciesByName(name, allSpecies) {
   if (!name) return null;
   const lower = name.trim().toLowerCase();
-  return allSpecies.find((s) => s.name && s.name.toLowerCase() === lower) || null;
+  const direct = allSpecies.find((s) => s.name && s.name.toLowerCase() === lower);
+  if (direct) return direct;
+  // Showdown's male-gendered species are stored as the un-suffixed base
+  // (e.g. "Basculegion" = male, "Basculegion-F" = female). Accept the
+  // community shorthand "Basculegion-M" by falling back to the base name.
+  if (lower.endsWith("-m")) {
+    const base = lower.slice(0, -2);
+    return allSpecies.find((s) => s.name && s.name.toLowerCase() === base) || null;
+  }
+  return null;
 }
 
 function findIdByName(name, dict) {
@@ -345,6 +354,7 @@ export class TeamBrowserWidget {
     this._onTeamsChange = () => this.render();
     this._onClick = (e) => {
       if (e.target.closest('[data-action="new-team"]')) {
+        if (this._teamById && Array.from(this._teamById.values()).some(isTeamEmpty)) return;
         if (this.onCreateTeam) this.onCreateTeam();
         return;
       }
@@ -365,6 +375,7 @@ export class TeamBrowserWidget {
       }
       if (e.target.closest('[data-action="duplicate"]')) {
         const team = this._teamById.get(teamId);
+        if (!team || isTeamEmpty(team)) return;
         if (team && this.onDuplicateTeam) this.onDuplicateTeam(team);
         return;
       }
@@ -644,7 +655,7 @@ export class TeamBrowserWidget {
       <div class="tbr-team-slots">
         <div class="tbr-team-slots-grid">${slotsHtml.join('')}</div>
         <div class="tbr-team-actions">
-          <button type="button" class="tbr-team-action" data-action="duplicate">Duplicate</button>
+          <button type="button" class="tbr-team-action" data-action="duplicate"${isTeamEmpty(team) ? " disabled" : ""}>Duplicate</button>
           <button type="button" class="tbr-team-action" data-action="import">Import</button>
           <button type="button" class="tbr-team-action" data-action="export">Export</button>
           <button type="button" class="tbr-team-action" data-action="edit">Edit</button>

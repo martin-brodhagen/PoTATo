@@ -15,7 +15,7 @@ import { DefensiveCoverageWidget } from "./defensive-coverage-widget.js";
 import { OffensiveCoverageWidget } from "./offensive-coverage-widget.js";
 
 export function initApp({ dom, state, callbacks, widgets, data }) {
-  const { headerTeam, searchDetailContent, breadcrumbBar, teamWarning } = dom;
+  const { headerTeam, searchDetailContent, breadcrumbBar } = dom;
   const {
     getCurrentTeam,
     getTeams,
@@ -36,6 +36,25 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
 
   function persistTeams() {
     saveTeams(getFormat(), getTeams());
+  }
+
+  // Create a new empty team, make it the current team, persist, and
+  // re-render the header. Shared by the team browser "New Team" button
+  // and the header click (when there is no team to navigate to).
+  function createNewTeam() {
+    const count = getTeams().length + 1;
+    const team = createTeam(`Team ${count}`, getFormat());
+    addTeam(team);
+    saveTeams(getFormat(), getTeams());
+    setCurrentTeamId(team.id);
+    saveLastTeamId(getFormat(), team.id);
+    widgets.headerView?.renderTeamBar();
+    widgets.headerView?.renderTeamLegality();
+    if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
+    widgets.defensiveCoverageWidget?.refresh();
+    widgets.offensiveCoverageWidget?.refresh();
+    onTeamChange?.();
+    return team;
   }
 
   function ensureTeamBrowser() {
@@ -72,7 +91,7 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
         setCurrentTeamId(team.id);
         saveLastTeamId(getFormat(), team.id);
         if (widgets.pokemonWidget) widgets.pokemonWidget.clear();
-        widgets.headerView?.renderTeamWarning();
+        widgets.headerView?.renderTeamLegality();
         widgets.headerView?.renderTeamBar();
         if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
         widgets.defensiveCoverageWidget?.refresh();
@@ -89,20 +108,14 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
           const nextId = updated[0]?.id ?? null;
           setCurrentTeamId(nextId);
           if (nextId) saveLastTeamId(team.format, nextId);
-          widgets.headerView?.renderTeamWarning();
+          widgets.headerView?.renderTeamLegality();
           widgets.headerView?.renderTeamBar();
           if (widgets.teamBuilderWidget) widgets.teamBuilderWidget.refresh();
         }
         onTeamChange?.();
       },
       onCreateTeam: () => {
-        const count = getTeams().length + 1;
-        const team = createTeam(`Team ${count}`, getFormat());
-        addTeam(team);
-        saveTeams(getFormat(), getTeams());
-        setCurrentTeamId(team.id);
-        saveLastTeamId(getFormat(), team.id);
-        onTeamChange?.();
+        const team = createNewTeam();
         const input = widgets.teamBrowserWidget?.opts.container.querySelector(
           `.tbr-team-item[data-team-id="${team.id}"] .tbr-team-name`,
         );
@@ -154,7 +167,7 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
       getTeam: getCurrentTeam,
       onSlotChange: () => {
         persistTeams();
-        widgets.headerView?.renderTeamWarning();
+        widgets.headerView?.renderTeamLegality();
         widgets.headerView?.renderTeamBar();
         widgets.defensiveCoverageWidget?.refresh();
         widgets.offensiveCoverageWidget?.refresh();
@@ -213,18 +226,18 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
 
   widgets.headerView = new HeaderView({
     headerTeam,
-    teamWarning,
     getTeam: getCurrentTeam,
     getSpriteMap,
     getSpeciesById,
     isTeamLegal,
+    onCreateTeam: createNewTeam,
     onNavigateToBuilder: () => {
       widgets.nav?.navigate("team-builder");
     },
   });
 
   widgets.headerView.renderTeamBar();
-  widgets.headerView.renderTeamWarning();
+  widgets.headerView.renderTeamLegality();
 
   widgets.breadcrumbView = new BreadcrumbView({
     container: breadcrumbBar,
@@ -290,7 +303,7 @@ export function initApp({ dom, state, callbacks, widgets, data }) {
     setCurrentTeamId(initialTeam.id);
   }
   widgets.headerView?.renderTeamBar();
-  widgets.headerView?.renderTeamWarning();
+  widgets.headerView?.renderTeamLegality();
   onTeamChange?.();
 }
 
