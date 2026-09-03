@@ -6735,8 +6735,8 @@
    "Infiltrator",
    "Competitive"
   ],
-  "forme": null,
-  "baseSpecies": null,
+  "forme": "F",
+  "baseSpecies": "Meowstic",
   "requiredItem": null,
   "heightm": 0.6,
   "weightkg": 8.5,
@@ -6763,7 +6763,7 @@
    "Trace"
   ],
   "forme": "F-Mega",
-  "baseSpecies": "Meowstic-F",
+  "baseSpecies": "Meowstic",
   "requiredItem": "Meowsticite",
   "heightm": 0.8,
   "weightkg": 10.1,

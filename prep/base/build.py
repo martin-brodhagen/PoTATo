@@ -478,7 +478,7 @@ def _move_effect_categories(entry: dict, mid: str) -> list[str]:
     if isinstance(boost, dict):
         tgt = entry.get("target", "")
         if tgt == "self" and any(v > 0 for v in boost.values()):
-            cats.append("self_buff")
+            cats.append("stat_increase_attacker")
         if tgt == "self" and any(v < 0 for v in boost.values()):
             cats.append("stat_drop_attacker")
 

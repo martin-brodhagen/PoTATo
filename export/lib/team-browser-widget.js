@@ -1,6 +1,7 @@
 import { loadTeams, createEmptySlot, isTeamEmpty } from './team-store.js';
+import { CHAMPIONS_SPRITE_PATH_SMALL } from './sprite-paths.js';
 
-const SPRITE_PATH = 'sprites/champions';
+const SPRITE_PATH = CHAMPIONS_SPRITE_PATH_SMALL;
 
 // ── Showdown import ────────────────────────────────────────────────────────
 

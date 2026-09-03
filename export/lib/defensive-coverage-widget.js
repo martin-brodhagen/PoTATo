@@ -1,3 +1,5 @@
+import { CHAMPIONS_SPRITE_PATH, CHAMPIONS_SPRITE_PATH_SMALL } from './sprite-paths.js';
+
 const TYPE_IMMUNITY_ABILITIES = {
   levitate: "Ground",
   flashfire: "Fire",
@@ -347,7 +349,7 @@ export class DefensiveCoverageWidget {
     let html = "";
     for (const s of matches) {
       const spriteFile = this.opts.spriteMap[s.id];
-      const spriteHtml = spriteFile ? `<img class="dc-search-sprite" src="sprites/champions/${spriteFile}">` : "";
+      const spriteHtml = spriteFile ? `<img class="dc-search-sprite" src="${CHAMPIONS_SPRITE_PATH_SMALL}/${spriteFile}">` : "";
       html += `<div class="dc-search-item" data-species-id="${s.id}">${spriteHtml}<span>${s.name}</span></div>`;
     }
     this.searchResults.innerHTML = html;
@@ -434,7 +436,7 @@ export class DefensiveCoverageWidget {
 
       if (sp) {
         const spriteFile = this.opts.spriteMap[sp.id];
-        const spriteHtml = spriteFile ? `<img class="dc-table-sprite" src="sprites/champions/${spriteFile}" alt="${sp.name}">` : "";
+        const spriteHtml = spriteFile ? `<img class="dc-table-sprite" src="${CHAMPIONS_SPRITE_PATH}/${spriteFile}" alt="${sp.name}">` : "";
         const type1 = sp.types[0] || "";
         const type2 = sp.types[1] || "";
         const typesHtml = `<span class="type-tag ${type1.toLowerCase()}">${type1}</span><span class="type-tag ${type2.toLowerCase()}">${type2}</span>`;

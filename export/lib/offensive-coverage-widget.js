@@ -1,5 +1,6 @@
 import { TYPES } from './types.js';
 import { getOffensiveEffectiveness, computeDefenderEffects, normalizeAbilityId } from './defensive-coverage-widget.js';
+import { CHAMPIONS_SPRITE_PATH, CHAMPIONS_SPRITE_PATH_SMALL } from './sprite-paths.js';
 
 const COSMETIC_KIND = 'cosmetic';
 
@@ -199,7 +200,7 @@ export class OffensiveCoverageWidget {
       if (spriteFile) {
         const img = document.createElement('img');
         img.className = 'oc-pokemon-sprite';
-        img.src = `sprites/champions/${spriteFile}`;
+        img.src = `${CHAMPIONS_SPRITE_PATH_SMALL}/${spriteFile}`;
         img.alt = sp.name;
         img.loading = 'lazy';
         btn.appendChild(img);
@@ -248,7 +249,7 @@ export class OffensiveCoverageWidget {
 
       const spriteFile = this.opts.spriteMap[sp.id];
       const spriteHtml = spriteFile
-        ? `<img class="oc-team-sprite" src="sprites/champions/${spriteFile}" alt="${sp.name}">`
+        ? `<img class="oc-team-sprite" src="${CHAMPIONS_SPRITE_PATH}/${spriteFile}" alt="${sp.name}">`
         : '';
       row.innerHTML = `<div class="oc-team-sprite-wrap">${spriteHtml}</div>`;
       row.addEventListener('click', () => {

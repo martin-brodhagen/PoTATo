@@ -16,6 +16,7 @@ npm run prep:moves:patch                 # re-apply move PP patches
 npm run prep:abilities:patch             # re-apply ability removals
 npm run prep:species:patch                 # re-synthesize cosmetic formes to data/base/pokedex.json
 npm run prep:species:base                  # re-apply per-species baseSpecies/forme overrides to data/base/pokedex.json
+npm run prep:sprites:48                  # regenerate 48px sprite set from sprites/champions/ (auto-runs in npm run prep)
 
 python3 scripts/export.py                 # build a portable ./export/ bundle (Netlify drag-and-drop)
 python3 scripts/export.py /tmp/bundle     # custom output dir; refuses to write into repo root
@@ -79,6 +80,7 @@ scripts/                          one-off asset pipelines (run manually, not via
   download-type-icons.py         # Game8 → sprites/types/
   build-sprite-map.py            # writes data/base/sprite-map.json
   build-shiny-sprite-map.py
+  build-sprites-48.py            # sprites/champions/ → sprites/champions-48/ (LANCZOS)
   export.py                      # builds portable ./export/ bundle for Netlify drag-and-drop
   _headers                       # Netlify headers file copied to export/ root during export
 data/
@@ -89,7 +91,15 @@ data/
   game8-descriptions.json        # cached Game8 description scrape
   game8-categories.json          # cached Game8 item-category scrape
   type-icons.json                # type → sprites/types/{name}[-small].png
+sprites/
+  champions/                     # 128×128 PNGs (Bulbagarden rips) — used for sprites rendered >48px
+  champions-48/                  # 48×48 PNGs (LANCZOS downscale of champions/) — used for sprites rendered ≤48px
+  shiny/                         # shiny 128×128 PNGs
+  items/                         # item icons
+  types/                         # type icons
+  categories/                    # move category icons (Physical/Special/Status)
 lib/
+  sprite-paths.js                # CHAMPIONS_SPRITE_PATH + CHAMPIONS_SPRITE_PATH_SMALL constants; widgets import whichever fits their render size
   data-loader.js                 # loads base once, derives per-format views in memory
   team-store.js                  # team persistence in localStorage (schema v2, with v1 migration)
                                 # exports: createTeam, duplicateTeam, loadTeams, saveTeams, removeTeam, loadLastTeamId, saveLastTeamId, migrateTeamsToV2, migrateFromLegacy
