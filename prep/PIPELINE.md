@@ -68,7 +68,7 @@ data/
 | 4 | `compute_legal_species` | `tier != "Illegal"` from `formats-data.ts` + format-config `species_overrides` |
 | 5 | `compute_legal_moves` | `isNonstandard` filter (allow `None`/`""`/`"Custom"`, exclude `Past`/`Unobtainable`/`CAP`/`LGPE`/`Gigantamax`/`"Future"`) |
 | 6 | `build_learnsets` | Mod merge + `baseSpecies`/`battleOnly`/mega fallbacks, filtered to legal moves × legal species |
-| 7 | `build_pokedex` | Emit `pokedex.json` (14 fields including `color`) |
+| 7 | `build_pokedex` | Emit `pokedex.json` (14 fields including `powerScores` placeholder) |
 | 8 | `build_moves` | Strip non-Champions flags, remap `target`→`range`, assign `effectCategories` |
 | 9 | `build_items` | Strip unused fields, keep `sprite` and `category` |
 | 10 | `build_abilities` | Build `effectCategories`; no `pokemon[]` (derived per format) |

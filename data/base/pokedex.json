@@ -15,6 +15,16 @@
    "spd": 85,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 95,
+   "specialType1": 91,
+   "specialType2": 78,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Snow Warning",
    "Soundproof"
@@ -25,7 +35,6 @@
   "heightm": 2.2,
   "weightkg": 135.5,
   "gender": null,
-  "color": "White",
   "moveCount": 65
  },
  {
@@ -44,6 +53,16 @@
    "spd": 105,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 95,
+   "specialType1": 88,
+   "specialType2": 75,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Snow Warning"
   ],
@@ -53,7 +72,6 @@
   "heightm": 2.7,
   "weightkg": 185,
   "gender": null,
-  "color": "White",
   "moveCount": 65
  },
  {
@@ -71,6 +89,16 @@
    "spd": 60,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 83,
+   "physicalType2": 0,
+   "specialType1": 50,
+   "specialType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 20,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Pressure",
    "Super Luck",
@@ -82,7 +110,6 @@
   "heightm": 1.2,
   "weightkg": 47,
   "gender": null,
-  "color": "White",
   "moveCount": 71
  },
  {
@@ -100,6 +127,16 @@
    "spd": 60,
    "spe": 115
   },
+  "powerScores": {
+   "physicalType1": 72,
+   "physicalType2": 0,
+   "specialType1": 51,
+   "specialType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 20,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Magic Bounce"
   ],
@@ -109,7 +146,6 @@
   "heightm": 1.2,
   "weightkg": 49,
   "gender": null,
-  "color": "White",
   "moveCount": 71
  },
  {
@@ -128,6 +164,16 @@
    "spd": 140,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 40,
+   "physicalType2": 55,
+   "specialType1": 70,
+   "specialType2": 40,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 75,
+   "specialDefense": 58,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Stance Change"
   ],
@@ -137,7 +183,6 @@
   "heightm": 1.7,
   "weightkg": 53,
   "gender": null,
-  "color": "Brown",
   "moveCount": 45
  },
  {
@@ -156,6 +201,16 @@
    "spd": 50,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 102,
+   "specialType1": 128,
+   "specialType2": 75,
+   "physicalDefense": 6,
+   "physicalDefenseFull": 53,
+   "specialDefense": 6,
+   "specialDefenseFull": 53
+  },
   "abilities": [
    "Stance Change"
   ],
@@ -165,7 +220,6 @@
   "heightm": 1.7,
   "weightkg": 53,
   "gender": null,
-  "color": "Brown",
   "moveCount": 45
  },
  {
@@ -184,6 +238,16 @@
    "spd": 75,
    "spe": 130
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 105,
+   "specialType1": 35,
+   "specialType2": 59,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Rock Head",
    "Pressure",
@@ -195,7 +259,6 @@
   "heightm": 1.8,
   "weightkg": 59,
   "gender": null,
-  "color": "Purple",
   "moveCount": 58
  },
  {
@@ -214,6 +277,16 @@
    "spd": 95,
    "spe": 150
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 97,
+   "specialType1": 28,
+   "specialType2": 51,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 68,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Tough Claws"
   ],
@@ -223,7 +296,6 @@
   "heightm": 2.1,
   "weightkg": 79,
   "gender": null,
-  "color": "Purple",
   "moveCount": 58
  },
  {
@@ -242,6 +314,16 @@
    "spd": 60,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 101,
+   "physicalType2": 117,
+   "specialType1": 75,
+   "specialType2": 35,
+   "physicalDefense": 69,
+   "physicalDefenseFull": 80,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Sturdy",
    "Rock Head",
@@ -253,7 +335,6 @@
   "heightm": 2.1,
   "weightkg": 360,
   "gender": null,
-  "color": "Gray",
   "moveCount": 83
  },
  {
@@ -271,6 +352,16 @@
    "spd": 80,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 0,
+   "specialType1": 58,
+   "specialType2": 0,
+   "physicalDefense": 75,
+   "physicalDefenseFull": 84,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Filter"
   ],
@@ -280,7 +371,6 @@
   "heightm": 2.2,
   "weightkg": 395,
   "gender": null,
-  "color": "Gray",
   "moveCount": 83
  },
  {
@@ -298,6 +388,16 @@
    "spd": 95,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 40,
+   "physicalType2": 0,
+   "specialType1": 109,
+   "specialType2": 0,
+   "physicalDefense": -5,
+   "physicalDefenseFull": 48,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Synchronize",
    "Inner Focus",
@@ -309,7 +409,6 @@
   "heightm": 1.5,
   "weightkg": 48,
   "gender": null,
-  "color": "Brown",
   "moveCount": 60
  },
  {
@@ -327,6 +426,16 @@
    "spd": 105,
    "spe": 150
   },
+  "powerScores": {
+   "physicalType1": 31,
+   "physicalType2": 0,
+   "specialType1": 100,
+   "specialType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 57,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Trace"
   ],
@@ -336,7 +445,6 @@
   "heightm": 1.2,
   "weightkg": 48,
   "gender": null,
-  "color": "Brown",
   "moveCount": 60
  },
  {
@@ -354,6 +462,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -364,7 +482,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "White",
   "moveCount": 49
  },
  {
@@ -382,6 +499,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -392,7 +519,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "Yellow",
   "moveCount": 49
  },
  {
@@ -410,6 +536,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -420,7 +556,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "Yellow",
   "moveCount": 49
  },
  {
@@ -438,6 +573,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -448,7 +593,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "Green",
   "moveCount": 49
  },
  {
@@ -466,6 +610,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -476,7 +630,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "Blue",
   "moveCount": 49
  },
  {
@@ -494,6 +647,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -504,7 +667,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "Yellow",
   "moveCount": 49
  },
  {
@@ -522,6 +684,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -532,7 +704,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "Pink",
   "moveCount": 49
  },
  {
@@ -550,6 +721,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -560,7 +741,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "Yellow",
   "moveCount": 49
  },
  {
@@ -578,6 +758,16 @@
    "spd": 121,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -588,7 +778,6 @@
   "heightm": 0.3,
   "weightkg": 0.5,
   "gender": "F",
-  "color": "White",
   "moveCount": 49
  },
  {
@@ -607,6 +796,16 @@
    "spd": 105,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 59,
+   "physicalType2": 83,
+   "specialType1": 78,
+   "specialType2": 66,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Natural Cure",
    "Cloud Nine"
@@ -617,7 +816,6 @@
   "heightm": 1.1,
   "weightkg": 20.6,
   "gender": null,
-  "color": "Blue",
   "moveCount": 65
  },
  {
@@ -636,6 +834,16 @@
    "spd": 105,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 61,
+   "physicalType2": 86,
+   "specialType1": 78,
+   "specialType2": 58,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Pixilate"
   ],
@@ -645,7 +853,6 @@
   "heightm": 1.5,
   "weightkg": 20.6,
   "gender": null,
-  "color": "Blue",
   "moveCount": 65
  },
  {
@@ -663,6 +870,16 @@
    "spd": 90,
    "spe": 55
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 0,
+   "specialType1": 97,
+   "specialType2": 0,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Static",
    "Plus"
@@ -673,7 +890,6 @@
   "heightm": 1.4,
   "weightkg": 61.5,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 67
  },
  {
@@ -692,6 +908,16 @@
    "spd": 110,
    "spe": 45
   },
+  "powerScores": {
+   "physicalType1": 55,
+   "physicalType2": 34,
+   "specialType1": 96,
+   "specialType2": 69,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Mold Breaker"
   ],
@@ -701,7 +927,6 @@
   "heightm": 1.4,
   "weightkg": 61.5,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 67
  },
  {
@@ -720,6 +945,16 @@
    "spd": 90,
    "spe": 90
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 74,
+   "specialType1": 59,
+   "specialType2": 40,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 56,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Vital Spirit",
    "Inner Focus",
@@ -731,7 +966,6 @@
   "heightm": 1.2,
   "weightkg": 56,
   "gender": null,
-  "color": "Gray",
   "moveCount": 75
  },
  {
@@ -750,6 +984,16 @@
    "spd": 80,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 40,
+   "specialType1": 94,
+   "specialType2": 94,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Ripen",
    "Gluttony",
@@ -761,7 +1005,6 @@
   "heightm": 0.4,
   "weightkg": 13,
   "gender": null,
-  "color": "Green",
   "moveCount": 51
  },
  {
@@ -780,6 +1023,16 @@
    "spd": 132,
    "spe": 42
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 48,
+   "specialType1": 55,
+   "specialType2": 46,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 68,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Water Bubble",
    "Water Absorb"
@@ -790,7 +1043,6 @@
   "heightm": 1.8,
   "weightkg": 82,
   "gender": null,
-  "color": "Green",
   "moveCount": 51
  },
  {
@@ -808,6 +1060,16 @@
    "spd": 79,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 0,
+   "specialType1": 67,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Intimidate",
    "Shed Skin",
@@ -819,7 +1081,6 @@
   "heightm": 3.5,
   "weightkg": 65,
   "gender": null,
-  "color": "Purple",
   "moveCount": 70
  },
  {
@@ -837,6 +1098,16 @@
    "spd": 80,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 0,
+   "specialType1": 94,
+   "specialType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Intimidate",
    "Flash Fire",
@@ -848,7 +1119,6 @@
   "heightm": 1.9,
   "weightkg": 155,
   "gender": null,
-  "color": "Brown",
   "moveCount": 57
  },
  {
@@ -867,6 +1137,16 @@
    "spd": 80,
    "spe": 90
   },
+  "powerScores": {
+   "physicalType1": 97,
+   "physicalType2": 120,
+   "specialType1": 93,
+   "specialType2": 58,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Intimidate",
    "Flash Fire",
@@ -878,7 +1158,6 @@
   "heightm": 2,
   "weightkg": 168,
   "gender": null,
-  "color": "Brown",
   "moveCount": 64
  },
  {
@@ -896,6 +1175,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -905,7 +1194,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -923,6 +1211,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -932,7 +1230,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -950,6 +1247,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -959,7 +1266,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -977,6 +1283,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -986,7 +1302,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1004,6 +1319,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1013,7 +1338,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1031,6 +1355,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1040,7 +1374,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1058,6 +1391,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1067,7 +1410,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1085,6 +1427,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1094,7 +1446,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1112,6 +1463,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1121,7 +1482,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1139,6 +1499,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1148,7 +1518,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1166,6 +1535,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1175,7 +1554,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1193,6 +1571,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1202,7 +1590,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1220,6 +1607,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1229,7 +1626,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1247,6 +1643,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1256,7 +1662,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1274,6 +1679,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1283,7 +1698,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1301,6 +1715,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1310,7 +1734,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1328,6 +1751,16 @@
    "spd": 120,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Multitype"
   ],
@@ -1337,7 +1770,6 @@
   "heightm": 3.2,
   "weightkg": 320,
   "gender": "N",
-  "color": "White",
   "moveCount": 0
  },
  {
@@ -1356,6 +1788,16 @@
    "spd": 65,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 62,
+   "specialType1": 118,
+   "specialType2": 110,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Stamina",
    "Sturdy",
@@ -1367,7 +1809,6 @@
   "heightm": 2,
   "weightkg": 60,
   "gender": null,
-  "color": "White",
   "moveCount": 51
  },
  {
@@ -1386,6 +1827,16 @@
    "spd": 70,
    "spe": 40
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 55,
+   "specialType1": 50,
+   "specialType2": 52,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Swarm",
    "Insomnia",
@@ -1397,7 +1848,6 @@
   "heightm": 1.1,
   "weightkg": 33.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 64
  },
  {
@@ -1416,6 +1866,16 @@
    "spd": 80,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 0,
+   "specialType1": 110,
+   "specialType2": 78,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Flash Fire",
    "Weak Armor"
@@ -1426,7 +1886,6 @@
   "heightm": 1.5,
   "weightkg": 85,
   "gender": null,
-  "color": "Red",
   "moveCount": 55
  },
  {
@@ -1444,6 +1903,16 @@
    "spd": 89,
    "spe": 29
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 74,
+   "specialType2": 0,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 69,
+   "specialDefense": 54,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Healer",
    "Aroma Veil"
@@ -1454,7 +1923,6 @@
   "heightm": 0.8,
   "weightkg": 15.5,
   "gender": null,
-  "color": "Pink",
   "moveCount": 48
  },
  {
@@ -1472,6 +1940,16 @@
    "spd": 86,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 0,
+   "specialType1": 50,
+   "specialType2": 0,
+   "physicalDefense": 53,
+   "physicalDefenseFull": 72,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Healer",
    "Regenerator",
@@ -1483,7 +1961,6 @@
   "heightm": 1.1,
   "weightkg": 31,
   "gender": null,
-  "color": "Pink",
   "moveCount": 69
  },
  {
@@ -1502,6 +1979,16 @@
    "spd": 126,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 58,
+   "physicalType2": 0,
+   "specialType1": 45,
+   "specialType2": 40,
+   "physicalDefense": 66,
+   "physicalDefenseFull": 78,
+   "specialDefense": 66,
+   "specialDefenseFull": 78
+  },
   "abilities": [
    "Healer"
   ],
@@ -1511,7 +1998,6 @@
   "heightm": 1.5,
   "weightkg": 32,
   "gender": null,
-  "color": "White",
   "moveCount": 69
  },
  {
@@ -1530,6 +2016,16 @@
    "spd": 92,
    "spe": 58
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 80,
+   "specialType1": 44,
+   "specialType2": 81,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 60,
+   "specialDefenseFull": 76
+  },
   "abilities": [
    "Refrigerate",
    "Snow Warning"
@@ -1540,7 +2036,6 @@
   "heightm": 2.7,
   "weightkg": 225,
   "gender": null,
-  "color": "Blue",
   "moveCount": 56
  },
  {
@@ -1558,6 +2053,16 @@
    "spd": 46,
    "spe": 28
   },
+  "powerScores": {
+   "physicalType1": 115,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 74,
+   "physicalDefenseFull": 83,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Own Tempo",
    "Ice Body",
@@ -1569,7 +2074,6 @@
   "heightm": 2,
   "weightkg": 505,
   "gender": null,
-  "color": "Blue",
   "moveCount": 49
  },
  {
@@ -1588,6 +2092,16 @@
    "spd": 36,
    "spe": 38
   },
+  "powerScores": {
+   "physicalType1": 115,
+   "physicalType2": 115,
+   "specialType1": 46,
+   "specialType2": 27,
+   "physicalDefense": 74,
+   "physicalDefenseFull": 83,
+   "specialDefense": 7,
+   "specialDefenseFull": 54
+  },
   "abilities": [
    "Strong Jaw",
    "Ice Body",
@@ -1599,7 +2113,6 @@
   "heightm": 1.4,
   "weightkg": 262.4,
   "gender": null,
-  "color": "Blue",
   "moveCount": 49
  },
  {
@@ -1618,6 +2131,16 @@
    "spd": 80,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 93,
+   "specialType1": 59,
+   "specialType2": 55,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 71,
+   "specialDefense": 49,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Thick Fat",
    "Huge Power",
@@ -1629,7 +2152,6 @@
   "heightm": 0.8,
   "weightkg": 28.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 66
  },
  {
@@ -1647,6 +2169,16 @@
    "spd": 63,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 54,
+   "specialType2": 0,
+   "physicalDefense": 25,
+   "physicalDefenseFull": 60,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Insomnia",
    "Frisk",
@@ -1658,7 +2190,6 @@
   "heightm": 1.1,
   "weightkg": 12.5,
   "gender": null,
-  "color": "Black",
   "moveCount": 66
  },
  {
@@ -1676,6 +2207,16 @@
    "spd": 83,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 88,
+   "physicalType2": 0,
+   "specialType1": 43,
+   "specialType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 62,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Prankster"
   ],
@@ -1685,7 +2226,6 @@
   "heightm": 1.2,
   "weightkg": 13,
   "gender": null,
-  "color": "Black",
   "moveCount": 66
  },
  {
@@ -1704,6 +2244,16 @@
    "spd": 86,
    "spe": 68
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 85,
+   "specialType1": 32,
+   "specialType2": 46,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Tough Claws",
    "Sniper",
@@ -1715,7 +2265,6 @@
   "heightm": 1.3,
   "weightkg": 96,
   "gender": null,
-  "color": "Brown",
   "moveCount": 71
  },
  {
@@ -1734,6 +2283,16 @@
    "spd": 106,
    "spe": 88
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 110,
+   "specialType1": 27,
+   "specialType2": 52,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Tough Claws"
   ],
@@ -1743,7 +2302,6 @@
   "heightm": 2.2,
   "weightkg": 100,
   "gender": null,
-  "color": "Brown",
   "moveCount": 71
  },
  {
@@ -1762,6 +2320,16 @@
    "spd": 75,
    "spe": 78
   },
+  "powerScores": {
+   "physicalType1": 127,
+   "physicalType2": 96,
+   "specialType1": 96,
+   "specialType2": 70,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 70,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Swift Swim",
    "Adaptability",
@@ -1773,7 +2341,6 @@
   "heightm": 3,
   "weightkg": 110,
   "gender": "M",
-  "color": "Green",
   "moveCount": 49
  },
  {
@@ -1792,6 +2359,16 @@
    "spd": 75,
    "spe": 78
   },
+  "powerScores": {
+   "physicalType1": 111,
+   "physicalType2": 85,
+   "specialType1": 109,
+   "specialType2": 80,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 70,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Swift Swim",
    "Adaptability",
@@ -1803,7 +2380,6 @@
   "heightm": 3,
   "weightkg": 110,
   "gender": "F",
-  "color": "Green",
   "moveCount": 49
  },
  {
@@ -1821,6 +2397,16 @@
    "spd": 55,
    "spe": 98
   },
+  "powerScores": {
+   "physicalType1": 111,
+   "physicalType2": 0,
+   "specialType1": 96,
+   "specialType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  },
   "abilities": [
    "Rock Head",
    "Adaptability",
@@ -1832,7 +2418,6 @@
   "heightm": 1,
   "weightkg": 18,
   "gender": null,
-  "color": "Green",
   "moveCount": 55
  },
  {
@@ -1850,6 +2435,16 @@
    "spd": 55,
    "spe": 98
   },
+  "powerScores": {
+   "physicalType1": 111,
+   "physicalType2": 0,
+   "specialType1": 96,
+   "specialType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  },
   "abilities": [
    "Rattled",
    "Adaptability",
@@ -1861,7 +2456,6 @@
   "heightm": 1,
   "weightkg": 18,
   "gender": null,
-  "color": "Green",
   "moveCount": 39
  },
  {
@@ -1880,6 +2474,16 @@
    "spd": 138,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 66,
+   "specialType1": 40,
+   "specialType2": 67,
+   "physicalDefense": 65,
+   "physicalDefenseFull": 78,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Sturdy",
    "Soundproof"
@@ -1890,7 +2494,6 @@
   "heightm": 1.3,
   "weightkg": 149.5,
   "gender": null,
-  "color": "Gray",
   "moveCount": 68
  },
  {
@@ -1908,6 +2511,16 @@
    "spd": 80,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 0,
+   "specialType1": 66,
+   "specialType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Snow Cloak",
    "Slush Rush",
@@ -1919,7 +2532,6 @@
   "heightm": 2.6,
   "weightkg": 260,
   "gender": null,
-  "color": "White",
   "moveCount": 75
  },
  {
@@ -1938,6 +2550,16 @@
    "spd": 80,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 55,
+   "specialType1": 42,
+   "specialType2": 42,
+   "physicalDefense": -5,
+   "physicalDefenseFull": 49,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Swarm",
    "Sniper"
@@ -1948,7 +2570,6 @@
   "heightm": 1,
   "weightkg": 29.5,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 53
  },
  {
@@ -1967,6 +2588,16 @@
    "spd": 80,
    "spe": 145
   },
+  "powerScores": {
+   "physicalType1": 140,
+   "physicalType2": 82,
+   "specialType1": 32,
+   "specialType2": 32,
+   "physicalDefense": -5,
+   "physicalDefenseFull": 49,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Adaptability"
   ],
@@ -1976,7 +2607,6 @@
   "heightm": 1.4,
   "weightkg": 40.5,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 53
  },
  {
@@ -1994,6 +2624,16 @@
    "spd": 83,
    "spe": 45
   },
+  "powerScores": {
+   "physicalType1": 55,
+   "physicalType2": 0,
+   "specialType1": 89,
+   "specialType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Electromorphosis",
    "Static",
@@ -2005,7 +2645,6 @@
   "heightm": 1.2,
   "weightkg": 113,
   "gender": null,
-  "color": "Green",
   "moveCount": 39
  },
  {
@@ -2023,6 +2662,16 @@
    "spd": 105,
    "spe": 78
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 0,
+   "specialType1": 98,
+   "specialType2": 0,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Torrent",
    "Rain Dish"
@@ -2033,7 +2682,6 @@
   "heightm": 1.6,
   "weightkg": 85.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 73
  },
  {
@@ -2051,6 +2699,16 @@
    "spd": 115,
    "spe": 78
   },
+  "powerScores": {
+   "physicalType1": 69,
+   "physicalType2": 0,
+   "specialType1": 103,
+   "specialType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Mega Launcher"
   ],
@@ -2060,7 +2718,6 @@
   "heightm": 1.6,
   "weightkg": 101.1,
   "gender": null,
-  "color": "Blue",
   "moveCount": 73
  },
  {
@@ -2079,6 +2736,16 @@
    "spd": 70,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 98,
+   "physicalType2": 124,
+   "specialType1": 101,
+   "specialType2": 93,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 65,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Blaze",
    "Speed Boost"
@@ -2089,7 +2756,6 @@
   "heightm": 1.9,
   "weightkg": 52,
   "gender": null,
-  "color": "Red",
   "moveCount": 78
  },
  {
@@ -2108,6 +2774,16 @@
    "spd": 80,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 94,
+   "physicalType2": 117,
+   "specialType1": 88,
+   "specialType2": 81,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Speed Boost"
   ],
@@ -2117,7 +2793,6 @@
   "heightm": 1.9,
   "weightkg": 52,
   "gender": null,
-  "color": "Red",
   "moveCount": 78
  },
  {
@@ -2136,6 +2811,16 @@
    "spd": 75,
    "spe": 40
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 74,
+   "specialType1": 113,
+   "specialType2": 70,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Magma Armor",
    "Solid Rock",
@@ -2147,7 +2832,6 @@
   "heightm": 1.9,
   "weightkg": 220,
   "gender": null,
-  "color": "Red",
   "moveCount": 67
  },
  {
@@ -2166,6 +2850,16 @@
    "spd": 105,
    "spe": 20
   },
+  "powerScores": {
+   "physicalType1": 76,
+   "physicalType2": 64,
+   "specialType1": 109,
+   "specialType2": 66,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Sheer Force"
   ],
@@ -2175,7 +2869,6 @@
   "heightm": 2.5,
   "weightkg": 320.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 67
  },
  {
@@ -2193,6 +2886,16 @@
    "spd": 70,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 0,
+   "specialType1": 36,
+   "specialType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Forecast"
   ],
@@ -2202,7 +2905,6 @@
   "heightm": 0.3,
   "weightkg": 0.8,
   "gender": null,
-  "color": "Gray",
   "moveCount": 37
  },
  {
@@ -2220,6 +2922,16 @@
    "spd": 70,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 66,
+   "specialType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Forecast"
   ],
@@ -2229,7 +2941,6 @@
   "heightm": 0.3,
   "weightkg": 0.8,
   "gender": null,
-  "color": "Blue",
   "moveCount": 37
  },
  {
@@ -2247,6 +2958,16 @@
    "spd": 70,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 0,
+   "specialType1": 66,
+   "specialType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Forecast"
   ],
@@ -2256,7 +2977,6 @@
   "heightm": 0.3,
   "weightkg": 0.8,
   "gender": null,
-  "color": "White",
   "moveCount": 37
  },
  {
@@ -2274,6 +2994,16 @@
    "spd": 70,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 66,
+   "specialType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Forecast"
   ],
@@ -2283,7 +3013,6 @@
   "heightm": 0.3,
   "weightkg": 0.8,
   "gender": null,
-  "color": "Red",
   "moveCount": 37
  },
  {
@@ -2302,6 +3031,16 @@
    "spd": 100,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 102,
+   "physicalType2": 93,
+   "specialType1": 71,
+   "specialType2": 44,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Flash Fire",
    "Weak Armor"
@@ -2312,7 +3051,6 @@
   "heightm": 1.6,
   "weightkg": 62,
   "gender": null,
-  "color": "Purple",
   "moveCount": 55
  },
  {
@@ -2331,6 +3069,16 @@
    "spd": 90,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 58,
+   "physicalType2": 62,
+   "specialType1": 78,
+   "specialType2": 122,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Flash Fire",
    "Flame Body",
@@ -2342,7 +3090,6 @@
   "heightm": 1,
   "weightkg": 34.3,
   "gender": null,
-  "color": "Black",
   "moveCount": 54
  },
  {
@@ -2361,6 +3108,16 @@
    "spd": 110,
    "spe": 90
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 57,
+   "specialType1": 67,
+   "specialType2": 109,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Infiltrator"
   ],
@@ -2370,7 +3127,6 @@
   "heightm": 2.5,
   "weightkg": 69.6,
   "gender": null,
-  "color": "Black",
   "moveCount": 54
  },
  {
@@ -2389,6 +3145,16 @@
    "spd": 85,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 59,
+   "specialType1": 101,
+   "specialType2": 85,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Blaze",
    "Solar Power"
@@ -2399,7 +3165,6 @@
   "heightm": 1.7,
   "weightkg": 90.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 72
  },
  {
@@ -2418,6 +3183,16 @@
    "spd": 85,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 105,
+   "physicalType2": 95,
+   "specialType1": 88,
+   "specialType2": 58,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Tough Claws"
   ],
@@ -2427,7 +3202,6 @@
   "heightm": 1.7,
   "weightkg": 110.5,
   "gender": null,
-  "color": "Black",
   "moveCount": 72
  },
  {
@@ -2446,6 +3220,16 @@
    "spd": 115,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 70,
+   "physicalType2": 52,
+   "specialType1": 102,
+   "specialType2": 87,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 57,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Drought"
   ],
@@ -2455,7 +3239,6 @@
   "heightm": 1.7,
   "weightkg": 100.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 72
  },
  {
@@ -2473,6 +3256,16 @@
    "spd": 78,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 0,
+   "specialType1": 81,
+   "specialType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Flower Gift"
   ],
@@ -2482,7 +3275,6 @@
   "heightm": 0.5,
   "weightkg": 9.3,
   "gender": null,
-  "color": "Pink",
   "moveCount": 39
  },
  {
@@ -2501,6 +3293,16 @@
    "spd": 75,
    "spe": 64
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 114,
+   "specialType1": 79,
+   "specialType2": 74,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 76,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Overgrow",
    "Bulletproof"
@@ -2511,7 +3313,6 @@
   "heightm": 1.6,
   "weightkg": 90,
   "gender": null,
-  "color": "Green",
   "moveCount": 87
  },
  {
@@ -2530,6 +3331,16 @@
    "spd": 115,
    "spe": 44
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 105,
+   "specialType1": 61,
+   "specialType2": 57,
+   "physicalDefense": 72,
+   "physicalDefenseFull": 82,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Bulletproof"
   ],
@@ -2539,7 +3350,6 @@
   "heightm": 1.6,
   "weightkg": 90,
   "gender": null,
-  "color": "Green",
   "moveCount": 87
  },
  {
@@ -2557,6 +3367,16 @@
    "spd": 90,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 40,
+   "physicalType2": 0,
+   "specialType1": 85,
+   "specialType2": 0,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Levitate"
   ],
@@ -2566,7 +3386,6 @@
   "heightm": 0.6,
   "weightkg": 1,
   "gender": null,
-  "color": "Blue",
   "moveCount": 65
  },
  {
@@ -2585,6 +3404,16 @@
    "spd": 120,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 31,
+   "physicalType2": 0,
+   "specialType1": 84,
+   "specialType2": 57,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Levitate"
   ],
@@ -2594,7 +3423,6 @@
   "heightm": 1.2,
   "weightkg": 8,
   "gender": null,
-  "color": "Blue",
   "moveCount": 65
  },
  {
@@ -2612,6 +3440,16 @@
    "spd": 89,
    "spe": 59
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 0,
+   "specialType1": 91,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Mega Launcher"
   ],
@@ -2621,7 +3459,6 @@
   "heightm": 1.3,
   "weightkg": 35.3,
   "gender": null,
-  "color": "Blue",
   "moveCount": 52
  },
  {
@@ -2639,6 +3476,16 @@
    "spd": 90,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 54,
+   "physicalType2": 0,
+   "specialType1": 71,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Cute Charm",
    "Magic Guard",
@@ -2650,7 +3497,6 @@
   "heightm": 1.3,
   "weightkg": 40,
   "gender": null,
-  "color": "Pink",
   "moveCount": 91
  },
  {
@@ -2669,6 +3515,16 @@
    "spd": 110,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 45,
+   "physicalType2": 43,
+   "specialType1": 70,
+   "specialType2": 52,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Magic Bounce"
   ],
@@ -2678,7 +3534,6 @@
   "heightm": 1.7,
   "weightkg": 42.3,
   "gender": null,
-  "color": "Pink",
   "moveCount": 91
  },
  {
@@ -2696,6 +3551,16 @@
    "spd": 105,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 55,
+   "physicalType2": 0,
+   "specialType1": 58,
+   "specialType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Mummy"
   ],
@@ -2705,7 +3570,6 @@
   "heightm": 1.7,
   "weightkg": 76.5,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 54
  },
  {
@@ -2723,6 +3587,16 @@
    "spd": 65,
    "spe": 45
   },
+  "powerScores": {
+   "physicalType1": 165,
+   "physicalType2": 0,
+   "specialType1": 62,
+   "specialType2": 0,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Guts",
    "Sheer Force",
@@ -2734,7 +3608,6 @@
   "heightm": 1.4,
   "weightkg": 87,
   "gender": null,
-  "color": "Brown",
   "moveCount": 61
  },
  {
@@ -2753,6 +3626,16 @@
    "spd": 85,
    "spe": 67
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 54,
+   "specialType1": 55,
+   "specialType2": 71,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Pressure",
    "Unnerve",
@@ -2764,7 +3647,6 @@
   "heightm": 2.2,
   "weightkg": 75,
   "gender": null,
-  "color": "Purple",
   "moveCount": 55
  },
  {
@@ -2783,6 +3665,16 @@
    "spd": 67,
    "spe": 43
   },
+  "powerScores": {
+   "physicalType1": 158,
+   "physicalType2": 120,
+   "specialType1": 67,
+   "specialType2": 62,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 41,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Hyper Cutter",
    "Iron Fist",
@@ -2794,7 +3686,6 @@
   "heightm": 1.7,
   "weightkg": 180,
   "gender": null,
-  "color": "White",
   "moveCount": 63
  },
  {
@@ -2813,6 +3704,16 @@
    "spd": 107,
    "spe": 33
   },
+  "powerScores": {
+   "physicalType1": 138,
+   "physicalType2": 105,
+   "specialType1": 52,
+   "specialType2": 48,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Iron Fist"
   ],
@@ -2822,7 +3723,6 @@
   "heightm": 2.6,
   "weightkg": 252.8,
   "gender": null,
-  "color": "White",
   "moveCount": 63
  },
  {
@@ -2841,6 +3741,16 @@
    "spd": 55,
    "spe": 135
   },
+  "powerScores": {
+   "physicalType1": 87,
+   "physicalType2": 122,
+   "specialType1": 44,
+   "specialType2": 52,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Zen Mode"
   ],
@@ -2850,7 +3760,6 @@
   "heightm": 1.7,
   "weightkg": 120,
   "gender": null,
-  "color": "White",
   "moveCount": 61
  },
  {
@@ -2869,6 +3778,16 @@
    "spd": 105,
    "spe": 55
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 32,
+   "specialType1": 120,
+   "specialType2": 110,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Zen Mode"
   ],
@@ -2878,7 +3797,6 @@
   "heightm": 1.3,
   "weightkg": 92.9,
   "gender": null,
-  "color": "Blue",
   "moveCount": 71
  },
  {
@@ -2897,6 +3815,16 @@
    "spd": 100,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 85,
+   "specialType1": 94,
+   "specialType2": 59,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Overgrow",
    "Long Reach"
@@ -2907,7 +3835,6 @@
   "heightm": 1.6,
   "weightkg": 36.6,
   "gender": null,
-  "color": "Brown",
   "moveCount": 66
  },
  {
@@ -2926,6 +3853,16 @@
    "spd": 95,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 118,
+   "specialType1": 93,
+   "specialType2": 85,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 69,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Overgrow",
    "Scrappy"
@@ -2936,7 +3873,6 @@
   "heightm": 1.6,
   "weightkg": 37,
   "gender": null,
-  "color": "Brown",
   "moveCount": 66
  },
  {
@@ -2955,6 +3891,16 @@
    "spd": 67,
    "spe": 101
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 48,
+   "specialType1": 71,
+   "specialType2": 52,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 57,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  },
   "abilities": [
    "Cheek Pouch",
    "Pickup",
@@ -2966,7 +3912,6 @@
   "heightm": 0.2,
   "weightkg": 2.2,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 50
  },
  {
@@ -2985,6 +3930,16 @@
    "spd": 100,
    "spe": 104
   },
+  "powerScores": {
+   "physicalType1": 71,
+   "physicalType2": 48,
+   "specialType1": 105,
+   "specialType2": 97,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Blaze",
    "Magician"
@@ -2995,7 +3950,6 @@
   "heightm": 1.5,
   "weightkg": 39,
   "gender": null,
-  "color": "Red",
   "moveCount": 72
  },
  {
@@ -3014,6 +3968,16 @@
    "spd": 125,
    "spe": 134
   },
+  "powerScores": {
+   "physicalType1": 55,
+   "physicalType2": 37,
+   "specialType1": 102,
+   "specialType2": 94,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Levitate"
   ],
@@ -3023,7 +3987,6 @@
   "heightm": 1.5,
   "weightkg": 39,
   "gender": null,
-  "color": "Red",
   "moveCount": 72
  },
  {
@@ -3042,6 +4005,16 @@
    "spd": 77,
    "spe": 78
   },
+  "powerScores": {
+   "physicalType1": 127,
+   "physicalType2": 104,
+   "specialType1": 46,
+   "specialType2": 46,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Pickup",
    "Cheek Pouch",
@@ -3053,7 +4026,6 @@
   "heightm": 1,
   "weightkg": 42.4,
   "gender": null,
-  "color": "Brown",
   "moveCount": 58
  },
  {
@@ -3071,6 +4043,16 @@
    "spd": 48,
    "spe": 48
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": -6,
+   "physicalDefenseFull": 48,
+   "specialDefense": -6,
+   "specialDefenseFull": 48
+  },
   "abilities": [
    "Limber",
    "Imposter"
@@ -3081,7 +4063,6 @@
   "heightm": 0.3,
   "weightkg": 4,
   "gender": "N",
-  "color": "Purple",
   "moveCount": 1
  },
  {
@@ -3100,6 +4081,16 @@
    "spd": 123,
    "spe": 44
   },
+  "powerScores": {
+   "physicalType1": 98,
+   "physicalType2": 115,
+   "specialType1": 93,
+   "specialType2": 124,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Poison Point",
    "Poison Touch",
@@ -3111,7 +4102,6 @@
   "heightm": 1.8,
   "weightkg": 81.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 52
  },
  {
@@ -3130,6 +4120,16 @@
    "spd": 163,
    "spe": 44
   },
+  "powerScores": {
+   "physicalType1": 61,
+   "physicalType2": 75,
+   "specialType1": 66,
+   "specialType2": 88,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  },
   "abilities": [
    "Regenerator"
   ],
@@ -3139,7 +4139,6 @@
   "heightm": 2.1,
   "weightkg": 100.3,
   "gender": null,
-  "color": "Brown",
   "moveCount": 52
  },
  {
@@ -3158,6 +4157,16 @@
    "spd": 75,
    "spe": 142
   },
+  "powerScores": {
+   "physicalType1": 84,
+   "physicalType2": 75,
+   "specialType1": 94,
+   "specialType2": 59,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Clear Body",
    "Infiltrator",
@@ -3169,7 +4178,6 @@
   "heightm": 3,
   "weightkg": 50,
   "gender": null,
-  "color": "Green",
   "moveCount": 63
  },
  {
@@ -3188,6 +4196,16 @@
    "spd": 100,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 81,
+   "specialType1": 94,
+   "specialType2": 81,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Inner Focus",
    "Multiscale"
@@ -3198,7 +4216,6 @@
   "heightm": 2.2,
   "weightkg": 210,
   "gender": null,
-  "color": "Brown",
   "moveCount": 83
  },
  {
@@ -3217,6 +4234,16 @@
    "spd": 125,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 90,
+   "physicalType2": 60,
+   "specialType1": 94,
+   "specialType2": 81,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 63,
+   "specialDefenseFull": 77
+  },
   "abilities": [
    "Multiscale"
   ],
@@ -3226,7 +4253,6 @@
   "heightm": 2.2,
   "weightkg": 290,
   "gender": null,
-  "color": "Brown",
   "moveCount": 83
  },
  {
@@ -3245,6 +4271,16 @@
    "spd": 91,
    "spe": 36
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 75,
+   "specialType1": 81,
+   "specialType2": 117,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 68,
+   "specialDefense": 48,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Berserk",
    "Sap Sipper",
@@ -3256,7 +4292,6 @@
   "heightm": 3,
   "weightkg": 185,
   "gender": null,
-  "color": "White",
   "moveCount": 66
  },
  {
@@ -3275,6 +4310,16 @@
    "spd": 116,
    "spe": 36
   },
+  "powerScores": {
+   "physicalType1": 45,
+   "physicalType2": 75,
+   "specialType1": 72,
+   "specialType2": 102,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Berserk"
   ],
@@ -3284,7 +4329,6 @@
   "heightm": 3,
   "weightkg": 240.5,
   "gender": null,
-  "color": "White",
   "moveCount": 66
  },
  {
@@ -3302,6 +4346,16 @@
    "spd": 75,
    "spe": 55
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 93,
+   "specialType2": 0,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 74,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Serene Grace",
    "Run Away",
@@ -3313,7 +4367,6 @@
   "heightm": 4.5,
   "weightkg": 47.4,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 80
  },
  {
@@ -3331,6 +4384,16 @@
    "spd": 80,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 81,
+   "physicalType2": 0,
+   "specialType1": 91,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Levitate"
   ],
@@ -3340,7 +4403,6 @@
   "heightm": 2.1,
   "weightkg": 80.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 75
  },
  {
@@ -3358,6 +4420,16 @@
    "spd": 90,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 73,
+   "physicalType2": 0,
+   "specialType1": 84,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Eelevate"
   ],
@@ -3367,7 +4439,6 @@
   "heightm": 3,
   "weightkg": 180,
   "gender": null,
-  "color": "Blue",
   "moveCount": 75
  },
  {
@@ -3386,6 +4457,16 @@
    "spd": 65,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 126,
+   "specialType1": 94,
+   "specialType2": 89,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Blaze",
    "Reckless"
@@ -3396,7 +4477,6 @@
   "heightm": 1.6,
   "weightkg": 150,
   "gender": null,
-  "color": "Red",
   "moveCount": 79
  },
  {
@@ -3415,6 +4495,16 @@
    "spd": 110,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 90,
+   "physicalType2": 111,
+   "specialType1": 78,
+   "specialType2": 72,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 63,
+   "specialDefenseFull": 77
+  },
   "abilities": [
    "Mold Breaker"
   ],
@@ -3424,7 +4514,6 @@
   "heightm": 1.8,
   "weightkg": 180.3,
   "gender": null,
-  "color": "Red",
   "moveCount": 79
  },
  {
@@ -3443,6 +4532,16 @@
    "spd": 60,
    "spe": 103
   },
+  "powerScores": {
+   "physicalType1": 55,
+   "physicalType2": 54,
+   "specialType1": 67,
+   "specialType2": 46,
+   "physicalDefense": 14,
+   "physicalDefenseFull": 55,
+   "specialDefense": 14,
+   "specialDefenseFull": 55
+  },
   "abilities": [
    "Static",
    "Motor Drive"
@@ -3453,7 +4552,6 @@
   "heightm": 0.4,
   "weightkg": 5,
   "gender": null,
-  "color": "White",
   "moveCount": 46
  },
  {
@@ -3472,6 +4570,16 @@
    "spd": 101,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 48,
+   "specialType1": 87,
+   "specialType2": 110,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Torrent",
    "Competitive"
@@ -3482,7 +4590,6 @@
   "heightm": 1.7,
   "weightkg": 84.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 74
  },
  {
@@ -3500,6 +4607,16 @@
    "spd": 60,
    "spe": 105
   },
+  "powerScores": {
+   "physicalType1": 44,
+   "physicalType2": 0,
+   "specialType1": 67,
+   "specialType2": 0,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 64,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Opportunist",
    "Frisk",
@@ -3511,7 +4628,6 @@
   "heightm": 1.9,
   "weightkg": 90,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 57
  },
  {
@@ -3529,6 +4645,16 @@
    "spd": 95,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 0,
+   "specialType1": 105,
+   "specialType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Synchronize",
    "Magic Bounce"
@@ -3539,7 +4665,6 @@
   "heightm": 0.9,
   "weightkg": 26.5,
   "gender": null,
-  "color": "Purple",
   "moveCount": 67
  },
  {
@@ -3558,6 +4683,16 @@
    "spd": 65,
    "spe": 88
   },
+  "powerScores": {
+   "physicalType1": 91,
+   "physicalType2": 74,
+   "specialType1": 46,
+   "specialType2": 70,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Sand Rush",
    "Sand Force",
@@ -3569,7 +4704,6 @@
   "heightm": 0.7,
   "weightkg": 40.4,
   "gender": null,
-  "color": "Gray",
   "moveCount": 53
  },
  {
@@ -3588,6 +4722,16 @@
    "spd": 65,
    "spe": 103
   },
+  "powerScores": {
+   "physicalType1": 81,
+   "physicalType2": 64,
+   "specialType1": 40,
+   "specialType2": 61,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 76,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Piercing Drill"
   ],
@@ -3597,7 +4741,6 @@
   "heightm": 0.9,
   "weightkg": 60,
   "gender": null,
-  "color": "Gray",
   "moveCount": 53
  },
  {
@@ -3615,6 +4758,16 @@
    "spd": 60,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 71,
+   "specialType2": 0,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 20,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Battle Armor",
    "Defiant"
@@ -3625,7 +4778,6 @@
   "heightm": 3,
   "weightkg": 62,
   "gender": "N",
-  "color": "Yellow",
   "moveCount": 51
  },
  {
@@ -3643,6 +4795,16 @@
    "spd": 65,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 84,
+   "physicalType2": 0,
+   "specialType1": 55,
+   "specialType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Defiant"
   ],
@@ -3652,7 +4814,6 @@
   "heightm": 1.6,
   "weightkg": 99,
   "gender": "N",
-  "color": "Yellow",
   "moveCount": 51
  },
  {
@@ -3671,6 +4832,16 @@
    "spd": 70,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 83,
+   "physicalType2": 59,
+   "specialType1": 71,
+   "specialType2": 93,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Cud Chew",
    "Armor Tail",
@@ -3682,7 +4853,6 @@
   "heightm": 3.2,
   "weightkg": 160,
   "gender": null,
-  "color": "Brown",
   "moveCount": 70
  },
  {
@@ -3700,6 +4870,16 @@
    "spd": 83,
    "spe": 78
   },
+  "powerScores": {
+   "physicalType1": 70,
+   "physicalType2": 0,
+   "specialType1": 70,
+   "specialType2": 0,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Torrent",
    "Sheer Force"
@@ -3710,7 +4890,6 @@
   "heightm": 2.3,
   "weightkg": 88.8,
   "gender": null,
-  "color": "Blue",
   "moveCount": 82
  },
  {
@@ -3729,6 +4908,16 @@
    "spd": 93,
    "spe": 78
   },
+  "powerScores": {
+   "physicalType1": 72,
+   "physicalType2": 105,
+   "specialType1": 58,
+   "specialType2": 57,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 76,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Dragonize"
   ],
@@ -3738,7 +4927,6 @@
   "heightm": 2.3,
   "weightkg": 108.8,
   "gender": null,
-  "color": "Blue",
   "moveCount": 82
  },
  {
@@ -3757,6 +4945,16 @@
    "spd": 60,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 79,
+   "specialType1": 93,
+   "specialType2": 93,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Ripen",
    "Gluttony",
@@ -3768,7 +4966,6 @@
   "heightm": 0.3,
   "weightkg": 1,
   "gender": null,
-  "color": "Green",
   "moveCount": 44
  },
  {
@@ -3786,6 +4983,16 @@
    "spd": 110,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 105,
+   "physicalType2": 0,
+   "specialType1": 93,
+   "specialType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Flash Fire",
    "Guts"
@@ -3796,7 +5003,6 @@
   "heightm": 0.9,
   "weightkg": 25,
   "gender": null,
-  "color": "Red",
   "moveCount": 57
  },
  {
@@ -3814,6 +5020,16 @@
    "spd": 128,
    "spe": 92
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 118,
+   "specialType2": 0,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -3824,7 +5040,6 @@
   "heightm": 0.2,
   "weightkg": 0.9,
   "gender": "F",
-  "color": "White",
   "moveCount": 41
  },
  {
@@ -3842,6 +5057,16 @@
    "spd": 148,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 141,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 64,
+   "specialDefenseFull": 77
+  },
   "abilities": [
    "Fairy Aura"
   ],
@@ -3851,7 +5076,6 @@
   "heightm": 0.2,
   "weightkg": 100.8,
   "gender": "F",
-  "color": "White",
   "moveCount": 41
  },
  {
@@ -3869,6 +5093,16 @@
    "spd": 154,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -3879,7 +5113,6 @@
   "heightm": 1.1,
   "weightkg": 10,
   "gender": "F",
-  "color": "White",
   "moveCount": 46
  },
  {
@@ -3897,6 +5130,16 @@
    "spd": 154,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -3907,7 +5150,6 @@
   "heightm": 1.1,
   "weightkg": 10,
   "gender": "F",
-  "color": "White",
   "moveCount": 46
  },
  {
@@ -3925,6 +5167,16 @@
    "spd": 154,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -3935,7 +5187,6 @@
   "heightm": 1.1,
   "weightkg": 10,
   "gender": "F",
-  "color": "White",
   "moveCount": 46
  },
  {
@@ -3953,6 +5204,16 @@
    "spd": 154,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -3963,7 +5224,6 @@
   "heightm": 1.1,
   "weightkg": 10,
   "gender": "F",
-  "color": "White",
   "moveCount": 46
  },
  {
@@ -3981,6 +5241,16 @@
    "spd": 154,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -3991,7 +5261,6 @@
   "heightm": 1.1,
   "weightkg": 10,
   "gender": "F",
-  "color": "White",
   "moveCount": 46
  },
  {
@@ -4010,6 +5279,16 @@
    "spd": 60,
    "spe": 40
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 89,
+   "specialType1": 50,
+   "specialType2": 75,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 77,
+   "specialDefense": 26,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Sturdy",
    "Overcoat"
@@ -4020,7 +5299,6 @@
   "heightm": 1.2,
   "weightkg": 125.8,
   "gender": null,
-  "color": "Purple",
   "moveCount": 69
  },
  {
@@ -4039,6 +5317,16 @@
    "spd": 70,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 71,
+   "specialType1": 71,
+   "specialType2": 52,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Snow Cloak",
    "Cursed Body"
@@ -4049,7 +5337,6 @@
   "heightm": 1.3,
   "weightkg": 26.6,
   "gender": "F",
-  "color": "White",
   "moveCount": 68
  },
  {
@@ -4068,6 +5355,16 @@
    "spd": 100,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 65,
+   "physicalType2": 55,
+   "specialType1": 79,
+   "specialType2": 58,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Snow Warning"
   ],
@@ -4077,7 +5374,6 @@
   "heightm": 2.6,
   "weightkg": 29.6,
   "gender": "F",
-  "color": "White",
   "moveCount": 68
  },
  {
@@ -4095,6 +5391,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4104,7 +5410,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4122,6 +5427,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4131,7 +5446,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4149,6 +5463,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4158,7 +5482,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4176,6 +5499,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4185,7 +5518,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4203,6 +5535,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4212,7 +5554,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4230,6 +5571,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4239,7 +5590,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4257,6 +5607,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4266,7 +5626,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4284,6 +5643,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4293,7 +5662,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4311,6 +5679,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4320,7 +5698,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4338,6 +5715,16 @@
    "spd": 90,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fur Coat"
   ],
@@ -4347,7 +5734,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "White",
   "moveCount": 40
  },
  {
@@ -4366,6 +5752,16 @@
    "spd": 115,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 70,
+   "physicalType2": 128,
+   "specialType1": 67,
+   "specialType2": 67,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Steadfast",
    "Sharpness",
@@ -4377,7 +5773,6 @@
   "heightm": 1.6,
   "weightkg": 52,
   "gender": "M",
-  "color": "White",
   "moveCount": 105
  },
  {
@@ -4396,6 +5791,16 @@
    "spd": 115,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 64,
+   "physicalType2": 120,
+   "specialType1": 52,
+   "specialType2": 52,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 68,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Inner Focus"
   ],
@@ -4405,7 +5810,6 @@
   "heightm": 1.6,
   "weightkg": 56.4,
   "gender": "M",
-  "color": "White",
   "moveCount": 105
  },
  {
@@ -4423,6 +5827,16 @@
    "spd": 82,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 0,
+   "specialType1": 66,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Stench",
    "Weak Armor",
@@ -4434,7 +5848,6 @@
   "heightm": 1.9,
   "weightkg": 107.3,
   "gender": null,
-  "color": "Green",
   "moveCount": 53
  },
  {
@@ -4453,6 +5866,16 @@
    "spd": 85,
    "spe": 102
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 89,
+   "specialType1": 83,
+   "specialType2": 58,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 54,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Sand Veil",
    "Rough Skin"
@@ -4463,7 +5886,6 @@
   "heightm": 1.9,
   "weightkg": 95,
   "gender": null,
-  "color": "Blue",
   "moveCount": 58
  },
  {
@@ -4482,6 +5904,16 @@
    "spd": 95,
    "spe": 92
   },
+  "powerScores": {
+   "physicalType1": 110,
+   "physicalType2": 82,
+   "specialType1": 84,
+   "specialType2": 58,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Sand Force"
   ],
@@ -4491,7 +5923,6 @@
   "heightm": 1.9,
   "weightkg": 95,
   "gender": null,
-  "color": "Blue",
   "moveCount": 58
  },
  {
@@ -4510,6 +5941,16 @@
    "spd": 115,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 46,
+   "physicalType2": 0,
+   "specialType1": 102,
+   "specialType2": 85,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Synchronize",
    "Trace",
@@ -4521,7 +5962,6 @@
   "heightm": 1.6,
   "weightkg": 48.4,
   "gender": null,
-  "color": "White",
   "moveCount": 80
  },
  {
@@ -4540,6 +5980,16 @@
    "spd": 135,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 42,
+   "physicalType2": 54,
+   "specialType1": 96,
+   "specialType2": 81,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Pixilate"
   ],
@@ -4549,7 +5999,6 @@
   "heightm": 1.6,
   "weightkg": 48.4,
   "gender": null,
-  "color": "White",
   "moveCount": 80
  },
  {
@@ -4567,6 +6016,16 @@
    "spd": 90,
    "spe": 35
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 0,
+   "specialType1": 39,
+   "specialType2": 0,
+   "physicalDefense": 66,
+   "physicalDefenseFull": 78,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Purifying Salt",
    "Sturdy",
@@ -4578,7 +6037,6 @@
   "heightm": 2.3,
   "weightkg": 240,
   "gender": null,
-  "color": "Brown",
   "moveCount": 54
  },
  {
@@ -4597,6 +6055,16 @@
    "spd": 75,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 67,
+   "specialType1": 71,
+   "specialType2": 83,
+   "physicalDefense": 18,
+   "physicalDefenseFull": 57,
+   "specialDefense": 31,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Cursed Body"
   ],
@@ -4606,7 +6074,6 @@
   "heightm": 1.5,
   "weightkg": 40.5,
   "gender": null,
-  "color": "Purple",
   "moveCount": 76
  },
  {
@@ -4625,6 +6092,16 @@
    "spd": 95,
    "spe": 130
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 52,
+   "specialType1": 66,
+   "specialType2": 78,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 63,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Shadow Tag"
   ],
@@ -4634,7 +6111,6 @@
   "heightm": 1.4,
   "weightkg": 40.5,
   "gender": null,
-  "color": "Purple",
   "moveCount": 76
  },
  {
@@ -4653,6 +6129,16 @@
    "spd": 91,
    "spe": 84
   },
+  "powerScores": {
+   "physicalType1": 44,
+   "physicalType2": 59,
+   "specialType1": 124,
+   "specialType2": 71,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Good as Gold"
   ],
@@ -4662,7 +6148,6 @@
   "heightm": 1.2,
   "weightkg": 30,
   "gender": "N",
-  "color": "Yellow",
   "moveCount": 42
  },
  {
@@ -4680,6 +6165,16 @@
    "spd": 95,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 0,
+   "specialType1": 97,
+   "specialType2": 0,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Snow Cloak",
    "Ice Body"
@@ -4690,7 +6185,6 @@
   "heightm": 0.8,
   "weightkg": 25.9,
   "gender": null,
-  "color": "Blue",
   "moveCount": 58
  },
  {
@@ -4708,6 +6202,16 @@
    "spd": 80,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 0,
+   "specialType1": 71,
+   "specialType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Inner Focus",
    "Ice Body",
@@ -4719,7 +6223,6 @@
   "heightm": 1.5,
   "weightkg": 256.5,
   "gender": null,
-  "color": "Gray",
   "moveCount": 54
  },
  {
@@ -4737,6 +6240,16 @@
    "spd": 80,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 90,
+   "physicalType2": 0,
+   "specialType1": 70,
+   "specialType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Refrigerate"
   ],
@@ -4746,7 +6259,6 @@
   "heightm": 2.1,
   "weightkg": 350.2,
   "gender": null,
-  "color": "Gray",
   "moveCount": 54
  },
  {
@@ -4765,6 +6277,16 @@
    "spd": 81,
    "spe": 86
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 62,
+   "specialType1": 71,
+   "specialType2": 83,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Toxic Debris",
    "Corrosion"
@@ -4775,7 +6297,6 @@
   "heightm": 1.5,
   "weightkg": 45,
   "gender": null,
-  "color": "Blue",
   "moveCount": 46
  },
  {
@@ -4794,6 +6315,16 @@
    "spd": 96,
    "spe": 101
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 86,
+   "specialType1": 82,
+   "specialType2": 96,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Adaptability"
   ],
@@ -4803,7 +6334,6 @@
   "heightm": 2.8,
   "weightkg": 77,
   "gender": null,
-  "color": "Blue",
   "moveCount": 46
  },
  {
@@ -4822,6 +6352,16 @@
    "spd": 75,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 71,
+   "physicalType2": 62,
+   "specialType1": 42,
+   "specialType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Hyper Cutter",
    "Sand Veil",
@@ -4833,7 +6373,6 @@
   "heightm": 2,
   "weightkg": 42.5,
   "gender": null,
-  "color": "Purple",
   "moveCount": 74
  },
  {
@@ -4852,6 +6391,16 @@
    "spd": 80,
    "spe": 55
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 93,
+   "specialType1": 48,
+   "specialType2": 42,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Iron Fist",
    "Klutz",
@@ -4863,7 +6412,6 @@
   "heightm": 2.8,
   "weightkg": 330,
   "gender": "N",
-  "color": "Green",
   "moveCount": 78
  },
  {
@@ -4882,6 +6430,16 @@
    "spd": 105,
    "spe": 55
   },
+  "powerScores": {
+   "physicalType1": 94,
+   "physicalType2": 87,
+   "specialType1": 42,
+   "specialType2": 37,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 73,
+   "specialDefense": 57,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Unseen Fist"
   ],
@@ -4891,7 +6449,6 @@
   "heightm": 4,
   "weightkg": 330,
   "gender": "N",
-  "color": "Green",
   "moveCount": 78
  },
  {
@@ -4909,6 +6466,16 @@
    "spd": 150,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 59,
+   "physicalType2": 0,
+   "specialType1": 101,
+   "specialType2": 0,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 68,
+   "specialDefenseFull": 80
+  },
   "abilities": [
    "Sap Sipper",
    "Hydration",
@@ -4920,7 +6487,6 @@
   "heightm": 2,
   "weightkg": 150.5,
   "gender": null,
-  "color": "Purple",
   "moveCount": 65
  },
  {
@@ -4939,6 +6505,16 @@
    "spd": 150,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 74,
+   "physicalType2": 59,
+   "specialType1": 109,
+   "specialType2": 101,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 66,
+   "specialDefenseFull": 79
+  },
   "abilities": [
    "Sap Sipper",
    "Shell Armor",
@@ -4950,7 +6526,6 @@
   "heightm": 1.7,
   "weightkg": 334.1,
   "gender": null,
-  "color": "Purple",
   "moveCount": 63
  },
  {
@@ -4969,6 +6544,16 @@
    "spd": 75,
    "spe": 84
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 95,
+   "specialType1": 44,
+   "specialType2": 48,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 33,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -4980,7 +6565,6 @@
   "heightm": 0.9,
   "weightkg": 12.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 60
  },
  {
@@ -4999,6 +6583,16 @@
    "spd": 75,
    "spe": 69
   },
+  "powerScores": {
+   "physicalType1": 78,
+   "physicalType2": 95,
+   "specialType1": 44,
+   "specialType2": 48,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -5010,7 +6604,6 @@
   "heightm": 1.1,
   "weightkg": 14,
   "gender": null,
-  "color": "Brown",
   "moveCount": 60
  },
  {
@@ -5029,6 +6622,16 @@
    "spd": 75,
    "spe": 99
   },
+  "powerScores": {
+   "physicalType1": 74,
+   "physicalType2": 95,
+   "specialType1": 44,
+   "specialType2": 48,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 28,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -5040,7 +6643,6 @@
   "heightm": 0.7,
   "weightkg": 9.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 60
  },
  {
@@ -5059,6 +6661,16 @@
    "spd": 75,
    "spe": 54
   },
+  "powerScores": {
+   "physicalType1": 81,
+   "physicalType2": 100,
+   "specialType1": 44,
+   "specialType2": 48,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 75,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -5070,7 +6682,6 @@
   "heightm": 1.7,
   "weightkg": 39,
   "gender": null,
-  "color": "Brown",
   "moveCount": 63
  },
  {
@@ -5089,6 +6700,16 @@
    "spd": 71,
    "spe": 122
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 50,
+   "specialType1": 83,
+   "specialType2": 59,
+   "physicalDefense": 30,
+   "physicalDefenseFull": 62,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Torrent",
    "Protean",
@@ -5100,7 +6721,6 @@
   "heightm": 1.5,
   "weightkg": 40,
   "gender": null,
-  "color": "Blue",
   "moveCount": 64
  },
  {
@@ -5119,6 +6739,16 @@
    "spd": 81,
    "spe": 142
   },
+  "powerScores": {
+   "physicalType1": 57,
+   "physicalType2": 46,
+   "specialType1": 76,
+   "specialType2": 55,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Protean"
   ],
@@ -5128,7 +6758,6 @@
   "heightm": 1.5,
   "weightkg": 40,
   "gender": null,
-  "color": "Blue",
   "moveCount": 64
  },
  {
@@ -5147,6 +6776,16 @@
    "spd": 75,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 75,
+   "specialType1": 58,
+   "specialType2": 58,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Prankster",
    "Frisk",
@@ -5158,7 +6797,6 @@
   "heightm": 1.5,
   "weightkg": 61,
   "gender": "M",
-  "color": "Purple",
   "moveCount": 64
  },
  {
@@ -5177,6 +6815,16 @@
    "spd": 100,
    "spe": 81
   },
+  "powerScores": {
+   "physicalType1": 78,
+   "physicalType2": 74,
+   "specialType1": 59,
+   "specialType2": 59,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 69,
+   "specialDefense": 56,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Intimidate",
    "Moxie"
@@ -5187,7 +6835,6 @@
   "heightm": 6.5,
   "weightkg": 235,
   "gender": null,
-  "color": "Blue",
   "moveCount": 67
  },
  {
@@ -5206,6 +6853,16 @@
    "spd": 130,
    "spe": 81
   },
+  "powerScores": {
+   "physicalType1": 69,
+   "physicalType2": 61,
+   "specialType1": 51,
+   "specialType2": 37,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  },
   "abilities": [
    "Mold Breaker"
   ],
@@ -5215,7 +6872,6 @@
   "heightm": 6.5,
   "weightkg": 305,
   "gender": null,
-  "color": "Blue",
   "moveCount": 67
  },
  {
@@ -5234,6 +6890,16 @@
    "spd": 103,
    "spe": 29
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 62,
+   "specialType1": 109,
+   "specialType2": 91,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Healer",
    "Anticipation",
@@ -5245,7 +6911,6 @@
   "heightm": 2.1,
   "weightkg": 5.1,
   "gender": "F",
-  "color": "Pink",
   "moveCount": 59
  },
  {
@@ -5264,6 +6929,16 @@
    "spd": 63,
    "spe": 118
   },
+  "powerScores": {
+   "physicalType1": 105,
+   "physicalType2": 97,
+   "specialType1": 74,
+   "specialType2": 46,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Limber",
    "Unburden",
@@ -5275,7 +6950,6 @@
   "heightm": 0.8,
   "weightkg": 21.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 74
  },
  {
@@ -5294,6 +6968,16 @@
    "spd": 93,
    "spe": 118
   },
+  "powerScores": {
+   "physicalType1": 105,
+   "physicalType2": 97,
+   "specialType1": 57,
+   "specialType2": 36,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "No Guard"
   ],
@@ -5303,7 +6987,6 @@
   "heightm": 1,
   "weightkg": 25,
   "gender": null,
-  "color": "Green",
   "moveCount": 74
  },
  {
@@ -5322,6 +7005,16 @@
    "spd": 94,
    "spe": 109
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 62,
+   "specialType1": 85,
+   "specialType2": 71,
+   "physicalDefense": 10,
+   "physicalDefenseFull": 54,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Dry Skin",
    "Sand Veil",
@@ -5333,7 +7026,6 @@
   "heightm": 1,
   "weightkg": 21,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 63
  },
  {
@@ -5352,6 +7044,16 @@
    "spd": 95,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 115,
+   "physicalType2": 128,
+   "specialType1": 40,
+   "specialType2": 54,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Swarm",
    "Guts",
@@ -5363,7 +7065,6 @@
   "heightm": 1.5,
   "weightkg": 54,
   "gender": null,
-  "color": "Blue",
   "moveCount": 66
  },
  {
@@ -5382,6 +7083,16 @@
    "spd": 105,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 130,
+   "specialType1": 31,
+   "specialType2": 42,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Skill Link"
   ],
@@ -5391,7 +7102,6 @@
   "heightm": 1.7,
   "weightkg": 62.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 66
  },
  {
@@ -5409,6 +7119,16 @@
    "spd": 72,
    "spe": 47
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 0,
+   "specialType1": 54,
+   "specialType2": 0,
+   "physicalDefense": 65,
+   "physicalDefenseFull": 78,
+   "specialDefense": 47,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Sand Stream",
    "Sand Force"
@@ -5419,7 +7139,6 @@
   "heightm": 2,
   "weightkg": 300,
   "gender": null,
-  "color": "Brown",
   "moveCount": 51
  },
  {
@@ -5438,6 +7157,16 @@
    "spd": 80,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 83,
+   "specialType1": 63,
+   "specialType2": 101,
+   "physicalDefense": 16,
+   "physicalDefenseFull": 57,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Early Bird",
    "Flash Fire",
@@ -5449,7 +7178,6 @@
   "heightm": 1.4,
   "weightkg": 35,
   "gender": null,
-  "color": "Black",
   "moveCount": 67
  },
  {
@@ -5468,6 +7196,16 @@
    "spd": 90,
    "spe": 115
   },
+  "powerScores": {
+   "physicalType1": 51,
+   "physicalType2": 64,
+   "specialType1": 58,
+   "specialType2": 93,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Solar Power"
   ],
@@ -5477,7 +7215,6 @@
   "heightm": 1.9,
   "weightkg": 49.5,
   "gender": null,
-  "color": "Black",
   "moveCount": 67
  },
  {
@@ -5495,6 +7232,16 @@
    "spd": 97,
    "spe": 68
   },
+  "powerScores": {
+   "physicalType1": 81,
+   "physicalType2": 0,
+   "specialType1": 40,
+   "specialType2": 0,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Sand Rush",
    "Fluffy"
@@ -5505,7 +7252,6 @@
   "heightm": 2,
   "weightkg": 15,
   "gender": null,
-  "color": "White",
   "moveCount": 52
  },
  {
@@ -5524,6 +7270,16 @@
    "spd": 80,
    "spe": 44
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 40,
+   "specialType1": 109,
+   "specialType2": 109,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 77,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Supersweet Syrup",
    "Regenerator",
@@ -5535,7 +7291,6 @@
   "heightm": 1.8,
   "weightkg": 93,
   "gender": null,
-  "color": "Green",
   "moveCount": 51
  },
  {
@@ -5554,6 +7309,16 @@
    "spd": 90,
    "spe": 98
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 100,
+   "specialType1": 70,
+   "specialType2": 110,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Levitate"
   ],
@@ -5563,7 +7328,6 @@
   "heightm": 1.8,
   "weightkg": 160,
   "gender": null,
-  "color": "Blue",
   "moveCount": 78
  },
  {
@@ -5582,6 +7346,16 @@
    "spd": 90,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 97,
+   "physicalType2": 70,
+   "specialType1": 83,
+   "specialType2": 52,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Blaze",
    "Intimidate"
@@ -5592,7 +7366,6 @@
   "heightm": 1.8,
   "weightkg": 83,
   "gender": null,
-  "color": "Red",
   "moveCount": 77
  },
  {
@@ -5611,6 +7384,16 @@
    "spd": 71,
    "spe": 108
   },
+  "powerScores": {
+   "physicalType1": 91,
+   "physicalType2": 135,
+   "specialType1": 97,
+   "specialType2": 91,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Blaze",
    "Iron Fist"
@@ -5621,7 +7404,6 @@
   "heightm": 1.2,
   "weightkg": 55,
   "gender": null,
-  "color": "Brown",
   "moveCount": 88
  },
  {
@@ -5639,6 +7421,16 @@
    "spd": 95,
    "spe": 130
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 0,
+   "specialType1": 87,
+   "specialType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Volt Absorb",
    "Quick Feet"
@@ -5649,7 +7441,6 @@
   "heightm": 0.8,
   "weightkg": 24.5,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 59
  },
  {
@@ -5667,6 +7458,16 @@
    "spd": 80,
    "spe": 90
   },
+  "powerScores": {
+   "physicalType1": 98,
+   "physicalType2": 0,
+   "specialType1": 40,
+   "specialType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Early Bird",
    "Scrappy",
@@ -5678,7 +7479,6 @@
   "heightm": 2.2,
   "weightkg": 80,
   "gender": "F",
-  "color": "Brown",
   "moveCount": 67
  },
  {
@@ -5696,6 +7496,16 @@
    "spd": 100,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 113,
+   "physicalType2": 0,
+   "specialType1": 48,
+   "specialType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Parental Bond"
   ],
@@ -5705,7 +7515,6 @@
   "heightm": 2.2,
   "weightkg": 100,
   "gender": "F",
-  "color": "Brown",
   "moveCount": 67
  },
  {
@@ -5724,6 +7533,16 @@
    "spd": 90,
    "spe": 108
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Justified"
   ],
@@ -5733,7 +7552,6 @@
   "heightm": 1.4,
   "weightkg": 48.5,
   "gender": "N",
-  "color": "Yellow",
   "moveCount": 0
  },
  {
@@ -5752,6 +7570,16 @@
    "spd": 85,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 74,
+   "specialType1": 44,
+   "specialType2": 75,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Defiant",
    "Supreme Overlord",
@@ -5763,7 +7591,6 @@
   "heightm": 2,
   "weightkg": 120,
   "gender": null,
-  "color": "Black",
   "moveCount": 52
  },
  {
@@ -5782,6 +7609,16 @@
    "spd": 70,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 74,
+   "physicalType2": 120,
+   "specialType1": 42,
+   "specialType2": 28,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Swarm",
    "Sheer Force",
@@ -5793,7 +7630,6 @@
   "heightm": 1.8,
   "weightkg": 89,
   "gender": null,
-  "color": "Brown",
   "moveCount": 56
  },
  {
@@ -5812,6 +7648,16 @@
    "spd": 87,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 58,
+   "specialType1": 89,
+   "specialType2": 52,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Prankster",
    "Magician"
@@ -5822,7 +7668,6 @@
   "heightm": 0.2,
   "weightkg": 3,
   "gender": null,
-  "color": "Gray",
   "moveCount": 44
  },
  {
@@ -5841,6 +7686,16 @@
    "spd": 105,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 117,
+   "specialType1": 94,
+   "specialType2": 89,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Bulletproof",
    "Soundproof",
@@ -5852,7 +7707,6 @@
   "heightm": 1.6,
   "weightkg": 78.2,
   "gender": null,
-  "color": "Gray",
   "moveCount": 78
  },
  {
@@ -5871,6 +7725,16 @@
    "spd": 70,
    "spe": 92
   },
+  "powerScores": {
+   "physicalType1": 81,
+   "physicalType2": 78,
+   "specialType1": 52,
+   "specialType2": 46,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Intimidate",
    "Moxie",
@@ -5882,7 +7746,6 @@
   "heightm": 1.5,
   "weightkg": 96.3,
   "gender": null,
-  "color": "Red",
   "moveCount": 83
  },
  {
@@ -5900,6 +7763,16 @@
    "spd": 65,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 0,
+   "specialType1": 71,
+   "specialType2": 0,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Leaf Guard",
    "Chlorophyll"
@@ -5910,7 +7783,6 @@
   "heightm": 1,
   "weightkg": 25.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 58
  },
  {
@@ -5928,6 +7800,16 @@
    "spd": 50,
    "spe": 106
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 0,
+   "specialType1": 55,
+   "specialType2": 0,
+   "physicalDefense": 9,
+   "physicalDefenseFull": 54,
+   "specialDefense": 9,
+   "specialDefenseFull": 54
+  },
   "abilities": [
    "Limber",
    "Unburden",
@@ -5939,7 +7821,6 @@
   "heightm": 1.1,
   "weightkg": 37.5,
   "gender": null,
-  "color": "Purple",
   "moveCount": 60
  },
  {
@@ -5957,6 +7838,16 @@
    "spd": 96,
    "spe": 105
   },
+  "powerScores": {
+   "physicalType1": 74,
+   "physicalType2": 0,
+   "specialType1": 46,
+   "specialType2": 0,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Cute Charm",
    "Klutz",
@@ -5968,7 +7859,6 @@
   "heightm": 1.2,
   "weightkg": 33.3,
   "gender": null,
-  "color": "Brown",
   "moveCount": 76
  },
  {
@@ -5987,6 +7877,16 @@
    "spd": 96,
    "spe": 135
   },
+  "powerScores": {
+   "physicalType1": 84,
+   "physicalType2": 103,
+   "specialType1": 36,
+   "specialType2": 48,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Scrappy"
   ],
@@ -5996,7 +7896,6 @@
   "heightm": 1.3,
   "weightkg": 28.3,
   "gender": null,
-  "color": "Brown",
   "moveCount": 76
  },
  {
@@ -6015,6 +7914,16 @@
    "spd": 70,
    "spe": 90
   },
+  "powerScores": {
+   "physicalType1": 117,
+   "physicalType2": 79,
+   "specialType1": 97,
+   "specialType2": 113,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Steadfast",
    "Inner Focus",
@@ -6026,7 +7935,6 @@
   "heightm": 1.2,
   "weightkg": 54,
   "gender": null,
-  "color": "Blue",
   "moveCount": 83
  },
  {
@@ -6045,6 +7953,16 @@
    "spd": 70,
    "spe": 112
   },
+  "powerScores": {
+   "physicalType1": 146,
+   "physicalType2": 98,
+   "specialType1": 114,
+   "specialType2": 132,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Adaptability"
   ],
@@ -6054,7 +7972,6 @@
   "heightm": 1.3,
   "weightkg": 57.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 83
  },
  {
@@ -6072,6 +7989,16 @@
    "spd": 79,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 83,
+   "physicalType2": 0,
+   "specialType1": 78,
+   "specialType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Rivalry",
    "Intimidate",
@@ -6083,7 +8010,6 @@
   "heightm": 1.4,
   "weightkg": 42,
   "gender": null,
-  "color": "Blue",
   "moveCount": 53
  },
  {
@@ -6101,6 +8027,16 @@
    "spd": 65,
    "spe": 112
   },
+  "powerScores": {
+   "physicalType1": 115,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 30,
+   "physicalDefenseFull": 62,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Keen Eye",
    "Sand Rush",
@@ -6112,7 +8048,6 @@
   "heightm": 0.8,
   "weightkg": 25,
   "gender": null,
-  "color": "Brown",
   "moveCount": 58
  },
  {
@@ -6130,6 +8065,16 @@
    "spd": 65,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 115,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 30,
+   "physicalDefenseFull": 62,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Tough Claws"
   ],
@@ -6139,7 +8084,6 @@
   "heightm": 0.8,
   "weightkg": 25,
   "gender": null,
-  "color": "Brown",
   "moveCount": 61
  },
  {
@@ -6157,6 +8101,16 @@
    "spd": 75,
    "spe": 82
   },
+  "powerScores": {
+   "physicalType1": 115,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Keen Eye",
    "Vital Spirit",
@@ -6168,7 +8122,6 @@
   "heightm": 1.1,
   "weightkg": 25,
   "gender": null,
-  "color": "Red",
   "moveCount": 68
  },
  {
@@ -6186,6 +8139,16 @@
    "spd": 85,
    "spe": 55
   },
+  "powerScores": {
+   "physicalType1": 105,
+   "physicalType2": 0,
+   "specialType1": 67,
+   "specialType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Guts",
    "No Guard",
@@ -6197,7 +8160,6 @@
   "heightm": 1.6,
   "weightkg": 130,
   "gender": null,
-  "color": "Gray",
   "moveCount": 66
  },
  {
@@ -6216,6 +8178,16 @@
    "spd": 115,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 60,
+   "specialType1": 115,
+   "specialType2": 82,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Soul-Heart"
   ],
@@ -6225,7 +8197,6 @@
   "heightm": 1.3,
   "weightkg": 248.1,
   "gender": "N",
-  "color": "Gray",
   "moveCount": 76
  },
  {
@@ -6244,6 +8215,16 @@
    "spd": 115,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 63,
+   "specialType1": 122,
+   "specialType2": 89,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Soul-Heart"
   ],
@@ -6253,7 +8234,6 @@
   "heightm": 1,
   "weightkg": 80.5,
   "gender": "N",
-  "color": "Red",
   "moveCount": 69
  },
  {
@@ -6272,6 +8252,16 @@
    "spd": 115,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 60,
+   "specialType1": 115,
+   "specialType2": 82,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Soul-Heart"
   ],
@@ -6281,7 +8271,6 @@
   "heightm": 1.3,
   "weightkg": 248.1,
   "gender": "N",
-  "color": "Red",
   "moveCount": 69
  },
  {
@@ -6300,6 +8289,16 @@
    "spd": 75,
    "spe": 73
   },
+  "powerScores": {
+   "physicalType1": 67,
+   "physicalType2": 55,
+   "specialType1": 48,
+   "specialType2": 70,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Contrary",
    "Suction Cups",
@@ -6311,7 +8310,6 @@
   "heightm": 1.5,
   "weightkg": 47,
   "gender": null,
-  "color": "Blue",
   "moveCount": 68
  },
  {
@@ -6330,6 +8328,16 @@
    "spd": 120,
    "spe": 88
   },
+  "powerScores": {
+   "physicalType1": 55,
+   "physicalType2": 46,
+   "specialType1": 46,
+   "specialType2": 67,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 61,
+   "specialDefenseFull": 76
+  },
   "abilities": [
    "Contrary"
   ],
@@ -6339,7 +8347,6 @@
   "heightm": 2.9,
   "weightkg": 69.8,
   "gender": null,
-  "color": "Blue",
   "moveCount": 68
  },
  {
@@ -6358,6 +8365,16 @@
    "spd": 60,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 89,
+   "specialType1": 66,
+   "specialType2": 54,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 40,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Oblivious",
    "Snow Cloak",
@@ -6369,7 +8386,6 @@
   "heightm": 2.5,
   "weightkg": 291,
   "gender": null,
-  "color": "Brown",
   "moveCount": 63
  },
  {
@@ -6387,6 +8403,16 @@
    "spd": 60,
    "spe": 105
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 23,
+   "physicalDefenseFull": 59,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Static",
    "Lightning Rod",
@@ -6398,7 +8424,6 @@
   "heightm": 1.5,
   "weightkg": 40.2,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 49
  },
  {
@@ -6416,6 +8441,16 @@
    "spd": 80,
    "spe": 135
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 0,
+   "specialType1": 76,
+   "specialType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Intimidate"
   ],
@@ -6425,7 +8460,6 @@
   "heightm": 1.8,
   "weightkg": 44,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 49
  },
  {
@@ -6443,6 +8477,16 @@
    "spd": 75,
    "spe": 111
   },
+  "powerScores": {
+   "physicalType1": 230,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 63,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Friend Guard",
    "Cheek Pouch",
@@ -6454,7 +8498,6 @@
   "heightm": 0.3,
   "weightkg": 2.3,
   "gender": "N",
-  "color": "White",
   "moveCount": 50
  },
  {
@@ -6472,6 +8515,16 @@
    "spd": 75,
    "spe": 111
   },
+  "powerScores": {
+   "physicalType1": 230,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 63,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Friend Guard",
    "Cheek Pouch",
@@ -6483,7 +8536,6 @@
   "heightm": 0.3,
   "weightkg": 2.8,
   "gender": "N",
-  "color": "White",
   "moveCount": 50
  },
  {
@@ -6502,6 +8554,16 @@
    "spd": 55,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 54,
+   "physicalType2": 59,
+   "specialType1": 74,
+   "specialType2": 27,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 62,
+   "specialDefense": 5,
+   "specialDefenseFull": 51
+  },
   "abilities": [
    "Hyper Cutter",
    "Intimidate",
@@ -6513,7 +8575,6 @@
   "heightm": 0.6,
   "weightkg": 11.5,
   "gender": null,
-  "color": "Black",
   "moveCount": 71
  },
  {
@@ -6532,6 +8593,16 @@
    "spd": 95,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 96,
+   "physicalType2": 108,
+   "specialType1": 57,
+   "specialType2": 21,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Huge Power"
   ],
@@ -6541,7 +8612,6 @@
   "heightm": 1,
   "weightkg": 23.5,
   "gender": null,
-  "color": "Black",
   "moveCount": 71
  },
  {
@@ -6560,6 +8630,16 @@
    "spd": 75,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 163,
+   "physicalType2": 88,
+   "specialType1": 66,
+   "specialType2": 50,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 31,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Pure Power",
    "Telepathy"
@@ -6570,7 +8650,6 @@
   "heightm": 1.3,
   "weightkg": 31.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 77
  },
  {
@@ -6589,6 +8668,16 @@
    "spd": 85,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 170,
+   "physicalType2": 92,
+   "specialType1": 60,
+   "specialType2": 45,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Pure Power"
   ],
@@ -6598,7 +8687,6 @@
   "heightm": 1.3,
   "weightkg": 31.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 77
  },
  {
@@ -6616,6 +8704,16 @@
    "spd": 100,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 0,
+   "specialType1": 85,
+   "specialType2": 0,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Overgrow",
    "Leaf Guard"
@@ -6626,7 +8724,6 @@
   "heightm": 1.8,
   "weightkg": 100.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 61
  },
  {
@@ -6645,6 +8742,16 @@
    "spd": 115,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 0,
+   "specialType1": 94,
+   "specialType2": 58,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Mega Sol"
   ],
@@ -6654,7 +8761,6 @@
   "heightm": 2.4,
   "weightkg": 201,
   "gender": null,
-  "color": "Green",
   "moveCount": 61
  },
  {
@@ -6673,6 +8779,16 @@
    "spd": 70,
    "spe": 123
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 75,
+   "specialType1": 83,
+   "specialType2": 52,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 64,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Overgrow",
    "Protean"
@@ -6683,7 +8799,6 @@
   "heightm": 1.5,
   "weightkg": 31.2,
   "gender": null,
-  "color": "Green",
   "moveCount": 65
  },
  {
@@ -6701,6 +8816,16 @@
    "spd": 81,
    "spe": 104
   },
+  "powerScores": {
+   "physicalType1": 40,
+   "physicalType2": 0,
+   "specialType1": 59,
+   "specialType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 41,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Keen Eye",
    "Infiltrator",
@@ -6712,7 +8837,6 @@
   "heightm": 0.6,
   "weightkg": 8.5,
   "gender": "M",
-  "color": "Blue",
   "moveCount": 59
  },
  {
@@ -6730,6 +8854,16 @@
    "spd": 81,
    "spe": 104
   },
+  "powerScores": {
+   "physicalType1": 40,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 41,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Keen Eye",
    "Infiltrator",
@@ -6741,7 +8875,6 @@
   "heightm": 0.6,
   "weightkg": 8.5,
   "gender": "F",
-  "color": "White",
   "moveCount": 56
  },
  {
@@ -6759,6 +8892,16 @@
    "spd": 101,
    "spe": 124
   },
+  "powerScores": {
+   "physicalType1": 31,
+   "physicalType2": 0,
+   "specialType1": 87,
+   "specialType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Trace"
   ],
@@ -6768,7 +8911,6 @@
   "heightm": 0.8,
   "weightkg": 10.1,
   "gender": "F",
-  "color": "White",
   "moveCount": 56
  },
  {
@@ -6786,6 +8928,16 @@
    "spd": 101,
    "spe": 124
   },
+  "powerScores": {
+   "physicalType1": 31,
+   "physicalType2": 0,
+   "specialType1": 66,
+   "specialType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Trace"
   ],
@@ -6795,7 +8947,6 @@
   "heightm": 0.8,
   "weightkg": 10.1,
   "gender": "M",
-  "color": "Blue",
   "moveCount": 59
  },
  {
@@ -6814,6 +8965,16 @@
    "spd": 90,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 117,
+   "physicalType2": 78,
+   "specialType1": 98,
+   "specialType2": 85,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 76,
+   "specialDefense": 48,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Clear Body",
    "Light Metal"
@@ -6824,7 +8985,6 @@
   "heightm": 1.6,
   "weightkg": 550,
   "gender": "N",
-  "color": "Blue",
   "moveCount": 68
  },
  {
@@ -6843,6 +9003,16 @@
    "spd": 110,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 122,
+   "physicalType2": 81,
+   "specialType1": 81,
+   "specialType2": 70,
+   "physicalDefense": 66,
+   "physicalDefenseFull": 79,
+   "specialDefense": 56,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Tough Claws"
   ],
@@ -6852,7 +9022,6 @@
   "heightm": 2.5,
   "weightkg": 942.9,
   "gender": "N",
-  "color": "Blue",
   "moveCount": 68
  },
  {
@@ -6870,6 +9039,16 @@
    "spd": 125,
    "spe": 81
   },
+  "powerScores": {
+   "physicalType1": 50,
+   "physicalType2": 0,
+   "specialType1": 81,
+   "specialType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 69,
+   "specialDefense": 64,
+   "specialDefenseFull": 77
+  },
   "abilities": [
    "Marvel Scale",
    "Competitive",
@@ -6881,7 +9060,6 @@
   "heightm": 6.2,
   "weightkg": 162,
   "gender": null,
-  "color": "Pink",
   "moveCount": 61
  },
  {
@@ -6900,6 +9078,16 @@
    "spd": 105,
    "spe": 96
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 62,
+   "specialType1": 40,
+   "specialType2": 40,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Disguise"
   ],
@@ -6909,7 +9097,6 @@
   "heightm": 0.2,
   "weightkg": 0.7,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 60
  },
  {
@@ -6928,6 +9115,16 @@
    "spd": 105,
    "spe": 96
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 62,
+   "specialType1": 40,
+   "specialType2": 40,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Disguise"
   ],
@@ -6937,7 +9134,6 @@
   "heightm": 0.2,
   "weightkg": 0.7,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 60
  },
  {
@@ -6956,6 +9152,16 @@
    "spd": 58,
    "spe": 97
   },
+  "powerScores": {
+   "physicalType1": 78,
+   "physicalType2": 67,
+   "specialType1": 66,
+   "specialType2": 48,
+   "physicalDefense": 15,
+   "physicalDefenseFull": 56,
+   "specialDefense": 15,
+   "specialDefenseFull": 56
+  },
   "abilities": [
    "Hunger Switch"
   ],
@@ -6965,7 +9171,6 @@
   "heightm": 0.3,
   "weightkg": 3,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 65
  },
  {
@@ -6984,6 +9189,16 @@
    "spd": 58,
    "spe": 97
   },
+  "powerScores": {
+   "physicalType1": 78,
+   "physicalType2": 67,
+   "specialType1": 66,
+   "specialType2": 48,
+   "physicalDefense": 15,
+   "physicalDefenseFull": 56,
+   "specialDefense": 15,
+   "specialDefenseFull": 56
+  },
   "abilities": [
    "Hunger Switch"
   ],
@@ -6993,7 +9208,6 @@
   "heightm": 0.3,
   "weightkg": 3,
   "gender": null,
-  "color": "Purple",
   "moveCount": 65
  },
  {
@@ -7012,6 +9226,16 @@
    "spd": 100,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 54,
+   "specialType1": 87,
+   "specialType2": 93,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Tangled Feet",
    "Screen Cleaner",
@@ -7023,7 +9247,6 @@
   "heightm": 1.5,
   "weightkg": 58.2,
   "gender": null,
-  "color": "Purple",
   "moveCount": 93
  },
  {
@@ -7041,6 +9264,16 @@
    "spd": 85,
    "spe": 35
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 0,
+   "specialType1": 48,
+   "specialType2": 0,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Own Tempo",
    "Stamina",
@@ -7052,7 +9285,6 @@
   "heightm": 2.5,
   "weightkg": 920,
   "gender": null,
-  "color": "Brown",
   "moveCount": 45
  },
  {
@@ -7070,6 +9302,16 @@
    "spd": 95,
    "spe": 29
   },
+  "powerScores": {
+   "physicalType1": 42,
+   "physicalType2": 0,
+   "specialType1": 91,
+   "specialType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Forewarn",
    "Synchronize",
@@ -7081,7 +9323,6 @@
   "heightm": 1.1,
   "weightkg": 60.5,
   "gender": null,
-  "color": "Pink",
   "moveCount": 50
  },
  {
@@ -7099,6 +9340,16 @@
    "spd": 100,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 74,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 64,
+   "specialDefense": 50,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Flash Fire",
    "Drought"
@@ -7109,7 +9360,6 @@
   "heightm": 1.1,
   "weightkg": 19.9,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 67
  },
  {
@@ -7128,6 +9378,16 @@
    "spd": 100,
    "spe": 109
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 52,
+   "specialType1": 71,
+   "specialType2": 62,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 64,
+   "specialDefense": 50,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Snow Cloak",
    "Snow Warning"
@@ -7138,7 +9398,6 @@
   "heightm": 1.1,
   "weightkg": 19.9,
   "gender": null,
-  "color": "Blue",
   "moveCount": 64
  },
  {
@@ -7157,6 +9416,16 @@
    "spd": 80,
    "spe": 123
   },
+  "powerScores": {
+   "physicalType1": 83,
+   "physicalType2": 59,
+   "specialType1": 79,
+   "specialType2": 93,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Frisk",
    "Infiltrator",
@@ -7168,7 +9437,6 @@
   "heightm": 1.5,
   "weightkg": 85,
   "gender": null,
-  "color": "Purple",
   "moveCount": 64
  },
  {
@@ -7187,6 +9455,16 @@
    "spd": 110,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 75,
+   "physicalType2": 44,
+   "specialType1": 62,
+   "specialType2": 83,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Inner Focus",
    "Telepathy",
@@ -7198,7 +9476,6 @@
   "heightm": 1.5,
   "weightkg": 76,
   "gender": null,
-  "color": "White",
   "moveCount": 64
  },
  {
@@ -7216,6 +9493,16 @@
    "spd": 55,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 67,
+   "physicalType2": 0,
+   "specialType1": 75,
+   "specialType2": 0,
+   "physicalDefense": 63,
+   "physicalDefenseFull": 77,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  },
   "abilities": [
    "Earth Eater",
    "Sand Veil"
@@ -7226,7 +9513,6 @@
   "heightm": 2.5,
   "weightkg": 310,
   "gender": null,
-  "color": "Pink",
   "moveCount": 40
  },
  {
@@ -7245,6 +9531,16 @@
    "spd": 65,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 97,
+   "specialType1": 46,
+   "specialType2": 54,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Poison Point",
    "Swift Swim",
@@ -7256,7 +9552,6 @@
   "heightm": 2.5,
   "weightkg": 60.5,
   "gender": null,
-  "color": "Black",
   "moveCount": 60
  },
  {
@@ -7274,6 +9569,16 @@
    "spd": 62,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 71,
+   "physicalType2": 0,
+   "specialType1": 55,
+   "specialType2": 0,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 69,
+   "specialDefense": 38,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Zero to Hero"
   ],
@@ -7283,7 +9588,6 @@
   "heightm": 1.3,
   "weightkg": 60.2,
   "gender": null,
-  "color": "Blue",
   "moveCount": 58
  },
  {
@@ -7301,6 +9605,16 @@
    "spd": 87,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 122,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Zero to Hero"
   ],
@@ -7310,7 +9624,6 @@
   "heightm": 1.8,
   "weightkg": 97.4,
   "gender": null,
-  "color": "Blue",
   "moveCount": 58
  },
  {
@@ -7329,6 +9642,16 @@
    "spd": 71,
    "spe": 58
   },
+  "powerScores": {
+   "physicalType1": 101,
+   "physicalType2": 81,
+   "specialType1": 71,
+   "specialType2": 48,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Iron Fist",
    "Mold Breaker",
@@ -7340,7 +9663,6 @@
   "heightm": 2.1,
   "weightkg": 136,
   "gender": null,
-  "color": "White",
   "moveCount": 80
  },
  {
@@ -7358,6 +9680,16 @@
    "spd": 60,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 124,
+   "physicalType2": 0,
+   "specialType1": 54,
+   "specialType2": 0,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 36,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Receiver",
    "Defiant"
@@ -7368,7 +9700,6 @@
   "heightm": 2,
   "weightkg": 82.8,
   "gender": null,
-  "color": "White",
   "moveCount": 66
  },
  {
@@ -7387,6 +9718,16 @@
    "spd": 70,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 42,
+   "physicalType2": 59,
+   "specialType1": 78,
+   "specialType2": 78,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 68,
+   "specialDefense": 27,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Keen Eye",
    "Drizzle",
@@ -7398,7 +9739,6 @@
   "heightm": 1.2,
   "weightkg": 28,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 53
  },
  {
@@ -7417,6 +9757,16 @@
    "spd": 70,
    "spe": 101
   },
+  "powerScores": {
+   "physicalType1": 46,
+   "physicalType2": 89,
+   "specialType1": 54,
+   "specialType2": 66,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Keen Eye",
    "Tangled Feet",
@@ -7428,7 +9778,6 @@
   "heightm": 1.5,
   "weightkg": 39.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 31
  },
  {
@@ -7447,6 +9796,16 @@
    "spd": 80,
    "spe": 121
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 69,
+   "specialType1": 63,
+   "specialType2": 76,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "No Guard"
   ],
@@ -7456,7 +9815,6 @@
   "heightm": 2.2,
   "weightkg": 50.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 31
  },
  {
@@ -7474,6 +9832,16 @@
    "spd": 50,
    "spe": 90
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 0,
+   "specialType1": 59,
+   "specialType2": 0,
+   "physicalDefense": -34,
+   "physicalDefenseFull": 38,
+   "specialDefense": -15,
+   "specialDefenseFull": 44
+  },
   "abilities": [
    "Static",
    "Lightning Rod"
@@ -7484,7 +9852,6 @@
   "heightm": 0.4,
   "weightkg": 6,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 60
  },
  {
@@ -7502,6 +9869,16 @@
    "spd": 70,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 70,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Hyper Cutter",
    "Mold Breaker",
@@ -7513,7 +9890,6 @@
   "heightm": 1.5,
   "weightkg": 55,
   "gender": null,
-  "color": "Brown",
   "moveCount": 53
  },
  {
@@ -7532,6 +9908,16 @@
    "spd": 90,
    "spe": 105
   },
+  "powerScores": {
+   "physicalType1": 61,
+   "physicalType2": 79,
+   "specialType1": 0,
+   "specialType2": 32,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Aerilate"
   ],
@@ -7541,7 +9927,6 @@
   "heightm": 1.7,
   "weightkg": 59,
   "gender": null,
-  "color": "Brown",
   "moveCount": 53
  },
  {
@@ -7559,6 +9944,16 @@
    "spd": 100,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 0,
+   "specialType1": 75,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Water Absorb",
    "Damp",
@@ -7570,7 +9965,6 @@
   "heightm": 1.1,
   "weightkg": 33.9,
   "gender": null,
-  "color": "Green",
   "moveCount": 57
  },
  {
@@ -7589,6 +9983,16 @@
    "spd": 54,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 52,
+   "specialType1": 79,
+   "specialType2": 50,
+   "physicalDefense": -19,
+   "physicalDefenseFull": 43,
+   "specialDefense": -4,
+   "specialDefenseFull": 48
+  },
   "abilities": [
    "Hospitality",
    "Heatproof"
@@ -7599,7 +10003,6 @@
   "heightm": 0.1,
   "weightkg": 1.1,
   "gender": "N",
-  "color": "Green",
   "moveCount": 32
  },
  {
@@ -7617,6 +10020,16 @@
    "spd": 114,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 0,
+   "specialType1": 71,
+   "specialType2": 0,
+   "physicalDefense": 23,
+   "physicalDefenseFull": 59,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Weak Armor",
    "Cursed Body"
@@ -7627,7 +10040,6 @@
   "heightm": 0.2,
   "weightkg": 0.4,
   "gender": "N",
-  "color": "Purple",
   "moveCount": 46
  },
  {
@@ -7646,6 +10058,16 @@
    "spd": 116,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 55,
+   "specialType1": 94,
+   "specialType2": 85,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Torrent",
    "Liquid Voice"
@@ -7656,7 +10078,6 @@
   "heightm": 1.8,
   "weightkg": 44,
   "gender": null,
-  "color": "Blue",
   "moveCount": 63
  },
  {
@@ -7675,6 +10096,16 @@
    "spd": 55,
    "spe": 46
   },
+  "powerScores": {
+   "physicalType1": 63,
+   "physicalType2": 80,
+   "specialType1": 39,
+   "specialType2": 42,
+   "physicalDefense": 24,
+   "physicalDefenseFull": 59,
+   "specialDefense": 8,
+   "specialDefenseFull": 53
+  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -7686,7 +10117,6 @@
   "heightm": 0.5,
   "weightkg": 7.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 58
  },
  {
@@ -7705,6 +10135,16 @@
    "spd": 55,
    "spe": 56
   },
+  "powerScores": {
+   "physicalType1": 63,
+   "physicalType2": 80,
+   "specialType1": 39,
+   "specialType2": 42,
+   "physicalDefense": 17,
+   "physicalDefenseFull": 56,
+   "specialDefense": 0,
+   "specialDefenseFull": 50
+  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -7716,7 +10156,6 @@
   "heightm": 0.3,
   "weightkg": 3.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 58
  },
  {
@@ -7735,6 +10174,16 @@
    "spd": 55,
    "spe": 41
   },
+  "powerScores": {
+   "physicalType1": 63,
+   "physicalType2": 80,
+   "specialType1": 39,
+   "specialType2": 42,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 12,
+   "specialDefenseFull": 54
+  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -7746,7 +10195,6 @@
   "heightm": 0.8,
   "weightkg": 15,
   "gender": null,
-  "color": "Brown",
   "moveCount": 58
  },
  {
@@ -7765,6 +10213,16 @@
    "spd": 66,
    "spe": 106
   },
+  "powerScores": {
+   "physicalType1": 70,
+   "physicalType2": 70,
+   "specialType1": 101,
+   "specialType2": 71,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Rivalry",
    "Unnerve",
@@ -7776,7 +10234,6 @@
   "heightm": 1.5,
   "weightkg": 81.5,
   "gender": null,
-  "color": "Brown",
   "moveCount": 49
  },
  {
@@ -7795,6 +10252,16 @@
    "spd": 86,
    "spe": 126
   },
+  "powerScores": {
+   "physicalType1": 94,
+   "physicalType2": 63,
+   "specialType1": 130,
+   "specialType2": 61,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 48,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Fire Mane"
   ],
@@ -7804,7 +10271,6 @@
   "heightm": 1.5,
   "weightkg": 93.3,
   "gender": null,
-  "color": "Brown",
   "moveCount": 49
  },
  {
@@ -7823,6 +10289,16 @@
    "spd": 75,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 98,
+   "physicalType2": 98,
+   "specialType1": 74,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Torrent",
    "Moxie"
@@ -7833,7 +10309,6 @@
   "heightm": 1.8,
   "weightkg": 61.9,
   "gender": null,
-  "color": "Blue",
   "moveCount": 59
  },
  {
@@ -7852,6 +10327,16 @@
    "spd": 55,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 63,
+   "physicalType2": 85,
+   "specialType1": 58,
+   "specialType2": 50,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 15,
+   "specialDefenseFull": 56
+  },
   "abilities": [
    "Poison Point",
    "Swift Swim",
@@ -7863,7 +10348,6 @@
   "heightm": 0.5,
   "weightkg": 3.9,
   "gender": null,
-  "color": "Gray",
   "moveCount": 63
  },
  {
@@ -7881,6 +10365,16 @@
    "spd": 80,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 83,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 12,
+   "physicalDefenseFull": 54,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Static",
    "Lightning Rod"
@@ -7891,7 +10385,6 @@
   "heightm": 0.8,
   "weightkg": 30,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 66
  },
  {
@@ -7910,6 +10403,16 @@
    "spd": 85,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 0,
+   "specialType1": 85,
+   "specialType2": 63,
+   "physicalDefense": 6,
+   "physicalDefenseFull": 53,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Surge Surfer"
   ],
@@ -7919,7 +10422,6 @@
   "heightm": 0.7,
   "weightkg": 21,
   "gender": null,
-  "color": "Brown",
   "moveCount": 74
  },
  {
@@ -7937,6 +10439,16 @@
    "spd": 95,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 84,
+   "physicalType2": 0,
+   "specialType1": 64,
+   "specialType2": 0,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Electric Surge"
   ],
@@ -7946,7 +10458,6 @@
   "heightm": 1.2,
   "weightkg": 38,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 66
  },
  {
@@ -7964,6 +10475,16 @@
    "spd": 80,
    "spe": 130
   },
+  "powerScores": {
+   "physicalType1": 69,
+   "physicalType2": 0,
+   "specialType1": 94,
+   "specialType2": 0,
+   "physicalDefense": 12,
+   "physicalDefenseFull": 54,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "No Guard"
   ],
@@ -7973,7 +10494,6 @@
   "heightm": 1,
   "weightkg": 26,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 66
  },
  {
@@ -7991,6 +10511,16 @@
    "spd": 50,
    "spe": 58
   },
+  "powerScores": {
+   "physicalType1": 156,
+   "physicalType2": 0,
+   "specialType1": 35,
+   "specialType2": 0,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 65,
+   "specialDefense": 27,
+   "specialDefenseFull": 61
+  },
   "abilities": [
    "Mold Breaker",
    "Sheer Force"
@@ -8001,7 +10531,6 @@
   "heightm": 1.6,
   "weightkg": 102.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 74
  },
  {
@@ -8019,6 +10548,16 @@
    "spd": 85,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 46,
+   "physicalType2": 0,
+   "specialType1": 102,
+   "specialType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Overcoat",
    "Magic Guard",
@@ -8030,7 +10569,6 @@
   "heightm": 1,
   "weightkg": 20.1,
   "gender": null,
-  "color": "Green",
   "moveCount": 66
  },
  {
@@ -8049,6 +10587,16 @@
    "spd": 55,
    "spe": 40
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 137,
+   "specialType1": 48,
+   "specialType2": 0,
+   "physicalDefense": 69,
+   "physicalDefenseFull": 80,
+   "specialDefense": 38,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Lightning Rod",
    "Solid Rock",
@@ -8060,7 +10608,6 @@
   "heightm": 2.4,
   "weightkg": 282.8,
   "gender": null,
-  "color": "Gray",
   "moveCount": 91
  },
  {
@@ -8079,6 +10626,16 @@
    "spd": 105,
    "spe": 90
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 48,
+   "specialType1": 110,
+   "specialType2": 78,
+   "physicalDefense": 23,
+   "physicalDefenseFull": 59,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Natural Cure",
    "Poison Point",
@@ -8090,7 +10647,6 @@
   "heightm": 0.9,
   "weightkg": 14.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 51
  },
  {
@@ -8109,6 +10665,16 @@
    "spd": 77,
    "spe": 91
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 55,
+   "specialType1": 78,
+   "specialType2": 58,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 27,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Levitate"
   ],
@@ -8118,7 +10684,6 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "gender": "N",
-  "color": "Red",
   "moveCount": 42
  },
  {
@@ -8137,6 +10702,16 @@
    "spd": 107,
    "spe": 86
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Levitate"
   ],
@@ -8146,7 +10721,6 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "gender": "N",
-  "color": "Red",
   "moveCount": 42
  },
  {
@@ -8165,6 +10739,16 @@
    "spd": 107,
    "spe": 86
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Levitate"
   ],
@@ -8174,7 +10758,6 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "gender": "N",
-  "color": "Red",
   "moveCount": 42
  },
  {
@@ -8193,6 +10776,16 @@
    "spd": 107,
    "spe": 86
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Levitate"
   ],
@@ -8202,7 +10795,6 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "gender": "N",
-  "color": "Red",
   "moveCount": 42
  },
  {
@@ -8221,6 +10813,16 @@
    "spd": 107,
    "spe": 86
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Levitate"
   ],
@@ -8230,7 +10832,6 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "gender": "N",
-  "color": "Red",
   "moveCount": 42
  },
  {
@@ -8249,6 +10850,16 @@
    "spd": 107,
    "spe": 86
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 83,
+   "specialType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Levitate"
   ],
@@ -8258,7 +10869,6 @@
   "heightm": 0.3,
   "weightkg": 0.3,
   "gender": "N",
-  "color": "Red",
   "moveCount": 42
  },
  {
@@ -8277,6 +10887,16 @@
    "spd": 105,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 71,
+   "physicalType2": 78,
+   "specialType1": 46,
+   "specialType2": 40,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Wandering Spirit"
   ],
@@ -8286,7 +10906,6 @@
   "heightm": 1.6,
   "weightkg": 66.6,
   "gender": null,
-  "color": "Gray",
   "moveCount": 69
  },
  {
@@ -8305,6 +10924,16 @@
    "spd": 65,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 59,
+   "physicalType2": 67,
+   "specialType1": 46,
+   "specialType2": 46,
+   "physicalDefense": 25,
+   "physicalDefenseFull": 59,
+   "specialDefense": 16,
+   "specialDefenseFull": 56
+  },
   "abilities": [
    "Keen Eye",
    "Stall",
@@ -8316,7 +10945,6 @@
   "heightm": 0.5,
   "weightkg": 11,
   "gender": null,
-  "color": "Purple",
   "moveCount": 88
  },
  {
@@ -8335,6 +10963,16 @@
    "spd": 115,
    "spe": 20
   },
+  "powerScores": {
+   "physicalType1": 49,
+   "physicalType2": 57,
+   "specialType1": 42,
+   "specialType2": 42,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Magic Bounce"
   ],
@@ -8344,7 +10982,6 @@
   "heightm": 0.5,
   "weightkg": 161,
   "gender": null,
-  "color": "Purple",
   "moveCount": 88
  },
  {
@@ -8363,6 +11000,16 @@
    "spd": 60,
    "spe": 117
   },
+  "powerScores": {
+   "physicalType1": 67,
+   "physicalType2": 67,
+   "specialType1": 94,
+   "specialType2": 102,
+   "physicalDefense": 22,
+   "physicalDefenseFull": 59,
+   "specialDefense": 22,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Corrosion",
    "Oblivious"
@@ -8373,7 +11020,6 @@
   "heightm": 1.2,
   "weightkg": 22.2,
   "gender": "F",
-  "color": "Black",
   "moveCount": 70
  },
  {
@@ -8391,6 +11037,16 @@
    "spd": 70,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 67,
+   "physicalType2": 0,
+   "specialType1": 85,
+   "specialType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Torrent",
    "Shell Armor"
@@ -8401,7 +11057,6 @@
   "heightm": 1.5,
   "weightkg": 94.6,
   "gender": null,
-  "color": "Blue",
   "moveCount": 61
  },
  {
@@ -8420,6 +11075,16 @@
    "spd": 65,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 70,
+   "physicalType2": 62,
+   "specialType1": 81,
+   "specialType2": 59,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Torrent",
    "Sharpness"
@@ -8430,7 +11095,6 @@
   "heightm": 1.5,
   "weightkg": 58.2,
   "gender": null,
-  "color": "Blue",
   "moveCount": 67
  },
  {
@@ -8448,6 +11112,16 @@
    "spd": 70,
    "spe": 71
   },
+  "powerScores": {
+   "physicalType1": 78,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 33,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "Sand Spit",
    "Shed Skin",
@@ -8459,7 +11133,6 @@
   "heightm": 3.8,
   "weightkg": 65.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 48
  },
  {
@@ -8477,6 +11150,16 @@
    "spd": 85,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 0,
+   "specialType1": 98,
+   "specialType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Overgrow",
    "Unburden"
@@ -8487,7 +11170,6 @@
   "heightm": 1.7,
   "weightkg": 52.2,
   "gender": null,
-  "color": "Green",
   "moveCount": 77
  },
  {
@@ -8506,6 +11188,16 @@
    "spd": 85,
    "spe": 145
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 80,
+   "specialType1": 94,
+   "specialType2": 63,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Lightning Rod"
   ],
@@ -8515,7 +11207,6 @@
   "heightm": 1.9,
   "weightkg": 55.2,
   "gender": null,
-  "color": "Green",
   "moveCount": 77
  },
  {
@@ -8534,6 +11225,16 @@
    "spd": 80,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 81,
+   "physicalType2": 71,
+   "specialType1": 48,
+   "specialType2": 74,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Swarm",
    "Technician",
@@ -8545,7 +11246,6 @@
   "heightm": 1.8,
   "weightkg": 118,
   "gender": null,
-  "color": "Red",
   "moveCount": 64
  },
  {
@@ -8564,6 +11264,16 @@
    "spd": 100,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 69,
+   "physicalType2": 61,
+   "specialType1": 40,
+   "specialType2": 61,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Technician"
   ],
@@ -8573,7 +11283,6 @@
   "heightm": 2,
   "weightkg": 125,
   "gender": null,
-  "color": "Red",
   "moveCount": 64
  },
  {
@@ -8592,6 +11301,16 @@
    "spd": 69,
    "spe": 112
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 89,
+   "specialType1": 0,
+   "specialType2": 48,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 26,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Poison Point",
    "Swarm",
@@ -8603,7 +11322,6 @@
   "heightm": 2.5,
   "weightkg": 200.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 53
  },
  {
@@ -8622,6 +11340,16 @@
    "spd": 99,
    "spe": 62
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 85,
+   "specialType1": 0,
+   "specialType2": 43,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 76,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Shell Armor"
   ],
@@ -8631,7 +11359,6 @@
   "heightm": 3.2,
   "weightkg": 230.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 53
  },
  {
@@ -8650,6 +11377,16 @@
    "spd": 65,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 93,
+   "specialType1": 101,
+   "specialType2": 101,
+   "physicalDefense": 25,
+   "physicalDefenseFull": 60,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Chlorophyll",
    "Insomnia",
@@ -8661,7 +11398,6 @@
   "heightm": 0.9,
   "weightkg": 15,
   "gender": null,
-  "color": "Green",
   "moveCount": 48
  },
  {
@@ -8680,6 +11416,16 @@
    "spd": 85,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 85,
+   "specialType1": 91,
+   "specialType2": 91,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Spicy Spray"
   ],
@@ -8689,7 +11435,6 @@
   "heightm": 1.2,
   "weightkg": 22,
   "gender": null,
-  "color": "Green",
   "moveCount": 48
  },
  {
@@ -8708,6 +11453,16 @@
    "spd": 115,
    "spe": 58
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 102,
+   "specialType1": 39,
+   "specialType2": 55,
+   "physicalDefense": 53,
+   "physicalDefenseFull": 71,
+   "specialDefense": 53,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Shed Skin",
    "Moxie",
@@ -8719,7 +11474,6 @@
   "heightm": 1.1,
   "weightkg": 30,
   "gender": null,
-  "color": "Red",
   "moveCount": 82
  },
  {
@@ -8738,6 +11492,16 @@
    "spd": 135,
    "spe": 68
   },
+  "powerScores": {
+   "physicalType1": 64,
+   "physicalType2": 102,
+   "specialType1": 33,
+   "specialType2": 48,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Intimidate"
   ],
@@ -8747,7 +11511,6 @@
   "heightm": 1.1,
   "weightkg": 31,
   "gender": null,
-  "color": "Red",
   "moveCount": 82
  },
  {
@@ -8765,6 +11528,16 @@
    "spd": 95,
    "spe": 113
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Overgrow",
    "Contrary"
@@ -8775,7 +11548,6 @@
   "heightm": 3.3,
   "weightkg": 63,
   "gender": null,
-  "color": "Green",
   "moveCount": 53
  },
  {
@@ -8794,6 +11566,16 @@
    "spd": 40,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 71,
+   "physicalType2": 67,
+   "specialType1": 78,
+   "specialType2": 58,
+   "physicalDefense": -2,
+   "physicalDefenseFull": 50,
+   "specialDefense": -2,
+   "specialDefenseFull": 50
+  },
   "abilities": [
    "Rough Skin",
    "Speed Boost"
@@ -8804,7 +11586,6 @@
   "heightm": 1.8,
   "weightkg": 88.8,
   "gender": null,
-  "color": "Blue",
   "moveCount": 57
  },
  {
@@ -8823,6 +11604,16 @@
    "spd": 65,
    "spe": 105
   },
+  "powerScores": {
+   "physicalType1": 61,
+   "physicalType2": 87,
+   "specialType1": 67,
+   "specialType2": 49,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  },
   "abilities": [
    "Strong Jaw"
   ],
@@ -8832,7 +11623,6 @@
   "heightm": 2.5,
   "weightkg": 130.3,
   "gender": null,
-  "color": "Blue",
   "moveCount": 57
  },
  {
@@ -8850,6 +11640,16 @@
    "spd": 63,
    "spe": 101
   },
+  "powerScores": {
+   "physicalType1": 62,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  },
   "abilities": [
    "Gluttony",
    "Torrent"
@@ -8860,7 +11660,6 @@
   "heightm": 1,
   "weightkg": 29,
   "gender": null,
-  "color": "Blue",
   "moveCount": 52
  },
  {
@@ -8878,6 +11677,16 @@
    "spd": 63,
    "spe": 101
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 0,
+   "specialType1": 94,
+   "specialType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  },
   "abilities": [
    "Gluttony",
    "Overgrow"
@@ -8888,7 +11697,6 @@
   "heightm": 1.1,
   "weightkg": 30.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 50
  },
  {
@@ -8906,6 +11714,16 @@
    "spd": 63,
    "spe": 101
   },
+  "powerScores": {
+   "physicalType1": 87,
+   "physicalType2": 0,
+   "specialType1": 94,
+   "specialType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  },
   "abilities": [
    "Gluttony",
    "Blaze"
@@ -8916,7 +11734,6 @@
   "heightm": 1,
   "weightkg": 28,
   "gender": null,
-  "color": "Red",
   "moveCount": 55
  },
  {
@@ -8935,6 +11752,16 @@
    "spd": 80,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 59,
+   "specialType1": 109,
+   "specialType2": 67,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 39,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Hospitality",
    "Heatproof"
@@ -8945,7 +11772,6 @@
   "heightm": 0.2,
   "weightkg": 2.2,
   "gender": "N",
-  "color": "Green",
   "moveCount": 35
  },
  {
@@ -8963,6 +11789,16 @@
    "spd": 54,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 0,
+   "specialType1": 50,
+   "specialType2": 0,
+   "physicalDefense": -19,
+   "physicalDefenseFull": 43,
+   "specialDefense": -4,
+   "specialDefenseFull": 48
+  },
   "abilities": [
    "Weak Armor",
    "Cursed Body"
@@ -8973,7 +11809,6 @@
   "heightm": 0.1,
   "weightkg": 0.2,
   "gender": "N",
-  "color": "Purple",
   "moveCount": 38
  },
  {
@@ -8992,6 +11827,16 @@
    "spd": 70,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 89,
+   "specialType1": 63,
+   "specialType2": 50,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Keen Eye",
    "Sturdy",
@@ -9003,7 +11848,6 @@
   "heightm": 1.7,
   "weightkg": 50.5,
   "gender": null,
-  "color": "Gray",
   "moveCount": 51
  },
  {
@@ -9022,6 +11866,16 @@
    "spd": 100,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 58,
+   "physicalType2": 99,
+   "specialType1": 49,
+   "specialType2": 39,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Stalwart"
   ],
@@ -9031,7 +11885,6 @@
   "heightm": 1.7,
   "weightkg": 40.4,
   "gender": null,
-  "color": "Gray",
   "moveCount": 51
  },
  {
@@ -9050,6 +11903,16 @@
    "spd": 75,
    "spe": 66
   },
+  "powerScores": {
+   "physicalType1": 74,
+   "physicalType2": 67,
+   "specialType1": 101,
+   "specialType2": 63,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Blaze",
    "Unaware"
@@ -9060,7 +11923,6 @@
   "heightm": 1.6,
   "weightkg": 326.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 56
  },
  {
@@ -9079,6 +11941,16 @@
    "spd": 80,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 50,
+   "specialType1": 81,
+   "specialType2": 89,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Oblivious",
    "Own Tempo",
@@ -9090,7 +11962,6 @@
   "heightm": 1.6,
   "weightkg": 78.5,
   "gender": null,
-  "color": "Pink",
   "moveCount": 78
  },
  {
@@ -9109,6 +11980,16 @@
    "spd": 70,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 59,
+   "specialType1": 89,
+   "specialType2": 89,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Quick Draw",
    "Own Tempo",
@@ -9120,7 +12001,6 @@
   "heightm": 1.6,
   "weightkg": 70.5,
   "gender": null,
-  "color": "Pink",
   "moveCount": 92
  },
  {
@@ -9139,6 +12019,16 @@
    "spd": 80,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 40,
+   "physicalType2": 39,
+   "specialType1": 75,
+   "specialType2": 81,
+   "physicalDefense": 73,
+   "physicalDefenseFull": 83,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Shell Armor"
   ],
@@ -9148,7 +12038,6 @@
   "heightm": 2,
   "weightkg": 120,
   "gender": null,
-  "color": "Pink",
   "moveCount": 78
  },
  {
@@ -9167,6 +12056,16 @@
    "spd": 110,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 50,
+   "specialType1": 81,
+   "specialType2": 89,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Oblivious",
    "Own Tempo",
@@ -9178,7 +12077,6 @@
   "heightm": 2,
   "weightkg": 79.5,
   "gender": null,
-  "color": "Pink",
   "moveCount": 85
  },
  {
@@ -9197,6 +12095,16 @@
    "spd": 110,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 67,
+   "physicalType2": 46,
+   "specialType1": 93,
+   "specialType2": 93,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Curious Medicine",
    "Own Tempo",
@@ -9208,7 +12116,6 @@
   "heightm": 1.8,
   "weightkg": 79.5,
   "gender": null,
-  "color": "Pink",
   "moveCount": 95
  },
  {
@@ -9226,6 +12133,16 @@
    "spd": 75,
    "spe": 72
   },
+  "powerScores": {
+   "physicalType1": 58,
+   "physicalType2": 0,
+   "specialType1": 67,
+   "specialType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 41,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Sweet Veil",
    "Unburden"
@@ -9236,7 +12153,6 @@
   "heightm": 0.8,
   "weightkg": 5,
   "gender": null,
-  "color": "White",
   "moveCount": 42
  },
  {
@@ -9255,6 +12171,16 @@
    "spd": 80,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 132,
+   "physicalType2": 105,
+   "specialType1": 54,
+   "specialType2": 44,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Pressure",
    "Unburden",
@@ -9266,7 +12192,6 @@
   "heightm": 1.3,
   "weightkg": 43,
   "gender": null,
-  "color": "Blue",
   "moveCount": 61
  },
  {
@@ -9284,6 +12209,16 @@
    "spd": 110,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 109,
+   "physicalType2": 0,
+   "specialType1": 52,
+   "specialType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 71,
+   "specialDefenseFull": 81
+  },
   "abilities": [
    "Immunity",
    "Thick Fat",
@@ -9295,7 +12230,6 @@
   "heightm": 2.1,
   "weightkg": 460,
   "gender": null,
-  "color": "Black",
   "moveCount": 83
  },
  {
@@ -9314,6 +12248,16 @@
    "spd": 108,
    "spe": 35
   },
+  "powerScores": {
+   "physicalType1": 78,
+   "physicalType2": 67,
+   "specialType1": 55,
+   "specialType2": 55,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Pressure",
    "Infiltrator"
@@ -9324,7 +12268,6 @@
   "heightm": 1,
   "weightkg": 108,
   "gender": null,
-  "color": "Purple",
   "moveCount": 54
  },
  {
@@ -9343,6 +12286,16 @@
    "spd": 51,
    "spe": 92
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 85,
+   "specialType1": 42,
+   "specialType2": 52,
+   "physicalDefense": 21,
+   "physicalDefenseFull": 59,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Intimidate",
    "Hustle",
@@ -9354,7 +12307,6 @@
   "heightm": 0.6,
   "weightkg": 2.4,
   "gender": null,
-  "color": "Blue",
   "moveCount": 41
  },
  {
@@ -9373,6 +12325,16 @@
    "spd": 51,
    "spe": 92
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 85,
+   "specialType1": 42,
+   "specialType2": 52,
+   "physicalDefense": 21,
+   "physicalDefenseFull": 59,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Intimidate",
    "Hustle",
@@ -9384,7 +12346,6 @@
   "heightm": 0.6,
   "weightkg": 2.4,
   "gender": null,
-  "color": "White",
   "moveCount": 41
  },
  {
@@ -9403,6 +12364,16 @@
    "spd": 51,
    "spe": 92
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 85,
+   "specialType1": 42,
+   "specialType2": 52,
+   "physicalDefense": 21,
+   "physicalDefenseFull": 59,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  },
   "abilities": [
    "Intimidate",
    "Hustle",
@@ -9414,7 +12385,6 @@
   "heightm": 0.6,
   "weightkg": 2.4,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 41
  },
  {
@@ -9433,6 +12403,16 @@
    "spd": 60,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 118,
+   "physicalType2": 117,
+   "specialType1": 46,
+   "specialType2": 55,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Intimidate",
    "Reckless"
@@ -9443,7 +12423,6 @@
   "heightm": 1.2,
   "weightkg": 24.9,
   "gender": null,
-  "color": "Brown",
   "moveCount": 43
  },
  {
@@ -9462,6 +12441,16 @@
    "spd": 90,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 99,
+   "specialType1": 51,
+   "specialType2": 46,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Contrary"
   ],
@@ -9471,7 +12460,6 @@
   "heightm": 1.9,
   "weightkg": 50,
   "gender": null,
-  "color": "Gray",
   "moveCount": 43
  },
  {
@@ -9490,6 +12478,16 @@
    "spd": 85,
    "spe": 115
   },
+  "powerScores": {
+   "physicalType1": 52,
+   "physicalType2": 50,
+   "specialType1": 81,
+   "specialType2": 67,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Illuminate",
    "Natural Cure",
@@ -9501,7 +12499,6 @@
   "heightm": 1.1,
   "weightkg": 80,
   "gender": "N",
-  "color": "Purple",
   "moveCount": 62
  },
  {
@@ -9520,6 +12517,16 @@
    "spd": 105,
    "spe": 120
   },
+  "powerScores": {
+   "physicalType1": 98,
+   "physicalType2": 92,
+   "specialType1": 75,
+   "specialType2": 61,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Huge Power"
   ],
@@ -9529,7 +12536,6 @@
   "heightm": 2.3,
   "weightkg": 80,
   "gender": "N",
-  "color": "Purple",
   "moveCount": 62
  },
  {
@@ -9548,6 +12554,16 @@
    "spd": 65,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 67,
+   "specialType1": 74,
+   "specialType2": 48,
+   "physicalDefense": 72,
+   "physicalDefenseFull": 82,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Rock Head",
    "Sturdy",
@@ -9559,7 +12575,6 @@
   "heightm": 9.2,
   "weightkg": 400,
   "gender": null,
-  "color": "Gray",
   "moveCount": 66
  },
  {
@@ -9578,6 +12593,16 @@
    "spd": 95,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 85,
+   "physicalType2": 66,
+   "specialType1": 57,
+   "specialType2": 37,
+   "physicalDefense": 76,
+   "physicalDefenseFull": 84,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Sand Force"
   ],
@@ -9587,7 +12612,6 @@
   "heightm": 10.5,
   "weightkg": 740,
   "gender": null,
-  "color": "Gray",
   "moveCount": 66
  },
  {
@@ -9606,6 +12630,16 @@
    "spd": 99,
    "spe": 32
   },
+  "powerScores": {
+   "physicalType1": 58,
+   "physicalType2": 0,
+   "specialType1": 58,
+   "specialType2": 71,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Static",
    "Limber",
@@ -9617,7 +12651,6 @@
   "heightm": 0.7,
   "weightkg": 11,
   "gender": null,
-  "color": "Brown",
   "moveCount": 48
  },
  {
@@ -9636,6 +12669,16 @@
    "spd": 84,
    "spe": 32
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 24,
+   "specialType1": 52,
+   "specialType2": 79,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Mimicry"
   ],
@@ -9645,7 +12688,6 @@
   "heightm": 0.7,
   "weightkg": 20.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 52
  },
  {
@@ -9664,6 +12706,16 @@
    "spd": 90,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 79,
+   "specialType1": 74,
+   "specialType2": 59,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Torrent",
    "Damp"
@@ -9674,7 +12726,6 @@
   "heightm": 1.5,
   "weightkg": 81.9,
   "gender": null,
-  "color": "Blue",
   "moveCount": 77
  },
  {
@@ -9693,6 +12744,16 @@
    "spd": 110,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 90,
+   "physicalType2": 75,
+   "specialType1": 60,
+   "specialType2": 49,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 61,
+   "specialDefenseFull": 76
+  },
   "abilities": [
    "Swift Swim"
   ],
@@ -9702,7 +12763,6 @@
   "heightm": 1.9,
   "weightkg": 102,
   "gender": null,
-  "color": "Blue",
   "moveCount": 77
  },
  {
@@ -9720,6 +12780,16 @@
    "spd": 130,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 94,
+   "physicalType2": 0,
+   "specialType1": 79,
+   "specialType2": 0,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  },
   "abilities": [
    "Cute Charm",
    "Pixilate"
@@ -9730,7 +12800,6 @@
   "heightm": 1,
   "weightkg": 23.5,
   "gender": null,
-  "color": "Pink",
   "moveCount": 55
  },
  {
@@ -9749,6 +12818,16 @@
    "spd": 69,
    "spe": 126
   },
+  "powerScores": {
+   "physicalType1": 78,
+   "physicalType2": 89,
+   "specialType1": 79,
+   "specialType2": 67,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Flame Body",
    "Gale Wings"
@@ -9759,7 +12838,6 @@
   "heightm": 1.2,
   "weightkg": 24.5,
   "gender": null,
-  "color": "Red",
   "moveCount": 50
  },
  {
@@ -9778,6 +12856,16 @@
    "spd": 95,
    "spe": 82
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 109,
+   "specialType2": 91,
+   "physicalDefense": 22,
+   "physicalDefenseFull": 59,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Commander",
    "Storm Drain"
@@ -9788,7 +12876,6 @@
   "heightm": 0.3,
   "weightkg": 8,
   "gender": null,
-  "color": "Pink",
   "moveCount": 31
  },
  {
@@ -9807,6 +12894,16 @@
    "spd": 95,
    "spe": 82
   },
+  "powerScores": {
+   "physicalType1": 0,
+   "physicalType2": 0,
+   "specialType1": 109,
+   "specialType2": 91,
+   "physicalDefense": 22,
+   "physicalDefenseFull": 59,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Commander",
    "Storm Drain"
@@ -9817,7 +12914,6 @@
   "heightm": 0.3,
   "weightkg": 8,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 31
  },
  {
@@ -9835,6 +12931,16 @@
    "spd": 70,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 0,
+   "specialType1": 40,
+   "specialType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Intimidate",
    "Anger Point",
@@ -9846,7 +12952,6 @@
   "heightm": 1.4,
   "weightkg": 88.4,
   "gender": "M",
-  "color": "Brown",
   "moveCount": 57
  },
  {
@@ -9865,6 +12970,16 @@
    "spd": 70,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 93,
+   "specialType1": 0,
+   "specialType2": 44,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Intimidate",
    "Anger Point",
@@ -9876,7 +12991,6 @@
   "heightm": 1.4,
   "weightkg": 110,
   "gender": "M",
-  "color": "Black",
   "moveCount": 52
  },
  {
@@ -9895,6 +13009,16 @@
    "spd": 70,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 93,
+   "specialType1": 0,
+   "specialType2": 52,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Intimidate",
    "Anger Point",
@@ -9906,7 +13030,6 @@
   "heightm": 1.4,
   "weightkg": 85,
   "gender": "M",
-  "color": "Black",
   "moveCount": 53
  },
  {
@@ -9924,6 +13047,16 @@
    "spd": 70,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 93,
+   "physicalType2": 0,
+   "specialType1": 0,
+   "specialType2": 0,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Intimidate",
    "Anger Point",
@@ -9935,7 +13068,6 @@
   "heightm": 1.4,
   "weightkg": 115,
   "gender": "M",
-  "color": "Black",
   "moveCount": 48
  },
  {
@@ -9954,6 +13086,16 @@
    "spd": 105,
    "spe": 94
   },
+  "powerScores": {
+   "physicalType1": 55,
+   "physicalType2": 97,
+   "specialType1": 31,
+   "specialType2": 83,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Mold Breaker",
    "Own Tempo",
@@ -9965,7 +13107,6 @@
   "heightm": 0.7,
   "weightkg": 112.8,
   "gender": "F",
-  "color": "Pink",
   "moveCount": 47
  },
  {
@@ -9983,6 +13124,16 @@
    "spd": 70,
    "spe": 20
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 0,
+   "specialType1": 98,
+   "specialType2": 0,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  },
   "abilities": [
    "White Smoke",
    "Drought",
@@ -9994,7 +13145,6 @@
   "heightm": 0.5,
   "weightkg": 80.4,
   "gender": null,
-  "color": "Brown",
   "moveCount": 57
  },
  {
@@ -10013,6 +13163,16 @@
    "spd": 85,
    "spe": 56
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 93,
+   "specialType1": 79,
+   "specialType2": 55,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Overgrow",
    "Shell Armor"
@@ -10023,7 +13183,6 @@
   "heightm": 2.2,
   "weightkg": 310,
   "gender": null,
-  "color": "Green",
   "moveCount": 72
  },
  {
@@ -10042,6 +13201,16 @@
    "spd": 75,
    "spe": 60
   },
+  "powerScores": {
+   "physicalType1": 59,
+   "physicalType2": 117,
+   "specialType1": 85,
+   "specialType2": 67,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  },
   "abilities": [
    "Keen Eye",
    "Skill Link",
@@ -10053,7 +13222,6 @@
   "heightm": 1.1,
   "weightkg": 26,
   "gender": null,
-  "color": "Black",
   "moveCount": 53
  },
  {
@@ -10072,6 +13240,16 @@
    "spd": 142,
    "spe": 35
   },
+  "powerScores": {
+   "physicalType1": 67,
+   "physicalType2": 48,
+   "specialType1": 50,
+   "specialType2": 55,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 56,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Merciless",
    "Limber",
@@ -10083,7 +13261,6 @@
   "heightm": 0.7,
   "weightkg": 14.5,
   "gender": null,
-  "color": "Blue",
   "moveCount": 51
  },
  {
@@ -10102,6 +13279,16 @@
    "spd": 65,
    "spe": 85
   },
+  "powerScores": {
+   "physicalType1": 91,
+   "physicalType2": 114,
+   "specialType1": 79,
+   "specialType2": 79,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Anticipation",
    "Dry Skin",
@@ -10113,7 +13300,6 @@
   "heightm": 1.3,
   "weightkg": 44.4,
   "gender": null,
-  "color": "Blue",
   "moveCount": 81
  },
  {
@@ -10132,6 +13318,16 @@
    "spd": 70,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 87,
+   "specialType1": 89,
+   "specialType2": 97,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Punk Rock",
    "Plus",
@@ -10143,7 +13339,6 @@
   "heightm": 24,
   "weightkg": 0,
   "gender": null,
-  "color": "Purple",
   "moveCount": 66
  },
  {
@@ -10162,6 +13357,16 @@
    "spd": 70,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 87,
+   "specialType1": 89,
+   "specialType2": 97,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Punk Rock",
    "Minus",
@@ -10173,7 +13378,6 @@
   "heightm": 1.6,
   "weightkg": 40,
   "gender": null,
-  "color": "Purple",
   "moveCount": 67
  },
  {
@@ -10192,6 +13396,16 @@
    "spd": 70,
    "spe": 75
   },
+  "powerScores": {
+   "physicalType1": 66,
+   "physicalType2": 87,
+   "specialType1": 89,
+   "specialType2": 97,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  },
   "abilities": [
    "Punk Rock",
    "Minus",
@@ -10203,7 +13417,6 @@
   "heightm": 24,
   "weightkg": 0,
   "gender": null,
-  "color": "Purple",
   "moveCount": 67
  },
  {
@@ -10222,6 +13435,16 @@
    "spd": 82,
    "spe": 56
   },
+  "powerScores": {
+   "physicalType1": 87,
+   "physicalType2": 93,
+   "specialType1": 46,
+   "specialType2": 74,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 45,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Natural Cure",
    "Frisk",
@@ -10233,7 +13456,6 @@
   "heightm": 1.5,
   "weightkg": 71,
   "gender": null,
-  "color": "Brown",
   "moveCount": 73
  },
  {
@@ -10251,6 +13473,16 @@
    "spd": 98,
    "spe": 72
   },
+  "powerScores": {
+   "physicalType1": 115,
+   "physicalType2": 0,
+   "specialType1": 66,
+   "specialType2": 0,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Leaf Guard",
    "Queenly Majesty",
@@ -10262,7 +13494,6 @@
   "heightm": 1.2,
   "weightkg": 21.4,
   "gender": "F",
-  "color": "Purple",
   "moveCount": 54
  },
  {
@@ -10280,6 +13511,16 @@
    "spd": 85,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 0,
+   "specialType1": 117,
+   "specialType2": 0,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  },
   "abilities": [
    "Blaze",
    "Flash Fire"
@@ -10290,7 +13531,6 @@
   "heightm": 1.7,
   "weightkg": 79.5,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 63
  },
  {
@@ -10309,6 +13549,16 @@
    "spd": 85,
    "spe": 95
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 74,
+   "specialType1": 124,
+   "specialType2": 67,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Blaze",
    "Frisk"
@@ -10319,7 +13569,6 @@
   "heightm": 1.6,
   "weightkg": 69.8,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 66
  },
  {
@@ -10338,6 +13587,16 @@
    "spd": 100,
    "spe": 61
   },
+  "powerScores": {
+   "physicalType1": 120,
+   "physicalType2": 85,
+   "specialType1": 58,
+   "specialType2": 58,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Sand Stream",
    "Unnerve"
@@ -10348,7 +13607,6 @@
   "heightm": 2,
   "weightkg": 202,
   "gender": null,
-  "color": "Green",
   "moveCount": 92
  },
  {
@@ -10367,6 +13625,16 @@
    "spd": 120,
    "spe": 71
   },
+  "powerScores": {
+   "physicalType1": 110,
+   "physicalType2": 76,
+   "specialType1": 45,
+   "specialType2": 45,
+   "physicalDefense": 70,
+   "physicalDefenseFull": 81,
+   "specialDefense": 64,
+   "specialDefenseFull": 77
+  },
   "abilities": [
    "Sand Stream"
   ],
@@ -10376,7 +13644,6 @@
   "heightm": 2.5,
   "weightkg": 255,
   "gender": null,
-  "color": "Green",
   "moveCount": 92
  },
  {
@@ -10395,6 +13662,16 @@
    "spd": 59,
    "spe": 71
   },
+  "powerScores": {
+   "physicalType1": 124,
+   "physicalType2": 115,
+   "specialType1": 36,
+   "specialType2": 78,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 29,
+   "specialDefenseFull": 61
+  },
   "abilities": [
    "Strong Jaw",
    "Rock Head"
@@ -10405,7 +13682,6 @@
   "heightm": 2.5,
   "weightkg": 270,
   "gender": null,
-  "color": "Red",
   "moveCount": 64
  },
  {
@@ -10423,6 +13699,16 @@
    "spd": 130,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 54,
+   "physicalType2": 0,
+   "specialType1": 44,
+   "specialType2": 0,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  },
   "abilities": [
    "Synchronize",
    "Inner Focus"
@@ -10433,7 +13719,6 @@
   "heightm": 1,
   "weightkg": 27,
   "gender": null,
-  "color": "Black",
   "moveCount": 67
  },
  {
@@ -10451,6 +13736,16 @@
    "spd": 95,
    "spe": 79
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 0,
+   "specialType1": 87,
+   "specialType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Ice Body",
    "Snow Warning",
@@ -10462,7 +13757,6 @@
   "heightm": 1.3,
   "weightkg": 57.5,
   "gender": null,
-  "color": "White",
   "moveCount": 41
  },
  {
@@ -10480,6 +13774,16 @@
    "spd": 95,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 48,
+   "physicalType2": 0,
+   "specialType1": 87,
+   "specialType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 70,
+   "specialDefense": 62,
+   "specialDefenseFull": 77
+  },
   "abilities": [
    "Water Absorb",
    "Hydration"
@@ -10490,7 +13794,6 @@
   "heightm": 1,
   "weightkg": 29,
   "gender": null,
-  "color": "Blue",
   "moveCount": 59
  },
  {
@@ -10509,6 +13812,16 @@
    "spd": 100,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 95,
+   "physicalType2": 52,
+   "specialType1": 94,
+   "specialType2": 70,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Overgrow",
    "Chlorophyll"
@@ -10519,7 +13832,6 @@
   "heightm": 2,
   "weightkg": 100,
   "gender": null,
-  "color": "Green",
   "moveCount": 57
  },
  {
@@ -10538,6 +13850,16 @@
    "spd": 120,
    "spe": 80
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 46,
+   "specialType1": 84,
+   "specialType2": 61,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  },
   "abilities": [
    "Thick Fat"
   ],
@@ -10547,7 +13869,6 @@
   "heightm": 2.4,
   "weightkg": 155.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 57
  },
  {
@@ -10566,6 +13887,16 @@
    "spd": 70,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 100,
+   "physicalType2": 62,
+   "specialType1": 94,
+   "specialType2": 70,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  },
   "abilities": [
    "Chlorophyll",
    "Gluttony"
@@ -10576,7 +13907,6 @@
   "heightm": 1.7,
   "weightkg": 15.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 59
  },
  {
@@ -10595,6 +13925,16 @@
    "spd": 95,
    "spe": 70
   },
+  "powerScores": {
+   "physicalType1": 90,
+   "physicalType2": 54,
+   "specialType1": 90,
+   "specialType2": 66,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 68,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  },
   "abilities": [
    "Innards Out"
   ],
@@ -10604,7 +13944,6 @@
   "heightm": 4.5,
   "weightkg": 125.5,
   "gender": null,
-  "color": "Green",
   "moveCount": 59
  },
  {
@@ -10623,6 +13962,16 @@
    "spd": 90,
    "spe": 50
   },
+  "powerScores": {
+   "physicalType1": 80,
+   "physicalType2": 0,
+   "specialType1": 101,
+   "specialType2": 75,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  },
   "abilities": [
    "Chlorophyll",
    "Effect Spore"
@@ -10633,7 +13982,6 @@
   "heightm": 1.2,
   "weightkg": 18.6,
   "gender": null,
-  "color": "Red",
   "moveCount": 54
  },
  {
@@ -10652,6 +14000,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10663,7 +14021,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Pink",
   "moveCount": 43
  },
  {
@@ -10682,6 +14039,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10693,7 +14060,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Brown",
   "moveCount": 43
  },
  {
@@ -10712,6 +14078,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10723,7 +14099,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Yellow",
   "moveCount": 43
  },
  {
@@ -10742,6 +14117,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10753,7 +14138,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Purple",
   "moveCount": 43
  },
  {
@@ -10772,6 +14156,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 32,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10783,7 +14177,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Pink",
   "moveCount": 49
  },
  {
@@ -10802,6 +14195,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10813,7 +14216,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Green",
   "moveCount": 43
  },
  {
@@ -10832,6 +14234,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10843,7 +14255,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Brown",
   "moveCount": 43
  },
  {
@@ -10862,6 +14273,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10873,7 +14294,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "White",
   "moveCount": 43
  },
  {
@@ -10892,6 +14312,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10903,7 +14333,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Green",
   "moveCount": 43
  },
  {
@@ -10922,6 +14351,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10933,7 +14372,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Blue",
   "moveCount": 43
  },
  {
@@ -10952,6 +14390,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10963,7 +14411,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Red",
   "moveCount": 43
  },
  {
@@ -10982,6 +14429,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -10993,7 +14450,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Gray",
   "moveCount": 43
  },
  {
@@ -11012,6 +14468,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11023,7 +14489,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Red",
   "moveCount": 43
  },
  {
@@ -11042,6 +14507,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 32,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11053,7 +14528,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Red",
   "moveCount": 49
  },
  {
@@ -11072,6 +14546,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11083,7 +14567,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Blue",
   "moveCount": 43
  },
  {
@@ -11102,6 +14585,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11113,7 +14606,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Brown",
   "moveCount": 43
  },
  {
@@ -11132,6 +14624,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11143,7 +14645,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Brown",
   "moveCount": 43
  },
  {
@@ -11162,6 +14663,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11173,7 +14684,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Green",
   "moveCount": 43
  },
  {
@@ -11192,6 +14702,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11203,7 +14723,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Red",
   "moveCount": 43
  },
  {
@@ -11222,6 +14741,16 @@
    "spd": 50,
    "spe": 89
   },
+  "powerScores": {
+   "physicalType1": 36,
+   "physicalType2": 28,
+   "specialType1": 62,
+   "specialType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -11233,7 +14762,6 @@
   "heightm": 1.2,
   "weightkg": 17,
   "gender": null,
-  "color": "Blue",
   "moveCount": 43
  },
  {
@@ -11252,6 +14780,16 @@
    "spd": 105,
    "spe": 100
   },
+  "powerScores": {
+   "physicalType1": 44,
+   "physicalType2": 66,
+   "specialType1": 81,
+   "specialType2": 117,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 64,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  },
   "abilities": [
    "Flame Body",
    "Swarm"
@@ -11262,7 +14800,6 @@
   "heightm": 1.6,
   "weightkg": 46,
   "gender": null,
-  "color": "White",
   "moveCount": 57
  },
  {
@@ -11280,6 +14817,16 @@
    "spd": 69,
    "spe": 77
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 0,
+   "specialType1": 35,
+   "specialType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 26,
+   "specialDefenseFull": 60
+  },
   "abilities": [
    "Illuminate",
    "Keen Eye",
@@ -11291,7 +14838,6 @@
   "heightm": 1.1,
   "weightkg": 27,
   "gender": null,
-  "color": "Brown",
   "moveCount": 52
  },
  {
@@ -11310,6 +14856,16 @@
    "spd": 85,
    "spe": 125
   },
+  "powerScores": {
+   "physicalType1": 79,
+   "physicalType2": 115,
+   "specialType1": 39,
+   "specialType2": 52,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  },
   "abilities": [
    "Pressure",
    "Pickpocket"
@@ -11320,7 +14876,6 @@
   "heightm": 1.1,
   "weightkg": 34,
   "gender": null,
-  "color": "Black",
   "moveCount": 72
  },
  {
@@ -11339,6 +14894,16 @@
    "spd": 75,
    "spe": 116
   },
+  "powerScores": {
+   "physicalType1": 46,
+   "physicalType2": 52,
+   "specialType1": 55,
+   "specialType2": 59,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 31,
+   "specialDefenseFull": 62
+  },
   "abilities": [
    "Prankster",
    "Infiltrator",
@@ -11350,7 +14915,6 @@
   "heightm": 0.7,
   "weightkg": 6.6,
   "gender": null,
-  "color": "Green",
   "moveCount": 50
  },
  {
@@ -11368,6 +14932,16 @@
    "spd": 135,
    "spe": 30
   },
+  "powerScores": {
+   "physicalType1": 83,
+   "physicalType2": 0,
+   "specialType1": 102,
+   "specialType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 70,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  },
   "abilities": [
    "Schooling"
   ],
@@ -11377,7 +14951,6 @@
   "heightm": 8.2,
   "weightkg": 78.6,
   "gender": null,
-  "color": "Blue",
   "moveCount": 40
  },
  {
@@ -11396,6 +14969,16 @@
    "spd": 75,
    "spe": 65
   },
+  "powerScores": {
+   "physicalType1": 91,
+   "physicalType2": 70,
+   "specialType1": 70,
+   "specialType2": 91,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  },
   "abilities": [
    "Intimidate",
    "Frisk",
@@ -11407,7 +14990,6 @@
   "heightm": 1.8,
   "weightkg": 95.1,
   "gender": null,
-  "color": "Gray",
   "moveCount": 61
  },
  {
@@ -11426,6 +15008,16 @@
    "spd": 95,
    "spe": 105
   },
+  "powerScores": {
+   "physicalType1": 71,
+   "physicalType2": 115,
+   "specialType1": 48,
+   "specialType2": 78,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  },
   "abilities": [
    "Leaf Guard"
   ],
@@ -11435,7 +15027,6 @@
   "heightm": 1.8,
   "weightkg": 70,
   "gender": "N",
-  "color": "Black",
   "moveCount": 71
  },
  {
@@ -11453,6 +15044,16 @@
    "spd": 60,
    "spe": 105
   },
+  "powerScores": {
+   "physicalType1": 71,
+   "physicalType2": 0,
+   "specialType1": 75,
+   "specialType2": 0,
+   "physicalDefense": 18,
+   "physicalDefenseFull": 57,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  },
   "abilities": [
    "Illusion"
   ],
@@ -11462,7 +15063,6 @@
   "heightm": 1.6,
   "weightkg": 81.1,
   "gender": null,
-  "color": "Gray",
   "moveCount": 70
  },
  {
@@ -11481,6 +15081,16 @@
    "spd": 60,
    "spe": 110
   },
+  "powerScores": {
+   "physicalType1": 89,
+   "physicalType2": 81,
+   "specialType1": 78,
+   "specialType2": 70,
+   "physicalDefense": 14,
+   "physicalDefenseFull": 55,
+   "specialDefense": 14,
+   "specialDefenseFull": 55
+  },
   "abilities": [
    "Illusion"
   ],
@@ -11490,7 +15100,6 @@
   "heightm": 1.6,
   "weightkg": 73,
   "gender": null,
-  "color": "Gray",
   "moveCount": 73
  }
 ]

@@ -32,7 +32,7 @@ MANUAL_PATH = os.path.join(REPO_ROOT, "data", "manual-cosmetic-formes.json")
 # Must match what `prep/base/build.py` synthesizes during the build.
 SYNTHESIZED_FIELDS = (
     "num", "types", "baseStats", "abilities",
-    "heightm", "weightkg", "gender", "color",
+    "heightm", "weightkg", "gender",
 )
 
 
