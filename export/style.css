@@ -125,10 +125,6 @@ button:hover {
 }
 
 /* ── Team bar ─────────────────────────────────────────── */
-#header-team.hidden {
-  display: none;
-}
-
 #header-team {
   display: flex;
   gap: 3px;
@@ -498,6 +494,15 @@ button:hover {
   font-style: italic;
 }
 
+/* ── Search widget containers (centered 560px column) ── */
+.pokemon-search-widget,
+.move-search-widget,
+.ability-search-widget,
+.item-search-widget {
+  width: 560px;
+  margin: 0 auto;
+}
+
 /* ── Filter row (input + mega toggle) ────────────────── */
 .filter-row {
   display: flex;
@@ -547,11 +552,6 @@ button:hover {
 }
 
 /* ── Pokemon sort bar aligned to list item columns ────── */
-.ps-sort-bar {
-  width: 560px;
-  margin: 0 auto;
-}
-
 .ps-sort-bar .sort-bar {
   padding: 0.2rem 0.4rem;
   gap: 0;
@@ -1054,8 +1054,6 @@ button:hover {
 #pokemon-grid.list-view, .ps-pokemon-grid.list-view {
   grid-template-columns: 1fr;
   align-content: start;
-  width: 560px;
-  margin: 0 auto;
 }
 
 .pokemon-card {
@@ -1541,7 +1539,6 @@ button:hover {
 .is-cat-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
   padding: 0.3rem 0.5rem;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -1765,7 +1762,6 @@ button:hover {
   width: 32px;
   height: 32px;
   object-fit: contain;
-  image-rendering: pixelated;
 }
 
 #search-detail-content .forme-sprite-empty {
@@ -3002,7 +2998,6 @@ button:hover {
   width: 48px;
   height: 48px;
   display: block;
-  image-rendering: auto;
 }
 
 .oc-pokemon-sprite-missing {

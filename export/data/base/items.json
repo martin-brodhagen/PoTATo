@@ -6,10 +6,7 @@
   },
   "ignoreKlutz": true,
   "isNonstandard": "Past",
-  "sprite": "abilityshield",
-  "category": [
-   "Other"
-  ]
+  "sprite": "abilityshield"
  },
  "abomasite": {
   "name": "Abomasite",
@@ -20,10 +17,7 @@
    "Abomasnow"
   ],
   "desc": "A held item that allows Abomasnow to Mega Evolve.",
-  "sprite": "abomasite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "abomasite"
  },
  "absolite": {
   "name": "Absolite",
@@ -34,10 +28,7 @@
    "Absol"
   ],
   "desc": "A held item that allows Absol to Mega Evolve into Mega Absol.",
-  "sprite": "absolite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "absolite"
  },
  "absolitez": {
   "name": "Absolite Z",
@@ -48,11 +39,7 @@
    "Absol"
   ],
   "isNonstandard": "Future",
-  "sprite": "absolitez",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "absolitez"
  },
  "absorbbulb": {
   "name": "Absorb Bulb",
@@ -63,10 +50,7 @@
    "spa": 1
   },
   "isNonstandard": "Past",
-  "sprite": "absorbbulb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "absorbbulb"
  },
  "adamantcrystal": {
   "name": "Adamant Crystal",
@@ -75,10 +59,7 @@
    "Dialga-Origin"
   ],
   "isNonstandard": "Past",
-  "sprite": "adamantcrystal",
-  "category": [
-   "Other"
-  ]
+  "sprite": "adamantcrystal"
  },
  "adamantorb": {
   "name": "Adamant Orb",
@@ -89,10 +70,7 @@
    "Dialga"
   ],
   "isNonstandard": "Past",
-  "sprite": "adamantorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "adamantorb"
  },
  "adrenalineorb": {
   "name": "Adrenaline Orb",
@@ -103,10 +81,7 @@
    "spe": 1
   },
   "isNonstandard": "Past",
-  "sprite": "adrenalineorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "adrenalineorb"
  },
  "aerodactylite": {
   "name": "Aerodactylite",
@@ -117,10 +92,7 @@
    "Aerodactyl"
   ],
   "desc": "A held item that allows Aerodactyl to Mega Evolve.",
-  "sprite": "aerodactylite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "aerodactylite"
  },
  "aggronite": {
   "name": "Aggronite",
@@ -131,20 +103,13 @@
    "Aggron"
   ],
   "desc": "A held item that allows Aggron to Mega Evolve.",
-  "sprite": "aggronite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "aggronite"
  },
  "aguavberry": {
   "name": "Aguav Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "aguavberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "aguavberry"
  },
  "airballoon": {
   "name": "Air Balloon",
@@ -152,10 +117,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "airballoon",
-  "category": [
-   "Other"
-  ]
+  "sprite": "airballoon"
  },
  "alakazite": {
   "name": "Alakazite",
@@ -166,10 +128,7 @@
    "Alakazam"
   ],
   "desc": "A held item that allows Alakazam to Mega Evolve.",
-  "sprite": "alakazite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "alakazite"
  },
  "aloraichiumz": {
   "name": "Aloraichium Z",
@@ -180,10 +139,7 @@
    "Raichu-Alola"
   ],
   "isNonstandard": "Past",
-  "sprite": "aloraichiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "aloraichiumz"
  },
  "altarianite": {
   "name": "Altarianite",
@@ -194,10 +150,7 @@
    "Altaria"
   ],
   "desc": "A held item that allows Altaria to Mega Evolve.",
-  "sprite": "altarianite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "altarianite"
  },
  "ampharosite": {
   "name": "Ampharosite",
@@ -208,20 +161,13 @@
    "Ampharos"
   ],
   "desc": "A held item that allows Ampharos to Mega Evolve.",
-  "sprite": "ampharosite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "ampharosite"
  },
  "apicotberry": {
   "name": "Apicot Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "apicotberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "apicotberry"
  },
  "armorfossil": {
   "name": "Armor Fossil",
@@ -229,20 +175,13 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "armorfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "armorfossil"
  },
  "aspearberry": {
   "name": "Aspear Berry",
   "isBerry": true,
   "desc": "Cures being frozen. Disappears for the duration of the battle after a single use.",
-  "sprite": "aspearberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "aspearberry"
  },
  "assaultvest": {
   "name": "Assault Vest",
@@ -251,10 +190,7 @@
   },
   "onModifySpDPriority": 1,
   "isNonstandard": "Past",
-  "sprite": "assaultvest",
-  "category": [
-   "Other"
-  ]
+  "sprite": "assaultvest"
  },
  "audinite": {
   "name": "Audinite",
@@ -265,10 +201,7 @@
    "Audino"
   ],
   "desc": "A held item that allows Audino to Mega Evolve.",
-  "sprite": "audinite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "audinite"
  },
  "auspiciousarmor": {
   "name": "Auspicious Armor",
@@ -276,20 +209,13 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "auspiciousarmor",
-  "category": [
-   "Other"
-  ]
+  "sprite": "auspiciousarmor"
  },
  "babiriberry": {
   "name": "Babiri Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Steel-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "babiriberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "babiriberry"
  },
  "banettite": {
   "name": "Banettite",
@@ -300,10 +226,7 @@
    "Banette"
   ],
   "desc": "A held item that allows Banette to Mega Evolve.",
-  "sprite": "banettite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "banettite"
  },
  "barbaracite": {
   "name": "Barbaracite",
@@ -314,10 +237,7 @@
    "Barbaracle"
   ],
   "desc": "A held item that allows Barbaracle to Mega Evolve.",
-  "sprite": "barbaracite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "barbaracite"
  },
  "baxcalibrite": {
   "name": "Baxcalibrite",
@@ -328,20 +248,13 @@
    "Baxcalibur"
   ],
   "isNonstandard": "Future",
-  "sprite": "baxcalibrite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "baxcalibrite"
  },
  "beastball": {
   "name": "Beast Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "beastball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "beastball"
  },
  "beedrillite": {
   "name": "Beedrillite",
@@ -352,21 +265,14 @@
    "Beedrill"
   ],
   "desc": "A held item that allows Beedrill to Mega Evolve.",
-  "sprite": "beedrillite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "beedrillite"
  },
  "belueberry": {
   "name": "Belue Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "belueberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "belueberry"
  },
  "berryjuice": {
   "name": "Berry Juice",
@@ -374,11 +280,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "berryjuice",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "berryjuice"
  },
  "berrysweet": {
   "name": "Berry Sweet",
@@ -386,11 +288,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "berrysweet",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "berrysweet"
  },
  "bignugget": {
   "name": "Big Nugget",
@@ -398,10 +296,7 @@
    "basePower": 130
   },
   "isNonstandard": "Past",
-  "sprite": "bignugget",
-  "category": [
-   "Other"
-  ]
+  "sprite": "bignugget"
  },
  "bigroot": {
   "name": "Big Root",
@@ -410,10 +305,7 @@
   },
   "onTryHealPriority": 1,
   "desc": "An item to be held by a Pokemon. Increases the amount of HP the holder recovers after using moves that steal HP by 30%.",
-  "sprite": "bigroot",
-  "category": [
-   "Recovery"
-  ]
+  "sprite": "bigroot"
  },
  "bindingband": {
   "name": "Binding Band",
@@ -421,10 +313,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "bindingband",
-  "category": [
-   "Other"
-  ]
+  "sprite": "bindingband"
  },
  "blackbelt": {
   "name": "Black Belt",
@@ -432,10 +321,7 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Fighting-type moves by 20%.",
-  "sprite": "blackbelt",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "blackbelt"
  },
  "blackglasses": {
   "name": "Black Glasses",
@@ -443,10 +329,7 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Dark-type moves by 20%.",
-  "sprite": "blackglasses",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "blackglasses"
  },
  "blacksludge": {
   "name": "Black Sludge",
@@ -454,10 +337,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "blacksludge",
-  "category": [
-   "Other"
-  ]
+  "sprite": "blacksludge"
  },
  "blastoisinite": {
   "name": "Blastoisinite",
@@ -468,10 +348,7 @@
    "Blastoise"
   ],
   "desc": "A held item that allows Blastoise to Mega Evolve.",
-  "sprite": "blastoisinite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "blastoisinite"
  },
  "blazikenite": {
   "name": "Blazikenite",
@@ -482,10 +359,7 @@
    "Blaziken"
   ],
   "desc": "A held item that allows Blaziken to Mega Evolve.",
-  "sprite": "blazikenite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "blazikenite"
  },
  "blueorb": {
   "name": "Blue Orb",
@@ -495,21 +369,14 @@
   ],
   "isPrimalOrb": true,
   "isNonstandard": "Past",
-  "sprite": "blueorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "blueorb"
  },
  "blukberry": {
   "name": "Bluk Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "blukberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "blukberry"
  },
  "blunderpolicy": {
   "name": "Blunder Policy",
@@ -517,10 +384,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "blunderpolicy",
-  "category": [
-   "Other"
-  ]
+  "sprite": "blunderpolicy"
  },
  "boosterenergy": {
   "name": "Booster Energy",
@@ -529,10 +393,7 @@
   },
   "onSwitchInPriority": -2,
   "isNonstandard": "Past",
-  "sprite": "boosterenergy",
-  "category": [
-   "Other"
-  ]
+  "sprite": "boosterenergy"
  },
  "bottlecap": {
   "name": "Bottle Cap",
@@ -540,10 +401,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "bottlecap",
-  "category": [
-   "Other"
-  ]
+  "sprite": "bottlecap"
  },
  "brightpowder": {
   "name": "Bright Powder",
@@ -551,19 +409,13 @@
    "basePower": 10
   },
   "desc": "Lowers the accuracy of moves used by opponents against the holder by 10%.",
-  "sprite": "brightpowder",
-  "category": [
-   "Other"
-  ]
+  "sprite": "brightpowder"
  },
  "buggem": {
   "name": "Bug Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "buggem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "buggem"
  },
  "buginiumz": {
   "name": "Buginium Z",
@@ -573,10 +425,7 @@
   "zMoveType": "Bug",
   "forcedForme": "Arceus-Bug",
   "isNonstandard": "Past",
-  "sprite": "buginiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "buginiumz"
  },
  "bugmemory": {
   "name": "Bug Memory",
@@ -586,10 +435,7 @@
    "Silvally-Bug"
   ],
   "isNonstandard": "Past",
-  "sprite": "bugmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "bugmemory"
  },
  "burndrive": {
   "name": "Burn Drive",
@@ -599,10 +445,7 @@
    "Genesect-Burn"
   ],
   "isNonstandard": "Past",
-  "sprite": "burndrive",
-  "category": [
-   "Other"
-  ]
+  "sprite": "burndrive"
  },
  "cameruptite": {
   "name": "Cameruptite",
@@ -613,10 +456,7 @@
    "Camerupt"
   ],
   "desc": "A held item that allows Camerupt to Mega Evolve.",
-  "sprite": "cameruptite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "cameruptite"
  },
  "cellbattery": {
   "name": "Cell Battery",
@@ -627,10 +467,7 @@
    "atk": 1
   },
   "isNonstandard": "Past",
-  "sprite": "cellbattery",
-  "category": [
-   "Other"
-  ]
+  "sprite": "cellbattery"
  },
  "chandelurite": {
   "name": "Chandelurite",
@@ -641,10 +478,7 @@
    "Chandelure"
   ],
   "desc": "A held item that allows Chandelure to Mega Evolve.",
-  "sprite": "chandelurite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "chandelurite"
  },
  "charcoal": {
   "name": "Charcoal",
@@ -652,10 +486,7 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Fire-type moves by 20%.",
-  "sprite": "charcoal",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "charcoal"
  },
  "charizarditex": {
   "name": "Charizardite X",
@@ -666,10 +497,7 @@
    "Charizard"
   ],
   "desc": "A held item that allows Charizard to Mega Evolve into Mega Charizard X.",
-  "sprite": "charizarditex",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "charizarditex"
  },
  "charizarditey": {
   "name": "Charizardite Y",
@@ -680,39 +508,25 @@
    "Charizard"
   ],
   "desc": "A held item that allows Charizard to Mega Evolve into Mega Charizard Y.",
-  "sprite": "charizarditey",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "charizarditey"
  },
  "chartiberry": {
   "name": "Charti Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Rock-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "chartiberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "chartiberry"
  },
  "cheriberry": {
   "name": "Cheri Berry",
   "isBerry": true,
   "desc": "Cures being paralyzed. Disappears for the duration of the battle after a single use",
-  "sprite": "cheriberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "cheriberry"
  },
  "cherishball": {
   "name": "Cherish Ball",
   "isPokeball": true,
   "isNonstandard": "Unobtainable",
-  "sprite": "cherishball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "cherishball"
  },
  "chesnaughtite": {
   "name": "Chesnaughtite",
@@ -723,30 +537,19 @@
    "Chesnaught"
   ],
   "desc": "A held item that allows Chesnaught to Mega Evolve.",
-  "sprite": "chesnaughtite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "chesnaughtite"
  },
  "chestoberry": {
   "name": "Chesto Berry",
   "isBerry": true,
   "desc": "Cures being sleep. Disappears for the duration of the battle after a single use.",
-  "sprite": "chestoberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "chestoberry"
  },
  "chilanberry": {
   "name": "Chilan Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a Normal-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "chilanberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "chilanberry"
  },
  "chilldrive": {
   "name": "Chill Drive",
@@ -756,10 +559,7 @@
    "Genesect-Chill"
   ],
   "isNonstandard": "Past",
-  "sprite": "chilldrive",
-  "category": [
-   "Other"
-  ]
+  "sprite": "chilldrive"
  },
  "chimechite": {
   "name": "Chimechite",
@@ -770,10 +570,7 @@
    "Chimecho"
   ],
   "desc": "A held item that allows Chimecho to Mega Evolve.",
-  "sprite": "chimechite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "chimechite"
  },
  "chippedpot": {
   "name": "Chipped Pot",
@@ -781,10 +578,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "chippedpot",
-  "category": [
-   "Other"
-  ]
+  "sprite": "chippedpot"
  },
  "choiceband": {
   "name": "Choice Band",
@@ -793,10 +587,7 @@
   },
   "isChoice": true,
   "isNonstandard": "Past",
-  "sprite": "choiceband",
-  "category": [
-   "Other"
-  ]
+  "sprite": "choiceband"
  },
  "choicescarf": {
   "name": "Choice Scarf",
@@ -805,10 +596,7 @@
   },
   "isChoice": true,
   "desc": "Boosts the holder's Speed stat by 50%. However, once the holder uses a move, it becomes unable to use any other move but the one until it switches out of battle.",
-  "sprite": "choicescarf",
-  "category": [
-   "Stat Boost"
-  ]
+  "sprite": "choicescarf"
  },
  "choicespecs": {
   "name": "Choice Specs",
@@ -817,20 +605,13 @@
   },
   "isChoice": true,
   "isNonstandard": "Past",
-  "sprite": "choicespecs",
-  "category": [
-   "Other"
-  ]
+  "sprite": "choicespecs"
  },
  "chopleberry": {
   "name": "Chople Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Fighting-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "chopleberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "chopleberry"
  },
  "clawfossil": {
   "name": "Claw Fossil",
@@ -838,10 +619,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "clawfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "clawfossil"
  },
  "clearamulet": {
   "name": "Clear Amulet",
@@ -850,10 +628,7 @@
   },
   "onTryBoostPriority": 1,
   "isNonstandard": "Past",
-  "sprite": "clearamulet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "clearamulet"
  },
  "clefablite": {
   "name": "Clefablite",
@@ -864,10 +639,7 @@
    "Clefable"
   ],
   "desc": "A held item that allows Clefable to Mega Evolve.",
-  "sprite": "clefablite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "clefablite"
  },
  "cloversweet": {
   "name": "Clover Sweet",
@@ -875,30 +647,19 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "cloversweet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "cloversweet"
  },
  "cobaberry": {
   "name": "Coba Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Flying-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "cobaberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "cobaberry"
  },
  "colburberry": {
   "name": "Colbur Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Dark-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "colburberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "colburberry"
  },
  "cornerstonemask": {
   "name": "Cornerstone Mask",
@@ -910,21 +671,14 @@
    "Ogerpon-Cornerstone"
   ],
   "isNonstandard": "Past",
-  "sprite": "cornerstonemask",
-  "category": [
-   "Other"
-  ]
+  "sprite": "cornerstonemask"
  },
  "cornnberry": {
   "name": "Cornn Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "cornnberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "cornnberry"
  },
  "coverfossil": {
   "name": "Cover Fossil",
@@ -932,10 +686,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "coverfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "coverfossil"
  },
  "covertcloak": {
   "name": "Covert Cloak",
@@ -943,10 +694,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "covertcloak",
-  "category": [
-   "Other"
-  ]
+  "sprite": "covertcloak"
  },
  "crabominite": {
   "name": "Crabominite",
@@ -957,10 +705,7 @@
    "Crabominable"
   ],
   "desc": "A held item that allows Crabominable to Mega Evolve.",
-  "sprite": "crabominite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "crabominite"
  },
  "crackedpot": {
   "name": "Cracked Pot",
@@ -968,20 +713,13 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "crackedpot",
-  "category": [
-   "Other"
-  ]
+  "sprite": "crackedpot"
  },
  "custapberry": {
   "name": "Custap Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "custapberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "custapberry"
  },
  "damprock": {
   "name": "Damp Rock",
@@ -989,19 +727,13 @@
    "basePower": 60
   },
   "desc": "An item to be held by a Pokemon. If the holder uses Rain Dance, the effects will last for 8 turns instead of 5.",
-  "sprite": "damprock",
-  "category": [
-   "Effect Extend"
-  ]
+  "sprite": "damprock"
  },
  "darkgem": {
   "name": "Dark Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "darkgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "darkgem"
  },
  "darkiniumz": {
   "name": "Darkinium Z",
@@ -1011,10 +743,7 @@
   "zMoveType": "Dark",
   "forcedForme": "Arceus-Dark",
   "isNonstandard": "Past",
-  "sprite": "darkiniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "darkiniumz"
  },
  "darkmemory": {
   "name": "Dark Memory",
@@ -1024,10 +753,7 @@
    "Silvally-Dark"
   ],
   "isNonstandard": "Past",
-  "sprite": "darkmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "darkmemory"
  },
  "darkranite": {
   "name": "Darkranite",
@@ -1038,11 +764,7 @@
    "Darkrai"
   ],
   "isNonstandard": "Past",
-  "sprite": "darkranite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "darkranite"
  },
  "dawnstone": {
   "name": "Dawn Stone",
@@ -1050,10 +772,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "dawnstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dawnstone"
  },
  "decidiumz": {
   "name": "Decidium Z",
@@ -1064,10 +783,7 @@
    "Decidueye"
   ],
   "isNonstandard": "Past",
-  "sprite": "decidiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "decidiumz"
  },
  "deepseascale": {
   "name": "Deep Sea Scale",
@@ -1079,10 +795,7 @@
    "Clamperl"
   ],
   "isNonstandard": "Past",
-  "sprite": "deepseascale",
-  "category": [
-   "Other"
-  ]
+  "sprite": "deepseascale"
  },
  "deepseatooth": {
   "name": "Deep Sea Tooth",
@@ -1093,10 +806,7 @@
    "Clamperl"
   ],
   "isNonstandard": "Past",
-  "sprite": "deepseatooth",
-  "category": [
-   "Other"
-  ]
+  "sprite": "deepseatooth"
  },
  "delphoxite": {
   "name": "Delphoxite",
@@ -1107,10 +817,7 @@
    "Delphox"
   ],
   "desc": "A held item that allows Delphox to Mega Evolve.",
-  "sprite": "delphoxite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "delphoxite"
  },
  "destinyknot": {
   "name": "Destiny Knot",
@@ -1119,10 +826,7 @@
   },
   "onAttractPriority": -100,
   "isNonstandard": "Past",
-  "sprite": "destinyknot",
-  "category": [
-   "Other"
-  ]
+  "sprite": "destinyknot"
  },
  "diancite": {
   "name": "Diancite",
@@ -1133,20 +837,13 @@
    "Diancie"
   ],
   "isNonstandard": "Past",
-  "sprite": "diancite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "diancite"
  },
  "diveball": {
   "name": "Dive Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "diveball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "diveball"
  },
  "domefossil": {
   "name": "Dome Fossil",
@@ -1154,10 +851,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "domefossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "domefossil"
  },
  "dousedrive": {
   "name": "Douse Drive",
@@ -1167,20 +861,14 @@
    "Genesect-Douse"
   ],
   "isNonstandard": "Past",
-  "sprite": "dousedrive",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dousedrive"
  },
  "dracoplate": {
   "name": "Draco Plate",
   "onPlate": "Dragon",
   "forcedForme": "Arceus-Dragon",
   "isNonstandard": "Past",
-  "sprite": "dracoplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dracoplate"
  },
  "dragalgite": {
   "name": "Dragalgite",
@@ -1191,10 +879,7 @@
    "Dragalge"
   ],
   "desc": "A held item that allows Dragalge to Mega Evolve.",
-  "sprite": "dragalgite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "dragalgite"
  },
  "dragonfang": {
   "name": "Dragon Fang",
@@ -1202,19 +887,13 @@
    "basePower": 70
   },
   "desc": "Boosts the power of the holder's Dragon-type moves by 20%.",
-  "sprite": "dragonfang",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "dragonfang"
  },
  "dragongem": {
   "name": "Dragon Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "dragongem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dragongem"
  },
  "dragoninite": {
   "name": "Dragoninite",
@@ -1225,10 +904,7 @@
    "Dragonite"
   ],
   "desc": "A held item that allows Dragonite to Mega Evolve.",
-  "sprite": "dragoninite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "dragoninite"
  },
  "dragoniumz": {
   "name": "Dragonium Z",
@@ -1238,10 +914,7 @@
   "zMoveType": "Dragon",
   "forcedForme": "Arceus-Dragon",
   "isNonstandard": "Past",
-  "sprite": "dragoniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dragoniumz"
  },
  "dragonmemory": {
   "name": "Dragon Memory",
@@ -1251,10 +924,7 @@
    "Silvally-Dragon"
   ],
   "isNonstandard": "Past",
-  "sprite": "dragonmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dragonmemory"
  },
  "dragonscale": {
   "name": "Dragon Scale",
@@ -1262,10 +932,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "dragonscale",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dragonscale"
  },
  "drampanite": {
   "name": "Drampanite",
@@ -1276,29 +943,20 @@
    "Drampa"
   ],
   "desc": "A held item that allows Drampa to Mega Evolve.",
-  "sprite": "drampanite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "drampanite"
  },
  "dreadplate": {
   "name": "Dread Plate",
   "onPlate": "Dark",
   "forcedForme": "Arceus-Dark",
   "isNonstandard": "Past",
-  "sprite": "dreadplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dreadplate"
  },
  "dreamball": {
   "name": "Dream Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "dreamball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dreamball"
  },
  "dubiousdisc": {
   "name": "Dubious Disc",
@@ -1306,30 +964,20 @@
    "basePower": 50
   },
   "isNonstandard": "Past",
-  "sprite": "dubiousdisc",
-  "category": [
-   "Other"
-  ]
+  "sprite": "dubiousdisc"
  },
  "durinberry": {
   "name": "Durin Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "durinberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "durinberry"
  },
  "duskball": {
   "name": "Dusk Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "duskball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "duskball"
  },
  "duskstone": {
   "name": "Dusk Stone",
@@ -1337,20 +985,14 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "duskstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "duskstone"
  },
  "earthplate": {
   "name": "Earth Plate",
   "onPlate": "Ground",
   "forcedForme": "Arceus-Ground",
   "isNonstandard": "Past",
-  "sprite": "earthplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "earthplate"
  },
  "eelektrossite": {
   "name": "Eelektrossite",
@@ -1361,10 +1003,7 @@
    "Eelektross"
   ],
   "desc": "A held item that allows Eelektross to Mega Evolve.",
-  "sprite": "eelektrossite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "eelektrossite"
  },
  "eeviumz": {
   "name": "Eevium Z",
@@ -1375,10 +1014,7 @@
    "Eevee"
   ],
   "isNonstandard": "Past",
-  "sprite": "eeviumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "eeviumz"
  },
  "ejectbutton": {
   "name": "Eject Button",
@@ -1387,10 +1023,7 @@
   },
   "onAfterMoveSecondaryPriority": 2,
   "isNonstandard": "Past",
-  "sprite": "ejectbutton",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ejectbutton"
  },
  "ejectpack": {
   "name": "Eject Pack",
@@ -1398,10 +1031,7 @@
    "basePower": 50
   },
   "isNonstandard": "Past",
-  "sprite": "ejectpack",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ejectpack"
  },
  "electirizer": {
   "name": "Electirizer",
@@ -1409,19 +1039,13 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "electirizer",
-  "category": [
-   "Other"
-  ]
+  "sprite": "electirizer"
  },
  "electricgem": {
   "name": "Electric Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "electricgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "electricgem"
  },
  "electricmemory": {
   "name": "Electric Memory",
@@ -1431,10 +1055,7 @@
    "Silvally-Electric"
   ],
   "isNonstandard": "Past",
-  "sprite": "electricmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "electricmemory"
  },
  "electricseed": {
   "name": "Electric Seed",
@@ -1446,10 +1067,7 @@
    "def": 1
   },
   "isNonstandard": "Past",
-  "sprite": "electricseed",
-  "category": [
-   "Other"
-  ]
+  "sprite": "electricseed"
  },
  "electriumz": {
   "name": "Electrium Z",
@@ -1459,10 +1077,7 @@
   "zMoveType": "Electric",
   "forcedForme": "Arceus-Electric",
   "isNonstandard": "Past",
-  "sprite": "electriumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "electriumz"
  },
  "emboarite": {
   "name": "Emboarite",
@@ -1473,20 +1088,13 @@
    "Emboar"
   ],
   "desc": "A held item that allows Emboar to Mega Evolve.",
-  "sprite": "emboarite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "emboarite"
  },
  "enigmaberry": {
   "name": "Enigma Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "enigmaberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "enigmaberry"
  },
  "eviolite": {
   "name": "Eviolite",
@@ -1496,10 +1104,7 @@
   "onModifyDefPriority": 2,
   "onModifySpDPriority": 2,
   "isNonstandard": "Past",
-  "sprite": "eviolite",
-  "category": [
-   "Other"
-  ]
+  "sprite": "eviolite"
  },
  "excadrite": {
   "name": "Excadrite",
@@ -1510,10 +1115,7 @@
    "Excadrill"
   ],
   "desc": "A held item that allows Excadrill to Mega Evolve.",
-  "sprite": "excadrite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "excadrite"
  },
  "expertbelt": {
   "name": "Expert Belt",
@@ -1521,10 +1123,7 @@
    "basePower": 10
   },
   "desc": "An item to be held by a Pokemon. Increases the holder's super effective moves by 20%.",
-  "sprite": "expertbelt",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "expertbelt"
  },
  "fairiumz": {
   "name": "Fairium Z",
@@ -1534,10 +1133,7 @@
   "zMoveType": "Fairy",
   "forcedForme": "Arceus-Fairy",
   "isNonstandard": "Past",
-  "sprite": "fairiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fairiumz"
  },
  "fairyfeather": {
   "name": "Fairy Feather",
@@ -1545,19 +1141,13 @@
    "basePower": 10
   },
   "desc": "Boosts the power of the holder's Fairy-type moves by 20%.",
-  "sprite": "fairyfeather",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "fairyfeather"
  },
  "fairygem": {
   "name": "Fairy Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "fairygem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fairygem"
  },
  "fairymemory": {
   "name": "Fairy Memory",
@@ -1567,10 +1157,7 @@
    "Silvally-Fairy"
   ],
   "isNonstandard": "Past",
-  "sprite": "fairymemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fairymemory"
  },
  "falinksite": {
   "name": "Falinksite",
@@ -1581,19 +1168,13 @@
    "Falinks"
   ],
   "desc": "A held item that allows Falinks to Mega Evolve.",
-  "sprite": "falinksite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "falinksite"
  },
  "fastball": {
   "name": "Fast Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "fastball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fastball"
  },
  "feraligite": {
   "name": "Feraligite",
@@ -1604,19 +1185,13 @@
    "Feraligatr"
   ],
   "desc": "A held item that allows Feraligatr to Mega Evolve.",
-  "sprite": "feraligite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "feraligite"
  },
  "fightinggem": {
   "name": "Fighting Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "fightinggem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fightinggem"
  },
  "fightingmemory": {
   "name": "Fighting Memory",
@@ -1626,10 +1201,7 @@
    "Silvally-Fighting"
   ],
   "isNonstandard": "Past",
-  "sprite": "fightingmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fightingmemory"
  },
  "fightiniumz": {
   "name": "Fightinium Z",
@@ -1639,29 +1211,19 @@
   "zMoveType": "Fighting",
   "forcedForme": "Arceus-Fighting",
   "isNonstandard": "Past",
-  "sprite": "fightiniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fightiniumz"
  },
  "figyberry": {
   "name": "Figy Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "figyberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "figyberry"
  },
  "firegem": {
   "name": "Fire Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "firegem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "firegem"
  },
  "firememory": {
   "name": "Fire Memory",
@@ -1671,10 +1233,7 @@
    "Silvally-Fire"
   ],
   "isNonstandard": "Past",
-  "sprite": "firememory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "firememory"
  },
  "firestone": {
   "name": "Fire Stone",
@@ -1682,10 +1241,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "firestone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "firestone"
  },
  "firiumz": {
   "name": "Firium Z",
@@ -1695,20 +1251,14 @@
   "zMoveType": "Fire",
   "forcedForme": "Arceus-Fire",
   "isNonstandard": "Past",
-  "sprite": "firiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "firiumz"
  },
  "fistplate": {
   "name": "Fist Plate",
   "onPlate": "Fighting",
   "forcedForme": "Arceus-Fighting",
   "isNonstandard": "Past",
-  "sprite": "fistplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fistplate"
  },
  "flameorb": {
   "name": "Flame Orb",
@@ -1717,20 +1267,14 @@
    "status": "brn"
   },
   "isNonstandard": "Past",
-  "sprite": "flameorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "flameorb"
  },
  "flameplate": {
   "name": "Flame Plate",
   "onPlate": "Fire",
   "forcedForme": "Arceus-Fire",
   "isNonstandard": "Past",
-  "sprite": "flameplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "flameplate"
  },
  "floatstone": {
   "name": "Float Stone",
@@ -1738,10 +1282,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "floatstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "floatstone"
  },
  "floettite": {
   "name": "Floettite",
@@ -1752,10 +1293,7 @@
    "Floette-Eternal"
   ],
   "desc": "A held item that allows Floette to Mega Evolve.",
-  "sprite": "floettite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "floettite"
  },
  "flowersweet": {
   "name": "Flower Sweet",
@@ -1763,19 +1301,13 @@
    "basePower": 0
   },
   "isNonstandard": "Past",
-  "sprite": "flowersweet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "flowersweet"
  },
  "flyinggem": {
   "name": "Flying Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "flyinggem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "flyinggem"
  },
  "flyingmemory": {
   "name": "Flying Memory",
@@ -1785,10 +1317,7 @@
    "Silvally-Flying"
   ],
   "isNonstandard": "Past",
-  "sprite": "flyingmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "flyingmemory"
  },
  "flyiniumz": {
   "name": "Flyinium Z",
@@ -1798,10 +1327,7 @@
   "zMoveType": "Flying",
   "forcedForme": "Arceus-Flying",
   "isNonstandard": "Past",
-  "sprite": "flyiniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "flyiniumz"
  },
  "focusband": {
   "name": "Focus Band",
@@ -1809,10 +1335,7 @@
    "basePower": 10
   },
   "desc": "If the holder takes damage from a move that would knock it out, there's a 10% chance the holder will endure the hit with 1 HP.",
-  "sprite": "focusband",
-  "category": [
-   "Defense"
-  ]
+  "sprite": "focusband"
  },
  "focussash": {
   "name": "Focus Sash",
@@ -1820,10 +1343,7 @@
    "basePower": 10
   },
   "desc": "If the holder has full HP and takes damage from a move that would knock it out in one hit, it will endure the hit with 1 HP. Disappears for the duration of the battle after a single use.",
-  "sprite": "focussash",
-  "category": [
-   "Stat Boost"
-  ]
+  "sprite": "focussash"
  },
  "fossilizedbird": {
   "name": "Fossilized Bird",
@@ -1831,10 +1351,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "fossilizedbird",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fossilizedbird"
  },
  "fossilizeddino": {
   "name": "Fossilized Dino",
@@ -1842,10 +1359,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "fossilizeddino",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fossilizeddino"
  },
  "fossilizeddrake": {
   "name": "Fossilized Drake",
@@ -1853,10 +1367,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "fossilizeddrake",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fossilizeddrake"
  },
  "fossilizedfish": {
   "name": "Fossilized Fish",
@@ -1864,19 +1375,13 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "fossilizedfish",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fossilizedfish"
  },
  "friendball": {
   "name": "Friend Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "friendball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "friendball"
  },
  "froslassite": {
   "name": "Froslassite",
@@ -1887,10 +1392,7 @@
    "Froslass"
   ],
   "desc": "A held item that allows Froslass to Mega Evolve.",
-  "sprite": "froslassite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "froslassite"
  },
  "fullincense": {
   "name": "Full Incense",
@@ -1899,10 +1401,7 @@
   },
   "onFractionalPriority": -0.1,
   "isNonstandard": "Past",
-  "sprite": "fullincense",
-  "category": [
-   "Other"
-  ]
+  "sprite": "fullincense"
  },
  "galaricacuff": {
   "name": "Galarica Cuff",
@@ -1910,10 +1409,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "galaricacuff",
-  "category": [
-   "Other"
-  ]
+  "sprite": "galaricacuff"
  },
  "galaricawreath": {
   "name": "Galarica Wreath",
@@ -1921,10 +1417,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "galaricawreath",
-  "category": [
-   "Other"
-  ]
+  "sprite": "galaricawreath"
  },
  "galladite": {
   "name": "Galladite",
@@ -1935,20 +1428,13 @@
    "Gallade"
   ],
   "desc": "A held item that allows Gallade to Mega Evolve.",
-  "sprite": "galladite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "galladite"
  },
  "ganlonberry": {
   "name": "Ganlon Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "ganlonberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "ganlonberry"
  },
  "garchompite": {
   "name": "Garchompite",
@@ -1959,10 +1445,7 @@
    "Garchomp"
   ],
   "desc": "A held item that allows Garchomp to Mega Evolve.",
-  "sprite": "garchompite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "garchompite"
  },
  "garchompitez": {
   "name": "Garchompite Z",
@@ -1973,11 +1456,7 @@
    "Garchomp"
   ],
   "isNonstandard": "Future",
-  "sprite": "garchompitez",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "garchompitez"
  },
  "gardevoirite": {
   "name": "Gardevoirite",
@@ -1988,10 +1467,7 @@
    "Gardevoir"
   ],
   "desc": "A held item that allows Gardevoir to Mega Evolve.",
-  "sprite": "gardevoirite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "gardevoirite"
  },
  "gengarite": {
   "name": "Gengarite",
@@ -2002,19 +1478,13 @@
    "Gengar"
   ],
   "desc": "A held item that allows Gengar to Mega Evolve.",
-  "sprite": "gengarite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "gengarite"
  },
  "ghostgem": {
   "name": "Ghost Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "ghostgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ghostgem"
  },
  "ghostiumz": {
   "name": "Ghostium Z",
@@ -2024,10 +1494,7 @@
   "zMoveType": "Ghost",
   "forcedForme": "Arceus-Ghost",
   "isNonstandard": "Past",
-  "sprite": "ghostiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ghostiumz"
  },
  "ghostmemory": {
   "name": "Ghost Memory",
@@ -2037,10 +1504,7 @@
    "Silvally-Ghost"
   ],
   "isNonstandard": "Past",
-  "sprite": "ghostmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ghostmemory"
  },
  "glalitite": {
   "name": "Glalitite",
@@ -2051,10 +1515,7 @@
    "Glalie"
   ],
   "desc": "A held item that allows Glalie to Mega Evolve.",
-  "sprite": "glalitite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "glalitite"
  },
  "glimmoranite": {
   "name": "Glimmoranite",
@@ -2065,10 +1526,7 @@
    "Glimmora"
   ],
   "desc": "A held item that allows Glimmora to Mega Evolve.",
-  "sprite": "glimmoranite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "glimmoranite"
  },
  "goldbottlecap": {
   "name": "Gold Bottle Cap",
@@ -2076,10 +1534,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "goldbottlecap",
-  "category": [
-   "Other"
-  ]
+  "sprite": "goldbottlecap"
  },
  "golisopite": {
   "name": "Golisopite",
@@ -2090,11 +1545,7 @@
    "Golisopod"
   ],
   "isNonstandard": "Past",
-  "sprite": "golisopite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "golisopite"
  },
  "golurkite": {
   "name": "Golurkite",
@@ -2105,19 +1556,13 @@
    "Golurk"
   ],
   "desc": "A held item that allows Golurk to Mega Evolve.",
-  "sprite": "golurkite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "golurkite"
  },
  "grassgem": {
   "name": "Grass Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "grassgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "grassgem"
  },
  "grassiumz": {
   "name": "Grassium Z",
@@ -2127,10 +1572,7 @@
   "zMoveType": "Grass",
   "forcedForme": "Arceus-Grass",
   "isNonstandard": "Past",
-  "sprite": "grassiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "grassiumz"
  },
  "grassmemory": {
   "name": "Grass Memory",
@@ -2140,10 +1582,7 @@
    "Silvally-Grass"
   ],
   "isNonstandard": "Past",
-  "sprite": "grassmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "grassmemory"
  },
  "grassyseed": {
   "name": "Grassy Seed",
@@ -2155,19 +1594,13 @@
    "def": 1
   },
   "isNonstandard": "Past",
-  "sprite": "grassyseed",
-  "category": [
-   "Other"
-  ]
+  "sprite": "grassyseed"
  },
  "greatball": {
   "name": "Great Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "greatball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "greatball"
  },
  "greninjite": {
   "name": "Greninjite",
@@ -2178,21 +1611,14 @@
    "Greninja"
   ],
   "desc": "A held item that allows Greninja to Mega Evolve.",
-  "sprite": "greninjite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "greninjite"
  },
  "grepaberry": {
   "name": "Grepa Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "grepaberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "grepaberry"
  },
  "gripclaw": {
   "name": "Grip Claw",
@@ -2200,10 +1626,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "gripclaw",
-  "category": [
-   "Other"
-  ]
+  "sprite": "gripclaw"
  },
  "griseouscore": {
   "name": "Griseous Core",
@@ -2212,10 +1635,7 @@
    "Giratina-Origin"
   ],
   "isNonstandard": "Past",
-  "sprite": "griseouscore",
-  "category": [
-   "Other"
-  ]
+  "sprite": "griseouscore"
  },
  "griseousorb": {
   "name": "Griseous Orb",
@@ -2226,19 +1646,13 @@
    "Giratina"
   ],
   "isNonstandard": "Past",
-  "sprite": "griseousorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "griseousorb"
  },
  "groundgem": {
   "name": "Ground Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "groundgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "groundgem"
  },
  "groundiumz": {
   "name": "Groundium Z",
@@ -2248,10 +1662,7 @@
   "zMoveType": "Ground",
   "forcedForme": "Arceus-Ground",
   "isNonstandard": "Past",
-  "sprite": "groundiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "groundiumz"
  },
  "groundmemory": {
   "name": "Ground Memory",
@@ -2261,10 +1672,7 @@
    "Silvally-Ground"
   ],
   "isNonstandard": "Past",
-  "sprite": "groundmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "groundmemory"
  },
  "gyaradosite": {
   "name": "Gyaradosite",
@@ -2275,20 +1683,13 @@
    "Gyarados"
   ],
   "desc": "A held item that allows Gyarados to Mega Evolve.",
-  "sprite": "gyaradosite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "gyaradosite"
  },
  "habanberry": {
   "name": "Haban Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Dragon-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "habanberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "habanberry"
  },
  "hardstone": {
   "name": "Hard Stone",
@@ -2296,10 +1697,7 @@
    "basePower": 100
   },
   "desc": "Boosts the power of the holder's Rock-type moves by 20%.",
-  "sprite": "hardstone",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "hardstone"
  },
  "hawluchanite": {
   "name": "Hawluchanite",
@@ -2310,19 +1708,13 @@
    "Hawlucha"
   ],
   "desc": "A held item that allows Hawlucha to Mega Evolve.",
-  "sprite": "hawluchanite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "hawluchanite"
  },
  "healball": {
   "name": "Heal Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "healball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "healball"
  },
  "hearthflamemask": {
   "name": "Hearthflame Mask",
@@ -2334,10 +1726,7 @@
    "Ogerpon-Hearthflame"
   ],
   "isNonstandard": "Past",
-  "sprite": "hearthflamemask",
-  "category": [
-   "Other"
-  ]
+  "sprite": "hearthflamemask"
  },
  "heatranite": {
   "name": "Heatranite",
@@ -2348,11 +1737,7 @@
    "Heatran"
   ],
   "isNonstandard": "Past",
-  "sprite": "heatranite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "heatranite"
  },
  "heatrock": {
   "name": "Heat Rock",
@@ -2360,19 +1745,13 @@
    "basePower": 60
   },
   "desc": "An item to be held by a Pokemon. If the holder uses Sunny Day, the effects will last for 8 turns instead of 5.",
-  "sprite": "heatrock",
-  "category": [
-   "Effect Extend"
-  ]
+  "sprite": "heatrock"
  },
  "heavyball": {
   "name": "Heavy Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "heavyball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "heavyball"
  },
  "heavydutyboots": {
   "name": "Heavy-Duty Boots",
@@ -2380,10 +1759,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "heavydutyboots",
-  "category": [
-   "Other"
-  ]
+  "sprite": "heavydutyboots"
  },
  "helixfossil": {
   "name": "Helix Fossil",
@@ -2391,10 +1767,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "helixfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "helixfossil"
  },
  "heracronite": {
   "name": "Heracronite",
@@ -2405,21 +1778,14 @@
    "Heracross"
   ],
   "desc": "A held item that allows Heracross to Mega Evolve.",
-  "sprite": "heracronite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "heracronite"
  },
  "hondewberry": {
   "name": "Hondew Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "hondewberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "hondewberry"
  },
  "houndoominite": {
   "name": "Houndoominite",
@@ -2430,29 +1796,19 @@
    "Houndoom"
   ],
   "desc": "A held item that allows Houndoom to Mega Evolve.",
-  "sprite": "houndoominite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "houndoominite"
  },
  "iapapaberry": {
   "name": "Iapapa Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "iapapaberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "iapapaberry"
  },
  "icegem": {
   "name": "Ice Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "icegem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "icegem"
  },
  "icememory": {
   "name": "Ice Memory",
@@ -2462,10 +1818,7 @@
    "Silvally-Ice"
   ],
   "isNonstandard": "Past",
-  "sprite": "icememory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "icememory"
  },
  "icestone": {
   "name": "Ice Stone",
@@ -2473,20 +1826,14 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "icestone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "icestone"
  },
  "icicleplate": {
   "name": "Icicle Plate",
   "onPlate": "Ice",
   "forcedForme": "Arceus-Ice",
   "isNonstandard": "Past",
-  "sprite": "icicleplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "icicleplate"
  },
  "iciumz": {
   "name": "Icium Z",
@@ -2496,10 +1843,7 @@
   "zMoveType": "Ice",
   "forcedForme": "Arceus-Ice",
   "isNonstandard": "Past",
-  "sprite": "iciumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "iciumz"
  },
  "icyrock": {
   "name": "Icy Rock",
@@ -2507,10 +1851,7 @@
    "basePower": 40
   },
   "desc": "An item to be held by a Pokemon. If the holder summons a snowstorm, the effects will last for 8 turns instead of 5.",
-  "sprite": "icyrock",
-  "category": [
-   "Effect Extend"
-  ]
+  "sprite": "icyrock"
  },
  "inciniumz": {
   "name": "Incinium Z",
@@ -2521,20 +1862,14 @@
    "Incineroar"
   ],
   "isNonstandard": "Past",
-  "sprite": "inciniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "inciniumz"
  },
  "insectplate": {
   "name": "Insect Plate",
   "onPlate": "Bug",
   "forcedForme": "Arceus-Bug",
   "isNonstandard": "Past",
-  "sprite": "insectplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "insectplate"
  },
  "ironball": {
   "name": "Iron Ball",
@@ -2542,30 +1877,20 @@
    "basePower": 130
   },
   "desc": "An item to be held by a Pokemon. Reduces the holder's Speed by 50%, if it is a Flying-type or has the Levitate ability, the holder becomes susceptible to Ground type attacks.",
-  "sprite": "ironball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ironball"
  },
  "ironplate": {
   "name": "Iron Plate",
   "onPlate": "Steel",
   "forcedForme": "Arceus-Steel",
   "isNonstandard": "Past",
-  "sprite": "ironplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ironplate"
  },
  "jabocaberry": {
   "name": "Jaboca Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "jabocaberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "jabocaberry"
  },
  "jawfossil": {
   "name": "Jaw Fossil",
@@ -2573,10 +1898,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "jawfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "jawfossil"
  },
  "kangaskhanite": {
   "name": "Kangaskhanite",
@@ -2587,51 +1909,32 @@
    "Kangaskhan"
   ],
   "desc": "A held item that allows Kangaskhan to Mega Evolve.",
-  "sprite": "kangaskhanite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "kangaskhanite"
  },
  "kasibberry": {
   "name": "Kasib Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Ghost-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "kasibberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "kasibberry"
  },
  "kebiaberry": {
   "name": "Kebia Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Poison-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "kebiaberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "kebiaberry"
  },
  "keeberry": {
   "name": "Kee Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "keeberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "keeberry"
  },
  "kelpsyberry": {
   "name": "Kelpsy Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "kelpsyberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "kelpsyberry"
  },
  "kingsrock": {
   "name": "King's Rock",
@@ -2640,10 +1943,7 @@
    "volatileStatus": "flinch"
   },
   "desc": "When the holder deals damage with its moves, there is a 10% chance that targets will flinch.",
-  "sprite": "kingsrock",
-  "category": [
-   "Other"
-  ]
+  "sprite": "kingsrock"
  },
  "kommoniumz": {
   "name": "Kommonium Z",
@@ -2655,10 +1955,7 @@
    "Kommo-o-Totem"
   ],
   "isNonstandard": "Past",
-  "sprite": "kommoniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "kommoniumz"
  },
  "laggingtail": {
   "name": "Lagging Tail",
@@ -2667,20 +1964,13 @@
   },
   "onFractionalPriority": -0.1,
   "isNonstandard": "Past",
-  "sprite": "laggingtail",
-  "category": [
-   "Other"
-  ]
+  "sprite": "laggingtail"
  },
  "lansatberry": {
   "name": "Lansat Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "lansatberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "lansatberry"
  },
  "latiasite": {
   "name": "Latiasite",
@@ -2691,11 +1981,7 @@
    "Latias"
   ],
   "isNonstandard": "Past",
-  "sprite": "latiasite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "latiasite"
  },
  "latiosite": {
   "name": "Latiosite",
@@ -2706,11 +1992,7 @@
    "Latios"
   ],
   "isNonstandard": "Past",
-  "sprite": "latiosite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "latiosite"
  },
  "laxincense": {
   "name": "Lax Incense",
@@ -2718,10 +2000,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "laxincense",
-  "category": [
-   "Other"
-  ]
+  "sprite": "laxincense"
  },
  "leafstone": {
   "name": "Leaf Stone",
@@ -2729,10 +2008,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "leafstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "leafstone"
  },
  "leek": {
   "name": "Leek",
@@ -2745,10 +2021,7 @@
    "Sirfetch’d"
   ],
   "isNonstandard": "Past",
-  "sprite": "leek",
-  "category": [
-   "Other"
-  ]
+  "sprite": "leek"
  },
  "leftovers": {
   "name": "Leftovers",
@@ -2756,39 +2029,25 @@
    "basePower": 10
   },
   "desc": "Restores 1/16 of the holder's max HP at the end of every turn.",
-  "sprite": "leftovers",
-  "category": [
-   "Recovery"
-  ]
+  "sprite": "leftovers"
  },
  "leppaberry": {
   "name": "Leppa Berry",
   "isBerry": true,
   "desc": "Restores 10 PP to a move when its PP is fully depleted. Disappears for the duration of the battle after a single use.",
-  "sprite": "leppaberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "leppaberry"
  },
  "levelball": {
   "name": "Level Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "levelball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "levelball"
  },
  "liechiberry": {
   "name": "Liechi Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "liechiberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "liechiberry"
  },
  "lifeorb": {
   "name": "Life Orb",
@@ -2796,10 +2055,7 @@
    "basePower": 30
   },
   "desc": "An item to be held by a Pokemon. Increases the damage of the holder's moves by 30% but the holder loses 10% of its max HP after using a damaging move.",
-  "sprite": "lifeorb",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "lifeorb"
  },
  "lightball": {
   "name": "Light Ball",
@@ -2826,10 +2082,7 @@
    "Pikachu-World"
   ],
   "desc": "When held by a Pikachu, doubles the holder's Attack and Sp. Atk.",
-  "sprite": "lightball",
-  "category": [
-   "Stat Boost"
-  ]
+  "sprite": "lightball"
  },
  "lightclay": {
   "name": "Light Clay",
@@ -2837,10 +2090,7 @@
    "basePower": 30
   },
   "desc": "An item to be held by a Pokemon. Prolongs the effects of moves like Light Screen, Reflect, and Aurora Veil to make them last eight turns instead of five.",
-  "sprite": "lightclay",
-  "category": [
-   "Effect Extend"
-  ]
+  "sprite": "lightclay"
  },
  "loadeddice": {
   "name": "Loaded Dice",
@@ -2848,10 +2098,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "loadeddice",
-  "category": [
-   "Other"
-  ]
+  "sprite": "loadeddice"
  },
  "lopunnite": {
   "name": "Lopunnite",
@@ -2862,19 +2109,13 @@
    "Lopunny"
   ],
   "desc": "A held item that allows Lopunny to Mega Evolve.",
-  "sprite": "lopunnite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "lopunnite"
  },
  "loveball": {
   "name": "Love Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "loveball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "loveball"
  },
  "lovesweet": {
   "name": "Love Sweet",
@@ -2882,10 +2123,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "lovesweet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "lovesweet"
  },
  "lucarionite": {
   "name": "Lucarionite",
@@ -2896,10 +2134,7 @@
    "Lucario"
   ],
   "desc": "A held item that allows Lucario to Mega Evolve into Mega Lucario.",
-  "sprite": "lucarionite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "lucarionite"
  },
  "lucarionitez": {
   "name": "Lucarionite Z",
@@ -2910,11 +2145,7 @@
    "Lucario"
   ],
   "isNonstandard": "Future",
-  "sprite": "lucarionitez",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "lucarionitez"
  },
  "luckypunch": {
   "name": "Lucky Punch",
@@ -2925,20 +2156,13 @@
    "Chansey"
   ],
   "isNonstandard": "Past",
-  "sprite": "luckypunch",
-  "category": [
-   "Other"
-  ]
+  "sprite": "luckypunch"
  },
  "lumberry": {
   "name": "Lum Berry",
   "isBerry": true,
   "desc": "Cures any status condition or confusion. Disappears for the duration of the battle after a single use.",
-  "sprite": "lumberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "lumberry"
  },
  "luminousmoss": {
   "name": "Luminous Moss",
@@ -2949,10 +2173,7 @@
    "spd": 1
   },
   "isNonstandard": "Past",
-  "sprite": "luminousmoss",
-  "category": [
-   "Other"
-  ]
+  "sprite": "luminousmoss"
  },
  "lunaliumz": {
   "name": "Lunalium Z",
@@ -2964,19 +2185,13 @@
    "Necrozma-Dawn-Wings"
   ],
   "isNonstandard": "Past",
-  "sprite": "lunaliumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "lunaliumz"
  },
  "lureball": {
   "name": "Lure Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "lureball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "lureball"
  },
  "lustrousglobe": {
   "name": "Lustrous Globe",
@@ -2985,10 +2200,7 @@
    "Palkia-Origin"
   ],
   "isNonstandard": "Past",
-  "sprite": "lustrousglobe",
-  "category": [
-   "Other"
-  ]
+  "sprite": "lustrousglobe"
  },
  "lustrousorb": {
   "name": "Lustrous Orb",
@@ -2999,19 +2211,13 @@
    "Palkia"
   ],
   "isNonstandard": "Past",
-  "sprite": "lustrousorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "lustrousorb"
  },
  "luxuryball": {
   "name": "Luxury Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "luxuryball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "luxuryball"
  },
  "lycaniumz": {
   "name": "Lycanium Z",
@@ -3024,10 +2230,7 @@
    "Lycanroc-Dusk"
   ],
   "isNonstandard": "Past",
-  "sprite": "lycaniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "lycaniumz"
  },
  "machobrace": {
   "name": "Macho Brace",
@@ -3036,10 +2239,7 @@
    "basePower": 60
   },
   "isNonstandard": "Past",
-  "sprite": "machobrace",
-  "category": [
-   "Other"
-  ]
+  "sprite": "machobrace"
  },
  "magearnite": {
   "name": "Magearnite",
@@ -3052,11 +2252,7 @@
    "Magearna-Original"
   ],
   "isNonstandard": "Future",
-  "sprite": "magearnite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "magearnite"
  },
  "magmarizer": {
   "name": "Magmarizer",
@@ -3064,10 +2260,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "magmarizer",
-  "category": [
-   "Other"
-  ]
+  "sprite": "magmarizer"
  },
  "magnet": {
   "name": "Magnet",
@@ -3075,39 +2268,25 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Electric-type moves by 20%.",
-  "sprite": "magnet",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "magnet"
  },
  "magoberry": {
   "name": "Mago Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "magoberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "magoberry"
  },
  "magostberry": {
   "name": "Magost Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "magostberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "magostberry"
  },
  "mail": {
   "name": "Mail",
   "isNonstandard": "Past",
-  "sprite": "mail",
-  "category": [
-   "Other"
-  ]
+  "sprite": "mail"
  },
  "malamarite": {
   "name": "Malamarite",
@@ -3118,10 +2297,7 @@
    "Malamar"
   ],
   "desc": "A held item that allows Malamar to Mega Evolve.",
-  "sprite": "malamarite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "malamarite"
  },
  "maliciousarmor": {
   "name": "Malicious Armor",
@@ -3129,10 +2305,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "maliciousarmor",
-  "category": [
-   "Other"
-  ]
+  "sprite": "maliciousarmor"
  },
  "manectite": {
   "name": "Manectite",
@@ -3143,20 +2316,13 @@
    "Manectric"
   ],
   "desc": "A held item that allows Manectric to Mega Evolve.",
-  "sprite": "manectite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "manectite"
  },
  "marangaberry": {
   "name": "Maranga Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "marangaberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "marangaberry"
  },
  "marshadiumz": {
   "name": "Marshadium Z",
@@ -3167,19 +2333,13 @@
    "Marshadow"
   ],
   "isNonstandard": "Past",
-  "sprite": "marshadiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "marshadiumz"
  },
  "masterball": {
   "name": "Master Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "masterball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "masterball"
  },
  "masterpieceteacup": {
   "name": "Masterpiece Teacup",
@@ -3187,10 +2347,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "masterpieceteacup",
-  "category": [
-   "Other"
-  ]
+  "sprite": "masterpieceteacup"
  },
  "mawilite": {
   "name": "Mawilite",
@@ -3201,20 +2358,14 @@
    "Mawile"
   ],
   "desc": "A held item that allows Mawile to Mega Evolve.",
-  "sprite": "mawilite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "mawilite"
  },
  "meadowplate": {
   "name": "Meadow Plate",
   "onPlate": "Grass",
   "forcedForme": "Arceus-Grass",
   "isNonstandard": "Past",
-  "sprite": "meadowplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "meadowplate"
  },
  "medichamite": {
   "name": "Medichamite",
@@ -3225,10 +2376,7 @@
    "Medicham"
   ],
   "desc": "A held item that allows Medicham to Mega Evolve.",
-  "sprite": "medichamite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "medichamite"
  },
  "meganiumite": {
   "name": "Meganiumite",
@@ -3239,10 +2387,7 @@
    "Meganium"
   ],
   "desc": "A held item that allows Meganium to Mega Evolve.",
-  "sprite": "meganiumite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "meganiumite"
  },
  "mentalherb": {
   "name": "Mental Herb",
@@ -3250,10 +2395,7 @@
    "basePower": 10
   },
   "desc": "Cures the holder of the Infatuated, Taunted, Unable to Repeat, Move Disabled, Healing Prevented, and Encore statuses. Disappears for the duration of the battle after a single use.",
-  "sprite": "mentalherb",
-  "category": [
-   "Recovery"
-  ]
+  "sprite": "mentalherb"
  },
  "meowsticite": {
   "name": "Meowsticite",
@@ -3266,10 +2408,7 @@
    "Meowstic-F"
   ],
   "desc": "A held item that allows Meowstic to Mega Evolve.",
-  "sprite": "meowsticite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "meowsticite"
  },
  "metagrossite": {
   "name": "Metagrossite",
@@ -3280,18 +2419,12 @@
    "Metagross"
   ],
   "desc": "A held item that allows Metagross to Mega Evolve.",
-  "sprite": "metagrossite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "metagrossite"
  },
  "metalalloy": {
   "name": "Metal Alloy",
   "isNonstandard": "Past",
-  "sprite": "metalalloy",
-  "category": [
-   "Other"
-  ]
+  "sprite": "metalalloy"
  },
  "metalcoat": {
   "name": "Metal Coat",
@@ -3299,10 +2432,7 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Steel-type moves by 20%.",
-  "sprite": "metalcoat",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "metalcoat"
  },
  "metalpowder": {
   "name": "Metal Powder",
@@ -3314,10 +2444,7 @@
    "Ditto"
   ],
   "isNonstandard": "Past",
-  "sprite": "metalpowder",
-  "category": [
-   "Other"
-  ]
+  "sprite": "metalpowder"
  },
  "metronome": {
   "name": "Metronome",
@@ -3328,10 +2455,7 @@
    "onTryMovePriority": -2
   },
   "desc": "An item to be held by a Pokemon. Increases the damage of moves used consecutively by 20%. It stops increasing at 100% and resets if a different move is used.",
-  "sprite": "metronome",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "metronome"
  },
  "mewniumz": {
   "name": "Mewnium Z",
@@ -3342,10 +2466,7 @@
    "Mew"
   ],
   "isNonstandard": "Past",
-  "sprite": "mewniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "mewniumz"
  },
  "mewtwonitex": {
   "name": "Mewtwonite X",
@@ -3356,11 +2477,7 @@
    "Mewtwo"
   ],
   "isNonstandard": "Past",
-  "sprite": "mewtwonitex",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "mewtwonitex"
  },
  "mewtwonitey": {
   "name": "Mewtwonite Y",
@@ -3371,11 +2488,7 @@
    "Mewtwo"
   ],
   "isNonstandard": "Past",
-  "sprite": "mewtwonitey",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "mewtwonitey"
  },
  "micleberry": {
   "name": "Micle Berry",
@@ -3384,11 +2497,7 @@
    "duration": 2
   },
   "isNonstandard": "Past",
-  "sprite": "micleberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "micleberry"
  },
  "mimikiumz": {
   "name": "Mimikium Z",
@@ -3402,20 +2511,14 @@
    "Mimikyu-Busted-Totem"
   ],
   "isNonstandard": "Past",
-  "sprite": "mimikiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "mimikiumz"
  },
  "mindplate": {
   "name": "Mind Plate",
   "onPlate": "Psychic",
   "forcedForme": "Arceus-Psychic",
   "isNonstandard": "Past",
-  "sprite": "mindplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "mindplate"
  },
  "miracleseed": {
   "name": "Miracle Seed",
@@ -3423,10 +2526,7 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Grass-type moves by 20%.",
-  "sprite": "miracleseed",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "miracleseed"
  },
  "mirrorherb": {
   "name": "Mirror Herb",
@@ -3434,10 +2534,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "mirrorherb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "mirrorherb"
  },
  "mistyseed": {
   "name": "Misty Seed",
@@ -3449,19 +2546,13 @@
    "spd": 1
   },
   "isNonstandard": "Past",
-  "sprite": "mistyseed",
-  "category": [
-   "Other"
-  ]
+  "sprite": "mistyseed"
  },
  "moonball": {
   "name": "Moon Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "moonball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "moonball"
  },
  "moonstone": {
   "name": "Moon Stone",
@@ -3469,10 +2560,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "moonstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "moonstone"
  },
  "muscleband": {
   "name": "Muscle Band",
@@ -3480,10 +2568,7 @@
    "basePower": 10
   },
   "desc": "An item to be held by a Pokemon. Increases the holder's physical attacks by 10%.",
-  "sprite": "muscleband",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "muscleband"
  },
  "mysticwater": {
   "name": "Mystic Water",
@@ -3491,39 +2576,26 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Water-type moves by 20%.",
-  "sprite": "mysticwater",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "mysticwater"
  },
  "nanabberry": {
   "name": "Nanab Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "nanabberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "nanabberry"
  },
  "nestball": {
   "name": "Nest Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "nestball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "nestball"
  },
  "netball": {
   "name": "Net Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "netball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "netball"
  },
  "nevermeltice": {
   "name": "Never-Melt Ice",
@@ -3531,30 +2603,20 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Ice-type moves by 20%.",
-  "sprite": "nevermeltice",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "nevermeltice"
  },
  "nomelberry": {
   "name": "Nomel Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "nomelberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "nomelberry"
  },
  "normalgem": {
   "name": "Normal Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "normalgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "normalgem"
  },
  "normaliumz": {
   "name": "Normalium Z",
@@ -3562,20 +2624,13 @@
   "zMove": true,
   "zMoveType": "Normal",
   "isNonstandard": "Past",
-  "sprite": "normaliumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "normaliumz"
  },
  "occaberry": {
   "name": "Occa Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Fire-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "occaberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "occaberry"
  },
  "oddincense": {
   "name": "Odd Incense",
@@ -3583,10 +2638,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "oddincense",
-  "category": [
-   "Other"
-  ]
+  "sprite": "oddincense"
  },
  "oldamber": {
   "name": "Old Amber",
@@ -3594,20 +2646,13 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "oldamber",
-  "category": [
-   "Other"
-  ]
+  "sprite": "oldamber"
  },
  "oranberry": {
   "name": "Oran Berry",
   "isBerry": true,
   "desc": "Restores 10 HP to the holder when its HP drops to 1/2 or less of its max. Disappears for the duration of the battle after a single use.",
-  "sprite": "oranberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "oranberry"
  },
  "ovalstone": {
   "name": "Oval Stone",
@@ -3615,80 +2660,50 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "ovalstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ovalstone"
  },
  "pamtreberry": {
   "name": "Pamtre Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "pamtreberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "pamtreberry"
  },
  "parkball": {
   "name": "Park Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "parkball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "parkball"
  },
  "passhoberry": {
   "name": "Passho Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Water-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "passhoberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "passhoberry"
  },
  "payapaberry": {
   "name": "Payapa Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Psychic-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "payapaberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "payapaberry"
  },
  "pechaberry": {
   "name": "Pecha Berry",
   "isBerry": true,
   "desc": "Cures being poisoned or badly poisoned. Disappears for the duration of the battle after a single use.",
-  "sprite": "pechaberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "pechaberry"
  },
  "persimberry": {
   "name": "Persim Berry",
   "isBerry": true,
   "desc": "Cures being confused. Disappears for the duration of the battle after a single use.",
-  "sprite": "persimberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "persimberry"
  },
  "petayaberry": {
   "name": "Petaya Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "petayaberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "petayaberry"
  },
  "pidgeotite": {
   "name": "Pidgeotite",
@@ -3699,10 +2714,7 @@
    "Pidgeot"
   ],
   "desc": "A held item that allows Pidgeot to Mega Evolve.",
-  "sprite": "pidgeotite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "pidgeotite"
  },
  "pikaniumz": {
   "name": "Pikanium Z",
@@ -3713,10 +2725,7 @@
    "Pikachu"
   ],
   "isNonstandard": "Past",
-  "sprite": "pikaniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "pikaniumz"
  },
  "pikashuniumz": {
   "name": "Pikashunium Z",
@@ -3733,21 +2742,14 @@
    "Pikachu-Partner"
   ],
   "isNonstandard": "Past",
-  "sprite": "pikashuniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "pikashuniumz"
  },
  "pinapberry": {
   "name": "Pinap Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "pinapberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "pinapberry"
  },
  "pinsirite": {
   "name": "Pinsirite",
@@ -3758,20 +2760,14 @@
    "Pinsir"
   ],
   "desc": "A held item that allows Pinsir to Mega Evolve.",
-  "sprite": "pinsirite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "pinsirite"
  },
  "pixieplate": {
   "name": "Pixie Plate",
   "onPlate": "Fairy",
   "forcedForme": "Arceus-Fairy",
   "isNonstandard": "Past",
-  "sprite": "pixieplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "pixieplate"
  },
  "plumefossil": {
   "name": "Plume Fossil",
@@ -3779,10 +2775,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "plumefossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "plumefossil"
  },
  "poisonbarb": {
   "name": "Poison Barb",
@@ -3791,19 +2784,13 @@
    "status": "psn"
   },
   "desc": "Boosts the power of the holder's Poison-type moves by 20%.",
-  "sprite": "poisonbarb",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "poisonbarb"
  },
  "poisongem": {
   "name": "Poison Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "poisongem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "poisongem"
  },
  "poisoniumz": {
   "name": "Poisonium Z",
@@ -3813,10 +2800,7 @@
   "zMoveType": "Poison",
   "forcedForme": "Arceus-Poison",
   "isNonstandard": "Past",
-  "sprite": "poisoniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "poisoniumz"
  },
  "poisonmemory": {
   "name": "Poison Memory",
@@ -3826,30 +2810,20 @@
    "Silvally-Poison"
   ],
   "isNonstandard": "Past",
-  "sprite": "poisonmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "poisonmemory"
  },
  "pokeball": {
   "name": "Poke Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "pokeball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "pokeball"
  },
  "pomegberry": {
   "name": "Pomeg Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "pomegberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "pomegberry"
  },
  "poweranklet": {
   "name": "Power Anklet",
@@ -3858,10 +2832,7 @@
    "basePower": 70
   },
   "isNonstandard": "Past",
-  "sprite": "poweranklet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "poweranklet"
  },
  "powerband": {
   "name": "Power Band",
@@ -3870,10 +2841,7 @@
    "basePower": 70
   },
   "isNonstandard": "Past",
-  "sprite": "powerband",
-  "category": [
-   "Other"
-  ]
+  "sprite": "powerband"
  },
  "powerbelt": {
   "name": "Power Belt",
@@ -3882,10 +2850,7 @@
    "basePower": 70
   },
   "isNonstandard": "Past",
-  "sprite": "powerbelt",
-  "category": [
-   "Other"
-  ]
+  "sprite": "powerbelt"
  },
  "powerbracer": {
   "name": "Power Bracer",
@@ -3894,10 +2859,7 @@
    "basePower": 70
   },
   "isNonstandard": "Past",
-  "sprite": "powerbracer",
-  "category": [
-   "Other"
-  ]
+  "sprite": "powerbracer"
  },
  "powerherb": {
   "name": "Power Herb",
@@ -3905,10 +2867,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "powerherb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "powerherb"
  },
  "powerlens": {
   "name": "Power Lens",
@@ -3917,10 +2876,7 @@
    "basePower": 70
   },
   "isNonstandard": "Past",
-  "sprite": "powerlens",
-  "category": [
-   "Other"
-  ]
+  "sprite": "powerlens"
  },
  "powerweight": {
   "name": "Power Weight",
@@ -3929,19 +2885,13 @@
    "basePower": 70
   },
   "isNonstandard": "Past",
-  "sprite": "powerweight",
-  "category": [
-   "Other"
-  ]
+  "sprite": "powerweight"
  },
  "premierball": {
   "name": "Premier Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "premierball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "premierball"
  },
  "prettyfeather": {
   "name": "Pretty Feather",
@@ -3949,10 +2899,7 @@
    "basePower": 20
   },
   "isNonstandard": "Past",
-  "sprite": "prettyfeather",
-  "category": [
-   "Other"
-  ]
+  "sprite": "prettyfeather"
  },
  "primariumz": {
   "name": "Primarium Z",
@@ -3963,10 +2910,7 @@
    "Primarina"
   ],
   "isNonstandard": "Past",
-  "sprite": "primariumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "primariumz"
  },
  "prismscale": {
   "name": "Prism Scale",
@@ -3974,10 +2918,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "prismscale",
-  "category": [
-   "Other"
-  ]
+  "sprite": "prismscale"
  },
  "protectivepads": {
   "name": "Protective Pads",
@@ -3985,10 +2926,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "protectivepads",
-  "category": [
-   "Other"
-  ]
+  "sprite": "protectivepads"
  },
  "protector": {
   "name": "Protector",
@@ -3996,19 +2934,13 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "protector",
-  "category": [
-   "Other"
-  ]
+  "sprite": "protector"
  },
  "psychicgem": {
   "name": "Psychic Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "psychicgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "psychicgem"
  },
  "psychicmemory": {
   "name": "Psychic Memory",
@@ -4018,10 +2950,7 @@
    "Silvally-Psychic"
   ],
   "isNonstandard": "Past",
-  "sprite": "psychicmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "psychicmemory"
  },
  "psychicseed": {
   "name": "Psychic Seed",
@@ -4033,10 +2962,7 @@
    "spd": 1
   },
   "isNonstandard": "Past",
-  "sprite": "psychicseed",
-  "category": [
-   "Other"
-  ]
+  "sprite": "psychicseed"
  },
  "psychiumz": {
   "name": "Psychium Z",
@@ -4046,10 +2972,7 @@
   "zMoveType": "Psychic",
   "forcedForme": "Arceus-Psychic",
   "isNonstandard": "Past",
-  "sprite": "psychiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "psychiumz"
  },
  "punchingglove": {
   "name": "Punching Glove",
@@ -4057,10 +2980,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "punchingglove",
-  "category": [
-   "Other"
-  ]
+  "sprite": "punchingglove"
  },
  "pyroarite": {
   "name": "Pyroarite",
@@ -4071,30 +2991,20 @@
    "Pyroar"
   ],
   "desc": "A held item that allows Pyroar to Mega Evolve.",
-  "sprite": "pyroarite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "pyroarite"
  },
  "qualotberry": {
   "name": "Qualot Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "qualotberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "qualotberry"
  },
  "quickball": {
   "name": "Quick Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "quickball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "quickball"
  },
  "quickclaw": {
   "name": "Quick Claw",
@@ -4102,10 +3012,7 @@
    "basePower": 80
   },
   "desc": "Gives the holder's moves a 20% chance of going first among moves of the same priority.",
-  "sprite": "quickclaw",
-  "category": [
-   "Other"
-  ]
+  "sprite": "quickclaw"
  },
  "quickpowder": {
   "name": "Quick Powder",
@@ -4116,21 +3023,14 @@
    "Ditto"
   ],
   "isNonstandard": "Past",
-  "sprite": "quickpowder",
-  "category": [
-   "Other"
-  ]
+  "sprite": "quickpowder"
  },
  "rabutaberry": {
   "name": "Rabuta Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "rabutaberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "rabutaberry"
  },
  "raichunitex": {
   "name": "Raichunite X",
@@ -4141,10 +3041,7 @@
    "Raichu"
   ],
   "desc": "A held item that allows Raichu to Mega Evolve to Mega Raichu X.",
-  "sprite": "raichunitex",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "raichunitex"
  },
  "raichunitey": {
   "name": "Raichunite Y",
@@ -4155,10 +3052,7 @@
    "Raichu"
   ],
   "desc": "A held item that allows Raichu to Mega Evolve to Mega Raichu Y.",
-  "sprite": "raichunitey",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "raichunitey"
  },
  "rarebone": {
   "name": "Rare Bone",
@@ -4166,20 +3060,13 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "rarebone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rarebone"
  },
  "rawstberry": {
   "name": "Rawst Berry",
   "isBerry": true,
   "desc": "Cures being burned. Disappears for the duration of the battle after a single use.",
-  "sprite": "rawstberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "rawstberry"
  },
  "razorclaw": {
   "name": "Razor Claw",
@@ -4187,10 +3074,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "razorclaw",
-  "category": [
-   "Other"
-  ]
+  "sprite": "razorclaw"
  },
  "razorfang": {
   "name": "Razor Fang",
@@ -4199,21 +3083,14 @@
    "volatileStatus": "flinch"
   },
   "isNonstandard": "Past",
-  "sprite": "razorfang",
-  "category": [
-   "Other"
-  ]
+  "sprite": "razorfang"
  },
  "razzberry": {
   "name": "Razz Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "razzberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "razzberry"
  },
  "reapercloth": {
   "name": "Reaper Cloth",
@@ -4221,10 +3098,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "reapercloth",
-  "category": [
-   "Other"
-  ]
+  "sprite": "reapercloth"
  },
  "redcard": {
   "name": "Red Card",
@@ -4232,10 +3106,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "redcard",
-  "category": [
-   "Other"
-  ]
+  "sprite": "redcard"
  },
  "redorb": {
   "name": "Red Orb",
@@ -4245,19 +3116,13 @@
   ],
   "isPrimalOrb": true,
   "isNonstandard": "Past",
-  "sprite": "redorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "redorb"
  },
  "repeatball": {
   "name": "Repeat Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "repeatball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "repeatball"
  },
  "ribbonsweet": {
   "name": "Ribbon Sweet",
@@ -4265,20 +3130,13 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "ribbonsweet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ribbonsweet"
  },
  "rindoberry": {
   "name": "Rindo Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Grass-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "rindoberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "rindoberry"
  },
  "ringtarget": {
   "name": "Ring Target",
@@ -4287,19 +3145,13 @@
   },
   "onNegateImmunity": false,
   "isNonstandard": "Past",
-  "sprite": "ringtarget",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ringtarget"
  },
  "rockgem": {
   "name": "Rock Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "rockgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rockgem"
  },
  "rockincense": {
   "name": "Rock Incense",
@@ -4307,10 +3159,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "rockincense",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rockincense"
  },
  "rockiumz": {
   "name": "Rockium Z",
@@ -4320,10 +3169,7 @@
   "zMoveType": "Rock",
   "forcedForme": "Arceus-Rock",
   "isNonstandard": "Past",
-  "sprite": "rockiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rockiumz"
  },
  "rockmemory": {
   "name": "Rock Memory",
@@ -4333,10 +3179,7 @@
    "Silvally-Rock"
   ],
   "isNonstandard": "Past",
-  "sprite": "rockmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rockmemory"
  },
  "rockyhelmet": {
   "name": "Rocky Helmet",
@@ -4345,10 +3188,7 @@
   },
   "onDamagingHitOrder": 2,
   "isNonstandard": "Past",
-  "sprite": "rockyhelmet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rockyhelmet"
  },
  "roomservice": {
   "name": "Room Service",
@@ -4360,10 +3200,7 @@
    "spe": -1
   },
   "isNonstandard": "Past",
-  "sprite": "roomservice",
-  "category": [
-   "Other"
-  ]
+  "sprite": "roomservice"
  },
  "rootfossil": {
   "name": "Root Fossil",
@@ -4371,10 +3208,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "rootfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rootfossil"
  },
  "roseincense": {
   "name": "Rose Incense",
@@ -4382,30 +3216,19 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "roseincense",
-  "category": [
-   "Other"
-  ]
+  "sprite": "roseincense"
  },
  "roseliberry": {
   "name": "Roseli Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Fairy-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "roseliberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "roseliberry"
  },
  "rowapberry": {
   "name": "Rowap Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "rowapberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "rowapberry"
  },
  "rustedshield": {
   "name": "Rusted Shield",
@@ -4413,10 +3236,7 @@
    "Zamazenta-Crowned"
   ],
   "isNonstandard": "Past",
-  "sprite": "rustedshield",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rustedshield"
  },
  "rustedsword": {
   "name": "Rusted Sword",
@@ -4424,10 +3244,7 @@
    "Zacian-Crowned"
   ],
   "isNonstandard": "Past",
-  "sprite": "rustedsword",
-  "category": [
-   "Other"
-  ]
+  "sprite": "rustedsword"
  },
  "sablenite": {
   "name": "Sablenite",
@@ -4438,10 +3255,7 @@
    "Sableye"
   ],
   "desc": "A held item that allows Sableye to Mega Evolve.",
-  "sprite": "sablenite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "sablenite"
  },
  "sachet": {
   "name": "Sachet",
@@ -4449,19 +3263,13 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "sachet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "sachet"
  },
  "safariball": {
   "name": "Safari Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "safariball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "safariball"
  },
  "safetygoggles": {
   "name": "Safety Goggles",
@@ -4469,10 +3277,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "safetygoggles",
-  "category": [
-   "Other"
-  ]
+  "sprite": "safetygoggles"
  },
  "sailfossil": {
   "name": "Sail Fossil",
@@ -4480,20 +3285,13 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "sailfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "sailfossil"
  },
  "salacberry": {
   "name": "Salac Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "salacberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "salacberry"
  },
  "salamencite": {
   "name": "Salamencite",
@@ -4504,11 +3302,7 @@
    "Salamence"
   ],
   "isNonstandard": "Past",
-  "sprite": "salamencite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "salamencite"
  },
  "sceptilite": {
   "name": "Sceptilite",
@@ -4519,10 +3313,7 @@
    "Sceptile"
   ],
   "desc": "A held item that allows Sceptile to Mega Evolve.",
-  "sprite": "sceptilite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "sceptilite"
  },
  "scizorite": {
   "name": "Scizorite",
@@ -4533,10 +3324,7 @@
    "Scizor"
   ],
   "desc": "A held item that allows Scizor to Mega Evolve.",
-  "sprite": "scizorite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "scizorite"
  },
  "scolipite": {
   "name": "Scolipite",
@@ -4547,10 +3335,7 @@
    "Scolipede"
   ],
   "desc": "A held item that allows Scolipede to Mega Evolve.",
-  "sprite": "scolipite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "scolipite"
  },
  "scopelens": {
   "name": "Scope Lens",
@@ -4558,10 +3343,7 @@
    "basePower": 30
   },
   "desc": "Gives the holder a 1-stage Critical-Hit Ratio Boost.",
-  "sprite": "scopelens",
-  "category": [
-   "Other"
-  ]
+  "sprite": "scopelens"
  },
  "scovillainite": {
   "name": "Scovillainite",
@@ -4572,10 +3354,7 @@
    "Scovillain"
   ],
   "desc": "A held item that allows Scovillain to Mega Evolve.",
-  "sprite": "scovillainite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "scovillainite"
  },
  "scraftinite": {
   "name": "Scraftinite",
@@ -4586,10 +3365,7 @@
    "Scrafty"
   ],
   "desc": "A held item that allows Scrafty to Mega Evolve.",
-  "sprite": "scraftinite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "scraftinite"
  },
  "seaincense": {
   "name": "Sea Incense",
@@ -4597,10 +3373,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "seaincense",
-  "category": [
-   "Other"
-  ]
+  "sprite": "seaincense"
  },
  "sharpbeak": {
   "name": "Sharp Beak",
@@ -4608,10 +3381,7 @@
    "basePower": 50
   },
   "desc": "Boosts the power of the holder's Flying-type moves by 20%.",
-  "sprite": "sharpbeak",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "sharpbeak"
  },
  "sharpedonite": {
   "name": "Sharpedonite",
@@ -4622,10 +3392,7 @@
    "Sharpedo"
   ],
   "desc": "A held item that allows Sharpedo to Mega Evolve.",
-  "sprite": "sharpedonite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "sharpedonite"
  },
  "shedshell": {
   "name": "Shed Shell",
@@ -4635,10 +3402,7 @@
   "onTrapPokemonPriority": -10,
   "onMaybeTrapPokemonPriority": -10,
   "desc": "Enables the holder to ignore any effects that would usually prevent it from switching out of battle and being replaced by another party Pokémon.",
-  "sprite": "shedshell",
-  "category": [
-   "Other"
-  ]
+  "sprite": "shedshell"
  },
  "shellbell": {
   "name": "Shell Bell",
@@ -4646,10 +3410,7 @@
    "basePower": 30
   },
   "desc": "When the holder deals damage with its moves, its HP is restored by 1/8 of the damage dealt.",
-  "sprite": "shellbell",
-  "category": [
-   "Recovery"
-  ]
+  "sprite": "shellbell"
  },
  "shinystone": {
   "name": "Shiny Stone",
@@ -4657,10 +3418,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "shinystone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "shinystone"
  },
  "shockdrive": {
   "name": "Shock Drive",
@@ -4670,20 +3428,13 @@
    "Genesect-Shock"
   ],
   "isNonstandard": "Past",
-  "sprite": "shockdrive",
-  "category": [
-   "Other"
-  ]
+  "sprite": "shockdrive"
  },
  "shucaberry": {
   "name": "Shuca Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Ground-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "shucaberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "shucaberry"
  },
  "silkscarf": {
   "name": "Silk Scarf",
@@ -4691,10 +3442,7 @@
    "basePower": 10
   },
   "desc": "Boosts the power of the holder's Normal-type moves by 20%.",
-  "sprite": "silkscarf",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "silkscarf"
  },
  "silverpowder": {
   "name": "Silver Powder",
@@ -4702,20 +3450,13 @@
    "basePower": 10
   },
   "desc": "Boosts the power of the holder's Bug-type moves by 20%.",
-  "sprite": "silverpowder",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "silverpowder"
  },
  "sitrusberry": {
   "name": "Sitrus Berry",
   "isBerry": true,
   "desc": "Restores 1/4 of the holder's max HP when the holder's HP drops to 1/2 or less of its max. Disappears for the duration of the battle after a single use.",
-  "sprite": "sitrusberry",
-  "category": [
-   "Recovery",
-   "Berry"
-  ]
+  "sprite": "sitrusberry"
  },
  "skarmorite": {
   "name": "Skarmorite",
@@ -4726,10 +3467,7 @@
    "Skarmory"
   ],
   "desc": "A held item that allows Skarmory to Mega Evolve.",
-  "sprite": "skarmorite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "skarmorite"
  },
  "skullfossil": {
   "name": "Skull Fossil",
@@ -4737,20 +3475,14 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "skullfossil",
-  "category": [
-   "Other"
-  ]
+  "sprite": "skullfossil"
  },
  "skyplate": {
   "name": "Sky Plate",
   "onPlate": "Flying",
   "forcedForme": "Arceus-Flying",
   "isNonstandard": "Past",
-  "sprite": "skyplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "skyplate"
  },
  "slowbronite": {
   "name": "Slowbronite",
@@ -4761,10 +3493,7 @@
    "Slowbro"
   ],
   "desc": "A held item that allows Slowbro to Mega Evolve. It has no effect on Galarian Slowbro.",
-  "sprite": "slowbronite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "slowbronite"
  },
  "smoothrock": {
   "name": "Smooth Rock",
@@ -4772,10 +3501,7 @@
    "basePower": 10
   },
   "desc": "An item to be held by a Pokemon. If the holder uses Sandstorm, the effects will last for 8 turns instead of 5.",
-  "sprite": "smoothrock",
-  "category": [
-   "Effect Extend"
-  ]
+  "sprite": "smoothrock"
  },
  "snorliumz": {
   "name": "Snorlium Z",
@@ -4786,10 +3512,7 @@
    "Snorlax"
   ],
   "isNonstandard": "Past",
-  "sprite": "snorliumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "snorliumz"
  },
  "snowball": {
   "name": "Snowball",
@@ -4800,10 +3523,7 @@
    "atk": 1
   },
   "isNonstandard": "Past",
-  "sprite": "snowball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "snowball"
  },
  "softsand": {
   "name": "Soft Sand",
@@ -4811,10 +3531,7 @@
    "basePower": 10
   },
   "desc": "Boosts the power of the holder's Ground-type moves by 20%.",
-  "sprite": "softsand",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "softsand"
  },
  "solganiumz": {
   "name": "Solganium Z",
@@ -4826,10 +3543,7 @@
    "Necrozma-Dusk-Mane"
   ],
   "isNonstandard": "Past",
-  "sprite": "solganiumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "solganiumz"
  },
  "souldew": {
   "name": "Soul Dew",
@@ -4841,10 +3555,7 @@
    "Latias"
   ],
   "isNonstandard": "Past",
-  "sprite": "souldew",
-  "category": [
-   "Other"
-  ]
+  "sprite": "souldew"
  },
  "spelltag": {
   "name": "Spell Tag",
@@ -4852,50 +3563,34 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Ghost-type moves by 20%.",
-  "sprite": "spelltag",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "spelltag"
  },
  "spelonberry": {
   "name": "Spelon Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "spelonberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "spelonberry"
  },
  "splashplate": {
   "name": "Splash Plate",
   "onPlate": "Water",
   "forcedForme": "Arceus-Water",
   "isNonstandard": "Past",
-  "sprite": "splashplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "splashplate"
  },
  "spookyplate": {
   "name": "Spooky Plate",
   "onPlate": "Ghost",
   "forcedForme": "Arceus-Ghost",
   "isNonstandard": "Past",
-  "sprite": "spookyplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "spookyplate"
  },
  "sportball": {
   "name": "Sport Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "sportball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "sportball"
  },
  "staraptite": {
   "name": "Staraptite",
@@ -4906,20 +3601,13 @@
    "Staraptor"
   ],
   "desc": "A held item that allows Staraptor to Mega Evolve.",
-  "sprite": "staraptite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "staraptite"
  },
  "starfberry": {
   "name": "Starf Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "starfberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "starfberry"
  },
  "starminite": {
   "name": "Starminite",
@@ -4930,10 +3618,7 @@
    "Starmie"
   ],
   "desc": "A held item that allows Starmie to Mega Evolve.",
-  "sprite": "starminite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "starminite"
  },
  "starsweet": {
   "name": "Star Sweet",
@@ -4941,19 +3626,13 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "starsweet",
-  "category": [
-   "Other"
-  ]
+  "sprite": "starsweet"
  },
  "steelgem": {
   "name": "Steel Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "steelgem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "steelgem"
  },
  "steeliumz": {
   "name": "Steelium Z",
@@ -4963,10 +3642,7 @@
   "zMoveType": "Steel",
   "forcedForme": "Arceus-Steel",
   "isNonstandard": "Past",
-  "sprite": "steeliumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "steeliumz"
  },
  "steelixite": {
   "name": "Steelixite",
@@ -4977,10 +3653,7 @@
    "Steelix"
   ],
   "desc": "A held item that allows Steelix to Mega Evolve.",
-  "sprite": "steelixite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "steelixite"
  },
  "steelmemory": {
   "name": "Steel Memory",
@@ -4990,10 +3663,7 @@
    "Silvally-Steel"
   ],
   "isNonstandard": "Past",
-  "sprite": "steelmemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "steelmemory"
  },
  "stick": {
   "name": "Stick",
@@ -5004,10 +3674,7 @@
    "Farfetch’d"
   ],
   "isNonstandard": "Past",
-  "sprite": "stick",
-  "category": [
-   "Other"
-  ]
+  "sprite": "stick"
  },
  "stickybarb": {
   "name": "Sticky Barb",
@@ -5015,29 +3682,20 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "stickybarb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "stickybarb"
  },
  "stoneplate": {
   "name": "Stone Plate",
   "onPlate": "Rock",
   "forcedForme": "Arceus-Rock",
   "isNonstandard": "Past",
-  "sprite": "stoneplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "stoneplate"
  },
  "strangeball": {
   "name": "Strange Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "strangeball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "strangeball"
  },
  "strawberrysweet": {
   "name": "Strawberry Sweet",
@@ -5045,11 +3703,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "strawberrysweet",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "strawberrysweet"
  },
  "sunstone": {
   "name": "Sun Stone",
@@ -5057,10 +3711,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "sunstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "sunstone"
  },
  "swampertite": {
   "name": "Swampertite",
@@ -5071,10 +3722,7 @@
    "Swampert"
   ],
   "desc": "A held item that allows Swampert to Mega Evolve.",
-  "sprite": "swampertite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "swampertite"
  },
  "sweetapple": {
   "name": "Sweet Apple",
@@ -5082,10 +3730,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "sweetapple",
-  "category": [
-   "Other"
-  ]
+  "sprite": "sweetapple"
  },
  "syrupyapple": {
   "name": "Syrupy Apple",
@@ -5093,31 +3738,20 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "syrupyapple",
-  "category": [
-   "Other"
-  ]
+  "sprite": "syrupyapple"
  },
  "tamatoberry": {
   "name": "Tamato Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "tamatoberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "tamatoberry"
  },
  "tangaberry": {
   "name": "Tanga Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Bug-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "tangaberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "tangaberry"
  },
  "tapuniumz": {
   "name": "Tapunium Z",
@@ -5131,10 +3765,7 @@
    "Tapu Fini"
   ],
   "isNonstandard": "Past",
-  "sprite": "tapuniumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tapuniumz"
  },
  "tartapple": {
   "name": "Tart Apple",
@@ -5142,10 +3773,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "tartapple",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tartapple"
  },
  "tatsugirinite": {
   "name": "Tatsugirinite",
@@ -5160,11 +3788,7 @@
    "Tatsugiri-Stretchy"
   ],
   "isNonstandard": "Future",
-  "sprite": "tatsugirinite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "tatsugirinite"
  },
  "terrainextender": {
   "name": "Terrain Extender",
@@ -5172,10 +3796,7 @@
    "basePower": 60
   },
   "isNonstandard": "Past",
-  "sprite": "terrainextender",
-  "category": [
-   "Other"
-  ]
+  "sprite": "terrainextender"
  },
  "thickclub": {
   "name": "Thick Club",
@@ -5189,10 +3810,7 @@
    "Cubone"
   ],
   "isNonstandard": "Past",
-  "sprite": "thickclub",
-  "category": [
-   "Other"
-  ]
+  "sprite": "thickclub"
  },
  "throatspray": {
   "name": "Throat Spray",
@@ -5203,10 +3821,7 @@
    "spa": 1
   },
   "isNonstandard": "Past",
-  "sprite": "throatspray",
-  "category": [
-   "Other"
-  ]
+  "sprite": "throatspray"
  },
  "thunderstone": {
   "name": "Thunder Stone",
@@ -5214,19 +3829,13 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "thunderstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "thunderstone"
  },
  "timerball": {
   "name": "Timer Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "timerball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "timerball"
  },
  "toxicorb": {
   "name": "Toxic Orb",
@@ -5235,20 +3844,14 @@
    "status": "tox"
   },
   "isNonstandard": "Past",
-  "sprite": "toxicorb",
-  "category": [
-   "Other"
-  ]
+  "sprite": "toxicorb"
  },
  "toxicplate": {
   "name": "Toxic Plate",
   "onPlate": "Poison",
   "forcedForme": "Arceus-Poison",
   "isNonstandard": "Past",
-  "sprite": "toxicplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "toxicplate"
  },
  "tr00": {
   "name": "TR00",
@@ -5256,10 +3859,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr00",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr00"
  },
  "tr01": {
   "name": "TR01",
@@ -5267,10 +3867,7 @@
    "basePower": 85
   },
   "isNonstandard": "Past",
-  "sprite": "tr01",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr01"
  },
  "tr02": {
   "name": "TR02",
@@ -5278,10 +3875,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr02",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr02"
  },
  "tr03": {
   "name": "TR03",
@@ -5289,10 +3883,7 @@
    "basePower": 110
   },
   "isNonstandard": "Past",
-  "sprite": "tr03",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr03"
  },
  "tr04": {
   "name": "TR04",
@@ -5300,10 +3891,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr04",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr04"
  },
  "tr05": {
   "name": "TR05",
@@ -5311,10 +3899,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr05",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr05"
  },
  "tr06": {
   "name": "TR06",
@@ -5322,10 +3907,7 @@
    "basePower": 110
   },
   "isNonstandard": "Past",
-  "sprite": "tr06",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr06"
  },
  "tr07": {
   "name": "TR07",
@@ -5333,10 +3915,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr07",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr07"
  },
  "tr08": {
   "name": "TR08",
@@ -5344,10 +3923,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr08",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr08"
  },
  "tr09": {
   "name": "TR09",
@@ -5355,10 +3931,7 @@
    "basePower": 110
   },
   "isNonstandard": "Past",
-  "sprite": "tr09",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr09"
  },
  "tr10": {
   "name": "TR10",
@@ -5366,10 +3939,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "tr10",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr10"
  },
  "tr11": {
   "name": "TR11",
@@ -5377,10 +3947,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr11",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr11"
  },
  "tr12": {
   "name": "TR12",
@@ -5388,10 +3955,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr12",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr12"
  },
  "tr13": {
   "name": "TR13",
@@ -5399,10 +3963,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr13",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr13"
  },
  "tr14": {
   "name": "TR14",
@@ -5410,10 +3971,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr14",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr14"
  },
  "tr15": {
   "name": "TR15",
@@ -5421,10 +3979,7 @@
    "basePower": 110
   },
   "isNonstandard": "Past",
-  "sprite": "tr15",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr15"
  },
  "tr16": {
   "name": "TR16",
@@ -5432,10 +3987,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr16",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr16"
  },
  "tr17": {
   "name": "TR17",
@@ -5443,10 +3995,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr17",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr17"
  },
  "tr18": {
   "name": "TR18",
@@ -5454,10 +4003,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr18",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr18"
  },
  "tr19": {
   "name": "TR19",
@@ -5465,10 +4011,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr19",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr19"
  },
  "tr20": {
   "name": "TR20",
@@ -5476,10 +4019,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr20",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr20"
  },
  "tr21": {
   "name": "TR21",
@@ -5487,10 +4027,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr21",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr21"
  },
  "tr22": {
   "name": "TR22",
@@ -5498,10 +4035,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr22",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr22"
  },
  "tr23": {
   "name": "TR23",
@@ -5509,10 +4043,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr23",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr23"
  },
  "tr24": {
   "name": "TR24",
@@ -5520,10 +4051,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr24",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr24"
  },
  "tr25": {
   "name": "TR25",
@@ -5531,10 +4059,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr25",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr25"
  },
  "tr26": {
   "name": "TR26",
@@ -5542,10 +4067,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr26",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr26"
  },
  "tr27": {
   "name": "TR27",
@@ -5553,10 +4075,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr27",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr27"
  },
  "tr28": {
   "name": "TR28",
@@ -5564,10 +4083,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr28",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr28"
  },
  "tr29": {
   "name": "TR29",
@@ -5575,10 +4091,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr29",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr29"
  },
  "tr30": {
   "name": "TR30",
@@ -5586,10 +4099,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr30",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr30"
  },
  "tr31": {
   "name": "TR31",
@@ -5597,10 +4107,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "tr31",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr31"
  },
  "tr32": {
   "name": "TR32",
@@ -5608,10 +4115,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr32",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr32"
  },
  "tr33": {
   "name": "TR33",
@@ -5619,10 +4123,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr33",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr33"
  },
  "tr34": {
   "name": "TR34",
@@ -5630,10 +4131,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr34",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr34"
  },
  "tr35": {
   "name": "TR35",
@@ -5641,10 +4139,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr35",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr35"
  },
  "tr36": {
   "name": "TR36",
@@ -5652,10 +4147,7 @@
    "basePower": 95
   },
   "isNonstandard": "Past",
-  "sprite": "tr36",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr36"
  },
  "tr37": {
   "name": "TR37",
@@ -5663,10 +4155,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr37",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr37"
  },
  "tr38": {
   "name": "TR38",
@@ -5674,10 +4163,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr38",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr38"
  },
  "tr39": {
   "name": "TR39",
@@ -5685,10 +4171,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr39",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr39"
  },
  "tr40": {
   "name": "TR40",
@@ -5696,10 +4179,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr40",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr40"
  },
  "tr41": {
   "name": "TR41",
@@ -5707,10 +4187,7 @@
    "basePower": 85
   },
   "isNonstandard": "Past",
-  "sprite": "tr41",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr41"
  },
  "tr42": {
   "name": "TR42",
@@ -5718,10 +4195,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr42",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr42"
  },
  "tr43": {
   "name": "TR43",
@@ -5729,10 +4203,7 @@
    "basePower": 130
   },
   "isNonstandard": "Past",
-  "sprite": "tr43",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr43"
  },
  "tr44": {
   "name": "TR44",
@@ -5740,10 +4211,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr44",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr44"
  },
  "tr45": {
   "name": "TR45",
@@ -5751,10 +4219,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr45",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr45"
  },
  "tr46": {
   "name": "TR46",
@@ -5762,10 +4227,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr46",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr46"
  },
  "tr47": {
   "name": "TR47",
@@ -5773,10 +4235,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr47",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr47"
  },
  "tr48": {
   "name": "TR48",
@@ -5784,10 +4243,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr48",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr48"
  },
  "tr49": {
   "name": "TR49",
@@ -5795,10 +4251,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr49",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr49"
  },
  "tr50": {
   "name": "TR50",
@@ -5806,10 +4259,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr50",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr50"
  },
  "tr51": {
   "name": "TR51",
@@ -5817,10 +4267,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr51",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr51"
  },
  "tr52": {
   "name": "TR52",
@@ -5828,10 +4275,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr52",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr52"
  },
  "tr53": {
   "name": "TR53",
@@ -5839,10 +4283,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr53",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr53"
  },
  "tr54": {
   "name": "TR54",
@@ -5850,10 +4291,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr54",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr54"
  },
  "tr55": {
   "name": "TR55",
@@ -5861,10 +4299,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr55",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr55"
  },
  "tr56": {
   "name": "TR56",
@@ -5872,10 +4307,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr56",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr56"
  },
  "tr57": {
   "name": "TR57",
@@ -5883,10 +4315,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr57",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr57"
  },
  "tr58": {
   "name": "TR58",
@@ -5894,10 +4323,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr58",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr58"
  },
  "tr59": {
   "name": "TR59",
@@ -5905,10 +4331,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr59",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr59"
  },
  "tr60": {
   "name": "TR60",
@@ -5916,10 +4339,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr60",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr60"
  },
  "tr61": {
   "name": "TR61",
@@ -5927,10 +4347,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr61",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr61"
  },
  "tr62": {
   "name": "TR62",
@@ -5938,10 +4355,7 @@
    "basePower": 85
   },
   "isNonstandard": "Past",
-  "sprite": "tr62",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr62"
  },
  "tr63": {
   "name": "TR63",
@@ -5949,10 +4363,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr63",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr63"
  },
  "tr64": {
   "name": "TR64",
@@ -5960,10 +4371,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr64",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr64"
  },
  "tr65": {
   "name": "TR65",
@@ -5971,10 +4379,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr65",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr65"
  },
  "tr66": {
   "name": "TR66",
@@ -5982,10 +4387,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr66",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr66"
  },
  "tr67": {
   "name": "TR67",
@@ -5993,10 +4395,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr67",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr67"
  },
  "tr68": {
   "name": "TR68",
@@ -6004,10 +4403,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr68",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr68"
  },
  "tr69": {
   "name": "TR69",
@@ -6015,10 +4411,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr69",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr69"
  },
  "tr70": {
   "name": "TR70",
@@ -6026,10 +4419,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr70",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr70"
  },
  "tr71": {
   "name": "TR71",
@@ -6037,10 +4427,7 @@
    "basePower": 130
   },
   "isNonstandard": "Past",
-  "sprite": "tr71",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr71"
  },
  "tr72": {
   "name": "TR72",
@@ -6048,10 +4435,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr72",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr72"
  },
  "tr73": {
   "name": "TR73",
@@ -6059,10 +4443,7 @@
    "basePower": 120
   },
   "isNonstandard": "Past",
-  "sprite": "tr73",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr73"
  },
  "tr74": {
   "name": "TR74",
@@ -6070,10 +4451,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr74",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr74"
  },
  "tr75": {
   "name": "TR75",
@@ -6081,10 +4459,7 @@
    "basePower": 100
   },
   "isNonstandard": "Past",
-  "sprite": "tr75",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr75"
  },
  "tr76": {
   "name": "TR76",
@@ -6092,10 +4467,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr76",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr76"
  },
  "tr77": {
   "name": "TR77",
@@ -6103,10 +4475,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr77",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr77"
  },
  "tr78": {
   "name": "TR78",
@@ -6114,10 +4483,7 @@
    "basePower": 95
   },
   "isNonstandard": "Past",
-  "sprite": "tr78",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr78"
  },
  "tr79": {
   "name": "TR79",
@@ -6125,10 +4491,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr79",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr79"
  },
  "tr80": {
   "name": "TR80",
@@ -6136,10 +4499,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr80",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr80"
  },
  "tr81": {
   "name": "TR81",
@@ -6147,10 +4507,7 @@
    "basePower": 95
   },
   "isNonstandard": "Past",
-  "sprite": "tr81",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr81"
  },
  "tr82": {
   "name": "TR82",
@@ -6158,10 +4515,7 @@
    "basePower": 20
   },
   "isNonstandard": "Past",
-  "sprite": "tr82",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr82"
  },
  "tr83": {
   "name": "TR83",
@@ -6169,10 +4523,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr83",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr83"
  },
  "tr84": {
   "name": "TR84",
@@ -6180,10 +4531,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr84",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr84"
  },
  "tr85": {
   "name": "TR85",
@@ -6191,10 +4539,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr85",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr85"
  },
  "tr86": {
   "name": "TR86",
@@ -6202,10 +4547,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr86",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr86"
  },
  "tr87": {
   "name": "TR87",
@@ -6213,10 +4555,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr87",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr87"
  },
  "tr88": {
   "name": "TR88",
@@ -6224,10 +4563,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr88",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr88"
  },
  "tr89": {
   "name": "TR89",
@@ -6235,10 +4571,7 @@
    "basePower": 110
   },
   "isNonstandard": "Past",
-  "sprite": "tr89",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr89"
  },
  "tr90": {
   "name": "TR90",
@@ -6246,10 +4579,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr90",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr90"
  },
  "tr91": {
   "name": "TR91",
@@ -6257,10 +4587,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "tr91",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr91"
  },
  "tr92": {
   "name": "TR92",
@@ -6268,10 +4595,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr92",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr92"
  },
  "tr93": {
   "name": "TR93",
@@ -6279,10 +4603,7 @@
    "basePower": 85
   },
   "isNonstandard": "Past",
-  "sprite": "tr93",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr93"
  },
  "tr94": {
   "name": "TR94",
@@ -6290,10 +4611,7 @@
    "basePower": 95
   },
   "isNonstandard": "Past",
-  "sprite": "tr94",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr94"
  },
  "tr95": {
   "name": "TR95",
@@ -6301,10 +4619,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr95",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr95"
  },
  "tr96": {
   "name": "TR96",
@@ -6312,10 +4627,7 @@
    "basePower": 90
   },
   "isNonstandard": "Past",
-  "sprite": "tr96",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr96"
  },
  "tr97": {
   "name": "TR97",
@@ -6323,10 +4635,7 @@
    "basePower": 85
   },
   "isNonstandard": "Past",
-  "sprite": "tr97",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr97"
  },
  "tr98": {
   "name": "TR98",
@@ -6334,10 +4643,7 @@
    "basePower": 85
   },
   "isNonstandard": "Past",
-  "sprite": "tr98",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr98"
  },
  "tr99": {
   "name": "TR99",
@@ -6345,10 +4651,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "tr99",
-  "category": [
-   "Other"
-  ]
+  "sprite": "tr99"
  },
  "twistedspoon": {
   "name": "Twisted Spoon",
@@ -6356,10 +4659,7 @@
    "basePower": 30
   },
   "desc": "Boosts the power of the holder's Psychic-type moves by 20%.",
-  "sprite": "twistedspoon",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "twistedspoon"
  },
  "tyranitarite": {
   "name": "Tyranitarite",
@@ -6370,19 +4670,13 @@
    "Tyranitar"
   ],
   "desc": "A held item that allows Tyranitar to Mega Evolve.",
-  "sprite": "tyranitarite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "tyranitarite"
  },
  "ultraball": {
   "name": "Ultra Ball",
   "isPokeball": true,
   "isNonstandard": "Past",
-  "sprite": "ultraball",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ultraball"
  },
  "ultranecroziumz": {
   "name": "Ultranecrozium Z",
@@ -6393,10 +4687,7 @@
    "Necrozma-Ultra"
   ],
   "isNonstandard": "Past",
-  "sprite": "ultranecroziumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "ultranecroziumz"
  },
  "unremarkableteacup": {
   "name": "Unremarkable Teacup",
@@ -6404,10 +4695,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "unremarkableteacup",
-  "category": [
-   "Other"
-  ]
+  "sprite": "unremarkableteacup"
  },
  "upgrade": {
   "name": "Up-Grade",
@@ -6415,10 +4703,7 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "upgrade",
-  "category": [
-   "Other"
-  ]
+  "sprite": "upgrade"
  },
  "utilityumbrella": {
   "name": "Utility Umbrella",
@@ -6426,10 +4711,7 @@
    "basePower": 60
   },
   "isNonstandard": "Past",
-  "sprite": "utilityumbrella",
-  "category": [
-   "Other"
-  ]
+  "sprite": "utilityumbrella"
  },
  "venusaurite": {
   "name": "Venusaurite",
@@ -6440,10 +4722,7 @@
    "Venusaur"
   ],
   "desc": "A held item that allows Venusaur to Mega Evolve.",
-  "sprite": "venusaurite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "venusaurite"
  },
  "victreebelite": {
   "name": "Victreebelite",
@@ -6454,29 +4733,19 @@
    "Victreebel"
   ],
   "desc": "A held item that allows Victreebel to Mega Evolve.",
-  "sprite": "victreebelite",
-  "category": [
-   "Mega Stone"
-  ]
+  "sprite": "victreebelite"
  },
  "wacanberry": {
   "name": "Wacan Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Electric-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "wacanberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "wacanberry"
  },
  "watergem": {
   "name": "Water Gem",
   "isGem": true,
   "isNonstandard": "Past",
-  "sprite": "watergem",
-  "category": [
-   "Other"
-  ]
+  "sprite": "watergem"
  },
  "wateriumz": {
   "name": "Waterium Z",
@@ -6486,10 +4755,7 @@
   "zMoveType": "Water",
   "forcedForme": "Arceus-Water",
   "isNonstandard": "Past",
-  "sprite": "wateriumz",
-  "category": [
-   "Other"
-  ]
+  "sprite": "wateriumz"
  },
  "watermemory": {
   "name": "Water Memory",
@@ -6499,10 +4765,7 @@
    "Silvally-Water"
   ],
   "isNonstandard": "Past",
-  "sprite": "watermemory",
-  "category": [
-   "Other"
-  ]
+  "sprite": "watermemory"
  },
  "waterstone": {
   "name": "Water Stone",
@@ -6510,21 +4773,14 @@
    "basePower": 30
   },
   "isNonstandard": "Past",
-  "sprite": "waterstone",
-  "category": [
-   "Other"
-  ]
+  "sprite": "waterstone"
  },
  "watmelberry": {
   "name": "Watmel Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "watmelberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "watmelberry"
  },
  "waveincense": {
   "name": "Wave Incense",
@@ -6532,10 +4788,7 @@
    "basePower": 10
   },
   "isNonstandard": "Past",
-  "sprite": "waveincense",
-  "category": [
-   "Other"
-  ]
+  "sprite": "waveincense"
  },
  "weaknesspolicy": {
   "name": "Weakness Policy",
@@ -6547,10 +4800,7 @@
    "spa": 2
   },
   "isNonstandard": "Past",
-  "sprite": "weaknesspolicy",
-  "category": [
-   "Other"
-  ]
+  "sprite": "weaknesspolicy"
  },
  "wellspringmask": {
   "name": "Wellspring Mask",
@@ -6562,21 +4812,14 @@
    "Ogerpon-Wellspring"
   ],
   "isNonstandard": "Past",
-  "sprite": "wellspringmask",
-  "category": [
-   "Other"
-  ]
+  "sprite": "wellspringmask"
  },
  "wepearberry": {
   "name": "Wepear Berry",
   "isBerry": true,
   "onEat": false,
   "isNonstandard": "Past",
-  "sprite": "wepearberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "wepearberry"
  },
  "whippeddream": {
   "name": "Whipped Dream",
@@ -6584,10 +4827,7 @@
    "basePower": 80
   },
   "isNonstandard": "Past",
-  "sprite": "whippeddream",
-  "category": [
-   "Other"
-  ]
+  "sprite": "whippeddream"
  },
  "whiteherb": {
   "name": "White Herb",
@@ -6595,10 +4835,7 @@
    "basePower": 10
   },
   "desc": "Restores the holder's stats to their usual value when they are lowered. Disappears for the duration of the battle after a single use.",
-  "sprite": "whiteherb",
-  "category": [
-   "Stat Boost"
-  ]
+  "sprite": "whiteherb"
  },
  "widelens": {
   "name": "Wide Lens",
@@ -6607,20 +4844,13 @@
   },
   "onSourceModifyAccuracyPriority": -2,
   "desc": "An item to be held by a Pokemon. Increases the Accuracy of the moves used by the holder by 10%.",
-  "sprite": "widelens",
-  "category": [
-   "Other"
-  ]
+  "sprite": "widelens"
  },
  "wikiberry": {
   "name": "Wiki Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "wikiberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "wikiberry"
  },
  "wiseglasses": {
   "name": "Wise Glasses",
@@ -6628,30 +4858,20 @@
    "basePower": 10
   },
   "desc": "An item to be held by a Pokemon. Increases the holder's Special Attack by 10%.",
-  "sprite": "wiseglasses",
-  "category": [
-   "Power Boost"
-  ]
+  "sprite": "wiseglasses"
  },
  "yacheberry": {
   "name": "Yache Berry",
   "isBerry": true,
   "desc": "Halves the damage taken when the holder is hit with a supereffective Ice-type move. Disappears for the duration of the battle after a single use.",
-  "sprite": "yacheberry",
-  "category": [
-   "Defense",
-   "Berry"
-  ]
+  "sprite": "yacheberry"
  },
  "zapplate": {
   "name": "Zap Plate",
   "onPlate": "Electric",
   "forcedForme": "Arceus-Electric",
   "isNonstandard": "Past",
-  "sprite": "zapplate",
-  "category": [
-   "Other"
-  ]
+  "sprite": "zapplate"
  },
  "zeraorite": {
   "name": "Zeraorite",
@@ -6662,11 +4882,7 @@
    "Zeraora"
   ],
   "isNonstandard": "Future",
-  "sprite": "zeraorite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "zeraorite"
  },
  "zoomlens": {
   "name": "Zoom Lens",
@@ -6675,10 +4891,7 @@
   },
   "onSourceModifyAccuracyPriority": -2,
   "desc": "An item to be held by a Pokemon. Increases the holder's Accuracy by 20% if it moves last in the turn.",
-  "sprite": "zoomlens",
-  "category": [
-   "Other"
-  ]
+  "sprite": "zoomlens"
  },
  "zygardite": {
   "name": "Zygardite",
@@ -6689,21 +4902,13 @@
    "Zygarde-Complete"
   ],
   "isNonstandard": "Future",
-  "sprite": "zygardite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "zygardite"
  },
  "berry": {
   "name": "Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "berry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "berry"
  },
  "berserkgene": {
   "name": "Berserk Gene",
@@ -6711,116 +4916,71 @@
    "atk": 2
   },
   "isNonstandard": "Past",
-  "sprite": "berserkgene",
-  "category": [
-   "Other"
-  ]
+  "sprite": "berserkgene"
  },
  "bitterberry": {
   "name": "Bitter Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "bitterberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "bitterberry"
  },
  "burntberry": {
   "name": "Burnt Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "burntberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "burntberry"
  },
  "goldberry": {
   "name": "Gold Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "goldberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "goldberry"
  },
  "iceberry": {
   "name": "Ice Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "iceberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "iceberry"
  },
  "mintberry": {
   "name": "Mint Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "mintberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "mintberry"
  },
  "miracleberry": {
   "name": "Miracle Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "miracleberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "miracleberry"
  },
  "mysteryberry": {
   "name": "Mystery Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "mysteryberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "mysteryberry"
  },
  "pinkbow": {
   "name": "Pink Bow",
   "isNonstandard": "Past",
-  "sprite": "pinkbow",
-  "category": [
-   "Other"
-  ]
+  "sprite": "pinkbow"
  },
  "polkadotbow": {
   "name": "Polkadot Bow",
   "isNonstandard": "Past",
-  "sprite": "polkadotbow",
-  "category": [
-   "Other"
-  ]
+  "sprite": "polkadotbow"
  },
  "przcureberry": {
   "name": "PRZ Cure Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "przcureberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "przcureberry"
  },
  "psncureberry": {
   "name": "PSN Cure Berry",
   "isBerry": true,
   "isNonstandard": "Past",
-  "sprite": "psncureberry",
-  "category": [
-   "Other",
-   "Berry"
-  ]
+  "sprite": "psncureberry"
  },
  "crucibellite": {
   "name": "Crucibellite",
@@ -6831,11 +4991,7 @@
    "Crucibelle"
   ],
   "isNonstandard": "CAP",
-  "sprite": "crucibellite",
-  "category": [
-   "Other",
-   "Mega Stone"
-  ]
+  "sprite": "crucibellite"
  },
  "vilevial": {
   "name": "Vile Vial",
@@ -6847,9 +5003,6 @@
    "Venomicon-Epilogue"
   ],
   "isNonstandard": "CAP",
-  "sprite": "vilevial",
-  "category": [
-   "Other"
-  ]
+  "sprite": "vilevial"
  }
 }

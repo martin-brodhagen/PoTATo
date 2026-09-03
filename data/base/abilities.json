@@ -102,6 +102,10 @@
   "desc": "Attacks landed on the Pokémon will never be critical hits.",
   "effectCategories": []
  },
+ "battlebond": {
+  "name": "Battle Bond",
+  "effectCategories": []
+ },
  "beadsofruin": {
   "name": "Beads of Ruin",
   "effectCategories": []

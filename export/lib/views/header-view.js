@@ -1,3 +1,5 @@
+import { CHAMPIONS_SPRITE_PATH_SMALL } from "../sprite-paths.js";
+
 export class HeaderView {
   constructor({
     headerTeam,
@@ -28,7 +30,6 @@ export class HeaderView {
 
   renderTeamBar() {
     this.headerTeam.innerHTML = "";
-    this.headerTeam.classList.remove("hidden");
     const team = this.getTeam();
     const spriteMap = this.getSpriteMap();
 
@@ -55,7 +56,7 @@ export class HeaderView {
           if (spriteFile) {
             const img = document.createElement("img");
             img.className = "header-slot-sprite";
-            img.src = `sprites/champions/${spriteFile}`;
+            img.src = `${CHAMPIONS_SPRITE_PATH_SMALL}/${spriteFile}`;
             img.alt = active.name;
             el.appendChild(img);
           }

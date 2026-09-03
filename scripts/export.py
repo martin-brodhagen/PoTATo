@@ -36,6 +36,7 @@ INCLUDE: list[tuple[str, str]] = [
     ("data/i18n", "data/i18n"),
     ("data/manual-forme-overrides.json", "data/manual-forme-overrides.json"),
     ("sprites/champions", "sprites/champions"),
+    ("sprites/champions-48", "sprites/champions-48"),
     ("sprites/shiny", "sprites/shiny"),
     ("sprites/items", "sprites/items"),
     ("sprites/categories", "sprites/categories"),

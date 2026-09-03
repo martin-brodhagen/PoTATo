@@ -34,7 +34,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Defense stat by 2 stages."
@@ -70,7 +70,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Acrobatics",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Flying",
   "flags": [
@@ -120,7 +120,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "After You",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -150,7 +150,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Speed stat by 2 stages."
@@ -181,7 +181,7 @@
   "basePower": 75,
   "category": "Special",
   "name": "Air Slash",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -203,7 +203,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Alluring Voice",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100
@@ -224,7 +224,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Ally Switch",
-  "pp": 16,
+  "pp": 15,
   "priority": 2,
   "condition": {
    "duration": 2,
@@ -260,7 +260,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Sp. Def stat by 2 stages."
@@ -271,7 +271,7 @@
   "basePower": 60,
   "category": "Special",
   "name": "Ancient Power",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -299,7 +299,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Apple Acid",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -383,7 +383,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Aqua Step",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -410,7 +410,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Aqua Tail",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Water",
   "flags": [
@@ -426,7 +426,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Armor Cannon",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -473,7 +473,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Assurance",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dark",
   "flags": [
@@ -489,7 +489,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Attract",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "attract",
   "condition": {
@@ -528,7 +528,7 @@
   "basePower": 110,
   "category": "Physical",
   "name": "Aura Wheel",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -580,7 +580,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Avalanche",
-  "pp": 12,
+  "pp": 10,
   "priority": -4,
   "type": "Ice",
   "flags": [
@@ -598,7 +598,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Axe Kick",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "hasCrashDamage": true,
   "secondary": {
@@ -647,7 +647,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Baneful Bunker",
-  "pp": 8,
+  "pp": 5,
   "priority": 4,
   "stallingMove": true,
   "volatileStatus": "banefulbunker",
@@ -675,7 +675,7 @@
   "basePower": 60,
   "category": "Physical",
   "name": "Barb Barrage",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 50,
@@ -716,7 +716,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Beak Blast",
-  "pp": 8,
+  "pp": 5,
   "priority": -3,
   "condition": {
    "duration": 1
@@ -738,7 +738,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Beat Up",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dark",
   "flags": [],
@@ -752,7 +752,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Belch",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Poison",
   "flags": [],
@@ -766,7 +766,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Belly Drum",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -826,7 +826,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Bitter Blade",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "drain": [
    1,
@@ -848,7 +848,7 @@
   "basePower": 75,
   "category": "Special",
   "name": "Bitter Malice",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -870,7 +870,7 @@
   "basePower": 150,
   "category": "Special",
   "name": "Blast Burn",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "volatileStatus": "mustrecharge"
@@ -887,7 +887,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Blaze Kick",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "critRatio": 2,
   "secondary": {
@@ -911,7 +911,7 @@
   "basePower": 110,
   "category": "Special",
   "name": "Blizzard",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -933,7 +933,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Block",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -954,7 +954,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Body Press",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "overrideOffensiveStat": "def",
   "type": "Fighting",
@@ -973,7 +973,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Body Slam",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -995,7 +995,7 @@
   "basePower": 30,
   "category": "Physical",
   "name": "Bone Rush",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": [
    2,
@@ -1021,7 +1021,7 @@
   "basePower": 140,
   "category": "Special",
   "name": "Boomburst",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [
@@ -1037,7 +1037,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Bounce",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "condition": {
    "duration": 2
@@ -1062,7 +1062,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Brave Bird",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "recoil": [
    33,
@@ -1084,7 +1084,7 @@
   "basePower": 60,
   "category": "Physical",
   "name": "Breaking Swipe",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -1108,7 +1108,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Brick Break",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Fighting",
   "flags": [
@@ -1158,7 +1158,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Bug Buzz",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -1196,7 +1196,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Attack and Defense stats by 1 stage."
@@ -1276,7 +1276,7 @@
   "basePower": 70,
   "category": "Special",
   "name": "Burning Jealousy",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 100
@@ -1295,7 +1295,7 @@
   "basePower": 130,
   "category": "Special",
   "name": "Burn Up",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {},
   "type": "Fire",
@@ -1322,7 +1322,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Sp. Atk and Sp.Def statsby 1 stage."
@@ -1333,7 +1333,7 @@
   "basePower": 65,
   "category": "Physical",
   "name": "Ceaseless Edge",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {},
   "type": "Dark",
@@ -1370,7 +1370,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Sp. Def stat by 1 stage. The user gains the Electric Boost status, where the power of the Pokémon's next Electric-type move will be doubled."
@@ -1381,7 +1381,7 @@
   "basePower": 50,
   "category": "Special",
   "name": "Charge Beam",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 70,
@@ -1451,7 +1451,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Chilly Reception",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "weather": "snowscape",
   "selfSwitch": true,
@@ -1474,7 +1474,7 @@
   "basePower": 60,
   "category": "Physical",
   "name": "Circle Throw",
-  "pp": 12,
+  "pp": 10,
   "priority": -6,
   "forceSwitch": true,
   "type": "Fighting",
@@ -1494,7 +1494,7 @@
   "basePower": 110,
   "category": "Special",
   "name": "Clanging Scales",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "selfBoost": {
    "boosts": {
@@ -1517,7 +1517,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Clangorous Soul",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "boosts": {
    "atk": 1,
@@ -1532,7 +1532,7 @@
    "sound"
   ],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "The user loses 1/3 of its max HP to boost its Attack, Defense, Sp. Atk, Sp. Def, and Speed stats by 1 stage. This move fails if the user doesn't have enough remaining HP."
@@ -1543,7 +1543,7 @@
   "basePower": 50,
   "category": "Special",
   "name": "Clear Smog",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Poison",
   "flags": [],
@@ -1557,7 +1557,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Close Combat",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -1581,7 +1581,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Coaching",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "boosts": {
    "atk": 1,
@@ -1614,7 +1614,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Attack and Defense stats as well as its accuracy by 1 stage."
@@ -1625,7 +1625,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Comeuppance",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dark",
   "flags": [
@@ -1641,7 +1641,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Confuse Ray",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "confusion",
   "type": "Ghost",
@@ -1711,7 +1711,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Defense and Sp. Def stats by 1 stage."
@@ -1722,7 +1722,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Cotton Guard",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "boosts": {
    "def": 3
@@ -1733,7 +1733,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Defense stat by 3 stages."
@@ -1811,7 +1811,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Crabhammer",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "critRatio": 2,
   "type": "Water",
@@ -1830,7 +1830,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Cross Chop",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "critRatio": 2,
   "type": "Fighting",
@@ -1874,7 +1874,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Crunch",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -1899,7 +1899,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Crush Claw",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 50,
@@ -1924,7 +1924,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Curse",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "curse",
   "condition": {
@@ -1946,7 +1946,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Darkest Lariat",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "ignoreEvasion": true,
   "ignoreDefensive": true,
@@ -1964,7 +1964,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Dark Pulse",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -1986,7 +1986,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Dazzling Gleam",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Fairy",
   "flags": [],
@@ -2000,7 +2000,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Decorate",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "boosts": {
    "atk": 2,
@@ -2020,7 +2020,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Defog",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Flying",
   "zMove": {
@@ -2042,7 +2042,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Destiny Bond",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "volatileStatus": "destinybond",
   "condition": {
@@ -2064,7 +2064,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Detect",
-  "pp": 8,
+  "pp": 5,
   "priority": 4,
   "stallingMove": true,
   "volatileStatus": "protect",
@@ -2088,7 +2088,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Dig",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "condition": {
    "duration": 2
@@ -2107,7 +2107,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Dire Claw",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 30
@@ -2153,7 +2153,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Discharge",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -2173,7 +2173,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Dive",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "condition": {
    "duration": 2
@@ -2192,7 +2192,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Double-Edge",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "recoil": [
    33,
@@ -2214,7 +2214,7 @@
   "basePower": 35,
   "category": "Physical",
   "name": "Double Hit",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": 2,
   "type": "Normal",
@@ -2239,7 +2239,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Double Team",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "boosts": {
    "evasion": 1
@@ -2250,7 +2250,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's evasiveness by 1 stage."
@@ -2261,7 +2261,7 @@
   "basePower": 130,
   "category": "Special",
   "name": "Draco Meteor",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -2282,7 +2282,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Dragon Cheer",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "dragoncheer",
   "condition": {},
@@ -2300,7 +2300,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Dragon Claw",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Dragon",
   "flags": [
@@ -2331,7 +2331,7 @@
    "dance"
   ],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Attack and Speed stats by 1 stage."
@@ -2342,7 +2342,7 @@
   "basePower": 50,
   "category": "Physical",
   "name": "Dragon Darts",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": 2,
   "smartTarget": true,
@@ -2363,7 +2363,7 @@
   "basePower": 85,
   "category": "Special",
   "name": "Dragon Pulse",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dragon",
   "flags": [
@@ -2379,7 +2379,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Dragon Rush",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -2401,7 +2401,7 @@
   "basePower": 60,
   "category": "Physical",
   "name": "Dragon Tail",
-  "pp": 12,
+  "pp": 10,
   "priority": -6,
   "forceSwitch": true,
   "type": "Dragon",
@@ -2421,7 +2421,7 @@
   "basePower": 50,
   "category": "Special",
   "name": "Draining Kiss",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "drain": [
    3,
@@ -2442,7 +2442,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Drain Punch",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "drain": [
    1,
@@ -2480,7 +2480,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Drill Run",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "critRatio": 2,
   "type": "Ground",
@@ -2499,7 +2499,7 @@
   "basePower": 40,
   "category": "Physical",
   "name": "Dual Wingbeat",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": 2,
   "type": "Flying",
@@ -2521,7 +2521,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Dynamic Punch",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -2544,7 +2544,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Earth Power",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -2566,7 +2566,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Earthquake",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Ground",
   "flags": [],
@@ -2580,7 +2580,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Eerie Impulse",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "boosts": {
    "spa": -2
@@ -2604,7 +2604,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Eerie Spell",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 100
@@ -2623,7 +2623,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Electric Terrain",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "terrain": "electricterrain",
   "condition": {
@@ -2677,7 +2677,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Electro Ball",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Electric",
   "zMove": {
@@ -2699,7 +2699,7 @@
   "basePower": 130,
   "category": "Special",
   "name": "Electro Shot",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "hasSheerForceBoost": true,
   "type": "Electric",
@@ -2714,7 +2714,7 @@
   "basePower": 55,
   "category": "Special",
   "name": "Electroweb",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -2736,7 +2736,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Encore",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "volatileStatus": "encore",
   "condition": {},
@@ -2757,7 +2757,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Endeavor",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -2779,7 +2779,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Endure",
-  "pp": 12,
+  "pp": 10,
   "priority": 4,
   "stallingMove": true,
   "volatileStatus": "endure",
@@ -2805,7 +2805,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Energy Ball",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -2829,7 +2829,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Entrainment",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -2849,7 +2849,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Eruption",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Fire",
   "flags": [],
@@ -2863,7 +2863,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Expanding Force",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "flags": [],
@@ -2877,7 +2877,7 @@
   "basePower": 250,
   "category": "Physical",
   "name": "Explosion",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "selfdestruct": "always",
   "type": "Normal",
@@ -2914,7 +2914,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Extreme Speed",
-  "pp": 8,
+  "pp": 5,
   "priority": 2,
   "type": "Normal",
   "flags": [
@@ -2948,7 +2948,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Fairy Lock",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "pseudoWeather": "fairylock",
   "condition": {
@@ -2974,7 +2974,7 @@
   "basePower": 40,
   "category": "Physical",
   "name": "Fake Out",
-  "pp": 12,
+  "pp": 10,
   "priority": 3,
   "secondary": {
    "chance": 100,
@@ -3021,7 +3021,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Feather Dance",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "boosts": {
    "atk": -2
@@ -3047,7 +3047,7 @@
   "basePower": 30,
   "category": "Physical",
   "name": "Feint",
-  "pp": 12,
+  "pp": 10,
   "priority": 2,
   "breaksProtect": true,
   "type": "Normal",
@@ -3081,7 +3081,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Fickle Beam",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Dragon",
   "flags": [],
@@ -3095,7 +3095,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Fiery Dance",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 50,
@@ -3122,7 +3122,7 @@
   "selfdestruct": "ifHit",
   "category": "Special",
   "name": "Final Gambit",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Fighting",
   "zMove": {
@@ -3141,7 +3141,7 @@
   "basePower": 110,
   "category": "Special",
   "name": "Fire Blast",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -3161,7 +3161,7 @@
   "basePower": 65,
   "category": "Physical",
   "name": "Fire Fang",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondaries": [
    {
@@ -3191,7 +3191,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Fire Lash",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -3215,7 +3215,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Fire Punch",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -3238,7 +3238,7 @@
   "basePower": 35,
   "category": "Special",
   "name": "Fire Spin",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Fire",
@@ -3256,7 +3256,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "First Impression",
-  "pp": 12,
+  "pp": 10,
   "priority": 2,
   "type": "Bug",
   "flags": [
@@ -3274,7 +3274,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Fissure",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "ohko": true,
   "type": "Ground",
@@ -3298,7 +3298,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Flail",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -3346,7 +3346,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Flamethrower",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -3366,7 +3366,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Flare Blitz",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "recoil": [
    33,
@@ -3393,7 +3393,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Flash Cannon",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -3415,7 +3415,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Flatter",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "confusion",
   "boosts": {
@@ -3441,7 +3441,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Fling",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "condition": {},
   "type": "Dark",
@@ -3475,7 +3475,7 @@
   "basePower": 70,
   "category": "Physical",
   "name": "Flower Trick",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "willCrit": true,
   "type": "Grass",
@@ -3490,7 +3490,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Fly",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "condition": {
    "duration": 2
@@ -3509,7 +3509,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Flying Press",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Fighting",
   "zMove": {
@@ -3528,7 +3528,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Focus Blast",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -3642,7 +3642,7 @@
   "basePower": 95,
   "category": "Physical",
   "name": "Foul Play",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "overrideOffensivePokemon": "target",
   "type": "Dark",
@@ -3675,7 +3675,7 @@
   "basePower": 150,
   "category": "Special",
   "name": "Frenzy Plant",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "volatileStatus": "mustrecharge"
@@ -3692,7 +3692,7 @@
   "basePower": 60,
   "category": "Special",
   "name": "Frost Breath",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "willCrit": true,
   "type": "Ice",
@@ -3707,7 +3707,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Future Sight",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "ignoreImmunity": true,
   "type": "Psychic",
@@ -3722,7 +3722,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Gastro Acid",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "gastroacid",
   "condition": {},
@@ -3743,7 +3743,7 @@
   "basePower": 75,
   "category": "Special",
   "name": "Giga Drain",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "drain": [
    1,
@@ -3763,7 +3763,7 @@
   "basePower": 150,
   "category": "Physical",
   "name": "Giga Impact",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "volatileStatus": "mustrecharge"
@@ -3782,7 +3782,7 @@
   "basePower": 160,
   "category": "Physical",
   "name": "Gigaton Hammer",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Steel",
   "flags": [],
@@ -3859,7 +3859,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Grassy Terrain",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "terrain": "grassyterrain",
   "condition": {
@@ -3890,7 +3890,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Grav Apple",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -3912,7 +3912,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Gravity",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "pseudoWeather": "gravity",
   "condition": {
@@ -3954,7 +3954,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Attack and Sp. Atk stats by 1 stage. In harsh sunlight, these stats will be boosted by 2 stages instead."
@@ -3965,7 +3965,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Guard Split",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -3984,7 +3984,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Guard Swap",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -4003,7 +4003,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Guillotine",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "ohko": true,
   "type": "Normal",
@@ -4028,7 +4028,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Gunk Shot",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -4049,7 +4049,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Gyro Ball",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Steel",
   "zMove": {
@@ -4072,7 +4072,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Hammer Arm",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "self": {
    "boosts": {
@@ -4097,7 +4097,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Hard Press",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Steel",
   "flags": [
@@ -4130,7 +4130,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Headlong Rush",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -4155,7 +4155,7 @@
   "basePower": 150,
   "category": "Physical",
   "name": "Head Smash",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "recoil": [
    1,
@@ -4177,7 +4177,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Heal Bell",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -4196,7 +4196,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Healing Wish",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "selfdestruct": "ifHit",
   "slotCondition": "healingwish",
@@ -4217,7 +4217,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Heal Pulse",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -4238,7 +4238,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Heat Crash",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Fire",
   "zMove": {
@@ -4262,7 +4262,7 @@
   "basePower": 95,
   "category": "Special",
   "name": "Heat Wave",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -4285,7 +4285,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Heavy Slam",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Steel",
   "zMove": {
@@ -4334,7 +4334,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Hex",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Ghost",
   "zMove": {
@@ -4351,7 +4351,7 @@
   "basePower": 95,
   "category": "Physical",
   "name": "High Horsepower",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Ground",
   "flags": [
@@ -4367,7 +4367,7 @@
   "basePower": 130,
   "category": "Physical",
   "name": "High Jump Kick",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "hasCrashDamage": true,
   "type": "Fighting",
@@ -4386,7 +4386,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Horn Drill",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "ohko": true,
   "type": "Normal",
@@ -4411,7 +4411,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Horn Leech",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "drain": [
    1,
@@ -4458,7 +4458,7 @@
   "basePower": 110,
   "category": "Special",
   "name": "Hurricane",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -4480,7 +4480,7 @@
   "basePower": 150,
   "category": "Special",
   "name": "Hydro Cannon",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "volatileStatus": "mustrecharge"
@@ -4497,7 +4497,7 @@
   "basePower": 110,
   "category": "Special",
   "name": "Hydro Pump",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Water",
   "flags": [],
@@ -4511,7 +4511,7 @@
   "basePower": 150,
   "category": "Special",
   "name": "Hyper Beam",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "volatileStatus": "mustrecharge"
@@ -4528,7 +4528,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Hyper Voice",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [
@@ -4566,7 +4566,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Ice Beam",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -4586,7 +4586,7 @@
   "basePower": 65,
   "category": "Physical",
   "name": "Ice Fang",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondaries": [
    {
@@ -4616,7 +4616,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Ice Hammer",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "self": {
    "boosts": {
@@ -4640,7 +4640,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Ice Punch",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -4679,7 +4679,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Ice Spinner",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Ice",
   "flags": [
@@ -4695,7 +4695,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Icicle Crash",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -4741,7 +4741,7 @@
   "basePower": 55,
   "category": "Special",
   "name": "Icy Wind",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -4765,7 +4765,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Imprison",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "imprison",
   "condition": {
@@ -4790,7 +4790,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Infernal Parade",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -4810,7 +4810,7 @@
   "basePower": 100,
   "category": "Special",
   "name": "Inferno",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -4873,7 +4873,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Instruct",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -4892,7 +4892,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Iron Defense",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "boosts": {
    "def": 2
@@ -4903,7 +4903,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Defense stat by 2 stages."
@@ -4914,7 +4914,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Iron Head",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -4936,7 +4936,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Iron Tail",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -4960,7 +4960,7 @@
   "basePower": 60,
   "category": "Physical",
   "name": "Jet Punch",
-  "pp": 16,
+  "pp": 15,
   "priority": 1,
   "type": "Water",
   "flags": [
@@ -4979,7 +4979,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "King's Shield",
-  "pp": 8,
+  "pp": 5,
   "priority": 4,
   "stallingMove": true,
   "volatileStatus": "kingsshield",
@@ -5021,7 +5021,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Kowtow Cleave",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dark",
   "flags": [
@@ -5038,7 +5038,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Lash Out",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Dark",
   "flags": [
@@ -5054,7 +5054,7 @@
   "basePower": 140,
   "category": "Physical",
   "name": "Last Resort",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Normal",
   "flags": [
@@ -5071,7 +5071,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Last Respects",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Ghost",
   "flags": [],
@@ -5085,7 +5085,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Lava Plume",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -5105,7 +5105,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Leaf Blade",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "critRatio": 2,
   "type": "Grass",
@@ -5125,7 +5125,7 @@
   "basePower": 130,
   "category": "Special",
   "name": "Leaf Storm",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -5146,7 +5146,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Leech Life",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "drain": [
    1,
@@ -5167,7 +5167,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Leech Seed",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "leechseed",
   "condition": {
@@ -5190,7 +5190,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Life Dew",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "heal": [
    1,
@@ -5210,7 +5210,7 @@
   "basePower": 140,
   "category": "Special",
   "name": "Light of Ruin",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "recoil": [
    1,
@@ -5257,7 +5257,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Liquidation",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -5281,7 +5281,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Lock-On",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "condition": {
    "noCopy": true,
@@ -5351,7 +5351,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Lumina Crash",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -5373,7 +5373,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Lunge",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -5432,7 +5432,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Magic Room",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "pseudoWeather": "magicroom",
   "condition": {
@@ -5478,7 +5478,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Magnet Rise",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "magnetrise",
   "condition": {
@@ -5502,7 +5502,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Make It Rain",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -5523,7 +5523,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Matcha Gotcha",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "drain": [
    1,
@@ -5551,7 +5551,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Mean Look",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -5572,7 +5572,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Megahorn",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Bug",
   "flags": [
@@ -5588,7 +5588,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Mega Kick",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Normal",
   "flags": [
@@ -5604,7 +5604,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Memento",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "boosts": {
    "atk": -2,
@@ -5629,7 +5629,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Metal Burst",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Steel",
   "flags": [],
@@ -5669,7 +5669,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Meteor Beam",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Rock",
   "flags": [],
@@ -5683,7 +5683,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Meteor Mash",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -5710,7 +5710,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Minimize",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "minimize",
   "condition": {
@@ -5725,7 +5725,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's evasiveness by 2 stages. The user gains the Minimized status, where moves such as Supercell Slam, Body Slam, Dragon Rush, Flying Press, Heat Crash, and Heavy Slam will not miss the Pokémon and will deal double damage."
@@ -5758,7 +5758,7 @@
   "basePower": 100,
   "category": "Special",
   "name": "Misty Explosion",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "selfdestruct": "always",
   "type": "Fairy",
@@ -5775,7 +5775,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Misty Terrain",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "terrain": "mistyterrain",
   "condition": {
@@ -5804,7 +5804,7 @@
   "basePower": 95,
   "category": "Special",
   "name": "Moonblast",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -5826,7 +5826,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Moonlight",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Fairy",
   "zMove": {
@@ -5845,7 +5845,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Morning Sun",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -5864,7 +5864,7 @@
   "basePower": 30,
   "category": "Physical",
   "name": "Mortal Spin",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -5887,7 +5887,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Mountain Gale",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -5907,7 +5907,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Muddy Water",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -5929,7 +5929,7 @@
   "basePower": 55,
   "category": "Special",
   "name": "Mud Shot",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -5951,7 +5951,7 @@
   "basePower": 20,
   "category": "Special",
   "name": "Mud-Slap",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -5973,7 +5973,7 @@
   "basePower": 75,
   "category": "Special",
   "name": "Mystical Fire",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -6006,7 +6006,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Sp. Atk stat by 2 stages."
@@ -6017,7 +6017,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Night Daze",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 40,
@@ -6040,7 +6040,7 @@
   "damage": "level",
   "category": "Special",
   "name": "Night Shade",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Ghost",
   "flags": [],
@@ -6103,7 +6103,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "No Retreat",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "volatileStatus": "noretreat",
   "condition": {},
@@ -6117,7 +6117,7 @@
   "type": "Fighting",
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Attack, Defense, Sp. Atk, Sp. Def, and Speed stats by 1 stage. The user gains the Can't Escape status, where it cannot be switched. This move can only be used once per time the user enters battle—otherwise it will fail."
@@ -6150,7 +6150,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Outrage",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "self": {
    "volatileStatus": "lockedmove"
@@ -6169,7 +6169,7 @@
   "basePower": 130,
   "category": "Special",
   "name": "Overheat",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -6253,7 +6253,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Payback",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dark",
   "flags": [
@@ -6269,7 +6269,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Perish Song",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "condition": {
    "duration": 4,
@@ -6292,7 +6292,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Petal Blizzard",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Grass",
   "flags": [
@@ -6308,7 +6308,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Petal Dance",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "self": {
    "volatileStatus": "lockedmove"
@@ -6328,7 +6328,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Phantom Force",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "breaksProtect": true,
   "condition": {
@@ -6377,7 +6377,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Play Rough",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -6417,7 +6417,7 @@
   "basePower": 50,
   "category": "Physical",
   "name": "Poison Fang",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 50,
@@ -6486,7 +6486,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Pollen Puff",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Bug",
   "flags": [
@@ -6502,7 +6502,7 @@
   "basePower": 110,
   "category": "Physical",
   "name": "Poltergeist",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Ghost",
   "flags": [],
@@ -6516,7 +6516,7 @@
   "basePower": 20,
   "category": "Physical",
   "name": "Population Bomb",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": 10,
   "multiaccuracy": true,
@@ -6591,7 +6591,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Power Shift",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "powershift",
   "condition": {},
@@ -6606,7 +6606,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Power Split",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -6625,7 +6625,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Power Swap",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -6644,7 +6644,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Power Trick",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "powertrick",
   "condition": {},
@@ -6666,7 +6666,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Power Trip",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dark",
   "zMove": {
@@ -6688,7 +6688,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Power Whip",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Grass",
   "flags": [
@@ -6704,7 +6704,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Protect",
-  "pp": 8,
+  "pp": 5,
   "priority": 4,
   "stallingMove": true,
   "volatileStatus": "protect",
@@ -6730,7 +6730,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Psychic",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -6752,7 +6752,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Psychic Fangs",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "flags": [
@@ -6771,7 +6771,7 @@
   "basePower": 75,
   "category": "Special",
   "name": "Psychic Noise",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -6791,7 +6791,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Psychic Terrain",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "terrain": "psychicterrain",
   "condition": {
@@ -6840,7 +6840,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Psych Up",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -6857,7 +6857,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Psyshield Bash",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -6884,7 +6884,7 @@
   "category": "Special",
   "overrideDefensiveStat": "def",
   "name": "Psyshock",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "flags": [],
@@ -6900,7 +6900,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Quash",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Dark",
   "zMove": {
@@ -6937,7 +6937,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Quick Guard",
-  "pp": 16,
+  "pp": 15,
   "priority": 3,
   "sideCondition": "quickguard",
   "condition": {
@@ -6978,7 +6978,7 @@
    "dance"
   ],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Sp. Atk, Sp. Def, and Speed stats by 1 stage."
@@ -6990,7 +6990,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Rage Fist",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Ghost",
   "flags": [
@@ -7033,7 +7033,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Raging Bull",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [
@@ -7051,7 +7051,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Raging Fury",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "self": {
    "volatileStatus": "lockedmove"
@@ -7068,7 +7068,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Rain Dance",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "weather": "RainDance",
   "type": "Water",
@@ -7117,7 +7117,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Razor Shell",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 50,
@@ -7142,7 +7142,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Recover",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "heal": [
    1,
@@ -7165,7 +7165,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Recycle",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -7211,7 +7211,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Reflect Type",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -7230,7 +7230,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Rest",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -7250,7 +7250,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Reversal",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Fighting",
   "zMove": {
@@ -7312,7 +7312,7 @@
   "basePower": 25,
   "category": "Physical",
   "name": "Rock Blast",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": [
    2,
@@ -7351,7 +7351,7 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Speed stat by 2 stages."
@@ -7362,7 +7362,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Rock Slide",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -7382,7 +7382,7 @@
   "basePower": 60,
   "category": "Physical",
   "name": "Rock Tomb",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -7404,7 +7404,7 @@
   "basePower": 150,
   "category": "Physical",
   "name": "Rock Wrecker",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "volatileStatus": "mustrecharge"
@@ -7423,7 +7423,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Role Play",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -7442,7 +7442,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Roost",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "heal": [
    1,
@@ -7474,7 +7474,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Round",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Normal",
   "flags": [
@@ -7490,7 +7490,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Sacred Sword",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "ignoreEvasion": true,
   "ignoreDefensive": true,
@@ -7534,7 +7534,7 @@
   "basePower": 40,
   "category": "Physical",
   "name": "Salt Cure",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "condition": {},
   "secondary": {
@@ -7555,7 +7555,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Sandstorm",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "weather": "Sandstorm",
   "type": "Rock",
@@ -7579,7 +7579,7 @@
   "basePower": 35,
   "category": "Physical",
   "name": "Sand Tomb",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Ground",
@@ -7597,7 +7597,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Scald",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "thawsTarget": true,
   "secondary": {
@@ -7652,7 +7652,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Scary Face",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "boosts": {
    "spe": -2
@@ -7676,7 +7676,7 @@
   "basePower": 70,
   "category": "Special",
   "name": "Scorching Sands",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "thawsTarget": true,
   "secondary": {
@@ -7724,7 +7724,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Seed Bomb",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Grass",
   "flags": [
@@ -7762,7 +7762,7 @@
   "basePower": 200,
   "category": "Physical",
   "name": "Self-Destruct",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "selfdestruct": "always",
   "type": "Normal",
@@ -7779,7 +7779,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Shadow Ball",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -7803,7 +7803,7 @@
   "basePower": 70,
   "category": "Physical",
   "name": "Shadow Claw",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "critRatio": 2,
   "type": "Ghost",
@@ -7858,7 +7858,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Shed Tail",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "substitute",
   "self": {},
@@ -7880,7 +7880,7 @@
   "basePower": 0,
   "category": "Special",
   "name": "Sheer Cold",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "ohko": "Ice",
   "type": "Ice",
@@ -7903,7 +7903,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Shell Side Arm",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -7923,7 +7923,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Shell Smash",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "boosts": {
    "def": -1,
@@ -7938,8 +7938,8 @@
   },
   "flags": [],
   "effectCategories": [
-   "self_buff",
-   "stat_drop_attacker"
+   "stat_drop_attacker",
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Lowers the user's Defense and Sp. Def stats by 1 stage and boosts its Attack, Sp. Atk, and Speed stats by 2 stages."
@@ -7950,7 +7950,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Shelter",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "boosts": {
    "def": 2
@@ -7958,7 +7958,7 @@
   "type": "Steel",
   "flags": [],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Defense stat by 2 stages."
@@ -7969,7 +7969,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Simple Beam",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -7988,7 +7988,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Sing",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "status": "slp",
   "type": "Normal",
@@ -8012,7 +8012,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Skill Swap",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -8031,7 +8031,7 @@
   "basePower": 70,
   "category": "Physical",
   "name": "Skitter Smack",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -8055,7 +8055,7 @@
   "basePower": 140,
   "category": "Physical",
   "name": "Sky Attack",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "critRatio": 2,
   "secondary": {
@@ -8077,7 +8077,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Slack Off",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "heal": [
    1,
@@ -8100,7 +8100,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Sleep Powder",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "status": "slp",
   "type": "Grass",
@@ -8124,7 +8124,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Sleep Talk",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "sleepUsable": true,
   "callsMove": true,
@@ -8143,7 +8143,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Sludge Bomb",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -8165,7 +8165,7 @@
   "basePower": 95,
   "category": "Special",
   "name": "Sludge Wave",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -8185,7 +8185,7 @@
   "basePower": 50,
   "category": "Physical",
   "name": "Smack Down",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "smackdown",
   "condition": {
@@ -8203,7 +8203,7 @@
   "basePower": 70,
   "category": "Physical",
   "name": "Smart Strike",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Steel",
   "flags": [
@@ -8219,7 +8219,7 @@
   "basePower": 35,
   "category": "Physical",
   "name": "Snap Trap",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Steel",
@@ -8239,7 +8239,7 @@
   "basePower": 55,
   "category": "Special",
   "name": "Snarl",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -8263,7 +8263,7 @@
   "basePower": 50,
   "category": "Special",
   "name": "Snore",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "sleepUsable": true,
   "secondary": {
@@ -8286,7 +8286,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Snowscape",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "weather": "snowscape",
   "type": "Ice",
@@ -8322,7 +8322,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Soft-Boiled",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "heal": [
    1,
@@ -8344,7 +8344,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Solar Beam",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Grass",
   "flags": [],
@@ -8358,7 +8358,7 @@
   "basePower": 125,
   "category": "Physical",
   "name": "Solar Blade",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Grass",
   "flags": [
@@ -8375,7 +8375,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Sparkling Aria",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -8395,7 +8395,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Speed Swap",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -8414,7 +8414,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Spicy Extract",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "boosts": {
    "atk": 2,
@@ -8457,7 +8457,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Spiky Shield",
-  "pp": 8,
+  "pp": 5,
   "priority": 4,
   "stallingMove": true,
   "volatileStatus": "spikyshield",
@@ -8485,7 +8485,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Spirit Break",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -8509,7 +8509,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Spirit Shackle",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100
@@ -8528,7 +8528,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Spite",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Ghost",
   "zMove": {
@@ -8546,7 +8546,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Spit Up",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [],
@@ -8560,7 +8560,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Spore",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "status": "slp",
   "type": "Grass",
@@ -8604,7 +8604,7 @@
   "basePower": 140,
   "category": "Special",
   "name": "Steel Beam",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "mindBlownRecoil": true,
   "type": "Steel",
@@ -8619,7 +8619,7 @@
   "basePower": 130,
   "category": "Physical",
   "name": "Steel Roller",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Steel",
   "flags": [
@@ -8706,7 +8706,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Stomping Tantrum",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Ground",
   "flags": [
@@ -8722,7 +8722,7 @@
   "basePower": 65,
   "category": "Physical",
   "name": "Stone Axe",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {},
   "type": "Rock",
@@ -8740,7 +8740,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Stone Edge",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "critRatio": 2,
   "type": "Rock",
@@ -8758,7 +8758,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Stored Power",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -8778,7 +8778,7 @@
   "basePower": 60,
   "category": "Physical",
   "name": "Storm Throw",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "willCrit": true,
   "type": "Fighting",
@@ -8795,7 +8795,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Strength Sap",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Grass",
   "zMove": {
@@ -8879,7 +8879,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Stuff Cheeks",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [],
@@ -8917,7 +8917,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Substitute",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "substitute",
   "condition": {
@@ -8938,7 +8938,7 @@
   "basePower": 70,
   "category": "Physical",
   "name": "Sucker Punch",
-  "pp": 8,
+  "pp": 5,
   "priority": 1,
   "type": "Dark",
   "flags": [
@@ -8956,7 +8956,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Sunny Day",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "weather": "sunnyday",
   "type": "Fire",
@@ -8978,7 +8978,7 @@
   "basePower": 100,
   "category": "Physical",
   "name": "Supercell Slam",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "hasCrashDamage": true,
   "type": "Electric",
@@ -8997,7 +8997,7 @@
   "basePower": 0,
   "category": "Physical",
   "name": "Super Fang",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [
@@ -9013,7 +9013,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Superpower",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "self": {
    "boosts": {
@@ -9037,7 +9037,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Surf",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Water",
   "flags": [],
@@ -9051,7 +9051,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Swagger",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "confusion",
   "boosts": {
@@ -9075,7 +9075,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Swallow",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -9094,7 +9094,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Sweet Kiss",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "confusion",
   "type": "Fairy",
@@ -9140,7 +9140,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Switcheroo",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Dark",
   "zMove": {
@@ -9172,7 +9172,7 @@
    "dance"
   ],
   "effectCategories": [
-   "self_buff"
+   "stat_increase_attacker"
   ],
   "range": "self",
   "desc": "Boosts the user's Attack stat by 2 stages."
@@ -9183,7 +9183,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Synthesis",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Grass",
   "zMove": {
@@ -9202,7 +9202,7 @@
   "basePower": 60,
   "category": "Special",
   "name": "Syrup Bomb",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "condition": {
    "noCopy": true,
@@ -9230,7 +9230,7 @@
   "basePower": 25,
   "category": "Physical",
   "name": "Tail Slap",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": [
    2,
@@ -9258,7 +9258,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Tailwind",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "sideCondition": "tailwind",
   "condition": {
@@ -9333,7 +9333,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Teatime",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [],
@@ -9372,7 +9372,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Temper Flare",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Fire",
   "flags": [
@@ -9388,7 +9388,7 @@
   "basePower": 50,
   "category": "Special",
   "name": "Terrain Pulse",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -9426,7 +9426,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Thrash",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "self": {
    "volatileStatus": "lockedmove"
@@ -9445,7 +9445,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Throat Chop",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "condition": {
    "duration": 2,
@@ -9469,7 +9469,7 @@
   "basePower": 110,
   "category": "Special",
   "name": "Thunder",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 30,
@@ -9489,7 +9489,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Thunderbolt",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -9509,7 +9509,7 @@
   "basePower": 65,
   "category": "Physical",
   "name": "Thunder Fang",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondaries": [
    {
@@ -9539,7 +9539,7 @@
   "basePower": 75,
   "category": "Physical",
   "name": "Thunder Punch",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 10,
@@ -9610,7 +9610,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Tidy Up",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "flags": [],
@@ -9645,7 +9645,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Torch Song",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -9671,7 +9671,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Torment",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "torment",
   "condition": {
@@ -9694,7 +9694,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Toxic",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "status": "tox",
   "type": "Poison",
@@ -9791,7 +9791,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Transform",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -9808,7 +9808,7 @@
   "basePower": 80,
   "category": "Special",
   "name": "Tri Attack",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "secondary": {
    "chance": 20
@@ -9827,7 +9827,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Trick",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Psychic",
   "zMove": {
@@ -9869,7 +9869,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Trick Room",
-  "pp": 8,
+  "pp": 5,
   "priority": -7,
   "pseudoWeather": "trickroom",
   "condition": {
@@ -9897,7 +9897,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Triple Arrows",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "critRatio": 2,
   "secondaries": [
@@ -9929,7 +9929,7 @@
   "basePowerCallback": true,
   "category": "Physical",
   "name": "Triple Axel",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": 3,
   "multiaccuracy": true,
@@ -9955,7 +9955,7 @@
   "basePower": 85,
   "category": "Physical",
   "name": "Trop Kick",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -9979,7 +9979,7 @@
   "basePower": 40,
   "category": "Special",
   "name": "Twin Beam",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "multihit": 2,
   "type": "Psychic",
@@ -9996,7 +9996,7 @@
   "basePower": 65,
   "category": "Physical",
   "name": "Upper Hand",
-  "pp": 16,
+  "pp": 15,
   "priority": 3,
   "secondary": {
    "chance": 100,
@@ -10019,7 +10019,7 @@
   "basePower": 90,
   "category": "Special",
   "name": "Uproar",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "self": {
    "volatileStatus": "uproar"
@@ -10079,7 +10079,7 @@
   "basePower": 65,
   "category": "Special",
   "name": "Venoshock",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Poison",
   "flags": [],
@@ -10110,7 +10110,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Volt Tackle",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "recoil": [
    33,
@@ -10137,7 +10137,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Waterfall",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 20,
@@ -10204,7 +10204,7 @@
   "basePowerCallback": true,
   "category": "Special",
   "name": "Water Spout",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "type": "Water",
   "flags": [],
@@ -10218,7 +10218,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Wave Crash",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "recoil": [
    33,
@@ -10240,7 +10240,7 @@
   "basePower": 50,
   "category": "Special",
   "name": "Weather Ball",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Normal",
   "zMove": {
@@ -10262,7 +10262,7 @@
   "basePower": 35,
   "category": "Special",
   "name": "Whirlpool",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "volatileStatus": "partiallytrapped",
   "type": "Water",
@@ -10305,7 +10305,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Wide Guard",
-  "pp": 12,
+  "pp": 10,
   "priority": 3,
   "sideCondition": "wideguard",
   "condition": {
@@ -10331,7 +10331,7 @@
   "basePower": 90,
   "category": "Physical",
   "name": "Wild Charge",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "recoil": [
    1,
@@ -10353,7 +10353,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Will-O-Wisp",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "status": "brn",
   "type": "Fire",
@@ -10375,7 +10375,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Wish",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "slotCondition": "Wish",
   "condition": {
@@ -10400,7 +10400,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Wonder Room",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "pseudoWeather": "wonderroom",
   "condition": {
@@ -10427,7 +10427,7 @@
   "basePower": 120,
   "category": "Physical",
   "name": "Wood Hammer",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "recoil": [
    33,
@@ -10449,7 +10449,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Worry Seed",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "type": "Grass",
   "zMove": {
@@ -10488,7 +10488,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "X-Scissor",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "type": "Bug",
   "flags": [
@@ -10505,7 +10505,7 @@
   "basePower": 0,
   "category": "Status",
   "name": "Yawn",
-  "pp": 12,
+  "pp": 10,
   "priority": 0,
   "volatileStatus": "yawn",
   "condition": {
@@ -10530,7 +10530,7 @@
   "basePower": 120,
   "category": "Special",
   "name": "Zap Cannon",
-  "pp": 8,
+  "pp": 5,
   "priority": 0,
   "secondary": {
    "chance": 100,
@@ -10552,7 +10552,7 @@
   "basePower": 80,
   "category": "Physical",
   "name": "Zen Headbutt",
-  "pp": 16,
+  "pp": 15,
   "priority": 0,
   "secondary": {
    "chance": 20,
