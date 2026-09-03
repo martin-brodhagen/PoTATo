@@ -57,22 +57,32 @@ LIFE_ORB_MULTIPLIER = 1.3
 DEFAULT_STAB_MULTIPLIER = 1.5
 ADAPTABILITY_STAB_MULTIPLIER = 2.0
 
-# Hardcoded set of always-excluded offensive moves (recharging / charging /
-# lock-in / self-destruct / user-flagged outliers). Add more here when new
-# 2-turn / lock-in / signature moves show up; the upstream `condition` /
-# `self.volatileStatus` signals are unreliable for some signature moves.
-EXCLUDED_OFFENSIVE_MOVES = {
-    # Recharging signature moves
-    "frenzyplant", "blastburn", "hydrocannon",
-    # Recharging generic moves
-    "hyperbeam", "gigaimpact",
-    # Charging (turn 1 charge, turn 2 attack) — data signal unreliable
-    "solarbeam", "solarblade", "meteorbeam", "electroshot", "focuspunch"
-    # Lock-in (user trapped for 2-3 turns)
-    "petaldance", "outrage", "thrash", "ragingfury",
-    # Self-destruct
-    "explosion", "selfdestruct", "mindblown",
-}
+# TODO(move-drawback-filter): the previous hardcoded EXCLUDED_OFFENSIVE_MOVES
+# set (recharging / charging / lock-in / self-destruct) has been removed —
+# for now, every learned offensive move is eligible, so the calculation can
+# over-rely on signature moves (Hyper Beam, Frenzy Plant, Solar Beam, etc.).
+#
+# The intended replacement is a user-facing "drawback" filter on the pokedex
+# grid that lets the user toggle which drawback buckets disqualify a move
+# from the power-score calculation. Buckets to expose:
+#   - "recharge-signature" — recharging signature moves (Frenzy Plant,
+#     Blast Burn, Hydro Cannon, …)
+#   - "recharge-generic"   — recharging generic moves (Hyper Beam, Giga Impact)
+#   - "charging"           — 2-turn charge moves (Solar Beam, Solar Blade,
+#     Meteor Beam, Electro Shot, Focus Punch) — upstream's `charge` signal is
+#     unreliable for some signatures, may need a curated seed list
+#   - "lock-in"            — multi-turn locked-in moves (Petal Dance, Outrage,
+#     Thrash, Raging Fury)
+#   - "self-destruct"      — Explosion, Self-Destruct, Mind Blown
+#
+# Wire path: a filter widget in `lib/pokemon-search-widget.js` collects the
+# checked buckets, the frontend passes them to a per-pokemon power-score
+# recomputation that calls into a JS port of this script (or this script
+# learns to accept a `--disallow <bucket>,...` flag). Each move gets
+# classified into 0+ buckets by inspecting `data/base/moves.json` fields
+# (`selfdestruct`, `self.volatileStatus`, `condition`, `flags`, etc.); moves
+# in a checked bucket are skipped in `select_strongest_offensive_move`.
+# For now the filter is bypassed entirely.
 
 # Always-on damage-boosting abilities. Conditional low-HP ones
 # (Blaze / Overgrow / Torrent / Swarm) are deliberately excluded.
@@ -178,10 +188,6 @@ def _is_mega(entry: dict) -> bool:
     return "Mega" in str(entry.get("forme") or "")
 
 
-def _is_excluded_offensive_move(move_id: str) -> bool:
-    return move_id in EXCLUDED_OFFENSIVE_MOVES
-
-
 def _effective_bp(move: dict, has_technician: bool) -> float:
     """BP scaled by multi-hit count and the Technician boost (×1.5 when
     base BP ≤ 60 and the pokemon has Technician). For `[min, max]` hit
@@ -199,10 +205,13 @@ def select_strongest_offensive_move(entry: dict, type_name: str,
                                      category: str) -> dict | None:
     """Pick the move the pokemon learns that deals the most raw damage to
     `type_name` — either natively or via a type-changing ability (Pixilate
-    etc. for Normal→X, Liquid Voice for sound→Water) — and isn't in the
-    exclusion list. Strength is measured by effective BP (basePower ×
-    multihit count, with ×1.5 from Technician when BP ≤ 60). Returns the
-    move dict or None.
+    etc. for Normal→X, Liquid Voice for sound→Water). Strength is measured
+    by effective BP (basePower × multihit count, with ×1.5 from Technician
+    when BP ≤ 60). Returns the move dict or None.
+
+    Drawback filtering (recharging / charging / lock-in / self-destruct)
+    is intentionally NOT applied here for now — see the
+    TODO(move-drawback-filter) block near the top of this file.
     """
     if _MOVES is None or _LEARNSETS is None:
         _load_move_data()
@@ -213,8 +222,6 @@ def select_strongest_offensive_move(entry: dict, type_name: str,
     best_ebp = -1.0
     best_move = None
     for mid in learned:
-        if _is_excluded_offensive_move(mid):
-            continue
         mv = _MOVES.get(mid)
         if not isinstance(mv, dict):
             continue

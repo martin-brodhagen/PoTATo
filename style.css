@@ -494,9 +494,9 @@ button:hover {
   font-style: italic;
 }
 
-/* ── Search widget containers (centered 560px column) ── */
+/* ── Search widget containers (fluid) ── */
 .pokemon-search-widget {
-  width: 560px;
+  width: 100%;
   margin: 0 auto;
 }
 
