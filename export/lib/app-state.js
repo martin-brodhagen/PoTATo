@@ -1,5 +1,5 @@
 let state = {
-  currentFormat: "m-b",
+  currentFormat: "m-c",
   teams: [],
   currentTeamId: null,
   allSpecies: [],

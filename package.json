@@ -9,6 +9,7 @@
     "prep:abilities:patch": "python3 prep/abilities/patch_remove.py",
     "prep:species:patch": "python3 prep/species/patch_cosmetic_formes.py",
     "prep:species:base": "python3 prep/species/patch_base_species.py",
+    "prep:species:abilities": "python3 prep/species/patch_species_abilities.py",
     "prep:format": "python3 prep/formats/build.py",
     "prep:sprites:48": "python3 scripts/build-sprites-48.py",
     "prep:mb": "python3 prep/base/build.py && python3 prep/formats/build.py m-b && python3 prep/i18n/build.py",

@@ -8,8 +8,9 @@ Runs in order:
   4. `prep/abilities/patch_remove.py`       — removes manually-flagged abilities
   5. `prep/species/patch_cosmetic_formes.py`— re-applies cosmetic-forme synthesis to base
   6. `prep/species/patch_base_species.py`   — re-applies per-species baseSpecies/forme overrides to base
-  7. `prep/formats/build.py`                — generates data/formats/<id>.json
-  8. `prep/i18n/build.py`                   — generates data/i18n/<lang>/{...}.json
+  7. `prep/species/patch_species_abilities.py` — re-applies per-species ability overrides to base
+  8. `prep/formats/build.py`                — generates data/formats/<id>.json
+  9. `prep/i18n/build.py`                   — generates data/i18n/<lang>/{...}.json
 """
 
 import os
@@ -42,6 +43,8 @@ def main():
     run_module(os.path.join(HERE, "species", "patch_cosmetic_formes.py"))
 
     run_module(os.path.join(HERE, "species", "patch_base_species.py"))
+
+    run_module(os.path.join(HERE, "species", "patch_species_abilities.py"))
 
     formats_dir = os.path.join(HERE, "formats")
     format_ids = sorted(

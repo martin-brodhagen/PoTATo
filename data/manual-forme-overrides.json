@@ -15,10 +15,12 @@
   "Mega":          { "name": "Mega",                    "kind": "mega" },
   "Mega-X":        { "name": "Mega X",                  "kind": "mega" },
   "Mega-Y":        { "name": "Mega Y",                  "kind": "mega" },
+  "Mega-Z":        { "name": "Mega Z",                  "kind": "mega" },
   "M-Mega":        { "name": "Mega Male",               "kind": "mega" },
   "F-Mega":        { "name": "Mega Female",             "kind": "mega" },
 
   "Alola":         { "name": "Alolan Form",             "kind": "pre-battle" },
+  "Amped":         { "name": "Amped Form",              "kind": "pre-battle" },
   "Galar":         { "name": "Galarian Form",           "kind": "pre-battle" },
   "Hisui":         { "name": "Hisuian Form",            "kind": "pre-battle" },
   "Paldea-Aqua":   { "name": "Paldean Form (Aqua Breed)",    "kind": "pre-battle" },
@@ -34,6 +36,7 @@
   "Dusk":          { "name": "Dusk Form",               "kind": "pre-battle" },
   "Midnight":      { "name": "Midnight Form",           "kind": "pre-battle" },
   "Large":         { "name": "Large Variety",           "kind": "pre-battle" },
+  "Low-Key":       { "name": "Low-Key Form",            "kind": "pre-battle" },
   "Small":         { "name": "Small Variety",           "kind": "pre-battle" },
   "Super":         { "name": "Super Variety",           "kind": "pre-battle" },
   "Eternal":       { "name": "Eternal Flower",          "kind": "pre-battle" },
@@ -57,6 +60,7 @@
   "Original":      { "name": "Original Color",          "kind": "cosmetic" },
 
   "Blue":          { "name": "Blue",                    "kind": "cosmetic" },
+  "Green":         { "name": "Green",                   "kind": "cosmetic" },
   "Orange":        { "name": "Orange",                  "kind": "cosmetic" },
   "White":         { "name": "White",                   "kind": "cosmetic" },
   "Yellow":        { "name": "Yellow",                  "kind": "cosmetic" },

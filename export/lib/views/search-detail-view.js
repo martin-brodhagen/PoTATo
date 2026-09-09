@@ -4,7 +4,7 @@ import { MOVE_CLASSIFICATIONS, MOVE_EFFECT_CATEGORIES, RANGE_CATEGORIES, ABILITY
 import { CHAMPIONS_SPRITE_PATH_SMALL } from "../sprite-paths.js";
 
 function statBarColor(val) {
-  if (val <= 29) return "#c44d4d";
+  if (val <= 30) return "#c44d4d";
   if (val <= 59) return "#cc9f4a";
   if (val <= 94) return "#e5c531";
   if (val <= 134) return "#5fbb63";
@@ -73,7 +73,7 @@ export class SearchDetailView {
   }
 
   getFormat() {
-    return this.opts.getFormat?.() ?? "m-a";
+    return this.opts.getFormat?.() ?? "m-c";
   }
 
   destroyChildWidgets() {

@@ -494,12 +494,16 @@ button:hover {
   font-style: italic;
 }
 
-/* ── Search widget containers (centered 560px column) ── */
-.pokemon-search-widget,
+/* ── Search widget containers (fluid) ── */
+.pokemon-search-widget {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .move-search-widget,
 .ability-search-widget,
-.item-search-widget {
-  width: 560px;
+.item-search-widget  {
+  width:100%;
   margin: 0 auto;
 }
 

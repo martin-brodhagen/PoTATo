@@ -1,0 +1,21 @@
+{
+  "_comment": [
+    "Per-species ability overrides. Each entry REPLACES the species'",
+    "`abilities` field in data/base/pokedex.json with the supplied list.",
+    "Used for cases where upstream Showdown encodes the wrong mega",
+    "ability (e.g. Mega Golisopod listed as Emergency Exit instead of",
+    "Tough Claws) or when the Champions mod's tier table implies a",
+    "different ability than what upstream supplies.",
+    "",
+    "Ability names must match upstream's display names exactly (case-",
+    "insensitive match is performed in patch_species_abilities.py).",
+    "Entries with species ids not in the base pokedex are skipped with",
+    "a stderr NOTE.",
+    "",
+    "Edit the map below; re-run `npm run prep:species:abilities` to",
+    "apply."
+  ],
+
+  "golisopodmega": ["Tough Claws"],
+  "baxcaliburmega": ["Thermal Exchange"]
+}

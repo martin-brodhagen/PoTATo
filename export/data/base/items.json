@@ -38,7 +38,7 @@
   "itemUser": [
    "Absol"
   ],
-  "isNonstandard": "Future",
+  "desc": "A held item that allows Absol to Mega Evolve (Z form).",
   "sprite": "absolitez"
  },
  "absorbbulb": {
@@ -116,7 +116,7 @@
   "fling": {
    "basePower": 10
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. Grants the holder immunity to Ground-type moves and entry hazards. This item will pop if the holder is hit.",
   "sprite": "airballoon"
  },
  "alakazite": {
@@ -247,7 +247,7 @@
   "itemUser": [
    "Baxcalibur"
   ],
-  "isNonstandard": "Future",
+  "desc": "A held item that allows Baxcalibur to Mega Evolve.",
   "sprite": "baxcalibrite"
  },
  "beastball": {
@@ -304,7 +304,7 @@
    "basePower": 10
   },
   "onTryHealPriority": 1,
-  "desc": "An item to be held by a Pokemon. Increases the amount of HP the holder recovers after using moves that steal HP by 30%.",
+  "desc": "Boosts the amount of HP restored through HP-absorbing moves by 30%. HP restored by moves such as Ingrain and Strength Sap will also be boosted by 30%.",
   "sprite": "bigroot"
  },
  "bindingband": {
@@ -312,7 +312,7 @@
   "fling": {
    "basePower": 30
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. Increases the damage caused by the holder's moves that bind or constrict the opponent.",
   "sprite": "bindingband"
  },
  "blackbelt": {
@@ -726,7 +726,7 @@
   "fling": {
    "basePower": 60
   },
-  "desc": "An item to be held by a Pokemon. If the holder uses Rain Dance, the effects will last for 8 turns instead of 5.",
+  "desc": "When the holder summons rain with its moves or Ability, the duration is extended by 3 turns. (Total duration: 8 turns)",
   "sprite": "damprock"
  },
  "darkgem": {
@@ -1022,7 +1022,7 @@
    "basePower": 30
   },
   "onAfterMoveSecondaryPriority": 2,
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. If the holder gets hit by an attack that makes direct contact, it will switch out with another Party Pokemon.",
   "sprite": "ejectbutton"
  },
  "ejectpack": {
@@ -1066,7 +1066,7 @@
   "boosts": {
    "def": 1
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. Increases the holder's Defense by one stage when Electric Terrain is activated.",
   "sprite": "electricseed"
  },
  "electriumz": {
@@ -1122,7 +1122,7 @@
   "fling": {
    "basePower": 10
   },
-  "desc": "An item to be held by a Pokemon. Increases the holder's super effective moves by 20%.",
+  "desc": "Boosts the power of the holder's supereffective moves by 20%.",
   "sprite": "expertbelt"
  },
  "fairiumz": {
@@ -1455,7 +1455,7 @@
   "itemUser": [
    "Garchomp"
   ],
-  "isNonstandard": "Future",
+  "desc": "A held item that allows Garchomp to Mega Evolve (Z form).",
   "sprite": "garchompitez"
  },
  "gardevoirite": {
@@ -1544,7 +1544,7 @@
   "itemUser": [
    "Golisopod"
   ],
-  "isNonstandard": "Past",
+  "desc": "A held item that allows Golisopod to Mega Evolve.",
   "sprite": "golisopite"
  },
  "golurkite": {
@@ -1593,7 +1593,7 @@
   "boosts": {
    "def": 1
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. Increases the holder's Defense by one stage when Grassy Terrain is activated.",
   "sprite": "grassyseed"
  },
  "greatball": {
@@ -1744,7 +1744,7 @@
   "fling": {
    "basePower": 60
   },
-  "desc": "An item to be held by a Pokemon. If the holder uses Sunny Day, the effects will last for 8 turns instead of 5.",
+  "desc": "When the holder summons harsh sunlight with its moves or Ability, the duration is extended by 3 turns. (Total duration: 8 turns)",
   "sprite": "heatrock"
  },
  "heavyball": {
@@ -1850,7 +1850,7 @@
   "fling": {
    "basePower": 40
   },
-  "desc": "An item to be held by a Pokemon. If the holder summons a snowstorm, the effects will last for 8 turns instead of 5.",
+  "desc": "When the holder summons snow with its moves or Ability, the duration is extended by 3 turns. (Total duration: 8 turns)",
   "sprite": "icyrock"
  },
  "inciniumz": {
@@ -1876,7 +1876,7 @@
   "fling": {
    "basePower": 130
   },
-  "desc": "An item to be held by a Pokemon. Reduces the holder's Speed by 50%, if it is a Flying-type or has the Levitate ability, the holder becomes susceptible to Ground type attacks.",
+  "desc": "Halves the holder's Speed stat. If the holder is off the ground, it will be grounded, meaning it can be affected by Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses.",
   "sprite": "ironball"
  },
  "ironplate": {
@@ -2020,7 +2020,7 @@
    "Farfetch’d-Galar",
    "Sirfetch’d"
   ],
-  "isNonstandard": "Past",
+  "desc": "An item used to be held by Farfetch'd to increase its critical-hit ratio.",
   "sprite": "leek"
  },
  "leftovers": {
@@ -2054,7 +2054,7 @@
   "fling": {
    "basePower": 30
   },
-  "desc": "An item to be held by a Pokemon. Increases the damage of the holder's moves by 30% but the holder loses 10% of its max HP after using a damaging move.",
+  "desc": "Boosts the power of the holder's moves by 30%. However, the holder also loses 1/10 of its max HP each time it successfully lands an attack.",
   "sprite": "lifeorb"
  },
  "lightball": {
@@ -2089,7 +2089,7 @@
   "fling": {
    "basePower": 30
   },
-  "desc": "An item to be held by a Pokemon. Prolongs the effects of moves like Light Screen, Reflect, and Aurora Veil to make them last eight turns instead of five.",
+  "desc": "When the holder uses Light Screen, Reflect, or Aurora Veil, the duration is extended by 3 turns. (Total duration: 8 turns)",
   "sprite": "lightclay"
  },
  "loadeddice": {
@@ -2144,7 +2144,7 @@
   "itemUser": [
    "Lucario"
   ],
-  "isNonstandard": "Future",
+  "desc": "A held item that allows Lucario to Mega Evolve.",
   "sprite": "lucarionitez"
  },
  "luckypunch": {
@@ -2454,7 +2454,7 @@
   "condition": {
    "onTryMovePriority": -2
   },
-  "desc": "An item to be held by a Pokemon. Increases the damage of moves used consecutively by 20%. It stops increasing at 100% and resets if a different move is used.",
+  "desc": "Boosts the power of a move that is used repeatedly. This boost will be 20% on the second usage, 40% on the third, and so on, up to a maximum boost of 100%. If the streak is broken, the move's power returns to its usual value.",
   "sprite": "metronome"
  },
  "mewniumz": {
@@ -2545,7 +2545,7 @@
   "boosts": {
    "spd": 1
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. It boost the holder's Special Defense by one stage when Misty Terrain is activated. It disappears after use.",
   "sprite": "mistyseed"
  },
  "moonball": {
@@ -2567,7 +2567,7 @@
   "fling": {
    "basePower": 10
   },
-  "desc": "An item to be held by a Pokemon. Increases the holder's physical attacks by 10%.",
+  "desc": "Boosts the power of the holder's physical moves by 10%.",
   "sprite": "muscleband"
  },
  "mysticwater": {
@@ -2615,7 +2615,7 @@
  "normalgem": {
   "name": "Normal Gem",
   "isGem": true,
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. Increases the damage of a Normal-type move by 30% once. This item disappears after use.",
   "sprite": "normalgem"
  },
  "normaliumz": {
@@ -2961,7 +2961,7 @@
   "boosts": {
    "spd": 1
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. It boost the holder's Special Defense by one stage when Psychic Terrain is activated. It disappears after use.",
   "sprite": "psychicseed"
  },
  "psychiumz": {
@@ -3105,7 +3105,7 @@
   "fling": {
    "basePower": 10
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. If the holder is attacked with a physical move, the attacker will be removed from battle.",
   "sprite": "redcard"
  },
  "redorb": {
@@ -3187,7 +3187,7 @@
    "basePower": 60
   },
   "onDamagingHitOrder": 2,
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. If the holder is hit with a physical attack, the attacker receives recoil damage as well.",
   "sprite": "rockyhelmet"
  },
  "roomservice": {
@@ -3301,7 +3301,7 @@
   "itemUser": [
    "Salamence"
   ],
-  "isNonstandard": "Past",
+  "desc": "A held item that allows Salamence to Mega Evolve.",
   "sprite": "salamencite"
  },
  "sceptilite": {
@@ -3500,7 +3500,7 @@
   "fling": {
    "basePower": 10
   },
-  "desc": "An item to be held by a Pokemon. If the holder uses Sandstorm, the effects will last for 8 turns instead of 5.",
+  "desc": "When the holder summons a sandstorm with its moves or Ability, the duration is extended by 3 turns. (Total duration: 8 turns)",
   "sprite": "smoothrock"
  },
  "snorliumz": {
@@ -3795,7 +3795,7 @@
   "fling": {
    "basePower": 60
   },
-  "isNonstandard": "Past",
+  "desc": "An item to be held by a Pokemon. Extends the duration of terrains activated by the Holder for 3 more turns.",
   "sprite": "terrainextender"
  },
  "thickclub": {
@@ -4843,7 +4843,7 @@
    "basePower": 10
   },
   "onSourceModifyAccuracyPriority": -2,
-  "desc": "An item to be held by a Pokemon. Increases the Accuracy of the moves used by the holder by 10%.",
+  "desc": "Boosts the accuracy of the holder's moves by 10%.",
   "sprite": "widelens"
  },
  "wikiberry": {
@@ -4857,7 +4857,7 @@
   "fling": {
    "basePower": 10
   },
-  "desc": "An item to be held by a Pokemon. Increases the holder's Special Attack by 10%.",
+  "desc": "Boosts the power of the holder's special moves by 10%.",
   "sprite": "wiseglasses"
  },
  "yacheberry": {
@@ -4890,7 +4890,7 @@
    "basePower": 10
   },
   "onSourceModifyAccuracyPriority": -2,
-  "desc": "An item to be held by a Pokemon. Increases the holder's Accuracy by 20% if it moves last in the turn.",
+  "desc": "Boosts the accuracy of the holder's moves by 20% when the holder acts after the targets.",
   "sprite": "zoomlens"
  },
  "zygardite": {
@@ -4907,6 +4907,9 @@
  "berry": {
   "name": "Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "berry"
  },
@@ -4915,70 +4918,106 @@
   "boosts": {
    "atk": 2
   },
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "berserkgene"
  },
  "bitterberry": {
   "name": "Bitter Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "bitterberry"
  },
  "burntberry": {
   "name": "Burnt Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "burntberry"
  },
  "goldberry": {
   "name": "Gold Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "goldberry"
  },
  "iceberry": {
   "name": "Ice Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "iceberry"
  },
  "mintberry": {
   "name": "Mint Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "mintberry"
  },
  "miracleberry": {
   "name": "Miracle Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "miracleberry"
  },
  "mysteryberry": {
   "name": "Mystery Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "mysteryberry"
  },
  "pinkbow": {
   "name": "Pink Bow",
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "pinkbow"
  },
  "polkadotbow": {
   "name": "Polkadot Bow",
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "polkadotbow"
  },
  "przcureberry": {
   "name": "PRZ Cure Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "przcureberry"
  },
  "psncureberry": {
   "name": "PSN Cure Berry",
   "isBerry": true,
+  "tags": [
+   "True Past"
+  ],
   "isNonstandard": "Past",
   "sprite": "psncureberry"
  },

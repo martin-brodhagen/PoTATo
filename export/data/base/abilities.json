@@ -85,6 +85,11 @@
   "name": "Aura Break",
   "effectCategories": []
  },
+ "auraguard": {
+  "name": "Aura Guard",
+  "desc": "Halves the damage the Pokémon takes from contact moves.",
+  "effectCategories": []
+ },
  "baddreams": {
   "name": "Bad Dreams",
   "effectCategories": []
@@ -407,6 +412,7 @@
  },
  "emergencyexit": {
   "name": "Emergency Exit",
+  "desc": "The Pokémon switches out of battle when its HP drops to 1/2 or less of its max.",
   "effectCategories": []
  },
  "fairyaura": {
@@ -541,10 +547,12 @@
  },
  "grasspelt": {
   "name": "Grass Pelt",
+  "desc": "Boosts the Pokémon’s Defense stat by 50% on Grassy Terrain.",
   "effectCategories": []
  },
  "grassysurge": {
   "name": "Grassy Surge",
+  "desc": "Turns the entire field into Grassy Terrain for 5 turns when the Pokémon enters a battle.",
   "effectCategories": []
  },
  "grimneigh": {
@@ -553,6 +561,7 @@
  },
  "guarddog": {
   "name": "Guard Dog",
+  "desc": "Intimidate does not work on the Pokémon. Instead, it boosts the Pokémon’s Attack stat by 1 stage. The Pokémon is also unaffected by the moves and held items of other Pokémon that would force it to switch out of battle.",
   "effectCategories": []
  },
  "gulpmissile": {
@@ -787,6 +796,7 @@
  },
  "libero": {
   "name": "Libero",
+  "desc": "Changes the Pokémon’s type to the type of the move it’s about to use. This works only once per time the Pokémon enters battle.",
   "effectCategories": []
  },
  "lightmetal": {
@@ -817,6 +827,7 @@
  },
  "liquidooze": {
   "name": "Liquid Ooze",
+  "desc": "When the Pokémon is hit by an HP-absorbing move, the attacker does not restore HP but instead takes damage equal to the amount of HP it would have restored.",
   "effectCategories": []
  },
  "liquidvoice": {
@@ -1182,10 +1193,12 @@
  },
  "psychicsurge": {
   "name": "Psychic Surge",
+  "desc": "Turns the entire field into Psychic Terrain for 5 turns when the Pokémon enters a battle.",
   "effectCategories": []
  },
  "punkrock": {
   "name": "Punk Rock",
+  "desc": "Boosts the power of the Pokémon’s sound-based moves by 30% and halves the damage the Pokémon takes from sound-based moves.",
   "effectCategories": []
  },
  "purepower": {
@@ -1239,6 +1252,7 @@
  },
  "rattled": {
   "name": "Rattled",
+  "desc": "When the Pokémon takes damage from a Dark-, Ghost-, or Bug-type move or when it is on the receiving end of Intimidate, its Speed stat is boosted by 1 stage.",
   "effectCategories": []
  },
  "receiver": {
@@ -1312,6 +1326,7 @@
  },
  "runaway": {
   "name": "Run Away",
+  "desc": "Enables the Pokémon to ignore any effects that would usually prevent it from switching out of battle and being replaced by another party Pokémon.",
   "effectCategories": []
  },
  "sandforce": {
@@ -1383,6 +1398,7 @@
  },
  "seedsower": {
   "name": "Seed Sower",
+  "desc": "Turns the entire field into Grassy Terrain for 5 turns when the Pokémon takes damage from moves.",
   "effectCategories": []
  },
  "serenegrace": {
@@ -1531,6 +1547,7 @@
  },
  "stakeout": {
   "name": "Stakeout",
+  "desc": "Doubles the power of the Pokémon’s moves when it attacks targets that have just switched into battle.",
   "effectCategories": []
  },
  "stall": {
@@ -1588,6 +1605,7 @@
  },
  "steelyspirit": {
   "name": "Steely Spirit",
+  "desc": "Boosts the power of the Steel-type moves of the Pokémon and its allies by 50%.",
   "effectCategories": []
  },
  "stench": {
@@ -1748,6 +1766,7 @@
  },
  "thermalexchange": {
   "name": "Thermal Exchange",
+  "desc": "When the Pokémon takes damage from a Fire-type move, its Attack stat is boosted by 1 stage. The Pokémon cannot be burned.",
   "effectCategories": []
  },
  "thickfat": {

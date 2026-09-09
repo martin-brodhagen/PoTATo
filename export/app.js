@@ -58,6 +58,7 @@ const widgets = {
 };
 
 const FORMATS = [
+  { value: "m-c", label: "Regulation M-C" },
   { value: "m-b", label: "Regulation M-B" },
   { value: "m-a", label: "Regulation M-A" },
 ];
@@ -206,7 +207,7 @@ formatSelect.addEventListener("change", () => {
 
 migrateFromLegacy();
 
-const initialFormat = "m-b";
+const initialFormat = "m-c";
 
 (async function main() {
   try {
