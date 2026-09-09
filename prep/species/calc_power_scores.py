@@ -119,15 +119,6 @@ TYPE_CHANGING_ABILITIES = {
 
 ADAPTABILITY_ID = "adaptability"
 
-
-DUMMY_ATTACKER = {
-    "attack": 200,
-    "base_power": 100,
-}
-DUMMY_DEFENDER = {
-    "defense": 200
-}
-
 def calc_base_damage(base_power, attack, defense):
     return math.floor( math.floor( 22 * base_power * ( attack / defense ) / 50) + 2 )
 

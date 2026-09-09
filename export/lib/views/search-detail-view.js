@@ -329,6 +329,7 @@ export class SearchDetailView {
       this.moveDetailPokemonWidget = new PokemonSearchWidget({
         container,
         formatId: this.getFormat(),
+        widgetId: 'moveLearnedBy',
         onPokemonClick: (_speciesId, species) => {
           this.opts.detailController?.showPokemonDetail(species);
         },
@@ -375,6 +376,7 @@ export class SearchDetailView {
       this.abilityDetailPokemonWidget = new PokemonSearchWidget({
         container,
         formatId: this.getFormat(),
+        widgetId: 'abilityPokemonWith',
         onPokemonClick: (_speciesId, species) => {
           this.opts.detailController?.showPokemonDetail(species);
         },
