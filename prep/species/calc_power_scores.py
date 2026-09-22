@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""Compute and write powerScores for every entry in data/base/pokedex.json.
+"""Compute and write powerScores for every species to data/added/powerscores.json.
 
-The base build (`prep/base/build.py`) seeds each entry with a zero-filled
-`powerScores` block as a placeholder. This script overwrites those
-placeholders with the real per-pokemon scores, recomputed from each
-entry's stats / types / abilities.
+`data/added/powerscores.json` is a list of `{id, powerScores}` entries, sorted by
+id. This file is loaded by the frontend (`lib/data-loader.js`) and joined onto
+each species at format-view construction; the per-species `powerScores` block
+that used to live on `data/base/pokedex.json` is gone.
 
-The calculation lives in `compute_power_scores(entry)`. The current body
-is a stub that returns 1 for every score — the real formula will be
-supplied later; replace it when ready.
+The base build (`prep/base/build.py`) used to seed each pokedex entry with a
+zero-filled `powerScores` block; this script overwrites those placeholders with
+the real per-pokemon scores, recomputed from each entry's stats / types /
+abilities. The output is written **only** to `data/added/powerscores.json` —
+the script never touches `data/base/pokedex.json`.
+
+The calculation lives in `compute_power_scores(entry)`.
 
 Usage:
     python3 prep/species/calc_power_scores.py
@@ -25,13 +29,15 @@ REPO_ROOT = os.path.dirname(os.path.dirname(HERE))
 POKEDEX_PATH = os.path.join(REPO_ROOT, "data", "base", "pokedex.json")
 MOVES_PATH = os.path.join(REPO_ROOT, "data", "base", "moves.json")
 LEARNSETS_PATH = os.path.join(REPO_ROOT, "data", "base", "learnsets.json")
+ITEMS_PATH = os.path.join(REPO_ROOT, "data", "base", "items.json")
+POWER_SCORES_PATH = os.path.join(REPO_ROOT, "data", "added", "powerscores.json")
 
 # Must match `prep/base/build.py:DEFAULT_POWER_SCORES`.
 POWER_SCORE_KEYS = (
-    "physicalType1",
-    "physicalType2",
-    "specialType1",
-    "specialType2",
+    "physicalAttackType1",
+    "physicalAttackType2",
+    "specialAttackType1",
+    "specialAttackType2",
     "physicalDefense",
     "physicalDefenseFull",
     "specialDefense",
@@ -118,6 +124,70 @@ TYPE_CHANGING_ABILITIES = {
 }
 
 ADAPTABILITY_ID = "adaptability"
+
+# Species-restricted damage-boosting items. When a pokemon qualifies as an
+# `itemUser` of one of these AND the move matches the predicate, the item's
+# multiplier replaces the generic Life Orb (×1.3) — the calc models the
+# player's best-case item choice. Items restricted to crit (Leek, Lucky
+# Punch, Stick) don't appear here because the offensive formula doesn't
+# model crit rate.
+SPECIAL_ITEM_DAMAGE_MODIFIERS = {
+    # item_id: (multiplier, predicate_on_move)
+    "lightball":   (2.0,  lambda m: m.get("type") == "Electric"),       # Pikachu line
+    "thickclub":   (2.0,  lambda m: m.get("category") == "Physical"),    # Cubone/Marowak line
+    "souldew":     (1.5,  lambda m: m.get("category") == "Special"),     # Latios/Latias
+    "adamantorb":  (1.2,  lambda m: m.get("type") in ("Dragon", "Steel")),  # Dialga
+    "lustrousorb": (1.2,  lambda m: m.get("type") in ("Dragon", "Water")),  # Palkia
+    "griseousorb": (1.2,  lambda m: m.get("type") in ("Dragon", "Ghost")),  # Giratina
+}
+
+
+def _normalize_display(name: str) -> str:
+    """Same scheme as prep/_lib/game8.py — used to map display names to ids."""
+    return (
+        name.lower()
+        .replace("-", "")
+        .replace(" ", "")
+        .replace("'", "")
+        .replace(".", "")
+        .replace("\u2019", "")
+    )
+
+
+def _build_pokemon_to_special_items() -> dict[str, list[str]]:
+    """Reverse-map from species id → list of `SPECIAL_ITEM_DAMAGE_MODIFIERS`
+    item ids that species can use (per items.json's `itemUser` field).
+
+    Built lazily once; cached in a module global.
+    """
+    cache_attr = "_POKEMON_SPECIAL_ITEMS"
+    if hasattr(globals().get(cache_attr, None), "__call__"):
+        pass
+    cached = globals().get(cache_attr)
+    if isinstance(cached, dict):
+        return cached
+
+    items = _load_json(ITEMS_PATH, {})
+    pokedex = _load_json(POKEDEX_PATH, [])
+    # Map display name → species id (covers Pikachu-Cosplay, Marowak-Alola, etc.)
+    name_to_id: dict[str, str] = {}
+    for entry in pokedex:
+        nm = entry.get("name", "")
+        if nm:
+            name_to_id[_normalize_display(nm)] = entry["id"]
+        # Also map the forme suffix as a standalone key (e.g. "Alola" alone
+        # wouldn't be in itemUser, but defensive).
+    out: dict[str, list[str]] = {}
+    for iid in SPECIAL_ITEM_DAMAGE_MODIFIERS:
+        entry = items.get(iid, {})
+        users = entry.get("itemUser") or []
+        for display_name in users:
+            sid = name_to_id.get(_normalize_display(display_name))
+            if not sid:
+                continue
+            out.setdefault(sid, []).append(iid)
+    globals()[cache_attr] = out
+    return out
 
 def calc_base_damage(base_power, attack, defense):
     return math.floor( math.floor( 22 * base_power * ( attack / defense ) / 50) + 2 )
@@ -248,6 +318,24 @@ def _move_converts_to(move: dict, ability_id: str) -> str | None:
     return None
 
 
+def best_special_item_modifier(pokemon_id: str, move: dict) -> float | None:
+    """If `pokemon_id` qualifies for any item in `SPECIAL_ITEM_DAMAGE_MODIFIERS`
+    and `move` matches that item's predicate, return the strongest applicable
+    multiplier. Otherwise return None (caller should fall back to Life Orb).
+    """
+    items_for_mon = _build_pokemon_to_special_items().get(pokemon_id)
+    if not items_for_mon:
+        return None
+    best = None
+    for iid in items_for_mon:
+        mult, predicate = SPECIAL_ITEM_DAMAGE_MODIFIERS[iid]
+        if not predicate(move):
+            continue
+        if best is None or mult > best:
+            best = mult
+    return best
+
+
 def ability_damage_modifier(pokemon_abilities: list, move: dict) -> float:
     """Multiplicative damage bonus from always-on ability effects that apply
     to `move`. Combines all matching effects (e.g. Huge Power + Tough Claws
@@ -300,7 +388,16 @@ def offensive_score(entry: dict, type_name: str, category: str,
                             stab=stab)
     dmg = math.floor(dmg * ability_damage_modifier(entry.get("abilities"), move))
     if not _is_mega(entry):
-        dmg = math.floor(dmg * LIFE_ORB_MULTIPLIER)
+        # Replace Life Orb with a species-specific damage item when one
+        # applies (e.g. Light Ball ×2 for Pikachu Electric moves). Pick the
+        # strongest applicable item — in practice only one will match per
+        # pokemon, but multi-item holders (e.g. Latios w/ Soul Dew for
+        # multiple special types) get the strongest boost.
+        item_modifier = best_special_item_modifier(entry.get("id"), move)
+        if item_modifier is not None:
+            dmg = math.floor(dmg * item_modifier)
+        else:
+            dmg = math.floor(dmg * LIFE_ORB_MULTIPLIER)
     # Multi-hit: each hit deals the same damage.
     hits = move.get("multihit") or 1
     if isinstance(hits, list):
@@ -313,9 +410,13 @@ def offensive_score(entry: dict, type_name: str, category: str,
 def compute_power_scores(entry: dict) -> dict[str, int]:
     """Compute the eight power scores for a single pokedex entry.
 
-    Bulk scores are computed both uninvested and full-investment. Special
-    offense is wired for `specialType1` only — the other three offensive
-    slots stay at 1 until their formulas land.
+    Bulk scores are computed both uninvested and full-investment. The
+    four offensive slots (`physicalAttackType1`/`2`, `specialAttackType1`/`2`)
+    are the damage the pokemon's strongest move of its own type slot deals
+    to a STANDARD UNTYPED defender (200 in the relevant defense stat). The
+    defender has no typing, so no type effectiveness is applied — the score
+    measures raw offensive output, not coverage. Type1 = the pokemon's
+    first type, Type2 = the second (0 for single-typed pokemon).
     """
     base_stats = entry["baseStats"]
 
@@ -339,16 +440,16 @@ def compute_power_scores(entry: dict) -> dict[str, int]:
     scores["specialDefenseFull"] = bulk_score(eff_spd_full, eff_hp_full)
     types = entry.get("types") or []
     if types:
-        scores["physicalType1"] = offensive_score(entry, types[0], "Physical", "atk")
+        scores["physicalAttackType1"] = offensive_score(entry, types[0], "Physical", "atk")
         if len(types) > 1:
-            scores["physicalType2"] = offensive_score(entry, types[1], "Physical", "atk")
+            scores["physicalAttackType2"] = offensive_score(entry, types[1], "Physical", "atk")
         else:
-            scores["physicalType2"] = 0
-        scores["specialType1"] = offensive_score(entry, types[0], "Special", "spa")
+            scores["physicalAttackType2"] = 0
+        scores["specialAttackType1"] = offensive_score(entry, types[0], "Special", "spa")
         if len(types) > 1:
-            scores["specialType2"] = offensive_score(entry, types[1], "Special", "spa")
+            scores["specialAttackType2"] = offensive_score(entry, types[1], "Special", "spa")
         else:
-            scores["specialType2"] = 0
+            scores["specialAttackType2"] = 0
     return scores
 
 
@@ -377,26 +478,24 @@ def main():
         sys.exit(1)
     print(f"  {len(pokedex)} species in base", file=sys.stderr)
 
-    updated = unchanged = 0
+    # Build a list of {id, powerScores} entries. Sort by id for deterministic
+    # diffs across runs.
+    out = []
     for entry in pokedex:
-        new_scores = compute_power_scores(entry)
-        if entry.get("powerScores") != new_scores:
-            entry["powerScores"] = new_scores
-            updated += 1
-        else:
-            unchanged += 1
+        sid = entry.get("id")
+        if not sid:
+            continue
+        out.append({"id": sid, "powerScores": compute_power_scores(entry)})
+    out.sort(key=lambda e: e["id"])
 
-    if updated:
-        with open(POKEDEX_PATH, "w", encoding="utf-8") as f:
-            json.dump(pokedex, f, indent=1, ensure_ascii=False)
-        size_kb = os.path.getsize(POKEDEX_PATH) / 1024
-        print(f"[species] wrote {POKEDEX_PATH} ({size_kb:.1f} KiB)",
-              file=sys.stderr)
-    else:
-        print(f"[species] no changes — {POKEDEX_PATH} left as-is",
-              file=sys.stderr)
+    os.makedirs(os.path.dirname(POWER_SCORES_PATH), exist_ok=True)
+    with open(POWER_SCORES_PATH, "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=1, ensure_ascii=False)
+    size_kb = os.path.getsize(POWER_SCORES_PATH) / 1024
+    print(f"[species] wrote {POWER_SCORES_PATH} ({size_kb:.1f} KiB)",
+          file=sys.stderr)
 
-    print(f"[species] power scores: {updated} updated, {unchanged} unchanged",
+    print(f"[species] power scores: {len(out)} species written",
           file=sys.stderr)
 
 

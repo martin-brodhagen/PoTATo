@@ -1,0 +1,5618 @@
+[
+ {
+  "id": "abomasnow",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 95,
+   "specialAttackType1": 91,
+   "specialAttackType2": 78,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "abomasnowmega",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 95,
+   "specialAttackType1": 88,
+   "specialAttackType2": 75,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "absol",
+  "powerScores": {
+   "physicalAttackType1": 83,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 50,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 20,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "absolmega",
+  "powerScores": {
+   "physicalAttackType1": 72,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 51,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 20,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "absolmegaz",
+  "powerScores": {
+   "physicalAttackType1": 73,
+   "physicalAttackType2": 69,
+   "specialAttackType1": 39,
+   "specialAttackType2": 39,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 20,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "aegislash",
+  "powerScores": {
+   "physicalAttackType1": 40,
+   "physicalAttackType2": 55,
+   "specialAttackType1": 70,
+   "specialAttackType2": 40,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 75,
+   "specialDefense": 58,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "aegislashblade",
+  "powerScores": {
+   "physicalAttackType1": 75,
+   "physicalAttackType2": 102,
+   "specialAttackType1": 128,
+   "specialAttackType2": 75,
+   "physicalDefense": 6,
+   "physicalDefenseFull": 53,
+   "specialDefense": 6,
+   "specialDefenseFull": 53
+  }
+ },
+ {
+  "id": "aerodactyl",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 105,
+   "specialAttackType1": 66,
+   "specialAttackType2": 59,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "aerodactylmega",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 97,
+   "specialAttackType1": 55,
+   "specialAttackType2": 51,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 68,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "aggron",
+  "powerScores": {
+   "physicalAttackType1": 101,
+   "physicalAttackType2": 117,
+   "specialAttackType1": 75,
+   "specialAttackType2": 66,
+   "physicalDefense": 69,
+   "physicalDefenseFull": 80,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "aggronmega",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 58,
+   "specialAttackType2": 0,
+   "physicalDefense": 75,
+   "physicalDefenseFull": 84,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "alakazam",
+  "powerScores": {
+   "physicalAttackType1": 40,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 109,
+   "specialAttackType2": 0,
+   "physicalDefense": -5,
+   "physicalDefenseFull": 48,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "alakazammega",
+  "powerScores": {
+   "physicalAttackType1": 31,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 100,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 57,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "alcremie",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremiecaramelswirl",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremielemoncream",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremiematchacream",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremiemintcream",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremierainbowswirl",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremierubycream",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremierubyswirl",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "alcremiesaltedcream",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "altaria",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 83,
+   "specialAttackType1": 78,
+   "specialAttackType2": 66,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "altariamega",
+  "powerScores": {
+   "physicalAttackType1": 72,
+   "physicalAttackType2": 108,
+   "specialAttackType1": 78,
+   "specialAttackType2": 108,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "ampharos",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 97,
+   "specialAttackType2": 0,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "ampharosmega",
+  "powerScores": {
+   "physicalAttackType1": 55,
+   "physicalAttackType2": 66,
+   "specialAttackType1": 96,
+   "specialAttackType2": 69,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "annihilape",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 74,
+   "specialAttackType1": 59,
+   "specialAttackType2": 40,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 56,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "appletun",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 79,
+   "specialAttackType1": 94,
+   "specialAttackType2": 94,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "araquanid",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 48,
+   "specialAttackType1": 55,
+   "specialAttackType2": 46,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 68,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "arbok",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 67,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "arboliva",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 110,
+   "specialAttackType2": 128,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "arcanine",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 94,
+   "specialAttackType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "arcaninehisui",
+  "powerScores": {
+   "physicalAttackType1": 97,
+   "physicalAttackType2": 120,
+   "specialAttackType1": 93,
+   "specialAttackType2": 58,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "arceusbug",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusdark",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusdragon",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceuselectric",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusfairy",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusfighting",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusfire",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusflying",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusghost",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusgrass",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusground",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusice",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceuspoison",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceuspsychic",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceusrock",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceussteel",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "arceuswater",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 68,
+   "physicalDefenseFull": 79,
+   "specialDefense": 68,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "archaludon",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 91,
+   "specialAttackType1": 118,
+   "specialAttackType2": 110,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "ariados",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 55,
+   "specialAttackType1": 50,
+   "specialAttackType2": 52,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "armarouge",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 110,
+   "specialAttackType2": 78,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "aromatisse",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 74,
+   "specialAttackType2": 0,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 69,
+   "specialDefense": 54,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "audino",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 81,
+   "specialAttackType2": 0,
+   "physicalDefense": 53,
+   "physicalDefenseFull": 72,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "audinomega",
+  "powerScores": {
+   "physicalAttackType1": 63,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 73,
+   "specialAttackType2": 40,
+   "physicalDefense": 66,
+   "physicalDefenseFull": 78,
+   "specialDefense": 66,
+   "specialDefenseFull": 78
+  }
+ },
+ {
+  "id": "aurorus",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 111,
+   "specialAttackType1": 87,
+   "specialAttackType2": 130,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 60,
+   "specialDefenseFull": 76
+  }
+ },
+ {
+  "id": "avalugg",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 74,
+   "physicalDefenseFull": 83,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "avalugghisui",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 115,
+   "specialAttackType1": 46,
+   "specialAttackType2": 50,
+   "physicalDefense": 74,
+   "physicalDefenseFull": 83,
+   "specialDefense": 7,
+   "specialDefenseFull": 54
+  }
+ },
+ {
+  "id": "azumarill",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 59,
+   "specialAttackType2": 55,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 71,
+   "specialDefense": 49,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "banette",
+  "powerScores": {
+   "physicalAttackType1": 89,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 54,
+   "specialAttackType2": 0,
+   "physicalDefense": 25,
+   "physicalDefenseFull": 60,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "banettemega",
+  "powerScores": {
+   "physicalAttackType1": 88,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 43,
+   "specialAttackType2": 0,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 62,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "barbaracle",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 62,
+   "specialAttackType2": 46,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "barbaraclemega",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 110,
+   "specialAttackType1": 52,
+   "specialAttackType2": 52,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "basculegion",
+  "powerScores": {
+   "physicalAttackType1": 127,
+   "physicalAttackType2": 96,
+   "specialAttackType1": 96,
+   "specialAttackType2": 70,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 70,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "basculegionf",
+  "powerScores": {
+   "physicalAttackType1": 111,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 109,
+   "specialAttackType2": 80,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 70,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "basculinbluestriped",
+  "powerScores": {
+   "physicalAttackType1": 111,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 96,
+   "specialAttackType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  }
+ },
+ {
+  "id": "basculinwhitestriped",
+  "powerScores": {
+   "physicalAttackType1": 111,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 96,
+   "specialAttackType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  }
+ },
+ {
+  "id": "bastiodon",
+  "powerScores": {
+   "physicalAttackType1": 75,
+   "physicalAttackType2": 66,
+   "specialAttackType1": 58,
+   "specialAttackType2": 67,
+   "physicalDefense": 65,
+   "physicalDefenseFull": 78,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "baxcalibur",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 120,
+   "specialAttackType1": 79,
+   "specialAttackType2": 67,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 75,
+   "specialDefense": 56,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "baxcaliburmega",
+  "powerScores": {
+   "physicalAttackType1": 110,
+   "physicalAttackType2": 110,
+   "specialAttackType1": 76,
+   "specialAttackType2": 64,
+   "physicalDefense": 66,
+   "physicalDefenseFull": 78,
+   "specialDefense": 62,
+   "specialDefenseFull": 76
+  }
+ },
+ {
+  "id": "beartic",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 66,
+   "specialAttackType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "beedrill",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 55,
+   "specialAttackType1": 42,
+   "specialAttackType2": 42,
+   "physicalDefense": -5,
+   "physicalDefenseFull": 49,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "beedrillmega",
+  "powerScores": {
+   "physicalAttackType1": 140,
+   "physicalAttackType2": 82,
+   "specialAttackType1": 32,
+   "specialAttackType2": 32,
+   "physicalDefense": -5,
+   "physicalDefenseFull": 49,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "bellibolt",
+  "powerScores": {
+   "physicalAttackType1": 55,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 89,
+   "specialAttackType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "blastoise",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 98,
+   "specialAttackType2": 0,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "blastoisemega",
+  "powerScores": {
+   "physicalAttackType1": 69,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 103,
+   "specialAttackType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "blaziken",
+  "powerScores": {
+   "physicalAttackType1": 98,
+   "physicalAttackType2": 124,
+   "specialAttackType1": 117,
+   "specialAttackType2": 93,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 65,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "blazikenmega",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 117,
+   "specialAttackType1": 102,
+   "specialAttackType2": 81,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "camerupt",
+  "powerScores": {
+   "physicalAttackType1": 89,
+   "physicalAttackType2": 74,
+   "specialAttackType1": 113,
+   "specialAttackType2": 70,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "cameruptmega",
+  "powerScores": {
+   "physicalAttackType1": 76,
+   "physicalAttackType2": 64,
+   "specialAttackType1": 109,
+   "specialAttackType2": 66,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "castform",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 36,
+   "specialAttackType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "castformrainy",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 66,
+   "specialAttackType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "castformsnowy",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 66,
+   "specialAttackType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "castformsunny",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 66,
+   "specialAttackType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "ceruledge",
+  "powerScores": {
+   "physicalAttackType1": 102,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 71,
+   "specialAttackType2": 44,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "chandelure",
+  "powerScores": {
+   "physicalAttackType1": 58,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 78,
+   "specialAttackType2": 122,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "chandeluremega",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 57,
+   "specialAttackType1": 67,
+   "specialAttackType2": 109,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "charizard",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 59,
+   "specialAttackType1": 117,
+   "specialAttackType2": 85,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "charizardmegax",
+  "powerScores": {
+   "physicalAttackType1": 105,
+   "physicalAttackType2": 95,
+   "specialAttackType1": 102,
+   "specialAttackType2": 58,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "charizardmegay",
+  "powerScores": {
+   "physicalAttackType1": 70,
+   "physicalAttackType2": 52,
+   "specialAttackType1": 117,
+   "specialAttackType2": 87,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 57,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "cherrimsunshine",
+  "powerScores": {
+   "physicalAttackType1": 75,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 81,
+   "specialAttackType2": 0,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "chesnaught",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 114,
+   "specialAttackType1": 91,
+   "specialAttackType2": 74,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 76,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "chesnaughtmega",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 105,
+   "specialAttackType1": 70,
+   "specialAttackType2": 57,
+   "physicalDefense": 72,
+   "physicalDefenseFull": 82,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "chimecho",
+  "powerScores": {
+   "physicalAttackType1": 40,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 85,
+   "specialAttackType2": 0,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "chimechomega",
+  "powerScores": {
+   "physicalAttackType1": 31,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 84,
+   "specialAttackType2": 57,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "cinderace",
+  "powerScores": {
+   "physicalAttackType1": 97,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 85,
+   "specialAttackType2": 0,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "clawitzer",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 91,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "clefable",
+  "powerScores": {
+   "physicalAttackType1": 54,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 71,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "clefablemega",
+  "powerScores": {
+   "physicalAttackType1": 45,
+   "physicalAttackType2": 43,
+   "specialAttackType1": 70,
+   "specialAttackType2": 52,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "cofagrigus",
+  "powerScores": {
+   "physicalAttackType1": 55,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 58,
+   "specialAttackType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "conkeldurr",
+  "powerScores": {
+   "physicalAttackType1": 165,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 62,
+   "specialAttackType2": 0,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "corviknight",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 54,
+   "specialAttackType1": 55,
+   "specialAttackType2": 71,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "crabominable",
+  "powerScores": {
+   "physicalAttackType1": 158,
+   "physicalAttackType2": 120,
+   "specialAttackType1": 67,
+   "specialAttackType2": 62,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 41,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "crabominablemega",
+  "powerScores": {
+   "physicalAttackType1": 138,
+   "physicalAttackType2": 105,
+   "specialAttackType1": 52,
+   "specialAttackType2": 48,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "darmanitangalarzen",
+  "powerScores": {
+   "physicalAttackType1": 87,
+   "physicalAttackType2": 122,
+   "specialAttackType1": 44,
+   "specialAttackType2": 52,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "darmanitanzen",
+  "powerScores": {
+   "physicalAttackType1": 48,
+   "physicalAttackType2": 32,
+   "specialAttackType1": 120,
+   "specialAttackType2": 110,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "decidueye",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 110,
+   "specialAttackType2": 59,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "decidueyehisui",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 118,
+   "specialAttackType1": 106,
+   "specialAttackType2": 85,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 69,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "dedenne",
+  "powerScores": {
+   "physicalAttackType1": 48,
+   "physicalAttackType2": 48,
+   "specialAttackType1": 71,
+   "specialAttackType2": 52,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 57,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "delphox",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 48,
+   "specialAttackType1": 120,
+   "specialAttackType2": 97,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "delphoxmega",
+  "powerScores": {
+   "physicalAttackType1": 55,
+   "physicalAttackType2": 37,
+   "specialAttackType1": 117,
+   "specialAttackType2": 94,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "diggersby",
+  "powerScores": {
+   "physicalAttackType1": 156,
+   "physicalAttackType2": 104,
+   "specialAttackType1": 74,
+   "specialAttackType2": 46,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "ditto",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": -6,
+   "physicalDefenseFull": 48,
+   "specialDefense": -6,
+   "specialDefenseFull": 48
+  }
+ },
+ {
+  "id": "dragalge",
+  "powerScores": {
+   "physicalAttackType1": 98,
+   "physicalAttackType2": 115,
+   "specialAttackType1": 93,
+   "specialAttackType2": 124,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "dragalgemega",
+  "powerScores": {
+   "physicalAttackType1": 61,
+   "physicalAttackType2": 75,
+   "specialAttackType1": 66,
+   "specialAttackType2": 88,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  }
+ },
+ {
+  "id": "dragapult",
+  "powerScores": {
+   "physicalAttackType1": 98,
+   "physicalAttackType2": 75,
+   "specialAttackType1": 94,
+   "specialAttackType2": 59,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "dragonite",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 81,
+   "specialAttackType1": 94,
+   "specialAttackType2": 81,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "dragonitemega",
+  "powerScores": {
+   "physicalAttackType1": 90,
+   "physicalAttackType2": 60,
+   "specialAttackType1": 94,
+   "specialAttackType2": 81,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 63,
+   "specialDefenseFull": 77
+  }
+ },
+ {
+  "id": "drampa",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 75,
+   "specialAttackType1": 133,
+   "specialAttackType2": 117,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 68,
+   "specialDefense": 48,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "drampamega",
+  "powerScores": {
+   "physicalAttackType1": 76,
+   "physicalAttackType2": 75,
+   "specialAttackType1": 117,
+   "specialAttackType2": 102,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "dudunsparcethreesegment",
+  "powerScores": {
+   "physicalAttackType1": 110,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 98,
+   "specialAttackType2": 0,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 74,
+   "specialDefense": 53,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "eelektross",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 91,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "eelektrossmega",
+  "powerScores": {
+   "physicalAttackType1": 73,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 84,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "emboar",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 126,
+   "specialAttackType1": 110,
+   "specialAttackType2": 89,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "emboarmega",
+  "powerScores": {
+   "physicalAttackType1": 90,
+   "physicalAttackType2": 111,
+   "specialAttackType1": 90,
+   "specialAttackType2": 72,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 63,
+   "specialDefenseFull": 77
+  }
+ },
+ {
+  "id": "emolga",
+  "powerScores": {
+   "physicalAttackType1": 55,
+   "physicalAttackType2": 54,
+   "specialAttackType1": 67,
+   "specialAttackType2": 46,
+   "physicalDefense": 14,
+   "physicalDefenseFull": 55,
+   "specialDefense": 14,
+   "specialDefenseFull": 55
+  }
+ },
+ {
+  "id": "empoleon",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 48,
+   "specialAttackType1": 118,
+   "specialAttackType2": 110,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "espathra",
+  "powerScores": {
+   "physicalAttackType1": 44,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 67,
+   "specialAttackType2": 0,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 64,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "espeon",
+  "powerScores": {
+   "physicalAttackType1": 48,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 105,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "excadrill",
+  "powerScores": {
+   "physicalAttackType1": 91,
+   "physicalAttackType2": 74,
+   "specialAttackType1": 46,
+   "specialAttackType2": 70,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "excadrillmega",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 64,
+   "specialAttackType1": 40,
+   "specialAttackType2": 61,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 76,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "falinks",
+  "powerScores": {
+   "physicalAttackType1": 89,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 71,
+   "specialAttackType2": 0,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 20,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "falinksmega",
+  "powerScores": {
+   "physicalAttackType1": 84,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 55,
+   "specialAttackType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "farfetchd",
+  "powerScores": {
+   "physicalAttackType1": 59,
+   "physicalAttackType2": 97,
+   "specialAttackType1": 48,
+   "specialAttackType2": 40,
+   "physicalDefense": 7,
+   "physicalDefenseFull": 52,
+   "specialDefense": 15,
+   "specialDefenseFull": 55
+  }
+ },
+ {
+  "id": "farigiraf",
+  "powerScores": {
+   "physicalAttackType1": 102,
+   "physicalAttackType2": 59,
+   "specialAttackType1": 117,
+   "specialAttackType2": 93,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "feraligatr",
+  "powerScores": {
+   "physicalAttackType1": 70,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 94,
+   "specialAttackType2": 0,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "feraligatrmega",
+  "powerScores": {
+   "physicalAttackType1": 72,
+   "physicalAttackType2": 140,
+   "specialAttackType1": 79,
+   "specialAttackType2": 94,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 76,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "flapple",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 93,
+   "specialAttackType2": 93,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "flareon",
+  "powerScores": {
+   "physicalAttackType1": 105,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 93,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "floetteeternal",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 118,
+   "specialAttackType2": 0,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "floettemega",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 141,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 64,
+   "specialDefenseFull": 77
+  }
+ },
+ {
+  "id": "florges",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "florgesblue",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "florgesorange",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "florgeswhite",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "florgesyellow",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 67,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "forretress",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 50,
+   "specialAttackType2": 75,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 77,
+   "specialDefense": 26,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "froslass",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 71,
+   "specialAttackType1": 71,
+   "specialAttackType2": 52,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "froslassmega",
+  "powerScores": {
+   "physicalAttackType1": 65,
+   "physicalAttackType2": 55,
+   "specialAttackType1": 79,
+   "specialAttackType2": 58,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "furfrou",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroudandy",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroudebutante",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroudiamond",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfrouheart",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroukabuki",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroulareine",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroumatron",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroupharaoh",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "furfroustar",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "gallade",
+  "powerScores": {
+   "physicalAttackType1": 70,
+   "physicalAttackType2": 128,
+   "specialAttackType1": 67,
+   "specialAttackType2": 67,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "gallademega",
+  "powerScores": {
+   "physicalAttackType1": 64,
+   "physicalAttackType2": 120,
+   "specialAttackType1": 52,
+   "specialAttackType2": 52,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 68,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "garbodor",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 66,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "garchomp",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 83,
+   "specialAttackType2": 58,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 54,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "garchompmega",
+  "powerScores": {
+   "physicalAttackType1": 110,
+   "physicalAttackType2": 82,
+   "specialAttackType1": 84,
+   "specialAttackType2": 58,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "garchompmegaz",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 93,
+   "specialAttackType2": 0,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 73,
+   "specialDefense": 54,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "gardevoir",
+  "powerScores": {
+   "physicalAttackType1": 46,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 102,
+   "specialAttackType2": 85,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "gardevoirmega",
+  "powerScores": {
+   "physicalAttackType1": 42,
+   "physicalAttackType2": 91,
+   "specialAttackType1": 96,
+   "specialAttackType2": 144,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "garganacl",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 55,
+   "specialAttackType2": 0,
+   "physicalDefense": 66,
+   "physicalDefenseFull": 78,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "gengar",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 71,
+   "specialAttackType2": 83,
+   "physicalDefense": 18,
+   "physicalDefenseFull": 57,
+   "specialDefense": 31,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "gengarmega",
+  "powerScores": {
+   "physicalAttackType1": 48,
+   "physicalAttackType2": 52,
+   "specialAttackType1": 66,
+   "specialAttackType2": 78,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 63,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "gholdengo",
+  "powerScores": {
+   "physicalAttackType1": 44,
+   "physicalAttackType2": 59,
+   "specialAttackType1": 124,
+   "specialAttackType2": 71,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "glaceon",
+  "powerScores": {
+   "physicalAttackType1": 75,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 97,
+   "specialAttackType2": 0,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "glalie",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 71,
+   "specialAttackType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "glaliemega",
+  "powerScores": {
+   "physicalAttackType1": 188,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 115,
+   "specialAttackType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "glimmora",
+  "powerScores": {
+   "physicalAttackType1": 75,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 105,
+   "specialAttackType2": 83,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "glimmoramega",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 86,
+   "specialAttackType1": 120,
+   "specialAttackType2": 96,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "gliscor",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 42,
+   "specialAttackType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "gogoat",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 93,
+   "specialAttackType2": 0,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 69,
+   "specialDefense": 56,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "golisopod",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 74,
+   "specialAttackType1": 50,
+   "specialAttackType2": 50,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 77,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "golisopodmega",
+  "powerScores": {
+   "physicalAttackType1": 105,
+   "physicalAttackType2": 61,
+   "specialAttackType1": 42,
+   "specialAttackType2": 0,
+   "physicalDefense": 69,
+   "physicalDefenseFull": 80,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "golurk",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 48,
+   "specialAttackType2": 42,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "golurkmega",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 42,
+   "specialAttackType2": 37,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 73,
+   "specialDefense": 57,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "goodra",
+  "powerScores": {
+   "physicalAttackType1": 89,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 101,
+   "specialAttackType2": 0,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 68,
+   "specialDefenseFull": 80
+  }
+ },
+ {
+  "id": "goodrahisui",
+  "powerScores": {
+   "physicalAttackType1": 74,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 109,
+   "specialAttackType2": 101,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 66,
+   "specialDefenseFull": 79
+  }
+ },
+ {
+  "id": "gourgeist",
+  "powerScores": {
+   "physicalAttackType1": 75,
+   "physicalAttackType2": 95,
+   "specialAttackType1": 44,
+   "specialAttackType2": 63,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 33,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "gourgeistlarge",
+  "powerScores": {
+   "physicalAttackType1": 78,
+   "physicalAttackType2": 95,
+   "specialAttackType1": 44,
+   "specialAttackType2": 63,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "gourgeistsmall",
+  "powerScores": {
+   "physicalAttackType1": 74,
+   "physicalAttackType2": 95,
+   "specialAttackType1": 44,
+   "specialAttackType2": 63,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 28,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "gourgeistsuper",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 100,
+   "specialAttackType1": 44,
+   "specialAttackType2": 63,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 75,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "grapploct",
+  "powerScores": {
+   "physicalAttackType1": 98,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 71,
+   "specialAttackType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 69,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "greninja",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 50,
+   "specialAttackType1": 113,
+   "specialAttackType2": 59,
+   "physicalDefense": 30,
+   "physicalDefenseFull": 62,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "greninjamega",
+  "powerScores": {
+   "physicalAttackType1": 57,
+   "physicalAttackType2": 46,
+   "specialAttackType1": 102,
+   "specialAttackType2": 55,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "grimmsnarl",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 75,
+   "specialAttackType1": 58,
+   "specialAttackType2": 58,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "gyarados",
+  "powerScores": {
+   "physicalAttackType1": 78,
+   "physicalAttackType2": 74,
+   "specialAttackType1": 59,
+   "specialAttackType2": 59,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 69,
+   "specialDefense": 56,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "gyaradosmega",
+  "powerScores": {
+   "physicalAttackType1": 69,
+   "physicalAttackType2": 61,
+   "specialAttackType1": 51,
+   "specialAttackType2": 37,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  }
+ },
+ {
+  "id": "hatterene",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 109,
+   "specialAttackType2": 91,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "hawlucha",
+  "powerScores": {
+   "physicalAttackType1": 105,
+   "physicalAttackType2": 97,
+   "specialAttackType1": 74,
+   "specialAttackType2": 46,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "hawluchamega",
+  "powerScores": {
+   "physicalAttackType1": 105,
+   "physicalAttackType2": 97,
+   "specialAttackType1": 57,
+   "specialAttackType2": 36,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "heliolisk",
+  "powerScores": {
+   "physicalAttackType1": 48,
+   "physicalAttackType2": 78,
+   "specialAttackType1": 85,
+   "specialAttackType2": 117,
+   "physicalDefense": 10,
+   "physicalDefenseFull": 54,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "heracross",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 128,
+   "specialAttackType1": 40,
+   "specialAttackType2": 54,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "heracrossmega",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 130,
+   "specialAttackType1": 31,
+   "specialAttackType2": 42,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "hippowdon",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 54,
+   "specialAttackType2": 0,
+   "physicalDefense": 65,
+   "physicalDefenseFull": 78,
+   "specialDefense": 47,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "houndoom",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 83,
+   "specialAttackType1": 63,
+   "specialAttackType2": 101,
+   "physicalDefense": 16,
+   "physicalDefenseFull": 57,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "houndoommega",
+  "powerScores": {
+   "physicalAttackType1": 51,
+   "physicalAttackType2": 64,
+   "specialAttackType1": 58,
+   "specialAttackType2": 93,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "houndstone",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 40,
+   "specialAttackType2": 0,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "hydrapple",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 78,
+   "specialAttackType1": 109,
+   "specialAttackType2": 109,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 77,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "hydreigon",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 100,
+   "specialAttackType1": 70,
+   "specialAttackType2": 110,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "incineroar",
+  "powerScores": {
+   "physicalAttackType1": 97,
+   "physicalAttackType2": 70,
+   "specialAttackType1": 94,
+   "specialAttackType2": 52,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "indeedee",
+  "powerScores": {
+   "physicalAttackType1": 46,
+   "physicalAttackType2": 79,
+   "specialAttackType1": 91,
+   "specialAttackType2": 70,
+   "physicalDefense": 12,
+   "physicalDefenseFull": 54,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "indeedeef",
+  "powerScores": {
+   "physicalAttackType1": 42,
+   "physicalAttackType2": 44,
+   "specialAttackType1": 85,
+   "specialAttackType2": 63,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "infernape",
+  "powerScores": {
+   "physicalAttackType1": 91,
+   "physicalAttackType2": 135,
+   "specialAttackType1": 113,
+   "specialAttackType2": 91,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "inteleon",
+  "powerScores": {
+   "physicalAttackType1": 58,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 128,
+   "specialAttackType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "jolteon",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 87,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "kangaskhan",
+  "powerScores": {
+   "physicalAttackType1": 106,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 67,
+   "specialAttackType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "kangaskhanmega",
+  "powerScores": {
+   "physicalAttackType1": 123,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 78,
+   "specialAttackType2": 0,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "keldeoresolute",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "kingambit",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 74,
+   "specialAttackType1": 44,
+   "specialAttackType2": 75,
+   "physicalDefense": 64,
+   "physicalDefenseFull": 77,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "kleavor",
+  "powerScores": {
+   "physicalAttackType1": 74,
+   "physicalAttackType2": 120,
+   "specialAttackType1": 42,
+   "specialAttackType2": 28,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "klefki",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 58,
+   "specialAttackType1": 89,
+   "specialAttackType2": 52,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "kommoo",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 117,
+   "specialAttackType1": 94,
+   "specialAttackType2": 89,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 52,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "krookodile",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 78,
+   "specialAttackType1": 52,
+   "specialAttackType2": 46,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "leafeon",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 71,
+   "specialAttackType2": 0,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "liepard",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 55,
+   "specialAttackType2": 0,
+   "physicalDefense": 9,
+   "physicalDefenseFull": 54,
+   "specialDefense": 9,
+   "specialDefenseFull": 54
+  }
+ },
+ {
+  "id": "lopunny",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 78,
+   "specialAttackType2": 0,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "lopunnymega",
+  "powerScores": {
+   "physicalAttackType1": 103,
+   "physicalAttackType2": 103,
+   "specialAttackType1": 60,
+   "specialAttackType2": 48,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "lucario",
+  "powerScores": {
+   "physicalAttackType1": 117,
+   "physicalAttackType2": 79,
+   "specialAttackType1": 97,
+   "specialAttackType2": 113,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "lucariomega",
+  "powerScores": {
+   "physicalAttackType1": 146,
+   "physicalAttackType2": 98,
+   "specialAttackType1": 114,
+   "specialAttackType2": 132,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "lucariomegaz",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 57,
+   "specialAttackType1": 96,
+   "specialAttackType2": 111,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "luxray",
+  "powerScores": {
+   "physicalAttackType1": 83,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 78,
+   "specialAttackType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "lycanroc",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 30,
+   "physicalDefenseFull": 62,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "lycanrocdusk",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 30,
+   "physicalDefenseFull": 62,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "lycanrocmidnight",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "mabosstiff",
+  "powerScores": {
+   "physicalAttackType1": 67,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 44,
+   "specialAttackType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 69,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "machamp",
+  "powerScores": {
+   "physicalAttackType1": 105,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 67,
+   "specialAttackType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "magearnamega",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 60,
+   "specialAttackType1": 115,
+   "specialAttackType2": 82,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "magearnaoriginal",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 63,
+   "specialAttackType1": 122,
+   "specialAttackType2": 89,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "magearnaoriginalmega",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 60,
+   "specialAttackType1": 115,
+   "specialAttackType2": 82,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "malamar",
+  "powerScores": {
+   "physicalAttackType1": 67,
+   "physicalAttackType2": 55,
+   "specialAttackType1": 48,
+   "specialAttackType2": 70,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "malamarmega",
+  "powerScores": {
+   "physicalAttackType1": 55,
+   "physicalAttackType2": 46,
+   "specialAttackType1": 46,
+   "specialAttackType2": 67,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 61,
+   "specialDefenseFull": 76
+  }
+ },
+ {
+  "id": "mamoswine",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 66,
+   "specialAttackType2": 54,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 40,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "manectric",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 23,
+   "physicalDefenseFull": 59,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "manectricmega",
+  "powerScores": {
+   "physicalAttackType1": 48,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 76,
+   "specialAttackType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "maushold",
+  "powerScores": {
+   "physicalAttackType1": 230,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 85,
+   "specialAttackType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 63,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "mausholdfour",
+  "powerScores": {
+   "physicalAttackType1": 230,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 85,
+   "specialAttackType2": 0,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 63,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "mawile",
+  "powerScores": {
+   "physicalAttackType1": 54,
+   "physicalAttackType2": 59,
+   "specialAttackType1": 74,
+   "specialAttackType2": 27,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 62,
+   "specialDefense": 5,
+   "specialDefenseFull": 51
+  }
+ },
+ {
+  "id": "mawilemega",
+  "powerScores": {
+   "physicalAttackType1": 96,
+   "physicalAttackType2": 108,
+   "specialAttackType1": 57,
+   "specialAttackType2": 21,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "medicham",
+  "powerScores": {
+   "physicalAttackType1": 163,
+   "physicalAttackType2": 88,
+   "specialAttackType1": 66,
+   "specialAttackType2": 50,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 31,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "medichammega",
+  "powerScores": {
+   "physicalAttackType1": 170,
+   "physicalAttackType2": 92,
+   "specialAttackType1": 60,
+   "specialAttackType2": 45,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "meganium",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 97,
+   "specialAttackType2": 0,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 72,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "meganiummega",
+  "powerScores": {
+   "physicalAttackType1": 75,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 108,
+   "specialAttackType2": 58,
+   "physicalDefense": 57,
+   "physicalDefenseFull": 74,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "meowscarada",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 75,
+   "specialAttackType1": 97,
+   "specialAttackType2": 52,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 64,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "meowstic",
+  "powerScores": {
+   "physicalAttackType1": 40,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 59,
+   "specialAttackType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 41,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "meowsticf",
+  "powerScores": {
+   "physicalAttackType1": 40,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 41,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "meowsticfmega",
+  "powerScores": {
+   "physicalAttackType1": 31,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 87,
+   "specialAttackType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "meowsticmmega",
+  "powerScores": {
+   "physicalAttackType1": 31,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 66,
+   "specialAttackType2": 0,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "metagross",
+  "powerScores": {
+   "physicalAttackType1": 117,
+   "physicalAttackType2": 78,
+   "specialAttackType1": 98,
+   "specialAttackType2": 85,
+   "physicalDefense": 62,
+   "physicalDefenseFull": 76,
+   "specialDefense": 48,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "metagrossmega",
+  "powerScores": {
+   "physicalAttackType1": 122,
+   "physicalAttackType2": 81,
+   "specialAttackType1": 81,
+   "specialAttackType2": 70,
+   "physicalDefense": 66,
+   "physicalDefenseFull": 79,
+   "specialDefense": 56,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "milotic",
+  "powerScores": {
+   "physicalAttackType1": 50,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 81,
+   "specialAttackType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 69,
+   "specialDefense": 64,
+   "specialDefenseFull": 77
+  }
+ },
+ {
+  "id": "mimikyu",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 40,
+   "specialAttackType2": 40,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "mimikyubusted",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 40,
+   "specialAttackType2": 40,
+   "physicalDefense": 31,
+   "physicalDefenseFull": 62,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "morpeko",
+  "powerScores": {
+   "physicalAttackType1": 78,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 66,
+   "specialAttackType2": 48,
+   "physicalDefense": 15,
+   "physicalDefenseFull": 56,
+   "specialDefense": 15,
+   "specialDefenseFull": 56
+  }
+ },
+ {
+  "id": "morpekohangry",
+  "powerScores": {
+   "physicalAttackType1": 78,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 66,
+   "specialAttackType2": 48,
+   "physicalDefense": 15,
+   "physicalDefenseFull": 56,
+   "specialDefense": 15,
+   "specialDefenseFull": 56
+  }
+ },
+ {
+  "id": "mrmime",
+  "powerScores": {
+   "physicalAttackType1": 39,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 89,
+   "specialAttackType2": 59,
+   "physicalDefense": 9,
+   "physicalDefenseFull": 53,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "mrrime",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 54,
+   "specialAttackType1": 87,
+   "specialAttackType2": 93,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "mudsdale",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 48,
+   "specialAttackType2": 0,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "musharna",
+  "powerScores": {
+   "physicalAttackType1": 42,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 91,
+   "specialAttackType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "ninetales",
+  "powerScores": {
+   "physicalAttackType1": 74,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 64,
+   "specialDefense": 50,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "ninetalesalola",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 52,
+   "specialAttackType1": 71,
+   "specialAttackType2": 62,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 64,
+   "specialDefense": 50,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "noivern",
+  "powerScores": {
+   "physicalAttackType1": 83,
+   "physicalAttackType2": 71,
+   "specialAttackType1": 79,
+   "specialAttackType2": 93,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "oranguru",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 44,
+   "specialAttackType1": 102,
+   "specialAttackType2": 83,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "orthworm",
+  "powerScores": {
+   "physicalAttackType1": 67,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 75,
+   "specialAttackType2": 0,
+   "physicalDefense": 63,
+   "physicalDefenseFull": 77,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  }
+ },
+ {
+  "id": "overqwil",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 97,
+   "specialAttackType1": 46,
+   "specialAttackType2": 54,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "palafin",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 55,
+   "specialAttackType2": 0,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 69,
+   "specialDefense": 38,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "palafinhero",
+  "powerScores": {
+   "physicalAttackType1": 122,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "pangoro",
+  "powerScores": {
+   "physicalAttackType1": 101,
+   "physicalAttackType2": 81,
+   "specialAttackType1": 71,
+   "specialAttackType2": 48,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "passimian",
+  "powerScores": {
+   "physicalAttackType1": 124,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 54,
+   "specialAttackType2": 0,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 36,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "pawmot",
+  "powerScores": {
+   "physicalAttackType1": 97,
+   "physicalAttackType2": 144,
+   "specialAttackType1": 66,
+   "specialAttackType2": 71,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "pelipper",
+  "powerScores": {
+   "physicalAttackType1": 42,
+   "physicalAttackType2": 59,
+   "specialAttackType1": 78,
+   "specialAttackType2": 78,
+   "physicalDefense": 45,
+   "physicalDefenseFull": 68,
+   "specialDefense": 27,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "perrserker",
+  "powerScores": {
+   "physicalAttackType1": 102,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 70,
+   "specialAttackType2": 0,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 23,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "persian",
+  "powerScores": {
+   "physicalAttackType1": 89,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 85,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "persianalola",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 20,
+   "physicalDefenseFull": 58,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "pidgeot",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 89,
+   "specialAttackType2": 66,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "pidgeotmega",
+  "powerScores": {
+   "physicalAttackType1": 73,
+   "physicalAttackType2": 69,
+   "specialAttackType1": 103,
+   "specialAttackType2": 76,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "pikachu",
+  "powerScores": {
+   "physicalAttackType1": 96,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 92,
+   "specialAttackType2": 0,
+   "physicalDefense": -34,
+   "physicalDefenseFull": 38,
+   "specialDefense": -15,
+   "specialDefenseFull": 44
+  }
+ },
+ {
+  "id": "pincurchin",
+  "powerScores": {
+   "physicalAttackType1": 74,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 75,
+   "specialAttackType2": 0,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 64,
+   "specialDefense": 31,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "pinsir",
+  "powerScores": {
+   "physicalAttackType1": 70,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "pinsirmega",
+  "powerScores": {
+   "physicalAttackType1": 61,
+   "physicalAttackType2": 136,
+   "specialAttackType1": 0,
+   "specialAttackType2": 79,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "politoed",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 75,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "poltchageistartisan",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 52,
+   "specialAttackType1": 79,
+   "specialAttackType2": 50,
+   "physicalDefense": -19,
+   "physicalDefenseFull": 43,
+   "specialDefense": -4,
+   "specialDefenseFull": 48
+  }
+ },
+ {
+  "id": "polteageist",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 71,
+   "specialAttackType2": 0,
+   "physicalDefense": 23,
+   "physicalDefenseFull": 59,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "primarina",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 55,
+   "specialAttackType1": 128,
+   "specialAttackType2": 85,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "pumpkaboolarge",
+  "powerScores": {
+   "physicalAttackType1": 63,
+   "physicalAttackType2": 80,
+   "specialAttackType1": 39,
+   "specialAttackType2": 55,
+   "physicalDefense": 24,
+   "physicalDefenseFull": 59,
+   "specialDefense": 8,
+   "specialDefenseFull": 53
+  }
+ },
+ {
+  "id": "pumpkaboosmall",
+  "powerScores": {
+   "physicalAttackType1": 63,
+   "physicalAttackType2": 80,
+   "specialAttackType1": 39,
+   "specialAttackType2": 55,
+   "physicalDefense": 17,
+   "physicalDefenseFull": 56,
+   "specialDefense": 0,
+   "specialDefenseFull": 50
+  }
+ },
+ {
+  "id": "pumpkaboosuper",
+  "powerScores": {
+   "physicalAttackType1": 63,
+   "physicalAttackType2": 80,
+   "specialAttackType1": 39,
+   "specialAttackType2": 55,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 12,
+   "specialDefenseFull": 54
+  }
+ },
+ {
+  "id": "pyroar",
+  "powerScores": {
+   "physicalAttackType1": 70,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 101,
+   "specialAttackType2": 117,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "pyroarmega",
+  "powerScores": {
+   "physicalAttackType1": 94,
+   "physicalAttackType2": 78,
+   "specialAttackType1": 130,
+   "specialAttackType2": 100,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 48,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "quaquaval",
+  "powerScores": {
+   "physicalAttackType1": 98,
+   "physicalAttackType2": 98,
+   "specialAttackType1": 98,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "qwilfish",
+  "powerScores": {
+   "physicalAttackType1": 63,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 58,
+   "specialAttackType2": 50,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 15,
+   "specialDefenseFull": 56
+  }
+ },
+ {
+  "id": "raichu",
+  "powerScores": {
+   "physicalAttackType1": 83,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 12,
+   "physicalDefenseFull": 54,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "raichualola",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 85,
+   "specialAttackType2": 63,
+   "physicalDefense": 6,
+   "physicalDefenseFull": 53,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "raichumegax",
+  "powerScores": {
+   "physicalAttackType1": 84,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 64,
+   "specialAttackType2": 0,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "raichumegay",
+  "powerScores": {
+   "physicalAttackType1": 69,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 94,
+   "specialAttackType2": 0,
+   "physicalDefense": 12,
+   "physicalDefenseFull": 54,
+   "specialDefense": 34,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "rampardos",
+  "powerScores": {
+   "physicalAttackType1": 156,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 67,
+   "specialAttackType2": 0,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 65,
+   "specialDefense": 27,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "reuniclus",
+  "powerScores": {
+   "physicalAttackType1": 46,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 102,
+   "specialAttackType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "rhyperior",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 137,
+   "specialAttackType1": 48,
+   "specialAttackType2": 62,
+   "physicalDefense": 69,
+   "physicalDefenseFull": 80,
+   "specialDefense": 38,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "rillaboom",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 81,
+   "specialAttackType2": 0,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 44,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "roserade",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 48,
+   "specialAttackType1": 110,
+   "specialAttackType2": 78,
+   "physicalDefense": 23,
+   "physicalDefenseFull": 59,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "rotom",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 55,
+   "specialAttackType1": 78,
+   "specialAttackType2": 58,
+   "physicalDefense": 27,
+   "physicalDefenseFull": 60,
+   "specialDefense": 27,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "rotomfan",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "rotomfrost",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "rotomheat",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "rotommow",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "rotomwash",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 83,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "runerigus",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 78,
+   "specialAttackType1": 46,
+   "specialAttackType2": 40,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "sableye",
+  "powerScores": {
+   "physicalAttackType1": 59,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 46,
+   "specialAttackType2": 46,
+   "physicalDefense": 25,
+   "physicalDefenseFull": 59,
+   "specialDefense": 16,
+   "specialDefenseFull": 56
+  }
+ },
+ {
+  "id": "sableyemega",
+  "powerScores": {
+   "physicalAttackType1": 49,
+   "physicalAttackType2": 57,
+   "specialAttackType1": 42,
+   "specialAttackType2": 42,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "salamence",
+  "powerScores": {
+   "physicalAttackType1": 109,
+   "physicalAttackType2": 81,
+   "specialAttackType1": 101,
+   "specialAttackType2": 87,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "salamencemega",
+  "powerScores": {
+   "physicalAttackType1": 88,
+   "physicalAttackType2": 130,
+   "specialAttackType1": 84,
+   "specialAttackType2": 115,
+   "physicalDefense": 65,
+   "physicalDefenseFull": 78,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "salazzle",
+  "powerScores": {
+   "physicalAttackType1": 67,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 94,
+   "specialAttackType2": 102,
+   "physicalDefense": 22,
+   "physicalDefenseFull": 59,
+   "specialDefense": 22,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "samurott",
+  "powerScores": {
+   "physicalAttackType1": 67,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 117,
+   "specialAttackType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 71,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "samurotthisui",
+  "powerScores": {
+   "physicalAttackType1": 70,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 110,
+   "specialAttackType2": 59,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "sandaconda",
+  "powerScores": {
+   "physicalAttackType1": 78,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 52,
+   "specialAttackType2": 0,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 33,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "sceptile",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 113,
+   "specialAttackType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "sceptilemega",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 80,
+   "specialAttackType1": 109,
+   "specialAttackType2": 63,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "scizor",
+  "powerScores": {
+   "physicalAttackType1": 81,
+   "physicalAttackType2": 71,
+   "specialAttackType1": 48,
+   "specialAttackType2": 74,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "scizormega",
+  "powerScores": {
+   "physicalAttackType1": 69,
+   "physicalAttackType2": 61,
+   "specialAttackType1": 40,
+   "specialAttackType2": 61,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "scolipede",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 0,
+   "specialAttackType2": 48,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 26,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "scolipedemega",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 0,
+   "specialAttackType2": 43,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 76,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "scovillain",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 101,
+   "specialAttackType2": 101,
+   "physicalDefense": 25,
+   "physicalDefenseFull": 60,
+   "specialDefense": 25,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "scovillainmega",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 91,
+   "specialAttackType2": 91,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "scrafty",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 102,
+   "specialAttackType1": 39,
+   "specialAttackType2": 55,
+   "physicalDefense": 53,
+   "physicalDefenseFull": 71,
+   "specialDefense": 53,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "scraftymega",
+  "powerScores": {
+   "physicalAttackType1": 64,
+   "physicalAttackType2": 102,
+   "specialAttackType1": 33,
+   "specialAttackType2": 48,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "serperior",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 91,
+   "specialAttackType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "sharpedo",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 78,
+   "specialAttackType2": 58,
+   "physicalDefense": -2,
+   "physicalDefenseFull": 50,
+   "specialDefense": -2,
+   "specialDefenseFull": 50
+  }
+ },
+ {
+  "id": "sharpedomega",
+  "powerScores": {
+   "physicalAttackType1": 61,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 67,
+   "specialAttackType2": 49,
+   "physicalDefense": 32,
+   "physicalDefenseFull": 63,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "simipour",
+  "powerScores": {
+   "physicalAttackType1": 62,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 79,
+   "specialAttackType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "simisage",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 94,
+   "specialAttackType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "simisear",
+  "powerScores": {
+   "physicalAttackType1": 87,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 94,
+   "specialAttackType2": 0,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 28,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "sinistcha",
+  "powerScores": {
+   "physicalAttackType1": 0,
+   "physicalAttackType2": 59,
+   "specialAttackType1": 109,
+   "specialAttackType2": 67,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 39,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "sinisteaantique",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 50,
+   "specialAttackType2": 0,
+   "physicalDefense": -19,
+   "physicalDefenseFull": 43,
+   "specialDefense": -4,
+   "specialDefenseFull": 48
+  }
+ },
+ {
+  "id": "sirfetchd",
+  "powerScores": {
+   "physicalAttackType1": 109,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 3,
+   "specialAttackType2": 0,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 36,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "skarmory",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 63,
+   "specialAttackType2": 50,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "skarmorymega",
+  "powerScores": {
+   "physicalAttackType1": 58,
+   "physicalAttackType2": 99,
+   "specialAttackType1": 49,
+   "specialAttackType2": 39,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "skeledirge",
+  "powerScores": {
+   "physicalAttackType1": 74,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 117,
+   "specialAttackType2": 63,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "slowbro",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 50,
+   "specialAttackType1": 81,
+   "specialAttackType2": 89,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "slowbrogalar",
+  "powerScores": {
+   "physicalAttackType1": 89,
+   "physicalAttackType2": 59,
+   "specialAttackType1": 89,
+   "specialAttackType2": 89,
+   "physicalDefense": 55,
+   "physicalDefenseFull": 73,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "slowbromega",
+  "powerScores": {
+   "physicalAttackType1": 40,
+   "physicalAttackType2": 39,
+   "specialAttackType1": 75,
+   "specialAttackType2": 81,
+   "physicalDefense": 73,
+   "physicalDefenseFull": 83,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "slowking",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 50,
+   "specialAttackType1": 81,
+   "specialAttackType2": 89,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "slowkinggalar",
+  "powerScores": {
+   "physicalAttackType1": 67,
+   "physicalAttackType2": 46,
+   "specialAttackType1": 93,
+   "specialAttackType2": 93,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "slurpuff",
+  "powerScores": {
+   "physicalAttackType1": 58,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 67,
+   "specialAttackType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 41,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "sneasler",
+  "powerScores": {
+   "physicalAttackType1": 132,
+   "physicalAttackType2": 105,
+   "specialAttackType1": 54,
+   "specialAttackType2": 44,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "snorlax",
+  "powerScores": {
+   "physicalAttackType1": 156,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 85,
+   "specialAttackType2": 0,
+   "physicalDefense": 56,
+   "physicalDefenseFull": 74,
+   "specialDefense": 71,
+   "specialDefenseFull": 81
+  }
+ },
+ {
+  "id": "spiritomb",
+  "powerScores": {
+   "physicalAttackType1": 78,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 55,
+   "specialAttackType2": 55,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 67,
+   "specialDefense": 44,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "squawkabilly",
+  "powerScores": {
+   "physicalAttackType1": 106,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 70,
+   "specialAttackType2": 52,
+   "physicalDefense": 21,
+   "physicalDefenseFull": 59,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "squawkabillyblue",
+  "powerScores": {
+   "physicalAttackType1": 106,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 70,
+   "specialAttackType2": 52,
+   "physicalDefense": 21,
+   "physicalDefenseFull": 59,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "squawkabillywhite",
+  "powerScores": {
+   "physicalAttackType1": 106,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 70,
+   "specialAttackType2": 52,
+   "physicalDefense": 21,
+   "physicalDefenseFull": 59,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "squawkabillyyellow",
+  "powerScores": {
+   "physicalAttackType1": 106,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 70,
+   "specialAttackType2": 52,
+   "physicalDefense": 21,
+   "physicalDefenseFull": 59,
+   "specialDefense": 21,
+   "specialDefenseFull": 59
+  }
+ },
+ {
+  "id": "staraptor",
+  "powerScores": {
+   "physicalAttackType1": 124,
+   "physicalAttackType2": 117,
+   "specialAttackType1": 74,
+   "specialAttackType2": 55,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "staraptormega",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 99,
+   "specialAttackType1": 51,
+   "specialAttackType2": 46,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "starmie",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 50,
+   "specialAttackType1": 81,
+   "specialAttackType2": 67,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 38,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "starmiemega",
+  "powerScores": {
+   "physicalAttackType1": 98,
+   "physicalAttackType2": 92,
+   "specialAttackType1": 75,
+   "specialAttackType2": 61,
+   "physicalDefense": 47,
+   "physicalDefenseFull": 69,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "steelix",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 67,
+   "specialAttackType1": 74,
+   "specialAttackType2": 48,
+   "physicalDefense": 72,
+   "physicalDefenseFull": 82,
+   "specialDefense": 30,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "steelixmega",
+  "powerScores": {
+   "physicalAttackType1": 85,
+   "physicalAttackType2": 66,
+   "specialAttackType1": 57,
+   "specialAttackType2": 37,
+   "physicalDefense": 76,
+   "physicalDefenseFull": 84,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "stunfisk",
+  "powerScores": {
+   "physicalAttackType1": 58,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 58,
+   "specialAttackType2": 71,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 60,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "stunfiskgalar",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 24,
+   "specialAttackType1": 52,
+   "specialAttackType2": 79,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "swalot",
+  "powerScores": {
+   "physicalAttackType1": 74,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 74,
+   "specialAttackType2": 0,
+   "physicalDefense": 51,
+   "physicalDefenseFull": 71,
+   "specialDefense": 51,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "swampert",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 79,
+   "specialAttackType1": 98,
+   "specialAttackType2": 59,
+   "physicalDefense": 54,
+   "physicalDefenseFull": 72,
+   "specialDefense": 54,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "swampertmega",
+  "powerScores": {
+   "physicalAttackType1": 90,
+   "physicalAttackType2": 75,
+   "specialAttackType1": 82,
+   "specialAttackType2": 49,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 61,
+   "specialDefenseFull": 76
+  }
+ },
+ {
+  "id": "sylveon",
+  "powerScores": {
+   "physicalAttackType1": 102,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 140,
+   "specialAttackType2": 0,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 66,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  }
+ },
+ {
+  "id": "talonflame",
+  "powerScores": {
+   "physicalAttackType1": 78,
+   "physicalAttackType2": 89,
+   "specialAttackType1": 79,
+   "specialAttackType2": 67,
+   "physicalDefense": 36,
+   "physicalDefenseFull": 64,
+   "specialDefense": 35,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "tatsugiridroopy",
+  "powerScores": {
+   "physicalAttackType1": 59,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 109,
+   "specialAttackType2": 91,
+   "physicalDefense": 22,
+   "physicalDefenseFull": 59,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "tatsugiristretchy",
+  "powerScores": {
+   "physicalAttackType1": 59,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 109,
+   "specialAttackType2": 91,
+   "physicalDefense": 22,
+   "physicalDefenseFull": 59,
+   "specialDefense": 46,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "tauros",
+  "powerScores": {
+   "physicalAttackType1": 110,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 67,
+   "specialAttackType2": 0,
+   "physicalDefense": 48,
+   "physicalDefenseFull": 70,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "taurospaldeaaqua",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 0,
+   "specialAttackType2": 44,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "taurospaldeablaze",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 0,
+   "specialAttackType2": 52,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "taurospaldeacombat",
+  "powerScores": {
+   "physicalAttackType1": 93,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 0,
+   "specialAttackType2": 0,
+   "physicalDefense": 52,
+   "physicalDefenseFull": 71,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "thievul",
+  "powerScores": {
+   "physicalAttackType1": 52,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 54,
+   "specialAttackType2": 0,
+   "physicalDefense": 22,
+   "physicalDefenseFull": 59,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "tinkaton",
+  "powerScores": {
+   "physicalAttackType1": 55,
+   "physicalAttackType2": 97,
+   "specialAttackType1": 31,
+   "specialAttackType2": 83,
+   "physicalDefense": 43,
+   "physicalDefenseFull": 67,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "torkoal",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 98,
+   "specialAttackType2": 0,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 32,
+   "specialDefenseFull": 63
+  }
+ },
+ {
+  "id": "torterra",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 91,
+   "specialAttackType2": 55,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "toucannon",
+  "powerScores": {
+   "physicalAttackType1": 124,
+   "physicalAttackType2": 117,
+   "specialAttackType1": 91,
+   "specialAttackType2": 67,
+   "physicalDefense": 40,
+   "physicalDefenseFull": 66,
+   "specialDefense": 40,
+   "specialDefenseFull": 66
+  }
+ },
+ {
+  "id": "toxapex",
+  "powerScores": {
+   "physicalAttackType1": 67,
+   "physicalAttackType2": 48,
+   "specialAttackType1": 50,
+   "specialAttackType2": 55,
+   "physicalDefense": 58,
+   "physicalDefenseFull": 74,
+   "specialDefense": 56,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "toxicroak",
+  "powerScores": {
+   "physicalAttackType1": 91,
+   "physicalAttackType2": 114,
+   "specialAttackType1": 79,
+   "specialAttackType2": 79,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "toxtricity",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 97,
+   "specialAttackType2": 97,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "toxtricitygmax",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 97,
+   "specialAttackType2": 97,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "toxtricitylowkey",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 89,
+   "specialAttackType2": 97,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "toxtricitylowkeygmax",
+  "powerScores": {
+   "physicalAttackType1": 66,
+   "physicalAttackType2": 87,
+   "specialAttackType1": 89,
+   "specialAttackType2": 97,
+   "physicalDefense": 34,
+   "physicalDefenseFull": 64,
+   "specialDefense": 34,
+   "specialDefenseFull": 64
+  }
+ },
+ {
+  "id": "trevenant",
+  "powerScores": {
+   "physicalAttackType1": 87,
+   "physicalAttackType2": 93,
+   "specialAttackType1": 46,
+   "specialAttackType2": 74,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 45,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "tsareena",
+  "powerScores": {
+   "physicalAttackType1": 115,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 66,
+   "specialAttackType2": 0,
+   "physicalDefense": 49,
+   "physicalDefenseFull": 70,
+   "specialDefense": 49,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "typhlosion",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 117,
+   "specialAttackType2": 0,
+   "physicalDefense": 41,
+   "physicalDefenseFull": 66,
+   "specialDefense": 45,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "typhlosionhisui",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 74,
+   "specialAttackType1": 124,
+   "specialAttackType2": 67,
+   "physicalDefense": 39,
+   "physicalDefenseFull": 65,
+   "specialDefense": 43,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "tyranitar",
+  "powerScores": {
+   "physicalAttackType1": 120,
+   "physicalAttackType2": 85,
+   "specialAttackType1": 58,
+   "specialAttackType2": 58,
+   "physicalDefense": 61,
+   "physicalDefenseFull": 76,
+   "specialDefense": 58,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "tyranitarmega",
+  "powerScores": {
+   "physicalAttackType1": 110,
+   "physicalAttackType2": 76,
+   "specialAttackType1": 45,
+   "specialAttackType2": 45,
+   "physicalDefense": 70,
+   "physicalDefenseFull": 81,
+   "specialDefense": 64,
+   "specialDefenseFull": 77
+  }
+ },
+ {
+  "id": "tyrantrum",
+  "powerScores": {
+   "physicalAttackType1": 124,
+   "physicalAttackType2": 115,
+   "specialAttackType1": 71,
+   "specialAttackType2": 78,
+   "physicalDefense": 59,
+   "physicalDefenseFull": 75,
+   "specialDefense": 29,
+   "specialDefenseFull": 61
+  }
+ },
+ {
+  "id": "umbreon",
+  "powerScores": {
+   "physicalAttackType1": 54,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 44,
+   "specialAttackType2": 0,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 65,
+   "specialDefenseFull": 78
+  }
+ },
+ {
+  "id": "vanilluxe",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 87,
+   "specialAttackType2": 0,
+   "physicalDefense": 42,
+   "physicalDefenseFull": 67,
+   "specialDefense": 47,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "vaporeon",
+  "powerScores": {
+   "physicalAttackType1": 48,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 87,
+   "specialAttackType2": 0,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 70,
+   "specialDefense": 62,
+   "specialDefenseFull": 77
+  }
+ },
+ {
+  "id": "venusaur",
+  "powerScores": {
+   "physicalAttackType1": 95,
+   "physicalAttackType2": 52,
+   "specialAttackType1": 110,
+   "specialAttackType2": 70,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "venusaurmega",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 46,
+   "specialAttackType1": 97,
+   "specialAttackType2": 61,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 59,
+   "specialDefenseFull": 75
+  }
+ },
+ {
+  "id": "victreebel",
+  "powerScores": {
+   "physicalAttackType1": 100,
+   "physicalAttackType2": 62,
+   "specialAttackType1": 94,
+   "specialAttackType2": 70,
+   "physicalDefense": 33,
+   "physicalDefenseFull": 63,
+   "specialDefense": 37,
+   "specialDefenseFull": 65
+  }
+ },
+ {
+  "id": "victreebelmega",
+  "powerScores": {
+   "physicalAttackType1": 90,
+   "physicalAttackType2": 54,
+   "specialAttackType1": 90,
+   "specialAttackType2": 66,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 68,
+   "specialDefense": 50,
+   "specialDefenseFull": 71
+  }
+ },
+ {
+  "id": "vileplume",
+  "powerScores": {
+   "physicalAttackType1": 80,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 101,
+   "specialAttackType2": 75,
+   "physicalDefense": 44,
+   "physicalDefenseFull": 68,
+   "specialDefense": 46,
+   "specialDefenseFull": 69
+  }
+ },
+ {
+  "id": "vivillon",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonarchipelago",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivilloncontinental",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonelegant",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonfancy",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 32,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillongarden",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonhighplains",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonicysnow",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonjungle",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonmarine",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonmodern",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonmonsoon",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonocean",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonpokeball",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 32,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonpolar",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonriver",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonsandstorm",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonsavanna",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillonsun",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "vivillontundra",
+  "powerScores": {
+   "physicalAttackType1": 36,
+   "physicalAttackType2": 28,
+   "specialAttackType1": 62,
+   "specialAttackType2": 75,
+   "physicalDefense": 19,
+   "physicalDefenseFull": 58,
+   "specialDefense": 19,
+   "specialDefenseFull": 58
+  }
+ },
+ {
+  "id": "volcarona",
+  "powerScores": {
+   "physicalAttackType1": 44,
+   "physicalAttackType2": 66,
+   "specialAttackType1": 81,
+   "specialAttackType2": 117,
+   "physicalDefense": 35,
+   "physicalDefenseFull": 64,
+   "specialDefense": 55,
+   "specialDefenseFull": 73
+  }
+ },
+ {
+  "id": "watchog",
+  "powerScores": {
+   "physicalAttackType1": 98,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 81,
+   "specialAttackType2": 0,
+   "physicalDefense": 26,
+   "physicalDefenseFull": 60,
+   "specialDefense": 26,
+   "specialDefenseFull": 60
+  }
+ },
+ {
+  "id": "weavile",
+  "powerScores": {
+   "physicalAttackType1": 79,
+   "physicalAttackType2": 115,
+   "specialAttackType1": 39,
+   "specialAttackType2": 52,
+   "physicalDefense": 28,
+   "physicalDefenseFull": 61,
+   "specialDefense": 42,
+   "specialDefenseFull": 67
+  }
+ },
+ {
+  "id": "whimsicott",
+  "powerScores": {
+   "physicalAttackType1": 46,
+   "physicalAttackType2": 52,
+   "specialAttackType1": 75,
+   "specialAttackType2": 59,
+   "physicalDefense": 38,
+   "physicalDefenseFull": 65,
+   "specialDefense": 31,
+   "specialDefenseFull": 62
+  }
+ },
+ {
+  "id": "wigglytuff",
+  "powerScores": {
+   "physicalAttackType1": 117,
+   "physicalAttackType2": 54,
+   "specialAttackType1": 98,
+   "specialAttackType2": 67,
+   "physicalDefense": 37,
+   "physicalDefenseFull": 66,
+   "specialDefense": 41,
+   "specialDefenseFull": 68
+  }
+ },
+ {
+  "id": "wishiwashischool",
+  "powerScores": {
+   "physicalAttackType1": 83,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 102,
+   "specialAttackType2": 0,
+   "physicalDefense": 50,
+   "physicalDefenseFull": 70,
+   "specialDefense": 52,
+   "specialDefenseFull": 72
+  }
+ },
+ {
+  "id": "wyrdeer",
+  "powerScores": {
+   "physicalAttackType1": 113,
+   "physicalAttackType2": 70,
+   "specialAttackType1": 113,
+   "specialAttackType2": 91,
+   "physicalDefense": 46,
+   "physicalDefenseFull": 69,
+   "specialDefense": 48,
+   "specialDefenseFull": 70
+  }
+ },
+ {
+  "id": "zarudedada",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 115,
+   "specialAttackType1": 48,
+   "specialAttackType2": 78,
+   "physicalDefense": 60,
+   "physicalDefenseFull": 75,
+   "specialDefense": 57,
+   "specialDefenseFull": 74
+  }
+ },
+ {
+  "id": "zoroark",
+  "powerScores": {
+   "physicalAttackType1": 71,
+   "physicalAttackType2": 0,
+   "specialAttackType1": 75,
+   "specialAttackType2": 0,
+   "physicalDefense": 18,
+   "physicalDefenseFull": 57,
+   "specialDefense": 18,
+   "specialDefenseFull": 57
+  }
+ },
+ {
+  "id": "zoroarkhisui",
+  "powerScores": {
+   "physicalAttackType1": 110,
+   "physicalAttackType2": 81,
+   "specialAttackType1": 128,
+   "specialAttackType2": 70,
+   "physicalDefense": 14,
+   "physicalDefenseFull": 55,
+   "specialDefense": 14,
+   "specialDefenseFull": 55
+  }
+ }
+]

@@ -32,6 +32,7 @@ INCLUDE: list[tuple[str, str]] = [
     ("app.js", "app.js"),
     ("lib", "lib"),
     ("data/base", "data/base"),
+    ("data/added", "data/added"),
     ("data/formats", "data/formats"),
     ("data/i18n", "data/i18n"),
     ("data/manual-forme-overrides.json", "data/manual-forme-overrides.json"),

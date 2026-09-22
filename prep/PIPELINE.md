@@ -49,6 +49,8 @@ data/
     moves-with-learnsets.json  move_id → [species_id, ...]
     sprite-map.json
     shiny-sprite-map.json
+  added/                       ← computed/layered data on top of base
+    powerscores.json           [{id, powerScores}, ...] — written by prep/species/calc_power_scores.py
   formats/                     ← whitelists only
     m-a.json                   { id, label, version, species[], items[], abilities[] }
     m-b.json
@@ -68,13 +70,13 @@ data/
 | 4 | `compute_legal_species` | `tier != "Illegal"` from `formats-data.ts` + format-config `species_overrides` |
 | 5 | `compute_legal_moves` | `isNonstandard` filter (allow `None`/`""`/`"Custom"`, exclude `Past`/`Unobtainable`/`CAP`/`LGPE`/`Gigantamax`/`"Future"`) |
 | 6 | `build_learnsets` | Mod merge + `baseSpecies`/`battleOnly`/mega fallbacks, filtered to legal moves × legal species |
-| 7 | `build_pokedex` | Emit `pokedex.json` (14 fields including `powerScores` placeholder) |
+| 7 | `build_pokedex` | Emit `pokedex.json` (13 fields; no `powerScores` — that lives in `data/added/powerscores.json`) |
 | 8 | `build_moves` | Strip non-Champions flags, remap `target`→`range`, assign `effectCategories` |
 | 9 | `build_items` | Strip unused fields, keep `sprite` and `category` |
 | 10 | `build_abilities` | Build `effectCategories`; no `pokemon[]` (derived per format) |
 | 11 | `build_moves_with_learnsets` | Invert learnset map |
 | 12 | `apply_game8_descriptions` | Overlay Game8 in-game descriptions on moves/items/abilities |
-| 13 | `write_outputs` | Write 6 JSON files to `data/base/` |
+| 13 | `write_outputs` | Write 8 JSON files to `data/base/` (6 data files + 2 sprite maps) |
 
 ### Format (`prep/formats/build.py`)
 

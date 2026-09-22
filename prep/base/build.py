@@ -339,24 +339,15 @@ def build_learnsets(legal_ids: set[str], legal_moves: set[str],
 # 7. build_pokedex — full Champions-legal species with moveCount
 # ---------------------------------------------------------------------------
 POKEDEX_FIELDS = (
-    "id", "name", "num", "types", "baseStats", "powerScores", "abilities",
+    "id", "name", "num", "types", "baseStats", "abilities",
     "forme", "baseSpecies", "requiredItem",
     "heightm", "weightkg", "gender",
 )
 
-# Provisional power-score placeholders, injected on every entry. Upstream
-# overrides win (when/if Showdown starts emitting them); otherwise each
-# entry gets a fresh zeros dict.
-DEFAULT_POWER_SCORES = {
-    "physicalType1": 0,
-    "physicalType2": 0,
-    "specialType1": 0,
-    "specialType2": 0,
-    "physicalDefense": 0,
-    "physicalDefenseFull": 0,
-    "specialDefense": 0,
-    "specialDefenseFull": 0,
-}
+# Note: per-species power scores used to be embedded in `data/base/pokedex.json`
+# as a `powerScores` field. They've been moved to a separate file
+# (`data/added/powerscores.json`) computed by `prep/species/calc_power_scores.py`.
+# The frontend reads it in `lib/data-loader.js` and joins it onto species by id.
 
 
 def build_pokedex(legal_ids: set[str], pokedex: dict, learnsets: dict):
@@ -378,7 +369,6 @@ def build_pokedex(legal_ids: set[str], pokedex: dict, learnsets: dict):
         obj["forme"] = forme
         obj["baseSpecies"] = base_species
         obj["moveCount"] = len(learnsets.get(pid, []))
-        obj["powerScores"] = entry.get("powerScores") or DEFAULT_POWER_SCORES.copy()
         index.append(obj)
     return index
 

@@ -16,6 +16,7 @@ npm run prep:moves:patch                 # re-apply move PP patches
 npm run prep:abilities:patch             # re-apply ability removals
 npm run prep:species:patch                 # re-synthesize cosmetic formes to data/base/pokedex.json
 npm run prep:species:base                  # re-apply per-species baseSpecies/forme overrides to data/base/pokedex.json
+npm run prep:power                        # compute per-species power scores to data/added/powerscores.json
 npm run prep:sprites:48                  # regenerate 48px sprite set from sprites/champions/ (auto-runs in npm run prep)
 
 python3 scripts/export.py                 # build a portable ./export/ bundle (Netlify drag-and-drop)
@@ -73,11 +74,12 @@ prep/                            python data pipeline
     cache.py                     # disk-backed HTTP cache (see .cache/)
     game8.py                     # Game8 description + category scraper
     ts_parser.py                 # brace-counting parser for Showdown's TS
-  prep_data.py / patch_descriptions.py    # LEGACY M-A pipeline, out of scope, do not use
+  patch_descriptions.py          # LEGACY M-A pipeline, out of scope, do not use
 scripts/                          one-off asset pipelines (run manually, not via npm)
   download-sprites.py            # Bulbagarden Archives → sprites/champions/
   download-shiny-sprites.py
   download-type-icons.py         # Game8 → sprites/types/
+  download-item-sprites.py       # Bulbagarden Archives → sprites/items/ (CP-tagged bag sprites)
   build-sprite-map.py            # writes data/base/sprite-map.json
   build-shiny-sprite-map.py
   build-sprites-48.py            # sprites/champions/ → sprites/champions-48/ (LANCZOS)
@@ -85,6 +87,7 @@ scripts/                          one-off asset pipelines (run manually, not via
   _headers                       # Netlify headers file copied to export/ root during export
 data/
   base/                          # shared, format-agnostic (8 JSONs)
+  added/                         # computed/layered data on top of base — see data/added/powerscores.json
   formats/<id>.json              # {id, label, version, species[], items[], abilities[]}
   i18n/<lang>/                   # 2 langs × 4 entity types (en, de)
   manual-*.json                  # user-edited patches applied after the base build
@@ -180,7 +183,7 @@ To redirect another species: add an entry to `data/manual-base-species.json` wit
 ## Architecture
 
 - ES modules, no bundler, no build step. Served directly by `python3 -m http.server`.
-- `lib/data-loader.js` loads `data/base/*` once (cached), augments each species with `formeInfo`, and filters against `data/formats/<id>.json` to build the per-format view. All `loadX(format)` helpers go through this.
+- `lib/data-loader.js` loads `data/base/*` once (cached), augments each species with `formeInfo`, joins per-species `powerScores` from `data/added/powerscores.json`, and filters against `data/formats/<id>.json` to build the per-format view. All `loadX(format)` helpers go through this.
 - `lib/i18n.js` is a post-process layer: takes a snapshot of `name`/`desc` from the in-memory cache, then overlays translated values from `data/i18n/<lang>/<lang>/*.json`. Widgets read the cache transparently.
 - Widgets: three `PokemonSearchWidget` instances (main pokedex grid, move-detail "Learned By", ability-detail "Pokémon with..."), two `MoveSearchWidget` instances (moves tab, pokemon-detail filtered list). All widgets are destroyed and recreated on format switch.
 - **Team browser** (`lib/team-browser-widget.js`) is the default left tab and the only place for team CRUD UI. It shows teams for the current global format, handles create/rename/delete/duplicate via callbacks into `app-init.js`, and clicking a team (or its Edit button) makes it active and navigates to the team builder. Per-team action row: Duplicate, Import, Export, Edit; the × delete button sits in the header row of each item. Duplicates are auto-named `<base> v2`, `v3`, … — a trailing `v\d+` is stripped from the source name first, then the next free version is picked. Team persistence is per-format under `potato-teams-<format>` in localStorage (see `lib/team-store.js`).
@@ -199,7 +202,7 @@ To redirect another species: add an entry to `data/manual-base-species.json` wit
 - [ ] Damage Calculator (placeholder; tab renders but body is `coming soon`)
 - [ ] Breadcrumb optimizations (early return on same index, bounds checking)
 - [ ] Translate move/ability/item descriptions beyond English (descriptions are Game8-sourced for `en`; other langs fall back to English)
-- [ ] Delete legacy M-A pipeline (`prep/prep_data.py`, `prep/patch_descriptions.py`) — these are no longer consumed by the frontend, only kept for comparison
+- [ ] Delete legacy M-A pipeline (`prep/patch_descriptions.py`) — no longer consumed by the frontend, only kept for comparison
 - [ ] Review and correct move categorization
 - [ ] Review and correct ability categorization
 - [ ] Consolidate unused `lib/css/` directory (leftover from an abandoned refactor; empty)
