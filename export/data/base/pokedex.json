@@ -15,16 +15,6 @@
    "spd": 85,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 95,
-   "specialAttackType1": 91,
-   "specialAttackType2": 78,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Snow Warning",
    "Soundproof"
@@ -53,16 +43,6 @@
    "spd": 105,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 95,
-   "specialAttackType1": 88,
-   "specialAttackType2": 75,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Snow Warning"
   ],
@@ -88,16 +68,6 @@
    "spa": 75,
    "spd": 60,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 83,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 50,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 20,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Pressure",
@@ -127,16 +97,6 @@
    "spd": 60,
    "spe": 115
   },
-  "powerScores": {
-   "physicalAttackType1": 72,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 51,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 20,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Magic Bounce"
   ],
@@ -163,16 +123,6 @@
    "spa": 75,
    "spd": 60,
    "spe": 151
-  },
-  "powerScores": {
-   "physicalAttackType1": 73,
-   "physicalAttackType2": 69,
-   "specialAttackType1": 39,
-   "specialAttackType2": 39,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 20,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Sharpness"
@@ -201,16 +151,6 @@
    "spd": 140,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 40,
-   "physicalAttackType2": 55,
-   "specialAttackType1": 70,
-   "specialAttackType2": 40,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 75,
-   "specialDefense": 58,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Stance Change"
   ],
@@ -238,16 +178,6 @@
    "spd": 50,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 75,
-   "physicalAttackType2": 102,
-   "specialAttackType1": 128,
-   "specialAttackType2": 75,
-   "physicalDefense": 6,
-   "physicalDefenseFull": 53,
-   "specialDefense": 6,
-   "specialDefenseFull": 53
-  },
   "abilities": [
    "Stance Change"
   ],
@@ -274,16 +204,6 @@
    "spa": 60,
    "spd": 75,
    "spe": 130
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 105,
-   "specialAttackType1": 66,
-   "specialAttackType2": 59,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Rock Head",
@@ -314,16 +234,6 @@
    "spd": 95,
    "spe": 150
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 97,
-   "specialAttackType1": 55,
-   "specialAttackType2": 51,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 68,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Tough Claws"
   ],
@@ -350,16 +260,6 @@
    "spa": 60,
    "spd": 60,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 101,
-   "physicalAttackType2": 117,
-   "specialAttackType1": 75,
-   "specialAttackType2": 66,
-   "physicalDefense": 69,
-   "physicalDefenseFull": 80,
-   "specialDefense": 23,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Sturdy",
@@ -389,16 +289,6 @@
    "spd": 80,
    "spe": 50
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 58,
-   "specialAttackType2": 0,
-   "physicalDefense": 75,
-   "physicalDefenseFull": 84,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Filter"
   ],
@@ -424,16 +314,6 @@
    "spa": 135,
    "spd": 95,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 40,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 109,
-   "specialAttackType2": 0,
-   "physicalDefense": -5,
-   "physicalDefenseFull": 48,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Synchronize",
@@ -463,16 +343,6 @@
    "spd": 105,
    "spe": 150
   },
-  "powerScores": {
-   "physicalAttackType1": 31,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 100,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 57,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Trace"
   ],
@@ -498,16 +368,6 @@
    "spa": 110,
    "spd": 121,
    "spe": 64
-  },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Sweet Veil",
@@ -536,16 +396,6 @@
    "spd": 121,
    "spe": 64
   },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -572,16 +422,6 @@
    "spa": 110,
    "spd": 121,
    "spe": 64
-  },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Sweet Veil",
@@ -610,16 +450,6 @@
    "spd": 121,
    "spe": 64
   },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -646,16 +476,6 @@
    "spa": 110,
    "spd": 121,
    "spe": 64
-  },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Sweet Veil",
@@ -684,16 +504,6 @@
    "spd": 121,
    "spe": 64
   },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -720,16 +530,6 @@
    "spa": 110,
    "spd": 121,
    "spe": 64
-  },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Sweet Veil",
@@ -758,16 +558,6 @@
    "spd": 121,
    "spe": 64
   },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Sweet Veil",
    "Aroma Veil"
@@ -794,16 +584,6 @@
    "spa": 110,
    "spd": 121,
    "spe": 64
-  },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Sweet Veil",
@@ -833,16 +613,6 @@
    "spd": 105,
    "spe": 80
   },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 83,
-   "specialAttackType1": 78,
-   "specialAttackType2": 66,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 52,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Natural Cure",
    "Cloud Nine"
@@ -871,16 +641,6 @@
    "spd": 105,
    "spe": 80
   },
-  "powerScores": {
-   "physicalAttackType1": 72,
-   "physicalAttackType2": 108,
-   "specialAttackType1": 78,
-   "specialAttackType2": 108,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 52,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Pixilate"
   ],
@@ -906,16 +666,6 @@
    "spa": 115,
    "spd": 90,
    "spe": 55
-  },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 97,
-   "specialAttackType2": 0,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Static",
@@ -945,16 +695,6 @@
    "spd": 110,
    "spe": 45
   },
-  "powerScores": {
-   "physicalAttackType1": 55,
-   "physicalAttackType2": 66,
-   "specialAttackType1": 96,
-   "specialAttackType2": 69,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Mold Breaker"
   ],
@@ -981,16 +721,6 @@
    "spa": 50,
    "spd": 90,
    "spe": 90
-  },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 74,
-   "specialAttackType1": 59,
-   "specialAttackType2": 40,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 56,
-   "specialDefenseFull": 74
   },
   "abilities": [
    "Vital Spirit",
@@ -1021,16 +751,6 @@
    "spd": 80,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 79,
-   "specialAttackType1": 94,
-   "specialAttackType2": 94,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Ripen",
    "Gluttony",
@@ -1060,16 +780,6 @@
    "spd": 132,
    "spe": 42
   },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 48,
-   "specialAttackType1": 55,
-   "specialAttackType2": 46,
-   "physicalDefense": 45,
-   "physicalDefenseFull": 68,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Water Bubble",
    "Water Absorb"
@@ -1096,16 +806,6 @@
    "spa": 65,
    "spd": 79,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 67,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 34,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Intimidate",
@@ -1136,16 +836,6 @@
    "spd": 109,
    "spe": 39
   },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 110,
-   "specialAttackType2": 128,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 69,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Seed Sower",
    "Harvest"
@@ -1172,16 +862,6 @@
    "spa": 100,
    "spd": 80,
    "spe": 95
-  },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 94,
-   "specialAttackType2": 0,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Intimidate",
@@ -1212,16 +892,6 @@
    "spd": 80,
    "spe": 90
   },
-  "powerScores": {
-   "physicalAttackType1": 97,
-   "physicalAttackType2": 120,
-   "specialAttackType1": 93,
-   "specialAttackType2": 58,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Intimidate",
    "Flash Fire",
@@ -1250,16 +920,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1285,16 +945,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1322,16 +972,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1357,16 +997,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1394,16 +1024,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1429,16 +1049,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1466,16 +1076,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1501,16 +1101,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1538,16 +1128,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1573,16 +1153,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1610,16 +1180,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1645,16 +1205,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1682,16 +1232,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1717,16 +1257,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1754,16 +1284,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1789,16 +1309,6 @@
    "spa": 120,
    "spd": 120,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Multitype"
@@ -1826,16 +1336,6 @@
    "spd": 120,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 68,
-   "physicalDefenseFull": 79,
-   "specialDefense": 68,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Multitype"
   ],
@@ -1862,16 +1362,6 @@
    "spa": 125,
    "spd": 65,
    "spe": 85
-  },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 91,
-   "specialAttackType1": 118,
-   "specialAttackType2": 110,
-   "physicalDefense": 64,
-   "physicalDefenseFull": 77,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Stamina",
@@ -1902,16 +1392,6 @@
    "spd": 70,
    "spe": 40
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 55,
-   "specialAttackType1": 50,
-   "specialAttackType2": 52,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
-  },
   "abilities": [
    "Swarm",
    "Insomnia",
@@ -1941,16 +1421,6 @@
    "spd": 80,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 110,
-   "specialAttackType2": 78,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Flash Fire",
    "Weak Armor"
@@ -1978,16 +1448,6 @@
    "spd": 89,
    "spe": 29
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 74,
-   "specialAttackType2": 0,
-   "physicalDefense": 45,
-   "physicalDefenseFull": 69,
-   "specialDefense": 54,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Healer",
    "Aroma Veil"
@@ -2014,16 +1474,6 @@
    "spa": 60,
    "spd": 86,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 81,
-   "specialAttackType2": 0,
-   "physicalDefense": 53,
-   "physicalDefenseFull": 72,
-   "specialDefense": 53,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Healer",
@@ -2054,16 +1504,6 @@
    "spd": 126,
    "spe": 50
   },
-  "powerScores": {
-   "physicalAttackType1": 63,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 73,
-   "specialAttackType2": 40,
-   "physicalDefense": 66,
-   "physicalDefenseFull": 78,
-   "specialDefense": 66,
-   "specialDefenseFull": 78
-  },
   "abilities": [
    "Healer"
   ],
@@ -2091,16 +1531,6 @@
    "spd": 92,
    "spe": 58
   },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 111,
-   "specialAttackType1": 87,
-   "specialAttackType2": 130,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 60,
-   "specialDefenseFull": 76
-  },
   "abilities": [
    "Refrigerate",
    "Snow Warning"
@@ -2127,16 +1557,6 @@
    "spa": 44,
    "spd": 46,
    "spe": 28
-  },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 74,
-   "physicalDefenseFull": 83,
-   "specialDefense": 21,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Own Tempo",
@@ -2167,16 +1587,6 @@
    "spd": 36,
    "spe": 38
   },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 115,
-   "specialAttackType1": 46,
-   "specialAttackType2": 50,
-   "physicalDefense": 74,
-   "physicalDefenseFull": 83,
-   "specialDefense": 7,
-   "specialDefenseFull": 54
-  },
   "abilities": [
    "Strong Jaw",
    "Ice Body",
@@ -2206,16 +1616,6 @@
    "spd": 80,
    "spe": 50
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 59,
-   "specialAttackType2": 55,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 71,
-   "specialDefense": 49,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Thick Fat",
    "Huge Power",
@@ -2243,16 +1643,6 @@
    "spa": 83,
    "spd": 63,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 89,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 54,
-   "specialAttackType2": 0,
-   "physicalDefense": 25,
-   "physicalDefenseFull": 60,
-   "specialDefense": 23,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Insomnia",
@@ -2282,16 +1672,6 @@
    "spd": 83,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 88,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 43,
-   "specialAttackType2": 0,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 62,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Prankster"
   ],
@@ -2318,16 +1698,6 @@
    "spa": 54,
    "spd": 86,
    "spe": 68
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 62,
-   "specialAttackType2": 46,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 73,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Tough Claws",
@@ -2358,16 +1728,6 @@
    "spd": 106,
    "spe": 88
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 110,
-   "specialAttackType1": 52,
-   "specialAttackType2": 52,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 52,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Tough Claws"
   ],
@@ -2394,16 +1754,6 @@
    "spa": 80,
    "spd": 75,
    "spe": 78
-  },
-  "powerScores": {
-   "physicalAttackType1": 127,
-   "physicalAttackType2": 96,
-   "specialAttackType1": 96,
-   "specialAttackType2": 70,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 70,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Swift Swim",
@@ -2434,16 +1784,6 @@
    "spd": 75,
    "spe": 78
   },
-  "powerScores": {
-   "physicalAttackType1": 111,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 109,
-   "specialAttackType2": 80,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 70,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Swift Swim",
    "Adaptability",
@@ -2472,16 +1812,6 @@
    "spd": 55,
    "spe": 98
   },
-  "powerScores": {
-   "physicalAttackType1": 111,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 96,
-   "specialAttackType2": 0,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 18,
-   "specialDefenseFull": 57
-  },
   "abilities": [
    "Rock Head",
    "Adaptability",
@@ -2509,16 +1839,6 @@
    "spa": 80,
    "spd": 55,
    "spe": 98
-  },
-  "powerScores": {
-   "physicalAttackType1": 111,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 96,
-   "specialAttackType2": 0,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 18,
-   "specialDefenseFull": 57
   },
   "abilities": [
    "Rattled",
@@ -2549,16 +1869,6 @@
    "spd": 138,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 75,
-   "physicalAttackType2": 66,
-   "specialAttackType1": 58,
-   "specialAttackType2": 67,
-   "physicalDefense": 65,
-   "physicalDefenseFull": 78,
-   "specialDefense": 58,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Sturdy",
    "Soundproof"
@@ -2586,16 +1896,6 @@
    "spa": 75,
    "spd": 86,
    "spe": 87
-  },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 120,
-   "specialAttackType1": 79,
-   "specialAttackType2": 67,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 75,
-   "specialDefense": 56,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Thermal Exchange",
@@ -2625,18 +1925,9 @@
    "spd": 101,
    "spe": 87
   },
-  "powerScores": {
-   "physicalAttackType1": 110,
-   "physicalAttackType2": 110,
-   "specialAttackType1": 76,
-   "specialAttackType2": 64,
-   "physicalDefense": 66,
-   "physicalDefenseFull": 78,
-   "specialDefense": 62,
-   "specialDefenseFull": 76
-  },
   "abilities": [
-   "Thermal Exchange"
+   "Thermal Exchange",
+   "Ice Body"
   ],
   "forme": "Mega",
   "baseSpecies": "Baxcalibur",
@@ -2660,16 +1951,6 @@
    "spa": 70,
    "spd": 80,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 66,
-   "specialAttackType2": 0,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Snow Cloak",
@@ -2700,16 +1981,6 @@
    "spd": 80,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 55,
-   "specialAttackType1": 42,
-   "specialAttackType2": 42,
-   "physicalDefense": -5,
-   "physicalDefenseFull": 49,
-   "specialDefense": 36,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Swarm",
    "Sniper"
@@ -2738,16 +2009,6 @@
    "spd": 80,
    "spe": 145
   },
-  "powerScores": {
-   "physicalAttackType1": 140,
-   "physicalAttackType2": 82,
-   "specialAttackType1": 32,
-   "specialAttackType2": 32,
-   "physicalDefense": -5,
-   "physicalDefenseFull": 49,
-   "specialDefense": 36,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Adaptability"
   ],
@@ -2773,16 +2034,6 @@
    "spa": 103,
    "spd": 83,
    "spe": 45
-  },
-  "powerScores": {
-   "physicalAttackType1": 55,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 89,
-   "specialAttackType2": 0,
-   "physicalDefense": 56,
-   "physicalDefenseFull": 74,
-   "specialDefense": 53,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Electromorphosis",
@@ -2812,16 +2063,6 @@
    "spd": 105,
    "spe": 78
   },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 98,
-   "specialAttackType2": 0,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 71,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Torrent",
    "Rain Dish"
@@ -2849,16 +2090,6 @@
    "spd": 115,
    "spe": 78
   },
-  "powerScores": {
-   "physicalAttackType1": 69,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 103,
-   "specialAttackType2": 0,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Mega Launcher"
   ],
@@ -2885,16 +2116,6 @@
    "spa": 110,
    "spd": 70,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 98,
-   "physicalAttackType2": 124,
-   "specialAttackType1": 117,
-   "specialAttackType2": 93,
-   "physicalDefense": 37,
-   "physicalDefenseFull": 65,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Blaze",
@@ -2924,16 +2145,6 @@
    "spd": 80,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 117,
-   "specialAttackType1": 102,
-   "specialAttackType2": 81,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Speed Boost"
   ],
@@ -2960,16 +2171,6 @@
    "spa": 105,
    "spd": 75,
    "spe": 40
-  },
-  "powerScores": {
-   "physicalAttackType1": 89,
-   "physicalAttackType2": 74,
-   "specialAttackType1": 113,
-   "specialAttackType2": 70,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 36,
-   "specialDefenseFull": 64
   },
   "abilities": [
    "Magma Armor",
@@ -3000,16 +2201,6 @@
    "spd": 105,
    "spe": 20
   },
-  "powerScores": {
-   "physicalAttackType1": 76,
-   "physicalAttackType2": 64,
-   "specialAttackType1": 109,
-   "specialAttackType2": 66,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Sheer Force"
   ],
@@ -3035,16 +2226,6 @@
    "spa": 70,
    "spd": 70,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 36,
-   "specialAttackType2": 0,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Forecast"
@@ -3072,16 +2253,6 @@
    "spd": 70,
    "spe": 70
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 66,
-   "specialAttackType2": 0,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
-  },
   "abilities": [
    "Forecast"
   ],
@@ -3108,16 +2279,6 @@
    "spd": 70,
    "spe": 70
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 66,
-   "specialAttackType2": 0,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
-  },
   "abilities": [
    "Forecast"
   ],
@@ -3143,16 +2304,6 @@
    "spa": 70,
    "spd": 70,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 66,
-   "specialAttackType2": 0,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Forecast"
@@ -3181,16 +2332,6 @@
    "spd": 100,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 102,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 71,
-   "specialAttackType2": 44,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Flash Fire",
    "Weak Armor"
@@ -3218,16 +2359,6 @@
    "spa": 145,
    "spd": 90,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 58,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 78,
-   "specialAttackType2": 122,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Flash Fire",
@@ -3258,16 +2389,6 @@
    "spd": 110,
    "spe": 90
   },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 57,
-   "specialAttackType1": 67,
-   "specialAttackType2": 109,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Infiltrator"
   ],
@@ -3294,16 +2415,6 @@
    "spa": 109,
    "spd": 85,
    "spe": 100
-  },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 59,
-   "specialAttackType1": 117,
-   "specialAttackType2": 85,
-   "physicalDefense": 41,
-   "physicalDefenseFull": 66,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Blaze",
@@ -3333,16 +2444,6 @@
    "spd": 85,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 105,
-   "physicalAttackType2": 95,
-   "specialAttackType1": 102,
-   "specialAttackType2": 58,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 73,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Tough Claws"
   ],
@@ -3370,16 +2471,6 @@
    "spd": 115,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 70,
-   "physicalAttackType2": 52,
-   "specialAttackType1": 117,
-   "specialAttackType2": 87,
-   "physicalDefense": 41,
-   "physicalDefenseFull": 66,
-   "specialDefense": 57,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Drought"
   ],
@@ -3405,16 +2496,6 @@
    "spa": 87,
    "spd": 78,
    "spe": 85
-  },
-  "powerScores": {
-   "physicalAttackType1": 75,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 81,
-   "specialAttackType2": 0,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Flower Gift"
@@ -3442,16 +2523,6 @@
    "spa": 74,
    "spd": 75,
    "spe": 64
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 114,
-   "specialAttackType1": 91,
-   "specialAttackType2": 74,
-   "physicalDefense": 62,
-   "physicalDefenseFull": 76,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Overgrow",
@@ -3481,16 +2552,6 @@
    "spd": 115,
    "spe": 44
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 105,
-   "specialAttackType1": 70,
-   "specialAttackType2": 57,
-   "physicalDefense": 72,
-   "physicalDefenseFull": 82,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Bulletproof"
   ],
@@ -3516,16 +2577,6 @@
    "spa": 95,
    "spd": 90,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 40,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 85,
-   "specialAttackType2": 0,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Levitate"
@@ -3554,16 +2605,6 @@
    "spd": 120,
    "spe": 65
   },
-  "powerScores": {
-   "physicalAttackType1": 31,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 84,
-   "specialAttackType2": 57,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 58,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Levitate"
   ],
@@ -3589,16 +2630,6 @@
    "spa": 65,
    "spd": 75,
    "spe": 119
-  },
-  "powerScores": {
-   "physicalAttackType1": 97,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 85,
-   "specialAttackType2": 0,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Blaze",
@@ -3627,16 +2658,6 @@
    "spd": 89,
    "spe": 59
   },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 91,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Mega Launcher"
   ],
@@ -3662,16 +2683,6 @@
    "spa": 95,
    "spd": 90,
    "spe": 60
-  },
-  "powerScores": {
-   "physicalAttackType1": 54,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 71,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Cute Charm",
@@ -3702,16 +2713,6 @@
    "spd": 110,
    "spe": 70
   },
-  "powerScores": {
-   "physicalAttackType1": 45,
-   "physicalAttackType2": 43,
-   "specialAttackType1": 70,
-   "specialAttackType2": 52,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Magic Bounce"
   ],
@@ -3738,16 +2739,6 @@
    "spd": 105,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 55,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 58,
-   "specialAttackType2": 0,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 46,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Mummy"
   ],
@@ -3773,16 +2764,6 @@
    "spa": 55,
    "spd": 65,
    "spe": 45
-  },
-  "powerScores": {
-   "physicalAttackType1": 165,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 62,
-   "specialAttackType2": 0,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Guts",
@@ -3813,16 +2794,6 @@
    "spd": 85,
    "spe": 67
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 54,
-   "specialAttackType1": 55,
-   "specialAttackType2": 71,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Pressure",
    "Unnerve",
@@ -3851,16 +2822,6 @@
    "spa": 62,
    "spd": 67,
    "spe": 43
-  },
-  "powerScores": {
-   "physicalAttackType1": 158,
-   "physicalAttackType2": 120,
-   "specialAttackType1": 67,
-   "specialAttackType2": 62,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 69,
-   "specialDefense": 41,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Hyper Cutter",
@@ -3891,16 +2852,6 @@
    "spd": 107,
    "spe": 33
   },
-  "powerScores": {
-   "physicalAttackType1": 138,
-   "physicalAttackType2": 105,
-   "specialAttackType1": 52,
-   "specialAttackType2": 48,
-   "physicalDefense": 64,
-   "physicalDefenseFull": 77,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Iron Fist"
   ],
@@ -3927,16 +2878,6 @@
    "spa": 30,
    "spd": 55,
    "spe": 135
-  },
-  "powerScores": {
-   "physicalAttackType1": 87,
-   "physicalAttackType2": 122,
-   "specialAttackType1": 44,
-   "specialAttackType2": 52,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
   },
   "abilities": [
    "Zen Mode"
@@ -3965,16 +2906,6 @@
    "spd": 105,
    "spe": 55
   },
-  "powerScores": {
-   "physicalAttackType1": 48,
-   "physicalAttackType2": 32,
-   "specialAttackType1": 120,
-   "specialAttackType2": 110,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Zen Mode"
   ],
@@ -4001,16 +2932,6 @@
    "spa": 100,
    "spd": 100,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 110,
-   "specialAttackType2": 59,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 65,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Overgrow",
@@ -4040,16 +2961,6 @@
    "spd": 95,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 118,
-   "specialAttackType1": 106,
-   "specialAttackType2": 85,
-   "physicalDefense": 45,
-   "physicalDefenseFull": 69,
-   "specialDefense": 53,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Overgrow",
    "Scrappy"
@@ -4077,16 +2988,6 @@
    "spa": 81,
    "spd": 67,
    "spe": 101
-  },
-  "powerScores": {
-   "physicalAttackType1": 48,
-   "physicalAttackType2": 48,
-   "specialAttackType1": 71,
-   "specialAttackType2": 52,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 57,
-   "specialDefense": 28,
-   "specialDefenseFull": 61
   },
   "abilities": [
    "Cheek Pouch",
@@ -4117,16 +3018,6 @@
    "spd": 100,
    "spe": 104
   },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 48,
-   "specialAttackType1": 120,
-   "specialAttackType2": 97,
-   "physicalDefense": 36,
-   "physicalDefenseFull": 64,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Blaze",
    "Magician"
@@ -4155,16 +3046,6 @@
    "spd": 125,
    "spe": 134
   },
-  "powerScores": {
-   "physicalAttackType1": 55,
-   "physicalAttackType2": 37,
-   "specialAttackType1": 117,
-   "specialAttackType2": 94,
-   "physicalDefense": 36,
-   "physicalDefenseFull": 64,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Levitate"
   ],
@@ -4191,16 +3072,6 @@
    "spa": 50,
    "spd": 77,
    "spe": 78
-  },
-  "powerScores": {
-   "physicalAttackType1": 156,
-   "physicalAttackType2": 104,
-   "specialAttackType1": 74,
-   "specialAttackType2": 46,
-   "physicalDefense": 43,
-   "physicalDefenseFull": 67,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Pickup",
@@ -4230,16 +3101,6 @@
    "spd": 48,
    "spe": 48
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": -6,
-   "physicalDefenseFull": 48,
-   "specialDefense": -6,
-   "specialDefenseFull": 48
-  },
   "abilities": [
    "Limber",
    "Imposter"
@@ -4267,16 +3128,6 @@
    "spa": 97,
    "spd": 123,
    "spe": 44
-  },
-  "powerScores": {
-   "physicalAttackType1": 98,
-   "physicalAttackType2": 115,
-   "specialAttackType1": 93,
-   "specialAttackType2": 124,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Poison Point",
@@ -4307,16 +3158,6 @@
    "spd": 163,
    "spe": 44
   },
-  "powerScores": {
-   "physicalAttackType1": 61,
-   "physicalAttackType2": 75,
-   "specialAttackType1": 66,
-   "specialAttackType2": 88,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 65,
-   "specialDefenseFull": 78
-  },
   "abilities": [
    "Regenerator"
   ],
@@ -4343,16 +3184,6 @@
    "spa": 100,
    "spd": 75,
    "spe": 142
-  },
-  "powerScores": {
-   "physicalAttackType1": 98,
-   "physicalAttackType2": 75,
-   "specialAttackType1": 94,
-   "specialAttackType2": 59,
-   "physicalDefense": 43,
-   "physicalDefenseFull": 67,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Clear Body",
@@ -4383,16 +3214,6 @@
    "spd": 100,
    "spe": 80
   },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 81,
-   "specialAttackType1": 94,
-   "specialAttackType2": 81,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Inner Focus",
    "Multiscale"
@@ -4421,16 +3242,6 @@
    "spd": 125,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 90,
-   "physicalAttackType2": 60,
-   "specialAttackType1": 94,
-   "specialAttackType2": 81,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 63,
-   "specialDefenseFull": 77
-  },
   "abilities": [
    "Multiscale"
   ],
@@ -4457,16 +3268,6 @@
    "spa": 135,
    "spd": 91,
    "spe": 36
-  },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 75,
-   "specialAttackType1": 133,
-   "specialAttackType2": 117,
-   "physicalDefense": 45,
-   "physicalDefenseFull": 68,
-   "specialDefense": 48,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Berserk",
@@ -4497,16 +3298,6 @@
    "spd": 116,
    "spe": 36
   },
-  "powerScores": {
-   "physicalAttackType1": 76,
-   "physicalAttackType2": 75,
-   "specialAttackType1": 117,
-   "specialAttackType2": 102,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 73,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Berserk"
   ],
@@ -4532,16 +3323,6 @@
    "spa": 85,
    "spd": 75,
    "spe": 55
-  },
-  "powerScores": {
-   "physicalAttackType1": 110,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 98,
-   "specialAttackType2": 0,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 74,
-   "specialDefense": 53,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Serene Grace",
@@ -4571,16 +3352,6 @@
    "spd": 80,
    "spe": 50
   },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 91,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Levitate"
   ],
@@ -4606,16 +3377,6 @@
    "spa": 135,
    "spd": 90,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 73,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 84,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Eelevate"
@@ -4643,16 +3404,6 @@
    "spa": 100,
    "spd": 65,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 126,
-   "specialAttackType1": 110,
-   "specialAttackType2": 89,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Blaze",
@@ -4682,16 +3433,6 @@
    "spd": 110,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 90,
-   "physicalAttackType2": 111,
-   "specialAttackType1": 90,
-   "specialAttackType2": 72,
-   "physicalDefense": 50,
-   "physicalDefenseFull": 71,
-   "specialDefense": 63,
-   "specialDefenseFull": 77
-  },
   "abilities": [
    "Mold Breaker"
   ],
@@ -4718,16 +3459,6 @@
    "spa": 75,
    "spd": 60,
    "spe": 103
-  },
-  "powerScores": {
-   "physicalAttackType1": 55,
-   "physicalAttackType2": 54,
-   "specialAttackType1": 67,
-   "specialAttackType2": 46,
-   "physicalDefense": 14,
-   "physicalDefenseFull": 55,
-   "specialDefense": 14,
-   "specialDefenseFull": 55
   },
   "abilities": [
    "Static",
@@ -4757,16 +3488,6 @@
    "spd": 101,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 48,
-   "specialAttackType1": 118,
-   "specialAttackType2": 110,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Torrent",
    "Competitive"
@@ -4793,16 +3514,6 @@
    "spa": 101,
    "spd": 60,
    "spe": 105
-  },
-  "powerScores": {
-   "physicalAttackType1": 44,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 67,
-   "specialAttackType2": 0,
-   "physicalDefense": 35,
-   "physicalDefenseFull": 64,
-   "specialDefense": 35,
-   "specialDefenseFull": 64
   },
   "abilities": [
    "Opportunist",
@@ -4832,16 +3543,6 @@
    "spd": 95,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 48,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 105,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Synchronize",
    "Magic Bounce"
@@ -4869,16 +3570,6 @@
    "spa": 50,
    "spd": 65,
    "spe": 88
-  },
-  "powerScores": {
-   "physicalAttackType1": 91,
-   "physicalAttackType2": 74,
-   "specialAttackType1": 46,
-   "specialAttackType2": 70,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Sand Rush",
@@ -4909,16 +3600,6 @@
    "spd": 65,
    "spe": 103
   },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 64,
-   "specialAttackType1": 40,
-   "specialAttackType2": 61,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 76,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Piercing Drill"
   ],
@@ -4944,16 +3625,6 @@
    "spa": 70,
    "spd": 60,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 89,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 71,
-   "specialAttackType2": 0,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 69,
-   "specialDefense": 20,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Battle Armor",
@@ -4982,16 +3653,6 @@
    "spd": 65,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 84,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 55,
-   "specialAttackType2": 0,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 25,
-   "specialDefenseFull": 60
-  },
   "abilities": [
    "Defiant"
   ],
@@ -5018,16 +3679,6 @@
    "spa": 58,
    "spd": 62,
    "spe": 60
-  },
-  "powerScores": {
-   "physicalAttackType1": 59,
-   "physicalAttackType2": 97,
-   "specialAttackType1": 48,
-   "specialAttackType2": 40,
-   "physicalDefense": 7,
-   "physicalDefenseFull": 52,
-   "specialDefense": 15,
-   "specialDefenseFull": 55
   },
   "abilities": [
    "Keen Eye",
@@ -5058,16 +3709,6 @@
    "spd": 70,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 102,
-   "physicalAttackType2": 59,
-   "specialAttackType1": 117,
-   "specialAttackType2": 93,
-   "physicalDefense": 50,
-   "physicalDefenseFull": 71,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Cud Chew",
    "Armor Tail",
@@ -5095,16 +3736,6 @@
    "spa": 79,
    "spd": 83,
    "spe": 78
-  },
-  "powerScores": {
-   "physicalAttackType1": 70,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 94,
-   "specialAttackType2": 0,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Torrent",
@@ -5134,16 +3765,6 @@
    "spd": 93,
    "spe": 78
   },
-  "powerScores": {
-   "physicalAttackType1": 72,
-   "physicalAttackType2": 140,
-   "specialAttackType1": 79,
-   "specialAttackType2": 94,
-   "physicalDefense": 62,
-   "physicalDefenseFull": 76,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Dragonize"
   ],
@@ -5170,16 +3791,6 @@
    "spa": 95,
    "spd": 60,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 93,
-   "specialAttackType2": 93,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 23,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Ripen",
@@ -5209,16 +3820,6 @@
    "spd": 110,
    "spe": 65
   },
-  "powerScores": {
-   "physicalAttackType1": 105,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 93,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Flash Fire",
    "Guts"
@@ -5245,16 +3846,6 @@
    "spa": 125,
    "spd": 128,
    "spe": 92
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 118,
-   "specialAttackType2": 0,
-   "physicalDefense": 31,
-   "physicalDefenseFull": 62,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
   },
   "abilities": [
    "Flower Veil",
@@ -5283,16 +3874,6 @@
    "spd": 148,
    "spe": 102
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 141,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 64,
-   "specialDefenseFull": 77
-  },
   "abilities": [
    "Fairy Aura"
   ],
@@ -5318,16 +3899,6 @@
    "spa": 112,
    "spd": 154,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 67,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Flower Veil",
@@ -5356,16 +3927,6 @@
    "spd": 154,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 67,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -5392,16 +3953,6 @@
    "spa": 112,
    "spd": 154,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 67,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Flower Veil",
@@ -5430,16 +3981,6 @@
    "spd": 154,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 67,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Flower Veil",
    "Symbiosis"
@@ -5466,16 +4007,6 @@
    "spa": 112,
    "spd": 154,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 67,
-   "specialDefenseFull": 79
   },
   "abilities": [
    "Flower Veil",
@@ -5505,16 +4036,6 @@
    "spd": 60,
    "spe": 40
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 50,
-   "specialAttackType2": 75,
-   "physicalDefense": 62,
-   "physicalDefenseFull": 77,
-   "specialDefense": 26,
-   "specialDefenseFull": 60
-  },
   "abilities": [
    "Sturdy",
    "Overcoat"
@@ -5542,16 +4063,6 @@
    "spa": 80,
    "spd": 70,
    "spe": 110
-  },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 71,
-   "specialAttackType1": 71,
-   "specialAttackType2": 52,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Snow Cloak",
@@ -5581,16 +4092,6 @@
    "spd": 100,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 65,
-   "physicalAttackType2": 55,
-   "specialAttackType1": 79,
-   "specialAttackType2": 58,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Snow Warning"
   ],
@@ -5616,16 +4117,6 @@
    "spa": 65,
    "spd": 90,
    "spe": 102
-  },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Fur Coat"
@@ -5653,16 +4144,6 @@
    "spd": 90,
    "spe": 102
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Fur Coat"
   ],
@@ -5688,16 +4169,6 @@
    "spa": 65,
    "spd": 90,
    "spe": 102
-  },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Fur Coat"
@@ -5725,16 +4196,6 @@
    "spd": 90,
    "spe": 102
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Fur Coat"
   ],
@@ -5760,16 +4221,6 @@
    "spa": 65,
    "spd": 90,
    "spe": 102
-  },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Fur Coat"
@@ -5797,16 +4248,6 @@
    "spd": 90,
    "spe": 102
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Fur Coat"
   ],
@@ -5832,16 +4273,6 @@
    "spa": 65,
    "spd": 90,
    "spe": 102
-  },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Fur Coat"
@@ -5869,16 +4300,6 @@
    "spd": 90,
    "spe": 102
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Fur Coat"
   ],
@@ -5904,16 +4325,6 @@
    "spa": 65,
    "spd": 90,
    "spe": 102
-  },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Fur Coat"
@@ -5941,16 +4352,6 @@
    "spd": 90,
    "spe": 102
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Fur Coat"
   ],
@@ -5977,16 +4378,6 @@
    "spa": 65,
    "spd": 115,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 70,
-   "physicalAttackType2": 128,
-   "specialAttackType1": 67,
-   "specialAttackType2": 67,
-   "physicalDefense": 27,
-   "physicalDefenseFull": 60,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Steadfast",
@@ -6017,16 +4408,6 @@
    "spd": 115,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 64,
-   "physicalAttackType2": 120,
-   "specialAttackType1": 52,
-   "specialAttackType2": 52,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 68,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Inner Focus"
   ],
@@ -6052,16 +4433,6 @@
    "spa": 60,
    "spd": 82,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 66,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Stench",
@@ -6092,16 +4463,6 @@
    "spd": 85,
    "spe": 102
   },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 83,
-   "specialAttackType2": 58,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 74,
-   "specialDefense": 54,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Sand Veil",
    "Rough Skin"
@@ -6130,16 +4491,6 @@
    "spd": 95,
    "spe": 92
   },
-  "powerScores": {
-   "physicalAttackType1": 110,
-   "physicalAttackType2": 82,
-   "specialAttackType1": 84,
-   "specialAttackType2": 58,
-   "physicalDefense": 64,
-   "physicalDefenseFull": 77,
-   "specialDefense": 58,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Sand Force"
   ],
@@ -6165,16 +4516,6 @@
    "spa": 141,
    "spd": 85,
    "spe": 151
-  },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 93,
-   "specialAttackType2": 0,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 73,
-   "specialDefense": 54,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Levitate"
@@ -6202,16 +4543,6 @@
    "spa": 125,
    "spd": 115,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 46,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 102,
-   "specialAttackType2": 85,
-   "physicalDefense": 27,
-   "physicalDefenseFull": 60,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Synchronize",
@@ -6242,16 +4573,6 @@
    "spd": 135,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 42,
-   "physicalAttackType2": 91,
-   "specialAttackType1": 96,
-   "specialAttackType2": 144,
-   "physicalDefense": 27,
-   "physicalDefenseFull": 60,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Pixilate"
   ],
@@ -6277,16 +4598,6 @@
    "spa": 45,
    "spd": 90,
    "spe": 35
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 55,
-   "specialAttackType2": 0,
-   "physicalDefense": 66,
-   "physicalDefenseFull": 78,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Purifying Salt",
@@ -6317,16 +4628,6 @@
    "spd": 75,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 71,
-   "specialAttackType2": 83,
-   "physicalDefense": 18,
-   "physicalDefenseFull": 57,
-   "specialDefense": 31,
-   "specialDefenseFull": 62
-  },
   "abilities": [
    "Cursed Body"
   ],
@@ -6353,16 +4654,6 @@
    "spa": 170,
    "spd": 95,
    "spe": 130
-  },
-  "powerScores": {
-   "physicalAttackType1": 48,
-   "physicalAttackType2": 52,
-   "specialAttackType1": 66,
-   "specialAttackType2": 78,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 63,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Shadow Tag"
@@ -6391,16 +4682,6 @@
    "spd": 91,
    "spe": 84
   },
-  "powerScores": {
-   "physicalAttackType1": 44,
-   "physicalAttackType2": 59,
-   "specialAttackType1": 124,
-   "specialAttackType2": 71,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Good as Gold"
   ],
@@ -6426,16 +4707,6 @@
    "spa": 130,
    "spd": 95,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 75,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 97,
-   "specialAttackType2": 0,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Snow Cloak",
@@ -6463,16 +4734,6 @@
    "spa": 80,
    "spd": 80,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 71,
-   "specialAttackType2": 0,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Inner Focus",
@@ -6502,16 +4763,6 @@
    "spd": 80,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 188,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 115,
-   "specialAttackType2": 0,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Refrigerate"
   ],
@@ -6538,16 +4789,6 @@
    "spa": 130,
    "spd": 81,
    "spe": 86
-  },
-  "powerScores": {
-   "physicalAttackType1": 75,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 105,
-   "specialAttackType2": 83,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Toxic Debris",
@@ -6577,16 +4818,6 @@
    "spd": 96,
    "spe": 101
   },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 86,
-   "specialAttackType1": 120,
-   "specialAttackType2": 96,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 73,
-   "specialDefense": 52,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Adaptability"
   ],
@@ -6613,16 +4844,6 @@
    "spa": 45,
    "spd": 75,
    "spe": 95
-  },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 42,
-   "specialAttackType2": 0,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Hyper Cutter",
@@ -6652,16 +4873,6 @@
    "spd": 81,
    "spe": 68
   },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 93,
-   "specialAttackType2": 0,
-   "physicalDefense": 45,
-   "physicalDefenseFull": 69,
-   "specialDefense": 56,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Sap Sipper",
    "Grass Pelt"
@@ -6690,16 +4901,6 @@
    "spd": 90,
    "spe": 40
   },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 74,
-   "specialAttackType1": 50,
-   "specialAttackType2": 50,
-   "physicalDefense": 62,
-   "physicalDefenseFull": 77,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Emergency Exit"
   ],
@@ -6727,18 +4928,8 @@
    "spd": 120,
    "spe": 40
   },
-  "powerScores": {
-   "physicalAttackType1": 105,
-   "physicalAttackType2": 79,
-   "specialAttackType1": 42,
-   "specialAttackType2": 0,
-   "physicalDefense": 69,
-   "physicalDefenseFull": 80,
-   "specialDefense": 58,
-   "specialDefenseFull": 74
-  },
   "abilities": [
-   "Tough Claws"
+   "Emergency Exit"
   ],
   "forme": "Mega",
   "baseSpecies": "Golisopod",
@@ -6763,16 +4954,6 @@
    "spa": 55,
    "spd": 80,
    "spe": 55
-  },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 48,
-   "specialAttackType2": 42,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Iron Fist",
@@ -6803,16 +4984,6 @@
    "spd": 105,
    "spe": 55
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 42,
-   "specialAttackType2": 37,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 73,
-   "specialDefense": 57,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Unseen Fist"
   ],
@@ -6838,16 +5009,6 @@
    "spa": 110,
    "spd": 150,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 89,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 101,
-   "specialAttackType2": 0,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 68,
-   "specialDefenseFull": 80
   },
   "abilities": [
    "Sap Sipper",
@@ -6878,16 +5039,6 @@
    "spd": 150,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 74,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 109,
-   "specialAttackType2": 101,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 66,
-   "specialDefenseFull": 79
-  },
   "abilities": [
    "Sap Sipper",
    "Shell Armor",
@@ -6916,16 +5067,6 @@
    "spa": 58,
    "spd": 75,
    "spe": 84
-  },
-  "powerScores": {
-   "physicalAttackType1": 75,
-   "physicalAttackType2": 95,
-   "specialAttackType1": 44,
-   "specialAttackType2": 63,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 73,
-   "specialDefense": 33,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Pickup",
@@ -6956,16 +5097,6 @@
    "spd": 75,
    "spe": 69
   },
-  "powerScores": {
-   "physicalAttackType1": 78,
-   "physicalAttackType2": 95,
-   "specialAttackType1": 44,
-   "specialAttackType2": 63,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 74,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -6994,16 +5125,6 @@
    "spa": 58,
    "spd": 75,
    "spe": 99
-  },
-  "powerScores": {
-   "physicalAttackType1": 74,
-   "physicalAttackType2": 95,
-   "specialAttackType1": 44,
-   "specialAttackType2": 63,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 71,
-   "specialDefense": 28,
-   "specialDefenseFull": 60
   },
   "abilities": [
    "Pickup",
@@ -7034,16 +5155,6 @@
    "spd": 75,
    "spe": 54
   },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 100,
-   "specialAttackType1": 44,
-   "specialAttackType2": 63,
-   "physicalDefense": 61,
-   "physicalDefenseFull": 75,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -7072,16 +5183,6 @@
    "spd": 80,
    "spe": 42
   },
-  "powerScores": {
-   "physicalAttackType1": 98,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 71,
-   "specialAttackType2": 0,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 69,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Limber",
    "Technician"
@@ -7109,16 +5210,6 @@
    "spa": 103,
    "spd": 71,
    "spe": 122
-  },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 50,
-   "specialAttackType1": 113,
-   "specialAttackType2": 59,
-   "physicalDefense": 30,
-   "physicalDefenseFull": 62,
-   "specialDefense": 34,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Torrent",
@@ -7149,16 +5240,6 @@
    "spd": 81,
    "spe": 142
   },
-  "powerScores": {
-   "physicalAttackType1": 57,
-   "physicalAttackType2": 46,
-   "specialAttackType1": 102,
-   "specialAttackType2": 55,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
-  },
   "abilities": [
    "Protean"
   ],
@@ -7185,16 +5266,6 @@
    "spa": 95,
    "spd": 75,
    "spe": 60
-  },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 75,
-   "specialAttackType1": 58,
-   "specialAttackType2": 58,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 66,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Prankster",
@@ -7225,16 +5296,6 @@
    "spd": 100,
    "spe": 81
   },
-  "powerScores": {
-   "physicalAttackType1": 78,
-   "physicalAttackType2": 74,
-   "specialAttackType1": 59,
-   "specialAttackType2": 59,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 69,
-   "specialDefense": 56,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Intimidate",
    "Moxie"
@@ -7263,16 +5324,6 @@
    "spd": 130,
    "spe": 81
   },
-  "powerScores": {
-   "physicalAttackType1": 69,
-   "physicalAttackType2": 61,
-   "specialAttackType1": 51,
-   "specialAttackType2": 37,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 65,
-   "specialDefenseFull": 78
-  },
   "abilities": [
    "Mold Breaker"
   ],
@@ -7299,16 +5350,6 @@
    "spa": 136,
    "spd": 103,
    "spe": 29
-  },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 109,
-   "specialAttackType2": 91,
-   "physicalDefense": 41,
-   "physicalDefenseFull": 66,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Healer",
@@ -7339,16 +5380,6 @@
    "spd": 63,
    "spe": 118
   },
-  "powerScores": {
-   "physicalAttackType1": 105,
-   "physicalAttackType2": 97,
-   "specialAttackType1": 74,
-   "specialAttackType2": 46,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 65,
-   "specialDefense": 30,
-   "specialDefenseFull": 62
-  },
   "abilities": [
    "Limber",
    "Unburden",
@@ -7378,16 +5409,6 @@
    "spd": 93,
    "spe": 118
   },
-  "powerScores": {
-   "physicalAttackType1": 105,
-   "physicalAttackType2": 97,
-   "specialAttackType1": 57,
-   "specialAttackType2": 36,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "No Guard"
   ],
@@ -7414,16 +5435,6 @@
    "spa": 109,
    "spd": 94,
    "spe": 109
-  },
-  "powerScores": {
-   "physicalAttackType1": 48,
-   "physicalAttackType2": 78,
-   "specialAttackType1": 85,
-   "specialAttackType2": 117,
-   "physicalDefense": 10,
-   "physicalDefenseFull": 54,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Dry Skin",
@@ -7454,16 +5465,6 @@
    "spd": 95,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 128,
-   "specialAttackType1": 40,
-   "specialAttackType2": 54,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Swarm",
    "Guts",
@@ -7493,16 +5494,6 @@
    "spd": 105,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 130,
-   "specialAttackType1": 31,
-   "specialAttackType2": 42,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Skill Link"
   ],
@@ -7528,16 +5519,6 @@
    "spa": 68,
    "spd": 72,
    "spe": 47
-  },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 54,
-   "specialAttackType2": 0,
-   "physicalDefense": 65,
-   "physicalDefenseFull": 78,
-   "specialDefense": 47,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Sand Stream",
@@ -7566,16 +5547,6 @@
    "spa": 110,
    "spd": 80,
    "spe": 95
-  },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 83,
-   "specialAttackType1": 63,
-   "specialAttackType2": 101,
-   "physicalDefense": 16,
-   "physicalDefenseFull": 57,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Early Bird",
@@ -7606,16 +5577,6 @@
    "spd": 90,
    "spe": 115
   },
-  "powerScores": {
-   "physicalAttackType1": 51,
-   "physicalAttackType2": 64,
-   "specialAttackType1": 58,
-   "specialAttackType2": 93,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Solar Power"
   ],
@@ -7641,16 +5602,6 @@
    "spa": 50,
    "spd": 97,
    "spe": 68
-  },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 40,
-   "specialAttackType2": 0,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Sand Rush",
@@ -7679,16 +5630,6 @@
    "spa": 120,
    "spd": 80,
    "spe": 44
-  },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 78,
-   "specialAttackType1": 109,
-   "specialAttackType2": 109,
-   "physicalDefense": 62,
-   "physicalDefenseFull": 77,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Supersweet Syrup",
@@ -7719,16 +5660,6 @@
    "spd": 90,
    "spe": 98
   },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 100,
-   "specialAttackType1": 70,
-   "specialAttackType2": 110,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Levitate"
   ],
@@ -7755,16 +5686,6 @@
    "spa": 80,
    "spd": 90,
    "spe": 60
-  },
-  "powerScores": {
-   "physicalAttackType1": 97,
-   "physicalAttackType2": 70,
-   "specialAttackType1": 94,
-   "specialAttackType2": 52,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Blaze",
@@ -7793,16 +5714,6 @@
    "spa": 105,
    "spd": 95,
    "spe": 95
-  },
-  "powerScores": {
-   "physicalAttackType1": 46,
-   "physicalAttackType2": 79,
-   "specialAttackType1": 91,
-   "specialAttackType2": 70,
-   "physicalDefense": 12,
-   "physicalDefenseFull": 54,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Inner Focus",
@@ -7833,16 +5744,6 @@
    "spd": 105,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 42,
-   "physicalAttackType2": 44,
-   "specialAttackType1": 85,
-   "specialAttackType2": 63,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Own Tempo",
    "Synchronize",
@@ -7872,16 +5773,6 @@
    "spd": 71,
    "spe": 108
   },
-  "powerScores": {
-   "physicalAttackType1": 91,
-   "physicalAttackType2": 135,
-   "specialAttackType1": 113,
-   "specialAttackType2": 91,
-   "physicalDefense": 36,
-   "physicalDefenseFull": 64,
-   "specialDefense": 36,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Blaze",
    "Iron Fist"
@@ -7908,16 +5799,6 @@
    "spa": 125,
    "spd": 65,
    "spe": 120
-  },
-  "powerScores": {
-   "physicalAttackType1": 58,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 128,
-   "specialAttackType2": 0,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 28,
-   "specialDefenseFull": 61
   },
   "abilities": [
    "Torrent",
@@ -7946,16 +5827,6 @@
    "spd": 95,
    "spe": 130
   },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 87,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Volt Absorb",
    "Quick Feet"
@@ -7982,16 +5853,6 @@
    "spa": 40,
    "spd": 80,
    "spe": 90
-  },
-  "powerScores": {
-   "physicalAttackType1": 106,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 67,
-   "specialAttackType2": 0,
-   "physicalDefense": 50,
-   "physicalDefenseFull": 71,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Early Bird",
@@ -8021,16 +5882,6 @@
    "spd": 100,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 123,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 78,
-   "specialAttackType2": 0,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Parental Bond"
   ],
@@ -8058,16 +5909,6 @@
    "spd": 90,
    "spe": 108
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Justified"
   ],
@@ -8094,16 +5935,6 @@
    "spa": 60,
    "spd": 85,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 74,
-   "specialAttackType1": 44,
-   "specialAttackType2": 75,
-   "physicalDefense": 64,
-   "physicalDefenseFull": 77,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Defiant",
@@ -8134,16 +5965,6 @@
    "spd": 70,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 74,
-   "physicalAttackType2": 120,
-   "specialAttackType1": 42,
-   "specialAttackType2": 28,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 69,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
-  },
   "abilities": [
    "Swarm",
    "Sheer Force",
@@ -8173,16 +5994,6 @@
    "spd": 87,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 58,
-   "specialAttackType1": 89,
-   "specialAttackType2": 52,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 65,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Prankster",
    "Magician"
@@ -8210,16 +6021,6 @@
    "spa": 100,
    "spd": 105,
    "spe": 85
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 117,
-   "specialAttackType1": 94,
-   "specialAttackType2": 89,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 52,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Bulletproof",
@@ -8250,16 +6051,6 @@
    "spd": 70,
    "spe": 92
   },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 78,
-   "specialAttackType1": 52,
-   "specialAttackType2": 46,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Intimidate",
    "Moxie",
@@ -8288,16 +6079,6 @@
    "spd": 65,
    "spe": 95
   },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 71,
-   "specialAttackType2": 0,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 74,
-   "specialDefense": 25,
-   "specialDefenseFull": 60
-  },
   "abilities": [
    "Leaf Guard",
    "Chlorophyll"
@@ -8324,16 +6105,6 @@
    "spa": 88,
    "spd": 50,
    "spe": 106
-  },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 55,
-   "specialAttackType2": 0,
-   "physicalDefense": 9,
-   "physicalDefenseFull": 54,
-   "specialDefense": 9,
-   "specialDefenseFull": 54
   },
   "abilities": [
    "Limber",
@@ -8362,16 +6133,6 @@
    "spa": 54,
    "spd": 96,
    "spe": 105
-  },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 78,
-   "specialAttackType2": 0,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 65,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Cute Charm",
@@ -8402,16 +6163,6 @@
    "spd": 96,
    "spe": 135
   },
-  "powerScores": {
-   "physicalAttackType1": 103,
-   "physicalAttackType2": 103,
-   "specialAttackType1": 60,
-   "specialAttackType2": 48,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Scrappy"
   ],
@@ -8438,16 +6189,6 @@
    "spa": 115,
    "spd": 70,
    "spe": 90
-  },
-  "powerScores": {
-   "physicalAttackType1": 117,
-   "physicalAttackType2": 79,
-   "specialAttackType1": 97,
-   "specialAttackType2": 113,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Steadfast",
@@ -8478,16 +6219,6 @@
    "spd": 70,
    "spe": 112
   },
-  "powerScores": {
-   "physicalAttackType1": 146,
-   "physicalAttackType2": 98,
-   "specialAttackType1": 114,
-   "specialAttackType2": 132,
-   "physicalDefense": 43,
-   "physicalDefenseFull": 67,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
-  },
   "abilities": [
    "Adaptability"
   ],
@@ -8515,16 +6246,6 @@
    "spd": 70,
    "spe": 151
   },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 57,
-   "specialAttackType1": 96,
-   "specialAttackType2": 111,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
-  },
   "abilities": [
    "Aura Guard"
   ],
@@ -8550,16 +6271,6 @@
    "spa": 95,
    "spd": 79,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 83,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 78,
-   "specialAttackType2": 0,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Rivalry",
@@ -8589,16 +6300,6 @@
    "spd": 65,
    "spe": 112
   },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 30,
-   "physicalDefenseFull": 62,
-   "specialDefense": 30,
-   "specialDefenseFull": 62
-  },
   "abilities": [
    "Keen Eye",
    "Sand Rush",
@@ -8627,16 +6328,6 @@
    "spd": 65,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 30,
-   "physicalDefenseFull": 62,
-   "specialDefense": 30,
-   "specialDefenseFull": 62
-  },
   "abilities": [
    "Tough Claws"
   ],
@@ -8662,16 +6353,6 @@
    "spa": 55,
    "spd": 75,
    "spe": 82
-  },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Keen Eye",
@@ -8701,16 +6382,6 @@
    "spd": 70,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 67,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 44,
-   "specialAttackType2": 0,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 69,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Intimidate",
    "Guard Dog",
@@ -8738,16 +6409,6 @@
    "spa": 65,
    "spd": 85,
    "spe": 55
-  },
-  "powerScores": {
-   "physicalAttackType1": 105,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 67,
-   "specialAttackType2": 0,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Guts",
@@ -8778,16 +6439,6 @@
    "spd": 115,
    "spe": 95
   },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 60,
-   "specialAttackType1": 115,
-   "specialAttackType2": 82,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Soul-Heart"
   ],
@@ -8814,16 +6465,6 @@
    "spa": 130,
    "spd": 115,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 63,
-   "specialAttackType1": 122,
-   "specialAttackType2": 89,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
   },
   "abilities": [
    "Soul-Heart"
@@ -8852,16 +6493,6 @@
    "spd": 115,
    "spe": 95
   },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 60,
-   "specialAttackType1": 115,
-   "specialAttackType2": 82,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Soul-Heart"
   ],
@@ -8888,16 +6519,6 @@
    "spa": 68,
    "spd": 75,
    "spe": 73
-  },
-  "powerScores": {
-   "physicalAttackType1": 67,
-   "physicalAttackType2": 55,
-   "specialAttackType1": 48,
-   "specialAttackType2": 70,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Contrary",
@@ -8928,16 +6549,6 @@
    "spd": 120,
    "spe": 88
   },
-  "powerScores": {
-   "physicalAttackType1": 55,
-   "physicalAttackType2": 46,
-   "specialAttackType1": 46,
-   "specialAttackType2": 67,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 61,
-   "specialDefenseFull": 76
-  },
   "abilities": [
    "Contrary"
   ],
@@ -8964,16 +6575,6 @@
    "spa": 70,
    "spd": 60,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 66,
-   "specialAttackType2": 54,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 40,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Oblivious",
@@ -9003,16 +6604,6 @@
    "spd": 60,
    "spe": 105
   },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 23,
-   "physicalDefenseFull": 59,
-   "specialDefense": 23,
-   "specialDefenseFull": 59
-  },
   "abilities": [
    "Static",
    "Lightning Rod",
@@ -9041,16 +6632,6 @@
    "spd": 80,
    "spe": 135
   },
-  "powerScores": {
-   "physicalAttackType1": 48,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 76,
-   "specialAttackType2": 0,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Intimidate"
   ],
@@ -9076,16 +6657,6 @@
    "spa": 65,
    "spd": 75,
    "spe": 111
-  },
-  "powerScores": {
-   "physicalAttackType1": 230,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 85,
-   "specialAttackType2": 0,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 63,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Friend Guard",
@@ -9114,16 +6685,6 @@
    "spa": 65,
    "spd": 75,
    "spe": 111
-  },
-  "powerScores": {
-   "physicalAttackType1": 230,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 85,
-   "specialAttackType2": 0,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 63,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Friend Guard",
@@ -9154,16 +6715,6 @@
    "spd": 55,
    "spe": 50
   },
-  "powerScores": {
-   "physicalAttackType1": 54,
-   "physicalAttackType2": 59,
-   "specialAttackType1": 74,
-   "specialAttackType2": 27,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 62,
-   "specialDefense": 5,
-   "specialDefenseFull": 51
-  },
   "abilities": [
    "Hyper Cutter",
    "Intimidate",
@@ -9193,16 +6744,6 @@
    "spd": 95,
    "spe": 50
   },
-  "powerScores": {
-   "physicalAttackType1": 96,
-   "physicalAttackType2": 108,
-   "specialAttackType1": 57,
-   "specialAttackType2": 21,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Huge Power"
   ],
@@ -9229,16 +6770,6 @@
    "spa": 60,
    "spd": 75,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 163,
-   "physicalAttackType2": 88,
-   "specialAttackType1": 66,
-   "specialAttackType2": 50,
-   "physicalDefense": 31,
-   "physicalDefenseFull": 62,
-   "specialDefense": 31,
-   "specialDefenseFull": 62
   },
   "abilities": [
    "Pure Power",
@@ -9268,16 +6799,6 @@
    "spd": 85,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 170,
-   "physicalAttackType2": 92,
-   "specialAttackType1": 60,
-   "specialAttackType2": 45,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Pure Power"
   ],
@@ -9303,16 +6824,6 @@
    "spa": 83,
    "spd": 100,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 97,
-   "specialAttackType2": 0,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 72,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Overgrow",
@@ -9342,16 +6853,6 @@
    "spd": 115,
    "spe": 80
   },
-  "powerScores": {
-   "physicalAttackType1": 75,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 108,
-   "specialAttackType2": 58,
-   "physicalDefense": 57,
-   "physicalDefenseFull": 74,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Mega Sol"
   ],
@@ -9379,16 +6880,6 @@
    "spd": 70,
    "spe": 123
   },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 75,
-   "specialAttackType1": 97,
-   "specialAttackType2": 52,
-   "physicalDefense": 35,
-   "physicalDefenseFull": 64,
-   "specialDefense": 35,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Overgrow",
    "Protean"
@@ -9415,16 +6906,6 @@
    "spa": 83,
    "spd": 81,
    "spe": 104
-  },
-  "powerScores": {
-   "physicalAttackType1": 40,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 59,
-   "specialAttackType2": 0,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 41,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Keen Eye",
@@ -9454,16 +6935,6 @@
    "spd": 81,
    "spe": 104
   },
-  "powerScores": {
-   "physicalAttackType1": 40,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 41,
-   "specialDefenseFull": 66
-  },
   "abilities": [
    "Keen Eye",
    "Infiltrator",
@@ -9492,16 +6963,6 @@
    "spd": 101,
    "spe": 124
   },
-  "powerScores": {
-   "physicalAttackType1": 31,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 87,
-   "specialAttackType2": 0,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Trace"
   ],
@@ -9527,16 +6988,6 @@
    "spa": 143,
    "spd": 101,
    "spe": 124
-  },
-  "powerScores": {
-   "physicalAttackType1": 31,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 66,
-   "specialAttackType2": 0,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Trace"
@@ -9564,16 +7015,6 @@
    "spa": 95,
    "spd": 90,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 117,
-   "physicalAttackType2": 78,
-   "specialAttackType1": 98,
-   "specialAttackType2": 85,
-   "physicalDefense": 62,
-   "physicalDefenseFull": 76,
-   "specialDefense": 48,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Clear Body",
@@ -9603,16 +7044,6 @@
    "spd": 110,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 122,
-   "physicalAttackType2": 81,
-   "specialAttackType1": 81,
-   "specialAttackType2": 70,
-   "physicalDefense": 66,
-   "physicalDefenseFull": 79,
-   "specialDefense": 56,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Tough Claws"
   ],
@@ -9638,16 +7069,6 @@
    "spa": 100,
    "spd": 125,
    "spe": 81
-  },
-  "powerScores": {
-   "physicalAttackType1": 50,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 81,
-   "specialAttackType2": 0,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 69,
-   "specialDefense": 64,
-   "specialDefenseFull": 77
   },
   "abilities": [
    "Marvel Scale",
@@ -9678,16 +7099,6 @@
    "spd": 105,
    "spe": 96
   },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 40,
-   "specialAttackType2": 40,
-   "physicalDefense": 31,
-   "physicalDefenseFull": 62,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Disguise"
   ],
@@ -9714,16 +7125,6 @@
    "spa": 50,
    "spd": 105,
    "spe": 96
-  },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 40,
-   "specialAttackType2": 40,
-   "physicalDefense": 31,
-   "physicalDefenseFull": 62,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Disguise"
@@ -9752,16 +7153,6 @@
    "spd": 58,
    "spe": 97
   },
-  "powerScores": {
-   "physicalAttackType1": 78,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 66,
-   "specialAttackType2": 48,
-   "physicalDefense": 15,
-   "physicalDefenseFull": 56,
-   "specialDefense": 15,
-   "specialDefenseFull": 56
-  },
   "abilities": [
    "Hunger Switch"
   ],
@@ -9789,16 +7180,6 @@
    "spd": 58,
    "spe": 97
   },
-  "powerScores": {
-   "physicalAttackType1": 78,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 66,
-   "specialAttackType2": 48,
-   "physicalDefense": 15,
-   "physicalDefenseFull": 56,
-   "specialDefense": 15,
-   "specialDefenseFull": 56
-  },
   "abilities": [
    "Hunger Switch"
   ],
@@ -9825,16 +7206,6 @@
    "spa": 100,
    "spd": 120,
    "spe": 90
-  },
-  "powerScores": {
-   "physicalAttackType1": 39,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 89,
-   "specialAttackType2": 59,
-   "physicalDefense": 9,
-   "physicalDefenseFull": 53,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Soundproof",
@@ -9865,16 +7236,6 @@
    "spd": 100,
    "spe": 70
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 54,
-   "specialAttackType1": 87,
-   "specialAttackType2": 93,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Tangled Feet",
    "Screen Cleaner",
@@ -9902,16 +7263,6 @@
    "spa": 55,
    "spd": 85,
    "spe": 35
-  },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 48,
-   "specialAttackType2": 0,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 74,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Own Tempo",
@@ -9941,16 +7292,6 @@
    "spd": 95,
    "spe": 29
   },
-  "powerScores": {
-   "physicalAttackType1": 42,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 91,
-   "specialAttackType2": 0,
-   "physicalDefense": 56,
-   "physicalDefenseFull": 74,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Forewarn",
    "Synchronize",
@@ -9978,16 +7319,6 @@
    "spa": 81,
    "spd": 100,
    "spe": 100
-  },
-  "powerScores": {
-   "physicalAttackType1": 74,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 37,
-   "physicalDefenseFull": 64,
-   "specialDefense": 50,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Flash Fire",
@@ -10017,16 +7348,6 @@
    "spd": 100,
    "spe": 109
   },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 52,
-   "specialAttackType1": 71,
-   "specialAttackType2": 62,
-   "physicalDefense": 37,
-   "physicalDefenseFull": 64,
-   "specialDefense": 50,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Snow Cloak",
    "Snow Warning"
@@ -10054,16 +7375,6 @@
    "spa": 97,
    "spd": 80,
    "spe": 123
-  },
-  "powerScores": {
-   "physicalAttackType1": 83,
-   "physicalAttackType2": 71,
-   "specialAttackType1": 79,
-   "specialAttackType2": 93,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Frisk",
@@ -10094,16 +7405,6 @@
    "spd": 110,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 44,
-   "specialAttackType1": 102,
-   "specialAttackType2": 83,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Inner Focus",
    "Telepathy",
@@ -10131,16 +7432,6 @@
    "spa": 60,
    "spd": 55,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 67,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 75,
-   "specialAttackType2": 0,
-   "physicalDefense": 63,
-   "physicalDefenseFull": 77,
-   "specialDefense": 18,
-   "specialDefenseFull": 57
   },
   "abilities": [
    "Earth Eater",
@@ -10170,16 +7461,6 @@
    "spd": 65,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 97,
-   "specialAttackType1": 46,
-   "specialAttackType2": 54,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 71,
-   "specialDefense": 35,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Poison Point",
    "Swift Swim",
@@ -10208,16 +7489,6 @@
    "spd": 62,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 55,
-   "specialAttackType2": 0,
-   "physicalDefense": 45,
-   "physicalDefenseFull": 69,
-   "specialDefense": 38,
-   "specialDefenseFull": 66
-  },
   "abilities": [
    "Zero to Hero"
   ],
@@ -10243,16 +7514,6 @@
    "spa": 106,
    "spd": 87,
    "spe": 100
-  },
-  "powerScores": {
-   "physicalAttackType1": 122,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 56,
-   "physicalDefenseFull": 74,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Zero to Hero"
@@ -10280,16 +7541,6 @@
    "spa": 69,
    "spd": 71,
    "spe": 58
-  },
-  "powerScores": {
-   "physicalAttackType1": 101,
-   "physicalAttackType2": 81,
-   "specialAttackType1": 71,
-   "specialAttackType2": 48,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 69,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Iron Fist",
@@ -10319,16 +7570,6 @@
    "spd": 60,
    "spe": 80
   },
-  "powerScores": {
-   "physicalAttackType1": 124,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 54,
-   "specialAttackType2": 0,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 36,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Receiver",
    "Defiant"
@@ -10356,16 +7597,6 @@
    "spa": 70,
    "spd": 60,
    "spe": 105
-  },
-  "powerScores": {
-   "physicalAttackType1": 97,
-   "physicalAttackType2": 144,
-   "specialAttackType1": 66,
-   "specialAttackType2": 71,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 23,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Volt Absorb",
@@ -10396,16 +7627,6 @@
    "spd": 70,
    "spe": 65
   },
-  "powerScores": {
-   "physicalAttackType1": 42,
-   "physicalAttackType2": 59,
-   "specialAttackType1": 78,
-   "specialAttackType2": 78,
-   "physicalDefense": 45,
-   "physicalDefenseFull": 68,
-   "specialDefense": 27,
-   "specialDefenseFull": 60
-  },
   "abilities": [
    "Keen Eye",
    "Drizzle",
@@ -10433,16 +7654,6 @@
    "spa": 50,
    "spd": 60,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 102,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 70,
-   "specialAttackType2": 0,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 23,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Battle Armor",
@@ -10472,16 +7683,6 @@
    "spd": 65,
    "spe": 115
   },
-  "powerScores": {
-   "physicalAttackType1": 89,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 85,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 25,
-   "specialDefenseFull": 60
-  },
   "abilities": [
    "Limber",
    "Technician",
@@ -10509,16 +7710,6 @@
    "spa": 75,
    "spd": 65,
    "spe": 115
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 20,
-   "physicalDefenseFull": 58,
-   "specialDefense": 25,
-   "specialDefenseFull": 60
   },
   "abilities": [
    "Fur Coat",
@@ -10549,16 +7740,6 @@
    "spd": 70,
    "spe": 101
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 89,
-   "specialAttackType2": 66,
-   "physicalDefense": 41,
-   "physicalDefenseFull": 66,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Keen Eye",
    "Tangled Feet",
@@ -10588,16 +7769,6 @@
    "spd": 80,
    "spe": 121
   },
-  "powerScores": {
-   "physicalAttackType1": 73,
-   "physicalAttackType2": 69,
-   "specialAttackType1": 103,
-   "specialAttackType2": 76,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "No Guard"
   ],
@@ -10623,16 +7794,6 @@
    "spa": 50,
    "spd": 50,
    "spe": 90
-  },
-  "powerScores": {
-   "physicalAttackType1": 96,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 92,
-   "specialAttackType2": 0,
-   "physicalDefense": -34,
-   "physicalDefenseFull": 38,
-   "specialDefense": -15,
-   "specialDefenseFull": 44
   },
   "abilities": [
    "Static",
@@ -10661,16 +7822,6 @@
    "spd": 85,
    "spe": 15
   },
-  "powerScores": {
-   "physicalAttackType1": 74,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 75,
-   "specialAttackType2": 0,
-   "physicalDefense": 37,
-   "physicalDefenseFull": 64,
-   "specialDefense": 31,
-   "specialDefenseFull": 62
-  },
   "abilities": [
    "Lightning Rod",
    "Electric Surge"
@@ -10697,16 +7848,6 @@
    "spa": 55,
    "spd": 70,
    "spe": 85
-  },
-  "powerScores": {
-   "physicalAttackType1": 70,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 69,
-   "specialDefense": 30,
-   "specialDefenseFull": 62
   },
   "abilities": [
    "Hyper Cutter",
@@ -10737,16 +7878,6 @@
    "spd": 90,
    "spe": 105
   },
-  "powerScores": {
-   "physicalAttackType1": 61,
-   "physicalAttackType2": 136,
-   "specialAttackType1": 0,
-   "specialAttackType2": 79,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 73,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Aerilate"
   ],
@@ -10772,16 +7903,6 @@
    "spa": 90,
    "spd": 100,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 75,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Water Absorb",
@@ -10812,16 +7933,6 @@
    "spd": 54,
    "spe": 50
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 52,
-   "specialAttackType1": 79,
-   "specialAttackType2": 50,
-   "physicalDefense": -19,
-   "physicalDefenseFull": 43,
-   "specialDefense": -4,
-   "specialDefenseFull": 48
-  },
   "abilities": [
    "Hospitality",
    "Heatproof"
@@ -10848,16 +7959,6 @@
    "spa": 134,
    "spd": 114,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 71,
-   "specialAttackType2": 0,
-   "physicalDefense": 23,
-   "physicalDefenseFull": 59,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Weak Armor",
@@ -10887,16 +7988,6 @@
    "spd": 116,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 55,
-   "specialAttackType1": 128,
-   "specialAttackType2": 85,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 66,
-   "specialDefense": 58,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Torrent",
    "Liquid Voice"
@@ -10924,16 +8015,6 @@
    "spa": 44,
    "spd": 55,
    "spe": 46
-  },
-  "powerScores": {
-   "physicalAttackType1": 63,
-   "physicalAttackType2": 80,
-   "specialAttackType1": 39,
-   "specialAttackType2": 55,
-   "physicalDefense": 24,
-   "physicalDefenseFull": 59,
-   "specialDefense": 8,
-   "specialDefenseFull": 53
   },
   "abilities": [
    "Pickup",
@@ -10964,16 +8045,6 @@
    "spd": 55,
    "spe": 56
   },
-  "powerScores": {
-   "physicalAttackType1": 63,
-   "physicalAttackType2": 80,
-   "specialAttackType1": 39,
-   "specialAttackType2": 55,
-   "physicalDefense": 17,
-   "physicalDefenseFull": 56,
-   "specialDefense": 0,
-   "specialDefenseFull": 50
-  },
   "abilities": [
    "Pickup",
    "Frisk",
@@ -11002,16 +8073,6 @@
    "spa": 44,
    "spd": 55,
    "spe": 41
-  },
-  "powerScores": {
-   "physicalAttackType1": 63,
-   "physicalAttackType2": 80,
-   "specialAttackType1": 39,
-   "specialAttackType2": 55,
-   "physicalDefense": 27,
-   "physicalDefenseFull": 60,
-   "specialDefense": 12,
-   "specialDefenseFull": 54
   },
   "abilities": [
    "Pickup",
@@ -11042,16 +8103,6 @@
    "spd": 66,
    "spe": 106
   },
-  "powerScores": {
-   "physicalAttackType1": 70,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 101,
-   "specialAttackType2": 117,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 36,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Rivalry",
    "Unnerve",
@@ -11081,16 +8132,6 @@
    "spd": 86,
    "spe": 126
   },
-  "powerScores": {
-   "physicalAttackType1": 94,
-   "physicalAttackType2": 78,
-   "specialAttackType1": 130,
-   "specialAttackType2": 100,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 48,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Fire Mane"
   ],
@@ -11117,16 +8158,6 @@
    "spa": 85,
    "spd": 75,
    "spe": 85
-  },
-  "powerScores": {
-   "physicalAttackType1": 98,
-   "physicalAttackType2": 98,
-   "specialAttackType1": 98,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Torrent",
@@ -11156,16 +8187,6 @@
    "spd": 55,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 63,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 58,
-   "specialAttackType2": 50,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 15,
-   "specialDefenseFull": 56
-  },
   "abilities": [
    "Poison Point",
    "Swift Swim",
@@ -11193,16 +8214,6 @@
    "spa": 90,
    "spd": 80,
    "spe": 110
-  },
-  "powerScores": {
-   "physicalAttackType1": 83,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 12,
-   "physicalDefenseFull": 54,
-   "specialDefense": 34,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Static",
@@ -11232,16 +8243,6 @@
    "spd": 85,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 85,
-   "specialAttackType2": 63,
-   "physicalDefense": 6,
-   "physicalDefenseFull": 53,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Surge Surfer"
   ],
@@ -11267,16 +8268,6 @@
    "spa": 90,
    "spd": 95,
    "spe": 110
-  },
-  "powerScores": {
-   "physicalAttackType1": 84,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 64,
-   "specialAttackType2": 0,
-   "physicalDefense": 43,
-   "physicalDefenseFull": 67,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Electric Surge"
@@ -11304,16 +8295,6 @@
    "spd": 80,
    "spe": 130
   },
-  "powerScores": {
-   "physicalAttackType1": 69,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 94,
-   "specialAttackType2": 0,
-   "physicalDefense": 12,
-   "physicalDefenseFull": 54,
-   "specialDefense": 34,
-   "specialDefenseFull": 63
-  },
   "abilities": [
    "No Guard"
   ],
@@ -11339,16 +8320,6 @@
    "spa": 65,
    "spd": 50,
    "spe": 58
-  },
-  "powerScores": {
-   "physicalAttackType1": 156,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 67,
-   "specialAttackType2": 0,
-   "physicalDefense": 35,
-   "physicalDefenseFull": 65,
-   "specialDefense": 27,
-   "specialDefenseFull": 61
   },
   "abilities": [
    "Mold Breaker",
@@ -11376,16 +8347,6 @@
    "spa": 125,
    "spd": 85,
    "spe": 30
-  },
-  "powerScores": {
-   "physicalAttackType1": 46,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 102,
-   "specialAttackType2": 0,
-   "physicalDefense": 50,
-   "physicalDefenseFull": 71,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
   },
   "abilities": [
    "Overcoat",
@@ -11416,16 +8377,6 @@
    "spd": 55,
    "spe": 40
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 137,
-   "specialAttackType1": 48,
-   "specialAttackType2": 62,
-   "physicalDefense": 69,
-   "physicalDefenseFull": 80,
-   "specialDefense": 38,
-   "specialDefenseFull": 66
-  },
   "abilities": [
    "Lightning Rod",
    "Solid Rock",
@@ -11454,16 +8405,6 @@
    "spd": 70,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 81,
-   "specialAttackType2": 0,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 44,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Overgrow",
    "Grassy Surge"
@@ -11491,16 +8432,6 @@
    "spa": 125,
    "spd": 105,
    "spe": 90
-  },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 48,
-   "specialAttackType1": 110,
-   "specialAttackType2": 78,
-   "physicalDefense": 23,
-   "physicalDefenseFull": 59,
-   "specialDefense": 47,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Natural Cure",
@@ -11531,16 +8462,6 @@
    "spd": 77,
    "spe": 91
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 55,
-   "specialAttackType1": 78,
-   "specialAttackType2": 58,
-   "physicalDefense": 27,
-   "physicalDefenseFull": 60,
-   "specialDefense": 27,
-   "specialDefenseFull": 60
-  },
   "abilities": [
    "Levitate"
   ],
@@ -11567,16 +8488,6 @@
    "spa": 105,
    "spd": 107,
    "spe": 86
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Levitate"
@@ -11605,16 +8516,6 @@
    "spd": 107,
    "spe": 86
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Levitate"
   ],
@@ -11641,16 +8542,6 @@
    "spa": 105,
    "spd": 107,
    "spe": 86
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Levitate"
@@ -11679,16 +8570,6 @@
    "spd": 107,
    "spe": 86
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Levitate"
   ],
@@ -11715,16 +8596,6 @@
    "spa": 105,
    "spd": 107,
    "spe": 86
-  },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 83,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Levitate"
@@ -11753,16 +8624,6 @@
    "spd": 105,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 78,
-   "specialAttackType1": 46,
-   "specialAttackType2": 40,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 46,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Wandering Spirit"
   ],
@@ -11789,16 +8650,6 @@
    "spa": 65,
    "spd": 65,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 59,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 46,
-   "specialAttackType2": 46,
-   "physicalDefense": 25,
-   "physicalDefenseFull": 59,
-   "specialDefense": 16,
-   "specialDefenseFull": 56
   },
   "abilities": [
    "Keen Eye",
@@ -11829,16 +8680,6 @@
    "spd": 115,
    "spe": 20
   },
-  "powerScores": {
-   "physicalAttackType1": 49,
-   "physicalAttackType2": 57,
-   "specialAttackType1": 42,
-   "specialAttackType2": 42,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 47,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Magic Bounce"
   ],
@@ -11865,16 +8706,6 @@
    "spa": 110,
    "spd": 80,
    "spe": 100
-  },
-  "powerScores": {
-   "physicalAttackType1": 109,
-   "physicalAttackType2": 81,
-   "specialAttackType1": 101,
-   "specialAttackType2": 87,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Intimidate",
@@ -11904,16 +8735,6 @@
    "spd": 90,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 88,
-   "physicalAttackType2": 130,
-   "specialAttackType1": 84,
-   "specialAttackType2": 115,
-   "physicalDefense": 65,
-   "physicalDefenseFull": 78,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Aerilate"
   ],
@@ -11941,16 +8762,6 @@
    "spd": 60,
    "spe": 117
   },
-  "powerScores": {
-   "physicalAttackType1": 67,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 94,
-   "specialAttackType2": 102,
-   "physicalDefense": 22,
-   "physicalDefenseFull": 59,
-   "specialDefense": 22,
-   "specialDefenseFull": 59
-  },
   "abilities": [
    "Corrosion",
    "Oblivious"
@@ -11977,16 +8788,6 @@
    "spa": 108,
    "spd": 70,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 67,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 117,
-   "specialAttackType2": 0,
-   "physicalDefense": 50,
-   "physicalDefenseFull": 71,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Torrent",
@@ -12016,16 +8817,6 @@
    "spd": 65,
    "spe": 85
   },
-  "powerScores": {
-   "physicalAttackType1": 70,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 110,
-   "specialAttackType2": 59,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
-  },
   "abilities": [
    "Torrent",
    "Sharpness"
@@ -12052,16 +8843,6 @@
    "spa": 65,
    "spd": 70,
    "spe": 71
-  },
-  "powerScores": {
-   "physicalAttackType1": 78,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 52,
-   "specialAttackType2": 0,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 74,
-   "specialDefense": 33,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "Sand Spit",
@@ -12091,16 +8872,6 @@
    "spd": 85,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 113,
-   "specialAttackType2": 0,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Overgrow",
    "Unburden"
@@ -12129,16 +8900,6 @@
    "spd": 85,
    "spe": 145
   },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 80,
-   "specialAttackType1": 109,
-   "specialAttackType2": 63,
-   "physicalDefense": 36,
-   "physicalDefenseFull": 64,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Lightning Rod"
   ],
@@ -12165,16 +8926,6 @@
    "spa": 55,
    "spd": 80,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 81,
-   "physicalAttackType2": 71,
-   "specialAttackType1": 48,
-   "specialAttackType2": 74,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Swarm",
@@ -12205,16 +8956,6 @@
    "spd": 100,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 69,
-   "physicalAttackType2": 61,
-   "specialAttackType1": 40,
-   "specialAttackType2": 61,
-   "physicalDefense": 61,
-   "physicalDefenseFull": 76,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Technician"
   ],
@@ -12241,16 +8982,6 @@
    "spa": 55,
    "spd": 69,
    "spe": 112
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 0,
-   "specialAttackType2": 48,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 26,
-   "specialDefenseFull": 60
   },
   "abilities": [
    "Poison Point",
@@ -12281,16 +9012,6 @@
    "spd": 99,
    "spe": 62
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 0,
-   "specialAttackType2": 43,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 76,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Shell Armor"
   ],
@@ -12317,16 +9038,6 @@
    "spa": 108,
    "spd": 65,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 101,
-   "specialAttackType2": 101,
-   "physicalDefense": 25,
-   "physicalDefenseFull": 60,
-   "specialDefense": 25,
-   "specialDefenseFull": 60
   },
   "abilities": [
    "Chlorophyll",
@@ -12357,16 +9068,6 @@
    "spd": 85,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 91,
-   "specialAttackType2": 91,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
-  },
   "abilities": [
    "Spicy Spray"
   ],
@@ -12393,16 +9094,6 @@
    "spa": 45,
    "spd": 115,
    "spe": 58
-  },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 102,
-   "specialAttackType1": 39,
-   "specialAttackType2": 55,
-   "physicalDefense": 53,
-   "physicalDefenseFull": 71,
-   "specialDefense": 53,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Shed Skin",
@@ -12433,16 +9124,6 @@
    "spd": 135,
    "spe": 68
   },
-  "powerScores": {
-   "physicalAttackType1": 64,
-   "physicalAttackType2": 102,
-   "specialAttackType1": 33,
-   "specialAttackType2": 48,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Intimidate"
   ],
@@ -12468,16 +9149,6 @@
    "spa": 75,
    "spd": 95,
    "spe": 113
-  },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 91,
-   "specialAttackType2": 0,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Overgrow",
@@ -12507,16 +9178,6 @@
    "spd": 40,
    "spe": 95
   },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 78,
-   "specialAttackType2": 58,
-   "physicalDefense": -2,
-   "physicalDefenseFull": 50,
-   "specialDefense": -2,
-   "specialDefenseFull": 50
-  },
   "abilities": [
    "Rough Skin",
    "Speed Boost"
@@ -12545,16 +9206,6 @@
    "spd": 65,
    "spe": 105
   },
-  "powerScores": {
-   "physicalAttackType1": 61,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 67,
-   "specialAttackType2": 49,
-   "physicalDefense": 32,
-   "physicalDefenseFull": 63,
-   "specialDefense": 28,
-   "specialDefenseFull": 61
-  },
   "abilities": [
    "Strong Jaw"
   ],
@@ -12580,16 +9231,6 @@
    "spa": 98,
    "spd": 63,
    "spe": 101
-  },
-  "powerScores": {
-   "physicalAttackType1": 62,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 79,
-   "specialAttackType2": 0,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 28,
-   "specialDefenseFull": 61
   },
   "abilities": [
    "Gluttony",
@@ -12618,16 +9259,6 @@
    "spd": 63,
    "spe": 101
   },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 94,
-   "specialAttackType2": 0,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 28,
-   "specialDefenseFull": 61
-  },
   "abilities": [
    "Gluttony",
    "Overgrow"
@@ -12654,16 +9285,6 @@
    "spa": 98,
    "spd": 63,
    "spe": 101
-  },
-  "powerScores": {
-   "physicalAttackType1": 87,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 94,
-   "specialAttackType2": 0,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 28,
-   "specialDefenseFull": 61
   },
   "abilities": [
    "Gluttony",
@@ -12693,16 +9314,6 @@
    "spd": 80,
    "spe": 70
   },
-  "powerScores": {
-   "physicalAttackType1": 0,
-   "physicalAttackType2": 59,
-   "specialAttackType1": 109,
-   "specialAttackType2": 67,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 71,
-   "specialDefense": 39,
-   "specialDefenseFull": 66
-  },
   "abilities": [
    "Hospitality",
    "Heatproof"
@@ -12729,16 +9340,6 @@
    "spa": 74,
    "spd": 54,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 50,
-   "specialAttackType2": 0,
-   "physicalDefense": -19,
-   "physicalDefenseFull": 43,
-   "specialDefense": -4,
-   "specialDefenseFull": 48
   },
   "abilities": [
    "Weak Armor",
@@ -12767,16 +9368,6 @@
    "spd": 82,
    "spe": 65
   },
-  "powerScores": {
-   "physicalAttackType1": 109,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 3,
-   "specialAttackType2": 0,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 36,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Steadfast",
    "Scrappy"
@@ -12804,16 +9395,6 @@
    "spa": 40,
    "spd": 70,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 63,
-   "specialAttackType2": 50,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 30,
-   "specialDefenseFull": 62
   },
   "abilities": [
    "Keen Eye",
@@ -12844,16 +9425,6 @@
    "spd": 100,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 58,
-   "physicalAttackType2": 99,
-   "specialAttackType1": 49,
-   "specialAttackType2": 39,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 47,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Stalwart"
   ],
@@ -12880,16 +9451,6 @@
    "spa": 110,
    "spd": 75,
    "spe": 66
-  },
-  "powerScores": {
-   "physicalAttackType1": 74,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 117,
-   "specialAttackType2": 63,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Blaze",
@@ -12918,16 +9479,6 @@
    "spa": 100,
    "spd": 80,
    "spe": 30
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 50,
-   "specialAttackType1": 81,
-   "specialAttackType2": 89,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Oblivious",
@@ -12958,16 +9509,6 @@
    "spd": 70,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 89,
-   "physicalAttackType2": 59,
-   "specialAttackType1": 89,
-   "specialAttackType2": 89,
-   "physicalDefense": 55,
-   "physicalDefenseFull": 73,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Quick Draw",
    "Own Tempo",
@@ -12997,16 +9538,6 @@
    "spd": 80,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 40,
-   "physicalAttackType2": 39,
-   "specialAttackType1": 75,
-   "specialAttackType2": 81,
-   "physicalDefense": 73,
-   "physicalDefenseFull": 83,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Shell Armor"
   ],
@@ -13033,16 +9564,6 @@
    "spa": 100,
    "spd": 110,
    "spe": 30
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 50,
-   "specialAttackType1": 81,
-   "specialAttackType2": 89,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
   },
   "abilities": [
    "Oblivious",
@@ -13073,16 +9594,6 @@
    "spd": 110,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 67,
-   "physicalAttackType2": 46,
-   "specialAttackType1": 93,
-   "specialAttackType2": 93,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Curious Medicine",
    "Own Tempo",
@@ -13110,16 +9621,6 @@
    "spa": 85,
    "spd": 75,
    "spe": 72
-  },
-  "powerScores": {
-   "physicalAttackType1": 58,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 67,
-   "specialAttackType2": 0,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 41,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Sweet Veil",
@@ -13149,16 +9650,6 @@
    "spd": 80,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 132,
-   "physicalAttackType2": 105,
-   "specialAttackType1": 54,
-   "specialAttackType2": 44,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Pressure",
    "Unburden",
@@ -13186,16 +9677,6 @@
    "spa": 65,
    "spd": 110,
    "spe": 30
-  },
-  "powerScores": {
-   "physicalAttackType1": 156,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 85,
-   "specialAttackType2": 0,
-   "physicalDefense": 56,
-   "physicalDefenseFull": 74,
-   "specialDefense": 71,
-   "specialDefenseFull": 81
   },
   "abilities": [
    "Immunity",
@@ -13226,16 +9707,6 @@
    "spd": 108,
    "spe": 35
   },
-  "powerScores": {
-   "physicalAttackType1": 78,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 55,
-   "specialAttackType2": 55,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 67,
-   "specialDefense": 44,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Pressure",
    "Infiltrator"
@@ -13263,16 +9734,6 @@
    "spa": 45,
    "spd": 51,
    "spe": 92
-  },
-  "powerScores": {
-   "physicalAttackType1": 106,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 70,
-   "specialAttackType2": 52,
-   "physicalDefense": 21,
-   "physicalDefenseFull": 59,
-   "specialDefense": 21,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Intimidate",
@@ -13303,16 +9764,6 @@
    "spd": 51,
    "spe": 92
   },
-  "powerScores": {
-   "physicalAttackType1": 106,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 70,
-   "specialAttackType2": 52,
-   "physicalDefense": 21,
-   "physicalDefenseFull": 59,
-   "specialDefense": 21,
-   "specialDefenseFull": 59
-  },
   "abilities": [
    "Intimidate",
    "Hustle",
@@ -13341,16 +9792,6 @@
    "spa": 45,
    "spd": 51,
    "spe": 92
-  },
-  "powerScores": {
-   "physicalAttackType1": 106,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 70,
-   "specialAttackType2": 52,
-   "physicalDefense": 21,
-   "physicalDefenseFull": 59,
-   "specialDefense": 21,
-   "specialDefenseFull": 59
   },
   "abilities": [
    "Intimidate",
@@ -13381,16 +9822,6 @@
    "spd": 51,
    "spe": 92
   },
-  "powerScores": {
-   "physicalAttackType1": 106,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 70,
-   "specialAttackType2": 52,
-   "physicalDefense": 21,
-   "physicalDefenseFull": 59,
-   "specialDefense": 21,
-   "specialDefenseFull": 59
-  },
   "abilities": [
    "Intimidate",
    "Hustle",
@@ -13420,16 +9851,6 @@
    "spd": 60,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 124,
-   "physicalAttackType2": 117,
-   "specialAttackType1": 74,
-   "specialAttackType2": 55,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 66,
-   "specialDefense": 30,
-   "specialDefenseFull": 62
-  },
   "abilities": [
    "Intimidate",
    "Reckless"
@@ -13458,16 +9879,6 @@
    "spd": 90,
    "spe": 110
   },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 99,
-   "specialAttackType1": 51,
-   "specialAttackType2": 46,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Contrary"
   ],
@@ -13494,16 +9905,6 @@
    "spa": 100,
    "spd": 85,
    "spe": 115
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 50,
-   "specialAttackType1": 81,
-   "specialAttackType2": 67,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 38,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Illuminate",
@@ -13534,16 +9935,6 @@
    "spd": 105,
    "spe": 120
   },
-  "powerScores": {
-   "physicalAttackType1": 98,
-   "physicalAttackType2": 92,
-   "specialAttackType1": 75,
-   "specialAttackType2": 61,
-   "physicalDefense": 47,
-   "physicalDefenseFull": 69,
-   "specialDefense": 47,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Huge Power"
   ],
@@ -13570,16 +9961,6 @@
    "spa": 55,
    "spd": 65,
    "spe": 30
-  },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 67,
-   "specialAttackType1": 74,
-   "specialAttackType2": 48,
-   "physicalDefense": 72,
-   "physicalDefenseFull": 82,
-   "specialDefense": 30,
-   "specialDefenseFull": 62
   },
   "abilities": [
    "Rock Head",
@@ -13610,16 +9991,6 @@
    "spd": 95,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 85,
-   "physicalAttackType2": 66,
-   "specialAttackType1": 57,
-   "specialAttackType2": 37,
-   "physicalDefense": 76,
-   "physicalDefenseFull": 84,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
-  },
   "abilities": [
    "Sand Force"
   ],
@@ -13646,16 +10017,6 @@
    "spa": 81,
    "spd": 99,
    "spe": 32
-  },
-  "powerScores": {
-   "physicalAttackType1": 58,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 58,
-   "specialAttackType2": 71,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 60,
-   "specialDefenseFull": 75
   },
   "abilities": [
    "Static",
@@ -13686,16 +10047,6 @@
    "spd": 84,
    "spe": 32
   },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 24,
-   "specialAttackType1": 52,
-   "specialAttackType2": 79,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Mimicry"
   ],
@@ -13721,16 +10072,6 @@
    "spa": 73,
    "spd": 83,
    "spe": 55
-  },
-  "powerScores": {
-   "physicalAttackType1": 74,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 74,
-   "specialAttackType2": 0,
-   "physicalDefense": 51,
-   "physicalDefenseFull": 71,
-   "specialDefense": 51,
-   "specialDefenseFull": 71
   },
   "abilities": [
    "Liquid Ooze",
@@ -13761,16 +10102,6 @@
    "spd": 90,
    "spe": 60
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 79,
-   "specialAttackType1": 98,
-   "specialAttackType2": 59,
-   "physicalDefense": 54,
-   "physicalDefenseFull": 72,
-   "specialDefense": 54,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Torrent",
    "Damp"
@@ -13799,16 +10130,6 @@
    "spd": 110,
    "spe": 70
   },
-  "powerScores": {
-   "physicalAttackType1": 90,
-   "physicalAttackType2": 75,
-   "specialAttackType1": 82,
-   "specialAttackType2": 49,
-   "physicalDefense": 61,
-   "physicalDefenseFull": 76,
-   "specialDefense": 61,
-   "specialDefenseFull": 76
-  },
   "abilities": [
    "Swift Swim"
   ],
@@ -13834,16 +10155,6 @@
    "spa": 110,
    "spd": 130,
    "spe": 60
-  },
-  "powerScores": {
-   "physicalAttackType1": 102,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 140,
-   "specialAttackType2": 0,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 66,
-   "specialDefense": 65,
-   "specialDefenseFull": 78
   },
   "abilities": [
    "Cute Charm",
@@ -13873,16 +10184,6 @@
    "spd": 69,
    "spe": 126
   },
-  "powerScores": {
-   "physicalAttackType1": 78,
-   "physicalAttackType2": 89,
-   "specialAttackType1": 79,
-   "specialAttackType2": 67,
-   "physicalDefense": 36,
-   "physicalDefenseFull": 64,
-   "specialDefense": 35,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Flame Body",
    "Gale Wings"
@@ -13910,16 +10211,6 @@
    "spa": 120,
    "spd": 95,
    "spe": 82
-  },
-  "powerScores": {
-   "physicalAttackType1": 59,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 109,
-   "specialAttackType2": 91,
-   "physicalDefense": 22,
-   "physicalDefenseFull": 59,
-   "specialDefense": 46,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Commander",
@@ -13949,16 +10240,6 @@
    "spd": 95,
    "spe": 82
   },
-  "powerScores": {
-   "physicalAttackType1": 59,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 109,
-   "specialAttackType2": 91,
-   "physicalDefense": 22,
-   "physicalDefenseFull": 59,
-   "specialDefense": 46,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Commander",
    "Storm Drain"
@@ -13985,16 +10266,6 @@
    "spa": 40,
    "spd": 70,
    "spe": 110
-  },
-  "powerScores": {
-   "physicalAttackType1": 110,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 67,
-   "specialAttackType2": 0,
-   "physicalDefense": 48,
-   "physicalDefenseFull": 70,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
   },
   "abilities": [
    "Intimidate",
@@ -14025,16 +10296,6 @@
    "spd": 70,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 0,
-   "specialAttackType2": 44,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 71,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Intimidate",
    "Anger Point",
@@ -14064,16 +10325,6 @@
    "spd": 70,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 0,
-   "specialAttackType2": 52,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 71,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Intimidate",
    "Anger Point",
@@ -14102,16 +10353,6 @@
    "spd": 70,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 93,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 0,
-   "specialAttackType2": 0,
-   "physicalDefense": 52,
-   "physicalDefenseFull": 71,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Intimidate",
    "Anger Point",
@@ -14139,16 +10380,6 @@
    "spa": 87,
    "spd": 92,
    "spe": 90
-  },
-  "powerScores": {
-   "physicalAttackType1": 52,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 54,
-   "specialAttackType2": 0,
-   "physicalDefense": 22,
-   "physicalDefenseFull": 59,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
   },
   "abilities": [
    "Run Away",
@@ -14179,16 +10410,6 @@
    "spd": 105,
    "spe": 94
   },
-  "powerScores": {
-   "physicalAttackType1": 55,
-   "physicalAttackType2": 97,
-   "specialAttackType1": 31,
-   "specialAttackType2": 83,
-   "physicalDefense": 43,
-   "physicalDefenseFull": 67,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Mold Breaker",
    "Own Tempo",
@@ -14216,16 +10437,6 @@
    "spa": 85,
    "spd": 70,
    "spe": 20
-  },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 98,
-   "specialAttackType2": 0,
-   "physicalDefense": 61,
-   "physicalDefenseFull": 76,
-   "specialDefense": 32,
-   "specialDefenseFull": 63
   },
   "abilities": [
    "White Smoke",
@@ -14256,16 +10467,6 @@
    "spd": 85,
    "spe": 56
   },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 91,
-   "specialAttackType2": 55,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 74,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Overgrow",
    "Shell Armor"
@@ -14293,16 +10494,6 @@
    "spa": 75,
    "spd": 75,
    "spe": 60
-  },
-  "powerScores": {
-   "physicalAttackType1": 124,
-   "physicalAttackType2": 117,
-   "specialAttackType1": 91,
-   "specialAttackType2": 67,
-   "physicalDefense": 40,
-   "physicalDefenseFull": 66,
-   "specialDefense": 40,
-   "specialDefenseFull": 66
   },
   "abilities": [
    "Keen Eye",
@@ -14333,16 +10524,6 @@
    "spd": 142,
    "spe": 35
   },
-  "powerScores": {
-   "physicalAttackType1": 67,
-   "physicalAttackType2": 48,
-   "specialAttackType1": 50,
-   "specialAttackType2": 55,
-   "physicalDefense": 58,
-   "physicalDefenseFull": 74,
-   "specialDefense": 56,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Merciless",
    "Limber",
@@ -14371,16 +10552,6 @@
    "spa": 86,
    "spd": 65,
    "spe": 85
-  },
-  "powerScores": {
-   "physicalAttackType1": 91,
-   "physicalAttackType2": 114,
-   "specialAttackType1": 79,
-   "specialAttackType2": 79,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
   },
   "abilities": [
    "Anticipation",
@@ -14411,16 +10582,6 @@
    "spd": 70,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 97,
-   "specialAttackType2": 97,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Punk Rock",
    "Plus",
@@ -14449,16 +10610,6 @@
    "spa": 114,
    "spd": 70,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 97,
-   "specialAttackType2": 97,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
   },
   "abilities": [
    "Punk Rock",
@@ -14489,16 +10640,6 @@
    "spd": 70,
    "spe": 75
   },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 89,
-   "specialAttackType2": 97,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
-  },
   "abilities": [
    "Punk Rock",
    "Minus",
@@ -14527,16 +10668,6 @@
    "spa": 114,
    "spd": 70,
    "spe": 75
-  },
-  "powerScores": {
-   "physicalAttackType1": 66,
-   "physicalAttackType2": 87,
-   "specialAttackType1": 89,
-   "specialAttackType2": 97,
-   "physicalDefense": 34,
-   "physicalDefenseFull": 64,
-   "specialDefense": 34,
-   "specialDefenseFull": 64
   },
   "abilities": [
    "Punk Rock",
@@ -14567,16 +10698,6 @@
    "spd": 82,
    "spe": 56
   },
-  "powerScores": {
-   "physicalAttackType1": 87,
-   "physicalAttackType2": 93,
-   "specialAttackType1": 46,
-   "specialAttackType2": 74,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 45,
-   "specialDefenseFull": 69
-  },
   "abilities": [
    "Natural Cure",
    "Frisk",
@@ -14604,16 +10725,6 @@
    "spa": 50,
    "spd": 98,
    "spe": 72
-  },
-  "powerScores": {
-   "physicalAttackType1": 115,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 66,
-   "specialAttackType2": 0,
-   "physicalDefense": 49,
-   "physicalDefenseFull": 70,
-   "specialDefense": 49,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Leaf Guard",
@@ -14643,16 +10754,6 @@
    "spd": 85,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 117,
-   "specialAttackType2": 0,
-   "physicalDefense": 41,
-   "physicalDefenseFull": 66,
-   "specialDefense": 45,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Blaze",
    "Flash Fire"
@@ -14680,16 +10781,6 @@
    "spa": 119,
    "spd": 85,
    "spe": 95
-  },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 74,
-   "specialAttackType1": 124,
-   "specialAttackType2": 67,
-   "physicalDefense": 39,
-   "physicalDefenseFull": 65,
-   "specialDefense": 43,
-   "specialDefenseFull": 67
   },
   "abilities": [
    "Blaze",
@@ -14719,16 +10810,6 @@
    "spd": 100,
    "spe": 61
   },
-  "powerScores": {
-   "physicalAttackType1": 120,
-   "physicalAttackType2": 85,
-   "specialAttackType1": 58,
-   "specialAttackType2": 58,
-   "physicalDefense": 61,
-   "physicalDefenseFull": 76,
-   "specialDefense": 58,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Sand Stream",
    "Unnerve"
@@ -14757,16 +10838,6 @@
    "spd": 120,
    "spe": 71
   },
-  "powerScores": {
-   "physicalAttackType1": 110,
-   "physicalAttackType2": 76,
-   "specialAttackType1": 45,
-   "specialAttackType2": 45,
-   "physicalDefense": 70,
-   "physicalDefenseFull": 81,
-   "specialDefense": 64,
-   "specialDefenseFull": 77
-  },
   "abilities": [
    "Sand Stream"
   ],
@@ -14793,16 +10864,6 @@
    "spa": 69,
    "spd": 59,
    "spe": 71
-  },
-  "powerScores": {
-   "physicalAttackType1": 124,
-   "physicalAttackType2": 115,
-   "specialAttackType1": 71,
-   "specialAttackType2": 78,
-   "physicalDefense": 59,
-   "physicalDefenseFull": 75,
-   "specialDefense": 29,
-   "specialDefenseFull": 61
   },
   "abilities": [
    "Strong Jaw",
@@ -14831,16 +10892,6 @@
    "spd": 130,
    "spe": 65
   },
-  "powerScores": {
-   "physicalAttackType1": 54,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 44,
-   "specialAttackType2": 0,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 65,
-   "specialDefenseFull": 78
-  },
   "abilities": [
    "Synchronize",
    "Inner Focus"
@@ -14867,16 +10918,6 @@
    "spa": 110,
    "spd": 95,
    "spe": 79
-  },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 87,
-   "specialAttackType2": 0,
-   "physicalDefense": 42,
-   "physicalDefenseFull": 67,
-   "specialDefense": 47,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Ice Body",
@@ -14906,16 +10947,6 @@
    "spd": 95,
    "spe": 65
   },
-  "powerScores": {
-   "physicalAttackType1": 48,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 87,
-   "specialAttackType2": 0,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 70,
-   "specialDefense": 62,
-   "specialDefenseFull": 77
-  },
   "abilities": [
    "Water Absorb",
    "Hydration"
@@ -14943,16 +10974,6 @@
    "spa": 100,
    "spd": 100,
    "spe": 80
-  },
-  "powerScores": {
-   "physicalAttackType1": 95,
-   "physicalAttackType2": 52,
-   "specialAttackType1": 110,
-   "specialAttackType2": 70,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
   },
   "abilities": [
    "Overgrow",
@@ -14982,16 +11003,6 @@
    "spd": 120,
    "spe": 80
   },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 46,
-   "specialAttackType1": 97,
-   "specialAttackType2": 61,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 59,
-   "specialDefenseFull": 75
-  },
   "abilities": [
    "Thick Fat"
   ],
@@ -15018,16 +11029,6 @@
    "spa": 100,
    "spd": 70,
    "spe": 70
-  },
-  "powerScores": {
-   "physicalAttackType1": 100,
-   "physicalAttackType2": 62,
-   "specialAttackType1": 94,
-   "specialAttackType2": 70,
-   "physicalDefense": 33,
-   "physicalDefenseFull": 63,
-   "specialDefense": 37,
-   "specialDefenseFull": 65
   },
   "abilities": [
    "Chlorophyll",
@@ -15057,16 +11058,6 @@
    "spd": 95,
    "spe": 70
   },
-  "powerScores": {
-   "physicalAttackType1": 90,
-   "physicalAttackType2": 54,
-   "specialAttackType1": 90,
-   "specialAttackType2": 66,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 68,
-   "specialDefense": 50,
-   "specialDefenseFull": 71
-  },
   "abilities": [
    "Innards Out"
   ],
@@ -15093,16 +11084,6 @@
    "spa": 110,
    "spd": 90,
    "spe": 50
-  },
-  "powerScores": {
-   "physicalAttackType1": 80,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 101,
-   "specialAttackType2": 75,
-   "physicalDefense": 44,
-   "physicalDefenseFull": 68,
-   "specialDefense": 46,
-   "specialDefenseFull": 69
   },
   "abilities": [
    "Chlorophyll",
@@ -15131,16 +11112,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15171,16 +11142,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15209,16 +11170,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15249,16 +11200,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15287,16 +11228,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 32,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15327,16 +11258,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15365,16 +11286,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15405,16 +11316,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15443,16 +11344,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15483,16 +11374,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15521,16 +11402,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15561,16 +11432,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15599,16 +11460,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15639,16 +11490,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 32,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15677,16 +11518,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15717,16 +11548,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15755,16 +11576,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15795,16 +11606,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15833,16 +11634,6 @@
    "spa": 90,
    "spd": 50,
    "spe": 89
-  },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
   },
   "abilities": [
    "Shield Dust",
@@ -15873,16 +11664,6 @@
    "spd": 50,
    "spe": 89
   },
-  "powerScores": {
-   "physicalAttackType1": 36,
-   "physicalAttackType2": 28,
-   "specialAttackType1": 62,
-   "specialAttackType2": 75,
-   "physicalDefense": 19,
-   "physicalDefenseFull": 58,
-   "specialDefense": 19,
-   "specialDefenseFull": 58
-  },
   "abilities": [
    "Shield Dust",
    "Compound Eyes",
@@ -15912,16 +11693,6 @@
    "spd": 105,
    "spe": 100
   },
-  "powerScores": {
-   "physicalAttackType1": 44,
-   "physicalAttackType2": 66,
-   "specialAttackType1": 81,
-   "specialAttackType2": 117,
-   "physicalDefense": 35,
-   "physicalDefenseFull": 64,
-   "specialDefense": 55,
-   "specialDefenseFull": 73
-  },
   "abilities": [
    "Flame Body",
    "Swarm"
@@ -15948,16 +11719,6 @@
    "spa": 60,
    "spd": 69,
    "spe": 77
-  },
-  "powerScores": {
-   "physicalAttackType1": 98,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 81,
-   "specialAttackType2": 0,
-   "physicalDefense": 26,
-   "physicalDefenseFull": 60,
-   "specialDefense": 26,
-   "specialDefenseFull": 60
   },
   "abilities": [
    "Illuminate",
@@ -15988,16 +11749,6 @@
    "spd": 85,
    "spe": 125
   },
-  "powerScores": {
-   "physicalAttackType1": 79,
-   "physicalAttackType2": 115,
-   "specialAttackType1": 39,
-   "specialAttackType2": 52,
-   "physicalDefense": 28,
-   "physicalDefenseFull": 61,
-   "specialDefense": 42,
-   "specialDefenseFull": 67
-  },
   "abilities": [
    "Pressure",
    "Pickpocket"
@@ -16025,16 +11776,6 @@
    "spa": 77,
    "spd": 75,
    "spe": 116
-  },
-  "powerScores": {
-   "physicalAttackType1": 46,
-   "physicalAttackType2": 52,
-   "specialAttackType1": 75,
-   "specialAttackType2": 59,
-   "physicalDefense": 38,
-   "physicalDefenseFull": 65,
-   "specialDefense": 31,
-   "specialDefenseFull": 62
   },
   "abilities": [
    "Prankster",
@@ -16065,16 +11806,6 @@
    "spd": 50,
    "spe": 45
   },
-  "powerScores": {
-   "physicalAttackType1": 117,
-   "physicalAttackType2": 54,
-   "specialAttackType1": 98,
-   "specialAttackType2": 67,
-   "physicalDefense": 37,
-   "physicalDefenseFull": 66,
-   "specialDefense": 41,
-   "specialDefenseFull": 68
-  },
   "abilities": [
    "Cute Charm",
    "Competitive",
@@ -16103,16 +11834,6 @@
    "spd": 135,
    "spe": 30
   },
-  "powerScores": {
-   "physicalAttackType1": 83,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 102,
-   "specialAttackType2": 0,
-   "physicalDefense": 50,
-   "physicalDefenseFull": 70,
-   "specialDefense": 52,
-   "specialDefenseFull": 72
-  },
   "abilities": [
    "Schooling"
   ],
@@ -16139,16 +11860,6 @@
    "spa": 105,
    "spd": 75,
    "spe": 65
-  },
-  "powerScores": {
-   "physicalAttackType1": 113,
-   "physicalAttackType2": 70,
-   "specialAttackType1": 113,
-   "specialAttackType2": 91,
-   "physicalDefense": 46,
-   "physicalDefenseFull": 69,
-   "specialDefense": 48,
-   "specialDefenseFull": 70
   },
   "abilities": [
    "Intimidate",
@@ -16179,16 +11890,6 @@
    "spd": 95,
    "spe": 105
   },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 115,
-   "specialAttackType1": 48,
-   "specialAttackType2": 78,
-   "physicalDefense": 60,
-   "physicalDefenseFull": 75,
-   "specialDefense": 57,
-   "specialDefenseFull": 74
-  },
   "abilities": [
    "Leaf Guard"
   ],
@@ -16214,16 +11915,6 @@
    "spa": 120,
    "spd": 60,
    "spe": 105
-  },
-  "powerScores": {
-   "physicalAttackType1": 71,
-   "physicalAttackType2": 0,
-   "specialAttackType1": 75,
-   "specialAttackType2": 0,
-   "physicalDefense": 18,
-   "physicalDefenseFull": 57,
-   "specialDefense": 18,
-   "specialDefenseFull": 57
   },
   "abilities": [
    "Illusion"
@@ -16251,16 +11942,6 @@
    "spa": 125,
    "spd": 60,
    "spe": 110
-  },
-  "powerScores": {
-   "physicalAttackType1": 110,
-   "physicalAttackType2": 81,
-   "specialAttackType1": 128,
-   "specialAttackType2": 70,
-   "physicalDefense": 14,
-   "physicalDefenseFull": 55,
-   "specialDefense": 14,
-   "specialDefenseFull": 55
   },
   "abilities": [
    "Illusion"

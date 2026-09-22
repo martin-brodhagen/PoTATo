@@ -183,6 +183,7 @@ To redirect another species: add an entry to `data/manual-base-species.json` wit
 ## Architecture
 
 - ES modules, no bundler, no build step. Served directly by `python3 -m http.server`.
+- `index.html` includes `<link rel="modulepreload">` hints for first-paint modules (default-active tabs: `team-browser` left, `search-detail` right, `header` top). Adding a new module to first paint? Append a `<link rel="modulepreload" href="lib/your-module.js">` in `index.html`. Non-active tab widgets (Pokedex sub-tabs, coverage, team builder) are NOT preloaded — the browser fetches them on first navigation.
 - `lib/data-loader.js` loads `data/base/*` once (cached), augments each species with `formeInfo`, joins per-species `powerScores` from `data/added/powerscores.json`, and filters against `data/formats/<id>.json` to build the per-format view. All `loadX(format)` helpers go through this.
 - `lib/i18n.js` is a post-process layer: takes a snapshot of `name`/`desc` from the in-memory cache, then overlays translated values from `data/i18n/<lang>/<lang>/*.json`. Widgets read the cache transparently.
 - Widgets: three `PokemonSearchWidget` instances (main pokedex grid, move-detail "Learned By", ability-detail "Pokémon with..."), two `MoveSearchWidget` instances (moves tab, pokemon-detail filtered list). All widgets are destroyed and recreated on format switch.

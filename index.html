@@ -5,6 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PoTATo — Pokémon Champions Teambuilder</title>
 <link rel="stylesheet" href="style.css">
+<!--
+  Module preload hints. These modules are required for first paint and would
+  otherwise be fetched in a depth-2 cascade after app.js parses. Preloading
+  parallelizes them with app.js's parse + execution. Only modules needed for
+  the default-active tabs are included (see index.html `class="active"` tabs):
+    - Left:  team-browser (default)        → team-browser-widget.js
+    - Right: search-detail (default)       → search-detail-view.js
+    - Top:   header (always visible)       → header-view.js
+  Modules for non-active tabs (pokedex sub-tabs, coverage widgets, team
+  builder) are NOT preloaded — the browser fetches them on first navigation.
+  If you add a new first-paint module, append it here.
+-->
+<link rel="modulepreload" href="lib/data-loader.js">
+<link rel="modulepreload" href="lib/team-store.js">
+<link rel="modulepreload" href="lib/app-init.js">
+<link rel="modulepreload" href="lib/team-browser-widget.js">
+<link rel="modulepreload" href="lib/views/search-detail-view.js">
+<link rel="modulepreload" href="lib/views/header-view.js">
+<link rel="modulepreload" href="lib/views/breadcrumb-view.js">
+<link rel="modulepreload" href="lib/sprite-paths.js">
+<link rel="modulepreload" href="lib/types.js">
+<link rel="modulepreload" href="lib/detail-controller.js">
+<link rel="modulepreload" href="lib/navigation-controller.js">
 </head>
 <body>
 <header>
